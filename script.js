@@ -55,6 +55,22 @@
     onScroll();
   }
 
+  // ----- Scale live site previews to fit their frames -----
+  function scaleShots() {
+    var base = 1280;
+    document.querySelectorAll('.shot-view').forEach(function (v) {
+      var f = v.querySelector('iframe');
+      if (!f) return;
+      var s = v.clientWidth / base;
+      f.style.width = base + 'px';
+      f.style.height = Math.ceil(v.clientHeight / s) + 'px';
+      f.style.transform = 'scale(' + s + ')';
+    });
+  }
+  scaleShots();
+  window.addEventListener('load', scaleShots);
+  window.addEventListener('resize', scaleShots);
+
   // ----- Footer year -----
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
