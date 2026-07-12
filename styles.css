@@ -1304,3 +1304,5 @@ section[id] { scroll-margin-top: 84px; }
 .hero-sub { max-width: 640px; }
 /* compare: parity row (both deliver) gets a neutral tick, not a red cross */
 .compare tbody td.cmp-tie::before { content: "\2713"; background: rgba(120,139,133,.16); color: #7C8B85; }
+/* wider hero chip marquee */
+.chip-marquee { max-width: 860px; }
