@@ -165,10 +165,24 @@
   .cform textarea{resize:vertical;min-height:120px;}
   .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
   @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}}
+  /* real logo + project cards */
+  .nav .brand img{height:34px;width:auto;display:block;filter:brightness(0) invert(1);}
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .proj{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface);transition:.25s;}
+  .proj:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(27,23,18,.1);}
+  .proj .ph{height:300px;background-size:cover;background-position:center;position:relative;}
+  .proj .ph .badge{position:absolute;top:16px;left:16px;background:rgba(16,13,9,.82);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 13px;border-radius:100px;}
+  .proj .bd{padding:28px 30px;}
+  .proj h3{font-size:1.28rem;margin-bottom:6px;}
+  .proj .loc{color:var(--accent-deep);font-size:.9rem;font-weight:600;letter-spacing:.02em;margin-bottom:12px;}
+  .proj p{color:var(--soft);font-size:1rem;line-height:1.55;margin-bottom:16px;}
+  .proj .specs{display:flex;flex-wrap:wrap;gap:8px;}
+  .proj .specs span{font-size:.8rem;font-weight:500;color:var(--soft);background:var(--accent-soft);border-radius:100px;padding:5px 12px;}
+  @media(max-width:820px){.projects{grid-template-columns:1fr;}}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
-    <a class="brand"><span class="mk">I</span>INVISION</a>
+    <a class="brand"><img src="../assets/img/inv-logo.png" alt="Invision Investments"></a>
     <nav class="nav-links"><a href="#services">What We Do</a><a href="#craft">About</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav>
     <a class="nav-call" href="tel:+19549098020">Schedule a Call</a>
   </div></header>
@@ -223,14 +237,14 @@
   <section class="sec" id="services"><div class="wrap">
     <span class="eyebrow">What we do</span>
     <h2>One team, from underwriting to <em>the finished home</em>.</h2>
-    <p class="sec-lead">From underwriting to execution, we apply institutional standards, data-driven analysis, and rigorous controls to every project we develop in South Florida.</p>
+    <p class="sec-lead">From underwriting to execution, we apply institutional standards, data-driven analysis, and rigorous controls to every project.</p>
     <div class="svc-grid">
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></span><h3>Ground-Up Development</h3><p>Ground-up construction of luxury single-family homes, engineered and built to last.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg></span><h3>Development Management</h3><p>Construction and development management, handled end to end. We take care of everything, from permits to closing.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>Capital Oversight</h3><p>End-to-end oversight of capital and construction, aligned with investor objectives at every stage.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Value Creation</h3><p>A holistic approach to real estate value creation, from site selection to final delivery.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 8l6 .9-4.5 4.3L18 20l-6-3-6 3 1.5-6.8L3 8.9 9 8Z"/></svg></span><h3>Boutique Luxury</h3><p>Exquisite attention to detail in prime South Florida locations, delivered on a boutique scale.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h3>Transparent Structures</h3><p>Clear structures, clear reporting, and clear communication: before, during, and after deployment of capital.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></span><h3>Real Estate Development</h3><p>Ground-up construction of luxury single-family homes.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Asset Curation</h3><p>Identifying undervalued land in prime neighborhoods.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M14 7h7v7"/></svg></span><h3>Investment Management</h3><p>End-to-end oversight of capital and construction.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Structure</h3><p>Safe legal and tax structuring assistance.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg></span><h3>Development &amp; Construction</h3><p>Construction and development management.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h3>Transparency</h3><p>Clear structures, clear reporting, and clear communication: before, during, and after deployment of capital.</p></div>
     </div>
   </div></section>
 
@@ -239,13 +253,14 @@
     <div>
       <span class="eyebrow">About Invision</span>
       <h2>Built on <em>transparency</em> and execution.</h2>
-      <p>Founded on the principles of transparency and excellence, Invision has redefined the boutique development model in South Florida. Our mission is to develop high-end residential real estate through disciplined underwriting, conservative capital structures, and institutional execution.</p>
-      <p>Invision was founded by Renato Lerner, a seasoned civil engineer holding an MBA in Business Management from FGV. With over 30 years of experience, Renato has led and expanded construction and development companies across three countries: Brazil, Angola, and the United States.</p>
+      <p>Founded on the principles of transparency and excellence, Invision has redefined the boutique development model in South Florida.</p>
+      <p>Our mission is to develop high-end residential real estate through disciplined underwriting, conservative capital structures, and institutional execution, delivering transparent, asset-backed investment opportunities aligned with investor objectives.</p>
+      <p>Invision was founded by Renato Lerner, a civil engineer with over 30 years of experience leading and expanding construction and development companies across three countries.</p>
       <ul>
-        <li>Over 30 years developing and building across two continents</li>
-        <li>An engineer's discipline applied to every project</li>
-        <li>Conservative underwriting and institutional-grade risk management</li>
-        <li>Transparent, asset-backed opportunities aligned with investor objectives</li>
+        <li>Invision's philosophy is built on one principle: capital stewardship</li>
+        <li>Conservative underwriting, controlled execution, and transparent reporting</li>
+        <li>We invest alongside our partners, ensuring incentives remain aligned throughout the lifecycle of each development</li>
+        <li>Transparent, asset-backed investment opportunities aligned with investor objectives</li>
       </ul>
     </div>
   </div></section>
@@ -262,10 +277,11 @@
   <section class="sec" style="padding-top:0;" id="work"><div class="wrap">
     <span class="eyebrow">Recent work</span>
     <h2 style="margin-bottom:44px;">Luxury homes, <em>ground up</em> in South Florida.</h2>
-    <div class="gallery">
-      <div class="gal" data-label="1719 NE 18th St, Fort Lauderdale" style="background-image:url('../assets/img/inv-2.jpg');"></div>
-      <div class="gal" data-label="1725 NE 18th St, Fort Lauderdale" style="background-image:url('../assets/img/inv-3.jpg');"></div>
-      <div class="gal" data-label="11042 Carnegie Ave, Englewood" style="background-image:url('../assets/img/inv-5.jpg');"></div>
+    <div class="projects">
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/inv-2.jpg')"><span class="badge">Luxury Waterfront</span></div><div class="bd"><h3>1117 NE 18th Ct.</h3><div class="loc">Fort Lauderdale, FL 33305</div><p>A waterfront masterpiece redefining luxury living in Fort Lauderdale.</p><div class="specs"><span>5 Beds</span><span>6 Baths</span><span>5,485 SQFT Area</span><span>12,000 SQFT Lot</span></div></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/inv-3.jpg')"><span class="badge">Boutique Luxury</span></div><div class="bd"><h3>1719 NE 18th St.</h3><div class="loc">Fort Lauderdale, FL 33305</div><p>Exquisite attention to detail in a prime location.</p><div class="specs"><span>4 Beds</span><span>3.5 Baths</span><span>2,784 SQFT Area</span><span>6,300 SQFT Lot</span><span>Pool</span></div></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/inv-4.jpg')"><span class="badge">Modern Estate</span></div><div class="bd"><h3>1725 NE 18th St.</h3><div class="loc">Fort Lauderdale, FL 33305</div><p>Sophisticated modern design with expansive living areas.</p><div class="specs"><span>4 Beds</span><span>3.5 Baths</span><span>3,100 SQFT Area</span><span>6,300 SQFT Lot</span></div></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/inv-5.jpg')"><span class="badge">Residential Home</span></div><div class="bd"><h3>11042 Carnegie Av.</h3><div class="loc">Englewood, FL 34224</div><p>9-Home simultaneous development project.</p><div class="specs"><span>3 Beds + Office</span><span>2 Baths</span><span>2,836 SQFT Total</span><span>10,000 SQFT Lot</span></div></div></div>
     </div>
   </div></section>
 
