@@ -259,6 +259,56 @@
   .sec.in .inc-grid .inc:nth-child(4){ transition-delay:.3s; }
   .sec.in .chips .chip{ transition-delay:calc(var(--i,0) * 0ms); }
   @media(prefers-reduced-motion:reduce){ .svc-grid .pcard,.snap-grid .snap,.inc-grid .inc,.steps .step,.chips .chip,.creds .cred{ opacity:1!important; transform:none!important; } .cta-band::before{ animation:none; opacity:0; } }
+
+  /* ===== variety pass ===== */
+  /* pricing lists aligned to top */
+  .pcard .blurb{ min-height:80px; }
+  .pcard ul{ margin-top:16px; }
+
+  /* how-it-works: icon tile + corner index number */
+  .step .step-ic{ display:grid; place-items:center; width:46px; height:46px; border-radius:13px; background:var(--accent-soft); color:var(--accent); margin-bottom:20px; }
+  .step .step-ic svg{ width:23px; height:23px; }
+  .step .sn{ position:absolute; top:34px; right:32px; width:auto; height:auto; margin:0; background:transparent; color:var(--faint); font-family:var(--serif); font-style:italic; font-size:1.5rem; display:block; }
+
+  /* DIY snap icons */
+  .snap-ic{ display:grid; place-items:center; width:44px; height:44px; border-radius:12px; background:rgba(159,192,255,.12); color:#9FC0FF; margin-bottom:18px; }
+  .snap-ic svg{ width:22px; height:22px; }
+
+  /* metrics band (distinct light cards with gradient numbers) */
+  .metrics{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .metric{ background:var(--surface); border:1px solid var(--line); border-radius:22px; padding:40px 34px; box-shadow:0 1px 2px rgba(15,26,43,.04),0 18px 40px -26px rgba(15,26,43,.2); position:relative; overflow:hidden; opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s cubic-bezier(.2,.6,.2,1),box-shadow .3s; }
+  .metric::before{ content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--accent),var(--gold)); }
+  .metric:hover{ transform:translateY(-5px); box-shadow:0 30px 62px -28px rgba(15,26,43,.3); }
+  .sec.in .metric{ opacity:1; transform:none; }
+  .sec.in .metric:nth-child(2){ transition-delay:.1s; }
+  .sec.in .metric:nth-child(3){ transition-delay:.2s; }
+  .metric-ic{ display:grid; place-items:center; width:46px; height:46px; border-radius:13px; background:var(--accent-soft); color:var(--accent); margin-bottom:22px; }
+  .metric-ic svg{ width:23px; height:23px; }
+  .metric-n{ font-family:var(--head); font-weight:680; font-size:2.3rem; letter-spacing:-0.03em; line-height:1; background:linear-gradient(90deg,var(--accent),#1f3f80); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:10px; }
+  .metric b{ display:block; font-size:1.02rem; letter-spacing:-0.01em; margin-bottom:8px; }
+  .metric p{ color:var(--soft); font-size:.96rem; line-height:1.5; }
+
+  /* who we protect: dual auto-scroll marquee */
+  .cmarq{ display:grid; gap:16px; -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); }
+  .crow{ overflow:hidden; }
+  .ctrack{ display:inline-flex; gap:12px; white-space:nowrap; animation:cscroll 42s linear infinite; }
+  .ctrack.rev{ animation-direction:reverse; animation-duration:50s; }
+  .cmarq:hover .ctrack{ animation-play-state:paused; }
+  @keyframes cscroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* faq two-column */
+  .faq-wrap2{ display:grid; grid-template-columns:.82fr 1.18fr; gap:56px; align-items:start; }
+  .faq-intro{ position:sticky; top:100px; }
+  .faq-intro h2{ margin-bottom:18px; }
+  .faq-intro p{ color:var(--soft); margin-bottom:26px; font-size:1.06rem; }
+  .faq-wrap2 .faq{ margin-top:0; }
+
+  @media(max-width:900px){
+    .metrics{ grid-template-columns:1fr; }
+    .faq-wrap2{ grid-template-columns:1fr; gap:30px; }
+    .faq-intro{ position:static; }
+  }
+  @media(prefers-reduced-motion:reduce){ .ctrack{ animation:none; } .metric{ opacity:1; transform:none; } }
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -358,20 +408,22 @@
     <p class="price-note" style="text-align:left;margin-top:22px;">You get a quote and approve it before anything starts. Free consultations and payment programs are available.</p>
   </div></section>
 
-  <section class="sec" style="padding-top:0;"><div class="wrap">
-    <span class="eyebrow">Who we protect</span>
-    <h2 style="margin-bottom:36px;">Founders across <em>every kind of idea.</em></h2>
-    <div class="chips">
-      <span class="chip">SaaS</span><span class="chip">Software &amp; Mobile Apps</span><span class="chip">Medical Devices</span>
-      <span class="chip">AI</span><span class="chip">Fintech</span><span class="chip">Blockchain &amp; Crypto</span>
-      <span class="chip">Wearables</span><span class="chip">Fashion</span><span class="chip">Food &amp; Beverage</span>
-      <span class="chip">Health &amp; Beauty</span><span class="chip">Consumer Gadgets</span><span class="chip">Drones &amp; UAVs</span>
-      <span class="chip">Sports &amp; Fitness</span><span class="chip">Home Decor</span><span class="chip">Outdoor &amp; Garden</span>
-      <span class="chip">VR / AR</span><span class="chip">Energy &amp; Green Tech</span><span class="chip">AgTech</span>
-      <span class="chip">Automotive</span><span class="chip">Manufacturing</span><span class="chip">Board Games</span>
-      <span class="chip">Pets</span><span class="chip">Jewelry</span><span class="chip">Baby &amp; Kids</span>
+  <section class="sec" style="padding-top:0;">
+    <div class="wrap">
+      <span class="eyebrow">Who we protect</span>
+      <h2 style="margin-bottom:44px;">Founders across <em>every kind of idea.</em></h2>
     </div>
-  </div></section>
+    <div class="cmarq">
+      <div class="crow"><div class="ctrack">
+        <span class="chip">SaaS</span><span class="chip">Software &amp; Mobile Apps</span><span class="chip">Medical Devices</span><span class="chip">AI</span><span class="chip">Fintech</span><span class="chip">Blockchain &amp; Crypto</span><span class="chip">Wearables</span><span class="chip">Fashion</span><span class="chip">Food &amp; Beverage</span><span class="chip">Health &amp; Beauty</span><span class="chip">Consumer Gadgets</span><span class="chip">Drones &amp; UAVs</span>
+        <span class="chip">SaaS</span><span class="chip">Software &amp; Mobile Apps</span><span class="chip">Medical Devices</span><span class="chip">AI</span><span class="chip">Fintech</span><span class="chip">Blockchain &amp; Crypto</span><span class="chip">Wearables</span><span class="chip">Fashion</span><span class="chip">Food &amp; Beverage</span><span class="chip">Health &amp; Beauty</span><span class="chip">Consumer Gadgets</span><span class="chip">Drones &amp; UAVs</span>
+      </div></div>
+      <div class="crow"><div class="ctrack rev">
+        <span class="chip">Sports &amp; Fitness</span><span class="chip">Home Decor</span><span class="chip">Outdoor &amp; Garden</span><span class="chip">VR / AR</span><span class="chip">Energy &amp; Green Tech</span><span class="chip">AgTech</span><span class="chip">Automotive</span><span class="chip">Manufacturing</span><span class="chip">Board Games</span><span class="chip">Pets</span><span class="chip">Jewelry</span><span class="chip">Baby &amp; Kids</span>
+        <span class="chip">Sports &amp; Fitness</span><span class="chip">Home Decor</span><span class="chip">Outdoor &amp; Garden</span><span class="chip">VR / AR</span><span class="chip">Energy &amp; Green Tech</span><span class="chip">AgTech</span><span class="chip">Automotive</span><span class="chip">Manufacturing</span><span class="chip">Board Games</span><span class="chip">Pets</span><span class="chip">Jewelry</span><span class="chip">Baby &amp; Kids</span>
+      </div></div>
+    </div>
+  </section>
 
   <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
     <div class="split-photo"></div>
@@ -412,9 +464,9 @@
     <span class="eyebrow">How it works</span>
     <h2 style="margin-bottom:52px;">Simple, affordable, <em>startup-friendly.</em></h2>
     <div class="steps">
-      <div class="step"><span class="sn">01</span><h3>Schedule a free chat</h3><p>Book a free consultation and talk it through directly with attorney Devin Miller, not a salesperson or an intake form.</p></div>
-      <div class="step"><span class="sn">02</span><h3>Know the flat fee upfront</h3><p>You get a clear understanding of what you actually need, and you know exactly what it'll cost before anything starts.</p></div>
-      <div class="step"><span class="sn">03</span><h3>We protect your idea</h3><p>We prepare and file your patent, trademark, or copyright, keeping it simple, affordable, and startup-friendly.</p></div>
+      <div class="step"><span class="sn">01</span><span class="step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2Z"/></svg></span><h3>Schedule a free chat</h3><p>Book a free consultation and talk it through directly with attorney Devin Miller, not a salesperson or an intake form.</p></div>
+      <div class="step"><span class="sn">02</span><span class="step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20l-8-8V4h8Z"/><circle cx="8" cy="8" r="1.5"/></svg></span><h3>Know the flat fee upfront</h3><p>You get a clear understanding of what you actually need, and you know exactly what it'll cost before anything starts.</p></div>
+      <div class="step"><span class="sn">03</span><span class="step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span><h3>We protect your idea</h3><p>We prepare and file your patent, trademark, or copyright, keeping it simple, affordable, and startup-friendly.</p></div>
     </div>
   </div></section>
 
@@ -433,9 +485,9 @@
     <h2 style="margin-bottom:16px;">On a budget? <em>Do it yourself.</em></h2>
     <p class="sec-lead">Flat-fee, do-it-yourself options for founders who want to move fast and keep it simple.</p>
     <div class="snap-grid">
-      <div class="snap"><span>Snap NDA</span><h3>Non-Disclosure Agreement</h3><div class="p">$67</div><p class="d">Protect a conversation before you share the idea.</p></div>
-      <div class="snap"><span>Snap Trademark</span><h3>DIY Trademark</h3><div class="p">$400</div><p class="d">File your brand name yourself, the smart way.</p></div>
-      <div class="snap"><span>Snap Copyright</span><h3>DIY Copyright</h3><div class="p">$99</div><p class="d">Register your creative work in a few simple steps.</p></div>
+      <div class="snap"><span class="snap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2h8l4 4v16H7Z"/><rect x="9.5" y="12" width="6" height="5" rx="1"/><path d="M11 12v-1.5a1.5 1.5 0 0 1 3 0V12"/></svg></span><span>Snap NDA</span><h3>Non-Disclosure Agreement</h3><div class="p">$67</div><p class="d">Protect a conversation before you share the idea.</p></div>
+      <div class="snap"><span class="snap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12 12 20l-8-8V4h8Z"/><circle cx="8" cy="8" r="1.5"/></svg></span><span>Snap Trademark</span><h3>DIY Trademark</h3><div class="p">$400</div><p class="d">File your brand name yourself, the smart way.</p></div>
+      <div class="snap"><span class="snap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.6 9.6a3.5 3.5 0 1 0 0 4.8"/></svg></span><span>Snap Copyright</span><h3>DIY Copyright</h3><div class="p">$99</div><p class="d">Register your creative work in a few simple steps.</p></div>
     </div>
   </div></section>
 
@@ -443,10 +495,22 @@
     <span class="eyebrow">Fast, flat, five-starred</span>
     <h2 style="margin-bottom:16px;">Answers when you <em>need them.</em></h2>
     <p class="sec-lead">Questions get answered fast, filings move quickly, and the work speaks for itself with 100+ five-star reviews.</p>
-    <div class="snap-grid">
-      <div class="snap"><span>Reply speed</span><h3>Most questions</h3><div class="p">Under 30 min</div><p class="d">90% of client questions get a reply within half an hour, and always within 24 hours.</p></div>
-      <div class="snap"><span>Filing speed</span><h3>Trademarks &amp; patents</h3><div class="p">1.5&ndash;4 wks</div><p class="d">Trademarks file in about 1.5 to 2 weeks, patents in about 3 to 4 weeks, before government review.</p></div>
-      <div class="snap"><span>Success rate</span><h3>Patents &amp; trademarks</h3><div class="p">95% / 85%</div><p class="d">A 95% patent allowance rate and 85% on trademarks, both well above average.</p></div>
+    <div class="metrics">
+      <div class="metric">
+        <span class="metric-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+        <div class="metric-n">Under 30 min</div><b>Reply speed</b>
+        <p>90% of client questions get a reply within half an hour, and always within 24 hours.</p>
+      </div>
+      <div class="metric">
+        <span class="metric-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 13h5l-1 8 8-11h-5l1-7Z"/></svg></span>
+        <div class="metric-n">1.5&ndash;4 wks</div><b>Filing speed</b>
+        <p>Trademarks file in about 1.5 to 2 weeks, patents in about 3 to 4 weeks, before government review.</p>
+      </div>
+      <div class="metric">
+        <span class="metric-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 21l5-3 5 3-1.5-8"/></svg></span>
+        <div class="metric-n">95% / 85%</div><b>Success rate</b>
+        <p>A 95% patent allowance rate and 85% on trademarks, both well above average.</p>
+      </div>
     </div>
   </div></section>
 
@@ -457,9 +521,13 @@
     </div>
   </div></section>
 
-  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
-    <span class="eyebrow">Common questions</span>
-    <h2 style="margin-bottom:40px;">Good to <em>know.</em></h2>
+  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap faq-wrap2">
+    <div class="faq-intro">
+      <span class="eyebrow">Common questions</span>
+      <h2>Good to <em>know.</em></h2>
+      <p>Still not sure what you need? Book a free chat and ask Devin directly, no pressure and no intake form.</p>
+      <a class="btn-p" href="https://strategymeeting.com" target="_blank" rel="noopener">Schedule Free Chat</a>
+    </div>
     <div class="faq">
       <details open><summary>Will I actually work with an attorney?</summary><p>Yes. When you schedule a consultation you chat directly with Devin Miller, an experienced attorney, not an assistant or a law student.</p></details>
       <details><summary>What does the flat fee cover?</summary><p>Everything for the service you choose is bundled in: attorney time, draftsman and illustration fees, government filing fees, and paralegal work. You approve a quote before anything starts, so there are no hidden costs.</p></details>
