@@ -158,6 +158,24 @@
     .foot-top{grid-template-columns:1fr;}
     .quote{padding:56px 32px;}.quote p{font-size:1.7rem;}
   }
+  /* contact + hours */
+  .contact-head{text-align:center;margin-bottom:54px;}
+  .contact-head .eyebrow{display:inline-block;margin-bottom:14px;}
+  .contact-head h2{font-size:3rem;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start;}
+  .cinfo h4{font-family:var(--head);font-size:1rem;letter-spacing:.02em;margin-bottom:14px;}
+  .cinfo .hours>div{display:flex;justify-content:space-between;gap:24px;max-width:360px;padding:11px 0;border-bottom:1px solid var(--line);}
+  .cinfo .hours span{color:var(--soft);}
+  .cinfo .hours b{font-weight:600;}
+  .cinfo p{color:var(--soft);margin-bottom:9px;}
+  .cinfo a:hover{color:var(--accent);}
+  .cform{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px 38px;box-shadow:0 24px 60px rgba(0,0,0,.06);}
+  .cform label{display:block;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:0 0 7px;}
+  .cform input,.cform textarea{width:100%;border:0;border-bottom:1.5px solid var(--line);background:transparent;padding:10px 2px;font:inherit;color:var(--ink);margin-bottom:22px;outline:none;transition:.2s;}
+  .cform input:focus,.cform textarea:focus{border-color:var(--accent);}
+  .cform textarea{resize:vertical;min-height:96px;}
+  .cform button{border:0;cursor:pointer;margin-top:4px;}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:40px;}}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -284,6 +302,28 @@
     <div class="cta-band">
       <h2>Can't tell which jobs made money last month? <em>Let's talk.</em></h2>
       <a class="btn-w" href="tel:9192106675">Call (919) 210-6675</a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
+    <div class="contact-head"><span class="eyebrow">Get in touch</span>
+      <h2>Ready to get started?</h2></div>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <h4>Business hours</h4>
+        <div class="hours"><div><span>Availability</span><b>By appointment</b></div></div>
+        <h4 style="margin-top:34px;">Reach us</h4>
+        <p>100 Northview Ct, Louisburg, NC 27549</p>
+        <p><a href="tel:9192106675">(919) 210-6675</a></p>
+        <p><a href="mailto:info@trianglefinancegroup.com">info@trianglefinancegroup.com</a></p>
+      </div>
+      <form class="cform" action="mailto:info@trianglefinancegroup.com" method="post" enctype="text/plain">
+        <label>Name</label><input type="text" name="name" autocomplete="name">
+        <label>Email</label><input type="email" name="email" autocomplete="email">
+        <label>Phone</label><input type="tel" name="phone" autocomplete="tel">
+        <label>Message</label><textarea name="message" rows="4"></textarea>
+        <button type="submit" class="btn-p">Send message</button>
+      </form>
     </div>
   </div></section>
 
