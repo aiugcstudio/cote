@@ -148,6 +148,18 @@
   .cform input:focus,.cform textarea:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--accent-soft,rgba(0,0,0,.05));}
   .cform textarea{resize:vertical;min-height:120px;}
   .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
+  /* what sets us apart */
+  .apart-band{background:var(--char);border-radius:28px;padding:64px 60px;}
+  .apart-band .eyebrow{color:#F2A6A9;}
+  .apart-band h2{color:#fff;margin:14px 0 34px;}
+  .apart-band h2 em{color:#F2A6A9;}
+  .ap{display:flex;gap:26px;align-items:center;padding:30px 0;border-top:1px solid rgba(255,255,255,.1);}
+  .ap:first-of-type{border-top:0;}
+  .ap .ic{width:66px;height:66px;flex:none;background:var(--accent);border-radius:12px;display:grid;place-items:center;color:#fff;}
+  .ap .ic svg{width:30px;height:30px;}
+  .ap h3{color:#fff;font-size:1.4rem;margin-bottom:6px;letter-spacing:-0.02em;}
+  .ap p{color:rgba(255,255,255,.72);font-size:1.06rem;}
+  @media(max-width:600px){.apart-band{padding:44px 30px;}.ap{gap:18px;}.ap .ic{width:54px;height:54px;}}
   @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}}
 
   @media(max-width:900px){
@@ -171,8 +183,8 @@
 
   <section class="hero"><div class="wrap hero-in">
     <span class="pill"><span class="dot"></span>Serving commercial &amp; condominium properties across South Florida</span>
-    <h1>Precision restoration for the <em>building envelope</em>.</h1>
-    <p>We restore, waterproof, and enhance your space with expert solutions built to last. Concrete restoration, building envelope, waterproofing, and commercial interiors, done right.</p>
+    <h1>Discover precision in concrete restoration, <em>waterproofing</em>, and commercial interiors.</h1>
+    <p>We restore, waterproof, and enhance your space with expert solutions built to last.</p>
     <div class="hero-cta">
       <a class="btn-p" href="tel:3054501135">Request an Estimate</a>
       <a class="btn-g" href="#services">View Our Services</a>
@@ -233,31 +245,23 @@
   <section class="sec" style="padding-top:0;" id="craft"><div class="wrap split">
     <div class="split-photo"></div>
     <div>
-      <span class="eyebrow">The IVITA standard</span>
-      <h2>Built on 25 years of <em>doing it right</em>.</h2>
-      <p>Founded in 2024 by Juan Ivanoff, who brings 25 years of experience in the construction industry across South Florida and the Washington Metropolitan Area. IVITA specializes in structural repairs and building envelope solutions, serving the condominium and commercial property markets.</p>
-      <ul>
-        <li>An experienced team with over 20 years of hands-on expertise</li>
-        <li>Meticulous, highly skilled, and committed to quality and safety</li>
-        <li>Transparent, open communication with every client</li>
-        <li>An innovative approach that keeps each project executed flawlessly</li>
-      </ul>
+      <span class="eyebrow">About us</span>
+      <h2>Construction, Restoration, and <em>Commercial Interior</em> Specialists.</h2>
+      <p>With 25 years of experience in the construction industry, we pride ourselves on our innovative approach, ensuring every project is executed flawlessly. With over two decades of hands-on experience in general contracting services, our team at Ivita Construction delivers top-tier construction solutions.</p>
+      <p>From waterproofing and concrete restoration to commercial interior projects, we ensure quality craftsmanship for residential and commercial properties across South Florida.</p>
     </div>
   </div></section>
 
-  <section class="sec" style="padding-top:0;"><div class="wrap split">
-    <div>
-      <span class="eyebrow">The work, up close</span>
-      <h2>Restoration and renovation, <em>executed flawlessly</em>.</h2>
-      <p>From interior renovations to building-envelope restoration and waterproofing, we handle the details that protect a building for the long term, on condominium and commercial properties across South Florida.</p>
-      <ul>
-        <li>Concrete restoration and structural repairs</li>
-        <li>Building envelope and waterproofing</li>
-        <li>Commercial interior renovations</li>
-        <li>General contracting, managed end to end</li>
-      </ul>
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="apart-band">
+      <span class="eyebrow">Why IVITA</span>
+      <h2>What sets us apart in <em>South Florida</em>.</h2>
+      <div class="apart">
+        <div class="ap"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></span><div><h3>Stronger, Safer Structures</h3><p>Enhancing your property&rsquo;s durability and stability.</p></div></div>
+        <div class="ap"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a8 8 0 0 1 16 0"/><path d="M9.5 9V5.5a2.5 2.5 0 0 1 5 0V9"/><path d="M2 17h20v2H2z"/></svg></span><div><h3>Reliable Service</h3><p>We deliver on time, every time.</p></div></div>
+        <div class="ap"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2-2 2.6-2.6Z"/></svg></span><div><h3>Customer First</h3><p>Your vision guides our work.</p></div></div>
+      </div>
     </div>
-    <div class="split-photo rev"></div>
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
@@ -276,8 +280,11 @@
 
   <section class="sec" style="padding-top:0;" id="contact"><div class="wrap">
     <div class="cta-band">
-      <h2>Concrete, envelope, or waterproofing to address? Let's look at it.</h2>
-      <a class="btn-w" href="tel:3054501135">Call (305) 450-1135</a>
+      <div>
+        <h2>Start your project today.</h2>
+        <p style="color:rgba(255,255,255,.85);margin-top:14px;max-width:540px;font-size:1.1rem;">Begin your project with us and experience the difference that expert general contracting services can make. Our team is ready to help you achieve your new project goals with precision and excellence.</p>
+      </div>
+      <a class="btn-w" href="tel:3054501135">Schedule a consultation</a>
     </div>
   </div></section>
 
