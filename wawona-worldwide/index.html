@@ -9,7 +9,7 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   :root{
     --bg:#F6F4EF; --ink:#101826; --soft:#5A6472; --faint:#94A0B0; --line:#E4E1D8; --surface:#FFFFFF;
-    --navy:#0B1B33; --accent:#B8912E; --accent-soft:#F0E7CE;
+    --navy:#0B1B33; --navy2:#0A1730; --accent:#B8912E; --accent-soft:#F0E7CE; --accent-2:#CBA748;
     --head:"Inter",-apple-system,sans-serif; --sans:"Inter",-apple-system,sans-serif; --serif:"Source Serif 4",Georgia,serif;
   }
   body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
@@ -26,23 +26,32 @@
   .nav-call{background:var(--accent);color:#fff;padding:12px 22px;border-radius:100px;font-weight:600;font-size:.92rem;}
 
   /* hero */
-  .hero{position:relative;min-height:760px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
-  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 78% 12%,rgba(184,145,46,.16) 0%,rgba(184,145,46,0) 42%),linear-gradient(150deg,#0B1B33 0%,#0B1B33 40%,#0E2340 100%);}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,rgba(6,14,26,.5));}
-  .hero-in{position:relative;padding:150px 0 90px;max-width:820px;}
+  .hero{position:relative;min-height:780px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
+  .hero::before{content:"";position:absolute;inset:-4%;background:
+    radial-gradient(1100px 640px at 80% 8%,rgba(184,145,46,.30),transparent 56%),
+    radial-gradient(900px 520px at 4% 98%,rgba(184,145,46,.10),transparent 60%),
+    linear-gradient(155deg,#0B1B33 0%,#0B1B33 42%,#0E2340 100%);
+    animation:waw-zoom 26s ease-in-out infinite alternate;}
+  @keyframes waw-zoom{from{transform:scale(1);}to{transform:scale(1.06);}}
+  @media(prefers-reduced-motion:reduce){.hero::before{animation:none;}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 72%,rgba(6,14,26,.5));}
+  .grid-lines{position:absolute;inset:0;opacity:.55;
+    background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+    background-size:60px 60px;mask-image:radial-gradient(1000px 720px at 72% 28%,#000,transparent 78%);-webkit-mask-image:radial-gradient(1000px 720px at 72% 28%,#000,transparent 78%);}
+  .hero-in{position:relative;padding:154px 0 96px;max-width:830px;}
   .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.07);border:1px solid rgba(184,145,46,.4);padding:9px 18px;border-radius:100px;font-size:.86rem;font-weight:500;margin-bottom:30px;color:rgba(255,255,255,.9);}
-  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(184,145,46,.2);}
   h1{font-size:4.8rem;margin-bottom:28px;font-weight:680;letter-spacing:-0.05em;line-height:1.0;}
-  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-0.02em;}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent-2);letter-spacing:-0.02em;}
   .hero p{font-size:1.3rem;font-weight:300;color:rgba(255,255,255,.84);max-width:600px;margin-bottom:40px;}
   .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
-  .btn-p{background:var(--accent);color:#fff;padding:17px 36px;border-radius:100px;font-weight:500;font-size:1.05rem;box-shadow:0 12px 34px rgba(11,27,51,.3);}
+  .btn-p{background:var(--accent);color:#fff;padding:17px 36px;border-radius:100px;font-weight:500;font-size:1.05rem;box-shadow:0 12px 34px rgba(184,145,46,.32);}
   .btn-g{color:#fff;padding:16px 30px;border-radius:100px;font-weight:600;font-size:1.05rem;border:1.5px solid rgba(255,255,255,.28);}
   .hero-rate{display:flex;align-items:center;gap:10px;margin-top:36px;font-size:.98rem;color:rgba(255,255,255,.85);}
-  .hero-rate .rq{font-family:var(--serif);font-style:italic;color:var(--accent);}
+  .hero-rate .rq{font-family:var(--serif);font-style:italic;color:var(--accent-2);}
 
   /* trust bar */
-  .trust{background:var(--navy);border-top:1px solid rgba(255,255,255,.09);padding:0;}
+  .trust{background:var(--navy2);border-top:1px solid rgba(255,255,255,.09);padding:0;}
   .trust-in{display:grid;grid-template-columns:repeat(4,1fr);}
   .trust-item{padding:34px 20px;text-align:center;color:#fff;border-left:1px solid rgba(255,255,255,.09);}
   .trust-item:first-child{border-left:0;}
@@ -51,43 +60,78 @@
 
   /* sections */
   .sec{padding:120px 0;}
-  .eyebrow{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;display:inline-block;}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;display:inline-block;}
   .sec h2{font-size:3.2rem;margin-bottom:16px;max-width:720px;}
   .sec h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
   .sec-lead{color:var(--soft);font-size:1.18rem;max-width:680px;margin-bottom:60px;}
 
-  /* services grid (image-free) */
+  /* services grid (icon tiles) */
   .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-  .svc{border:1px solid var(--line);border-radius:20px;padding:40px 36px;background:var(--surface);transition:.25s;}
-  .svc:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(11,27,51,.09);border-color:var(--accent);}
-  .svc .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:24px;}
+  .svc{border:1px solid var(--line);border-radius:20px;padding:40px 36px;background:var(--surface);transition:.25s;position:relative;overflow:hidden;}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(11,27,51,.10);border-color:var(--accent);}
+  .svc .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:24px;transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+  .svc:hover .ic{transform:translateY(-3px);}
   .svc .ic svg{width:24px;height:24px;}
+  .svc .no{position:absolute;top:30px;right:34px;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--accent);opacity:.5;}
   .svc h3{font-size:1.4rem;margin-bottom:12px;}
   .svc p{color:var(--soft);font-size:1.02rem;line-height:1.55;}
+
+  /* approach process band */
+  .approach{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+  .astep{background:var(--surface);padding:38px 26px;transition:background .25s;}
+  .astep:hover{background:var(--accent-soft);}
+  .astep .aic{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;}
+  .astep .aic svg{width:23px;height:23px;}
+  .astep .an{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.05rem;margin-bottom:8px;display:block;}
+  .astep h3{font-size:1.12rem;margin-bottom:8px;letter-spacing:-0.02em;}
+  .astep p{color:var(--soft);font-size:.92rem;line-height:1.5;}
+  @media(max-width:900px){.approach{grid-template-columns:1fr;}}
+
+  /* programs tag cloud */
+  .prog-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px;}
+  .chip{border:1px solid var(--line);background:var(--surface);border-radius:100px;padding:12px 22px;font-size:.98rem;font-weight:500;color:var(--ink);transition:.2s;}
+  .chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
 
   /* split */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
   .split h2{font-size:3rem;margin-bottom:20px;}
   .split h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
   .split p{color:var(--soft);font-size:1.1rem;margin-bottom:20px;}
-  .split-panel{background:var(--navy);border-radius:24px;padding:64px 56px;color:#fff;box-shadow:0 30px 70px rgba(11,27,51,.16);}
-  .split-panel .lg{font-family:var(--serif);font-style:italic;font-size:2rem;line-height:1.3;color:#fff;margin-bottom:24px;}
-  .split-panel .lg span{color:var(--accent);}
-  .split-panel .mono{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+  .split-panel{background:var(--navy);border-radius:24px;padding:60px 52px;color:#fff;box-shadow:0 30px 70px rgba(11,27,51,.16);position:relative;overflow:hidden;}
+  .split-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 340px at 90% -10%,rgba(184,145,46,.22),transparent 62%);}
+  .split-panel .lg{position:relative;font-family:var(--serif);font-style:italic;font-size:2rem;line-height:1.3;color:#fff;margin-bottom:30px;}
+  .split-panel .lg span{color:var(--accent-2);}
+  .sp-stats{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:24px 20px;margin-bottom:28px;}
+  .sp-stats .s b{font-family:var(--head);font-weight:650;font-size:1.7rem;letter-spacing:-0.03em;display:block;color:#fff;}
+  .sp-stats .s span{color:rgba(255,255,255,.55);font-size:.86rem;}
+  .split-panel .mono{position:relative;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+
+  /* credential band */
+  .creds{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+  .cred{background:var(--surface);padding:36px 30px;display:flex;flex-direction:column;}
+  .cred .cic{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:18px;}
+  .cred .cic svg{width:21px;height:21px;}
+  .cred b{font-family:var(--head);font-weight:650;font-size:1.05rem;letter-spacing:-0.02em;margin-bottom:6px;display:block;color:var(--navy);}
+  .cred span{color:var(--soft);font-size:.95rem;line-height:1.5;}
+  @media(max-width:900px){.creds{grid-template-columns:1fr 1fr;}}
 
   /* team roster */
   .roster-group{margin-bottom:40px;}
   .roster-group > .rg-label{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;display:block;}
   .roster{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
-  .rcell{background:var(--surface);padding:32px 30px;}
+  .rcell{background:var(--surface);padding:30px 28px;transition:background .25s;}
+  .rcell:hover{background:var(--accent-soft);}
+  .rcell .rav{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:700;font-size:.98rem;color:#fff;letter-spacing:.02em;margin-bottom:16px;background:linear-gradient(135deg,#CBA748,#B8912E);}
   .rcell b{font-family:var(--head);font-weight:650;font-size:1.2rem;letter-spacing:-0.02em;display:block;margin-bottom:6px;}
   .rcell .title{color:var(--accent);font-weight:600;font-size:.95rem;display:block;margin-bottom:4px;}
-  .rcell .loc{color:var(--soft);font-size:.92rem;}
+  .rcell .loc{color:var(--soft);font-size:.92rem;display:flex;align-items:center;gap:6px;}
+  .rcell .loc svg{width:14px;height:14px;color:var(--faint);flex:none;}
   @media(max-width:900px){.roster{grid-template-columns:1fr;}}
 
   /* consulting services */
   .cons{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;}
-  .citem{display:flex;gap:22px;padding:28px 0;border-top:1px solid var(--line);}
+  .citem{display:flex;gap:22px;padding:28px 0;border-top:1px solid var(--line);transition:.25s;}
+  .citem:hover{transform:translateX(4px);}
   .citem .cnum{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--accent);line-height:1;flex:none;width:38px;}
   .citem h3{font-family:var(--head);font-weight:650;font-size:1.14rem;letter-spacing:-0.02em;margin-bottom:8px;}
   .citem p{color:var(--soft);font-size:.99rem;line-height:1.55;}
@@ -106,14 +150,31 @@
   .bio li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--accent);}
   @media(max-width:900px){.bios{grid-template-columns:1fr;}}
 
+  /* dark feature band */
+  .feature{background:var(--navy);color:#fff;border-radius:28px;padding:70px 64px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;overflow:hidden;}
+  .feature::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 400px at 88% -10%,rgba(184,145,46,.24),transparent 60%);}
+  .feature > *{position:relative;}
+  .feature .eyebrow{color:var(--accent-2);}
+  .feature h2{font-size:2.5rem;color:#fff;margin-bottom:18px;}
+  .feature h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent-2);}
+  .feature p{color:rgba(255,255,255,.82);font-size:1.08rem;margin-bottom:16px;}
+  .feature .fpoints{list-style:none;margin:0;padding:0;display:grid;gap:16px;}
+  .feature .fpoints li{display:flex;gap:15px;align-items:flex-start;color:rgba(255,255,255,.9);font-size:1.04rem;line-height:1.5;}
+  .feature .fpoints .fi{flex:none;width:38px;height:38px;border-radius:11px;background:rgba(184,145,46,.16);border:1px solid rgba(184,145,46,.4);color:var(--accent-2);display:grid;place-items:center;}
+  .feature .fpoints .fi svg{width:19px;height:19px;}
+  @media(max-width:900px){.feature{grid-template-columns:1fr;padding:48px 34px;gap:32px;}}
+
   /* quote */
-  .quote{background:var(--navy);color:#fff;border-radius:28px;padding:80px 70px;text-align:center;}
-  .quote p{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.3;max-width:900px;margin:0 auto 30px;}
-  .quote .by{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+  .quote{background:var(--navy2);color:#fff;border-radius:28px;padding:80px 70px;text-align:center;position:relative;overflow:hidden;}
+  .quote::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 50% -10%,rgba(184,145,46,.22),transparent 60%);}
+  .quote .qmark{position:relative;display:block;font-family:var(--serif);font-size:4.6rem;line-height:.5;color:rgba(203,167,72,.55);margin-bottom:14px;}
+  .quote p{position:relative;font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.3;max-width:900px;margin:0 auto 30px;}
+  .quote .by{position:relative;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
 
   /* area */
   .area{text-align:center;max-width:720px;margin:0 auto;}
   .area h2{font-size:2.8rem;margin-bottom:16px;}
+  .area h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
   .area p{color:var(--soft);font-size:1.15rem;}
   .area .addr{margin-top:24px;font-weight:600;font-family:var(--head);font-size:1.1rem;}
 
@@ -123,7 +184,7 @@
   .cta-band .btn-w{background:#fff;color:var(--accent);padding:17px 36px;border-radius:100px;font-weight:600;white-space:nowrap;font-size:1.05rem;}
 
   /* footer */
-  footer{background:var(--navy);color:rgba(255,255,255,.6);padding:74px 0 44px;}
+  footer{background:var(--navy2);color:rgba(255,255,255,.6);padding:74px 0 44px;}
   .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
   .foot-top .brand{color:#fff;margin-bottom:16px;}
   .foot-top p{max-width:300px;}
@@ -138,11 +199,13 @@
     .cta-band{flex-direction:column;align-items:flex-start;}
     .foot-top{grid-template-columns:1fr;}
     .quote{padding:56px 34px;}.quote p{font-size:1.7rem;}
+    .nav-links{display:none;}
   }
   /* contact + hours */
   .contact-head{text-align:center;margin-bottom:52px;}
   .contact-head .eyebrow{display:inline-block;margin-bottom:14px;}
   .contact-head h2{font-size:3.1rem;max-width:none;}
+  .contact-head h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
   .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px rgba(0,0,0,.10);}
   .cinfo{background:var(--navy);color:#fff;padding:56px 48px;}
   .cinfo h4{font-family:var(--head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;}
@@ -150,9 +213,11 @@
   .cinfo .hours>div:first-child{padding-top:0;}
   .cinfo .hours span{color:rgba(255,255,255,.55);}
   .cinfo .hours b{font-weight:600;color:#fff;}
-  .cinfo p{color:rgba(255,255,255,.8);margin-bottom:11px;line-height:1.5;}
-  .cinfo a{color:#fff;}
-  .cinfo a:hover{opacity:.66;}
+  .cinfo .ci-line{display:flex;gap:13px;align-items:center;margin-bottom:14px;color:rgba(255,255,255,.82);line-height:1.5;}
+  .cinfo .ci-line a{color:#fff;}
+  .cinfo .ci-ic{flex:none;width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;color:var(--accent-2);transition:transform .3s,background .3s;}
+  .cinfo .ci-line:hover .ci-ic{transform:translateY(-2px);background:rgba(203,167,72,.16);}
+  .cinfo .ci-ic svg{width:17px;height:17px;}
   .cform{background:var(--surface);padding:52px 50px;display:flex;flex-direction:column;}
   .cform label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 8px;}
   .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
@@ -163,15 +228,46 @@
   /* real logo */
   .nav .brand img{height:56px;width:56px;object-fit:contain;display:block;background:#fff;border-radius:12px;padding:7px;}
   footer .brand img{height:50px;width:50px;object-fit:contain;display:block;background:#fff;border-radius:11px;padding:6px;}
+
+  /* ---- hero entrance ---- */
+  @keyframes waw-rise{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+  .hero-in>*{animation:waw-rise .85s cubic-bezier(.2,.7,.2,1) both;}
+  .hero-in>*:nth-child(1){animation-delay:.05s}.hero-in>*:nth-child(2){animation-delay:.15s}
+  .hero-in>*:nth-child(3){animation-delay:.27s}.hero-in>*:nth-child(4){animation-delay:.39s}
+  .hero-in>*:nth-child(5){animation-delay:.5s}
+
+  /* ---- trust numbers pop ---- */
+  .trust-item b{transform:scale(.82);opacity:0;transition:transform .6s cubic-bezier(.2,.9,.3,1.4),opacity .5s ease;}
+  .trust.in .trust-item b{transform:none;opacity:1;}
+  .trust.in .trust-item:nth-child(2) b{transition-delay:.1s}
+  .trust.in .trust-item:nth-child(3) b{transition-delay:.2s}
+  .trust.in .trust-item:nth-child(4) b{transition-delay:.3s}
+
+  /* ---- staggered reveal for grid children ---- */
+  .stagger > *{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1),box-shadow .25s ease,border-color .25s ease,background .25s ease;}
+  .stagger.in > *{opacity:1;transform:none;}
+  .stagger.in > *:nth-child(2){transition-delay:.07s;}
+  .stagger.in > *:nth-child(3){transition-delay:.14s;}
+  .stagger.in > *:nth-child(4){transition-delay:.21s;}
+  .stagger.in > *:nth-child(5){transition-delay:.28s;}
+  .stagger.in > *:nth-child(6){transition-delay:.35s;}
+  .stagger.in > *:nth-child(7){transition-delay:.42s;}
+  .stagger.in > *:nth-child(8){transition-delay:.49s;}
+
+  @media(prefers-reduced-motion:reduce){
+    .hero-in>*{animation:none;}
+    .stagger>*,.trust-item b{opacity:1!important;transform:none!important;transition:none!important;}
+    .citem:hover{transform:none;}
+  }
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand"><img src="../assets/img/waw-logo.jpg" alt="Wawona Worldwide Capital"></a>
-    <nav class="nav-links"><a href="#services">Lending</a><a href="#consulting">Consulting</a><a href="#about">About</a><a href="#team">Our Team</a><a href="#area">Reach</a><a href="#contact">Contact</a></nav>
+    <nav class="nav-links"><a href="#services">Lending</a><a href="#approach">Approach</a><a href="#consulting">Consulting</a><a href="#about">About</a><a href="#team">Our Team</a><a href="#contact">Contact</a></nav>
     <a class="nav-call" href="tel:2038292225">Call (203) 829-2225</a>
   </div></header>
 
-  <section class="hero"><div class="wrap hero-in">
+  <section class="hero"><div class="grid-lines"></div><div class="wrap hero-in">
     <span class="pill"><span class="dot"></span>Correspondent lenders for commercial loans</span>
     <h1>Creative capital solutions for <em>commercial real estate</em>.</h1>
     <p>We are consultants and a direct correspondent lender for commercial loans, structuring the financing most people can't.</p>
@@ -193,27 +289,57 @@
     <span class="eyebrow">What we arrange</span>
     <h2>Lending built around <em>collateral and cash flow</em>.</h2>
     <p class="sec-lead">We specialize in creative solutions for our clients. We are innovative and quick to assess any type of financing that has collateral and cash flow. We welcome inquiries if your acquisition, repositioning, bridge, or refinancing needs are $25K to $1B.</p>
-    <div class="svc-grid">
+    <div class="svc-grid stagger">
       <div class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></div>
+        <span class="no">01</span>
         <h3>Fix &amp; Flip Loans</h3>
         <p>Direct correspondent lender for small-balance SFR ($50K to $2MM) and Multifamily ($50K to $5MM) fix-and-flip loans, 100% LTC and 100% renovation costs.</p>
       </div>
       <div class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4l8-2 8 2v18"/><path d="M2 22h20"/><path d="M9 22v-4h6v4"/><path d="M8 9h.01M12 9h.01M16 9h.01"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4l8-2 8 2v18"/><path d="M2 22h20"/><path d="M9 22v-4h6v4"/><path d="M8 9h.01M12 9h.01M16 9h.01"/></svg></div>
+        <span class="no">02</span>
         <h3>Bridge &amp; Rental Loans</h3>
         <p>Bridge loans, rental loans, and rental portfolio loans structured to your acquisition, repositioning, or refinancing needs.</p>
       </div>
       <div class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 21V8h16v13"/><path d="M9 21v-6h6v6"/><path d="M4 8l8-5 8 5"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 21V8h16v13"/><path d="M9 21v-6h6v6"/><path d="M4 8l8-5 8 5"/></svg></div>
+        <span class="no">03</span>
         <h3>Commercial Loans</h3>
         <p>Ground-up construction, SBA, USDA, Agency, Conventional, CMBS, bridge, and term commercial loans.</p>
       </div>
       <div class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <span class="no">04</span>
         <h3>Working Capital &amp; ABL</h3>
         <p>Working capital, asset-based lending, factoring of accounts receivable, and equipment and inventory loans.</p>
       </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="approach"><div class="wrap">
+    <span class="eyebrow">How we work</span>
+    <h2 style="margin-bottom:52px;">From inquiry to <em>close</em>.</h2>
+    <div class="approach stagger">
+      <div class="astep"><span class="aic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span><span class="an">01</span><h3>Inquiry</h3><p>Call us with any scenario. We welcome inquiries from $25K to $1B and respond quickly.</p></div>
+      <div class="astep"><span class="aic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="an">02</span><h3>Assessment</h3><p>We are quick to assess any financing that has collateral and cash flow, on its own merits.</p></div>
+      <div class="astep"><span class="aic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M8 15l3-4 3 2 4-6"/></svg></span><span class="an">03</span><h3>Structuring</h3><p>We build the creative structure most people can't, shaped around where the programs sit today.</p></div>
+      <div class="astep"><span class="aic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M9 14l2 2 4-4"/></svg></span><span class="an">04</span><h3>Placement</h3><p>As a direct correspondent lender with deep relationships, we place the loan with the right program.</p></div>
+      <div class="astep"><span class="aic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span><span class="an">05</span><h3>Close</h3><p>Nothing should stand between you and the commercial loan or mortgage you need. We close.</p></div>
+    </div>
+    <div class="prog-grid stagger">
+      <span class="chip">Ground-up construction</span>
+      <span class="chip">SBA</span>
+      <span class="chip">USDA</span>
+      <span class="chip">Agency</span>
+      <span class="chip">Conventional</span>
+      <span class="chip">CMBS</span>
+      <span class="chip">Bridge &amp; term</span>
+      <span class="chip">Fix &amp; flip</span>
+      <span class="chip">Rental portfolio</span>
+      <span class="chip">Asset-based lending</span>
+      <span class="chip">Factoring of receivables</span>
+      <span class="chip">Equipment &amp; inventory</span>
     </div>
   </div></section>
 
@@ -243,7 +369,24 @@
     </div>
     <div class="split-panel">
       <p class="lg">A direct correspondent lender for commercial loans, structuring the financing <span>most people can't</span>.</p>
+      <div class="sp-stats">
+        <div class="s"><b>2003</b><span>Founded, October 3</span></div>
+        <div class="s"><b>60+</b><span>Commercial loans closed</span></div>
+        <div class="s"><b>$20B+</b><span>Closed in our careers</span></div>
+        <div class="s"><b>$25K&ndash;$1B</b><span>Deal range</span></div>
+      </div>
       <p class="mono">Wawona Worldwide Capital, LLC &middot; Stamford, CT</p>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">Credentials</span>
+    <h2 style="margin-bottom:52px;">Institutional pedigree, <em>independent desk</em>.</h2>
+    <div class="creds stagger">
+      <div class="cred"><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"/><path d="M2 21h20"/><path d="M9 21v-6h6v6"/></svg></span><b>Direct correspondent lender</b><span>Structuring and placing commercial loans since 2003.</span></div>
+      <div class="cred"><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg></span><b>Global reach</b><span>Principals and directors across the U.S., Argentina, and Colombia.</span></div>
+      <div class="cred"><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 12h14M5 16h9"/><path d="M3 4h18v16H3z"/></svg></span><b>English, Spanish &amp; Mandarin</b><span>Presentations and counsel in three languages.</span></div>
+      <div class="cred"><span class="cic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8 14l-2 7 6-3 6 3-2-7"/></svg></span><b>Wall Street careers</b><span>Deutsche Bank, Prudential, Citigroup, Manufacturers Hanover.</span></div>
     </div>
   </div></section>
 
@@ -253,9 +396,9 @@
     <p class="sec-lead">Our principals and managing directors can meet with you personally and exceed your needs and expectations.</p>
     <div class="roster-group">
       <span class="rg-label">Principals</span>
-      <div class="roster">
-        <div class="rcell"><b>Judy Liu</b><span class="title">CFO</span><span class="loc">New York</span></div>
-        <div class="rcell"><b>Michael Kondracki</b><span class="title">CEO</span><span class="loc">Connecticut</span></div>
+      <div class="roster stagger">
+        <div class="rcell"><span class="rav">JL</span><b>Judy Liu</b><span class="title">CFO</span><span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>New York</span></div>
+        <div class="rcell"><span class="rav">MK</span><b>Michael Kondracki</b><span class="title">CEO</span><span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Connecticut</span></div>
       </div>
     </div>
     <div class="bios">
@@ -314,21 +457,38 @@
         </ul>
       </div>
     </div>
-    <div class="roster-group">
+    <div class="roster-group" style="margin-top:40px;">
       <span class="rg-label">Managing Directors</span>
-      <div class="roster">
-        <div class="rcell"><b>Fabio Berlese</b><span class="title">Managing Director</span><span class="loc">Argentina</span></div>
-        <div class="rcell"><b>Robert Converse</b><span class="title">Managing Director</span><span class="loc">New York</span></div>
-        <div class="rcell"><b>Alan Roberson</b><span class="title">Managing Director</span><span class="loc">California</span></div>
-        <div class="rcell"><b>Pilar Gracia</b><span class="title">Managing Director</span><span class="loc">Maryland</span></div>
-        <div class="rcell"><b>Carlos Alberto Lopez Ortega</b><span class="title">Managing Director</span><span class="loc">Colombia</span></div>
+      <div class="roster stagger">
+        <div class="rcell"><span class="rav">FB</span><b>Fabio Berlese</b><span class="title">Managing Director</span><span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Argentina</span></div>
+        <div class="rcell"><span class="rav">RC</span><b>Robert Converse</b><span class="title">Managing Director</span><span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>New York</span></div>
+        <div class="rcell"><span class="rav">AR</span><b>Alan Roberson</b><span class="title">Managing Director</span><span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>California</span></div>
+        <div class="rcell"><span class="rav">PG</span><b>Pilar Gracia</b><span class="title">Managing Director</span><span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Maryland</span></div>
+        <div class="rcell"><span class="rav">CO</span><b>Carlos Alberto Lopez Ortega</b><span class="title">Managing Director</span><span class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Colombia</span></div>
       </div>
     </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="feature">
+      <div>
+        <span class="eyebrow">Why Wawona</span>
+        <h2>Creative capital, <em>closed</em>.</h2>
+        <p>We specialize in creative solutions for our clients. We are innovative and quick to assess any type of financing that has collateral and cash flow, and we treat every assignment on its own merits.</p>
+      </div>
+      <ul class="fpoints">
+        <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Direct correspondent lender, not just a broker</li>
+        <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Deals from $25K to $1B, welcomed on their merits</li>
+        <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>A full consulting desk behind every financing</li>
+        <li><span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Principals who meet with you personally</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
     <div class="quote">
-      <p>&ldquo;Nothing should stand between you and obtaining the commercial loan or commercial mortgage you need.&rdquo;</p>
+      <span class="qmark" aria-hidden="true">&ldquo;</span>
+      <p>Nothing should stand between you and obtaining the commercial loan or commercial mortgage you need.</p>
       <span class="by">Wawona Worldwide Capital, LLC</span>
     </div>
   </div></section>
@@ -349,15 +509,15 @@
 
   <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
     <div class="contact-head"><span class="eyebrow">Get in touch</span>
-      <h2>Ready to get started?</h2></div>
+      <h2>Ready to get <em>started</em>?</h2></div>
     <div class="contact-grid">
       <div class="cinfo">
         <h4>Business hours</h4>
         <div class="hours"><div><span>Availability</span><b>By appointment</b></div></div>
         <h4 style="margin-top:34px;">Reach us</h4>
-        <p>Stamford, CT 06903</p>
-        <p><a href="tel:2038292225">(203) 829-2225</a></p>
-        <p><a href="tel:2038292226">(203) 829-2226</a></p>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>Stamford, CT 06903</span></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></span><a href="tel:2038292225">(203) 829-2225</a></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></span><a href="tel:2038292226">(203) 829-2226</a></div>
       </div>
       <form class="cform" onsubmit="return false;">
         <label>Name</label><input type="text" name="name" autocomplete="name">
@@ -379,7 +539,8 @@
     <div class="foot-bot"><span>&copy; 2026 Wawona Worldwide Capital, LLC</span><span>Correspondent lenders for commercial loans</span></div>
   </div></footer>
 <style>/*cote-reveal*/.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform;}.reveal.in{opacity:1;transform:none;}@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}</style>
-<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec,.trust'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');so.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});[].forEach.call(document.querySelectorAll('.stagger'),function(el){so.observe(el);});})();</script>
 <style>/*cote-polish*/
 .svcard,.proj{overflow:hidden;}
 .svcard,.proj,.card,.revcard,.reviewcard,.area-item,.logotile{transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s cubic-bezier(.2,.6,.2,1);}
