@@ -26,14 +26,15 @@
   .nav-links a:hover{color:var(--ink);}
 
   /* hero */
-  .hero{text-align:center;padding:76px 0 0;}
-  .hero .eyebrow{display:block;margin-bottom:34px;}
-  .hero h1{font-family:var(--serif);font-weight:500;font-size:6rem;line-height:1.02;letter-spacing:.005em;margin-bottom:32px;}
+  .hero{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center;padding:54px 0 64px;}
+  .hero .eyebrow{display:block;margin-bottom:26px;}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:4.7rem;line-height:1.02;letter-spacing:.005em;margin-bottom:26px;}
   .hero h1 em{font-style:italic;font-weight:400;}
-  .hero .sub{font-size:1.2rem;color:var(--soft);max-width:520px;margin:0 auto 44px;font-weight:300;}
-  .hero-cta{display:flex;gap:34px;justify-content:center;align-items:center;}
-  .hero-photo{margin-top:78px;height:560px;background:url('../../assets/img/spaA.jpg') center/cover;position:relative;}
-  .hero-photo .cap{position:absolute;left:34px;bottom:30px;color:#fff;font-family:var(--serif);font-style:italic;font-size:1.5rem;text-shadow:0 1px 20px rgba(0,0,0,.4);}
+  .hero .sub{font-size:1.18rem;color:var(--soft);max-width:440px;margin:0 0 36px;font-weight:300;}
+  .hero-cta{display:flex;gap:30px;align-items:center;}
+  .hero-photo{height:600px;background:url('../../assets/img/spaA.jpg') center/cover;position:relative;}
+  .hero-photo .cap{position:absolute;left:30px;bottom:28px;color:#fff;font-family:var(--serif);font-style:italic;font-size:1.4rem;text-shadow:0 1px 20px rgba(0,0,0,.4);}
+  @media(max-width:900px){.hero{grid-template-columns:1fr;gap:40px;}.hero-photo{height:380px;}}
 
   /* section */
   .sec{padding:130px 0;}
@@ -67,10 +68,12 @@
     </div></nav>
 
     <section class="hero">
-      <span class="eyebrow">Skin &middot; Spa &middot; Wellness</span>
-      <h1>The art of<br><em>looking after</em> yourself.</h1>
-      <p class="sub">A quiet studio in the heart of the city, devoted to skin, stillness, and the ritual of slowing down.</p>
-      <div class="hero-cta"><a class="btn btn-fill">Book a Ritual</a><a class="btn btn-line">View Treatments</a></div>
+      <div class="hero-txt">
+        <span class="eyebrow">Skin &middot; Spa &middot; Wellness</span>
+        <h1>The art of <em>looking after</em> yourself.</h1>
+        <p class="sub">A quiet studio in the heart of the city, devoted to skin, stillness, and the ritual of slowing down.</p>
+        <div class="hero-cta"><a class="btn btn-fill">Book a Ritual</a><a class="btn btn-line">View Treatments</a></div>
+      </div>
       <div class="hero-photo"><span class="cap">Twenty years of considered care</span></div>
     </section>
 
