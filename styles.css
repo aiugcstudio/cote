@@ -1328,7 +1328,7 @@ section[id] { scroll-margin-top: 84px; }
 @media (max-width: 900px) { .hero-sub { max-width: 560px; } }
 
 /* ============ Refinements v8 ============ */
-/* compare icons: vertically centered against the text */
+/* compare: no tick/cross icons */
 .compare tbody td:nth-child(2)::before,
 .compare tbody td.cmp-hero::before,
-.compare tbody td.cmp-tie::before { vertical-align: -0.28em; margin-top: 0; }
+.compare tbody td.cmp-tie::before { content: none; }
