@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solène — Skin & Spa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#F4F0E8; --ink:#2E2A23; --soft:#7C7468; --faint:#A79E90; --line:#E4DDCE;
+    --accent:#9A8465; --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",-apple-system,sans-serif;
+  }
+  body{font-family:var(--sans);font-weight:300;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;letter-spacing:.01em;}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 56px;}
+  a{text-decoration:none;color:inherit;}
+  .eyebrow{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);font-weight:400;}
+  .btn{display:inline-block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:400;}
+  .btn-fill{background:var(--ink);color:var(--bg);padding:17px 40px;transition:.3s;}
+  .btn-fill:hover{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink);}
+  .btn-line{padding:16px 4px;border-bottom:1px solid var(--ink);}
+
+  /* nav */
+  .nav{padding:34px 0;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;}
+  .brand{font-family:var(--serif);font-weight:500;font-size:1.9rem;letter-spacing:.04em;}
+  .nav-links{display:flex;gap:46px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);font-weight:400;}
+  .nav-links a:hover{color:var(--ink);}
+
+  /* hero */
+  .hero{text-align:center;padding:76px 0 0;}
+  .hero .eyebrow{display:block;margin-bottom:34px;}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:6rem;line-height:1.02;letter-spacing:.005em;margin-bottom:32px;}
+  .hero h1 em{font-style:italic;font-weight:400;}
+  .hero .sub{font-size:1.2rem;color:var(--soft);max-width:520px;margin:0 auto 44px;font-weight:300;}
+  .hero-cta{display:flex;gap:34px;justify-content:center;align-items:center;}
+  .hero-photo{margin-top:78px;height:560px;background:url('../../assets/img/spa2.jpg') center/cover;position:relative;}
+  .hero-photo .cap{position:absolute;left:34px;bottom:30px;color:#fff;font-family:var(--serif);font-style:italic;font-size:1.5rem;text-shadow:0 1px 20px rgba(0,0,0,.4);}
+
+  /* section */
+  .sec{padding:130px 0;}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 74px;}
+  .sec-head .eyebrow{display:block;margin-bottom:22px;}
+  .sec-head h2{font-family:var(--serif);font-weight:500;font-size:3.4rem;line-height:1.1;}
+  .sec-head h2 em{font-style:italic;font-weight:400;}
+  .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .col{background:var(--bg);padding:52px 44px;}
+  .col .n{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--faint);margin-bottom:20px;}
+  .col h3{font-family:var(--serif);font-weight:500;font-size:1.7rem;margin-bottom:14px;letter-spacing:.01em;}
+  .col p{color:var(--soft);font-size:.98rem;}
+
+  /* quote */
+  .quote{text-align:center;max-width:860px;margin:0 auto;}
+  .quote p{font-family:var(--serif);font-weight:400;font-size:2.6rem;line-height:1.32;letter-spacing:.005em;}
+  .quote .by{display:block;margin-top:34px;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);}
+
+  /* footer */
+  .foot{padding:70px 0 56px;border-top:1px solid var(--line);}
+  .foot-in{display:flex;justify-content:space-between;align-items:baseline;}
+  .foot .brand{font-size:1.5rem;}
+  .foot .meta{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);}
+</style></head>
+<body>
+  <div class="wrap">
+    <nav class="nav"><div class="nav-in">
+      <a class="brand">Sol&eacute;ne</a>
+      <div class="nav-links"><a>Treatments</a><a>The Studio</a><a>Journal</a><a>Contact</a></div>
+      <a class="btn btn-line">Book</a>
+    </div></nav>
+
+    <section class="hero">
+      <span class="eyebrow">Skin &middot; Spa &middot; Wellness</span>
+      <h1>The art of<br><em>looking after</em> yourself.</h1>
+      <p class="sub">A quiet studio in the heart of the city, devoted to skin, stillness, and the ritual of slowing down.</p>
+      <div class="hero-cta"><a class="btn btn-fill">Book a Ritual</a><a class="btn btn-line">View Treatments</a></div>
+      <div class="hero-photo"><span class="cap">Twenty years of considered care</span></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-head">
+        <span class="eyebrow">The Rituals</span>
+        <h2>Treatments made <em>for you</em>, not the clock.</h2>
+      </div>
+      <div class="cols">
+        <div class="col"><p class="n">I</p><h3>Facials &amp; Skin</h3><p>Bespoke facials read to your skin on the day, never off a menu.</p></div>
+        <div class="col"><p class="n">II</p><h3>Massage &amp; Body</h3><p>Slow, intentional bodywork designed to unwind the whole nervous system.</p></div>
+        <div class="col"><p class="n">III</p><h3>Rituals &amp; Retreats</h3><p>Half-day experiences that leave you genuinely, unmistakably restored.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" style="padding-top:0;">
+      <div class="quote">
+        <p>&ldquo;I leave feeling like myself again. Sol&eacute;ne is the one hour of the week I refuse to give up.&rdquo;</p>
+        <span class="by">Amara V. &middot; Member since 2019</span>
+      </div>
+    </section>
+
+    <footer class="foot"><div class="foot-in">
+      <a class="brand">Sol&eacute;ne</a>
+      <span class="meta">Skin &amp; Spa &middot; hello@solene.studio</span>
+    </div></footer>
+  </div>
+</body></html>
