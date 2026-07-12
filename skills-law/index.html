@@ -130,6 +130,79 @@
   .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
   .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.86rem;flex-wrap:wrap;gap:10px;}
 
+  /* luxury additions */
+  .hero-in{z-index:2;}
+  .hero::after{content:"";position:absolute;top:-18%;right:-8%;width:52%;height:78%;background:radial-gradient(circle,rgba(59,130,246,.32),transparent 62%);pointer-events:none;z-index:0;animation:glow 9s ease-in-out infinite alternate;}
+  @keyframes glow{from{opacity:.5;transform:translate(0,0);}to{opacity:1;transform:translate(-4%,4%);}}
+
+  .ictile{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;}
+  .ictile svg{width:25px;height:25px;}
+
+  /* upcoming: icon + top accent */
+  .up{position:relative;overflow:hidden;}
+  .up::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.6,.2,1);}
+  .up:hover::before{transform:scaleX(1);}
+
+  /* ess items get icons */
+  .e{position:relative;transition:background .3s;}
+  .e:hover{background:var(--accent-soft);}
+  .e .eic{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:18px;}
+  .e:hover .eic{background:#fff;}
+  .e .eic svg{width:23px;height:23px;}
+
+  /* why cards icons + accent */
+  .why{position:relative;overflow:hidden;transition:transform .3s cubic-bezier(.2,.6,.2,1),box-shadow .3s,border-color .3s;}
+  .why:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(16,22,32,.1);border-color:var(--accent);}
+  .why::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.6,.2,1);}
+  .why:hover::before{transform:scaleX(1);}
+
+  /* dark glass band */
+  .darksec{position:relative;overflow:hidden;padding:118px 0;background:radial-gradient(120% 90% at 82% -10%,rgba(59,130,246,.22),transparent 55%),linear-gradient(165deg,#141b2b 0%,#0b0f18 62%);color:#fff;}
+  .darksec::after{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;height:80%;background:radial-gradient(circle,rgba(59,130,246,.14),transparent 60%);pointer-events:none;}
+  .darksec .wrap{position:relative;z-index:1;}
+  .darksec-head{max-width:660px;margin-bottom:56px;}
+  .darksec .eyebrow{color:#8FB6F2;}
+  .darksec h2{font-size:3.2rem;color:#fff;letter-spacing:-0.035em;margin-bottom:16px;}
+  .darksec h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#7FA9EE;}
+  .darksec-lead{color:rgba(255,255,255,.6);font-size:1.16rem;}
+  .glass{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:38px 34px;backdrop-filter:blur(6px);transition:transform .35s cubic-bezier(.2,.6,.2,1),border-color .35s,background .35s;overflow:hidden;}
+  .glass:hover{transform:translateY(-6px);border-color:rgba(59,130,246,.5);background:rgba(255,255,255,.06);}
+  .glass .gnum{position:absolute;top:22px;right:30px;font-family:var(--serif);font-style:italic;font-size:1.6rem;color:rgba(255,255,255,.16);}
+  .glass .ictile{background:rgba(59,130,246,.2);color:#9CC0F5;}
+  .glass h3{font-size:1.5rem;margin-bottom:14px;color:#fff;}
+  .glass h3 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#7FA9EE;}
+  .glass p{color:rgba(255,255,255,.62);font-size:1.02rem;line-height:1.55;}
+
+  /* quote luxe */
+  .quote{position:relative;overflow:hidden;background:radial-gradient(110% 80% at 50% -10%,rgba(59,130,246,.2),transparent 55%),var(--navy);padding-top:96px;}
+  .quote::before{content:"\201C";position:absolute;top:22px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-style:italic;font-size:7rem;line-height:1;color:var(--accent);opacity:.5;}
+
+  /* faq accordion */
+  .faq{max-width:900px;display:grid;gap:16px;}
+  .faq details{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:4px 30px;transition:border-color .25s,box-shadow .25s;}
+  .faq details:hover{border-color:var(--accent);}
+  .faq details[open]{border-color:var(--accent);box-shadow:0 20px 44px -24px rgba(59,130,246,.28);}
+  .faq summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-family:var(--head);font-weight:650;font-size:1.16rem;letter-spacing:-0.02em;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .ic{flex:none;width:34px;height:34px;border-radius:9px;background:var(--accent-soft);position:relative;transition:background .25s;}
+  .faq details[open] summary .ic{background:var(--accent);}
+  .faq summary .ic::before,.faq summary .ic::after{content:"";position:absolute;background:var(--accent);top:50%;left:50%;transform:translate(-50%,-50%);transition:transform .3s,background .25s;}
+  .faq summary .ic::before{width:13px;height:2px;}
+  .faq summary .ic::after{width:2px;height:13px;}
+  .faq details[open] summary .ic::before,.faq details[open] summary .ic::after{background:#fff;}
+  .faq details[open] summary .ic::after{transform:translate(-50%,-50%) scaleY(0);}
+  .faq details p{color:var(--soft);font-size:1.04rem;line-height:1.6;padding:0 0 26px;max-width:760px;}
+
+  /* staggered reveal */
+  .stagger > *{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1);}
+  .stagger.in > *{opacity:1;transform:none;}
+  .stagger.in > *:nth-child(2){transition-delay:.09s;}
+  .stagger.in > *:nth-child(3){transition-delay:.18s;}
+  .stagger.in > *:nth-child(4){transition-delay:.27s;}
+  .stagger.in > *:nth-child(5){transition-delay:.36s;}
+  .stagger.in > *:nth-child(6){transition-delay:.45s;}
+  @media(prefers-reduced-motion:reduce){.stagger > *{opacity:1!important;transform:none!important;transition:none!important;}.hero::after{animation:none;}}
+
   @media(max-width:900px){
     h1{font-size:3rem;}.hero-in{padding-top:130px;}
     .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
@@ -169,20 +242,23 @@
     <span class="eyebrow">Upcoming</span>
     <h2>Events, live and <em>virtual</em>, all year.</h2>
     <p class="sec-lead">Educational programming for those leading knowledge, innovation, and transformation in law firms, legal departments, and LegalTech.</p>
-    <div class="up-grid">
+    <div class="up-grid stagger">
       <div class="up">
+        <span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/><path d="M7 21h10"/></svg></span>
         <span class="tag">Use Case Product Demos</span>
         <h3>Every Friday at 11:00 am ET / 16:00 UK</h3>
         <p>Weekly Zoom seminars featuring one use case and demos from several leading products.</p>
         <a class="go" href="https://skills.law/use-case-product-demos" target="_blank" rel="noopener">Register here &rarr;</a>
       </div>
       <div class="up">
+        <span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3Z"/><path d="M8 8h8M8 12h6"/></svg></span>
         <span class="tag">SKILLS Book Party</span>
         <h3>Virtual Book Party, July 31</h3>
         <p>Do you want to present a book that you recently wrote, or read, at the upcoming July 31 SKILLS Virtual Book Party?</p>
         <a class="go" href="https://skills.law/" target="_blank" rel="noopener">Register here &rarr;</a>
       </div>
       <div class="up">
+        <span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
         <span class="tag">ILTACON Summer Social</span>
         <h3>Tuesday, August 25, Nashville</h3>
         <p>Join us at ILTACON on Tuesday, August 25, for an evening of great conversations, food, and drinks and a fun night in Nashville, Tennessee!</p>
@@ -216,13 +292,13 @@
     <span class="eyebrow">About SKILLS</span>
     <h2 style="margin-bottom:20px;">Six ways SKILLS serves the <em>people driving change</em> in law.</h2>
     <p class="sec-lead">The Strategic Knowledge &amp; Innovation Legal Leaders' Summit, SKILLS, serves the people who drive knowledge, innovation, and transformation in the world's leading law firms.</p>
-    <div class="ess">
-      <div class="e"><span class="k">The Summit</span><h3>Summit</h3><p>A privately organized in-person meeting for strategic firm leaders to compare notes on current developments in knowledge, innovation, and the business of law.</p></div>
-      <div class="e"><span class="k">The Showcase</span><h3>Showcase</h3><p>A public, live-streamed event available online, featuring a mix of rapid-fire presentations and strategic discussions that highlight the latest developments in the legal sector.</p></div>
-      <div class="e"><span class="k">The Surveys</span><h3>Surveys</h3><p>Insights into various topics of interest to knowledge and innovation professionals at law firms.</p></div>
-      <div class="e"><span class="k">The Seminars</span><h3>Seminars</h3><p>Seminars, workshops, and product demos, held live and virtual, throughout the year to educate those leading knowledge, innovation and transformation in law firms on concepts and tools relevant to their role.</p></div>
-      <div class="e"><span class="k">UpSKILLS</span><h3>UpSKILLS</h3><p>The UpSKILLS certification is currently being developed and aims to equip professionals with the legal context, operational knowledge, mindset, skills, and tools needed to thrive in AI, Data, KM, innovation, operations, and transformation roles across law firms, legal departments, and legal-tech vendors.</p></div>
-      <div class="e"><span class="k">The Scholarship</span><h3>Scholarship</h3><p>The Scholarship is aimed at raising money to support the next generation of LegalTech leaders and to honor Michael Mills' legacy.</p></div>
+    <div class="ess stagger">
+      <div class="e"><span class="eic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-5h6v5"/></svg></span><h3>Summit</h3><p>A privately organized in-person meeting for strategic firm leaders to compare notes on current developments in knowledge, innovation, and the business of law.</p></div>
+      <div class="e"><span class="eic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span><h3>Showcase</h3><p>A public, live-streamed event available online, featuring a mix of rapid-fire presentations and strategic discussions that highlight the latest developments in the legal sector.</p></div>
+      <div class="e"><span class="eic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg></span><h3>Surveys</h3><p>Insights into various topics of interest to knowledge and innovation professionals at law firms.</p></div>
+      <div class="e"><span class="eic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><h3>Seminars</h3><p>Seminars, workshops, and product demos, held live and virtual, throughout the year to educate those leading knowledge, innovation and transformation in law firms on concepts and tools relevant to their role.</p></div>
+      <div class="e"><span class="eic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7-9 7z"/><path d="M7 13v4c0 1 2 2 5 2s5-1 5-2v-4"/></svg></span><h3>UpSKILLS</h3><p>A certification in development, designed to equip professionals with the legal context, operational knowledge, mindset, skills, and tools to thrive in AI, Data, KM, innovation, operations, and transformation roles across firms, legal departments, and legal-tech.</p></div>
+      <div class="e"><span class="eic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 7l8 4 8-4z"/><path d="M4 7v6M20 7v6M8 12v4c0 1 2 2 4 2s4-1 4-2v-4"/></svg></span><h3>Scholarship</h3><p>Aimed at raising money to support the next generation of LegalTech leaders and to honor Michael Mills' legacy.</p></div>
     </div>
   </div></section>
 
@@ -239,14 +315,17 @@
     <p class="sec-lead">Oz Benamram founded SKILLS in 2003 and has hosted it throughout the years. He has spent his career building and leading the knowledge and innovation functions at some of the world's leading law firms, and today advises firm leaders, legal technology companies, and investors on legal transformation.</p>
     <div class="why-grid stagger">
       <div class="why">
+        <span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
         <h3>The <em>roles</em></h3>
         <p>Chief AI Officer at Pillsbury Winthrop Shaw Pittman, where he is building the AI and Knowledge department. He previously built and led the knowledge and innovation departments at Simpson Thacher, White &amp; Case, and Morrison &amp; Foerster, and practiced law in the US and abroad earlier in his career.</p>
       </div>
       <div class="why">
+        <span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13 7 22l5-3 5 3-1.5-9"/></svg></span>
         <h3>The <em>recognition</em></h3>
         <p>Named one of 50 Legal Business Trailblazers and Pioneers by The National Law Journal in 2013, recognizing people who have moved the needle in how law firms conduct business. He earned a BA in Economics, magna cum laude, and an LLB from Tel Aviv University's Law School Honors Program.</p>
       </div>
       <div class="why">
+        <span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
         <h3>The <em>work today</em></h3>
         <p>A globally recognized thought leader and frequent speaker on legal knowledge and innovation, and co-author of Law, Reinvented: Leading AI Transformation in Legal Practice, a practical playbook covering strategy, pricing, team building, data, governance, adoption, risk, and the human side of change.</p>
       </div>
@@ -264,22 +343,16 @@
     </div>
   </div></section>
 
-  <section class="sec" style="padding-top:0;" id="join"><div class="wrap">
-    <span class="eyebrow">Join Skills.law today</span>
-    <h2 style="margin-bottom:52px;">Built for the people <em>leading the change</em>.</h2>
-    <div class="why-grid">
-      <div class="why">
-        <h3>What is <em>Skills.law</em>?</h3>
-        <p>SKILLS.law offers virtual and in-person educational programming aimed at equipping our community with the knowledge, mindset, skills, and tools needed to thrive in AI, Data, KM, innovation, legal operations, and transformation roles across the legal space.</p>
-      </div>
-      <div class="why">
-        <h3>Who should <em>join</em>?</h3>
-        <p>SKILLS is geared towards those who hold roles in AI, Data, KM, innovation, legal operations, and transformation across law firms, legal departments and LegalOps.</p>
-      </div>
-      <div class="why">
-        <h3>Why <em>attend</em>?</h3>
-        <p>SKILLS events provide a peer-to-peer experience for attendees, combining engaging educational content with interactive discussions, aimed at building valuable connections between industry leaders and peers in law firms, legal departments, and LegalTech.</p>
-      </div>
+  <section class="darksec" id="join"><div class="wrap">
+    <div class="darksec-head">
+      <span class="eyebrow">Join SKILLS.law today</span>
+      <h2>Built for the people <em>leading the change</em>.</h2>
+      <p class="darksec-lead">A peer community for those driving knowledge, innovation, and transformation across the legal world.</p>
+    </div>
+    <div class="why-grid stagger">
+      <div class="glass"><span class="gnum">01</span><span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 12h1v4h1"/></svg></span><h3>What is <em>SKILLS.law</em>?</h3><p>Virtual and in-person educational programming that equips the community with the knowledge, mindset, skills, and tools to thrive in AI, Data, KM, innovation, legal operations, and transformation roles.</p></div>
+      <div class="glass"><span class="gnum">02</span><span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span><h3>Who should <em>join</em>?</h3><p>Those holding roles in AI, Data, KM, innovation, legal operations, and transformation across law firms, legal departments, and LegalOps.</p></div>
+      <div class="glass"><span class="gnum">03</span><span class="ictile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1 2 2v6M8 9a2 2 0 0 0-2 2v6M8 5h8M12 3v14M5 21h14"/></svg></span><h3>Why <em>attend</em>?</h3><p>A peer-to-peer experience that pairs engaging educational content with live discussion, building valuable connections between leaders and peers across firms, legal departments, and LegalTech.</p></div>
     </div>
   </div></section>
 
@@ -293,13 +366,13 @@
   <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
     <span class="eyebrow">Questions</span>
     <h2 style="margin-bottom:52px;">The <em>essentials</em>.</h2>
-    <div class="survey-row stagger" style="grid-template-columns:repeat(2,1fr);">
-      <div class="survey-card"><h4>What is SKILLS?</h4><p>The Strategic Knowledge &amp; Innovation Legal Leaders' Summit. Since 2003, it has served the people who drive knowledge, innovation, and transformation in the world's leading law firms through summits, showcases, surveys, seminars, and more.</p></div>
-      <div class="survey-card"><h4>Who should join?</h4><p>Those who hold roles in AI, Data, KM, innovation, legal operations, and transformation across law firms, legal departments, and LegalOps.</p></div>
-      <div class="survey-card"><h4>What does it cost?</h4><p>SKILLS events are free to attend for law firms and legal departments.</p></div>
-      <div class="survey-card"><h4>How are the events run?</h4><p>A peer-to-peer experience that combines educational content with interactive discussion, held both live and virtual throughout the year, building connections between industry leaders and their peers.</p></div>
-      <div class="survey-card"><h4>What are the surveys?</h4><p>Research into topics of interest to knowledge and innovation professionals, including the most used Legal AI products and the most recommended vendors among top firms.</p></div>
-      <div class="survey-card"><h4>How do I stay in the loop?</h4><p>Join the mailing list to hear about upcoming summits, showcases, seminars, and surveys, and follow along on LinkedIn and YouTube under SKILLS.law.</p></div>
+    <div class="faq">
+      <details open><summary>What is SKILLS?<span class="ic"></span></summary><p>The Strategic Knowledge &amp; Innovation Legal Leaders' Summit. Since 2003, it has served the people who drive knowledge, innovation, and transformation in the world's leading law firms through summits, showcases, surveys, seminars, and more.</p></details>
+      <details><summary>Who should join?<span class="ic"></span></summary><p>Those who hold roles in AI, Data, KM, innovation, legal operations, and transformation across law firms, legal departments, and LegalOps.</p></details>
+      <details><summary>What does it cost?<span class="ic"></span></summary><p>SKILLS events are free to attend for law firms and legal departments.</p></details>
+      <details><summary>How are the events run?<span class="ic"></span></summary><p>A peer-to-peer experience that combines educational content with interactive discussion, held both live and virtual throughout the year, building connections between industry leaders and their peers.</p></details>
+      <details><summary>What are the surveys?<span class="ic"></span></summary><p>Research into topics of interest to knowledge and innovation professionals, including the most used Legal AI products and the most recommended vendors among top firms.</p></details>
+      <details><summary>How do I stay in the loop?<span class="ic"></span></summary><p>Join the mailing list to hear about upcoming summits, showcases, seminars, and surveys, and follow along on LinkedIn and YouTube under SKILLS.law.</p></details>
     </div>
   </div></section>
 
@@ -339,7 +412,8 @@
     <div class="foot-bot"><span>&copy; Skills.law, All Rights Reserved.</span><span>Powered by SKILLS.LAW</span></div>
   </div></footer>
 <style>/*cote-reveal*/.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform;}.reveal.in{opacity:1;transform:none;}@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}</style>
-<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');so.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});[].forEach.call(document.querySelectorAll('.stagger'),function(el){so.observe(el);});})();</script>
 <style>/*cote-polish*/
 .svcard,.proj{overflow:hidden;}
 .svcard,.proj,.card,.revcard,.reviewcard,.area-item,.logotile{transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s cubic-bezier(.2,.6,.2,1);}
