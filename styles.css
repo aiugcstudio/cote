@@ -1310,3 +1310,19 @@ section[id] { scroll-margin-top: 84px; }
 .trust-strip { display: block; text-align: center; }
 .trust-label { margin: 0 auto 18px; max-width: none; }
 .trust-marquee { width: 100%; }
+
+/* ============ Refinements v7 ============ */
+/* clearer compare icons: solid green tick on the dark cote column, softer red cross */
+.compare tbody td:nth-child(2)::before { background: #FBE0E1; color: #E5484D; }
+.compare tbody td.cmp-hero::before { background: #22B45F; color: #FFFFFF; }
+.compare tbody td.cmp-tie::before { background: rgba(120,139,133,.18); color: #6E7C77; }
+
+/* pricing text larger */
+.pf b { font-size: 1.12rem; margin-bottom: 4px; }
+.pf span { font-size: .98rem; }
+.price-full .price-desc { font-size: 1.1rem; }
+
+/* hero sub on two lines (wider) */
+.hero-left { max-width: 940px; }
+.hero-sub { max-width: 860px; }
+@media (max-width: 900px) { .hero-sub { max-width: 560px; } }
