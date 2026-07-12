@@ -1286,3 +1286,15 @@ section[id] { scroll-margin-top: 84px; }
 @media (max-width: 980px) {
   .hero-blob { margin-left: -300px; width: 620px; }
 }
+
+/* ============ Refinements v4: hero balance ============ */
+.hero { padding: 44px 0 16px; }
+.hero-left { padding: 26px 0 16px; }
+.chip-marquee { margin-bottom: 28px; }
+/* blob becomes a soft aurora glow at the top, not a cloud behind the words */
+.hero-blob { top: -430px; margin-left: -450px; width: 900px; height: 800px; opacity: .42; }
+[data-theme="dark"] .hero-blob { opacity: .32; }
+.trust-strip { padding-top: 22px; padding-bottom: 8px; }
+@media (max-width: 980px) {
+  .hero-blob { margin-left: -300px; width: 620px; top: -360px; }
+}
