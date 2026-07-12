@@ -138,6 +138,12 @@
   .svcard.notopic .ph{background:var(--navy);position:relative;}
   .svcard.notopic .ph::after{content:attr(data-k);position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-style:italic;color:var(--accent);font-size:2rem;letter-spacing:-0.02em;}
   @media(max-width:820px){.svc-grid{grid-template-columns:1fr;}}
+  /* medico-legal panel */
+  .ml-panel{background:var(--navy);border-radius:24px;padding:64px 56px;color:#fff;box-shadow:0 30px 70px rgba(18,32,31,.18);display:flex;flex-direction:column;justify-content:center;min-height:420px;}
+  .ml-panel .lg{font-family:var(--serif);font-size:2rem;line-height:1.3;font-weight:400;margin-bottom:22px;}
+  .ml-panel .lg span{color:var(--accent);font-style:italic;}
+  .ml-panel .mono{font-size:.86rem;letter-spacing:.06em;color:rgba(255,255,255,.55);text-transform:uppercase;}
+
   /* diagnostics */
   .diag{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
   .ditem{background:var(--surface);padding:34px 30px;}
@@ -189,7 +195,7 @@
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand"><span class="tile"><img src="../assets/img/p2h-logo.webp" alt="Passport 2 Health"></span></a>
-    <nav class="nav-links"><a href="#services">Services</a><a href="#technology">Technology</a><a href="#about">Dr. Gaston</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#contact-form">Contact</a></nav>
+    <nav class="nav-links"><a href="#services">Services</a><a href="#technology">Technology</a><a href="#medicolegal">Medico-Legal</a><a href="#about">Dr. Gaston</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#contact-form">Contact</a></nav>
     <a class="nav-call" href="tel:19169844128">Call (916) 984-4128</a>
   </div></header>
 
@@ -233,6 +239,27 @@
       <div class="ditem"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Neuro-Ocular Testing</h3><p>Eye-movement and VOMS testing reveal vestibular, ocular, and balance disruptions behind your symptoms.</p></div>
       <div class="ditem"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h3l2-4 4 8 2-4h3"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Low-Level Laser Therapy</h3><p>Class II laser therapy to reduce pain and inflammation and promote tissue healing, often with less medication.</p></div>
       <div class="ditem"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v6a8 8 0 0 0 16 0V4"/><path d="M9 20h6"/><circle cx="12" cy="10" r="1"/></svg></div><h3>Functional &amp; Genetic Testing</h3><p>Functional medicine and genetic testing help tailor a neurologically based plan to how your body actually works.</p></div>
+      <div class="ditem"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/></svg></div><h3>Pupillometry</h3><p>A simple, non-invasive eye test that reads how well your brain is functioning, a fast biomarker independent of your actual age.</p></div>
+      <div class="ditem"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h10"/><path d="M4 19h16"/><circle cx="18" cy="12" r="2.4"/></svg></div><h3>Serum Diagnostic Testing</h3><p>Advanced serum testing to identify brain and gut autoimmunity early, for more precise answers and targeted care.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="medicolegal"><div class="wrap split">
+    <div>
+      <span class="eyebrow">Medico-legal services</span>
+      <h2>Objective answers for <em>injury cases</em>.</h2>
+      <p>Beyond clinical care, Dr. Gaston provides medico-legal evaluation for personal injury and mild traumatic brain injury (mTBI) matters, using objective VOMS and neuro-ocular testing to document what a standard scan can miss.</p>
+      <p>The result is a clear, defensible picture of a client's neurological status, supported when needed by expert reports and testimony.</p>
+      <ul>
+        <li>VOMS testing to verify mild traumatic brain injury (mTBI)</li>
+        <li>Expert medico-legal reports for injury cases</li>
+        <li>Deposition and in-court expert testimony</li>
+        <li>Objective, measurable findings attorneys can rely on</li>
+      </ul>
+    </div>
+    <div class="ml-panel">
+      <p class="lg">Testing that turns &ldquo;how do you feel?&rdquo; into <span>measured, documented findings</span>.</p>
+      <p class="mono">Personal injury &middot; mTBI &middot; Expert testimony</p>
     </div>
   </div></section>
 
