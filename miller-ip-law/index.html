@@ -309,6 +309,56 @@
     .faq-intro{ position:static; }
   }
   @media(prefers-reduced-motion:reduce){ .ctrack{ animation:none; } .metric{ opacity:1; transform:none; } }
+
+  /* ===== hero enrichment ===== */
+  .hero::before{ animation:mip-zoom 26s ease-in-out infinite alternate; }
+  @keyframes mip-zoom{ from{transform:scale(1);} to{transform:scale(1.075);} }
+  .grid-lines{ position:absolute; inset:0; opacity:.5; pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:58px 58px; mask-image:radial-gradient(1000px 700px at 68% 32%,#000,transparent 78%); -webkit-mask-image:radial-gradient(1000px 700px at 68% 32%,#000,transparent 78%); }
+  .pill .dot{ box-shadow:0 0 0 4px rgba(55,226,142,.22); }
+  @keyframes mip-rise{ from{opacity:0;transform:translateY(26px);} to{opacity:1;transform:none;} }
+  .hero-in>*{ animation:mip-rise .85s cubic-bezier(.2,.7,.2,1) both; }
+  .hero-in>*:nth-child(1){animation-delay:.05s}.hero-in>*:nth-child(2){animation-delay:.15s}
+  .hero-in>*:nth-child(3){animation-delay:.27s}.hero-in>*:nth-child(4){animation-delay:.39s}
+  .hero-in>*:nth-child(5){animation-delay:.5s}
+
+  /* trust numbers pop */
+  .trust-item b{ transform:scale(.82); opacity:0; transition:transform .6s cubic-bezier(.2,.9,.3,1.4),opacity .5s ease; }
+  .trust.in .trust-item b{ transform:none; opacity:1; }
+  .trust.in .trust-item:nth-child(2) b{ transition-delay:.1s }
+  .trust.in .trust-item:nth-child(3) b{ transition-delay:.2s }
+  .trust.in .trust-item:nth-child(4) b{ transition-delay:.3s }
+
+  /* ===== IP process band (Search, File, Prosecute, Protect) ===== */
+  .process{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:22px; overflow:hidden; box-shadow:0 1px 2px rgba(15,26,43,.04),0 24px 54px -30px rgba(15,26,43,.28); }
+  .pstep{ background:var(--surface); padding:40px 30px; position:relative; transition:background .3s ease; }
+  .pstep:hover{ background:var(--accent-soft); }
+  .pstep .pic{ width:48px; height:48px; border-radius:13px; background:linear-gradient(140deg,var(--accent),#1f3f80); color:#fff; display:grid; place-items:center; margin-bottom:22px; box-shadow:0 12px 26px -12px rgba(47,98,196,.55); }
+  .pstep .pic svg{ width:24px; height:24px; }
+  .pstep .pn{ position:absolute; top:34px; right:28px; font-family:var(--serif); font-style:italic; color:var(--faint); font-size:1.4rem; }
+  .pstep h3{ font-size:1.18rem; margin-bottom:9px; letter-spacing:-0.02em; }
+  .pstep p{ color:var(--soft); font-size:.94rem; line-height:1.5; }
+  .process .pstep{ opacity:0; transform:translateY(20px); transition:opacity .6s ease,transform .6s cubic-bezier(.2,.6,.2,1),background .3s ease; }
+  .sec.in .process .pstep{ opacity:1; transform:none; }
+  .sec.in .process .pstep:nth-child(2){ transition-delay:.1s }
+  .sec.in .process .pstep:nth-child(3){ transition-delay:.2s }
+  .sec.in .process .pstep:nth-child(4){ transition-delay:.3s }
+  @media(max-width:900px){ .process{ grid-template-columns:1fr; } }
+
+  /* ===== contact info icon lines ===== */
+  .cinfo .ci-line{ display:flex; gap:13px; align-items:center; margin-bottom:14px; color:rgba(255,255,255,.82); line-height:1.5; }
+  .cinfo .ci-line a{ color:#fff; }
+  .cinfo .ci-ic{ flex:none; width:36px; height:36px; border-radius:10px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); display:grid; place-items:center; color:#9FC0FF; transition:transform .3s,background .3s; }
+  .cinfo .ci-line:hover .ci-ic{ transform:translateY(-2px); background:rgba(159,192,255,.16); }
+  .cinfo .ci-ic svg{ width:17px; height:17px; }
+
+  @media(prefers-reduced-motion:reduce){
+    .hero::before{ animation:none; }
+    .hero-in>*{ animation:none; }
+    .trust-item b{ opacity:1; transform:none; transition:none; }
+    .process .pstep{ opacity:1; transform:none; }
+  }
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -317,7 +367,7 @@
     <a class="nav-call" href="tel:8018298446">Call 801-829-8446</a>
   </div></header>
 
-  <section class="hero"><div class="wrap hero-in">
+  <section class="hero"><div class="grid-lines"></div><div class="wrap hero-in">
     <span class="pill"><span class="dot"></span>Patent &amp; Trademark Attorneys helping startups &amp; side hustles</span>
     <h1>IP protection, <em>made simple.</em></h1>
     <p>Helping startups protect and grow inventions and brands. Patent, trademark, and copyright protection made simple, affordable, and startup-friendly. Flat fees, no hidden costs.</p>
@@ -406,6 +456,17 @@
       </div>
     </div>
     <p class="price-note" style="text-align:left;margin-top:22px;">You get a quote and approve it before anything starts. Free consultations and payment programs are available.</p>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">The path to protection</span>
+    <h2 style="margin-bottom:52px;">From first idea to <em>protected right.</em></h2>
+    <div class="process">
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="pn">01</span><h3>Search</h3><p>We check what already exists so you file with a clear picture of what is truly yours to protect.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><span class="pn">02</span><h3>File</h3><p>We prepare and file your patent, trademark, or copyright with the USPTO, at one flat fee.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span><span class="pn">03</span><h3>Prosecute</h3><p>We answer office actions and work with examiners toward allowance, with a 95% patent allowance rate.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/></svg></span><span class="pn">04</span><h3>Protect</h3><p>Once granted, your rights are yours to enforce, and we handle maintenance and the letters that keep copycats honest.</p></div>
+    </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;">
@@ -557,10 +618,10 @@
           <div><span>Sunday</span><b>Closed</b></div>
         </div>
         <h4 style="margin-top:34px;">Reach us</h4>
-        <p>6251 Trappers Loop Road, Mountain Green, Utah 84050</p>
-        <p><a href="tel:8018298446">801-829-8446</a></p>
-        <p><a href="mailto:Devin@LawWithMiller.com">Devin@LawWithMiller.com</a></p>
-        <p><a href="https://strategymeeting.com" target="_blank" rel="noopener">strategymeeting.com</a></p>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>6251 Trappers Loop Road, Mountain Green, Utah 84050</span></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></span><a href="tel:8018298446">801-829-8446</a></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><a href="mailto:Devin@LawWithMiller.com">Devin@LawWithMiller.com</a></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M4 4h16v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4Z"/><path d="M20 4v3a3 3 0 0 0 3-3ZM4 4v3a3 3 0 0 1-3-3Z" opacity=".5"/></svg></span><a href="https://strategymeeting.com" target="_blank" rel="noopener">strategymeeting.com</a></div>
       </div>
       <form class="cform" action="mailto:Devin@LawWithMiller.com" method="post" enctype="text/plain">
         <label>Name</label><input type="text" name="name" autocomplete="name">
@@ -582,7 +643,7 @@
     <div class="foot-bot"><span>&copy; 2026 Miller IP Law</span><span>Serving all 50 states &amp; world-wide</span></div>
   </div></footer>
 <style>/*cote-reveal*/.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform;}.reveal.in{opacity:1;transform:none;}@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}</style>
-<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec,.trust'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
 <style>/*cote-polish*/
 .svcard,.proj{overflow:hidden;}
 .svcard,.proj,.card,.revcard,.reviewcard,.area-item,.logotile{transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s cubic-bezier(.2,.6,.2,1);}

@@ -184,6 +184,109 @@
   .foot-top .brand img{height:52px;width:auto;display:block;}
   .svc .paths-fit{border-top:1px solid var(--line);padding-top:14px;margin-top:16px;font-size:.86rem;color:var(--faint);}
   .svc .paths-fit b{color:var(--ink);font-weight:600;}
+
+  /* ===== bespoke polish layer ===== */
+  /* hero staggered entrance */
+  @keyframes tri-rise{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:none;}}
+  @keyframes tri-float{from{transform:translateY(0);}to{transform:translateY(-9px);}}
+  .hero-in>div:first-child>*{animation:tri-rise .85s cubic-bezier(.2,.7,.2,1) both;}
+  .hero-in>div:first-child>*:nth-child(1){animation-delay:.05s}
+  .hero-in>div:first-child>*:nth-child(2){animation-delay:.15s}
+  .hero-in>div:first-child>*:nth-child(3){animation-delay:.26s}
+  .hero-in>div:first-child>*:nth-child(4){animation-delay:.37s}
+  .hero-in>div:first-child>*:nth-child(5){animation-delay:.47s}
+  .hero-photo{animation:tri-rise 1s cubic-bezier(.2,.7,.2,1) .34s both,tri-float 7s ease-in-out 1.5s infinite alternate;}
+  .hero-photo::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);pointer-events:none;}
+
+  /* subtle warm wash on hero + page texture */
+  .hero{position:relative;}
+  .hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+    radial-gradient(680px 420px at 88% 8%,rgba(176,134,63,.09),transparent 62%),
+    radial-gradient(560px 360px at 4% 92%,rgba(14,32,56,.05),transparent 60%);}
+  .hero-in{position:relative;}
+
+  /* trust numbers pop */
+  .trust-item b{transform:scale(.82);opacity:0;transition:transform .6s cubic-bezier(.2,.9,.3,1.4),opacity .5s ease;}
+  .trust.in .trust-item b{transform:none;opacity:1;}
+  .trust.in .trust-item:nth-child(2) b{transition-delay:.1s}
+  .trust.in .trust-item:nth-child(3) b{transition-delay:.2s}
+  .trust.in .trust-item:nth-child(4) b{transition-delay:.3s}
+
+  /* generic staggered reveal for grid children */
+  .stagger>*{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1),box-shadow .25s ease,border-color .25s ease;}
+  .stagger.in>*{opacity:1;transform:none;}
+  .stagger.in>*:nth-child(2){transition-delay:.08s}
+  .stagger.in>*:nth-child(3){transition-delay:.16s}
+  .stagger.in>*:nth-child(4){transition-delay:.24s}
+
+  /* service card floating icon */
+  .svc .ic{transition:transform .35s cubic-bezier(.2,.7,.2,1),background .3s,color .3s;}
+  .svc:hover .ic{transform:translateY(-4px);background:var(--navy);color:var(--accent-2);}
+  .svc .no{position:absolute;top:30px;right:32px;font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--accent);opacity:.5;}
+  .svc{position:relative;}
+
+  /* methodology: icon tiles + hover */
+  .phase{transition:background .3s;position:relative;}
+  .phase:hover{background:var(--accent-soft);}
+  .phase .pic{width:48px;height:48px;border-radius:13px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:18px;transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+  .phase:hover .pic{transform:translateY(-4px);}
+  .phase .pic svg{width:23px;height:23px;}
+  .phase .n{position:absolute;top:30px;right:28px;margin:0;}
+
+  /* outcomes: icon + count-feel pop */
+  .oc{position:relative;}
+  .oc .oic{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+  .oc:hover .oic{transform:translateY(-4px);}
+  .oc .oic svg{width:22px;height:22px;}
+  .outcomes.in .oc b{animation:tri-pop .7s cubic-bezier(.2,.9,.3,1.4) both;}
+  .outcomes.in .oc:nth-child(2) b{animation-delay:.12s}
+  .outcomes.in .oc:nth-child(3) b{animation-delay:.24s}
+  @keyframes tri-pop{from{opacity:0;transform:scale(.8);}to{opacity:1;transform:none;}}
+
+  /* systems band (real tools) */
+  .systems{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sys-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;padding:88px 0;}
+  .sys-in h2{font-size:2.3rem;margin-bottom:14px;color:var(--navy);line-height:1.1;}
+  .sys-in h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .sys-in .sys-lead{color:var(--soft);font-size:1.06rem;}
+  .sys-chips{display:flex;flex-wrap:wrap;gap:12px;}
+  .sys-chips span{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--bg);border-radius:100px;padding:11px 20px;font-size:.98rem;font-weight:500;color:var(--ink);transition:.2s;}
+  .sys-chips span:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
+  .sys-chips span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;opacity:.7;}
+  .systems.in .sys-chips span{animation:tri-pop .5s cubic-bezier(.2,.7,.2,1) both;}
+  .systems.in .sys-chips span:nth-child(2){animation-delay:.05s}
+  .systems.in .sys-chips span:nth-child(3){animation-delay:.1s}
+  .systems.in .sys-chips span:nth-child(4){animation-delay:.15s}
+  .systems.in .sys-chips span:nth-child(5){animation-delay:.2s}
+  .systems.in .sys-chips span:nth-child(6){animation-delay:.25s}
+  @media(max-width:900px){.sys-in{grid-template-columns:1fr;gap:32px;padding:64px 0;}}
+
+  /* quote decorative mark */
+  .quote{position:relative;overflow:hidden;}
+  .quote::before{content:"";position:absolute;inset:0;background:radial-gradient(680px 380px at 50% -12%,rgba(216,182,120,.16),transparent 62%);pointer-events:none;}
+  .quote .qmark{position:relative;display:block;font-family:var(--serif);font-size:4.4rem;line-height:.5;color:rgba(216,182,120,.55);margin-bottom:16px;}
+  .quote p,.quote .by{position:relative;}
+
+  /* split photo badge */
+  .split-photo{position:relative;}
+  .photo-badge{position:absolute;left:-24px;bottom:30px;background:var(--surface);color:var(--ink);border-radius:16px;padding:15px 20px;box-shadow:0 24px 54px rgba(14,32,56,.24);display:flex;align-items:center;gap:14px;max-width:280px;}
+  .photo-badge .pb-ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;}
+  .photo-badge .pb-ic svg{width:22px;height:22px;}
+  .photo-badge b{display:block;font-size:1rem;letter-spacing:-0.02em;color:var(--navy);}
+  .photo-badge span{font-size:.82rem;color:var(--soft);}
+  @media(max-width:900px){.photo-badge{left:14px;}}
+
+  /* contact info icons */
+  .cinfo .ci-line{display:flex;gap:13px;align-items:center;margin-bottom:14px;color:rgba(255,255,255,.82);line-height:1.5;}
+  .cinfo .ci-line a{color:#fff;}
+  .cinfo .ci-ic{flex:none;width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;color:var(--accent-2);transition:transform .3s,background .3s;}
+  .cinfo .ci-line:hover .ci-ic{transform:translateY(-2px);background:rgba(216,182,120,.16);}
+  .cinfo .ci-ic svg{width:17px;height:17px;}
+
+  @media(prefers-reduced-motion:reduce){
+    .hero-in>div:first-child>*,.hero-photo{animation:none;}
+    .trust-item b,.stagger>*,.oc b,.sys-chips span{opacity:1!important;transform:none!important;transition:none!important;animation:none!important;}
+  }
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -246,10 +349,10 @@
     <span class="eyebrow">Engagement paths</span>
     <h2>Three ways to put a <em>CFO mind</em> on your business.</h2>
     <p class="sec-lead">Most engagements start with the Six-Week Project, then either continue as a retainer or run separately. Tax &amp; compliance can run alongside either or stand alone.</p>
-    <div class="svc-grid">
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><h3>Fractional CFO Retainer</h3><p>Ongoing CFO leadership at a fraction of a full-time hire. Monthly close, KPI dashboard, rolling cash forecast, vendor negotiation, and direct strategic seat in your ops conversations. Best when your shop is past the point a bookkeeper can serve, and the next hire would be six figures.</p><div class="meta"><b>Best fit:</b> $5M&ndash;$20M revenue contractors with active job complexity<br><b>Cadence:</b> Monthly retainer &middot; 6&ndash;12 month minimum</div></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><h3>The Six-Week Project Engagement</h3><p>The Contractor Profit Builder run end-to-end. Cash-flow plan, KPI dashboard, job-cost system stood up, vendor terms reviewed, forecast built. Concrete deliverables in your hand by week six. Many shops convert to an ongoing retainer at the close, the project earns the trust.</p><div class="meta"><b>Best fit:</b> Shops who want outcomes before committing to a retainer<br><b>Cadence:</b> Six weeks &middot; Fixed scope</div></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7Z"/></svg></span><h3>Tax &amp; Compliance Advisory</h3><p>Tax preparation, planning, and compliance for construction businesses, leveraging twenty years of audit and CPA practice. Often runs alongside the retainer; can also stand alone for shops that already have advisory coverage but want a CPA who actually understands construction tax mechanics.</p><div class="meta"><b>Best fit:</b> Contractors who want their tax work done by someone who reads job-cost reports<br><b>Cadence:</b> Project-based or annual</div></div>
+    <div class="svc-grid stagger">
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><span class="no">01</span><h3>Fractional CFO Retainer</h3><p>Ongoing CFO leadership at a fraction of a full-time hire. Monthly close, KPI dashboard, rolling cash forecast, vendor negotiation, and direct strategic seat in your ops conversations. Best when your shop is past the point a bookkeeper can serve, and the next hire would be six figures.</p><div class="meta"><b>Best fit:</b> $5M&ndash;$20M revenue contractors with active job complexity<br><b>Cadence:</b> Monthly retainer &middot; 6&ndash;12 month minimum</div></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="no">02</span><h3>The Six-Week Project Engagement</h3><p>The Contractor Profit Builder run end-to-end. Cash-flow plan, KPI dashboard, job-cost system stood up, vendor terms reviewed, forecast built. Concrete deliverables in your hand by week six. Many shops convert to an ongoing retainer at the close, the project earns the trust.</p><div class="meta"><b>Best fit:</b> Shops who want outcomes before committing to a retainer<br><b>Cadence:</b> Six weeks &middot; Fixed scope</div></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7Z"/></svg></span><span class="no">03</span><h3>Tax &amp; Compliance Advisory</h3><p>Tax preparation, planning, and compliance for construction businesses, leveraging twenty years of audit and CPA practice. Often runs alongside the retainer; can also stand alone for shops that already have advisory coverage but want a CPA who actually understands construction tax mechanics.</p><div class="meta"><b>Best fit:</b> Contractors who want their tax work done by someone who reads job-cost reports<br><b>Cadence:</b> Project-based or annual</div></div>
     </div>
   </div></section>
 
@@ -258,15 +361,15 @@
     <h2>The Contractor <em>Profit Builder</em>.</h2>
     <p class="sec-lead">Four phases that take you from murky numbers to a P&amp;L you actually trust, and a forecast you can run a business off of.</p>
     <div class="method">
-      <div class="phase"><div class="n">01</div><h3>Analyze</h3><p>We start by mapping current profit margins, profit drivers, and the inefficiencies that aren't showing up in the P&amp;L. Goals get set for gross profit. The systems that should be feeding you real-time financials get stood up properly.</p></div>
-      <div class="phase"><div class="n">02</div><h3>Identify</h3><p>Cost-reduction opportunities surface through a structured labor-cost analysis, project-by-project costing, and a forensic pass on contract and project-related expenses. Most $5M&ndash;$20M shops are bleeding in 2&ndash;3 places they didn't know about.</p></div>
-      <div class="phase"><div class="n">03</div><h3>Optimize</h3><p>Working-capital optimization, vendor-term renegotiation, and a real revenue/cash forecast that integrates with your active project schedule. KPIs get instrumented so you're managing DSO and DPO instead of guessing where you'll be in 60 days.</p></div>
-      <div class="phase"><div class="n">04</div><h3>Review</h3><p>Progress against goals and KPIs reviewed in monthly close. Strategy adjusted on real data. Continuous monitoring and process improvement built in so that quarter two looks better than quarter one, and quarter four is a different business.</p></div>
+      <div class="phase"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><div class="n">01</div><h3>Analyze</h3><p>We start by mapping current profit margins, profit drivers, and the inefficiencies that aren't showing up in the P&amp;L. Goals get set for gross profit. The systems that should be feeding you real-time financials get stood up properly.</p></div>
+      <div class="phase"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><div class="n">02</div><h3>Identify</h3><p>Cost-reduction opportunities surface through a structured labor-cost analysis, project-by-project costing, and a forensic pass on contract and project-related expenses. Most $5M&ndash;$20M shops are bleeding in 2&ndash;3 places they didn't know about.</p></div>
+      <div class="phase"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14a5 5 0 1 0-5-5"/><path d="M12 14l3.5-3.5"/><path d="M5 20a9 9 0 1 1 14 0"/></svg></span><div class="n">03</div><h3>Optimize</h3><p>Working-capital optimization, vendor-term renegotiation, and a real revenue/cash forecast that integrates with your active project schedule. KPIs get instrumented so you're managing DSO and DPO instead of guessing where you'll be in 60 days.</p></div>
+      <div class="phase"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M9 15l2 2 4-4"/></svg></span><div class="n">04</div><h3>Review</h3><p>Progress against goals and KPIs reviewed in monthly close. Strategy adjusted on real data. Continuous monitoring and process improvement built in so that quarter two looks better than quarter one, and quarter four is a different business.</p></div>
     </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
-    <div class="split-photo"></div>
+    <div class="split-photo"><span class="photo-badge"><span class="pb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L12 20l-5 2.6 1.2-5.6L4 13.2l5.6-.6L12 2Z"/></svg></span><span><b>CPA &middot; 20 years</b><span>Two in-house construction CFO seats</span></span></span></div>
     <div>
       <span class="eyebrow">About Brian</span>
       <h2>Most fractional CFOs put a &ldquo;construction&rdquo; line on their site. <em>I sat in the trailer.</em></h2>
@@ -287,17 +390,34 @@
     <span class="eyebrow">By the numbers</span>
     <h2 style="margin-bottom:16px;">What two CFO seats and one real <em>engagement</em> look like.</h2>
     <p class="sec-lead">These are real outcomes from real W-2 CFO tenures and a real anonymized contractor engagement, not aggregated industry stats.</p>
-    <div class="outcomes">
-      <div class="oc"><b>12% &rarr; 22%</b><p>Gross-margin lift across a 19-entity construction holding group, plus a 30% increase in cash on hand.</p><span class="src">Construction Managers Inc. &middot; CFO 2020&ndash;2023</span></div>
-      <div class="oc"><b>+40%</b><p>Revenue growth in 21 months at a PE-portfolio construction-services company, with a 300% EBITDA increase on the same playbook.</p><span class="src">BLAIR DURON &middot; CFO 2023&ndash;2024</span></div>
-      <div class="oc"><b>&minus;$160K</b><p>Cut from one contractor's tools &amp; supplies line, $390K down to $230K in a single year, no layoffs. Three procedural changes.</p><span class="src">Anonymized contractor engagement</span></div>
+    <div class="outcomes stagger">
+      <div class="oc"><span class="oic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/><path d="M18 7h2v2"/></svg></span><b>12% &rarr; 22%</b><p>Gross-margin lift across a 19-entity construction holding group, plus a 30% increase in cash on hand.</p><span class="src">Construction Managers Inc. &middot; CFO 2020&ndash;2023</span></div>
+      <div class="oc"><span class="oic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 6.5c0-2-2.2-3.5-5-3.5S7 4.5 7 6.5 9.2 10 12 10s5 1.5 5 3.5S14.8 17 12 17s-5-1.5-5-3.5"/></svg></span><b>+40%</b><p>Revenue growth in 21 months at a PE-portfolio construction-services company, with a 300% EBITDA increase on the same playbook.</p><span class="src">BLAIR DURON &middot; CFO 2023&ndash;2024</span></div>
+      <div class="oc"><span class="oic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 9l4 4 3-3 5 6"/></svg></span><b>&minus;$160K</b><p>Cut from one contractor's tools &amp; supplies line, $390K down to $230K in a single year, no layoffs. Three procedural changes.</p><span class="src">Anonymized contractor engagement</span></div>
     </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
     <div class="quote">
-      <p>&ldquo;When the financial side is reactive, leakage like this is invisible. Once it's <em>strategic</em>, it's catchable in 60 days.&rdquo;</p>
+      <span class="qmark" aria-hidden="true">&ldquo;</span>
+      <p>When the financial side is reactive, leakage like this is invisible. Once it's <em>strategic</em>, it's catchable in 60 days.</p>
       <span class="by">Brian Philbeck, CPA</span>
+    </div>
+  </div></section>
+
+  <section class="systems"><div class="wrap sys-in">
+    <div>
+      <span class="eyebrow">Inside your stack</span>
+      <h2>Fluent in the systems contractors <em>actually run</em>.</h2>
+      <p class="sys-lead">No rip-and-replace. Brian works inside the job-cost and accounting platforms your shop already uses, so real-time financials come from your data, not a parallel spreadsheet.</p>
+    </div>
+    <div class="sys-chips">
+      <span>Buildertrend</span>
+      <span>Sage</span>
+      <span>Built</span>
+      <span>Deltek ComputerEase</span>
+      <span>QuickBooks</span>
+      <span>CCH Axcess Tax</span>
     </div>
   </div></section>
 
@@ -323,9 +443,9 @@
         <h4>Business hours</h4>
         <div class="hours"><div><span>Availability</span><b>By appointment</b></div></div>
         <h4 style="margin-top:34px;">Reach us</h4>
-        <p>100 Northview Ct, Louisburg, NC 27549</p>
-        <p><a href="tel:9192106675">(919) 210-6675</a></p>
-        <p><a href="mailto:info@trianglefinancegroup.com">info@trianglefinancegroup.com</a></p>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>100 Northview Ct, Louisburg, NC 27549</span></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></span><a href="tel:9192106675">(919) 210-6675</a></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><a href="mailto:info@trianglefinancegroup.com">info@trianglefinancegroup.com</a></div>
       </div>
       <form class="cform" action="mailto:info@trianglefinancegroup.com" method="post" enctype="text/plain">
         <label>Name</label><input type="text" name="name" autocomplete="name">
@@ -347,7 +467,8 @@
     <div class="foot-bot"><span>&copy; 2026 Triangle Finance Group, LLC</span><span>Fractional CFO for $5M&ndash;$20M contractors</span></div>
   </div></footer>
 <style>/*cote-reveal*/.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform;}.reveal.in{opacity:1;transform:none;}@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}</style>
-<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});
+var po=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');po.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});[].forEach.call(document.querySelectorAll('.trust,.systems,.outcomes,.stagger'),function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.9){el.classList.add('in');}else{po.observe(el);}});})();</script>
 <style>/*cote-polish*/
 .svcard,.proj{overflow:hidden;}
 .svcard,.proj,.card,.revcard,.reviewcard,.area-item,.logotile{transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s cubic-bezier(.2,.6,.2,1);}

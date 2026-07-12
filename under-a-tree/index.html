@@ -253,6 +253,19 @@
   </div></section>
 
   <section class="sec" style="padding-top:0;" id="approach"><div class="wrap">
+    <span class="eyebrow">How we work</span>
+    <h2 style="margin-bottom:16px;">An engagement across the <em>full lifespan</em>.</h2>
+    <p class="sec-lead">We merge our expertise with your key staff members and work as an extension of your internal team, bringing value to every stage from first idea to fully operational.</p>
+    <div class="flow">
+      <div class="fstep"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span><span class="fn">01</span><h3>Discover</h3><p>We sit with your team to understand the land, the community, and the vision, working as an extension of your internal team.</p></div>
+      <div class="fstep"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.8L7 13.9"/></svg></span><span class="fn">02</span><h3>Feasibility</h3><p>Market and trends research, competitive review, utilization analysis, a 5-year pro forma, and SWOT to ground the concept.</p></div>
+      <div class="fstep"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 7l4 6 4-6c1-2 3-4 3-7a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg></span><span class="fn">03</span><h3>Concept &amp; design</h3><p>A comprehensive wellness concept, area program, bubble diagrams, and concept CAD floor plans to inform spatial planning.</p></div>
+      <div class="fstep"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="fn">04</span><h3>Programming</h3><p>Signature treatment menus and protocols, activity calendars, educational programs, and vendor and product recommendations.</p></div>
+      <div class="fstep"><span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span><span class="fn">05</span><h3>Operations</h3><p>Standard operating procedures, recruitment and ongoing mentorship, implementation, training, and retail sales training.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="ethos"><div class="wrap">
     <div class="quote">
       <p>Wellness is <em>everywhere</em>. We merge our expertise with your key staff members to share our vast collective expertise, working as an extension of your internal team.</p>
       <span class="by">The Under a Tree approach</span>
@@ -267,6 +280,18 @@
       <p>Transformation happens through both the physical environment, the hardware, and the programming, the software, that brings a space to life. We design for both, so a place performs as beautifully as it looks.</p>
       <p>Founded 20 years ago as a small team of all-women experts, our mission is to deliver world-class wellness experiences that are personal, transformational, and profitable.</p>
       <p>We merge the art of design with the science of business to ensure your wellness business inspires, performs to its full potential, and is best in class.</p>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="sectors"><div class="wrap">
+    <span class="eyebrow">Sectors we serve</span>
+    <h2 style="margin-bottom:28px;">Wellness across <em>every setting</em>.</h2>
+    <p class="sec-lead" style="margin-bottom:34px;">We partner with owners, family offices, and developers across hospitality, real estate, senior care, and medical wellness, on next-generation destinations and regenerative communities.</p>
+    <div class="sectors">
+      <span class="chip">Hospitality</span><span class="chip">Wellness real estate</span><span class="chip">Senior care</span>
+      <span class="chip">Medical wellness</span><span class="chip">Longevity</span><span class="chip">Sports performance</span>
+      <span class="chip">Clubs</span><span class="chip">Spa</span><span class="chip">Retreats &amp; resorts</span>
+      <span class="chip">Regenerative hospitality</span><span class="chip">Family offices</span><span class="chip">Developers</span>
     </div>
   </div></section>
 
@@ -448,8 +473,47 @@
 @media(max-width:900px){.proj{height:330px;}.sec{padding:90px 0;}.cta-band{padding:50px 34px;}}
 @media(prefers-reduced-motion:reduce){.hero-in>*{opacity:1;animation:none;}.split:hover .split-photo,.proj:hover .ph{transform:none;}}
 </style>
+<style>/*uat-enhance2*/
+/* hero slow zoom */
+.hero::before{inset:-3%;animation:uat-zoom 26s ease-in-out infinite alternate;}
+@keyframes uat-zoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+/* trust number pop */
+.trust-item b{transform:scale(.84);opacity:0;transition:transform .6s cubic-bezier(.2,.9,.3,1.4),opacity .5s ease;}
+.trust.in .trust-item b{transform:none;opacity:1;}
+.trust.in .trust-item:nth-child(2) b{transition-delay:.1s}
+.trust.in .trust-item:nth-child(3) b{transition-delay:.2s}
+.trust.in .trust-item:nth-child(4) b{transition-delay:.3s}
+/* numbered engagement flow band */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 22px 54px rgba(28,38,29,.07);}
+.fstep{background:var(--surface);padding:42px 26px;transition:background .3s ease;}
+.fstep:hover{background:var(--accent-soft);}
+.fstep .fic{width:50px;height:50px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+.fstep:hover .fic{transform:translateY(-3px);}
+.fstep .fic svg{width:24px;height:24px;}
+.fstep .fn{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.1rem;display:block;margin-bottom:6px;}
+.fstep h3{font-size:1.22rem;margin-bottom:9px;letter-spacing:-0.02em;}
+.fstep p{color:var(--soft);font-size:.94rem;line-height:1.52;}
+@media(max-width:900px){.flow{grid-template-columns:1fr;}}
+/* sectors tag cloud */
+.sectors{display:flex;flex-wrap:wrap;gap:13px;}
+.sectors .chip{border:1px solid var(--line);background:var(--surface);border-radius:100px;padding:13px 26px;font-size:1.02rem;font-weight:500;color:var(--ink);transition:transform .25s ease,border-color .25s ease,color .25s ease,background .25s ease;}
+.sectors .chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);transform:translateY(-3px);}
+/* reveal wiring for new sections */
+.sec.reveal .flow>*,.sec.reveal .sectors>*{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.6,.2,1),background .3s ease,border-color .25s ease,color .25s ease;}
+.sec.in .flow>*,.sec.in .sectors>*{opacity:1;transform:none;}
+.sec.in .flow>*:nth-child(2),.sec.in .sectors>*:nth-child(2){transition-delay:.07s}
+.sec.in .flow>*:nth-child(3),.sec.in .sectors>*:nth-child(3){transition-delay:.14s}
+.sec.in .flow>*:nth-child(4),.sec.in .sectors>*:nth-child(4){transition-delay:.21s}
+.sec.in .flow>*:nth-child(5),.sec.in .sectors>*:nth-child(5){transition-delay:.28s}
+.sec.in .sectors>*:nth-child(n+6){transition-delay:.34s}
+@media(prefers-reduced-motion:reduce){
+  .hero::before{animation:none;}
+  .trust-item b{opacity:1;transform:none;transition:none;}
+  .sec.reveal .flow>*,.sec.reveal .sectors>*{opacity:1!important;transform:none!important;transition:none!important;}
+}
+</style>
 <style>/*cote-reveal*/.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform;}.reveal.in{opacity:1;transform:none;}@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}</style>
-<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec,.trust'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
 <style>/*cote-polish*/
 .svcard,.proj{overflow:hidden;}
 .svcard,.proj,.card,.revcard,.reviewcard,.area-item,.logotile{transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s cubic-bezier(.2,.6,.2,1);}
