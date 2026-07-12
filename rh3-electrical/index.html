@@ -29,7 +29,7 @@
 
   /* hero */
   .hero{position:relative;min-height:760px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
-  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(18,16,14,.95) 0%,rgba(18,16,14,.80) 44%,rgba(18,16,14,.46) 100%),url('../assets/img/rh3-hero.jpg') center/cover;}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(18,16,14,.94) 0%,rgba(18,16,14,.82) 46%,rgba(18,16,14,.55) 100%),url('../assets/img/rh3-real1.png') center/cover;}
   .hero-in{position:relative;padding:150px 0 90px;max-width:780px;}
   .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:9px 18px;border-radius:100px;font-size:.86rem;font-weight:500;margin-bottom:30px;}
   .pill .dot{width:8px;height:8px;border-radius:50%;background:#E0A73E;}
@@ -65,7 +65,7 @@
 
   /* split */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
-  .split-photo{height:540px;border-radius:24px;background:url('../assets/img/rh3-2.jpg') center/cover;box-shadow:0 30px 70px rgba(18,16,14,.14);}
+  .split-photo{height:540px;border-radius:24px;background:url('../assets/img/rh3-hero.jpg') center/cover;box-shadow:0 30px 70px rgba(18,16,14,.14);}
 
   /* work gallery */
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
@@ -80,8 +80,17 @@
   .split li{display:flex;gap:12px;align-items:flex-start;font-weight:500;}
   .split li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--accent-soft);flex:none;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C4872A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:13px;}
 
+  /* process steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+  .step{background:var(--surface);padding:46px 38px;transition:.25s;}
+  .step:hover{background:#FBF7F0;}
+  .step .sn{font-family:var(--serif);font-style:italic;font-size:1.7rem;color:var(--accent);display:block;margin-bottom:22px;}
+  .step h3{font-size:1.5rem;margin-bottom:12px;}
+  .step p{color:var(--soft);font-size:1.02rem;}
+
   /* quote */
   .quote{background:var(--navy);color:#fff;border-radius:28px;padding:80px 70px;text-align:center;}
+  .quote img.qlogo{height:88px;width:auto;margin:0 auto 30px;display:block;}
   .quote p{font-family:var(--serif);font-weight:400;font-size:2.5rem;line-height:1.3;max-width:840px;margin:0 auto 30px;}
   .quote .by{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
 
@@ -221,17 +230,18 @@
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
-    <span class="eyebrow">Recent work</span>
-    <h2 style="margin-bottom:44px;">Wired properly, <em>every time</em>.</h2>
-    <div class="gallery">
-      <div class="gal" data-label="Panel &amp; service upgrades" style="background-image:url('../assets/img/rh3-3.jpg');"></div>
-      <div class="gal" data-label="Lighting &amp; LED retrofits" style="background-image:url('../assets/img/rh3-4.jpg');"></div>
-      <div class="gal" data-label="Commercial installs" style="background-image:url('../assets/img/rh3-5.jpg');"></div>
+    <span class="eyebrow">How we work</span>
+    <h2 style="margin-bottom:56px;">No surprises, from the first call to the <em>final test</em>.</h2>
+    <div class="steps">
+      <div class="step"><span class="sn">01</span><h3>We assess it properly</h3><p>We look at the whole system, not just the symptom, so the fix holds up and nothing gets missed.</p></div>
+      <div class="step"><span class="sn">02</span><h3>We quote it honestly</h3><p>Straight answers and clear pricing before a single wire is touched. What we say is what you pay.</p></div>
+      <div class="step"><span class="sn">03</span><h3>We wire it to last</h3><p>Code-compliant, clean, and fully tested. Quality of work that holds up long after we leave.</p></div>
     </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
     <div class="quote">
+      <img class="qlogo" src="../assets/img/rh3-logo.png" alt="RH3 Electrical">
       <p>&ldquo;Honesty, reliability, and a commitment to quality that lasts. That is how every job should be done.&rdquo;</p>
       <span class="by">RH3 Electrical LLC</span>
     </div>
