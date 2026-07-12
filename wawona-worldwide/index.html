@@ -85,6 +85,27 @@
   .rcell .loc{color:var(--soft);font-size:.92rem;}
   @media(max-width:900px){.roster{grid-template-columns:1fr;}}
 
+  /* consulting services */
+  .cons{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;}
+  .citem{display:flex;gap:22px;padding:28px 0;border-top:1px solid var(--line);}
+  .citem .cnum{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--accent);line-height:1;flex:none;width:38px;}
+  .citem h3{font-family:var(--head);font-weight:650;font-size:1.14rem;letter-spacing:-0.02em;margin-bottom:8px;}
+  .citem p{color:var(--soft);font-size:.99rem;line-height:1.55;}
+  @media(max-width:900px){.cons{grid-template-columns:1fr;gap:0;}}
+
+  /* principal bios */
+  .bios{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px;}
+  .bio{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:40px 38px;box-shadow:0 24px 56px -30px rgba(11,27,51,.16);}
+  .bio-head{display:flex;align-items:center;gap:20px;margin-bottom:28px;}
+  .bio-head img{width:88px;height:88px;border-radius:16px;object-fit:cover;object-position:top;flex:none;background:var(--bg);}
+  .bio-head .bn{font-family:var(--head);font-weight:650;font-size:1.32rem;letter-spacing:-0.02em;line-height:1.15;}
+  .bio-head .bt{color:var(--accent);font-weight:600;font-size:.9rem;margin-top:6px;display:block;}
+  .bio h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:22px 0 8px;font-weight:600;}
+  .bio ul{list-style:none;margin:0;padding:0;}
+  .bio li{color:var(--soft);font-size:.96rem;line-height:1.5;padding:4px 0 4px 16px;position:relative;}
+  .bio li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:var(--accent);}
+  @media(max-width:900px){.bios{grid-template-columns:1fr;}}
+
   /* quote */
   .quote{background:var(--navy);color:#fff;border-radius:28px;padding:80px 70px;text-align:center;}
   .quote p{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.3;max-width:900px;margin:0 auto 30px;}
@@ -146,7 +167,7 @@
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand"><img src="../assets/img/waw-logo.jpg" alt="Wawona Worldwide Capital"></a>
-    <nav class="nav-links"><a href="#services">Our Lending</a><a href="#about">About</a><a href="#team">Our Team</a><a href="#area">Reach</a><a href="#contact">Contact</a></nav>
+    <nav class="nav-links"><a href="#services">Lending</a><a href="#consulting">Consulting</a><a href="#about">About</a><a href="#team">Our Team</a><a href="#area">Reach</a><a href="#contact">Contact</a></nav>
     <a class="nav-call" href="tel:2038292225">Call (203) 829-2225</a>
   </div></header>
 
@@ -196,6 +217,22 @@
     </div>
   </div></section>
 
+  <section class="sec" style="padding-top:0;" id="consulting"><div class="wrap">
+    <span class="eyebrow">Consulting</span>
+    <h2>Beyond lending, a <em>full consulting desk</em>.</h2>
+    <p class="sec-lead">Programs and markets change constantly, so we treat every assignment on its own merits. Call us with any scenario.</p>
+    <div class="cons">
+      <div class="citem"><span class="cnum">I</span><div><h3>Commercial Consulting &amp; Acting as a Finder</h3><p>Every commercial consulting assignment is treated on its own merits, structured around where the market and the programs sit today.</p></div></div>
+      <div class="citem"><span class="cnum">II</span><div><h3>Commercial &amp; Construction Loan Consulting</h3><p>A core area of specialty consulting. Bring us any scenario and we will work through the financing with you.</p></div></div>
+      <div class="citem"><span class="cnum">III</span><div><h3>Business Plans</h3><p>Our team has reviewed many business plans and written a few too. We know the elements needed to succeed and are ready to help with your unique plan.</p></div></div>
+      <div class="citem"><span class="cnum">IV</span><div><h3>Financial Analysis</h3><p>Strong spreadsheet financial analysis, with Judy an expert in QuickBooks. Cash-flow analysis across a range of industries is a specialty of ours.</p></div></div>
+      <div class="citem"><span class="cnum">V</span><div><h3>Hedge Fund &amp; Private Equity Fund Set-Up</h3><p>Our team built three distinct funds over the last ten years. We write PPMs and prospectuses for single- and multi-strategy hedge funds and private equity funds.</p></div></div>
+      <div class="citem"><span class="cnum">VI</span><div><h3>Presentations in English, Spanish or Mandarin</h3><p>Speech writing and business marketing materials in Word, PowerPoint, and Excel. We have presented on TV, on radio, and at the Fortune 100 board level.</p></div></div>
+      <div class="citem"><span class="cnum">VII</span><div><h3>Credit Rating &amp; Ratings Consulting</h3><p>Relationships with all the major rating agencies, with ready access to structured, project, and corporate finance materials to help structure your transactions.</p></div></div>
+      <div class="citem"><span class="cnum">VIII</span><div><h3>General Consulting &amp; Business Coaching</h3><p>We have consulted on a wide range of business and financial projects, and welcome inquiries to coach or consult on your unique concept or idea.</p></div></div>
+    </div>
+  </div></section>
+
   <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
     <div>
       <span class="eyebrow">About</span>
@@ -219,6 +256,62 @@
       <div class="roster">
         <div class="rcell"><b>Judy Liu</b><span class="title">CFO</span><span class="loc">New York</span></div>
         <div class="rcell"><b>Michael Kondracki</b><span class="title">CEO</span><span class="loc">Connecticut</span></div>
+      </div>
+    </div>
+    <div class="bios">
+      <div class="bio">
+        <div class="bio-head">
+          <img src="../assets/img/waw-kondracki.jpg" alt="Michael G.S. Kondracki">
+          <div><span class="bn">Michael G.S. Kondracki</span><span class="bt">CEO, Founder, Commercial Consultant</span></div>
+        </div>
+        <h4>Education</h4>
+        <ul>
+          <li>B.S. Public Administration &amp; Public Affairs, University of Scranton</li>
+          <li>Fulbright Scholar, Pontificia Catolica Universidad de Lima, Peru</li>
+          <li>Law Studies, Georgetown; MBA Finance / International Business, NYU</li>
+          <li>Commercial Real Estate Finance &amp; Investment Certificate, NYU</li>
+        </ul>
+        <h4>Past Associations</h4>
+        <ul>
+          <li>Managing Director, Source Capital Group Inc. (Westport, CT)</li>
+          <li>Managing Director, John W. Loofbourrow Associates, Inc. (New York)</li>
+          <li>Director, Deutsche Bank Securities (Buenos Aires &amp; New York)</li>
+          <li>Vice President, Prudential Securities Incorporated (New York)</li>
+          <li>Associate, Citigroup LBO Division (New York)</li>
+          <li>Assistant Treasurer, Manufacturers Hanover Trust Company (New York)</li>
+          <li>Simultaneous Interpreter, U.S. Department of State (Washington, DC)</li>
+          <li>Analyst, Inter-American Development Bank (San Salvador &amp; Washington, DC)</li>
+        </ul>
+        <h4>Key Competencies</h4>
+        <ul>
+          <li>Commercial Finder and Commercial Consultant</li>
+          <li>B2B Marketing and Sales, Business Development</li>
+          <li>Published in the New York Real Estate Journal and Wiley's "Corporate Financial Distress and Bankruptcy"</li>
+        </ul>
+      </div>
+      <div class="bio">
+        <div class="bio-head">
+          <img src="../assets/img/waw-liu.jpg" alt="Judy Liu">
+          <div><span class="bn">Judy Liu</span><span class="bt">Founder, CFO, Commercial Consultant</span></div>
+        </div>
+        <h4>Education</h4>
+        <ul>
+          <li>B.B.A. Finance, Pace University</li>
+        </ul>
+        <h4>Past Associations</h4>
+        <ul>
+          <li>Portfolio Manager, various Funds of Hedge Funds</li>
+          <li>Associate Director, Invus Financial Advisors</li>
+          <li>Marketer, Smith Barney / Drexel Burnham &amp; Lambert</li>
+        </ul>
+        <h4>Key Competencies</h4>
+        <ul>
+          <li>Buy-side investment and finance specialist with extensive experience across Asia and North &amp; South America</li>
+          <li>Commercial real estate consulting</li>
+          <li>Licensed real estate saleswoman in New York</li>
+          <li>Fluent native Mandarin Chinese speaker, reader, and writer</li>
+          <li>Wall Street commentator on Chinese cable TV</li>
+        </ul>
       </div>
     </div>
     <div class="roster-group">
