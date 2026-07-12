@@ -29,7 +29,7 @@
 
   /* hero */
   .hero{position:relative;min-height:760px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
-  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,15,24,.95) 0%,rgba(10,15,24,.78) 44%,rgba(10,15,24,.42) 100%),url('../assets/img/cunn-work.jpg') center/cover;}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,15,24,.95) 0%,rgba(10,15,24,.78) 44%,rgba(10,15,24,.44) 100%),url('../assets/img/cunn-hero.jpg') center/cover;}
   .hero-in{position:relative;padding:150px 0 90px;max-width:760px;}
   .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:9px 18px;border-radius:100px;font-size:.86rem;font-weight:500;margin-bottom:30px;}
   .pill .dot{width:8px;height:8px;border-radius:50%;background:#37E28E;}
@@ -65,7 +65,14 @@
 
   /* split */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
-  .split-photo{height:540px;border-radius:24px;background:url('../assets/img/cunn-boiler.jpg') center/cover;box-shadow:0 30px 70px rgba(16,22,32,.14);}
+  .split-photo{height:540px;border-radius:24px;background:url('../assets/img/cunn-heating.jpg') center/cover;box-shadow:0 30px 70px rgba(16,22,32,.14);}
+
+  /* work gallery */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .gal{height:300px;border-radius:18px;background-size:cover;background-position:center;position:relative;overflow:hidden;box-shadow:0 12px 34px rgba(16,22,32,.1);transition:.3s;}
+  .gal:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(16,22,32,.16);}
+  .gal::after{content:attr(data-label);position:absolute;left:20px;bottom:18px;color:#fff;font-family:var(--head);font-weight:600;font-size:1.05rem;text-shadow:0 1px 14px rgba(0,0,0,.5);}
+  .gal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,15,24,.6));}
   .split h2{font-size:3rem;margin-bottom:20px;}
   .split h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
   .split p{color:var(--soft);font-size:1.1rem;margin-bottom:20px;}
@@ -102,6 +109,7 @@
     h1{font-size:3.2rem;}.hero-in{padding-top:130px;}
     .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
     .svc-grid{grid-template-columns:1fr;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:320px;}
+    .gallery{grid-template-columns:1fr;}.cta-band{flex-direction:column;align-items:flex-start;}
     .foot-top{grid-template-columns:1fr;}
   }
 </style></head>
@@ -156,6 +164,16 @@
         <li>Quality of work few others in Boston can match</li>
         <li>Trusted by homeowners, businesses, and GCs alike</li>
       </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">Recent work</span>
+    <h2 style="margin-bottom:44px;">Three decades of jobs, <em>done properly</em>.</h2>
+    <div class="gallery">
+      <div class="gal" data-label="Commercial washrooms" style="background-image:url('../assets/img/cunn-commercial.jpg');"></div>
+      <div class="gal" data-label="Residential install" style="background-image:url('../assets/img/cunn-proj1.jpg');"></div>
+      <div class="gal" data-label="Radiant &amp; heating" style="background-image:url('../assets/img/cunn-proj2.jpg');"></div>
     </div>
   </div></section>
 
