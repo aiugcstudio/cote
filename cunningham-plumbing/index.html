@@ -163,10 +163,27 @@
   .cform textarea{resize:vertical;min-height:120px;}
   .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
   @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}}
+  /* real logo + service/project cards */
+  .nav .brand img{height:42px;width:auto;display:block;filter:brightness(0) invert(1);}
+  .svc-grid{grid-template-columns:repeat(3,1fr);gap:26px;}
+  .svcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s;}
+  .svcard:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(16,22,32,.1);}
+  .svcard .ph{height:210px;background-size:cover;background-position:center;}
+  .svcard .bd{padding:30px 28px;}
+  .svcard h3{font-size:1.32rem;margin-bottom:12px;color:var(--accent);}
+  .svcard p{color:var(--soft);font-size:1rem;line-height:1.55;}
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .proj{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface);transition:.25s;}
+  .proj:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(16,22,32,.1);}
+  .proj .ph{height:300px;background-size:cover;background-position:center;}
+  .proj .bd{padding:28px 30px;}
+  .proj h3{font-size:1.3rem;margin-bottom:10px;}
+  .proj p{color:var(--soft);font-size:1rem;line-height:1.55;}
+  @media(max-width:820px){.svc-grid,.projects{grid-template-columns:1fr;}}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
-    <a class="brand"><span class="mk">C</span>Cunningham P&amp;H</a>
+    <a class="brand"><img src="../assets/img/cunn-logo.png" alt="Cunningham Plumbing &amp; Heating"></a>
     <nav class="nav-links"><a href="#services">Services</a><a href="#craft">Why Us</a><a href="#area">Service Area</a><a href="#contact">Contact</a></nav>
     <a class="nav-call" href="tel:6177875100">Call (617) 787-5100</a>
   </div></header>
@@ -219,31 +236,24 @@
   </div></section>
 
   <section class="sec" id="services"><div class="wrap">
-    <span class="eyebrow">What we do</span>
-    <h2>One crew for every pipe, boiler, and <em>system</em>.</h2>
-    <p class="sec-lead">Quality, cost-efficient work across commercial and retail units, multi-residential, and luxury residential, handled by licensed master plumbers and pipefitters, start to finish.</p>
+    <span class="eyebrow">Services</span>
+    <h2>Plumbing and heating, done <em>properly</em>.</h2>
+    <p class="sec-lead">From new commercial builds to luxury residential, our licensed team handles it start to finish.</p>
     <div class="svc-grid">
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg></span><h3>Commercial</h3><p>Full plumbing and heating for buildings, storefronts, and facilities across Greater Boston.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></span><h3>Residential</h3><p>Repairs, remodels, and installs for homes, done clean and done to last.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h6M9 12h6"/></svg></span><h3>Boilers &amp; Heating</h3><p>Boiler installs, replacements, and steam and hot-water heating systems.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16h16M4 12h16M4 8h16"/><path d="M8 20v2M12 20v2M16 20v2"/></svg></span><h3>Radiant Heat</h3><p>Underfloor radiant heating that warms the whole room, evenly and quietly.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M8 6l4-4 4 4M6 22a6 6 0 0 1 12 0"/></svg></span><h3>Snow-Melt Systems</h3><p>Driveways and walkways that clear themselves through a Boston winter.</p></div>
-      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-5.5 7-12a7 7 0 0 0-14 0c0 6.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Gas &amp; Retail Service</h3><p>Gas service, fixtures, and fast retail work you can count on.</p></div>
+      <div class="svcard"><div class="ph" style="background-image:url('../assets/img/cunn-s1.jpg')"></div><div class="bd"><h3>Commercial Plumbing &amp; Heating</h3><p>Our highly skilled plumbing team specializes in commercial plumbing and heating. We offer services for new commercial buildings, major renovations to minor installations in industrial or commercial applications.</p></div></div>
+      <div class="svcard"><div class="ph" style="background-image:url('../assets/img/cunn-s2.jpg')"></div><div class="bd"><h3>Retail Plumbing &amp; Heating</h3><p>We provide plumbing, heating and gas service to commercial clients, including retail stores, restaurants, medical, and office buildings.</p></div></div>
+      <div class="svcard"><div class="ph" style="background-image:url('../assets/img/cunn-s3.jpg')"></div><div class="bd"><h3>Residential Plumbing &amp; Heating</h3><p>We provide full installation for residential, multi residential, large remodeling renovations, and restoration projects. We also provide full heating services, new boiler installations, replacements, water, steam and high-tech radiant underfloor and snow-melt systems.</p></div></div>
     </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;" id="craft"><div class="wrap split">
     <div class="split-photo"></div>
     <div>
-      <span class="eyebrow">The Cunningham standard</span>
-      <h2>Built on 30 years of <em>doing it right</em>.</h2>
-      <p>Established by master plumber James Cunningham in 1992, Cunningham has served the Greater Boston market for 30+ years. We work closely with every client, bringing recommendations and ideas built on three decades in the field, and we never learned to cut corners.</p>
-      <ul>
-        <li>Licensed master plumbers and pipefitters on every job</li>
-        <li>Full transparency, from quote to final walkthrough</li>
-        <li>Quality of work few others in Boston can match</li>
-        <li>Trusted by homeowners, businesses, and GCs alike</li>
-      </ul>
+      <span class="eyebrow">About</span>
+      <h2>Built on <em>doing it right</em>, since 1992.</h2>
+      <p>At Cunningham Plumbing &amp; Heating, we work closely with our clients to deliver the best service possible. We provide recommendations and ideas based on our 26+ years experience in the market.</p>
+      <p>Established by Jack Cunningham, Cunningham Plumbing &amp; Heating have been providing their services since 1992 to the Greater Boston Market. Cunningham Plumbing &amp; Heating is dedicated to providing quality and cost-efficient projects in commercial &amp; retail units, multi-residential &amp; luxury residential units.</p>
+      <p>Should you choose to work with Cunningham Heating &amp; Plumbing, you&rsquo;ll work directly with Jack and his team. You will receive professionalism from start to finish. You&rsquo;ll get full transparency throughout the process with quality that few others can match. We work closely with architects and designers throughout the design phase of a project to deliver a product that exceeds their needs in both function and appearance.</p>
     </div>
   </div></section>
 
@@ -258,12 +268,13 @@
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
-    <span class="eyebrow">Recent work</span>
-    <h2 style="margin-bottom:44px;">Three decades of jobs, <em>done properly</em>.</h2>
-    <div class="gallery">
-      <div class="gal" data-label="Commercial washrooms" style="background-image:url('../assets/img/cunn-commercial.jpg');"></div>
-      <div class="gal" data-label="Residential install" style="background-image:url('../assets/img/cunn-proj1.jpg');"></div>
-      <div class="gal" data-label="Radiant &amp; heating" style="background-image:url('../assets/img/cunn-proj2.jpg');"></div>
+    <span class="eyebrow">Projects</span>
+    <h2 style="margin-bottom:44px;">A few of the buildings we&rsquo;ve <em>worked on</em>.</h2>
+    <div class="projects">
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/cunn-p1.jpg')"></div><div class="bd"><h3>380 Commonwealth Avenue</h3><p>Residences at the Harvard Club is a boutique building in Back Bay with 5 luxurious residences located at 380 Commonwealth Avenue. Converted to condominiums and completely renovated in 2015. All plumbing and heating proudly completed by Cunningham Plumbing &amp; Heating.</p></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/cunn-p2.jpg')"></div><div class="bd"><h3>26 West Broadway, South Boston</h3><p>26 West Broadway offers thirty one unique rental residences located at the meeting point of the South End, South Boston, and Fort Point neighborhoods. Work undertook by Cunningham Plumbing &amp; Heating consisted of bathrooms and heating systems.</p></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/cunn-p3.jpg')"></div><div class="bd"><h3>The Schrafft&rsquo;s City Center Complex</h3><p>This legendary building at 529 Main Street in Charlestown was formerly the manufacturing site of the famous Schrafft&rsquo;s Candy Factory. Cunningham Heating &amp; Plumbing were proud to be involved in the development of a fitness center and a coffee bar.</p></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/cunn-p4.jpg')"></div><div class="bd"><h3>168 Newbury Street, Boston MA</h3><p>168 Newbury consists of a bundle of boutique commercial outlets. All heating and plumbing completed by Cunningham Plumbing &amp; Heating.</p></div></div>
     </div>
   </div></section>
 
