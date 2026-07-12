@@ -27,7 +27,16 @@
 
   /* hero */
   .hero{position:relative;min-height:760px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
-  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,17,24,.96) 0%,rgba(14,17,24,.82) 46%,rgba(14,17,24,.5) 100%),url('../assets/img/cdl-1.webp') center/cover;}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,17,24,.96) 0%,rgba(14,17,24,.82) 46%,rgba(14,17,24,.5) 100%),url('../assets/img/cdl-1.webp') center/cover;transform:scale(1.06);animation:heroZoom 18s ease-out forwards;}
+  @keyframes heroZoom{from{transform:scale(1.12);}to{transform:scale(1.0);}}
+  @media(prefers-reduced-motion:reduce){.hero::before{animation:none;transform:none;}}
+  .hero-in > *{opacity:0;transform:translateY(26px);animation:heroRise .8s cubic-bezier(.2,.6,.2,1) forwards;}
+  .hero-in > *:nth-child(1){animation-delay:.12s;}
+  .hero-in > *:nth-child(2){animation-delay:.24s;}
+  .hero-in > *:nth-child(3){animation-delay:.36s;}
+  .hero-in > *:nth-child(4){animation-delay:.48s;}
+  @keyframes heroRise{to{opacity:1;transform:none;}}
+  @media(prefers-reduced-motion:reduce){.hero-in > *{opacity:1!important;transform:none!important;animation:none!important;}}
   .hero::after{content:"";position:absolute;top:-20%;right:-10%;width:55%;height:80%;background:radial-gradient(circle,rgba(217,59,77,.28),transparent 62%);pointer-events:none;z-index:0;animation:glow 9s ease-in-out infinite alternate;}
   @keyframes glow{from{opacity:.55;transform:translate(0,0);}to{opacity:1;transform:translate(-4%,4%);}}
   @media(prefers-reduced-motion:reduce){.hero::after{animation:none;}}
@@ -68,6 +77,18 @@
   .pcard .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;}
   .pcard .ic svg{width:25px;height:25px;}
   .pcard .no{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--accent);display:block;margin-bottom:22px;}
+
+  /* engagement process band */
+  .proc-head{max-width:640px;margin-bottom:52px;}
+  .process{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 30px 70px -40px rgba(16,22,32,.3);}
+  .pstep{background:var(--surface);padding:40px 28px;transition:background .3s cubic-bezier(.2,.6,.2,1);}
+  .pstep:hover{background:var(--accent-soft);}
+  .pstep .pic{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;transition:background .3s,color .3s;}
+  .pstep:hover .pic{background:var(--accent);color:#fff;}
+  .pstep .pic svg{width:23px;height:23px;}
+  .pstep .pn{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.08rem;margin-bottom:9px;display:block;}
+  .pstep h3{font-size:1.14rem;margin-bottom:9px;letter-spacing:-0.02em;}
+  .pstep p{color:var(--soft);font-size:.94rem;line-height:1.52;}
 
   /* dark section (client focus) */
   .darksec{position:relative;overflow:hidden;padding:118px 0;background:radial-gradient(120% 90% at 80% -10%,rgba(217,59,77,.22),transparent 55%),linear-gradient(165deg,#1b1519 0%,#141013 60%);color:#fff;}
@@ -227,13 +248,14 @@
     .prac{grid-template-columns:1fr;}.caps{grid-template-columns:1fr;gap:0;}.cred{flex-direction:column;gap:4px;}.cred b{text-align:left;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:360px;}
     .ins-grid{grid-template-columns:1fr;}.cta-band{flex-direction:column;align-items:flex-start;}
     .foot-top{grid-template-columns:1fr;}.quote{padding:56px 32px;}.quote p{font-size:1.7rem;}
+    .process{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}
   }
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand" href="#"><img src="../assets/img/cdl-6.webp" alt="Cadet Legal"></a>
-    <nav class="nav-links"><a href="#advantage">Advantage</a><a href="#practice">Practice</a><a href="#about">About</a><a href="#approach">Approach</a><a href="#insights">Insights</a><a href="#faq">FAQ</a><a href="#contact-form">Contact</a></nav>
+    <nav class="nav-links"><a href="#advantage">Advantage</a><a href="#practice">Practice</a><a href="#about">About</a><a href="#engagement">Process</a><a href="#approach">Approach</a><a href="#insights">Insights</a><a href="#faq">FAQ</a><a href="#contact-form">Contact</a></nav>
     <a class="nav-call" href="https://cadetlegal.ai/" target="_blank" rel="noopener">Book a Meeting</a>
   </div></header>
 
@@ -299,6 +321,21 @@
           <li><span>The First 100 Days: A Virtual Town Hall</span><span class="yr">Apr 2025</span></li>
         </ul>
       </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="engagement"><div class="wrap">
+    <div class="proc-head">
+      <span class="eyebrow">How an engagement moves</span>
+      <h2>From first call to <em>final close</em>.</h2>
+      <p class="sec-lead" style="margin-bottom:0;">A clear path for every matter, with the attorney doing the work in the room at each step.</p>
+    </div>
+    <div class="process stagger">
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span><span class="pn">01</span><h3>Consultation</h3><p>A 30-minute Google Meet to understand your goals, your stage, and the matter at hand.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></span><span class="pn">02</span><h3>Strategy &amp; scope</h3><p>We map the structure, the risks, and the plan, then agree on scope before any work begins.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><span class="pn">03</span><h3>Structuring &amp; drafting</h3><p>Formation documents, fund structures, and agreements drafted to hold up under scrutiny.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM17 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3 20v-1a5 5 0 0 1 5-5h1M14 14h1a5 5 0 0 1 5 5v1"/></svg></span><span class="pn">04</span><h3>Negotiation &amp; diligence</h3><p>We run diligence and negotiate terms across the table, protecting your position throughout.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span><span class="pn">05</span><h3>Close &amp; counsel</h3><p>We close the transaction and stay on as ongoing counsel as your business grows.</p></div>
     </div>
   </div></section>
 
