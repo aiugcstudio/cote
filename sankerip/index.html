@@ -209,6 +209,35 @@
     .hero-in>*{animation:none;}
     .svc-grid .svc,.ins-grid .ins,.process .pstep,.tech-grid .chip,.trust-item b{opacity:1;transform:none;transition:none;}
   }
+
+  /* ---- contact info icons ---- */
+  .cinfo .ci-line{display:flex;gap:13px;align-items:center;margin-bottom:14px;color:rgba(255,255,255,.82);line-height:1.5;}
+  .cinfo .ci-line a{color:#fff;}
+  .cinfo .ci-ic{flex:none;width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;color:#A9B4FF;transition:transform .3s,background .3s;}
+  .cinfo .ci-line:hover .ci-ic{transform:translateY(-2px);background:rgba(169,180,255,.16);}
+  .cinfo .ci-ic svg{width:17px;height:17px;}
+
+  /* ---- team avatars ---- */
+  #team .ins .tavatar{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:1.05rem;color:#fff;letter-spacing:.02em;margin-bottom:18px;background:linear-gradient(135deg,#6C7CF5,#4A5AE0);}
+  #team .ins .tavatar.t2{background:linear-gradient(135deg,#7BAFEB,#4E86C6);}
+  #team .ins .tavatar.t3{background:linear-gradient(135deg,#9AA6F0,#6C7CF5);}
+
+  /* ---- founder photo badge ---- */
+  .split-photo{position:relative;}
+  .photo-badge{position:absolute;left:-26px;bottom:30px;background:var(--surface);color:var(--ink);border-radius:16px;padding:16px 20px;box-shadow:0 24px 54px rgba(14,21,38,.26);display:flex;align-items:center;gap:14px;max-width:290px;}
+  .photo-badge .pb-ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;}
+  .photo-badge .pb-ic svg{width:23px;height:23px;}
+  .photo-badge b{display:block;font-size:1rem;letter-spacing:-0.02em;}
+  .photo-badge span{font-size:.82rem;color:var(--soft);}
+  @media(max-width:900px){.photo-badge{left:14px;}}
+
+  /* ---- quote decorative mark ---- */
+  .quote .qmark{position:relative;display:block;font-family:var(--serif);font-size:4.6rem;line-height:.5;color:rgba(169,180,255,.55);margin-bottom:14px;}
+
+  /* ---- insights icon + accent ---- */
+  #insights .ins .ins-ic{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;transition:transform .3s;}
+  #insights .ins:hover .ins-ic{transform:translateY(-3px);}
+  #insights .ins .ins-ic svg{width:21px;height:21px;}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -302,7 +331,7 @@
   </div></section>
 
   <section class="sec" id="about"><div class="wrap split">
-    <div class="split-photo"></div>
+    <div class="split-photo"><span class="photo-badge"><span class="pb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></span><span><b>Top AI Attorney</b><span>Daily Journal, 2019 &amp; 2024</span></span></span></div>
     <div>
       <span class="eyebrow">Founder</span>
       <h2>David V. Sanker, Ph.D.</h2>
@@ -325,16 +354,19 @@
     <h2 style="margin-bottom:52px;">A lean team with <em>deep technical range</em>.</h2>
     <div class="ins-grid stagger">
       <div class="ins">
+        <span class="tavatar">DS</span>
         <span class="date">Founder</span>
         <h3>David V. Sanker, Ph.D.</h3>
         <span class="rd" style="color:var(--soft);font-weight:500;">Patent attorney, mathematician, and software engineer. Former partner at Morgan Lewis.</span>
       </div>
       <div class="ins">
+        <span class="tavatar t2">PA</span>
         <span class="date">IP Associate</span>
         <h3>Priya Adlakha</h3>
         <span class="rd" style="color:var(--soft);font-weight:500;">Intellectual property counsel supporting prosecution and strategy across the firm&rsquo;s technical practice.</span>
       </div>
       <div class="ins">
+        <span class="tavatar t3">AT</span>
         <span class="date">Patent Engineer</span>
         <h3>Atcha Totachawattana</h3>
         <span class="rd" style="color:var(--soft);font-weight:500;">Technical support for patent drafting and prosecution, bridging invention and claim language.</span>
@@ -347,16 +379,19 @@
     <h2 style="margin-bottom:52px;">Thinking on AI and <em>intellectual property</em>.</h2>
     <div class="ins-grid">
       <a class="ins" href="https://sankerip.com/insights" target="_blank" rel="noopener">
+        <span class="ins-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
         <span class="date">Feb 19, 2024</span>
         <h3>The US Patent Office recognizes AI-assisted inventions</h3>
         <span class="rd">Read on sankerip.com &rarr;</span>
       </a>
       <a class="ins" href="https://sankerip.com/insights" target="_blank" rel="noopener">
+        <span class="ins-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
         <span class="date">Oct 31, 2023</span>
         <h3>Executive Order by President Biden Addresses Artificial Intelligence</h3>
         <span class="rd">Read on sankerip.com &rarr;</span>
       </a>
       <a class="ins" href="https://sankerip.com/insights" target="_blank" rel="noopener">
+        <span class="ins-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span>
         <span class="date">Aug 5, 2023</span>
         <h3>Minimizing Risk for Generative AI</h3>
         <span class="rd">Read on sankerip.com &rarr;</span>
@@ -366,7 +401,8 @@
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
     <div class="quote">
-      <p>&ldquo;SankerIP specializes in protecting today&rsquo;s most complex inventions. We&rsquo;re legal experts with STEM Ph.Ds and industry experience, ready to protect your ideas.&rdquo;</p>
+      <span class="qmark" aria-hidden="true">&ldquo;</span>
+      <p>SankerIP specializes in protecting today&rsquo;s most complex inventions. We&rsquo;re legal experts with STEM Ph.Ds and industry experience, ready to protect your ideas.</p>
       <span class="by">SankerIP</span>
     </div>
   </div></section>
@@ -386,10 +422,10 @@
         <h4>Availability</h4>
         <div class="hours"><div><span>Consultations</span><b>By appointment</b></div></div>
         <h4 style="margin-top:34px;">Reach us</h4>
-        <p>4632 Queen Anne Ct<br>Union City, California 94587</p>
-        <p><a href="tel:5107145196">(510) 714-5196</a></p>
-        <p><a href="mailto:contact@sankerip.com">contact@sankerip.com</a></p>
-        <p><a href="https://www.linkedin.com/in/david-sanker-9b63a" target="_blank" rel="noopener">David Sanker on LinkedIn</a></p>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 0 0-14 0c0 5.5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>4632 Queen Anne Ct, Union City, California 94587</span></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg></span><a href="tel:5107145196">(510) 714-5196</a></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><a href="mailto:contact@sankerip.com">contact@sankerip.com</a></div>
+        <div class="ci-line"><span class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-3.5a2 2 0 0 1 4 0V17"/></svg></span><a href="https://www.linkedin.com/in/david-sanker-9b63a" target="_blank" rel="noopener">David Sanker on LinkedIn</a></div>
       </div>
       <form class="cform" action="mailto:contact@sankerip.com" method="post" enctype="text/plain">
         <label>Name</label><input type="text" name="name" autocomplete="name">
