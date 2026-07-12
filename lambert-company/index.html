@@ -173,6 +173,13 @@
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.2,.6,.2,1),transform .75s cubic-bezier(.2,.6,.2,1);}
   .reveal.in{opacity:1;transform:none;}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  .areas-panel{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:18px 46px;box-shadow:0 30px 70px rgba(20,28,38,.06);}
+  .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px;}
+  .area-item{display:flex;align-items:center;gap:13px;padding:22px 4px;border-bottom:1px solid var(--line);font-weight:500;color:var(--ink);font-size:1.05rem;}
+  .area-item .d{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;}
+  .area-item:nth-last-child(-n+3){border-bottom:0;}
+  .bigstatement{font-family:var(--serif);font-style:italic;font-size:1.95rem;line-height:1.4;color:var(--ink);}
+  @media(max-width:820px){.areas-grid{grid-template-columns:1fr;}.area-item:nth-last-child(-n+3){border-bottom:1px solid var(--line);}.area-item:last-child{border-bottom:0;}.bigstatement{font-size:1.5rem;}}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -281,7 +288,6 @@
   </div></section>
 
   <section class="sec reveal" style="padding-top:0;" id="services"><div class="wrap split">
-    <div class="split-photo"></div>
     <div>
       <span class="eyebrow">About Bill Lambert</span>
       <h2>Nearly 50 years, spent <em>where it holds or fails</em>.</h2>
@@ -294,19 +300,26 @@
         <li>Alignment without ideology, accountability without theatre</li>
       </ul>
     </div>
+    <div class="split-photo"></div>
   </div></section>
 
   <section class="sec reveal" style="padding-top:0;"><div class="wrap">
     <span class="eyebrow">Where we look</span>
     <h2 style="margin-bottom:40px;">Areas where we identify and reinforce <em>framework weaknesses</em>.</h2>
-    <ul class="flist two">
-      <li>Management</li><li>Engineering</li>
-      <li>Sales</li><li>Estimating</li>
-      <li>Marketing</li><li>Project management</li>
-      <li>Manufacturing</li><li>Logistics</li>
-      <li>Customer relations</li><li>Field service</li>
-      <li>Security &amp; reputation management</li><li>Financial &amp; credit management</li>
-    </ul>
+    <div class="areas-panel"><div class="areas-grid">
+      <div class="area-item"><span class="d"></span>Management</div>
+      <div class="area-item"><span class="d"></span>Sales</div>
+      <div class="area-item"><span class="d"></span>Marketing</div>
+      <div class="area-item"><span class="d"></span>Manufacturing</div>
+      <div class="area-item"><span class="d"></span>Customer relations</div>
+      <div class="area-item"><span class="d"></span>Security &amp; reputation management</div>
+      <div class="area-item"><span class="d"></span>Engineering</div>
+      <div class="area-item"><span class="d"></span>Estimating</div>
+      <div class="area-item"><span class="d"></span>Project management</div>
+      <div class="area-item"><span class="d"></span>Logistics</div>
+      <div class="area-item"><span class="d"></span>Field service</div>
+      <div class="area-item"><span class="d"></span>Financial &amp; credit management</div>
+    </div></div>
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
@@ -317,6 +330,7 @@
   </div></section>
 
   <section class="sec reveal" style="padding-top:0;" id="who"><div class="wrap split">
+    <div class="split-photo" style="background-image:url('../assets/img/lam-4.jpg');"></div>
     <div>
       <span class="eyebrow">Who we work with</span>
       <h2>We identify and reinforce the <em>framework failures</em>.</h2>
@@ -328,20 +342,23 @@
         <li><b>Manufacturers</b> looking for better systems and processes to build, identify their market and sell their products</li>
       </ul>
     </div>
-    <div class="split-photo" style="background-image:url('../assets/img/lam-4.jpg');"></div>
   </div></section>
 
-  <section class="sec reveal" style="padding-top:0;"><div class="wrap">
-    <span class="eyebrow">Outcome</span>
-    <h2>What you&rsquo;re left with.</h2>
-    <ul class="flist" style="margin-top:34px;">
-      <li><b>Stronger</b> leadership behavior</li>
-      <li><b>Clearer</b> accountability</li>
-      <li><b>Better</b> execution under pressure</li>
-      <li><b>Healthier</b> communication</li>
-      <li><b>Durable</b> culture that supports growth</li>
-    </ul>
-    <p style="font-family:var(--serif);font-style:italic;font-size:1.45rem;color:var(--ink);max-width:740px;margin-top:32px;line-height:1.4;">We don&rsquo;t just help organizations look better. We help them build a stronger framework to help them hold together.</p>
+  <section class="sec reveal" style="padding-top:0;"><div class="wrap split">
+    <div>
+      <span class="eyebrow">Outcome</span>
+      <h2>What you&rsquo;re left with.</h2>
+      <ul class="flist" style="margin-top:30px;">
+        <li><b>Stronger</b> leadership behavior</li>
+        <li><b>Clearer</b> accountability</li>
+        <li><b>Better</b> execution under pressure</li>
+        <li><b>Healthier</b> communication</li>
+        <li><b>Durable</b> culture that supports growth</li>
+      </ul>
+    </div>
+    <div>
+      <p class="bigstatement">We don&rsquo;t just help organizations look better. We help them build a stronger framework to help them hold together.</p>
+    </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;" id="contact"><div class="wrap">
