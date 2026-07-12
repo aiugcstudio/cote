@@ -261,7 +261,7 @@
         <li><b>10 to 15 min</b><span>Typical high-irradiance full-body session</span></li>
       </ul>
     </div>
-    <div class="split-photo"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
+    <div class="split-photo sp-skin"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
   </div></section>
 
   <section class="sec" style="padding-top:0;" id="benefits"><div class="wrap">
@@ -288,7 +288,7 @@
   </div></section>
 
   <section class="sec" style="padding-top:0;" id="who"><div class="wrap split">
-    <div class="split-photo"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
+    <div class="split-photo sp-medspa"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
     <div>
       <span class="eyebrow">Who it's for</span>
       <h2>Built for the practices <em>that run all day</em>.</h2>
@@ -325,7 +325,12 @@
     </div>
   </div></section>
 
-  <section class="sec" style="padding-top:0;" id="reviews"><div class="wrap">
+  <section class="lightband"><div class="wrap lightband-in">
+    <span class="eyebrow">Living the light</span>
+    <p>Real science. Real results. <em>For everyone.</em></p>
+  </div></section>
+
+  <section class="sec" id="reviews"><div class="wrap">
     <span class="eyebrow">In their words</span>
     <h2>What owners say <em>after the install</em>.</h2>
     <div class="pillars stagger">
@@ -443,5 +448,43 @@
 .nav-call,.hero-cta a,.btn,.cta a,.cta-band a,button[type=submit]{transition:transform .3s cubic-bezier(.2,.6,.2,1),box-shadow .3s cubic-bezier(.2,.6,.2,1);}
 .nav-call:hover,.hero-cta a:hover,.btn:hover,.cta a:hover,.cta-band a:hover,button[type=submit]:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(12,17,28,.45);}
 @media(prefers-reduced-motion:reduce){.svcard,.proj,.card,.revcard,.reviewcard,.logotile,.svcard img,.proj img,.nav-call,.hero-cta a,.btn,.cta a{transition:none!important;}.svcard:hover,.proj:hover,.card:hover{transform:none!important;}.svcard:hover img,.proj:hover img{transform:none!important;}}
+</style>
+<style>/*rlw-enhance*/
+/* real, on-brand-tinted section images */
+.split-photo.sp-skin{background:linear-gradient(200deg,rgba(214,48,59,.24),rgba(22,11,14,.72)),url('../assets/img/rlw-skin.jpg') center/cover;}
+.split-photo.sp-medspa{background:linear-gradient(200deg,rgba(214,48,59,.26),rgba(22,11,14,.74)),url('../assets/img/rlw-medspa.jpg') center/cover;}
+.split-photo{transition:transform .5s cubic-bezier(.2,.6,.2,1),box-shadow .5s cubic-bezier(.2,.6,.2,1);}
+.split-photo:hover{transform:translateY(-5px);box-shadow:0 44px 90px rgba(22,11,14,.3);}
+
+/* cinematic parallax band */
+.lightband{position:relative;background:linear-gradient(180deg,rgba(22,11,14,.64),rgba(22,11,14,.82)),url('../assets/img/rlw-recovery.jpg') center/cover;background-attachment:fixed;color:#fff;padding:140px 0;text-align:center;}
+.lightband .eyebrow{color:var(--sand);}
+.lightband p{font-family:var(--serif);font-style:italic;font-size:2.7rem;line-height:1.3;max-width:840px;margin:14px auto 0;}
+.lightband p em{color:var(--accent);font-style:italic;}
+
+/* staggered card entrances */
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1);}
+.sec.in .stagger>*{opacity:1;transform:none;}
+.sec.in .stagger>*:nth-child(2){transition-delay:.08s;}
+.sec.in .stagger>*:nth-child(3){transition-delay:.16s;}
+.sec.in .stagger>*:nth-child(4){transition-delay:.24s;}
+.sec.in .stagger>*:nth-child(5){transition-delay:.32s;}
+.sec.in .stagger>*:nth-child(6){transition-delay:.40s;}
+
+/* pillar icon lift + bed accent on hover */
+.pillar .ic{transition:transform .35s cubic-bezier(.2,.6,.2,1),background .3s;}
+.pillar:hover .ic{transform:translateY(-3px) scale(1.06);}
+.bed{position:relative;overflow:hidden;}
+.bed::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--accent),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.6,.2,1);}
+.bed:hover::before{transform:scaleX(1);}
+
+@media(max-width:900px){
+  .lightband{background-attachment:scroll;padding:96px 0;}
+  .lightband p{font-size:1.8rem;}
+}
+@media(prefers-reduced-motion:reduce){
+  .stagger>*{opacity:1!important;transform:none!important;}
+  .lightband{background-attachment:scroll;}
+}
 </style>
 </body></html>
