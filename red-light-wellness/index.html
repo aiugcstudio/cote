@@ -136,7 +136,29 @@
   .foot-col a:hover{color:#fff;}
   .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.84rem;flex-wrap:wrap;gap:10px;}
 
+  /* bed cards */
+  .beds{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .bed{border:1px solid var(--line);border-radius:20px;padding:34px 28px;background:var(--surface);transition:.25s;display:flex;flex-direction:column;}
+  .bed:hover{transform:translateY(-5px);box-shadow:0 26px 54px rgba(22,11,14,.09);border-color:var(--accent);}
+  .bed .tier{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+  .bed h3{font-size:1.32rem;margin-bottom:10px;}
+  .bed p{color:var(--soft);font-size:.98rem;line-height:1.5;}
+
+  /* science stats */
+  .sci-stats{list-style:none;margin-top:28px;display:grid;gap:18px;}
+  .sci-stats li{display:flex;gap:18px;align-items:baseline;border-top:1px solid var(--line);padding-top:16px;}
+  .sci-stats b{font-family:var(--head);font-size:1.5rem;font-weight:650;letter-spacing:-0.03em;color:var(--accent);white-space:nowrap;min-width:150px;}
+  .sci-stats span{color:var(--soft);font-size:1.02rem;}
+
+  /* faq */
+  .faq{display:grid;gap:16px;max-width:860px;}
+  .faq-item{border:1px solid var(--line);border-radius:18px;padding:30px 34px;background:var(--surface);}
+  .faq-item h3{font-size:1.22rem;margin-bottom:10px;}
+  .faq-item p{color:var(--soft);font-size:1.04rem;line-height:1.55;}
+
   @media(max-width:900px){
+    .beds{grid-template-columns:1fr;}
+    .sci-stats b{min-width:110px;font-size:1.2rem;}
     h1{font-size:3.1rem;}.hero-in{padding-top:140px;}
     .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
     .pillars{grid-template-columns:1fr;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:340px;}
@@ -149,7 +171,7 @@
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand" href="#"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell, Living the Light"></a>
-    <nav class="nav-links"><a href="#about">About</a><a href="#experience">The Experience</a><a href="#contact">Contact</a></nav>
+    <nav class="nav-links"><a href="#about">About</a><a href="#beds">The Beds</a><a href="#science">The Science</a><a href="#benefits">Benefits</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
     <a class="nav-call" href="mailto:jonathan@getredwell.com">Contact Us</a>
   </div></header>
 
@@ -165,10 +187,10 @@
   </div></section>
 
   <div class="trust"><div class="wrap trust-in">
-    <div class="trust-item"><b>NASA-backed</b><span>Red Light Therapy</span></div>
-    <div class="trust-item"><b>Real science</b><span>Real results</span></div>
-    <div class="trust-item"><b>For everyone</b><span>Finally made accessible</span></div>
-    <div class="trust-item"><b>Fastest-growing</b><span>Wellness technology</span></div>
+    <div class="trust-item"><b>FDA Class II</b><span>Registered medical device</span></div>
+    <div class="trust-item"><b>40 years</b><span>Lighting &amp; wavelength expertise</span></div>
+    <div class="trust-item"><b>Made in the U.S.A.</b><span>St. Louis, Missouri</span></div>
+    <div class="trust-item"><b>10 to 15 min</b><span>Full-body sessions</span></div>
   </div></div>
 
   <section class="manifesto sec"><div class="wrap">
@@ -199,17 +221,163 @@
     </div>
   </div></section>
 
+  <section class="sec" style="padding-top:0;" id="beds"><div class="wrap">
+    <span class="eyebrow">The Wellness Collection</span>
+    <h2>Four full-body beds, <em>one standard of build</em>.</h2>
+    <p class="sec-lead">A commercial-grade lineup of FDA Class II red light therapy beds, engineered for high-volume professional use and available at every tier.</p>
+    <div class="beds stagger">
+      <div class="bed">
+        <span class="tier">Flagship</span>
+        <h3>Max Miracle 9600</h3>
+        <p>360&deg; LED coverage engineered for commercial treatment. The most powerful full-body system in the lineup, built for high-volume practices.</p>
+      </div>
+      <div class="bed">
+        <span class="tier">Performance</span>
+        <h3>Big Miracle 7200</h3>
+        <p>Powerful, practical, and built for performance. Intensity and efficiency for full-body sessions in 10 to 15 minutes.</p>
+      </div>
+      <div class="bed">
+        <span class="tier">Compact</span>
+        <h3>The Miracle 6200</h3>
+        <p>Compact power with full-body coverage, designed for space-constrained businesses that still want high performance.</p>
+      </div>
+      <div class="bed">
+        <span class="tier">Entry</span>
+        <h3>The Miracle 5040</h3>
+        <p>Affordable, effective, and reliable. A perfect starting point for clinics entering the red light space.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="science"><div class="wrap split">
+    <div>
+      <span class="eyebrow">The Science</span>
+      <h2>Photobiomodulation, <em>done properly</em>.</h2>
+      <p>Red light therapy is photobiomodulation, also called low-level light therapy. It uses non-UV red and near-infrared light thought to act on the mitochondria and cytochrome-c-oxidase, modulating nitric-oxide signaling, microcirculation, and collagen remodeling.</p>
+      <p>Professional systems pair red and near-infrared ranges to target both superficial and deeper tissue. Results follow a biphasic sweet spot: too little underperforms, too much can diminish the gains.</p>
+      <ul class="sci-stats">
+        <li><b>630 to 660 nm</b><span>Red wavelengths for superficial tissue</span></li>
+        <li><b>810 to 850 nm</b><span>Near-infrared for deeper penetration</span></li>
+        <li><b>10 to 15 min</b><span>Typical high-irradiance full-body session</span></li>
+      </ul>
+    </div>
+    <div class="split-photo"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="benefits"><div class="wrap">
+    <span class="eyebrow">Why practitioners use it</span>
+    <h2>Supporting the body, <em>non-invasively</em>.</h2>
+    <p class="sec-lead">Red light therapy is non-invasive, drug-free, and easy to use. Individual results may vary; consult a healthcare professional before use.</p>
+    <div class="pillars stagger">
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 5.5 5 7.5 5 9 6.5 12 9c3-2.5 4.5-4 6.5-4C22 5 23.5 9 21.5 12.5 19 16.65 12 21 12 21z"/></svg></div>
+        <h3>Skin appearance</h3>
+        <p>Support for fine lines, dullness, and uneven tone, and an adjunct for acne care over consistent weekly sessions.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a6 6 0 0 0 12 0V3M6 21v-6a6 6 0 0 1 12 0v6"/></svg></div>
+        <h3>Recovery &amp; comfort</h3>
+        <p>Used by professionals to support muscle recovery, with adjunctive use for general recovery and joint comfort.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>Circulation &amp; wellbeing</h3>
+        <p>May encourage healthy blood flow, alongside relaxation and stress-reduction support as part of a holistic wellness approach.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="who"><div class="wrap split">
+    <div class="split-photo"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
+    <div>
+      <span class="eyebrow">Who it's for</span>
+      <h2>Built for the practices <em>that run all day</em>.</h2>
+      <p>Red Light Wellness beds are commercial equipment, engineered for the businesses that put them to work session after session.</p>
+      <ul>
+        <li>Chiropractors and physician clinics</li>
+        <li>Medspas and wellness practices</li>
+        <li>Sports performance and recovery facilities</li>
+        <li>Medical practices adding red light services</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="support"><div class="wrap">
+    <span class="eyebrow">Set-up &amp; support</span>
+    <h2>More than a bed. <em>A running program</em>.</h2>
+    <p class="sec-lead">Every install comes with the pieces a practice needs to integrate red light therapy from day one.</p>
+    <div class="pillars stagger">
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Set-up &amp; training</h3>
+        <p>Hands-on set-up and staff training, plus protocols to fold red light therapy into your existing practice.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+        <h3>Client forms &amp; marketing</h3>
+        <p>Client intake forms and marketing materials so you can launch the service and fill sessions faster.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>The wellness network</h3>
+        <p>A wellness team network for referrals, collaboration, and ongoing consultation as your program grows.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="reviews"><div class="wrap">
+    <span class="eyebrow">In their words</span>
+    <h2>What owners say <em>after the install</em>.</h2>
+    <div class="pillars stagger">
+      <div class="pillar">
+        <p style="color:var(--ink);font-family:var(--serif);font-size:1.14rem;line-height:1.5;margin-bottom:20px;">&ldquo;I could feel a difference from the very first session. Since using it, I've noticed more energy, less back pain, and overall better mood.&rdquo;</p>
+        <h3 style="font-size:1.05rem;">Jessica George</h3>
+      </div>
+      <div class="pillar">
+        <p style="color:var(--ink);font-family:var(--serif);font-size:1.14rem;line-height:1.5;margin-bottom:20px;">&ldquo;It's not often that a company supports their product in the same manner as these folks. Best customer service and products.&rdquo;</p>
+        <h3 style="font-size:1.05rem;">Joel V.</h3>
+      </div>
+      <div class="pillar">
+        <p style="color:var(--ink);font-family:var(--serif);font-size:1.14rem;line-height:1.5;margin-bottom:20px;">&ldquo;If you're considering investing in a red light therapy bed, reach out to Red Light Wellness. Their product is superior, and made in America.&rdquo;</p>
+        <h3 style="font-size:1.05rem;">Samantha Naes</h3>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
+    <span class="eyebrow">Questions</span>
+    <h2>The things buyers <em>always ask</em>.</h2>
+    <div class="faq stagger" style="margin-top:48px;">
+      <div class="faq-item">
+        <h3>How long are typical sessions?</h3>
+        <p>Most clients enjoy full benefits in just 10 to 15 minutes, thanks to our high-irradiance LED beds.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is red light therapy safe?</h3>
+        <p>Yes. It's non-invasive, drug-free, and backed by decades of research. It is non-UV and generally well-tolerated when used as directed. Protect the eyes as instructed, and use caution with photosensitizing medications, light-sensitive conditions, open wounds, or pregnancy.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What makes Red Light Wellness different?</h3>
+        <p>Faster session times, full-body 360&deg; coverage, and commercial-grade quality at competitive pricing, manufactured in the U.S.A.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I choose the right bed?</h3>
+        <p>Start with the free Comparison Guide, or book a consultation with the team to match a bed to your space, volume, and budget.</p>
+      </div>
+    </div>
+  </div></section>
+
   <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
     <div class="split-photo"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
     <div>
-      <span class="eyebrow">About Redwell</span>
-      <h2>Wellness is broken. <em>We're here to fix it.</em></h2>
-      <p>Redwell is The Red Light Wellness Company, a premium retail space built around NASA-backed Red Light Therapy, one of the fastest-growing wellness technologies in the world.</p>
-      <p>The idea is simple. Take real science, make it accessible, and give everyone a place to experience it. Coming soon to a street near you.</p>
+      <span class="eyebrow">About the company</span>
+      <h2>Forty years of light. <em>Engineered to last.</em></h2>
+      <p>The Red Light Wellness Company was founded by Ron Poe on forty years of expertise in the lighting and wavelength industry, from repairing and enhancing traditional beds to engineering professional-grade photobiomodulation systems. His philosophy is simple: do it right, or don't do it at all.</p>
+      <p>Every bed is manufactured in-house in St. Louis, Missouri, using powder-coated steel frames and plug-in LED components built for all-day, every-day commercial use. The mission is to advance human health through the science of light.</p>
       <ul>
-        <li>Built around NASA-backed Red Light Therapy</li>
-        <li>A premium retail space, not just a product</li>
-        <li>Real science. Real results. For everyone.</li>
+        <li>US-based manufacturer of full-body LED red light therapy beds</li>
+        <li>FDA Class II registered medical device manufacturer</li>
+        <li>Commercial-grade, service-friendly, built for long-term durability</li>
       </ul>
     </div>
   </div></section>
@@ -236,8 +404,10 @@
         <h4>Redwell</h4>
         <p>The Red Light Wellness Company, Inc.</p>
         <p>Coming soon to a street near you.</p>
+        <p>Manufactured in St. Louis, Missouri.</p>
         <h4 style="margin-top:34px;">Reach us</h4>
         <p><a href="mailto:jonathan@getredwell.com">jonathan@getredwell.com</a></p>
+        <p><a href="tel:+13147727000">+1 (314) 772-7000</a></p>
         <img class="logo-foot" src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell, Living the Light">
       </div>
       <form class="cform" action="mailto:jonathan@getredwell.com" method="post" enctype="text/plain">
@@ -252,9 +422,9 @@
   <footer><div class="wrap">
     <div class="foot-top">
       <div><a class="brand"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></a>
-        <p>A premium retail space built around NASA-backed Red Light Therapy. Real science. Real results. For everyone.</p></div>
-      <div class="foot-col"><h4>Redwell</h4><a href="#about">About</a><a href="#experience">The Experience</a><a href="#contact">Contact</a></div>
-      <div class="foot-col"><h4>Contact</h4><a href="mailto:jonathan@getredwell.com">jonathan@getredwell.com</a><span>Living the Light</span></div>
+        <p>US-based manufacturer of commercial full-body LED red light therapy beds. FDA Class II. Made in St. Louis, Missouri.</p></div>
+      <div class="foot-col"><h4>Explore</h4><a href="#beds">The Beds</a><a href="#science">The Science</a><a href="#benefits">Benefits</a><a href="#faq">FAQ</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="mailto:jonathan@getredwell.com">jonathan@getredwell.com</a><a href="tel:+13147727000">+1 (314) 772-7000</a><span>St. Louis, Missouri</span></div>
     </div>
     <div class="foot-bot"><span>&copy; 2026 The Red Light Wellness Company, Inc.</span><span>Redwell, Living the Light</span></div>
   </div></footer>

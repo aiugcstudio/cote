@@ -144,6 +144,22 @@
   .nav .brand img{height:44px;width:auto;display:block;filter:brightness(0) invert(1);}
   .foot-top .brand img{height:40px;width:auto;filter:brightness(0) invert(1);}
 
+  /* chips */
+  .chips{display:flex;flex-wrap:wrap;gap:12px;}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:11px 20px;font-size:.95rem;font-weight:500;color:var(--ink);transition:.2s;}
+  .chip:hover{border-color:var(--accent);color:var(--accent);}
+  .creds{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+  .cred{display:flex;align-items:center;gap:10px;background:var(--accent-soft);color:var(--accent);border-radius:12px;padding:12px 18px;font-weight:600;font-size:.96rem;}
+
+  /* faq */
+  .faq{border-top:1px solid var(--line);margin-top:8px;}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{cursor:pointer;list-style:none;padding:26px 0;font-family:var(--head);font-weight:600;font-size:1.28rem;letter-spacing:-0.02em;display:flex;justify-content:space-between;gap:20px;align-items:center;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";color:var(--accent);font-size:1.7rem;font-weight:400;line-height:1;}
+  .faq details[open] summary::after{content:"\2013";}
+  .faq p{color:var(--soft);font-size:1.06rem;padding:0 0 28px;max-width:840px;}
+
   @media(max-width:900px){
     h1{font-size:3.1rem;}.hero-in{padding-top:130px;}
     .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
@@ -158,7 +174,7 @@
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand" href="#"><img src="../assets/img/mip-logo.png" alt="Miller IP Law"></a>
-    <nav class="nav-links"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <nav class="nav-links"><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
     <a class="nav-call" href="tel:8018298446">Call 801-829-8446</a>
   </div></header>
 
@@ -190,6 +206,7 @@
         <h3>Patents</h3>
         <p class="blurb">Protect the inventions behind your product, from provisional filings to full non-provisional and design patents.</p>
         <ul>
+          <li><span>Patent Search</span><b>$999+</b></li>
           <li><span>Provisional Patent Application</span><b>$2,500+</b></li>
           <li><span>Non-Provisional Patent Application</span><b>$6,950+</b></li>
           <li><span>Design Patent Application</span><b>$2,250+</b></li>
@@ -205,6 +222,7 @@
         <ul>
           <li><span>Trademark Search</span><b>$500+</b></li>
           <li><span>Trademark Application</span><b>$950+</b></li>
+          <li><span>Trade Dress Application</span><b>$950+</b></li>
           <li><span>Office Action Response</span><b>$450+</b></li>
           <li><span>Foreign Trademark Filing</span><b>$250+</b></li>
           <li><span>Declaration of Use</span><b>$400+</b></li>
@@ -226,6 +244,38 @@
     <p class="price-note" id="pricing">Flat Fees | No Hidden Costs. Our flat fees are truly all-inclusive for the specific service you choose.</p>
   </div></section>
 
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">Every flat fee includes</span>
+    <h2>One price. <em>Everything bundled in.</em></h2>
+    <p class="sec-lead">Our flat fees are all-inclusive for the service you choose, so the number you approve is the number you pay.</p>
+    <div class="split" style="align-items:start;">
+      <ul style="list-style:none;display:grid;gap:14px;">
+        <li style="display:flex;gap:12px;font-weight:500;"><span style="color:var(--accent);font-weight:700;">&#10003;</span> Attorney time, working directly with Devin</li>
+        <li style="display:flex;gap:12px;font-weight:500;"><span style="color:var(--accent);font-weight:700;">&#10003;</span> Draftsman and illustration fees</li>
+      </ul>
+      <ul style="list-style:none;display:grid;gap:14px;">
+        <li style="display:flex;gap:12px;font-weight:500;"><span style="color:var(--accent);font-weight:700;">&#10003;</span> Government filing fees</li>
+        <li style="display:flex;gap:12px;font-weight:500;"><span style="color:var(--accent);font-weight:700;">&#10003;</span> Paralegal work and support</li>
+      </ul>
+    </div>
+    <p class="price-note" style="text-align:left;margin-top:22px;">You get a quote and approve it before anything starts. Free consultations and payment programs are available.</p>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">Who we protect</span>
+    <h2 style="margin-bottom:36px;">Founders across <em>every kind of idea.</em></h2>
+    <div class="chips">
+      <span class="chip">SaaS</span><span class="chip">Software &amp; Mobile Apps</span><span class="chip">Medical Devices</span>
+      <span class="chip">AI</span><span class="chip">Fintech</span><span class="chip">Blockchain &amp; Crypto</span>
+      <span class="chip">Wearables</span><span class="chip">Fashion</span><span class="chip">Food &amp; Beverage</span>
+      <span class="chip">Health &amp; Beauty</span><span class="chip">Consumer Gadgets</span><span class="chip">Drones &amp; UAVs</span>
+      <span class="chip">Sports &amp; Fitness</span><span class="chip">Home Decor</span><span class="chip">Outdoor &amp; Garden</span>
+      <span class="chip">VR / AR</span><span class="chip">Energy &amp; Green Tech</span><span class="chip">AgTech</span>
+      <span class="chip">Automotive</span><span class="chip">Manufacturing</span><span class="chip">Board Games</span>
+      <span class="chip">Pets</span><span class="chip">Jewelry</span><span class="chip">Baby &amp; Kids</span>
+    </div>
+  </div></section>
+
   <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
     <div class="split-photo"></div>
     <div>
@@ -238,6 +288,27 @@
         <li>You know exactly what it'll cost before anything starts</li>
         <li>No BS, no surprises, just clear info and choices at every turn</li>
       </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">Meet your attorney</span>
+    <h2>Devin Miller, <em>founder &amp; attorney.</em></h2>
+    <p class="sec-lead">Devin started Miller IP after years at a large firm serving Fortune 100 clients, where he saw that startups and small businesses had almost nowhere affordable to turn for real IP help.</p>
+    <div class="split" style="align-items:start;">
+      <div>
+        <p style="color:var(--soft);font-size:1.1rem;margin-bottom:20px;">He is also a founder himself, having started and grown several 7 and 8 figure startups. That entrepreneurial experience runs through everything the firm does, from how work is scoped to how it is priced.</p>
+        <p style="color:var(--soft);font-size:1.1rem;">When you schedule a consultation, you talk directly with Devin, not an assistant or a law student.</p>
+      </div>
+      <div>
+        <div class="creds">
+          <span class="cred">BS, Electrical Engineering &middot; BYU</span>
+          <span class="cred">BA, Mandarin Chinese &middot; BYU</span>
+          <span class="cred">JD &middot; Case Western Reserve University</span>
+          <span class="cred">MBA &middot; Case Western Reserve University</span>
+          <span class="cred">13+ years legal &amp; business experience</span>
+        </div>
+      </div>
     </div>
   </div></section>
 
@@ -273,9 +344,33 @@
   </div></section>
 
   <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">Fast, flat, five-starred</span>
+    <h2 style="margin-bottom:16px;">Answers when you <em>need them.</em></h2>
+    <p class="sec-lead">Questions get answered fast, filings move quickly, and the work speaks for itself with 100+ five-star reviews.</p>
+    <div class="snap-grid">
+      <div class="snap"><span>Reply speed</span><h3>Most questions</h3><div class="p">Under 30 min</div><p class="d">90% of client questions get a reply within half an hour, and always within 24 hours.</p></div>
+      <div class="snap"><span>Filing speed</span><h3>Trademarks &amp; patents</h3><div class="p">1.5&ndash;4 wks</div><p class="d">Trademarks file in about 1.5 to 2 weeks, patents in about 3 to 4 weeks, before government review.</p></div>
+      <div class="snap"><span>Success rate</span><h3>Patents &amp; trademarks</h3><div class="p">95% / 85%</div><p class="d">A 95% patent allowance rate and 85% on trademarks, both well above average.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
     <div class="quote">
       <p>&ldquo;Most firms spend 85% of their time on their biggest clients, 11% on lunch, and only 4% helping the hundreds of startups and small businesses that actually need their help.&rdquo;</p>
       <span class="by">Miller IP Law</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
+    <span class="eyebrow">Common questions</span>
+    <h2 style="margin-bottom:40px;">Good to <em>know.</em></h2>
+    <div class="faq">
+      <details open><summary>Will I actually work with an attorney?</summary><p>Yes. When you schedule a consultation you chat directly with Devin Miller, an experienced attorney, not an assistant or a law student.</p></details>
+      <details><summary>What does the flat fee cover?</summary><p>Everything for the service you choose is bundled in: attorney time, draftsman and illustration fees, government filing fees, and paralegal work. You approve a quote before anything starts, so there are no hidden costs.</p></details>
+      <details><summary>How fast will I hear back?</summary><p>Most questions get a reply within 30 minutes, 90% of the time, and always within 24 hours.</p></details>
+      <details><summary>How long does filing take?</summary><p>Trademarks typically file in about 1.5 to 2 weeks and patents in about 3 to 4 weeks. Government review timelines run separately after filing.</p></details>
+      <details><summary>Do you only work with big companies?</summary><p>No. The firm was built for startups and small businesses, the clients other firms skip over. We serve all 50 states and world-wide.</p></details>
+      <details><summary>I'm on a tight budget. Any lower-cost options?</summary><p>Yes. Alongside free consultations and payment programs, our Snap Legal DIY tools let you handle simpler filings yourself, from a $67 NDA to a $99 copyright and a $400 trademark.</p></details>
     </div>
   </div></section>
 

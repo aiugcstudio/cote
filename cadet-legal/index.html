@@ -62,6 +62,18 @@
   .pcard h3{font-size:1.42rem;margin-bottom:14px;letter-spacing:-0.02em;}
   .pcard p{color:var(--soft);font-size:1.02rem;line-height:1.55;}
 
+  /* sectors */
+  .sectors{margin-top:40px;padding-top:34px;border-top:1px solid var(--line);}
+  .sectors .sec-label{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.02rem;display:block;margin-bottom:18px;}
+
+  /* speaking */
+  .speaking{margin-top:34px;}
+  .speaking h4{font-family:var(--head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;}
+  .speaking ul{list-style:none;display:grid;gap:0;}
+  .speaking li{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-size:1rem;}
+  .speaking li:first-child{border-top:1px solid var(--line);}
+  .speaking li .yr{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:.92rem;white-space:nowrap;}
+
   /* split about */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
   .split-photo{height:560px;border-radius:24px;background:url('../assets/img/cdl-5.webp') center 18%/cover;box-shadow:0 30px 70px rgba(16,22,32,.18);}
@@ -69,6 +81,31 @@
   .split h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
   .split .role{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.05rem;margin-bottom:18px;}
   .split p{color:var(--soft);font-size:1.08rem;margin-bottom:18px;}
+
+  /* credentials */
+  .creds{margin-top:30px;display:grid;gap:0;border-top:1px solid var(--line);}
+  .cred{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:15px 0;border-bottom:1px solid var(--line);}
+  .cred .cl{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:.98rem;white-space:nowrap;}
+  .cred b{font-family:var(--head);font-weight:600;font-size:1.02rem;text-align:right;letter-spacing:-0.02em;}
+
+  /* capabilities list */
+  .caps{display:grid;grid-template-columns:repeat(2,1fr);gap:0 60px;margin-top:8px;}
+  .cap{display:flex;gap:16px;align-items:flex-start;padding:22px 0;border-top:1px solid var(--line);}
+  .cap .cno{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.1rem;line-height:1.3;}
+  .cap h3{font-size:1.16rem;margin-bottom:6px;letter-spacing:-0.02em;}
+  .cap p{color:var(--soft);font-size:1rem;line-height:1.5;}
+
+  /* faq */
+  .faq{max-width:820px;margin:0 auto;border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-family:var(--head);font-weight:600;font-size:1.22rem;letter-spacing:-0.02em;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .ic{flex:none;width:26px;height:26px;position:relative;transition:transform .3s;}
+  .faq summary .ic::before,.faq summary .ic::after{content:"";position:absolute;background:var(--accent);top:50%;left:50%;transform:translate(-50%,-50%);}
+  .faq summary .ic::before{width:14px;height:2px;}
+  .faq summary .ic::after{width:2px;height:14px;transition:transform .3s;}
+  .faq details[open] summary .ic::after{transform:translate(-50%,-50%) scaleY(0);}
+  .faq details p{color:var(--soft);font-size:1.06rem;line-height:1.6;padding:0 0 26px;max-width:680px;}
 
   /* who we serve */
   .serve{text-align:center;max-width:920px;margin:0 auto;}
@@ -133,7 +170,7 @@
   @media(max-width:900px){
     h1{font-size:3rem;}.hero-in{padding-top:130px;}
     .adv-in{grid-template-columns:1fr;}.adv-item{border-left:0;border-top:1px solid rgba(255,255,255,.09);}.adv-item:first-child{border-top:0;}
-    .prac{grid-template-columns:1fr;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:360px;}
+    .prac{grid-template-columns:1fr;}.caps{grid-template-columns:1fr;gap:0;}.cred{flex-direction:column;gap:4px;}.cred b{text-align:left;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:360px;}
     .ins-grid{grid-template-columns:1fr;}.cta-band{flex-direction:column;align-items:flex-start;}
     .foot-top{grid-template-columns:1fr;}.quote{padding:56px 32px;}.quote p{font-size:1.7rem;}
     .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}
@@ -142,7 +179,7 @@
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand" href="#"><img src="../assets/img/cdl-6.webp" alt="Cadet Legal"></a>
-    <nav class="nav-links"><a href="#advantage">Advantage</a><a href="#practice">Practice</a><a href="#about">About</a><a href="#insights">Insights</a><a href="#contact-form">Contact</a></nav>
+    <nav class="nav-links"><a href="#advantage">Advantage</a><a href="#practice">Practice</a><a href="#about">About</a><a href="#insights">Insights</a><a href="#faq">FAQ</a><a href="#contact-form">Contact</a></nav>
     <a class="nav-call" href="https://cadetlegal.ai/" target="_blank" rel="noopener">Book a Meeting</a>
   </div></header>
 
@@ -171,16 +208,43 @@
       <div class="pcard"><span class="no">02</span><h3>EC / Venture Capital</h3><p>Bringing East Coast and Silicon Valley experience to help founders with structure, governance, and growth financing.</p></div>
       <div class="pcard"><span class="no">03</span><h3>General Counsel</h3><p>Guiding small business owners and early-stage companies in navigating complex challenges and strategic decisions.</p></div>
     </div>
+    <div class="caps">
+      <div class="cap"><span class="cno">&#43;</span><div><h3>Mergers &amp; Acquisitions</h3><p>Structuring and executing acquisitions and exits, from mid-market transactions to billion-dollar M&amp;A deals.</p></div></div>
+      <div class="cap"><span class="cno">&#43;</span><div><h3>Fund Structuring</h3><p>Standing up funds for independent sponsors and asset managers, from formation through fundraising.</p></div></div>
+      <div class="cap"><span class="cno">&#43;</span><div><h3>Corporate Governance</h3><p>Advising boards of directors and portfolio companies on governance, structure, and strategic decisions.</p></div></div>
+      <div class="cap"><span class="cno">&#43;</span><div><h3>Growth Financing</h3><p>Guiding founders and emerging companies through venture financings, with East Coast and Silicon Valley perspective.</p></div></div>
+    </div>
+    <div class="sectors">
+      <span class="sec-label">Sectors</span>
+      <div class="chips" style="justify-content:flex-start;">
+        <span class="chip">Private Equity</span><span class="chip">Asset Management</span><span class="chip">Fund Formation</span><span class="chip">Mergers &amp; Acquisitions</span><span class="chip">Venture Capital &amp; Emerging Companies</span><span class="chip">General Counsel Services</span><span class="chip">Entertainment &amp; Hospitality</span><span class="chip">Food &amp; Beverage</span>
+      </div>
+    </div>
   </div></section>
 
   <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
     <div class="split-photo"></div>
     <div>
       <span class="eyebrow">Meet the Managing Member</span>
-      <h2>Denzel Cadet, <em>Esq.</em></h2>
+      <h2>Denzel R.B. Cadet, <em>Esq.</em></h2>
       <p class="role">Founder &amp; Managing Member, Cadet Legal</p>
-      <p>Before launching Cadet Legal, Denzel was a corporate associate in the Washington D.C. office of a California-based global law firm. He previously worked as an associate and law clerk at a New York-based international firm handling finance and corporate matters.</p>
-      <p>His experience spans forming startups and managing financings through to billion-dollar private equity transactions, providing personalized guidance through finance and corporate matters, and a commitment to helping clients achieve their goals.</p>
+      <p>Denzel brings nearly a decade of experience representing private companies in complex commercial transactions across a range of industries. Before launching Cadet Legal, he developed his skills at Wall Street law firms in New York and served as a corporate associate in the Washington D.C. office of a California-based global law firm.</p>
+      <p>His work spans forming startups and managing financings through to billion-dollar M&amp;A deals and private equity transactions, advising asset managers, fund sponsors, boards of directors, and portfolio companies with personalized guidance at every stage.</p>
+      <p>The son of a Haitian immigrant father and a mother from West Philadelphia, Denzel is highly proficient in Spanish, mentors aspiring professionals, and appears regularly on industry panels discussing entrepreneurship, venture capital, innovation, and intellectual property strategy.</p>
+      <div class="creds">
+        <div class="cred"><span class="cl">Education</span><b>Princeton University, A.B. Comparative Literature</b></div>
+        <div class="cred"><span class="cl">Education</span><b>New York University School of Law, J.D.</b></div>
+        <div class="cred"><span class="cl">Bar Admissions</span><b>New York &amp; Washington, D.C.</b></div>
+      </div>
+      <div class="speaking">
+        <h4>Selected speaking &amp; panels</h4>
+        <ul>
+          <li><span>NYU Law Entrepreneurship &amp; Venture Capital Program Alumni Panel</span><span class="yr">Feb 2024</span></li>
+          <li><span>Future of Innovation: AI, Biotech, and the IP Landscape</span><span class="yr">Oct 2024</span></li>
+          <li><span>Building an IP Portfolio: Strategies for Startups and SMEs</span><span class="yr">Oct 2024</span></li>
+          <li><span>The First 100 Days: A Virtual Town Hall</span><span class="yr">Apr 2025</span></li>
+        </ul>
+      </div>
     </div>
   </div></section>
 
@@ -215,6 +279,18 @@
       <a class="ins" href="https://cadetlegal.ai/" target="_blank" rel="noopener"><div class="ph" style="background-image:url('../assets/img/cdl-9.webp')"></div><div class="bd"><span class="cat">Articles &middot; AI</span><h3>AI Bias is Real</h3></div></a>
       <a class="ins" href="https://cadetlegal.ai/" target="_blank" rel="noopener"><div class="ph" style="background-image:url('../assets/img/cdl-7.webp')"></div><div class="bd"><span class="cat">Case Study</span><h3>The Hidden Dangers of &ldquo;A Little Board Service&rdquo; for Your Resume (Part I)</h3></div></a>
       <a class="ins" href="https://cadetlegal.ai/" target="_blank" rel="noopener"><div class="ph" style="background-image:url('../assets/img/cdl-8.webp')"></div><div class="bd"><span class="cat">Case Study</span><h3>How We Saved Our Client From &ldquo;A Little Board Service&rdquo; that Became a Nightmare (Part II)</h3></div></a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
+    <span class="eyebrow">Questions</span>
+    <h2 style="margin-bottom:44px;">Answers before we <em>meet</em>.</h2>
+    <div class="faq">
+      <details open><summary>Which companies does Cadet Legal support in venture capital?<span class="ic"></span></summary><p>Solopreneurs, startups, and emerging companies, with help on formation, governance, and financing across the East Coast and Silicon Valley.</p></details>
+      <details><summary>How does Cadet Legal assist private equity firms?<span class="ic"></span></summary><p>The firm advises independent sponsors and asset managers throughout the entire investment lifecycle, from formation to fundraising to exit.</p></details>
+      <details><summary>Do you handle mergers and acquisitions?<span class="ic"></span></summary><p>Yes. Cadet Legal advises on structuring and executing transactions for both acquisitions and exits, with experience up to billion-dollar M&amp;A deals.</p></details>
+      <details><summary>What kind of general counsel support do you provide?<span class="ic"></span></summary><p>Practical, personalized guidance for small business owners and early-stage boards navigating complex challenges and strategic decisions.</p></details>
+      <details><summary>How are consultations run?<span class="ic"></span></summary><p>Consultations are held by appointment as a 30-minute Google Meet with Denzel Cadet, Esq.</p></details>
     </div>
   </div></section>
 
