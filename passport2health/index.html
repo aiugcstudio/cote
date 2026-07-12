@@ -141,11 +141,36 @@
   /* conditions tags */
   .cond{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;}
   .cond span{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:11px 22px;font-weight:500;font-size:1rem;color:var(--ink);}
+
+  /* team bios */
+  .tbios{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .tbio{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:36px 32px;box-shadow:0 24px 56px -30px rgba(18,59,58,.18);}
+  .tbio .th{display:flex;align-items:center;gap:16px;margin-bottom:22px;}
+  .tbio .tav{width:60px;height:60px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--navy);color:var(--accent);font-family:var(--head);font-weight:650;font-size:1.4rem;letter-spacing:-.02em;}
+  .tbio .tn{font-family:var(--head);font-weight:650;font-size:1.18rem;letter-spacing:-.02em;line-height:1.2;}
+  .tbio .tt{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;margin-top:5px;display:block;}
+  .tbio p{color:var(--soft);font-size:.97rem;line-height:1.6;margin-bottom:14px;}
+  @media(max-width:900px){.tbios{grid-template-columns:1fr;}}
+
+  /* google review cards */
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .rcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px 30px 26px;display:flex;flex-direction:column;box-shadow:0 24px 56px -32px rgba(18,59,58,.16);}
+  .rcard .rtop{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+  .rcard .rav{width:42px;height:42px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-weight:650;font-size:1.1rem;}
+  .rcard .rnm{font-weight:600;color:var(--ink);font-size:.98rem;flex:1;min-width:0;}
+  .rcard .rpin{width:22px;height:22px;flex:none;}
+  .rcard .rstars{color:#FBBC05;font-size:1.02rem;letter-spacing:1px;margin-bottom:12px;}
+  .rcard .rtx{color:var(--soft);font-size:.98rem;line-height:1.6;}
+  @media(max-width:900px){.rgrid{grid-template-columns:1fr;}}
+
+  /* affiliations */
+  .affil{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:8px;}
+  .affil span{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 26px;font-weight:600;font-size:1rem;color:var(--navy);}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand"><span class="tile"><img src="../assets/img/p2h-logo.webp" alt="Passport 2 Health"></span></a>
-    <nav class="nav-links"><a href="#services">Services</a><a href="#about">Dr. Gaston</a><a href="#conditions">Conditions</a><a href="#contact-form">Contact</a></nav>
+    <nav class="nav-links"><a href="#services">Services</a><a href="#about">Dr. Gaston</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#contact-form">Contact</a></nav>
     <a class="nav-call" href="tel:19169844128">Call (916) 984-4128</a>
   </div></header>
 
@@ -194,6 +219,29 @@
     </div>
   </div></section>
 
+  <section class="sec" style="padding-top:0;" id="team"><div class="wrap">
+    <span class="eyebrow">The team</span>
+    <h2 style="margin-bottom:12px;">The people behind <em>your recovery</em>.</h2>
+    <p class="sec-lead">Dr. Gaston works alongside a team of specialists who bring their own expertise to your care.</p>
+    <div class="tbios">
+      <div class="tbio">
+        <div class="th"><span class="tav">KC</span><div><span class="tn">Jaclyn &ldquo;Kat&rdquo; Cook</span><span class="tt">LMT</span></div></div>
+        <p>One of Dr. Gaston's first functional neurology patients. After two brain-stem strokes in utero and a misdiagnosis, Kat went from bedridden to a licensed massage therapist. &ldquo;Functional neurology gave me my life back,&rdquo; she shares.</p>
+        <p>Kat is Erchonia laser certified and blends the laser with Graston fascial release, deep tissue, and hot stone massage.</p>
+      </div>
+      <div class="tbio">
+        <div class="th"><span class="tav">CF</span><div><span class="tn">Cody Forman</span><span class="tt">CPT</span></div></div>
+        <p>A NASM-certified Personal Trainer, Corrective Exercise Specialist, and professional triathlete. Cody has worked with some of the country's best physical therapists and endurance coaches, adapting his approach to everyone's circumstances.</p>
+        <p>He holds a B.S. in Biology from the University of Nevada, Reno, and coaches fitness and well-being in a safe, fun, and engaging way.</p>
+      </div>
+      <div class="tbio">
+        <div class="th"><span class="tav">CK</span><div><span class="tn">Carol Kendrick</span><span class="tt">Patient Care Coordinator</span></div></div>
+        <p>A seasoned entrepreneur with a background in medical logistics, trained by the U.S. Army at Fort Sam Houston and later serving with the 7th Medical Division at Fort Ord. In 2020 she returned to the medical field to reconnect with her passion for helping others.</p>
+        <p>Carol is Erchonia laser certified and trained to administer Class II medical laser therapy, in-office and through at-home rental programs.</p>
+      </div>
+    </div>
+  </div></section>
+
   <section class="sec" style="padding-top:0;" id="conditions"><div class="wrap">
     <span class="eyebrow">Conditions</span>
     <h2 style="margin-bottom:28px;">Conditions we <em>treat</em>.</h2>
@@ -219,6 +267,54 @@
     <div class="quote">
       <p>&ldquo;No two brains are the same, and no two recoveries should be <em>either</em>.&rdquo;</p>
       <span class="by">Dr. Devon Gaston, DC, Functional Neurologist</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="reviews"><div class="wrap">
+    <span class="eyebrow">Testimonials</span>
+    <h2 style="margin-bottom:44px;">Real patient <em>success stories</em>.</h2>
+    <div class="rgrid">
+      <div class="rcard">
+        <div class="rtop"><span class="rav" style="background:#F4A63B;">A</span><span class="rnm">Annie Lowengart</span><svg class="rpin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8Z"/><circle cx="12" cy="10" r="3.2" fill="#fff"/></svg></div>
+        <div class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rtx">Dr. Gaston has dramatically impacted my overall health and well-being. I cannot recommend her highly enough!</p>
+      </div>
+      <div class="rcard">
+        <div class="rtop"><span class="rav" style="background:#9AA0A6;">K</span><span class="rnm">Kevin Kevin</span><svg class="rpin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8Z"/><circle cx="12" cy="10" r="3.2" fill="#fff"/></svg></div>
+        <div class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rtx">Amazing place and staff. My daughter has been suffering with pain and nausea for a few years. We've been to many doctors and none have provided relief or answers. Dr. Devon has been the most informative and given my daughter hope. Dr. Devon and the entire staff are super positive and caring. This is the only appointment my daughter looks forward to.</p>
+      </div>
+      <div class="rcard">
+        <div class="rtop"><span class="rav" style="background:#188038;">C</span><span class="rnm">Christine Escamilla</span><svg class="rpin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8Z"/><circle cx="12" cy="10" r="3.2" fill="#fff"/></svg></div>
+        <div class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rtx">Dr. Gaston has changed my life! After a car accident I was challenged with constant pain and frustration, even with alternative treatments. With her amazing understanding of the human body, she knew what I needed and provided chiropractic care, guidance, empathy, and a treatment plan that relieved the pain. Dr. Gaston truly cares about the mind, body and spirit of everyone.</p>
+      </div>
+      <div class="rcard">
+        <div class="rtop"><span class="rav" style="background:#1A73E8;">M</span><span class="rnm">Mandy</span><svg class="rpin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8Z"/><circle cx="12" cy="10" r="3.2" fill="#fff"/></svg></div>
+        <div class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rtx">I've been seeing Dr. Devon Gaston for the last 3 months and I've seen a dramatic improvement. In addition to the adjustments she has several other tools to use in the healing. Her knowledge of the brain is impressive. Dr. Arneka is awesome too. She has tools she massages with that cured my trigger finger in 2 sessions. I highly recommend Passport 2 Health!</p>
+      </div>
+      <div class="rcard">
+        <div class="rtop"><span class="rav" style="background:#EA4335;">L</span><span class="rnm">Linda G</span><svg class="rpin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8Z"/><circle cx="12" cy="10" r="3.2" fill="#fff"/></svg></div>
+        <div class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rtx">Dr. Devon Gaston and her staff at Passport 2 Health are life changing for a TBI patient. Our son received a severe TBI in an automobile accident several years ago, and he has progressed quite well with the care, love, patience, treatments, chiropractic adjustments, therapeutic massages, and guidance from Dr. Gaston and her team. We have been truly blessed!</p>
+      </div>
+      <div class="rcard">
+        <div class="rtop"><span class="rav" style="background:#188038;">J</span><span class="rnm">Jessica Will</span><svg class="rpin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8Z"/><circle cx="12" cy="10" r="3.2" fill="#fff"/></svg></div>
+        <div class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rtx">Dr. Devon and her team are the absolute BEST! The time and care they put into my health and recovery is truly unmatched. If you actually want to get to the root of your issues, this is the place to go.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap" style="text-align:center;">
+    <span class="eyebrow">Preferred provider</span>
+    <h2 style="margin:0 auto 32px;max-width:none;">Certified, credentialed, <em>trusted</em>.</h2>
+    <div class="affil">
+      <span>Vibrant America</span>
+      <span>American Chiropractic Neurology Board</span>
+      <span>Erchonia</span>
+      <span>IAFNR</span>
     </div>
   </div></section>
 
