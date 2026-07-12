@@ -1326,3 +1326,9 @@ section[id] { scroll-margin-top: 84px; }
 .hero-left { max-width: 940px; }
 .hero-sub { max-width: 860px; }
 @media (max-width: 900px) { .hero-sub { max-width: 560px; } }
+
+/* ============ Refinements v8 ============ */
+/* compare icons: vertically centered against the text */
+.compare tbody td:nth-child(2)::before,
+.compare tbody td.cmp-hero::before,
+.compare tbody td.cmp-tie::before { vertical-align: -0.28em; margin-top: 0; }
