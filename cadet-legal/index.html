@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cadet Legal &mdash; Top-Tier Legal Expertise With Agile Structure</title>
+<meta name="description" content="Cadet Legal offers expert counsel for startups, investors, and small businesses in corporate law, private equity, and venture capital. Grow with confidence.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..750;1,14..32,400..750&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312151C'/%3E%3Ctext x='16' y='23' font-family='Source Serif 4,serif' font-style='italic' font-weight='600' font-size='19' fill='%23B79355' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#F4F3EF; --ink:#12151C; --soft:#565C66; --faint:#8A929E; --line:#E4E2DA; --surface:#FFFFFF;
+    --navy:#12151C; --accent:#B79355; --accent-soft:#EFE8D8;
+    --head:"Inter",-apple-system,sans-serif; --sans:"Inter",-apple-system,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+  }
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:var(--head);font-weight:650;letter-spacing:-0.035em;line-height:1.02;}
+
+  /* nav */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:10;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:26px 0;}
+  .brand img{height:40px;width:auto;display:block;}
+  .nav-links{display:flex;gap:32px;font-size:.94rem;font-weight:500;color:rgba(255,255,255,.82);}
+  .nav-links a:hover{color:#fff;}
+  .nav-call{background:var(--accent);color:var(--navy);padding:12px 24px;border-radius:100px;font-weight:600;font-size:.92rem;}
+
+  /* hero */
+  .hero{position:relative;min-height:760px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,17,24,.96) 0%,rgba(14,17,24,.82) 46%,rgba(14,17,24,.5) 100%),url('../assets/img/cdl-1.webp') center/cover;}
+  .hero-in{position:relative;padding:150px 0 90px;max-width:780px;}
+  .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(183,147,85,.14);border:1px solid rgba(183,147,85,.4);padding:9px 18px;border-radius:100px;font-size:.86rem;font-weight:500;margin-bottom:30px;color:#E9DCC1;}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);}
+  h1{font-size:4.6rem;margin-bottom:28px;font-weight:680;letter-spacing:-0.05em;line-height:1.0;}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-0.02em;}
+  .hero p{font-size:1.3rem;font-weight:300;color:rgba(255,255,255,.84);max-width:580px;margin-bottom:40px;}
+  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn-p{background:var(--accent);color:var(--navy);padding:17px 36px;border-radius:100px;font-weight:600;font-size:1.05rem;box-shadow:0 12px 34px rgba(0,0,0,.26);}
+  .btn-g{color:#fff;padding:16px 30px;border-radius:100px;font-weight:600;font-size:1.05rem;border:1.5px solid rgba(255,255,255,.28);}
+
+  /* advantage strip */
+  .adv{background:var(--navy);border-top:1px solid rgba(255,255,255,.08);}
+  .adv-in{display:grid;grid-template-columns:repeat(3,1fr);}
+  .adv-item{padding:52px 40px;color:#fff;border-left:1px solid rgba(255,255,255,.09);}
+  .adv-item:first-child{border-left:0;}
+  .adv-item .k{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--accent);display:block;margin-bottom:10px;}
+  .adv-item b{font-family:var(--head);font-size:1.55rem;font-weight:600;display:block;letter-spacing:-0.03em;margin-bottom:10px;}
+  .adv-item span{color:rgba(255,255,255,.62);font-size:1rem;line-height:1.5;}
+
+  /* sections */
+  .sec{padding:120px 0;}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;display:inline-block;}
+  .sec h2{font-size:3.2rem;margin-bottom:16px;max-width:680px;}
+  .sec h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .sec-lead{color:var(--soft);font-size:1.18rem;max-width:560px;margin-bottom:60px;}
+
+  /* practice cards */
+  .prac{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:40px 34px;transition:.25s;}
+  .pcard:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(16,22,32,.1);border-color:var(--accent);}
+  .pcard .no{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--accent);display:block;margin-bottom:22px;}
+  .pcard h3{font-size:1.42rem;margin-bottom:14px;letter-spacing:-0.02em;}
+  .pcard p{color:var(--soft);font-size:1.02rem;line-height:1.55;}
+
+  /* split about */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .split-photo{height:560px;border-radius:24px;background:url('../assets/img/cdl-5.webp') center 18%/cover;box-shadow:0 30px 70px rgba(16,22,32,.18);}
+  .split h2{font-size:3rem;margin-bottom:22px;}
+  .split h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .split .role{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.05rem;margin-bottom:18px;}
+  .split p{color:var(--soft);font-size:1.08rem;margin-bottom:18px;}
+
+  /* who we serve */
+  .serve{text-align:center;max-width:920px;margin:0 auto;}
+  .serve h2{font-size:2.9rem;margin-bottom:16px;}
+  .serve h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .serve p{color:var(--soft);font-size:1.15rem;margin-bottom:40px;}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:12px 24px;font-weight:500;font-size:1rem;color:var(--ink);}
+
+  /* insights */
+  .ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .ins{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface);transition:.25s;}
+  .ins:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(16,22,32,.1);}
+  .ins .ph{height:210px;background-size:cover;background-position:center;background-color:var(--navy);}
+  .ins .bd{padding:26px 28px;}
+  .ins .cat{font-size:.76rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);}
+  .ins h3{font-size:1.14rem;margin:12px 0 0;letter-spacing:-0.02em;line-height:1.25;}
+
+  /* quote */
+  .quote{background:var(--navy);color:#fff;border-radius:28px;padding:84px 70px;text-align:center;}
+  .quote p{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.32;max-width:880px;margin:0 auto 30px;}
+  .quote p em{color:var(--accent);font-style:italic;}
+  .quote .by{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+
+  /* cta band */
+  .cta-band{background:var(--accent);color:var(--navy);border-radius:28px;padding:70px 60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .cta-band h2{font-size:2.8rem;max-width:600px;}
+  .cta-band .sub{font-size:1.05rem;opacity:.8;margin-top:10px;}
+  .cta-band .btn-w{background:var(--navy);color:#fff;padding:17px 36px;border-radius:100px;font-weight:600;white-space:nowrap;font-size:1.05rem;}
+
+  /* contact */
+  .contact-head{text-align:center;margin-bottom:52px;}
+  .contact-head .eyebrow{display:inline-block;margin-bottom:14px;}
+  .contact-head h2{font-size:3.1rem;max-width:none;}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px rgba(0,0,0,.10);}
+  .cinfo{background:var(--navy);color:#fff;padding:56px 48px;}
+  .cinfo h4{font-family:var(--head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;}
+  .cinfo .hours>div{display:flex;justify-content:space-between;gap:24px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .cinfo .hours>div:first-child{padding-top:0;}
+  .cinfo .hours span{color:rgba(255,255,255,.55);}
+  .cinfo .hours b{font-weight:600;color:#fff;}
+  .cinfo p{color:rgba(255,255,255,.8);margin-bottom:11px;line-height:1.5;}
+  .cinfo a{color:#fff;}
+  .cinfo a:hover{color:var(--accent);}
+  .cform{background:var(--surface);padding:52px 50px;display:flex;flex-direction:column;}
+  .cform label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 8px;}
+  .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
+  .cform input:focus,.cform textarea:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--accent-soft);}
+  .cform textarea{resize:vertical;min-height:120px;}
+  .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
+
+  /* footer */
+  footer{background:var(--navy);color:rgba(255,255,255,.6);padding:74px 0 44px;}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-top .brand img{height:38px;margin-bottom:18px;}
+  .foot-top p{max-width:300px;}
+  .foot-col h4{color:#fff;font-family:var(--head);font-size:.95rem;margin-bottom:14px;}
+  .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
+  .foot-col a:hover{color:var(--accent);}
+  .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.86rem;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:900px){
+    h1{font-size:3rem;}.hero-in{padding-top:130px;}
+    .adv-in{grid-template-columns:1fr;}.adv-item{border-left:0;border-top:1px solid rgba(255,255,255,.09);}.adv-item:first-child{border-top:0;}
+    .prac{grid-template-columns:1fr;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:360px;}
+    .ins-grid{grid-template-columns:1fr;}.cta-band{flex-direction:column;align-items:flex-start;}
+    .foot-top{grid-template-columns:1fr;}.quote{padding:56px 32px;}.quote p{font-size:1.7rem;}
+    .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}
+  }
+</style></head>
+<body>
+  <header class="nav"><div class="wrap nav-in">
+    <a class="brand" href="#"><img src="../assets/img/cdl-6.webp" alt="Cadet Legal"></a>
+    <nav class="nav-links"><a href="#advantage">Advantage</a><a href="#practice">Practice</a><a href="#about">About</a><a href="#insights">Insights</a><a href="#contact-form">Contact</a></nav>
+    <a class="nav-call" href="https://cadetlegal.ai/" target="_blank" rel="noopener">Book a Meeting</a>
+  </div></header>
+
+  <section class="hero"><div class="wrap hero-in">
+    <span class="pill"><span class="dot"></span>Corporate law &middot; Private equity &middot; Venture capital</span>
+    <h1>Top-tier legal expertise with <em>agile structure</em>.</h1>
+    <p>Cadet Legal offers expert counsel for startups, investors, and small businesses in corporate law, private equity, and venture capital. Grow with confidence.</p>
+    <div class="hero-cta">
+      <a class="btn-p" href="https://cadetlegal.ai/" target="_blank" rel="noopener">Book a Meeting</a>
+      <a class="btn-g" href="#practice">Areas of Practice</a>
+    </div>
+  </div></section>
+
+  <div class="adv" id="advantage"><div class="wrap adv-in">
+    <div class="adv-item"><span class="k">The Cadet Legal Advantage</span><b>Expertise</b><span>Top-tier legal expertise with agile structure.</span></div>
+    <div class="adv-item"><span class="k">The Cadet Legal Advantage</span><b>Attention</b><span>Exceptional focus on personalized client care.</span></div>
+    <div class="adv-item"><span class="k">The Cadet Legal Advantage</span><b>Relationships</b><span>Long-term growth through strong partnerships.</span></div>
+  </div></div>
+
+  <section class="sec" id="practice"><div class="wrap">
+    <span class="eyebrow">Areas of Practice</span>
+    <h2>Counsel across the <em>entire</em> lifecycle.</h2>
+    <p class="sec-lead">From forming a company to a billion-dollar transaction, Cadet Legal advises the people building and backing modern businesses.</p>
+    <div class="prac">
+      <div class="pcard"><span class="no">01</span><h3>Private Equity</h3><p>Advising asset managers throughout the entire investment lifecycle, from formation to fundraising to exit.</p></div>
+      <div class="pcard"><span class="no">02</span><h3>EC / Venture Capital</h3><p>Bringing East Coast and Silicon Valley experience to help founders with structure, governance, and growth financing.</p></div>
+      <div class="pcard"><span class="no">03</span><h3>General Counsel</h3><p>Guiding small business owners and early-stage companies in navigating complex challenges and strategic decisions.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
+    <div class="split-photo"></div>
+    <div>
+      <span class="eyebrow">Meet the Managing Member</span>
+      <h2>Denzel Cadet, <em>Esq.</em></h2>
+      <p class="role">Founder &amp; Managing Member, Cadet Legal</p>
+      <p>Before launching Cadet Legal, Denzel was a corporate associate in the Washington D.C. office of a California-based global law firm. He previously worked as an associate and law clerk at a New York-based international firm handling finance and corporate matters.</p>
+      <p>His experience spans forming startups and managing financings through to billion-dollar private equity transactions, providing personalized guidance through finance and corporate matters, and a commitment to helping clients achieve their goals.</p>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap serve">
+    <span class="eyebrow">Who we serve</span>
+    <h2>Built for the people <em>building</em> businesses.</h2>
+    <p>Cadet Legal partners with founders, investors, and owner-operators across every stage of growth.</p>
+    <div class="chips">
+      <span class="chip">Solopreneurs</span>
+      <span class="chip">Startup founders</span>
+      <span class="chip">Board members</span>
+      <span class="chip">Small business owners</span>
+      <span class="chip">Venture capitalists</span>
+      <span class="chip">Angel investors</span>
+      <span class="chip">Independent sponsors</span>
+      <span class="chip">Asset managers</span>
+      <span class="chip">Corporate executives</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="quote">
+      <p>Top-tier legal expertise with agile structure, exceptional focus on personalized client care, and <em>long-term growth through strong partnerships</em>.</p>
+      <span class="by">The Cadet Legal Advantage</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="insights"><div class="wrap">
+    <span class="eyebrow">More Insights</span>
+    <h2 style="margin-bottom:44px;">Notes from the <em>firm</em>.</h2>
+    <div class="ins-grid">
+      <a class="ins" href="https://cadetlegal.ai/" target="_blank" rel="noopener"><div class="ph" style="background-image:url('../assets/img/cdl-9.webp')"></div><div class="bd"><span class="cat">Articles &middot; AI</span><h3>AI Bias is Real</h3></div></a>
+      <a class="ins" href="https://cadetlegal.ai/" target="_blank" rel="noopener"><div class="ph" style="background-image:url('../assets/img/cdl-7.webp')"></div><div class="bd"><span class="cat">Case Study</span><h3>The Hidden Dangers of &ldquo;A Little Board Service&rdquo; for Your Resume (Part I)</h3></div></a>
+      <a class="ins" href="https://cadetlegal.ai/" target="_blank" rel="noopener"><div class="ph" style="background-image:url('../assets/img/cdl-8.webp')"></div><div class="bd"><span class="cat">Case Study</span><h3>How We Saved Our Client From &ldquo;A Little Board Service&rdquo; that Became a Nightmare (Part II)</h3></div></a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="cta-band">
+      <div><h2>Grow with confidence.</h2><div class="sub">Book a 30-Minute Google Meet with Denzel Cadet, Esq.</div></div>
+      <a class="btn-w" href="https://cadetlegal.ai/" target="_blank" rel="noopener">Book a Meeting</a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
+    <div class="contact-head"><span class="eyebrow">Got questions?</span>
+      <h2>Send us a message.</h2></div>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <h4>Consultations</h4>
+        <div class="hours"><div><span>Format</span><b>30-Minute Google Meet</b></div><div><span>Booking</span><b>By appointment</b></div></div>
+        <h4 style="margin-top:34px;">Connect</h4>
+        <p><a href="https://cadetlegal.ai/" target="_blank" rel="noopener">cadetlegal.ai</a></p>
+        <p><a href="https://www.linkedin.com/company/cadetlegal" target="_blank" rel="noopener">LinkedIn &mdash; @cadetlegal</a></p>
+      </div>
+      <form class="cform" action="https://cadetlegal.ai/" method="get">
+        <label>Name</label><input type="text" name="name" autocomplete="name">
+        <label>Email</label><input type="email" name="email" autocomplete="email">
+        <label>Company</label><input type="text" name="company" autocomplete="organization">
+        <label>Message</label><textarea name="message" rows="4"></textarea>
+        <button type="submit" class="btn-p">Send Message</button>
+      </form>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div class="foot-top">
+      <div><a class="brand"><img src="../assets/img/cdl-6.webp" alt="Cadet Legal"></a>
+        <p>Expert counsel for startups, investors, and small businesses in corporate law, private equity, and venture capital.</p></div>
+      <div class="foot-col"><h4>Practice</h4><a href="#practice">Private Equity</a><a href="#practice">EC / Venture Capital</a><a href="#practice">General Counsel</a></div>
+      <div class="foot-col"><h4>Firm</h4><a href="#about">About</a><a href="#insights">Insights</a><a href="https://cadetlegal.ai/" target="_blank" rel="noopener">Book a Meeting</a></div>
+    </div>
+    <div class="foot-bot"><span>&copy; 2026 Cadet Legal</span><span>Top-tier legal expertise with agile structure</span></div>
+  </div></footer>
+</body></html>

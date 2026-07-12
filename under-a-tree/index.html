@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Under a Tree Consulting, Wellness is our Business, since 2005</title>
+<meta name="description" content="Under a Tree Consulting: a seasoned wellness consultancy that has designed over 100 one-of-a-kind projects across the globe, from feasibility and concept design to programming and operations.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..750;1,14..32,400..750&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232C3A2E'/%3E%3Ccircle cx='16' cy='13' r='7' fill='%237D8B5F'/%3E%3Crect x='15' y='13' width='2' height='10' rx='1' fill='%23EAEBDF'/%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#F3F1E9; --ink:#2A312A; --soft:#65705F; --faint:#9AA08C; --line:#E4E0D3; --surface:#FBFAF5;
+    --navy:#2C3A2E; --accent:#7D8B5F; --accent-soft:#EAEBDD;
+    --head:"Inter",-apple-system,sans-serif; --sans:"Inter",-apple-system,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+  }
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:var(--head);font-weight:650;letter-spacing:-0.035em;line-height:1.02;}
+  .stars{color:#C7A24A;letter-spacing:1px;}
+
+  /* nav */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:10;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:22px 0;}
+  .brand{display:flex;align-items:center;gap:11px;}
+  .brand img{height:60px;width:auto;display:block;background:rgba(251,250,245,.92);padding:8px 14px;border-radius:14px;box-shadow:0 8px 24px rgba(20,26,18,.18);}
+  .nav-links{display:flex;gap:32px;font-size:.94rem;font-weight:500;color:rgba(255,255,255,.9);}
+  .nav-links a:hover{color:#fff;}
+  .nav-call{background:var(--surface);color:var(--navy);padding:12px 22px;border-radius:100px;font-weight:600;font-size:.92rem;}
+
+  /* hero */
+  .hero{position:relative;min-height:740px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(102deg,rgba(28,38,29,.92) 0%,rgba(28,38,29,.72) 42%,rgba(28,38,29,.30) 100%),url('../assets/img/uat-velvaere.jpg') center/cover;}
+  .hero-in{position:relative;padding:150px 0 90px;max-width:770px;}
+  .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:100px;font-size:.86rem;font-weight:500;margin-bottom:30px;}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:#B9C79A;}
+  h1{font-size:5rem;margin-bottom:28px;font-weight:680;letter-spacing:-0.05em;line-height:.99;}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#CBD6AC;letter-spacing:-0.02em;}
+  .hero p{font-size:1.28rem;font-weight:300;color:rgba(255,255,255,.88);max-width:600px;margin-bottom:40px;}
+  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn-p{background:var(--accent);color:#fff;padding:17px 36px;border-radius:100px;font-weight:500;font-size:1.05rem;box-shadow:0 12px 34px rgba(28,38,29,.3);}
+  .btn-g{color:#fff;padding:16px 30px;border-radius:100px;font-weight:600;font-size:1.05rem;border:1.5px solid rgba(255,255,255,.34);}
+
+  /* trust bar */
+  .trust{background:var(--navy);border-top:1px solid rgba(255,255,255,.09);}
+  .trust-in{display:grid;grid-template-columns:repeat(4,1fr);}
+  .trust-item{padding:34px 20px;text-align:center;color:#fff;border-left:1px solid rgba(255,255,255,.1);}
+  .trust-item:first-child{border-left:0;}
+  .trust-item b{font-family:var(--head);font-size:2.3rem;font-weight:600;display:block;letter-spacing:-0.03em;}
+  .trust-item span{color:rgba(255,255,255,.55);font-size:.86rem;letter-spacing:.02em;}
+
+  /* sections */
+  .sec{padding:120px 0;}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;display:inline-block;}
+  .sec h2{font-size:3.2rem;margin-bottom:16px;max-width:680px;}
+  .sec h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .sec-lead{color:var(--soft);font-size:1.18rem;max-width:600px;margin-bottom:60px;}
+
+  /* service icon grid */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .svc{border:1px solid var(--line);border-radius:20px;padding:40px 36px;background:var(--surface);transition:.25s;}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(28,38,29,.09);border-color:var(--accent);}
+  .svc .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:24px;}
+  .svc .ic svg{width:24px;height:24px;}
+  .svc h3{font-size:1.5rem;margin-bottom:16px;}
+  .svc ul{list-style:none;display:grid;gap:11px;}
+  .svc li{display:flex;gap:11px;align-items:flex-start;color:var(--soft);font-size:1rem;}
+  .svc li::before{content:"";width:19px;height:19px;border-radius:50%;background:var(--accent-soft);flex:none;margin-top:3px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237D8B5F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:12px;}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .split-photo{height:560px;border-radius:24px;background:url('../assets/img/uat-hero.jpg') center/cover;box-shadow:0 30px 70px rgba(28,38,29,.16);}
+  .split h2{font-size:3rem;margin-bottom:20px;}
+  .split h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .split p{color:var(--soft);font-size:1.1rem;margin-bottom:20px;}
+
+  /* projects */
+  .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .proj{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--surface);transition:.25s;}
+  .proj:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(28,38,29,.11);}
+  .proj .ph{height:300px;background-size:cover;background-position:center;}
+  .proj .bd{padding:26px 30px;}
+  .proj h3{font-size:1.28rem;margin-bottom:6px;}
+  .proj span{color:var(--accent);font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+
+  /* portfolio name list */
+  .names{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--surface);margin-top:26px;}
+  .names div{padding:20px 26px;border-top:1px solid var(--line);border-left:1px solid var(--line);font-weight:500;font-size:1rem;}
+  .names div:nth-child(-n+3){border-top:0;}
+  .names div:nth-child(3n+1){border-left:0;}
+  .names div small{display:block;color:var(--faint);font-weight:400;font-size:.84rem;margin-top:2px;}
+
+  /* testimonials */
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .tcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 30px;transition:.25s;}
+  .tcard:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(28,38,29,.09);}
+  .tcard p{color:var(--ink);font-size:1.05rem;line-height:1.55;font-family:var(--serif);font-style:italic;margin-bottom:20px;}
+  .tcard b{font-weight:600;display:block;font-size:.98rem;}
+  .tcard small{color:var(--faint);font-size:.85rem;}
+
+  /* quote */
+  .quote{background:var(--navy);color:#fff;border-radius:28px;padding:80px 70px;text-align:center;}
+  .quote p{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.32;max-width:880px;margin:0 auto 30px;}
+  .quote em{font-style:italic;color:#CBD6AC;}
+  .quote .by{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+
+  /* cta band */
+  .cta-band{background:var(--accent);color:#fff;border-radius:28px;padding:70px 60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .cta-band h2{font-size:2.9rem;max-width:620px;}
+  .cta-band .btn-w{background:#fff;color:var(--navy);padding:17px 36px;border-radius:100px;font-weight:600;white-space:nowrap;font-size:1.05rem;}
+
+  /* contact */
+  .contact-head{text-align:center;margin-bottom:52px;}
+  .contact-head .eyebrow{display:inline-block;margin-bottom:14px;}
+  .contact-head h2{font-size:3.1rem;max-width:none;}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px rgba(28,38,29,.12);}
+  .cinfo{background:var(--navy);color:#fff;padding:56px 48px;}
+  .cinfo h4{font-family:var(--head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;}
+  .cinfo p{color:rgba(255,255,255,.82);margin-bottom:11px;line-height:1.5;}
+  .cinfo a{color:#fff;}
+  .cinfo a:hover{opacity:.66;}
+  .cform{background:var(--surface);padding:52px 50px;display:flex;flex-direction:column;}
+  .cform label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 8px;}
+  .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
+  .cform input:focus,.cform textarea:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--accent-soft);}
+  .cform textarea{resize:vertical;min-height:120px;}
+  .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
+
+  /* footer */
+  footer{background:var(--navy);color:rgba(255,255,255,.6);padding:74px 0 44px;}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-top .fbrand{color:#fff;font-family:var(--head);font-weight:700;font-size:1.24rem;margin-bottom:16px;display:inline-block;letter-spacing:-.02em;}
+  .foot-top p{max-width:300px;}
+  .foot-col h4{color:#fff;font-family:var(--head);font-size:.95rem;margin-bottom:14px;}
+  .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
+  .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.86rem;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:900px){
+    h1{font-size:3.2rem;}.hero-in{padding-top:130px;}
+    .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
+    .svc-grid{grid-template-columns:1fr;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:340px;}
+    .projects{grid-template-columns:1fr;}.tgrid{grid-template-columns:1fr;}
+    .names{grid-template-columns:1fr;}.names div{border-left:0!important;border-top:1px solid var(--line)!important;}.names div:first-child{border-top:0!important;}
+    .cta-band{flex-direction:column;align-items:flex-start;}.quote{padding:56px 32px;}.quote p{font-size:1.7rem;}
+    .foot-top{grid-template-columns:1fr;}
+  }
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}}
+</style></head>
+<body>
+  <header class="nav"><div class="wrap nav-in">
+    <a class="brand" href="#"><img src="../assets/img/uat-logo.png" alt="Under a Tree Consulting"></a>
+    <nav class="nav-links"><a href="#services">Services</a><a href="#approach">Approach</a><a href="#portfolio">Portfolio</a><a href="#contact-form">Contact</a></nav>
+    <a class="nav-call" href="#contact-form">Start a conversation</a>
+  </div></header>
+
+  <section class="hero"><div class="wrap hero-in">
+    <span class="pill"><span class="dot"></span>Wellness consulting since 2005</span>
+    <h1>Wellness is <em>our business</em>.</h1>
+    <p>Our team of seasoned consultants has designed over 100 one-of-a-kind projects across the globe. We bring value to every part of a project's lifespan, partnering with clients to deliver hundreds of unique, innovative experiences that "wow" guests, win awards, and have sustained profitability.</p>
+    <div class="hero-cta">
+      <a class="btn-p" href="#portfolio">View portfolio</a>
+      <a class="btn-g" href="#contact-form">Get in touch</a>
+    </div>
+  </div></section>
+
+  <div class="trust"><div class="wrap trust-in">
+    <div class="trust-item"><b>2005</b><span>Consulting since</span></div>
+    <div class="trust-item"><b>100+</b><span>One-of-a-kind projects</span></div>
+    <div class="trust-item"><b>Global</b><span>Projects across the globe</span></div>
+    <div class="trust-item"><b>Award-winning</b><span>Experiences that "wow"</span></div>
+  </div></div>
+
+  <section class="sec" id="about"><div class="wrap split">
+    <div class="split-photo"></div>
+    <div>
+      <span class="eyebrow">About Under a Tree</span>
+      <h2>Wellness is <em>everywhere</em>.</h2>
+      <p>At Under a Tree, wellness is our business. Our team of seasoned consultants has designed over 100 one-of-a-kind projects across the globe.</p>
+      <p>We bring value to every part of a project's lifespan, partnering with clients to deliver hundreds of unique, innovative experiences that "wow" guests, win awards, and have sustained profitability.</p>
+      <p>We merge our expertise with your key staff members to share our vast collective expertise, working as an extension of your internal team across hospitality, real estate, senior care, and medical wellness.</p>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="services"><div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2>From feasibility to <em>fully operational</em>.</h2>
+    <p class="sec-lead">We partner with clients across the full arc of a wellness project, bringing clarity, creativity, and extensive industry expertise to every stage.</p>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.8L7 13.9"/></svg></div>
+        <h3>Feasibility &amp; Business Development</h3>
+        <ul><li>Market &amp; Trends Research</li><li>Research &amp; Review of Local &amp; Relevant Competitive Set</li><li>Utilization Analysis</li><li>5-Year Pro Forma Analysis</li><li>Strategic Advisory Services</li><li>SWOT Analysis</li></ul>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3>Concept &amp; Design Development</h3>
+        <ul><li>Research and Review of Global Competitive Set</li><li>Development of Comprehensive Wellness Concept</li><li>Area Program, Bubble Diagrams, and Concept CAD Floor Plans</li><li>Detailed Design Brief to Inform Spatial Planning</li></ul>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 3 7l4 6 4-6c1-2 3-4 3-7a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+        <h3>Wellness Programming</h3>
+        <ul><li>Program and Menu Development / Guidelines</li><li>Signature Spa Treatment Menu and Protocols</li><li>Event and Activity Calendars</li><li>Educational Programs</li></ul>
+      </div>
+      <div class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v6H4z"/><path d="M4 14h16v6H4z"/><path d="M8 7h.01M8 17h.01"/></svg></div>
+        <h3>Operations Management</h3>
+        <ul><li>Standard Operating Procedures and Manuals</li><li>Recruitment and Ongoing Mentorship</li><li>Implementation and Training</li><li>Retail Sales Training</li></ul>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="approach"><div class="wrap">
+    <div class="quote">
+      <p>Wellness is <em>everywhere</em>. We merge our expertise with your key staff members to share our vast collective expertise, working as an extension of your internal team.</p>
+      <span class="by">The Under a Tree approach</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="portfolio"><div class="wrap">
+    <span class="eyebrow">Portfolio</span>
+    <h2 style="margin-bottom:44px;">Hundreds of experiences that <em>win awards</em>.</h2>
+    <div class="projects">
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/uat-velvaere.jpg')"></div><div class="bd"><span>Velvaere</span><h3>Deer Valley, Utah</h3></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/uat-acre.jpg')"></div><div class="bd"><span>Acre</span><h3>Los Cabos, Mexico</h3></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/uat-proj1.jpg')"></div><div class="bd"><span>Cassia</span><h3>Jerusalem, Israel</h3></div></div>
+      <div class="proj"><div class="ph" style="background-image:url('../assets/img/uat-proj2.jpg')"></div><div class="bd"><span>Mohari Hospitality</span><h3>Paris, France</h3></div></div>
+    </div>
+    <div class="names">
+      <div>Acre<small>Los Cabos, Mexico</small></div>
+      <div>Aranwa<small>Sacred Valley, Peru</small></div>
+      <div>Chablé Resort<small>Yucatán, Mexico</small></div>
+      <div>Fairmont Chateau Lake Louise<small>Canada</small></div>
+      <div>Four Seasons Resort, Los Cabos<small>Costa Palmas</small></div>
+      <div>Marina Resort Cavtat<small>Croatia</small></div>
+      <div>Fregate Island<small>Seychelles</small></div>
+      <div>Tri Vananda<small>Phuket, Thailand</small></div>
+      <div>The Fairmont Royal York<small>Toronto, Canada</small></div>
+      <div>1 Hotel Cabo<small>Los Cabos, Mexico</small></div>
+      <div>Mohari Hospitality<small>Paris, France</small></div>
+      <div>Cassia<small>Jerusalem, Israel</small></div>
+      <div>Ameyalli<small>Midway, Utah</small></div>
+      <div>Archetype<small>Clover, South Carolina</small></div>
+      <div>Castle Hot Springs<small>Morristown, Arizona</small></div>
+      <div>Evermore | Conrad Hotel &amp; Resorts<small>Orlando, Florida</small></div>
+      <div>1 Hotels<small>Brooklyn</small></div>
+      <div>Velvaere<small>Deer Valley, Utah</small></div>
+      <div>Lone Mountain Ranch<small>Big Sky, Montana, USA</small></div>
+      <div>Four Seasons Fort Lauderdale Beach<small>Florida, USA</small></div>
+      <div>Intermountain Healthcare<small>Salt Lake City, Utah</small></div>
+      <div>Aspen Meadows<small>Aspen, Colorado, USA</small></div>
+      <div>The Springs<small>Pagosa Springs, Colorado, USA</small></div>
+      <div>Hotel Emma<small>San Antonio, Texas</small></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="testimonials"><div class="wrap">
+    <span class="eyebrow">In their words</span>
+    <h2 style="margin-bottom:52px;">Trusted by the people who <em>build wellness</em>.</h2>
+    <div class="tgrid">
+      <div class="tcard"><p>"Amy and her team were instrumental in helping us re-position Turtle Bay on Oahu."</p><b>Michael Coyle</b><small>Former CEO of Replay Destinations</small></div>
+      <div class="tcard"><p>"Under a Tree brought clarity, creativity, and extensive industry expertise."</p><b>Jaykant Patel</b><small>Founder &amp; Managing Principal of Archetype Investments</small></div>
+      <div class="tcard"><p>"Their global expertise and collaborative approach have helped us create a future-ready destination."</p><b>Srecko Lucky Bobeta</b><small>President of Marina Resort Cavtat</small></div>
+      <div class="tcard"><p>"There's nothing she doesn't know about it. She navigates the complexities and details."</p><b>Albert Louzoun</b><small>CEO of Cassia Hotels</small></div>
+      <div class="tcard"><p>"She and her team have been invaluable partners in our scale up phase."</p><b>Luke Kelly</b><small>CEO of Bryte</small></div>
+      <div class="tcard"><p>"I know I can count on her sound and expert advice."</p><b>Richard Warnick</b><small>CHMWarnick</small></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="quote">
+      <p>"Amy is a <em>force of nature</em>. She is brilliant, warm, intuitive."</p>
+      <span class="by">Adam Rolston, INC Architecture &amp; Design LLC</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact"><div class="wrap">
+    <div class="cta-band">
+      <h2>Let's design a place that genuinely restores.</h2>
+      <a class="btn-w" href="#contact-form">Start a conversation</a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
+    <div class="contact-head"><span class="eyebrow">Get in touch</span>
+      <h2>Ready to bring wellness to your project?</h2></div>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <h4>Reach us</h4>
+        <p>7320 N. La Cholla Blvd<br>Suite 154-511<br>Tucson, AZ 85741</p>
+        <h4 style="margin-top:34px;">Contact</h4>
+        <p><a href="tel:5204005799">520.400.5799</a></p>
+        <p><a href="mailto:sue@underatree.com">sue@underatree.com</a></p>
+        <h4 style="margin-top:34px;">Newsletter</h4>
+        <p>Stay informed with our latest news, projects &amp; industry insight.</p>
+      </div>
+      <form class="cform" action="mailto:sue@underatree.com" method="post" enctype="text/plain">
+        <label>Name</label><input type="text" name="name" autocomplete="name">
+        <label>Email</label><input type="email" name="email" autocomplete="email">
+        <label>Company / Project</label><input type="text" name="company">
+        <label>Message</label><textarea name="message" rows="4"></textarea>
+        <button type="submit" class="btn-p">Send message</button>
+      </form>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div class="foot-top">
+      <div><span class="fbrand">Under a Tree</span>
+        <p>Wellness is our business. A seasoned consultancy designing over 100 one-of-a-kind projects across the globe, since 2005.</p></div>
+      <div class="foot-col"><h4>Services</h4><a href="#services">Feasibility &amp; Business Development</a><a href="#services">Concept &amp; Design Development</a><a href="#services">Wellness Programming</a><a href="#services">Operations Management</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="tel:5204005799">520.400.5799</a><a href="mailto:sue@underatree.com">sue@underatree.com</a><span>7320 N. La Cholla Blvd, Suite 154-511</span><span>Tucson, AZ 85741</span></div>
+    </div>
+    <div class="foot-bot"><span>&copy; 2026 Under a Tree Consulting</span><span>Wellness is our business, since 2005</span></div>
+  </div></footer>
+</body></html>

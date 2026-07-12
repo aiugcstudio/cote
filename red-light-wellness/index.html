@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Redwell &mdash; Living the Light | The Red Light Wellness Company</title>
+<meta name="description" content="Introducing Redwell, a premium retail space built around NASA-backed Red Light Therapy. Real science. Real results. For everyone. Coming soon to a street near you.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..750;1,14..32,400..750&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23160B0E'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-weight='700' font-size='18' fill='%23D6303B' text-anchor='middle'%3Er%3C/text%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#F5F0EF; --ink:#1A1012; --soft:#6A5B5D; --faint:#A2938F; --line:#E7DED9; --surface:#FFFFFF;
+    --navy:#160B0E; --accent:#D6303B; --accent-soft:#F6E3E2; --sand:#DBD0C2; --sand-soft:#EFE9E1;
+    --head:"Inter",-apple-system,sans-serif; --sans:"Inter",-apple-system,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+  }
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:var(--head);font-weight:650;letter-spacing:-0.035em;line-height:1.02;}
+
+  /* nav */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:10;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:26px 0;}
+  .brand img{height:34px;width:auto;display:block;}
+  .nav-links{display:flex;gap:32px;font-size:.94rem;font-weight:500;color:rgba(255,255,255,.78);}
+  .nav-links a:hover{color:#fff;}
+  .nav-call{background:var(--sand);color:var(--navy);padding:12px 24px;border-radius:100px;font-weight:600;font-size:.9rem;letter-spacing:.02em;text-transform:uppercase;}
+  .nav-call:hover{background:#fff;}
+
+  /* hero */
+  .hero{position:relative;min-height:820px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(22,11,14,.94) 0%,rgba(22,11,14,.72) 40%,rgba(22,11,14,.34) 78%,rgba(22,11,14,.55) 100%),url('../assets/img/rlw-redwell-bg.webp') center/cover;}
+  .hero::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -140px 160px -60px rgba(22,11,14,.9);}
+  .hero-in{position:relative;padding:170px 0 100px;max-width:820px;z-index:2;}
+  .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(219,208,194,.1);border:1px solid rgba(219,208,194,.28);padding:9px 18px;border-radius:100px;font-size:.82rem;font-weight:500;letter-spacing:.04em;color:var(--sand);margin-bottom:30px;text-transform:uppercase;}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px 2px rgba(214,48,59,.8);}
+  h1{font-size:4.9rem;margin-bottom:30px;font-weight:680;letter-spacing:-0.05em;line-height:1.0;}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);letter-spacing:-0.02em;}
+  .hero p{font-size:1.32rem;font-weight:300;color:rgba(255,255,255,.86);max-width:600px;margin-bottom:40px;}
+  .hero p b{font-weight:600;color:#fff;}
+  .hero p u{text-decoration-color:var(--accent);text-underline-offset:4px;}
+  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn-p{background:var(--accent);color:#fff;padding:17px 38px;border-radius:100px;font-weight:600;font-size:1rem;letter-spacing:.03em;text-transform:uppercase;box-shadow:0 14px 40px rgba(214,48,59,.34);}
+  .btn-p:hover{background:#c22530;}
+  .btn-g{color:#fff;padding:16px 32px;border-radius:100px;font-weight:600;font-size:1rem;letter-spacing:.03em;text-transform:uppercase;border:1.5px solid rgba(219,208,194,.4);}
+  .btn-g:hover{border-color:var(--sand);}
+  .hero-tag{display:flex;align-items:center;gap:12px;margin-top:40px;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--sand);}
+  .hero-tag::before{content:"";width:34px;height:1px;background:var(--sand);opacity:.6;}
+
+  /* trust bar */
+  .trust{background:var(--navy);border-top:1px solid rgba(219,208,194,.12);padding:0;}
+  .trust-in{display:grid;grid-template-columns:repeat(4,1fr);}
+  .trust-item{padding:36px 24px;text-align:center;color:#fff;border-left:1px solid rgba(219,208,194,.12);}
+  .trust-item:first-child{border-left:0;}
+  .trust-item b{font-family:var(--head);font-size:1.5rem;font-weight:600;display:block;letter-spacing:-0.03em;color:var(--sand);}
+  .trust-item span{color:rgba(255,255,255,.5);font-size:.84rem;letter-spacing:.02em;display:block;margin-top:6px;}
+
+  /* sections */
+  .sec{padding:120px 0;}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;display:inline-block;}
+  .sec h2{font-size:3.1rem;margin-bottom:16px;max-width:680px;}
+  .sec h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .sec-lead{color:var(--soft);font-size:1.18rem;max-width:560px;margin-bottom:60px;}
+
+  /* manifesto statement */
+  .manifesto{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+  .manifesto::before{content:"";position:absolute;top:-30%;right:-10%;width:60%;height:160%;background:radial-gradient(circle,rgba(214,48,59,.4) 0%,rgba(214,48,59,0) 65%);filter:blur(20px);}
+  .manifesto .wrap{position:relative;z-index:2;text-align:center;}
+  .manifesto .eyebrow{color:var(--sand);}
+  .manifesto p{font-family:var(--serif);font-weight:400;font-size:2.4rem;line-height:1.34;max-width:920px;margin:0 auto;color:#fff;}
+  .manifesto p b{font-weight:600;color:var(--accent);font-family:var(--head);letter-spacing:-0.02em;}
+  .manifesto p u{text-decoration-color:var(--accent);text-underline-offset:5px;}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .pillar{border:1px solid var(--line);border-radius:22px;padding:44px 36px;background:var(--surface);transition:.25s;}
+  .pillar:hover{transform:translateY(-5px);box-shadow:0 26px 54px rgba(22,11,14,.09);border-color:var(--accent);}
+  .pillar .ic{width:54px;height:54px;border-radius:15px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:26px;}
+  .pillar .ic svg{width:26px;height:26px;}
+  .pillar h3{font-size:1.4rem;margin-bottom:12px;}
+  .pillar p{color:var(--soft);font-size:1.02rem;line-height:1.55;}
+
+  /* glow split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .split-photo{height:560px;border-radius:24px;background:url('../assets/img/rlw-redwell-bg.webp') center/cover;box-shadow:0 34px 80px rgba(22,11,14,.22);position:relative;overflow:hidden;}
+  .split-photo .lockup{position:absolute;left:0;right:0;bottom:0;padding:40px 38px;background:linear-gradient(0deg,rgba(22,11,14,.85),transparent);}
+  .split-photo .lockup img{width:150px;height:auto;display:block;}
+  .split h2{font-size:3rem;margin-bottom:20px;}
+  .split h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .split p{color:var(--soft);font-size:1.12rem;margin-bottom:20px;}
+  .split ul{list-style:none;margin-top:28px;display:grid;gap:15px;}
+  .split li{display:flex;gap:13px;align-items:flex-start;font-weight:500;}
+  .split li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--accent-soft);flex:none;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D6303B' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:13px;}
+
+  /* quote */
+  .quote{background:var(--sand-soft);border:1px solid var(--sand);border-radius:28px;padding:80px 70px;text-align:center;}
+  .quote p{font-family:var(--serif);font-weight:400;font-style:italic;font-size:2.6rem;line-height:1.28;max-width:840px;margin:0 auto 24px;color:var(--navy);}
+  .quote .by{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);}
+
+  /* cta band */
+  .cta-band{background:var(--navy);color:#fff;border-radius:28px;padding:74px 64px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;position:relative;overflow:hidden;}
+  .cta-band::before{content:"";position:absolute;top:-40%;right:-6%;width:50%;height:180%;background:radial-gradient(circle,rgba(214,48,59,.5) 0%,rgba(214,48,59,0) 62%);}
+  .cta-band .ct{position:relative;z-index:2;}
+  .cta-band h2{font-size:2.9rem;max-width:620px;}
+  .cta-band h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .cta-band .btn-w{position:relative;z-index:2;background:var(--sand);color:var(--navy);padding:18px 38px;border-radius:100px;font-weight:600;white-space:nowrap;font-size:.95rem;letter-spacing:.03em;text-transform:uppercase;}
+  .cta-band .btn-w:hover{background:#fff;}
+
+  /* contact */
+  .contact-head{text-align:center;margin-bottom:52px;}
+  .contact-head .eyebrow{display:inline-block;margin-bottom:14px;}
+  .contact-head h2{font-size:3.1rem;max-width:none;}
+  .contact-head h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px rgba(0,0,0,.10);}
+  .cinfo{background:var(--navy);color:#fff;padding:56px 48px;position:relative;overflow:hidden;}
+  .cinfo::before{content:"";position:absolute;bottom:-30%;left:-20%;width:80%;height:80%;background:radial-gradient(circle,rgba(214,48,59,.4),transparent 65%);}
+  .cinfo>*{position:relative;z-index:2;}
+  .cinfo h4{font-family:var(--head);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-bottom:18px;}
+  .cinfo p{color:rgba(255,255,255,.82);margin-bottom:11px;line-height:1.5;}
+  .cinfo a{color:#fff;}
+  .cinfo a:hover{opacity:.66;}
+  .cinfo .logo-foot{width:150px;height:auto;margin-top:38px;opacity:.9;}
+  .cform{background:var(--surface);padding:52px 50px;display:flex;flex-direction:column;}
+  .cform label{display:block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:0 0 8px;}
+  .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
+  .cform input:focus,.cform textarea:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--accent-soft);}
+  .cform textarea{resize:vertical;min-height:120px;}
+  .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:.95rem;}
+
+  /* footer */
+  footer{background:var(--navy);color:rgba(255,255,255,.6);padding:74px 0 44px;}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(219,208,194,.14);}
+  .foot-top .brand img{height:32px;margin-bottom:18px;}
+  .foot-top p{max-width:300px;font-size:.98rem;}
+  .foot-col h4{color:var(--sand);font-family:var(--head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;}
+  .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
+  .foot-col a:hover{color:#fff;}
+  .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.84rem;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:900px){
+    h1{font-size:3.1rem;}.hero-in{padding-top:140px;}
+    .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
+    .pillars{grid-template-columns:1fr;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:340px;}
+    .manifesto p{font-size:1.7rem;}.quote p{font-size:1.8rem;}.quote{padding:56px 34px;}
+    .cta-band{flex-direction:column;align-items:flex-start;}.foot-top{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}}
+</style></head>
+<body>
+  <header class="nav"><div class="wrap nav-in">
+    <a class="brand" href="#"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell &mdash; Living the Light"></a>
+    <nav class="nav-links"><a href="#about">About</a><a href="#experience">The Experience</a><a href="#contact">Contact</a></nav>
+    <a class="nav-call" href="mailto:jonathan@getredwell.com">Contact Us</a>
+  </div></header>
+
+  <section class="hero"><div class="wrap hero-in">
+    <span class="pill"><span class="dot"></span>Coming soon to a street near you</span>
+    <h1>Wellness is Broken.<br>We're Here to <em>Fix It.</em></h1>
+    <p>Introducing <b>Redwell</b> &mdash; a premium retail space built around NASA-backed Red Light Therapy. The fastest-growing wellness technology is finally made <u>accessible</u>.</p>
+    <div class="hero-cta">
+      <a class="btn-p" href="mailto:jonathan@getredwell.com">Contact Us</a>
+      <a class="btn-g" href="#experience">The Experience</a>
+    </div>
+    <div class="hero-tag">Living the Light</div>
+  </div></section>
+
+  <div class="trust"><div class="wrap trust-in">
+    <div class="trust-item"><b>NASA-backed</b><span>Red Light Therapy</span></div>
+    <div class="trust-item"><b>Real science</b><span>Real results</span></div>
+    <div class="trust-item"><b>For everyone</b><span>Finally made accessible</span></div>
+    <div class="trust-item"><b>Fastest-growing</b><span>Wellness technology</span></div>
+  </div></div>
+
+  <section class="manifesto sec"><div class="wrap">
+    <span class="eyebrow">The premise</span>
+    <p>Introducing <b>Redwell</b> &mdash; a premium retail space built around NASA-backed Red Light Therapy. The fastest-growing wellness technology is finally made <u>accessible</u>. <b>Real</b> science. <b>Real</b> results. For <b>everyone</b>.</p>
+  </div></section>
+
+  <section class="sec" id="experience"><div class="wrap">
+    <span class="eyebrow">The Experience</span>
+    <h2>Red Light Therapy, <em>made an experience</em>.</h2>
+    <p class="sec-lead">Redwell is a premium retail space built around one of the fastest-growing wellness technologies. Real science, made accessible to everyone.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg></div>
+        <h3>NASA-backed science</h3>
+        <p>Built around NASA-backed Red Light Therapy. Real science, standing behind every session.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V9l6-5 6 5v12M10 21v-6h4v6"/></svg></div>
+        <h3>A premium retail space</h3>
+        <p>Not just a product. A premium retail space, designed around the experience of Red Light Therapy.</p>
+      </div>
+      <div class="pillar">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>For everyone</h3>
+        <p>The fastest-growing wellness technology, finally made accessible. Real results, for everyone.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
+    <div class="split-photo"><div class="lockup"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></div></div>
+    <div>
+      <span class="eyebrow">About Redwell</span>
+      <h2>Wellness is broken. <em>We're here to fix it.</em></h2>
+      <p>Redwell is The Red Light Wellness Company &mdash; a premium retail space built around NASA-backed Red Light Therapy, one of the fastest-growing wellness technologies in the world.</p>
+      <p>The idea is simple. Take real science, make it accessible, and give everyone a place to experience it. Coming soon to a street near you.</p>
+      <ul>
+        <li>Built around NASA-backed Red Light Therapy</li>
+        <li>A premium retail space, not just a product</li>
+        <li>Real science. Real results. For everyone.</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="quote">
+      <p>&ldquo;Real science. Real results. For everyone.&rdquo;</p>
+      <span class="by">Redwell &mdash; Living the Light</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact"><div class="wrap">
+    <div class="cta-band">
+      <div class="ct"><h2>The fastest-growing wellness technology, <em>finally accessible</em>.</h2></div>
+      <a class="btn-w" href="mailto:jonathan@getredwell.com">Contact Us</a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
+    <div class="contact-head"><span class="eyebrow">Get in touch</span>
+      <h2>Be first to <em>live the light</em>.</h2></div>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <h4>Redwell</h4>
+        <p>The Red Light Wellness Company, Inc.</p>
+        <p>Coming soon to a street near you.</p>
+        <h4 style="margin-top:34px;">Reach us</h4>
+        <p><a href="mailto:jonathan@getredwell.com">jonathan@getredwell.com</a></p>
+        <img class="logo-foot" src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell &mdash; Living the Light">
+      </div>
+      <form class="cform" action="mailto:jonathan@getredwell.com" method="post" enctype="text/plain">
+        <label>Name</label><input type="text" name="name" autocomplete="name">
+        <label>Email</label><input type="email" name="email" autocomplete="email">
+        <label>Message</label><textarea name="message" rows="4"></textarea>
+        <button type="submit" class="btn-p">Send message</button>
+      </form>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div class="foot-top">
+      <div><a class="brand"><img src="../assets/img/rlw-redwell-logo-sand.png" alt="Redwell"></a>
+        <p>A premium retail space built around NASA-backed Red Light Therapy. Real science. Real results. For everyone.</p></div>
+      <div class="foot-col"><h4>Redwell</h4><a href="#about">About</a><a href="#experience">The Experience</a><a href="#contact">Contact</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="mailto:jonathan@getredwell.com">jonathan@getredwell.com</a><span>Living the Light</span></div>
+    </div>
+    <div class="foot-bot"><span>&copy; 2026 The Red Light Wellness Company, Inc.</span><span>Redwell &mdash; Living the Light</span></div>
+  </div></footer>
+</body></html>

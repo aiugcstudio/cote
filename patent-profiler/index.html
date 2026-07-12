@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Patent Profiler, LLC | Business-Focused Patent &amp; Trademark Strategy for Founders</title>
+<meta name="description" content="Patent Profiler helps founders turn ideas into valuable IP assets that increase company value, attract investors, and create competitive advantages. Fixed-fee, transparent patent and trademark strategy. Call (978) 376-2157.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..750;1,14..32,400..750&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A1E28'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-weight='700' font-size='16' fill='%2314B8A6' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#F4F6F6; --ink:#0E1D24; --soft:#4C5C63; --faint:#8A9AA0; --line:#E1E7E7; --surface:#FFFFFF;
+    --navy:#0A1E28; --accent:#0E9384; --accent-2:#14B8A6; --accent-soft:#DBF1ED;
+    --head:"Inter",-apple-system,sans-serif; --sans:"Inter",-apple-system,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+  }
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:var(--head);font-weight:650;letter-spacing:-0.035em;line-height:1.02;}
+  .stars{color:#FFC13D;letter-spacing:1px;}
+
+  /* nav */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:10;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:24px 0;}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff;font-family:var(--head);font-weight:700;font-size:1.24rem;letter-spacing:-0.02em;}
+  .nav .brand img{height:44px;width:auto;display:block;}
+  .nav-links{display:flex;gap:32px;font-size:.94rem;font-weight:500;color:rgba(255,255,255,.82);}
+  .nav-links a:hover{color:#fff;}
+  .nav-call{background:var(--accent-2);color:var(--navy);padding:12px 22px;border-radius:100px;font-weight:600;font-size:.92rem;}
+
+  /* hero */
+  .hero{position:relative;min-height:780px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,22,30,.96) 0%,rgba(8,22,30,.86) 46%,rgba(8,22,30,.52) 100%),url('../assets/img/pp-3.png') center/cover;}
+  .hero-in{position:relative;padding:160px 0 96px;max-width:800px;}
+  .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(20,184,166,.12);border:1px solid rgba(20,184,166,.32);padding:9px 18px;border-radius:100px;font-size:.86rem;font-weight:500;margin-bottom:30px;color:#8EEBDD;}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);}
+  h1{font-size:4.6rem;margin-bottom:26px;font-weight:680;letter-spacing:-0.05em;line-height:1.0;}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#6FE0CE;letter-spacing:-0.02em;}
+  .hero p{font-size:1.24rem;font-weight:300;color:rgba(255,255,255,.86);max-width:620px;margin-bottom:16px;}
+  .hero p.sub2{font-size:1.05rem;color:rgba(255,255,255,.72);margin-bottom:38px;max-width:600px;}
+  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn-p{background:var(--accent);color:#fff;padding:17px 34px;border-radius:100px;font-weight:600;font-size:1.05rem;box-shadow:0 12px 34px rgba(14,147,132,.34);}
+  .btn-g{color:#fff;padding:16px 30px;border-radius:100px;font-weight:600;font-size:1.05rem;border:1.5px solid rgba(255,255,255,.28);}
+  .hero-rate{display:flex;align-items:center;gap:10px;margin-top:34px;font-size:.98rem;color:rgba(255,255,255,.85);}
+
+  /* trust bar */
+  .trust{background:var(--navy);border-top:1px solid rgba(255,255,255,.09);}
+  .trust-in{display:grid;grid-template-columns:repeat(4,1fr);}
+  .trust-item{padding:34px 20px;text-align:center;color:#fff;border-left:1px solid rgba(255,255,255,.09);}
+  .trust-item:first-child{border-left:0;}
+  .trust-item b{font-family:var(--head);font-size:2.3rem;font-weight:600;display:block;letter-spacing:-0.03em;color:#6FE0CE;}
+  .trust-item span{color:rgba(255,255,255,.5);font-size:.86rem;letter-spacing:.02em;}
+
+  /* sections */
+  .sec{padding:120px 0;}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px;display:inline-block;}
+  .sec h2{font-size:3.2rem;margin-bottom:16px;max-width:720px;}
+  .sec h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .sec-lead{color:var(--soft);font-size:1.18rem;max-width:620px;margin-bottom:60px;}
+
+  /* value chips */
+  .vals{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .val{border:1px solid var(--line);border-radius:20px;padding:36px 32px;background:var(--surface);transition:.25s;}
+  .val:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(16,22,32,.09);border-color:var(--accent);}
+  .val .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;font-weight:700;}
+  .val .ic svg{width:24px;height:24px;}
+  .val h3{font-size:1.4rem;margin-bottom:9px;}
+  .val .k{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;display:block;margin-top:8px;}
+  .val p{color:var(--soft);font-size:1rem;}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+  .step{background:var(--surface);padding:42px 30px;}
+  .step .sn{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--accent);display:block;margin-bottom:18px;}
+  .step h3{font-size:1.22rem;margin-bottom:10px;letter-spacing:-0.02em;}
+  .step p{color:var(--soft);font-size:.98rem;}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  .split-photo{height:520px;border-radius:24px;background:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/34px 34px,linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/34px 34px,linear-gradient(135deg,#0A1E28,#0E3A44);box-shadow:0 30px 70px rgba(16,22,32,.16);}
+  .split h2{font-size:3rem;margin-bottom:20px;}
+  .split h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent);}
+  .split p{color:var(--soft);font-size:1.1rem;margin-bottom:18px;}
+  .split .sub-h{font-size:1.28rem;font-weight:650;font-family:var(--head);letter-spacing:-0.02em;color:var(--ink);margin:26px 0 10px;}
+
+  /* pricing */
+  .price-note{color:var(--soft);font-size:1.1rem;max-width:640px;margin:0 auto 12px;text-align:center;}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+  .pcard{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:38px 34px;display:flex;flex-direction:column;transition:.25s;position:relative;}
+  .pcard:hover{transform:translateY(-5px);box-shadow:0 26px 56px rgba(16,22,32,.10);}
+  .pcard.feat{border:1.5px solid var(--accent);box-shadow:0 26px 56px rgba(14,147,132,.14);}
+  .pcard .tag{position:absolute;top:-13px;left:34px;background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;}
+  .pcard .pl{color:var(--faint);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+  .pcard h3{font-size:1.55rem;margin-bottom:12px;}
+  .pcard .desc{color:var(--soft);font-size:.98rem;line-height:1.5;margin-bottom:22px;min-height:66px;}
+  .pcard .est{color:var(--faint);font-size:.95rem;text-decoration:line-through;}
+  .pcard .amt{font-family:var(--head);font-size:2.9rem;font-weight:680;letter-spacing:-0.04em;margin:2px 0 22px;color:var(--ink);}
+  .pcard .amt small{font-size:1rem;font-weight:500;color:var(--soft);letter-spacing:0;}
+  .pcard .pbtn{margin-top:auto;text-align:center;padding:15px;border-radius:100px;font-weight:600;font-size:1rem;background:var(--navy);color:#fff;transition:.2s;}
+  .pcard.feat .pbtn{background:var(--accent);}
+  .pcard .pbtn:hover{opacity:.9;}
+
+  /* quote */
+  .quote{background:var(--navy);color:#fff;border-radius:28px;padding:80px 70px;text-align:center;}
+  .quote p{font-family:var(--serif);font-weight:400;font-size:2.3rem;line-height:1.3;max-width:900px;margin:0 auto 30px;}
+  .quote .by{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+
+  /* reviews */
+  .reviews{background:var(--surface);border-bottom:1px solid var(--line);}
+  .rev-in{display:flex;align-items:center;justify-content:center;gap:30px;padding:38px 0;flex-wrap:wrap;}
+  .g-badge{width:44px;height:44px;flex:none;}
+  .g-badge svg{width:100%;height:100%;}
+  .rev-score{text-align:left;}
+  .rev-score .rstars{color:#FFB400;font-size:1.5rem;letter-spacing:2px;display:block;line-height:1;}
+  .rev-score p{color:var(--soft);font-size:1rem;margin-top:6px;}
+  .rev-score b{color:var(--ink);font-weight:600;}
+  .rev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .rev-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 30px;transition:.25s;}
+  .rev-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(16,22,32,.09);}
+  .rev-card-top{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+  .rev-av{width:50px;height:50px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700;font-size:1.15rem;font-family:var(--head);flex:none;}
+  .rev-card-top b{font-weight:600;display:block;font-size:1.02rem;}
+  .rev-card-top .rc-role{color:var(--faint);font-size:.84rem;}
+  .rev-card .rc-stars{color:#FFB400;font-size:.9rem;letter-spacing:1px;display:block;margin-bottom:10px;}
+  .rev-card p{color:var(--soft);font-size:1rem;line-height:1.55;}
+
+  /* cta band */
+  .cta-band{background:var(--accent);color:#fff;border-radius:28px;padding:70px 60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;background-image:linear-gradient(120deg,#0E9384,#10877A);}
+  .cta-band h2{font-size:2.9rem;max-width:620px;}
+  .cta-band .btn-w{background:#fff;color:var(--accent);padding:17px 36px;border-radius:100px;font-weight:600;white-space:nowrap;font-size:1.05rem;}
+
+  /* press */
+  .press{text-align:center;}
+  .press h2{font-size:2.6rem;margin-bottom:14px;}
+  .press-lead{color:var(--soft);font-size:1.12rem;max-width:600px;margin:0 auto 44px;}
+  .press-row{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:840px;margin:0 auto;}
+  .press-card{border:1px solid var(--line);border-radius:20px;padding:34px 32px;background:var(--surface);text-align:left;transition:.25s;}
+  .press-card:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(16,22,32,.10);border-color:var(--accent);}
+  .press-card .src{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;display:block;}
+  .press-card h3{font-size:1.24rem;line-height:1.25;}
+
+  /* contact + hours */
+  .contact-head{text-align:center;margin-bottom:52px;}
+  .contact-head .eyebrow{display:inline-block;margin-bottom:14px;}
+  .contact-head h2{font-size:3.1rem;max-width:none;}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px rgba(0,0,0,.10);}
+  .cinfo{background:var(--navy);color:#fff;padding:56px 48px;}
+  .cinfo h4{font-family:var(--head);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;}
+  .cinfo .hours>div{display:flex;justify-content:space-between;gap:24px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .cinfo .hours>div:first-child{padding-top:0;}
+  .cinfo .hours span{color:rgba(255,255,255,.55);}
+  .cinfo .hours b{font-weight:600;color:#fff;}
+  .cinfo p{color:rgba(255,255,255,.8);margin-bottom:11px;line-height:1.5;}
+  .cinfo a{color:#fff;}
+  .cinfo a:hover{opacity:.66;}
+  .cform{background:var(--surface);padding:52px 50px;display:flex;flex-direction:column;}
+  .cform label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 8px;}
+  .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
+  .cform input:focus,.cform textarea:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--accent-soft);}
+  .cform textarea{resize:vertical;min-height:120px;}
+  .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
+
+  /* footer */
+  footer{background:var(--navy);color:rgba(255,255,255,.6);padding:74px 0 44px;}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-top .brand img{height:40px;margin-bottom:16px;}
+  .foot-top p{max-width:300px;}
+  .foot-col h4{color:#fff;font-family:var(--head);font-size:.95rem;margin-bottom:14px;}
+  .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
+  .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.86rem;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:960px){
+    .vals,.rev-cards,.price-grid{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .split{grid-template-columns:1fr;gap:40px;}.split-photo{height:340px;}
+    .press-row{grid-template-columns:1fr;}
+    h1{font-size:3rem;}.hero-in{padding-top:130px;}
+    .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
+    .cta-band{flex-direction:column;align-items:flex-start;}
+    .foot-top{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+  @media(max-width:600px){.steps{grid-template-columns:1fr;}}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}}
+</style></head>
+<body>
+  <header class="nav"><div class="wrap nav-in">
+    <a class="brand" href="#"><img src="../assets/img/pp-logo.png" alt="Patent Profiler, LLC"></a>
+    <nav class="nav-links"><a href="#process">How It Works</a><a href="#philosophy">Philosophy</a><a href="#pricing">Pricing</a><a href="#reviews">Testimonials</a><a href="#contact-form">Contact</a></nav>
+    <a class="nav-call" href="https://calendly.com/larry-patentprofiler/30min" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+  </div></header>
+
+  <section class="hero"><div class="wrap hero-in">
+    <span class="pill"><span class="dot"></span>Patent and Trademark Strategy</span>
+    <h1>Protect big ideas with <em>business-focused IP</em>.</h1>
+    <p>We help founders turn ideas into valuable IP assets that increase company value, attract investors, and create competitive advantages.</p>
+    <p class="sub2">Most patents never make a single dollar. Traditional firms focus on filing. We focus on marketability. Build a strategic IP moat that investors value and competitors can't cross, at 40-60% lower cost. Get elite-level IP strategy without Big Law bureaucracy.</p>
+    <div class="hero-cta">
+      <a class="btn-p" href="https://calendly.com/janalberti/30min" target="_blank" rel="noopener">Get My IP Health Check</a>
+      <a class="btn-g" href="#pricing">See Our Pricing</a>
+    </div>
+    <div class="hero-rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Trusted by founders and startups nationwide</div>
+  </div></section>
+
+  <div class="trust"><div class="wrap trust-in">
+    <div class="trust-item"><b>500+</b><span>Patents filed</span></div>
+    <div class="trust-item"><b>98%</b><span>Client satisfaction</span></div>
+    <div class="trust-item"><b>Fixed-fee</b><span>No surprise billing</span></div>
+    <div class="trust-item"><b>40-60%</b><span>Lower cost than Big Law</span></div>
+  </div></div>
+
+  <section class="reviews" id="reviews"><div class="wrap rev-in">
+    <span class="g-badge"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1-.34-2.09c0-.73.13-1.43.34-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.93l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38Z"/></svg></span>
+    <div class="rev-score">
+      <span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p><b>Join hundreds of satisfied clients</b> who protected their innovation with Patent Profiler</p>
+    </div>
+    <a class="nav-call" style="background:var(--ink);color:#fff" href="https://patentprofiler.com/intake" target="_blank" rel="noopener">Start Your IP Journey</a>
+  </div></section>
+
+  <section class="sec" id="values" style="padding:96px 0 0;"><div class="wrap">
+    <span class="eyebrow">Why Patent Profiler</span>
+    <h2>IP strategy built for <em>founders</em>, not billable hours.</h2>
+    <p class="sec-lead">Transparent, accessible, and strategic. We make intellectual property work as a business asset from day one.</p>
+    <div class="vals">
+      <div class="val"><div class="ic">&#36;</div><h3>Transparent</h3><span class="k">Fair Pricing</span><p>Set prices for everything we offer. We do not bill hourly, so you know your total before we start.</p></div>
+      <div class="val"><div class="ic">&#9998;</div><h3>Accessible</h3><span class="k">Plain English</span><p>We make intellectual property understandable and accessible for growth-stage companies, not just lawyers.</p></div>
+      <div class="val"><div class="ic">&#9822;</div><h3>Strategic</h3><span class="k">Partner to Founders</span><p>We focus on marketability, building an IP moat that investors value and competitors can't cross.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" id="process"><div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>See how the IP <em>process</em> works.</h2>
+    <p class="sec-lead">Unlike most firms, we do not bill hourly. We have a set price for everything offered. This saves you lots of money.</p>
+    <div class="steps">
+      <div class="step"><span class="sn">01</span><h3>Submit Your Innovation</h3><p>Tell us about your invention, product, or technology through our simple online form.</p></div>
+      <div class="step"><span class="sn">02</span><h3>Analysis</h3><p>Our platform analyzes your IP landscape and identifies protection opportunities.</p></div>
+      <div class="step"><span class="sn">03</span><h3>Strategic Roadmap</h3><p>Receive a customized IP strategy with clear priorities and transparent pricing.</p></div>
+      <div class="step"><span class="sn">04</span><h3>File &amp; Protect</h3><p>We handle the filing process and ongoing protection of your intellectual property.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="philosophy"><div class="wrap split">
+    <div class="split-photo"></div>
+    <div>
+      <span class="eyebrow">Our Philosophy</span>
+      <h2>The vision of <em>strategic IP</em>.</h2>
+      <p>Our founder taught that protecting your IP isn't confined to patents or specific filings. IP strategy, business planning, market positioning, and legal protection extend beyond the initial application to daily operations. Every moment presents an opportunity for strategic IP growth.</p>
+      <div class="sub-h">Protecting innovation at its fullest</div>
+      <p>Patent Profiler equips motivated innovators with the skills to engage deeply with business strategy and IP protection, so their ideas become defensible assets that drive real enterprise value.</p>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="pricing"><div class="wrap">
+    <div style="text-align:center;margin-bottom:52px;">
+      <span class="eyebrow">Pricing</span>
+      <h2 style="margin:0 auto 16px;">Fixed-fee plans for <em>startups</em>.</h2>
+      <p class="price-note">We offer several plans for startups and several plans for growth companies. A set price for everything, so there are no surprise fees.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pcard">
+        <div class="pl">Plan 1</div>
+        <h3>IP Simplified</h3>
+        <p class="desc">Proof of Concept. A straightforward starting point to get your innovation protected the right way.</p>
+        <div class="est">Total estimated fee &ndash; $3,500</div>
+        <div class="amt">$2,297</div>
+        <a class="pbtn" href="https://patentprofiler.com/page/patent-service" target="_blank" rel="noopener">Get Started</a>
+      </div>
+      <div class="pcard feat">
+        <span class="tag">Most Popular</span>
+        <div class="pl">Plan 2</div>
+        <h3>AI Patent Quality Check&trade;</h3>
+        <p class="desc">Reducing the legal and commercial risk of AI-assisted patent drafting. The independent verification layer for AI-generated patents.</p>
+        <div class="est">Total estimated fee &ndash; $4,000</div>
+        <div class="amt">$2,500</div>
+        <a class="pbtn" href="https://patentprofiler.com/page/patent-service" target="_blank" rel="noopener">Start Now</a>
+      </div>
+      <div class="pcard">
+        <div class="pl">Plan 3</div>
+        <h3>Pro se Inventor Support</h3>
+        <p class="desc">Professional strategic guidance for inventors handling parts of the patent process themselves.</p>
+        <div class="est">Total estimated fee &ndash; $1,200</div>
+        <div class="amt">$800</div>
+        <a class="pbtn" href="https://patentprofiler.com/page/patent-service" target="_blank" rel="noopener">Get Started</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="quote">
+      <p>&ldquo;Andrew and his team were extremely helpful with getting our trademarks done quickly and professionally, all at a fair and transparent price. They did such a great job we subsequently asked for help with filing a provisional patent. I highly recommend Patent Profiler.&rdquo;</p>
+      <span class="by">KidneyAide, LLC</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">Testimonials</span>
+    <h2 style="margin-bottom:44px;">What clients say about <em>working with Andrew</em>.</h2>
+    <div class="rev-cards">
+      <div class="rev-card">
+        <div class="rev-card-top"><div class="rev-av">T</div><div><b>Terence Martinez</b><span class="rc-role">Computer Programmer, Tech Innovations</span></div></div>
+        <span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>Very knowledgeable in the field and my "go to" place with IP related questions and work.</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-card-top"><div class="rev-av">I</div><div><b>Izi</b><span class="rc-role">Founder</span></div></div>
+        <span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>I recently had the opportunity to work with Andrew for filing my IP, and I am extremely impressed with the service he provided. Andrew is highly skilled and dedicated, and his commitment to his work sets an example for everyone.</p>
+      </div>
+      <div class="rev-card">
+        <div class="rev-card-top"><div class="rev-av">J</div><div><b>Jacob Armes</b><span class="rc-role">Inventor</span></div></div>
+        <span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>So far things have gone rather smoothly. Not even a quarter of the way through the process and I'm really resting easy, with even better dreams than before. Highly recommend.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec press" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">As featured in</span>
+    <h2>Recognized for <em>strategic IP leadership</em>.</h2>
+    <p class="press-lead">Patent Profiler and founder Andrew Abramson have been featured for their work empowering entrepreneurs and startups.</p>
+    <div class="press-row">
+      <a class="press-card" href="https://thesiliconreview.com/magazine/profile/empowering-entrepreneurs-patent-profiler-llc-revolutionizing-intellectual-property-services-startups" target="_blank" rel="noopener">
+        <span class="src">The Silicon Review</span>
+        <h3>Empowering Entrepreneurs: Patent Profiler, LLC Revolutionizing Intellectual Property Services for Startups</h3>
+      </a>
+      <a class="press-card" href="https://cioviews.com/the-unfazed-leader-andrew-abramson-charting-a-path-of-perseverance-and-excellence-at-patent-profiler-llc/" target="_blank" rel="noopener">
+        <span class="src">CIO Views</span>
+        <h3>The Unfazed Leader: Andrew Abramson, Charting a Path of Perseverance and Excellence at Patent Profiler, LLC</h3>
+      </a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact"><div class="wrap">
+    <div class="cta-band">
+      <h2>Protect your innovation. Build real enterprise value.</h2>
+      <a class="btn-w" href="https://calendly.com/larry-patentprofiler/30min" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
+    <div class="contact-head"><span class="eyebrow">Get in touch</span>
+      <h2>Ready to protect your big idea?</h2></div>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <h4>Free consultation</h4>
+        <div class="hours"><div><span>Strategy call</span><b>By appointment</b></div><div><span>IP health check</span><b>Free</b></div></div>
+        <h4 style="margin-top:34px;">Reach us</h4>
+        <p>Patent Profiler, LLC<br>2216 Gates Court<br>Morris Plains, NJ 07950</p>
+        <p><a href="tel:19783762157">(978) 376-2157</a></p>
+        <p><a href="mailto:general@patentprofiler.com">general@patentprofiler.com</a></p>
+        <p style="margin-top:20px;"><a href="https://calendly.com/larry-patentprofiler/30min" target="_blank" rel="noopener" style="text-decoration:underline">Book a free strategy call &rarr;</a></p>
+      </div>
+      <form class="cform" action="mailto:general@patentprofiler.com" method="post" enctype="text/plain">
+        <label>Name</label><input type="text" name="name" autocomplete="name">
+        <label>Email</label><input type="email" name="email" autocomplete="email">
+        <label>Phone</label><input type="tel" name="phone" autocomplete="tel">
+        <label>Tell us about your innovation</label><textarea name="message" rows="4"></textarea>
+        <button type="submit" class="btn-p">Send message</button>
+      </form>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div class="foot-top">
+      <div><a class="brand" href="#"><img src="../assets/img/pp-logo.png" alt="Patent Profiler, LLC" style="filter:brightness(0) invert(1);"></a>
+        <p>Empowering innovators with transparent, strategic IP protection. From patents to trademarks, we make intellectual property accessible for growth-stage companies.</p></div>
+      <div class="foot-col"><h4>Services</h4><a href="#process">How It Works</a><a href="#pricing">Patent Services</a><a href="#pricing">Trademark Services</a><a href="#reviews">Testimonials</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="tel:19783762157">(978) 376-2157</a><a href="mailto:general@patentprofiler.com">general@patentprofiler.com</a><span>2216 Gates Court</span><span>Morris Plains, NJ 07950</span></div>
+    </div>
+    <div class="foot-bot"><span>&copy; 2026 Patent Profiler, LLC. All rights reserved.</span><span>Protecting Innovation &amp; Empowering Growth</span></div>
+  </div></footer>
+</body></html>
