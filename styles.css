@@ -1306,3 +1306,7 @@ section[id] { scroll-margin-top: 84px; }
 .compare tbody td.cmp-tie::before { content: "\2713"; background: rgba(120,139,133,.16); color: #7C8B85; }
 /* wider hero chip marquee */
 .chip-marquee { max-width: 860px; }
+/* trust strip: clean centered block (label over full-width marquee) */
+.trust-strip { display: block; text-align: center; }
+.trust-label { margin: 0 auto 18px; max-width: none; }
+.trust-marquee { width: 100%; }
