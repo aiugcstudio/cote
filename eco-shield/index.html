@@ -136,6 +136,12 @@
     .gallery{grid-template-columns:1fr;}.cta-band{flex-direction:column;align-items:flex-start;}
     .foot-top{grid-template-columns:1fr;}
   }
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+  .step{background:var(--surface);padding:40px 30px;}
+  .step .sn{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--accent);display:block;margin-bottom:18px;}
+  .step h3{font-size:1.3rem;margin-bottom:10px;letter-spacing:-0.02em;}
+  .step p{color:var(--soft);font-size:.98rem;}
+  @media(max-width:900px){.steps{grid-template-columns:1fr;}}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -217,6 +223,17 @@
         <li>On-site recycling and responsible waste disposal at every stage</li>
         <li>Clear communication from first quote to final walkthrough</li>
       </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">End to end</span>
+    <h2 style="margin-bottom:52px;">One team, from the first teardown to the <em>last load out</em>.</h2>
+    <div class="steps">
+      <div class="step"><span class="sn">01</span><h3>Demolition</h3><p>Full-structure and selective demolition, handled safely and on schedule.</p></div>
+      <div class="step"><span class="sn">02</span><h3>Site prep &amp; foundations</h3><p>Clearing, grading, and groundwork that sets the build up to last.</p></div>
+      <div class="step"><span class="sn">03</span><h3>Construction</h3><p>General construction, extensions, framing, and finishing under one roof.</p></div>
+      <div class="step"><span class="sn">04</span><h3>Scrap &amp; salvage</h3><p>Steel, copper, and material recovery, recycled responsibly.</p></div>
     </div>
   </div></section>
 

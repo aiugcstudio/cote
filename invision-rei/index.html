@@ -139,6 +139,11 @@
     .gallery{grid-template-columns:1fr;}.cta-band{flex-direction:column;align-items:flex-start;}
     .foot-top{grid-template-columns:1fr;}
   }
+  .statband{background:var(--navy);border-radius:26px;padding:60px 50px;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;color:#fff;}
+  .statband .st{text-align:center;}
+  .statband .st b{font-family:var(--head);font-size:2.9rem;font-weight:650;letter-spacing:-0.035em;display:block;line-height:1;}
+  .statband .st span{color:rgba(255,255,255,.58);font-size:.88rem;margin-top:12px;display:block;letter-spacing:.02em;}
+  @media(max-width:760px){.statband{grid-template-columns:repeat(2,1fr);gap:34px 20px;}}
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -221,6 +226,15 @@
         <li>Conservative underwriting and institutional-grade risk management</li>
         <li>Transparent, asset-backed opportunities aligned with investor objectives</li>
       </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="statband">
+      <div class="st"><b>30+</b><span>Years engineering &amp; building</span></div>
+      <div class="st"><b>3</b><span>Countries built across</span></div>
+      <div class="st"><b>Boutique</b><span>By design, never volume</span></div>
+      <div class="st"><b>Fort Lauderdale</b><span>South Florida focus</span></div>
     </div>
   </div></section>
 
