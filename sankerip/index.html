@@ -28,10 +28,14 @@
 
   /* hero */
   .hero{position:relative;min-height:720px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy);}
-  .hero::before{content:"";position:absolute;inset:0;background:
+  .hero::before{content:"";position:absolute;inset:-4%;background:
     radial-gradient(1100px 620px at 78% 12%,rgba(91,108,240,.30),transparent 62%),
-    radial-gradient(900px 520px at 8% 96%,rgba(123,175,235,.16),transparent 60%),
-    linear-gradient(160deg,#0B1E3D 0%,#0A1730 100%);}
+    radial-gradient(900px 520px at 8% 96%,rgba(123,175,235,.14),transparent 60%),
+    linear-gradient(160deg,rgba(11,30,61,.83) 0%,rgba(10,23,48,.91) 100%),
+    url('../assets/img/skr-hero.jpg') center/cover;
+    animation:skr-zoom 24s ease-in-out infinite alternate;}
+  @keyframes skr-zoom{from{transform:scale(1);}to{transform:scale(1.07);}}
+  @media(prefers-reduced-motion:reduce){.hero::before{animation:none;}}
   .grid-lines{position:absolute;inset:0;opacity:.5;
     background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
     background-size:58px 58px;mask-image:radial-gradient(1000px 700px at 70% 30%,#000,transparent 78%);}
@@ -152,6 +156,59 @@
     .quote{padding:56px 34px;}.quote p{font-size:1.7rem;}
   }
   @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}}
+
+  /* ---- icon tiles on cards ---- */
+  .svc .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+  .svc:hover .ic{transform:translateY(-3px);}
+  .svc .ic svg{width:26px;height:26px;}
+  .svc .no{position:absolute;top:28px;right:32px;margin:0;font-size:1.15rem;opacity:.5;}
+
+  /* ---- hero entrance ---- */
+  @keyframes skr-rise{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:none;}}
+  .hero-in>*{animation:skr-rise .85s cubic-bezier(.2,.7,.2,1) both;}
+  .hero-in>*:nth-child(1){animation-delay:.05s}.hero-in>*:nth-child(2){animation-delay:.15s}
+  .hero-in>*:nth-child(3){animation-delay:.27s}.hero-in>*:nth-child(4){animation-delay:.39s}
+  .hero-in>*:nth-child(5){animation-delay:.5s}
+
+  /* ---- staggered card reveal ---- */
+  .svc-grid .svc,.ins-grid .ins,.process .pstep{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease,border-color .25s ease,background .25s ease;}
+  .sec.in .svc-grid .svc,.sec.in .ins-grid .ins,.sec.in .process .pstep{opacity:1;transform:none;}
+  .sec.in .svc-grid .svc:nth-child(2){transition-delay:.08s}
+  .sec.in .svc-grid .svc:nth-child(3){transition-delay:.16s}
+  .sec.in .svc-grid .svc:nth-child(4){transition-delay:.24s}
+  .sec.in .ins-grid .ins:nth-child(2){transition-delay:.1s}
+  .sec.in .ins-grid .ins:nth-child(3){transition-delay:.2s}
+  .sec.in .process .pstep:nth-child(2){transition-delay:.08s}
+  .sec.in .process .pstep:nth-child(3){transition-delay:.16s}
+  .sec.in .process .pstep:nth-child(4){transition-delay:.24s}
+  .sec.in .process .pstep:nth-child(5){transition-delay:.32s}
+
+  /* ---- tech chips reveal ---- */
+  .tech-grid .chip{opacity:0;transform:translateY(12px) scale(.96);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1),border-color .2s,color .2s,background .2s;}
+  .tech.in .tech-grid .chip{opacity:1;transform:none;}
+
+  /* ---- trust numbers pop ---- */
+  .trust-item b{transform:scale(.82);opacity:0;transition:transform .6s cubic-bezier(.2,.9,.3,1.4),opacity .5s ease;}
+  .trust.in .trust-item b{transform:none;opacity:1;}
+  .trust.in .trust-item:nth-child(2) b{transition-delay:.1s}
+  .trust.in .trust-item:nth-child(3) b{transition-delay:.2s}
+  .trust.in .trust-item:nth-child(4) b{transition-delay:.3s}
+
+  /* ---- patent process band ---- */
+  .process{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+  .pstep{background:var(--surface);padding:38px 26px;}
+  .pstep:hover{background:var(--accent-soft);}
+  .pstep .pic{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;}
+  .pstep .pic svg{width:23px;height:23px;}
+  .pstep .pn{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:1.05rem;margin-bottom:8px;display:block;}
+  .pstep h3{font-size:1.12rem;margin-bottom:8px;letter-spacing:-0.02em;}
+  .pstep p{color:var(--soft);font-size:.92rem;line-height:1.5;}
+  @media(max-width:900px){.process{grid-template-columns:1fr;}}
+
+  @media(prefers-reduced-motion:reduce){
+    .hero-in>*{animation:none;}
+    .svc-grid .svc,.ins-grid .ins,.process .pstep,.tech-grid .chip,.trust-item b{opacity:1;transform:none;transition:none;}
+  }
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
@@ -191,10 +248,22 @@
     <h2>Full-service IP counsel, from <em>filing to strategy</em>.</h2>
     <p class="sec-lead">As scientists, engineers, and patent practitioners, we cover every stage of protecting and leveraging your intellectual property.</p>
     <div class="svc-grid">
-      <div class="svc"><span class="no">01</span><h3>Patent Prosecution</h3><p>As scientists and engineers, we are able to work with both inventors and patent examiners to secure litigation-ready patent rights throughout the world.</p></div>
-      <div class="svc"><span class="no">02</span><h3>IP Strategy</h3><p>As corporate priorities evolve, an IP overview can assess the quality, relevance, and diversity of the patent portfolio, bringing it into alignment with strategic objectives.</p></div>
-      <div class="svc"><span class="no">03</span><h3>Freedom to Operate</h3><p>Identifying what competitors already own is crucial. An FTO search provides an accurate, actionable assessment to make informed business decisions before large potential investments.</p></div>
-      <div class="svc"><span class="no">04</span><h3>IP Due Diligence</h3><p>Our IP counsel, with expertise in science, patent prosecution, and patent litigation, provides objective assessments of the value of IP portfolios for their potential sale or license.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><span class="no">01</span><h3>Patent Prosecution</h3><p>As scientists and engineers, we are able to work with both inventors and patent examiners to secure litigation-ready patent rights throughout the world.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span class="no">02</span><h3>IP Strategy</h3><p>As corporate priorities evolve, an IP overview can assess the quality, relevance, and diversity of the patent portfolio, bringing it into alignment with strategic objectives.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="no">03</span><h3>Freedom to Operate</h3><p>Identifying what competitors already own is crucial. An FTO search provides an accurate, actionable assessment to make informed business decisions before large potential investments.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 21h12M12 6l7 2M12 6 5 8"/><path d="M5 8l-2.5 5a2.5 2.5 0 0 0 5 0L5 8Zm14 0-2.5 5a2.5 2.5 0 0 0 5 0L19 8Z"/></svg></span><span class="no">04</span><h3>IP Due Diligence</h3><p>Our IP counsel, with expertise in science, patent prosecution, and patent litigation, provides objective assessments of the value of IP portfolios for their potential sale or license.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" id="process"><div class="wrap">
+    <span class="eyebrow">Our process</span>
+    <h2 style="margin-bottom:52px;">From invention to <em>granted patent</em>.</h2>
+    <div class="process">
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V18h8v-3.3A7 7 0 0 0 12 2Z"/></svg></span><span class="pn">01</span><h3>Disclosure</h3><p>We sit with your inventors to capture exactly what is new and worth protecting.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span class="pn">02</span><h3>Search &amp; strategy</h3><p>We assess the prior-art landscape and shape a claim strategy that holds up.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><span class="pn">03</span><h3>Drafting &amp; filing</h3><p>We draft litigation-ready applications and file with the USPTO and abroad.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span><span class="pn">04</span><h3>Prosecution</h3><p>We work through office actions with examiners, all the way to allowance.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></span><span class="pn">05</span><h3>Grant &amp; portfolio</h3><p>We manage the granted portfolio and keep it aligned with your business.</p></div>
     </div>
   </div></section>
 
@@ -225,10 +294,10 @@
     <h2>Big Law experience, <em>without the big-law price</em>.</h2>
     <p class="sec-lead">The pedigree of a large firm, delivered with the focus, speed, and efficiency of a lean, technically deep team.</p>
     <div class="svc-grid stagger">
-      <div class="svc"><span class="no">01</span><h3>Scientists and engineers as counsel</h3><p>Our practitioners hold advanced degrees in science and engineering, with industry experience alongside patent law backgrounds. We speak your inventors&rsquo; language across AI, semiconductors, optics, medical devices, and cybersecurity.</p></div>
-      <div class="svc"><span class="no">02</span><h3>Enterprise expertise, lean overhead</h3><p>Founded by a former Morgan Lewis partner, we apply enterprise-level expertise while keeping overhead low. That means high quality without the high price of traditional big law.</p></div>
-      <div class="svc"><span class="no">03</span><h3>Meticulous docketing and operations</h3><p>Patent deadlines are unforgiving. We pair experienced personnel with rigorous docketing discipline and enterprise-grade IT systems to keep every matter secure and on schedule.</p></div>
-      <div class="svc"><span class="no">04</span><h3>Global, litigation-ready protection</h3><p>We work with inventors, the US Patent Office, and associates throughout the world to build strong international portfolios of patents and trade secrets that stand up to scrutiny.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"/><ellipse cx="12" cy="12" rx="10" ry="4.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(120 12 12)"/></svg></span><span class="no">01</span><h3>Scientists and engineers as counsel</h3><p>Our practitioners hold advanced degrees in science and engineering, with industry experience alongside patent law backgrounds. We speak your inventors&rsquo; language across AI, semiconductors, optics, medical devices, and cybersecurity.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-5h6v5"/><path d="M8 8h.01M12 8h.01M16 8h.01M8 12h.01M12 12h.01M16 12h.01"/></svg></span><span class="no">02</span><h3>Enterprise expertise, lean overhead</h3><p>Founded by a former Morgan Lewis partner, we apply enterprise-level expertise while keeping overhead low. That means high quality without the high price of traditional big law.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="M12 13v3l2 1"/></svg></span><span class="no">03</span><h3>Meticulous docketing and operations</h3><p>Patent deadlines are unforgiving. We pair experienced personnel with rigorous docketing discipline and enterprise-grade IT systems to keep every matter secure and on schedule.</p></div>
+      <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg></span><span class="no">04</span><h3>Global, litigation-ready protection</h3><p>We work with inventors, the US Patent Office, and associates throughout the world to build strong international portfolios of patents and trade secrets that stand up to scrutiny.</p></div>
     </div>
   </div></section>
 
@@ -342,7 +411,7 @@
     <div class="foot-bot"><span>&copy; 2026 SankerIP</span><span>Top AI patent law firm &amp; attorneys in Silicon Valley</span></div>
   </div></footer>
 <style>/*cote-reveal*/.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform;}.reveal.in{opacity:1;transform:none;}@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}</style>
-<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec,.tech,.award,.trust'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});})();</script>
 <style>/*cote-polish*/
 .svcard,.proj{overflow:hidden;}
 .svcard,.proj,.card,.revcard,.reviewcard,.area-item,.logotile{transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s cubic-bezier(.2,.6,.2,1);}
