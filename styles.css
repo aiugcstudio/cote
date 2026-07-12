@@ -1261,3 +1261,28 @@ section[id] { scroll-margin-top: 84px; }
 @media (max-width: 600px) {
   .arc-cta.btn-book { padding: 16px 30px; }
 }
+
+/* ============ Refinements v3 ============ */
+
+/* testimonial faces */
+.testi-face { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 16px; }
+
+/* hero: centered blob behind centered content + tighter rhythm */
+.hero-blob { left: 50%; right: auto; margin-left: -460px; top: -210px; width: 920px; height: 820px; opacity: .5; }
+[data-theme="dark"] .hero-blob { opacity: .38; }
+.trust-strip { padding-top: 50px; }
+.hero { padding-bottom: 26px; }
+
+/* compare: cross/tick vertically centered with the text */
+.compare tbody td:nth-child(2)::before,
+.compare tbody td.cmp-hero::before { display: inline-flex; vertical-align: middle; margin-top: -2px; }
+
+/* pricing: top-aligned panel, larger wordmark + price */
+.price-full { align-items: start; }
+.price-full .price-brand { font-size: 3rem; margin-bottom: 22px; }
+.price-full .price-amt { font-size: 4.4rem; margin-bottom: 34px; }
+.price-full .price-desc { font-size: 1.02rem; margin-bottom: 34px; }
+
+@media (max-width: 980px) {
+  .hero-blob { margin-left: -300px; width: 620px; }
+}
