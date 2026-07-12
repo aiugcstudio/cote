@@ -2,10 +2,19 @@
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BlueLine Plumbing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../demo.css">
-<style>:root{--d-accent:#1E63F0;--d-photo:url('../../assets/img/plumb.jpg');}</style>
-</head><body class="v1">
+<style>
+  :root{--d-ink:#0C0E11;--d-accent:#5B8DEF;--d-head:"Schibsted Grotesk",sans-serif;--d-photo:url('../../assets/img/plumb.jpg');}
+  body::before{content:"";position:fixed;top:-24%;left:50%;transform:translateX(-50%);width:1000px;height:680px;background:radial-gradient(closest-side,rgba(91,141,239,.2),rgba(91,141,239,0) 70%);pointer-events:none;z-index:0;}
+  .dwrap{position:relative;z-index:1;}
+  .v1 h1{letter-spacing:-0.045em;}
+  .dnav-in{backdrop-filter:blur(10px);}
+  .dhero-photo{box-shadow:0 40px 120px rgba(0,0,0,.6);}
+  .dhero-txt{position:relative;}
+  .dhero-txt::after{content:"Licensed & insured · Master Plumber #ML-4471";display:block;margin-top:22px;font-size:.82rem;letter-spacing:.02em;color:rgba(255,255,255,.4);}
+</style>
+</head><body class="v1 td">
 <div class="dwrap">
   <nav class="dnav"><div class="dnav-in">
     <a class="dbrand"><span class="m">B</span>BlueLine Plumbing</a>

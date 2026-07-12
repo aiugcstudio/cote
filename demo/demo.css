@@ -54,6 +54,8 @@ img { display: block; max-width: 100%; }
 .td .dfloat { background: #1E2129; box-shadow: 0 16px 44px rgba(0,0,0,.5); }
 .td .dfloat .dftxt b { color: #fff; }
 .td .dfloat .dftxt span { color: rgba(255,255,255,.6); }
+.td .dhero p { color: rgba(255,255,255,.72); }
+.td h1 { color: #fff; }
 
 /* ---- V1: centered, full-width photo below ---- */
 .v1 .dhero { text-align: center; padding: 76px 0 0; }
