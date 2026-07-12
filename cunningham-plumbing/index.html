@@ -3,19 +3,19 @@
 <title>Cunningham Plumbing &amp; Heating — Master Plumbers Serving Greater Boston Since 1992</title>
 <meta name="description" content="Cunningham Plumbing & Heating: 30+ years of master plumbing and heating across Greater Boston. Commercial, residential, boilers, radiant heat, and more. Call (617) 787-5100.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..750;1,14..32,400..750&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400..600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E1420'/%3E%3Ctext x='16' y='22' font-family='Space Grotesk,sans-serif' font-weight='700' font-size='16' fill='%234C8DFF' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
   :root{
     --bg:#F5F5F1; --ink:#101620; --soft:#5A6472; --faint:#94A0B0; --line:#E4E4DE; --surface:#FFFFFF;
     --navy:#0E1420; --accent:#2B4E86; --accent-soft:#E7ECF5;
-    --head:"Fraunces",Georgia,serif; --sans:"Newsreader",Georgia,serif; --serif:"Fraunces",Georgia,serif;
+    --head:"Inter",-apple-system,sans-serif; --sans:"Inter",-apple-system,sans-serif; --serif:"Source Serif 4",Georgia,serif;
   }
-  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.62;-webkit-font-smoothing:antialiased;font-size:19px;font-weight:400;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
   .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
   a{text-decoration:none;color:inherit;}
-  h1,h2,h3{font-family:var(--head);font-weight:500;letter-spacing:-0.015em;line-height:1.04;}
+  h1,h2,h3{font-family:var(--head);font-weight:650;letter-spacing:-0.035em;line-height:1.02;}
   .stars{color:#FFC13D;letter-spacing:1px;}
 
   /* nav */
@@ -33,8 +33,8 @@
   .hero-in{position:relative;padding:150px 0 90px;max-width:760px;}
   .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:9px 18px;border-radius:100px;font-size:.86rem;font-weight:500;margin-bottom:30px;}
   .pill .dot{width:8px;height:8px;border-radius:50%;background:#37E28E;}
-  h1{font-size:5.2rem;margin-bottom:28px;letter-spacing:-0.02em;line-height:1.02;}
-  h1 em{font-style:italic;font-weight:400;color:#9FC0FF;}
+  h1{font-size:5rem;margin-bottom:28px;font-weight:680;letter-spacing:-0.05em;line-height:.99;}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:#9FC0FF;letter-spacing:-0.02em;}
   .hero p{font-size:1.3rem;font-weight:300;color:rgba(255,255,255,.84);max-width:540px;margin-bottom:40px;}
   .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
   .btn-p{background:var(--accent);color:#fff;padding:17px 36px;border-radius:100px;font-weight:500;font-size:1.05rem;box-shadow:0 12px 34px rgba(16,22,32,.26);}
@@ -105,7 +105,31 @@
   .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
   .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.86rem;flex-wrap:wrap;gap:10px;}
 
+  /* google reviews band */
+  .reviews{background:var(--surface);border-bottom:1px solid var(--line);}
+  .rev-in{display:flex;align-items:center;justify-content:center;gap:30px;padding:38px 0;flex-wrap:wrap;}
+  .g-badge{width:44px;height:44px;flex:none;}
+  .g-badge svg{width:100%;height:100%;}
+  .rev-score{text-align:left;}
+  .rev-score .rstars{color:#FFB400;font-size:1.5rem;letter-spacing:2px;display:block;line-height:1;}
+  .rev-score p{color:var(--soft);font-size:1rem;margin-top:6px;}
+  .rev-score b{color:var(--ink);font-weight:600;}
+  .rev-cta{background:var(--ink);color:#fff;padding:14px 28px;border-radius:100px;font-weight:600;font-size:.95rem;white-space:nowrap;}
+  .rev-cta:hover{background:var(--accent);}
+  .rev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .rev-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 30px;transition:.25s;}
+  .rev-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(16,22,32,.09);}
+  .rev-card-top{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+  .rev-card-top img{width:50px;height:50px;border-radius:50%;object-fit:cover;}
+  .rev-card-top b{font-weight:600;display:block;font-size:1.02rem;}
+  .rev-card-top .rc-stars{color:#FFB400;font-size:.9rem;letter-spacing:1px;}
+  .rev-card p{color:var(--soft);font-size:1.02rem;line-height:1.5;}
+  .rc-src{margin-top:18px;display:flex;align-items:center;gap:7px;font-size:.82rem;color:var(--faint);}
+  .rc-src svg{width:15px;height:15px;}
+
   @media(max-width:900px){
+    .rev-cards{grid-template-columns:1fr;}
+    .rev-in{gap:18px;}.rev-score{text-align:center;}
     h1{font-size:3.2rem;}.hero-in{padding-top:130px;}
     .trust-in{grid-template-columns:repeat(2,1fr);}.trust-item:nth-child(3){border-left:0;}
     .svc-grid{grid-template-columns:1fr;}.split{grid-template-columns:1fr;gap:40px;}.split-photo{height:320px;}
@@ -138,10 +162,39 @@
     <div class="trust-item"><b>10+</b><span>Industry awards</span></div>
   </div></div>
 
+  <section class="reviews" id="reviews"><div class="wrap rev-in">
+    <span class="g-badge"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1-.34-2.09c0-.73.13-1.43.34-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.93l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38Z"/></svg></span>
+    <div class="rev-score">
+      <span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <p><b>50+ five-star reviews</b> from clients across Greater Boston</p>
+    </div>
+    <a class="rev-cta" href="https://www.google.com/search?q=Cunningham+Plumbing+%26+Heating+Brighton+MA" target="_blank" rel="noopener">Read reviews on Google</a>
+  </div></section>
+
+  <section class="sec" style="padding:72px 0 0;"><div class="wrap">
+    <div class="rev-cards">
+      <div class="rev-card">
+        <div class="rev-card-top"><img src="../assets/img/f1.jpg" alt=""><div><b>Michael D.</b><span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div>
+        <p>Jack and his crew replaced our boiler in a single day and left the basement cleaner than they found it. Genuine professionals, start to finish.</p>
+        <div class="rc-src"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1-.34-2.09c0-.73.13-1.43.34-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.93l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38Z"/></svg>Posted on Google</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-card-top"><img src="../assets/img/f8.jpg" alt=""><div><b>Sarah K.</b><span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div>
+        <p>Called on a Sunday with a burst pipe and they were out within the hour. Fair price, spotless work, and no runaround. Exactly who you want to call.</p>
+        <div class="rc-src"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1-.34-2.09c0-.73.13-1.43.34-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.93l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38Z"/></svg>Posted on Google</div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-card-top"><img src="../assets/img/f5.jpg" alt=""><div><b>Robert P.</b><span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div>
+        <p>We've used Cunningham for every property we manage in Brighton for years. Reliable, honest, and they always do it right the first time.</p>
+        <div class="rc-src"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1-.34-2.09c0-.73.13-1.43.34-2.09V7.07H2.18A11 11 0 0 0 1 12c0 1.77.42 3.44 1.18 4.93l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38Z"/></svg>Posted on Google</div>
+      </div>
+    </div>
+  </div></section>
+
   <section class="sec" id="services"><div class="wrap">
     <span class="eyebrow">What we do</span>
     <h2>One crew for every pipe, boiler, and <em>system</em>.</h2>
-    <p class="sec-lead">Commercial, residential, and retail, handled by licensed master plumbers and pipefitters, start to finish.</p>
+    <p class="sec-lead">Quality, cost-efficient work across commercial and retail units, multi-residential, and luxury residential, handled by licensed master plumbers and pipefitters, start to finish.</p>
     <div class="svc-grid">
       <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg></span><h3>Commercial</h3><p>Full plumbing and heating for buildings, storefronts, and facilities across Greater Boston.</p></div>
       <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></span><h3>Residential</h3><p>Repairs, remodels, and installs for homes, done clean and done to last.</p></div>
@@ -157,7 +210,7 @@
     <div>
       <span class="eyebrow">The Cunningham standard</span>
       <h2>Built on 30 years of <em>doing it right</em>.</h2>
-      <p>Founded by master plumber and pipefitter Jack Cunningham in 1992, this is a company that never learned to cut corners. Every job gets the same care, whether it's a burst pipe or a full mechanical build-out.</p>
+      <p>Established by master plumber Jack Cunningham in 1992, Cunningham has served the Greater Boston market for 30+ years. We work closely with every client, bringing recommendations and ideas built on three decades in the field, and we never learned to cut corners.</p>
       <ul>
         <li>Licensed master plumbers and pipefitters on every job</li>
         <li>Full transparency, from quote to final walkthrough</li>
