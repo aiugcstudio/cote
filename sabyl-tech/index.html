@@ -87,7 +87,38 @@ nav.scrolled{background:rgba(9,55,51,.95);backdrop-filter:blur(12px);box-shadow:
 .trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:#fff;line-height:1.15}
 .trust .t small{font-size:.8rem;color:rgba(207,230,226,.65)}
 
+/* MARQUEE */
+.marquee{background:var(--teal);color:#fff;overflow:hidden;border-top:1px solid var(--lineD);border-bottom:1px solid var(--lineD)}
+.marquee .track{display:flex;white-space:nowrap;animation:scrollx 32s linear infinite;width:max-content}
+.marquee .track span{display:inline-flex;align-items:center;padding:22px 0;margin-right:56px;font-family:var(--serif);font-style:italic;font-size:1.18rem;color:#fff}
+.marquee .track span::after{content:"\2726";color:var(--mint);font-style:normal;font-size:.62rem;margin-left:56px}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+.marquee:hover .track{animation-play-state:paused}
+
+/* before/after labels on results image */
+.res-img .lbl{position:absolute;top:18px;z-index:3;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 15px;border-radius:30px}
+.res-img .before{left:18px;background:rgba(9,55,51,.72);color:#fff;backdrop-filter:blur(4px)}
+.res-img .after{right:18px;background:var(--aqua);color:#06302C}
+.res-img .seal{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:3;background:#fff;color:var(--teal);border-radius:30px;padding:10px 20px;font-weight:700;font-size:.82rem;box-shadow:0 16px 34px -14px rgba(0,0,0,.45);display:flex;align-items:center;gap:8px;white-space:nowrap}
+.res-img .seal svg{width:16px;height:16px;stroke:var(--aqua);fill:none;stroke-width:2.6}
+
+/* hero glow + scroll cue */
+.hero-glow{position:absolute;z-index:1;width:540px;height:540px;right:-120px;top:6%;border-radius:50%;background:radial-gradient(circle,rgba(143,227,216,.2),transparent 68%);animation:floaty 13s ease-in-out infinite alternate;pointer-events:none}
+@keyframes floaty{to{transform:translate(-60px,50px)}}
+.scrollcue{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:11px;color:rgba(255,255,255,.68);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase}
+.scrollcue i{width:1px;height:44px;background:linear-gradient(rgba(255,255,255,.75),transparent);animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%,100%{opacity:.3;transform:scaleY(.5)}50%{opacity:.9;transform:scaleY(1)}}
+
+/* area stat */
+.area-flex{display:flex;gap:44px;align-items:center;flex-wrap:wrap}
+.area-flex .towns{flex:1;min-width:280px;margin-top:0}
+.area-stat{flex:none;background:var(--teal);color:#fff;border-radius:20px;padding:38px 44px;text-align:center;box-shadow:0 34px 64px -36px rgba(9,55,51,.55)}
+.area-stat b{font-family:var(--serif);font-size:3.4rem;display:block;line-height:1;color:#fff}
+.area-stat span{font-size:.84rem;color:var(--mint);letter-spacing:.05em}
+@media(max-width:600px){.hero-glow{display:none}}
+
 /* SECTION base */
+
 .sec{padding:118px 0}
 .sec-head{max-width:680px;margin-bottom:56px}
 .sec-head.center{margin:0 auto 58px;text-align:center}
@@ -242,6 +273,7 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
 </nav>
 
 <header class="hero" id="top">
+  <div class="hero-glow"></div>
   <div class="hero-bg"><img src="../assets/img/st-u2.jpg" alt="Freshly cleaned carpet and rug in a bright living room"></div>
   <div class="hero-in">
     <span class="chip">
@@ -260,6 +292,7 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
       <div><b>Quad Cities</b><span>&amp; surrounding areas</span></div>
     </div>
   </div>
+  <div class="scrollcue">Scroll<i></i></div>
 </header>
 
 <section class="trust">
@@ -273,7 +306,7 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
 
 <section class="sec results" id="results">
   <div class="wrap res-grid">
-    <div class="res-img reveal"><img src="../assets/img/st-gimmicks.jpg" alt="Before and after carpet cleaning by Sabyl Tech"></div>
+    <div class="res-img reveal"><span class="lbl before">Before</span><span class="lbl after">After</span><img src="../assets/img/st-gimmicks.jpg" alt="Before and after carpet cleaning by Sabyl Tech"><span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Guaranteed thorough</span></div>
     <div class="res-copy reveal">
       <span class="eyebrow">Real results</span>
       <h2>No gimmicks. Just a <em>genuinely deep clean.</em></h2>
@@ -341,9 +374,7 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
       <h2>Proudly serving the <em>Quad Cities.</em></h2>
       <p>Based in Moline and caring for homes and businesses across the Quad Cities and surrounding areas.</p>
     </div>
-    <div class="towns reveal">
-      <span>Moline</span><span>Rock Island</span><span>East Moline</span><span>Davenport</span><span>Bettendorf</span><span>Orion</span><span>Silvis</span><span>Milan</span><span>Coal Valley</span><span>Geneseo</span>
-    </div>
+    <div class="area-flex reveal"><div class="area-stat"><b>10+</b><span>Quad Cities towns served</span></div><div class="towns"><span>Moline</span><span>Rock Island</span><span>East Moline</span><span>Davenport</span><span>Bettendorf</span><span>Orion</span><span>Silvis</span><span>Milan</span><span>Coal Valley</span><span>Geneseo</span></div></div>
   </div>
 </section>
 
