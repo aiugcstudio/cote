@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freedom Welding &amp; Fabrication · Custom metal fabrication near St. Louis, MO</title>
+<meta name="description" content="Custom fabrication, mobile welding, cutting and metal processing near St. Louis. AWS D1.1 certified welders, over 30 years of steel-industry experience. Concept through completion, any scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2323262B'/%3E%3Cpath d='M28 30 h44 v10 h-30 v14 h26 v10 h-26 v16 h-14 z' fill='%23E8622A'/%3E%3C/svg%3E">
+<style>
+:root{
+  --steel:#23262B;
+  --steel-2:#17191D;
+  --orange:#E8622A;
+  --orange-dk:#C44E1C;
+  --smoke:#EFEDEA;
+  --paper:#FAF9F7;
+  --white:#fff;
+  --ink:#20242A;
+  --muted:#5E6570;
+  --line:#E2DFDA;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.sec{padding:118px 0}
+h1,h2,h3{line-height:1.04;letter-spacing:-.02em}
+h1,h2{font-weight:900}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--orange);display:inline-block;margin-bottom:20px}
+em{font-style:italic;font-family:var(--serif);font-weight:500;color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;border:none;padding:17px 34px;border-radius:8px;font-family:var(--sans);font-weight:700;font-size:1rem;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--orange-dk);transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(232,98,42,.7)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{background:var(--steel);color:#fff;border-color:var(--steel);box-shadow:none}
+.sec-head{max-width:730px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{font-size:clamp(2.3rem,4.6vw,3.6rem);margin-bottom:18px;letter-spacing:-.03em}
+.sec-head p{color:var(--muted);font-size:1.12rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:.4s}
+nav.scrolled{background:rgba(35,38,43,.95);backdrop-filter:blur(14px);padding:12px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:900;font-size:1.15rem;letter-spacing:-.01em;color:#fff;text-transform:uppercase}
+.brand span{color:var(--orange)}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:600;color:rgba(255,255,255,.85);transition:.3s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--orange);color:#fff!important;padding:11px 22px;border-radius:7px;font-weight:700;font-size:.9rem}
+.nav-cta:hover{background:var(--orange-dk)}
+@media(max-width:860px){.nav-links a:not(.nav-cta){display:none}nav{background:rgba(35,38,43,.95)}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--steel)}
+.hero-bg{position:absolute;inset:0;background:url('../assets/img/fw-weld.jpg') center/cover;opacity:.55}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,25,29,.6) 0%,rgba(23,25,29,.4) 40%,rgba(23,25,29,.96) 100%)}
+.hero-in{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:150px 40px 80px;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:var(--orange);color:#fff;padding:8px 16px;border-radius:6px;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}
+.hero h1{font-size:clamp(3rem,8vw,6.6rem);font-weight:900;line-height:.98;letter-spacing:-.04em;max-width:15ch;margin-bottom:26px;text-transform:uppercase}
+.hero h1 em{color:var(--orange);font-family:var(--serif);text-transform:none;font-weight:500}
+.hero p.lead{font-size:1.28rem;max-width:56ch;color:rgba(255,255,255,.85);margin-bottom:38px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.34)}
+.hero .btn-ghost:hover{background:#fff;color:var(--steel)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:56px;border-top:1px solid rgba(255,255,255,.16);padding-top:32px}
+.hero-stat .n{font-weight:900;font-size:2.7rem;line-height:1;color:var(--orange);letter-spacing:-.03em}
+.hero-stat .l{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);margin-top:8px}
+@media(max-width:640px){.hero-stats{grid-template-columns:1fr 1fr;gap:26px}}
+
+/* MARQUEE */
+.marquee{background:var(--orange);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap;border-top:3px solid var(--steel);border-bottom:3px solid var(--steel)}
+.marquee-track{display:inline-flex;gap:38px;animation:scroll-x 30s linear infinite}
+.marquee-track span{font-weight:800;font-size:1.05rem;letter-spacing:.03em;text-transform:uppercase}
+.marquee-track span::after{content:"◆";margin-left:38px;font-size:.7rem;vertical-align:middle}
+@keyframes scroll-x{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+/* VALUES / INTRO */
+.intro{background:var(--paper)}
+.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.intro-copy .big{font-family:var(--serif);font-size:clamp(1.7rem,2.7vw,2.3rem);line-height:1.32;font-weight:500;margin-bottom:24px}
+.intro-copy .big em{color:var(--orange-dk)}
+.intro-copy p{color:var(--muted);margin-bottom:18px}
+.intro-sign{display:flex;align-items:center;gap:16px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.intro-sign .av{width:54px;height:54px;border-radius:12px;background:var(--steel);color:var(--orange);display:grid;place-items:center;font-weight:900;font-size:1.2rem}
+.intro-sign .who b{display:block;font-weight:700}.intro-sign .who span{font-size:.88rem;color:var(--muted)}
+.values{display:grid;gap:16px}
+.val{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:28px 30px;border-left:4px solid var(--orange)}
+.val h3{font-size:1.2rem;font-weight:800;margin-bottom:6px}
+.val p{color:var(--muted);font-size:.97rem}
+
+/* SERVICES */
+.services{background:var(--steel);color:#fff}
+.services .sec-head h2{color:#fff}.services .sec-head p{color:rgba(255,255,255,.72)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.svc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:38px;transition:.35s}
+.svc:hover{transform:translateY(-6px);background:rgba(255,255,255,.07);border-color:var(--orange)}
+.svc-ico{width:58px;height:58px;border-radius:14px;background:rgba(232,98,42,.16);display:grid;place-items:center;margin-bottom:22px;transition:.35s}
+.svc:hover .svc-ico{background:var(--orange)}
+.svc-ico svg{width:29px;height:29px;stroke:var(--orange);fill:none;stroke-width:1.6}
+.svc:hover .svc-ico svg{stroke:#fff}
+.svc h3{font-size:1.32rem;font-weight:700;margin-bottom:11px}
+.svc p{color:rgba(255,255,255,.72);font-size:.99rem}
+
+/* CERT BAND */
+.cert{background:var(--steel-2);color:#fff;text-align:center;padding:70px 0}
+.cert h2{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:500;max-width:22ch;margin:0 auto 14px}
+.cert h2 em{color:var(--orange)}
+.cert p{color:rgba(255,255,255,.72);max-width:52ch;margin:0 auto}
+.cert .chips{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.cert .chips span{background:rgba(232,98,42,.16);border:1px solid rgba(232,98,42,.4);border-radius:100px;padding:11px 22px;font-weight:700;font-size:.92rem}
+
+/* AREA */
+.area{background:var(--paper)}
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.area h2{font-size:clamp(2.1rem,4vw,3rem);margin-bottom:18px}.area h2 em{color:var(--orange-dk)}
+.area p{color:var(--muted);margin-bottom:24px}
+.area-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:38px}
+.area-card .row{display:flex;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}
+.area-card .row:last-child{border-bottom:none}
+.area-card .ic{width:44px;height:44px;border-radius:11px;background:var(--smoke);display:grid;place-items:center;flex:none}
+.area-card .ic svg{width:21px;height:21px;stroke:var(--orange)}
+.area-card .lb{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.area-card .vl{font-size:1.02rem;font-weight:700}
+
+/* FAQ */
+.faq{background:var(--smoke)}
+.faq-wrap{max-width:840px;margin:52px auto 0}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:15px;margin-bottom:13px;overflow:hidden;transition:box-shadow .3s}
+.faq-item[open]{box-shadow:0 22px 46px -34px rgba(35,38,43,.4)}
+.faq-item summary{list-style:none;cursor:pointer;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-weight:700;font-size:1.16rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .pl{flex:none;width:30px;height:30px;border-radius:7px;background:var(--smoke);color:var(--steel);display:grid;place-items:center;transition:.3s;font-size:1.3rem;line-height:0}
+.faq-item[open] summary .pl{transform:rotate(45deg);background:var(--orange);color:#fff}
+.faq-item .a{padding:0 30px 25px;color:var(--muted);font-size:1.02rem;line-height:1.65}
+
+/* CONTACT */
+.contact{background:var(--steel-2);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.contact h2{font-size:clamp(2.4rem,4.6vw,3.6rem);margin-bottom:20px;text-transform:uppercase;letter-spacing:-.03em}.contact h2 em{color:var(--orange);text-transform:none}
+.contact p.sub{color:rgba(255,255,255,.78);font-size:1.14rem;margin-bottom:34px;max-width:46ch}
+.contact-btns{display:flex;gap:14px;flex-wrap:wrap}
+.contact .btn-ghost{color:#fff;border-color:rgba(255,255,255,.32)}
+.contact .btn-ghost:hover{background:#fff;color:var(--steel)}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:42px}
+.cc-row{display:flex;align-items:center;gap:16px;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.cc-row:last-child{border-bottom:none}
+.cc-row .ic{width:46px;height:46px;border-radius:11px;background:rgba(232,98,42,.16);display:grid;place-items:center;flex:none}
+.cc-row .ic svg{width:22px;height:22px;stroke:var(--orange)}
+.cc-row .lb{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.55)}
+.cc-row .vl{font-size:1.02rem;font-weight:600}
+
+/* FOOTER */
+footer{background:var(--steel-2);border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.6);padding:48px 0;text-align:center;font-size:.9rem}
+footer .fbrand{font-weight:900;font-size:1.2rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
+footer .fbrand span{color:var(--orange)}
+footer a{color:var(--orange)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}.stagger.in>*:nth-child(5){transition-delay:.32s}.stagger.in>*:nth-child(6){transition-delay:.4s}
+@media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1;transform:none}}
+@media(max-width:900px){.sec{padding:80px 0}.wrap{padding:0 24px}.intro-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:44px}.svc-grid{grid-template-columns:1fr}.hero-in{padding-top:130px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="brand">Freedom <span>Welding</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:6363278228" class="nav-cta">636-327-8228</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-in">
+    <div class="hero-badge">AWS D1.1 certified · Near St. Louis, MO</div>
+    <h1>If it's <em>metal,</em> we can build it.</h1>
+    <p class="lead">Custom fabrication, mobile welding, cutting and metal processing, from concept through completion. Over 30 years in the steel industry, poured into projects of any scale.</p>
+    <div class="hero-btns">
+      <a href="tel:6363278228" class="btn">Request a quote</a>
+      <a href="#services" class="btn btn-ghost">See what we do</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">30+</div><div class="l">Years in steel</div></div>
+      <div class="hero-stat"><div class="n">AWS D1.1</div><div class="l">Certified welders</div></div>
+      <div class="hero-stat"><div class="n">Any</div><div class="l">Scale, any material</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Custom Fabrication</span><span>Mobile Welding</span><span>Metal Processing</span><span>Plasma &amp; Oxy-Fuel Cutting</span><span>Aluminum &amp; Stainless</span><span>Handrails &amp; Stairs</span>
+    <span>Custom Fabrication</span><span>Mobile Welding</span><span>Metal Processing</span><span>Plasma &amp; Oxy-Fuel Cutting</span><span>Aluminum &amp; Stainless</span><span>Handrails &amp; Stairs</span>
+  </div>
+</div>
+
+<!-- INTRO / VALUES -->
+<section class="sec intro" id="about">
+  <div class="wrap intro-grid">
+    <div class="intro-copy reveal">
+      <span class="eyebrow">Built the hard way</span>
+      <p class="big">Dave started traveling the country at 17, learning the fabrication trade <em>from the bottom up.</em></p>
+      <p>More than 30 years of steel-industry experience later, and after running several fab shops for others, Dave was called to start his own. Freedom Welding &amp; Fabrication is the result: a shop built to give every client the same quality of work on every project, from concept through completion.</p>
+      <p>Alongside Dave, Mandy runs the business side, bringing over a decade in management and industrial customer service to keep every job on track.</p>
+      <div class="intro-sign">
+        <div class="av">DH</div>
+        <div class="who"><b>Dave &amp; Mandy Hamrick</b><span>Owners, Freedom Welding &amp; Fabrication</span></div>
+      </div>
+    </div>
+    <div class="values reveal">
+      <div class="val"><h3>Honesty</h3><p>Truthfulness, sincerity and fairness, on every quote and every job.</p></div>
+      <div class="val"><h3>Integrity</h3><p>Choosing to do what is right instead of what is comfortable.</p></div>
+      <div class="val"><h3>Quality</h3><p>In the work and in the people, because both are what you're hiring.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>One shop, the <em>whole process.</em></h2>
+      <p>From a single custom part to full production runs, our certified team handles fabrication, welding, cutting and processing under one roof.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V9M18 21V9M4 9h16M9 21v-6h6v6M8 5l4-2 4 2"/></svg></div>
+        <h3>Custom Fabrication</h3>
+        <p>Handrails, stairs, catwalks, mezzanines, gates and more. ADA-compliant rails and OSHA-approved stairs, with full detailing services.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-3 3-2-2-6 6a2 2 0 01-3-3l6-6-2-2 3-3zM4 20l4-4"/></svg></div>
+        <h3>Welding</h3>
+        <p>Our certified team performs the highest quality work, including portable and mobile welding, heavy equipment repair, aluminum and stainless.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg></div>
+        <h3>Cutting</h3>
+        <p>Superior cut quality on fully automated and manual saws, plus plasma and oxy-fuel cutting, increasing yield and minimizing drop.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4zM8 7V4h8v3M9 12h6"/></svg></div>
+        <h3>Metal Processing</h3>
+        <p>An assortment of saws and machinery for your processing needs, from single jobs to production quantities on programmable bandsaws.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4zM3 12l9 4 9-4M3 17l9 4 9-4"/></svg></div>
+        <h3>Metal Sales</h3>
+        <p>Ornamental metal components in a variety of shapes, sizes and materials, for DIY projects and full-service clients alike.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 3l2 4 4 1-3 3 1 4-4-2-4 2 1-4-3-3 4-1 2-4z"/></svg></div>
+        <h3>Custom Manufacturing</h3>
+        <p>Drilling, punching, tapping, production welding, weld positioning and sheet-metal bending, plus one-off custom builds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERT BAND -->
+<section class="cert">
+  <div class="wrap">
+    <span class="eyebrow">Certified &amp; capable</span>
+    <h2>AWS D1.1 certified welders, in a range of <em>materials and processes.</em></h2>
+    <p>ADA-compliant handrails, OSHA-approved stairs, and safe welding procedures performed on your site or in our shop.</p>
+    <div class="chips">
+      <span>AWS D1.1 Certified</span>
+      <span>ADA Compliant</span>
+      <span>OSHA Approved</span>
+      <span>Aluminum &amp; Stainless</span>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="sec area">
+  <div class="wrap area-grid">
+    <div class="reveal">
+      <span class="eyebrow">Where we work</span>
+      <h2>Serving the <em>St. Louis region.</em></h2>
+      <p>Based in Troy and Wentzville, Missouri, we take on fabrication and welding across the greater St. Louis area, on site or in the shop.</p>
+      <a href="tel:6363278228" class="btn">Request a quote</a>
+    </div>
+    <div class="area-card reveal">
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="lb">Shop</div><div class="vl">1686 Sugar Grove Rd, Troy, MO 63379</div></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M3 21V7l6-4v18M9 21V11l6-2v12M15 21V9l6 2v10"/></svg></div><div><div class="lb">Serving</div><div class="vl">Greater St. Louis, MO</div></div></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M14 4l6 6-3 3-2-2-6 6a2 2 0 01-3-3l6-6-2-2 3-3z"/></svg></div><div><div class="lb">On site or in shop</div><div class="vl">Mobile welding available</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details class="faq-item"><summary>What kind of work do you take on?<span class="pl">+</span></summary><div class="a">Custom fabrication, welding, cutting and metal processing, from a single part to full production runs. Handrails, stairs, catwalks, mezzanines, gates and more, in steel, aluminum and stainless.</div></details>
+      <details class="faq-item"><summary>Are your welders certified?<span class="pl">+</span></summary><div class="a">Yes. Our team includes AWS D1.1 certified welders, certified in a variety of materials and processes, and we build to ADA and OSHA standards.</div></details>
+      <details class="faq-item"><summary>Do you offer mobile welding?<span class="pl">+</span></summary><div class="a">We do. Our certified welders can perform work at your site, including heavy equipment repairs, or in our shop, whichever suits the job.</div></details>
+      <details class="faq-item"><summary>Can you handle large projects?<span class="pl">+</span></summary><div class="a">Absolutely. We are set up for projects of any scale, from concept through completion, with the machinery and certified team to back it up.</div></details>
+      <details class="faq-item"><summary>How do I get a quote?<span class="pl">+</span></summary><div class="a">Call 636-327-8228 or email freedom@freedomweldingllc.com with your project, and we will get you a quote.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Start a project</span>
+      <h2>Let's build it in <em>steel.</em></h2>
+      <p class="sub">Call or email Freedom Welding &amp; Fabrication with your project, any scale, any material, and we will take it from concept to completion.</p>
+      <div class="contact-btns">
+        <a href="tel:6363278228" class="btn">Call 636-327-8228</a>
+        <a href="mailto:freedom@freedomweldingllc.com" class="btn btn-ghost">Email us</a>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div>
+        <div><div class="lb">Phone</div><div class="vl">636-327-8228</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div>
+        <div><div class="lb">Email</div><div class="vl">freedom@freedomweldingllc.com</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div><div class="lb">Shop</div><div class="vl">1686 Sugar Grove Rd, Troy, MO 63379</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 2l2.9 6.3L22 9.2l-5 4.9 1.2 7L12 17.8 5.8 21l1.2-7-5-4.9 7.1-.9L12 2z" stroke-linejoin="round"/></svg></div>
+        <div><div class="lb">Certified</div><div class="vl">AWS D1.1 welders</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Freedom <span>Welding &amp; Fabrication</span></div>
+    <p>Fabrication · Welding · Cutting · Metal Processing · Metal Sales · Greater St. Louis, MO</p>
+    <p style="margin-top:12px">636-327-8228 · 1686 Sugar Grove Rd, Troy, MO 63379 · AWS D1.1 certified</p>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
