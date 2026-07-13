@@ -1,317 +1,473 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Tree Doctor, Certified Arborist &amp; Tree Care on the Main Line, PA</title>
-<meta name="description" content="The Tree Doctor: ISA Certified Arborist Nate Mason offers expert pruning, tree and shrub health care, integrated pest management, risk assessments, removals, and arborist consulting for residential clients on Philadelphia's Main Line. Call 610.937.8389.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B4332'/%3E%3Cpath d='M13 9h6v4h4v6h-4v4h-6v-4H9v-6h4z' fill='%232E9E52'/%3E%3C/svg%3E">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tree Doctor | Certified Arborist &middot; Devon &amp; the Main Line</title>
+<meta name="description" content="The Tree Doctor LLC. ISA Certified Arborist and licensed pesticide applicator caring for trees, shrubs, and gardens across Devon and the Main Line, Pennsylvania. Pruning, plant health, risk assessments, and removals.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E3B2C'/%3E%3Cpath d='M16 6c5 3 6 8 3 12-1 1.6-3 2.4-3 2.4s-2-.8-3-2.4c-3-4-2-9 3-12Z' fill='%233E7C4F'/%3E%3Cpath d='M16 8v16' stroke='%23F4F1E8' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;}
-  :root{
-    --cream:#F6F5EF; --paper:#FBFAF4; --ink:#182A20; --soft:#516058; --faint:#8A988D; --line:#E4E4D9; --surface:#FFFFFF;
-    --forest:#1B4332; --forest-d:#123529; --green:#2E9E52; --green-d:#24803F; --green-soft:#E5F2E9;
-    --disp:"Playfair Display",Georgia,serif; --sans:"Inter",-apple-system,sans-serif;
-  }
-  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
-  .wrap{max-width:1220px;margin:0 auto;padding:0 44px;}
-  a{text-decoration:none;color:inherit;}
-  h1,h2,h3{font-family:var(--disp);font-weight:500;letter-spacing:-0.01em;line-height:1.08;}
-  .eyebrow{font-family:var(--sans);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green-d);display:inline-flex;align-items:center;gap:10px;}
-  .eyebrow::before{content:"+";color:var(--green);font-weight:700;font-size:1.1rem;line-height:1;}
-  .ict{width:54px;height:54px;border-radius:14px;background:var(--green-soft);color:var(--green-d);display:grid;place-items:center;flex:none;}
-  .ict svg{width:26px;height:26px;}
+:root{
+  --deep:#1E3B2C; --ink:#17251C; --pine:#14271D;
+  --bg:#F4F1E8; --paper:#FBFAF4;
+  --accent:#3E7C4F; --leaf:#7FB077; --sage:#9DB08E; --brass:#B0863A;
+  --line:rgba(23,37,28,.12); --muted:#5B6B5E;
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.05}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--brass)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:40px;transition:.25s;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--deep);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--deep);color:#fff}
+.btn-dark:hover{background:var(--pine);transform:translateY(-2px)}
 
-  /* nav */
-  .nav{position:absolute;top:0;left:0;right:0;z-index:20;}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:22px 0;}
-  .brand img{height:54px;width:auto;display:block;}
-  .nav-links{display:flex;gap:32px;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.86);}
-  .nav-links a{position:relative;}
-  .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.6,.2,1);}
-  .nav-links a:hover::after{transform:scaleX(1);}
-  .nav-call{background:var(--green);color:#fff;padding:13px 24px;border-radius:100px;font-weight:700;font-size:.9rem;transition:.25s;}
-  .nav-call:hover{background:var(--green-d);transform:translateY(-2px);}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:22px 40px;max-width:1280px;margin:0 auto}
+nav.scrolled{background:rgba(244,241,232,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--serif);font-size:1.32rem;font-weight:600;letter-spacing:-.01em}
+.brand span{display:block;font-family:var(--sans);font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.72;margin-top:1px}
+.nav-cta{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.92rem;color:#fff;border:1.5px solid rgba(255,255,255,.45);padding:11px 22px;border-radius:40px;transition:.3s}
+nav.scrolled .nav-cta{color:var(--deep);border-color:var(--deep)}
+.nav-cta:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 
-  /* hero */
-  .hero{position:relative;min-height:820px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--forest-d);}
-  .hero::before{content:"";position:absolute;inset:-4%;background:linear-gradient(100deg,rgba(15,40,30,.9) 0%,rgba(18,53,41,.74) 44%,rgba(27,67,50,.4) 100%),url('../assets/img/ttd-1.jpg') center 30%/cover;animation:heroZoom 28s ease-in-out infinite alternate;}
-  @keyframes heroZoom{from{transform:scale(1);}to{transform:scale(1.07);}}
-  .hero::after{content:"";position:absolute;top:-16%;right:-8%;width:52%;height:80%;background:radial-gradient(circle,rgba(46,158,82,.3),transparent 62%);pointer-events:none;z-index:0;animation:heroGlow 10s ease-in-out infinite alternate;}
-  @keyframes heroGlow{from{opacity:.45;transform:translate(0,0);}to{opacity:.9;transform:translate(-4%,4%);}}
-  @media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none;}}
-  .hero-in{position:relative;z-index:2;padding:150px 0 96px;max-width:820px;}
-  .hero .eyebrow{color:#9FE0B4;}.hero .eyebrow::before{color:#9FE0B4;}
-  .hero h1{font-size:5.4rem;font-weight:500;line-height:1.0;letter-spacing:-0.015em;margin:24px 0 26px;color:#fff;}
-  .hero h1 em{font-style:italic;color:#9FE0B4;font-weight:500;}
-  .hero .lead{font-size:1.26rem;color:rgba(255,255,255,.86);max-width:560px;margin-bottom:38px;font-weight:300;}
-  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
-  .btn-p{background:var(--green);color:#fff;padding:17px 34px;border-radius:100px;font-weight:700;font-size:1.02rem;transition:.25s;box-shadow:0 14px 36px rgba(46,158,82,.34);}
-  .btn-p:hover{background:var(--green-d);transform:translateY(-2px);}
-  .btn-t{color:#fff;font-weight:600;font-size:1.02rem;padding:16px 28px;display:inline-flex;align-items:center;gap:9px;transition:.25s;border:1.5px solid rgba(255,255,255,.32);border-radius:100px;}
-  .btn-t:hover{gap:14px;background:rgba(255,255,255,.08);}
-  .hero-note{display:flex;align-items:center;gap:12px;margin-top:34px;color:rgba(255,255,255,.82);font-size:.98rem;}
-  .hero-note svg{width:19px;height:19px;color:#9FE0B4;}
-  .hero-in > *{opacity:0;transform:translateY(24px);animation:rise .8s cubic-bezier(.2,.6,.2,1) forwards;}
-  .hero-in > *:nth-child(1){animation-delay:.1s;}.hero-in > *:nth-child(2){animation-delay:.22s;}
-  .hero-in > *:nth-child(3){animation-delay:.34s;}.hero-in > *:nth-child(4){animation-delay:.46s;}.hero-in > *:nth-child(5){animation-delay:.58s;}
-  @keyframes rise{to{opacity:1;transform:none;}}
-  @media(prefers-reduced-motion:reduce){.hero-in > *{opacity:1!important;transform:none!important;animation:none!important;}}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('../assets/img/td-a.jpg') center/cover;transform:scale(1.08);animation:heroZoom 18s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,39,29,.55) 0%,rgba(20,39,29,.15) 40%,rgba(20,39,29,.78) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding-bottom:78px}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);padding:9px 18px;border-radius:40px;font-size:.78rem;font-weight:600;letter-spacing:.04em;margin-bottom:26px}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3rem,7.2vw,6.4rem);font-weight:500;letter-spacing:-.025em;max-width:16ch}
+.hero h1 em{color:var(--leaf);font-weight:500}
+.hero p.lead{font-size:1.32rem;max-width:34ch;margin:26px 0 34px;color:rgba(255,255,255,.9);line-height:1.5}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.scrollcue{position:absolute;right:44px;bottom:40px;z-index:2;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;writing-mode:vertical-rl;opacity:.7;display:flex;align-items:center;gap:12px}
+.scrollcue::after{content:"";width:1px;height:46px;background:rgba(255,255,255,.6);animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.4);opacity:.3}50%{transform:scaleY(1);opacity:.9}}
 
-  /* trust bar */
-  .trust{background:var(--forest);border-top:1px solid rgba(255,255,255,.09);}
-  .trust-in{display:grid;grid-template-columns:repeat(4,1fr);}
-  .trust-item{padding:36px 26px;text-align:center;color:#fff;border-left:1px solid rgba(255,255,255,.1);}
-  .trust-item:first-child{border-left:0;}
-  .trust-item b{font-family:var(--disp);font-size:1.85rem;font-weight:500;display:block;letter-spacing:-0.01em;}
-  .trust-item b em{font-style:italic;color:#9FE0B4;}
-  .trust-item span{color:rgba(255,255,255,.55);font-size:.86rem;margin-top:4px;display:block;}
+/* TICKER / credentials */
+.creds{background:var(--deep);color:#EAF0E7;overflow:hidden;border-top:1px solid rgba(255,255,255,.06)}
+.creds .track{display:flex;gap:0;white-space:nowrap;animation:scroll 34s linear infinite;width:max-content}
+.creds .track span{display:inline-flex;align-items:center;gap:14px;padding:20px 34px;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:#DDE7D8}
+.creds .track span::after{content:"\2733";color:var(--leaf);font-style:normal;font-size:.7rem;margin-left:20px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.creds:hover .track{animation-play-state:paused}
 
-  /* sections */
-  .sec{padding:120px 0;}
-  .sec h2{font-size:3.4rem;font-weight:500;margin-bottom:16px;max-width:680px;}
-  .sec h2 em{font-style:italic;color:var(--green-d);}
-  .sec-lead{color:var(--soft);font-size:1.18rem;max-width:620px;margin-bottom:58px;}
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:660px;margin-bottom:60px}
+.sec-head h2{font-size:clamp(2.3rem,4.6vw,3.6rem);margin-top:20px}
+.sec-head h2 em{color:var(--accent)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px}
 
-  /* diagnosis split */
-  .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;}
-  .split.flip .split-photo{order:2;}
-  .split-photo{height:560px;border-radius:22px;background-size:cover;background-position:center;box-shadow:0 34px 74px -34px rgba(18,53,41,.4);}
-  .split h2{font-size:2.9rem;margin-bottom:18px;}
-  .split p{color:var(--soft);font-size:1.08rem;margin-bottom:18px;}
-  .flist{list-style:none;margin-top:24px;display:grid;gap:13px;}
-  .flist li{display:flex;gap:12px;align-items:flex-start;font-weight:500;color:var(--ink);}
-  .flist li::before{content:"";width:22px;height:22px;border-radius:6px;background:var(--green-soft);flex:none;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2324803F' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:13px;}
+/* ABOUT */
+.about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:0.92fr 1.08fr;gap:72px;align-items:center}
+.about-photo{position:relative}
+.about-photo .ph{border-radius:8px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,39,29,.5)}
+.about-photo .ph img{width:100%;aspect-ratio:3/3.6;object-fit:cover}
+.about-photo .badge{position:absolute;bottom:-26px;right:-22px;background:var(--deep);color:#fff;border-radius:50%;width:132px;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 20px 40px -18px rgba(20,39,29,.7);border:1px solid rgba(255,255,255,.1)}
+.about-photo .badge b{font-family:var(--serif);font-size:2.1rem;line-height:1}
+.about-photo .badge small{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8;margin-top:5px}
+.about-copy h2{font-size:clamp(2.2rem,4.3vw,3.4rem);margin:18px 0 26px}
+.about-copy h2 em{color:var(--accent)}
+.about-copy p{color:#42513F;margin-bottom:20px;font-size:1.08rem}
+.about-copy .sig{font-family:var(--serif);font-style:italic;font-size:1.9rem;color:var(--deep);margin-top:8px}
+.creds-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.creds-list span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:30px;font-size:.82rem;font-weight:600;color:var(--deep)}
+.creds-list span i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block}
 
-  /* labor cards */
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .svc{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:38px 32px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.6,.2,1),box-shadow .3s,border-color .3s;}
-  .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.6,.2,1);}
-  .svc:hover::before{transform:scaleX(1);}
-  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(18,53,41,.1);border-color:var(--green);}
-  .svc .ict{margin-bottom:20px;}
-  .svc h3{font-size:1.4rem;margin-bottom:10px;}
-  .svc p{color:var(--soft);font-size:1rem;line-height:1.55;}
+/* SERVICES - prescription cards */
+.svc{background:var(--bg)}
+.rx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.rx{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:40px 34px;position:relative;transition:.4s;overflow:hidden}
+.rx::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--leaf));transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.rx:hover{transform:translateY(-8px);box-shadow:0 34px 60px -34px rgba(20,39,29,.42);border-color:transparent}
+.rx:hover::before{transform:scaleX(1)}
+.rx .no{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--brass);margin-bottom:20px}
+.rx .ic{width:56px;height:56px;border-radius:14px;background:var(--deep);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.rx .ic svg{width:28px;height:28px;stroke:var(--leaf);fill:none;stroke-width:1.6}
+.rx h3{font-size:1.5rem;margin-bottom:14px;color:var(--ink)}
+.rx p{color:var(--muted);font-size:1rem}
+.svc-more{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper)}
+.svc-more div{padding:26px 28px;border-right:1px solid var(--line);display:flex;align-items:center;gap:13px;font-weight:600;font-size:.98rem;color:var(--deep)}
+.svc-more div:last-child{border-right:none}
+.svc-more div svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none}
 
-  /* consulting dark band */
-  .consult{background:radial-gradient(120% 100% at 85% -10%,rgba(46,158,82,.2),transparent 55%),var(--forest);color:#fff;padding:120px 0;}
-  .consult-head{max-width:640px;margin-bottom:54px;}
-  .consult .eyebrow{color:#9FE0B4;}.consult .eyebrow::before{color:#9FE0B4;}
-  .consult h2{font-size:3.4rem;font-weight:500;color:#fff;}.consult h2 em{font-style:italic;color:#9FE0B4;}
-  .consult-lead{color:rgba(255,255,255,.62);font-size:1.16rem;}
-  .cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
-  .ccard{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:34px 32px;display:flex;gap:20px;transition:transform .35s cubic-bezier(.2,.6,.2,1),border-color .35s,background .35s;}
-  .ccard:hover{transform:translateY(-5px);border-color:rgba(46,158,82,.55);background:rgba(255,255,255,.07);}
-  .ccard .icg{width:48px;height:48px;border-radius:12px;background:rgba(159,224,180,.16);color:#9FE0B4;display:grid;place-items:center;flex:none;}
-  .ccard .icg svg{width:23px;height:23px;}
-  .ccard h3{font-family:var(--disp);font-size:1.35rem;font-weight:500;color:#fff;margin-bottom:7px;}
-  .ccard p{color:rgba(255,255,255,.62);font-size:.98rem;line-height:1.55;}
+/* QUOTE band */
+.qband{position:relative;color:#fff;padding:130px 0;background:url('../assets/img/td-b.jpg') center 30%/cover fixed;overflow:hidden}
+.qband::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,39,29,.9),rgba(20,39,29,.6))}
+.qband .wrap{position:relative;z-index:2;max-width:900px}
+.qband .qm{font-family:var(--serif);font-size:5rem;color:var(--leaf);line-height:.5;height:34px;display:block}
+.qband blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.9rem);font-style:italic;font-weight:400;line-height:1.28;letter-spacing:-.01em}
+.qband cite{display:block;margin-top:30px;font-family:var(--sans);font-style:normal;font-size:.95rem;font-weight:600;letter-spacing:.05em;color:var(--sage)}
 
-  /* statement */
-  .statement{padding:130px 0;text-align:center;}
-  .statement .plus{color:var(--green);font-size:2.4rem;font-weight:700;line-height:1;}
-  .statement p{font-family:var(--disp);font-weight:400;font-size:2.5rem;line-height:1.36;max-width:900px;margin:22px auto 22px;color:var(--ink);}
-  .statement p em{font-style:italic;color:var(--green-d);}
-  .statement .by{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);}
+/* GALLERY */
+.gal{background:var(--paper)}
+.gal-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:16px}
+.gcell{border-radius:10px;overflow:hidden;position:relative}
+.gcell img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gcell:hover img{transform:scale(1.07)}
+.gcell .tag{position:absolute;left:16px;bottom:14px;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.03em;text-shadow:0 1px 8px rgba(0,0,0,.6);z-index:2}
+.gcell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,39,29,.55));opacity:0;transition:.4s}
+.gcell:hover::after{opacity:1}
+.g1{grid-column:span 4;grid-row:span 2}
+.g2{grid-column:span 2;grid-row:span 1}
+.g3{grid-column:span 2;grid-row:span 1}
+.g4{grid-column:span 3;grid-row:span 1}
+.g5{grid-column:span 3;grid-row:span 1}
 
-  /* certifications */
-  .certs{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-  .certs h2{font-size:3rem;margin-bottom:18px;}.certs h2 em{font-style:italic;color:var(--green-d);}
-  .certs p{color:var(--soft);font-size:1.08rem;margin-bottom:16px;}
-  .cred-list{list-style:none;display:grid;gap:14px;margin-top:20px;}
-  .cred-list li{display:flex;gap:14px;align-items:flex-start;}
-  .cred-list .cico{width:40px;height:40px;border-radius:10px;background:var(--green-soft);color:var(--green-d);display:grid;place-items:center;flex:none;}
-  .cred-list .cico svg{width:20px;height:20px;}
-  .cred-list b{display:block;font-weight:600;color:var(--ink);}
-  .cred-list span{color:var(--soft);font-size:.96rem;}
-  .cert-badges{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:48px;box-shadow:0 34px 74px -40px rgba(18,53,41,.3);}
-  .cert-badges img{height:150px;width:auto;}
-  .cert-badges .plusmark{font-family:var(--disp);font-size:2.4rem;color:var(--green);}
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:52px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(20,39,29,.4)}
+.stars{color:#E3A93B;letter-spacing:3px;font-size:1rem;margin-bottom:16px}
+.rcard p{font-size:1.04rem;color:#3c4a3a;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+.who b{display:block;font-size:.96rem;color:var(--ink)}
+.who small{color:var(--muted);font-size:.82rem}
 
-  /* cta */
-  .cta-band{background:radial-gradient(120% 120% at 50% -20%,rgba(46,158,82,.3),transparent 60%),var(--forest);border-radius:34px;padding:96px 60px;text-align:center;color:#fff;}
-  .cta-band .eyebrow{color:#9FE0B4;}.cta-band .eyebrow::before{color:#9FE0B4;}
-  .cta-band h2{font-size:3.4rem;font-weight:500;max-width:780px;margin:14px auto 18px;}
-  .cta-band h2 em{font-style:italic;color:#9FE0B4;}
-  .cta-band p{color:rgba(255,255,255,.72);font-size:1.14rem;max-width:560px;margin:0 auto 34px;}
-  .cta-band .btn-w{background:var(--green);color:#fff;padding:18px 38px;border-radius:100px;font-weight:700;font-size:1.05rem;display:inline-block;transition:.25s;}
-  .cta-band .btn-w:hover{transform:translateY(-2px);background:var(--green-d);}
+/* AREA */
+.area{background:var(--deep);color:#E9F0E6;padding:120px 0}
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.area h2{font-size:clamp(2.2rem,4.4vw,3.4rem);color:#fff;margin:18px 0 24px}
+.area h2 em{color:var(--leaf)}
+.area p{color:rgba(233,240,230,.75);font-size:1.1rem;margin-bottom:30px}
+.towns{display:flex;flex-wrap:wrap;gap:11px}
+.towns span{border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:9px 18px;font-size:.9rem;font-weight:500;color:#DCE6D7;transition:.3s}
+.towns span:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.area-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:44px}
+.area-card .row{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.area-card .row:last-child{border-bottom:none}
+.area-card .row svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:1.6;flex:none;margin-top:3px}
+.area-card .row small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+.area-card .row b{font-size:1.12rem;color:#fff;font-weight:600}
+.area-card .row a{font-size:1.12rem;color:#fff;font-weight:600}
 
-  /* contact */
-  .contact-head{text-align:center;margin-bottom:52px;}
-  .contact-head h2{font-size:3.2rem;font-weight:500;margin-top:14px;}
-  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px -50px rgba(18,53,41,.3);}
-  .cinfo{background:var(--forest);color:#fff;padding:56px 48px;}
-  .cinfo h4{font-family:var(--sans);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;}
-  .cinfo .big{font-family:var(--disp);font-size:1.85rem;margin:2px 0 8px;}
-  .cinfo p{color:rgba(255,255,255,.82);margin-bottom:11px;line-height:1.5;}
-  .cinfo a{color:#fff;}.cinfo a:hover{color:#9FE0B4;}
-  .cform{padding:52px 50px;display:flex;flex-direction:column;}
-  .cform label{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 8px;}
-  .cform input,.cform textarea,.cform select{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--cream);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
-  .cform input:focus,.cform textarea:focus,.cform select:focus{border-color:var(--green);background:#fff;box-shadow:0 0 0 4px var(--green-soft);}
-  .cform textarea{resize:vertical;min-height:110px;}
-  .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
+/* CTA */
+.cta{background:var(--bg);padding:130px 0;text-align:center}
+.cta .eyebrow{justify-content:center}
+.cta h2{font-size:clamp(2.6rem,6vw,5rem);font-weight:500;letter-spacing:-.02em;margin:22px auto;max-width:16ch}
+.cta h2 em{color:var(--accent)}
+.cta p{color:var(--muted);font-size:1.18rem;max-width:44ch;margin:0 auto 38px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-  /* footer */
-  footer{background:var(--forest-d);color:rgba(255,255,255,.6);padding:74px 0 44px;}
-  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
-  .foot-top .brand img{height:54px;margin-bottom:18px;}
-  .foot-top p{max-width:320px;}
-  .foot-col h4{color:#fff;font-family:var(--disp);font-weight:500;font-size:1.1rem;margin-bottom:14px;}
-  .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
-  .foot-col a:hover{color:#9FE0B4;}
-  .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.85rem;flex-wrap:wrap;gap:10px;}
+/* FOOTER */
+footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:50px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.98rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:18px;font-family:var(--sans);font-weight:600}
+.foot-col a,.foot-col p{display:block;color:#C6D3C3;font-size:.98rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:30px;font-size:.85rem;color:#7F9079}
+.foot-bottom .certs{max-width:60ch}
 
-  /* reveal + stagger */
-  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1);}
-  .reveal.in{opacity:1;transform:none;}
-  .stagger > *{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1);}
-  .stagger.in > *{opacity:1;transform:none;}
-  .stagger.in > *:nth-child(2){transition-delay:.08s;}.stagger.in > *:nth-child(3){transition-delay:.16s;}
-  .stagger.in > *:nth-child(4){transition-delay:.24s;}
-  @media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1!important;transform:none!important;transition:none!important;}}
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.1s}
+.stagger.in>*:nth-child(3){transition-delay:.2s}
+.stagger.in>*:nth-child(4){transition-delay:.3s}
 
-  @media(max-width:940px){
-    .wrap{padding:0 26px;}
-    .nav-links{display:none;}
-    .hero{min-height:0;}.hero-in{padding:130px 0 90px;}.hero h1{font-size:3.2rem;}
-    .trust-in{grid-template-columns:1fr 1fr;}.trust-item:nth-child(3){border-left:0;}
-    .sec h2,.consult h2,.cta-band h2,.certs h2,.statement p{font-size:2.1rem;}
-    .split,.certs{grid-template-columns:1fr;gap:36px;}.split.flip .split-photo{order:0;}.split-photo{height:340px;}
-    .svc-grid,.cgrid{grid-template-columns:1fr;}
-    .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 30px;}.cta-band{padding:64px 28px;}.cert-badges img{height:110px;}
-  }
-</style></head>
+@media(max-width:960px){
+  .about-grid,.area-grid{grid-template-columns:1fr;gap:48px}
+  .about-photo{max-width:400px}
+  .rx-grid,.rev-grid{grid-template-columns:1fr}
+  .svc-more{grid-template-columns:1fr 1fr}
+  .svc-more div:nth-child(2){border-right:none}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .g1,.g2,.g3,.g4,.g5{grid-column:span 2;grid-row:span 1}
+  .g1{grid-row:span 2}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+  .qband{background-attachment:scroll}
+}
+@media(max-width:600px){
+  .wrap{padding:0 24px}
+  nav .bar{padding:18px 24px}
+  .brand span,.scrollcue{display:none}
+  .sec{padding:80px 0}
+  .hero p.lead{font-size:1.12rem}
+  .svc-more{grid-template-columns:1fr}
+  .svc-more div{border-right:none;border-bottom:1px solid var(--line)}
+  .about-photo .badge{width:104px;height:104px;right:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .qband{background-attachment:scroll}
+}
+</style>
+</head>
 <body>
-  <header class="nav"><div class="wrap nav-in">
-    <a class="brand" href="#"><img src="../assets/img/ttd-logo.png" alt="The Tree Doctor"></a>
-    <nav class="nav-links"><a href="#services">Services</a><a href="#consulting">Consulting</a><a href="#about">About</a><a href="#certs">Certifications</a><a href="#contact-form">Contact</a></nav>
-    <a class="nav-call" href="tel:6109378389">Call 610.937.8389</a>
-  </div></header>
 
-  <section class="hero"><div class="wrap hero-in">
-    <span class="eyebrow">Certified Arborist &middot; Philadelphia's Main Line</span>
-    <h1>Tired of replacing dead trees? <em>The Doctor is in</em>.</h1>
-    <p class="lead">Expert, honest tree and shrub care from a certified arborist who treats your landscape like a patient, diagnosing the real problem and treating it without an excess of chemicals.</p>
-    <div class="hero-cta">
-      <a class="btn-p" href="tel:6109378389">Book the Doctor</a>
-      <a class="btn-t" href="#services">See services &rarr;</a>
-    </div>
-    <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg> ISA Certified Arborist &middot; PA-licensed pesticide applicator</div>
-  </div></section>
+<nav id="nav">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <svg class="mk" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="9" fill="#3E7C4F"/><path d="M20 8c6.5 3.8 7.6 10 3.8 15.4-1.4 2-3.8 3-3.8 3s-2.4-1-3.8-3C12.4 18 13.5 11.8 20 8Z" fill="#F4F1E8"/><path d="M20 11v18" stroke="#1E3B2C" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span class="txt"><b>The Tree Doctor</b><span>Certified Arborist</span></span>
+    </a>
+    <a class="nav-cta" href="tel:6109378389">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      (610) 937-8389
+    </a>
+  </div>
+</nav>
 
-  <div class="trust"><div class="wrap trust-in">
-    <div class="trust-item"><b>ISA <em>Certified</em></b><span>Arborist since 2012</span></div>
-    <div class="trust-item"><b>PA Licensed</b><span>Pesticide applicator, 2013</span></div>
-    <div class="trust-item"><b>15+ years</b><span>Hands-on field experience</span></div>
-    <div class="trust-item"><b>Main Line</b><span>Residential tree &amp; shrub care</span></div>
-  </div></div>
-
-  <section class="sec" id="diagnose"><div class="wrap split">
-    <div class="split-photo" style="background-image:url('../assets/img/ttd-2.jpg')"></div>
-    <div>
-      <span class="eyebrow">Diagnosis first</span>
-      <h2>&ldquo;What's wrong with my <em>tree</em>?&rdquo;</h2>
-      <p>As a licensed pesticide applicator with years of hands-on experience, I diagnose and treat the tree and shrub health conditions caused by insects, fungus, fertility, and other factors. If you want to fix the real problem, and do it without an excess of chemicals, you're in the right place.</p>
-      <ul class="flist">
-        <li>Objective plant health assessments</li>
-        <li>Integrated pest management, not blanket spraying</li>
-        <li>Honest advice, always, from someone who loves trees</li>
-      </ul>
-    </div>
-  </div></section>
-
-  <section class="sec" style="padding-top:0;" id="services"><div class="wrap">
-    <span class="eyebrow">Tree care &amp; labor</span>
-    <h2>Hands-on care for your <em>trees and shrubs</em>.</h2>
-    <p class="sec-lead">Arborist, climber, and naturalist, helping property owners see the big picture and keep their landscape healthy, safe, and beautiful.</p>
-    <div class="svc-grid stagger">
-      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l4 6-4 2 5 4-3 6M18 3l-4 6 4 2-5 4 3 6M6 3h12"/></svg></span><h3>Pruning</h3><p>Aesthetic and practical pruning for clearance, spacing, and health. If you know how you want your trees pruned, I can do it. If you don't, I'll help you figure it out.</p></div>
-      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a9 9 0 0 0-9 9c0 5 4 9 9 11 5-2 9-6 9-11a9 9 0 0 0-9-9Z"/><path d="M12 8v8M8 12h8"/></svg></span><h3>Health &amp; Pest Management</h3><p>Diagnosis and treatment of tree and shrub health conditions caused by insects, fungus, and fertility, using integrated pest management, not excess chemicals.</p></div>
-      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><h3>Risk Assessment &amp; Removal</h3><p>Reliable, impartial advice on whether a tree should be pruned, cabled, or removed for safety, with a commitment to preserving the canopy whenever possible.</p></div>
-    </div>
-  </div></section>
-
-  <section class="consult" id="consulting"><div class="wrap">
-    <div class="consult-head reveal">
-      <span class="eyebrow">Consulting</span>
-      <h2>Expert guidance you can <em>rely on</em>.</h2>
-      <p class="consult-lead">For property owners, managers, and tree care companies who need objective, professional arboricultural advice.</p>
-    </div>
-    <div class="cgrid stagger">
-      <div class="ccard"><span class="icg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a9 9 0 0 0-9 9c0 5 4 9 9 11 5-2 9-6 9-11a9 9 0 0 0-9-9Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><h3>Health &amp; Safety Assessments</h3><p>Reliable health and safety assessments on trees of all sizes from an ISA-certified arborist with 15+ years of field experience.</p></div></div>
-      <div class="ccard"><span class="icg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span><div><h3>Remote Consulting</h3><p>Remote consulting for property owners and managers on tree and shrub health issues, from a certified arborist who specializes in diagnosis and treatment.</p></div></div>
-      <div class="ccard"><span class="icg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3Z"/><path d="M8 8h8M8 12h6M8 16h4"/></svg></span><div><h3>Inventories &amp; Management Plans</h3><p>Written tree inventories with detailed, objective data and long-term recommendations owners and managers can rely on for sound guidance.</p></div></div>
-      <div class="ccard"><span class="icg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5z"/><path d="M6 10v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></span><div><h3>Remote Training</h3><p>Training for owners, managers, and applicators at landscape and tree care companies on diagnosing plant health, explaining treatments, and performing them.</p></div></div>
-    </div>
-  </div></section>
-
-  <section class="statement" id="about"><div class="wrap reveal">
-    <span class="plus">+</span>
-    <p>I love trees, not so much money, and I'm committed to preserving the forest canopy whenever possible, and to <em>honest advice, always</em>.</p>
-    <span class="by">Nate Mason, ISA Certified Arborist</span>
-  </div></section>
-
-  <section class="sec" style="padding-top:0;" id="certs"><div class="wrap certs">
-    <div class="reveal">
-      <span class="eyebrow">Credentials</span>
-      <h2>A real <em>professional</em>, on the record.</h2>
-      <p>A lifelong gardener, naturalist, and tree climber, professionally certified and licensed, so the advice you get is backed by training, experience, and accountability.</p>
-      <ul class="cred-list">
-        <li><span class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>ISA Certified Arborist</b><span>International Society of Arboriculture, since 2012</span></div></li>
-        <li><span class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span><div><b>PA-Licensed Pesticide Applicator</b><span>Pennsylvania Department of Agriculture, since 2013</span></div></li>
-        <li><span class="cico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 7-7 7-11a7 7 0 0 0-14 0c0 4 3 7 7 11Z"/><path d="M12 22V9"/></svg></span><div><b>Lifelong gardener &amp; naturalist</b><span>15+ years of hands-on field experience</span></div></li>
-      </ul>
-    </div>
-    <div class="cert-badges reveal">
-      <img src="../assets/img/ttd-isa.jpg" alt="ISA Certified Arborist">
-      <span class="plusmark">+</span>
-      <img src="../assets/img/ttd-logo.png" alt="The Tree Doctor" style="height:96px;">
-    </div>
-  </div></section>
-
-  <section class="sec" style="padding-top:0;"><div class="wrap">
-    <div class="cta-band reveal">
-      <span class="eyebrow" style="justify-content:center;">Book a visit</span>
-      <h2>Give your trees a <em>check-up</em>.</h2>
-      <p>Whether you need a diagnosis, a pruning, a second opinion, or a full management plan, the Doctor is in. Reach out and let's take a look.</p>
-      <a class="btn-w" href="tel:6109378389">Call 610.937.8389</a>
-    </div>
-  </div></section>
-
-  <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
-    <div class="contact-head reveal"><span class="eyebrow" style="justify-content:center;">Get in touch</span>
-      <h2>Schedule your consultation.</h2></div>
-    <div class="contact-grid reveal">
-      <div class="cinfo">
-        <h4>Call or text</h4>
-        <div class="big"><a href="tel:6109378389">610.937.8389</a></div>
-        <h4 style="margin-top:32px;">Email</h4>
-        <p><a href="mailto:thetreedoctor77@gmail.com">thetreedoctor77@gmail.com</a></p>
-        <h4 style="margin-top:32px;">Service area</h4>
-        <p>Devon, Pennsylvania<br>Serving Philadelphia's Main Line</p>
-        <p style="margin-top:14px;color:rgba(255,255,255,.55);font-size:.9rem;">The Tree Doctor LLC &middot; ISA Certified Arborist</p>
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <span class="chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#7FB077" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 6c3-3 7-2 8 1M12 6C9 3 5 4 4 7M12 12c3-3 7-2 8 1M12 12c-3-3-7-2-8 1"/></svg>
+        ISA Certified Arborist &middot; Devon, PA
+      </span>
+      <h1>Trees need doctors <em>too.</em></h1>
+      <p class="lead">Tired of replacing dead trees and shrubs? The doctor is in, and caring for the Main Line canopy the honest way.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:6109378389">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call or text
+        </a>
+        <a class="btn btn-ghost" href="#services">See what I do</a>
       </div>
-      <form class="cform" action="mailto:thetreedoctor77@gmail.com" method="post" enctype="text/plain">
-        <label>Name</label><input type="text" name="name" autocomplete="name">
-        <label>Email</label><input type="email" name="email" autocomplete="email">
-        <label>Phone</label><input type="tel" name="phone" autocomplete="tel">
-        <label>What can the Doctor help with?</label>
-        <select name="service"><option>Tree or shrub health</option><option>Pruning</option><option>Risk assessment or removal</option><option>Consulting</option><option>Not sure yet</option></select>
-        <label>Tell us about your trees</label><textarea name="message" rows="3"></textarea>
-        <button type="submit" class="btn-p">Book the Doctor</button>
-      </form>
     </div>
-  </div></section>
+  </div>
+  <div class="scrollcue">Scroll</div>
+</header>
 
-  <footer><div class="wrap">
-    <div class="foot-top">
-      <div><a class="brand"><img src="../assets/img/ttd-logo.png" alt="The Tree Doctor"></a>
-        <p>Expert, honest tree and shrub care from an ISA Certified Arborist. Serving residential clients across Philadelphia's Main Line.</p></div>
-      <div class="foot-col"><h4>Services</h4><a href="#services">Pruning</a><a href="#services">Health &amp; Pest Management</a><a href="#services">Risk &amp; Removal</a><a href="#consulting">Consulting</a></div>
-      <div class="foot-col"><h4>Contact</h4><a href="tel:6109378389">610.937.8389</a><a href="mailto:thetreedoctor77@gmail.com">thetreedoctor77@gmail.com</a><span>Devon, PA</span><span>ISA Certified Arborist</span></div>
+<section class="creds" aria-label="Credentials">
+  <div class="track">
+    <span>Certified by the International Society of Arboriculture</span>
+    <span>Licensed PA Pesticide Applicator</span>
+    <span>Owner-operated since day one</span>
+    <span>Devon &amp; the Main Line</span>
+    <span>Honest advice, always</span>
+    <span>Certified by the International Society of Arboriculture</span>
+    <span>Licensed PA Pesticide Applicator</span>
+    <span>Owner-operated since day one</span>
+    <span>Devon &amp; the Main Line</span>
+    <span>Honest advice, always</span>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="ph"><img src="../assets/img/td-nate.jpg" alt="Nate, certified arborist and owner of The Tree Doctor"></div>
+      <div class="badge"><b>2012</b><small>Certified<br>Arborist</small></div>
     </div>
-    <div class="foot-bot"><span>&copy; 2026 The Tree Doctor LLC</span><span>Certified &amp; licensed &middot; The Doctor is in</span></div>
-  </div></footer>
-<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});[].forEach.call(document.querySelectorAll('.reveal,.stagger'),function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.9){el.classList.add('in');}else{io.observe(el);}});})();</script>
-</body></html>
+    <div class="about-copy reveal">
+      <span class="eyebrow">Meet your arborist</span>
+      <h2>A lifelong gardener, naturalist, and <em>tree climber.</em></h2>
+      <p>I am professionally certified as an arborist by the International Society of Arboriculture, and licensed by the Pennsylvania Department of Agriculture as a landscape pesticide applicator. I work as arborist, landscaper, and consultant, primarily for private residential clients, helping them care for their trees, shrubs, and gardens.</p>
+      <p>The Tree Doctor is a small business, fully owner-operated. I am usually present on jobs to supervise and help perform the work myself. I make regular communication with clients a centerpiece of my work, and strive to maintain long-term relationships with the people, and the trees, I am lucky enough to meet.</p>
+      <div class="creds-list">
+        <span><i></i>Certified Arborist #PN-7525A</span>
+        <span><i></i>PA Pesticide Applicator #709592</span>
+        <span><i></i>Business #BU13843</span>
+      </div>
+      <p class="sig">&ndash; Nate</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The practice</span>
+      <h2>All phases of tree care, from planting to <em>pruning and removals.</em></h2>
+      <p>A few things I have grown quite good at over the years, and love doing well.</p>
+    </div>
+    <div class="rx-grid stagger">
+      <div class="rx">
+        <div class="no">Rx / 01</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M12 7c2.5-3 6-2 7 1M12 7C9.5 4 6 5 5 8M12 13c2.5-3 6-2 7 1M12 13c-2.5-3-6-2-7 1"/></svg></div>
+        <h3>Tree &amp; shrub pruning</h3>
+        <p>My favorite activity. Good pruning improves plant health and property appearance like little else. If you know how you want your trees pruned, I can do it. If you don't, I can help you figure it out and leave them perfectly pruned on your behalf.</p>
+      </div>
+      <div class="rx">
+        <div class="no">Rx / 02</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3h6M12 3v5M7 8h10l1.5 9a3 3 0 0 1-3 3.5H8.5a3 3 0 0 1-3-3.5L7 8Z"/><path d="M9.5 14h5"/></svg></div>
+        <h3>Health &amp; pest management</h3>
+        <p>A licensed pesticide applicator with years of hands-on experience diagnosing tree and shrub conditions caused by insects, fungus, fertility, and other factors. If you need to know what is wrong with your tree and want to fix it without an excess of chemicals, I am one of your best bets.</p>
+      </div>
+      <div class="rx">
+        <div class="no">Rx / 03</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Risk assessments &amp; removals</h3>
+        <p>Reliable, impartial advice on whether a tree should be pruned, removed, or cabled for reasons of safety. I love trees, not so much money, and I am committed to preserving the forest canopy whenever possible, with honest advice always.</p>
+      </div>
+    </div>
+    <div class="svc-more reveal">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12c0-4 2-7 6-8 0 4-2 7-6 8ZM12 14C12 10 10 7 6 6c0 4 2 7 6 8Z"/></svg>Design &amp; planting</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M8 4h12v12M6 14l4 4"/></svg>Cabling &amp; support</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2ZM9 22h6"/></svg>Arborist consulting</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-6 9 6v11M9 21v-6h6v6M3 21h18"/></svg>Root &amp; soil care</div>
+    </div>
+  </div>
+</section>
+
+<section class="qband">
+  <div class="wrap reveal">
+    <span class="qm">&ldquo;</span>
+    <blockquote>I love trees, not so much money, and I am committed to preserving the forest canopy whenever possible, and providing honest advice always.</blockquote>
+    <cite>NATE &middot; THE TREE DOCTOR</cite>
+  </div>
+</section>
+
+<section class="sec gal" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Recent work</span>
+      <h2>Long-term care, up <em>close.</em></h2>
+      <p>A look at recent pruning, root work, and plant-health visits across the Main Line.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gcell g1"><img src="../assets/img/td-a.jpg" alt="Beautifully pruned weeping Japanese maple"><span class="tag">Structural pruning &middot; Japanese maple</span></div>
+      <div class="gcell g2"><img src="../assets/img/td-b.jpg" alt="Root collar excavation on a mature beech"><span class="tag">Root collar excavation</span></div>
+      <div class="gcell g3"><img src="../assets/img/td-e.jpg" alt="Close inspection of foliage for pests"><span class="tag">Pest diagnosis</span></div>
+      <div class="gcell g4"><img src="../assets/img/td-c.jpg" alt="Healthy flowering rose shrub in full bloom"><span class="tag">Shrub health &amp; bloom</span></div>
+      <div class="gcell g5"><img src="../assets/img/td-d.jpg" alt="Drainage and root work along a garden bed"><span class="tag">Drainage &amp; site work</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Kind words</span>
+        <h2>Trusted by Main Line <em>homeowners.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Nate saved two trees we were sure we would lose. He explained exactly what was wrong, treated it without dousing everything in chemicals, and checked back weeks later. Honest and genuinely knowledgeable.</p>
+        <div class="who"><img src="../assets/img/f3.jpg" alt=""><div><b>Katherine M.</b><small>Devon, PA</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Our Japanese maples have never looked better. He prunes with a real eye for the shape of the tree, not just cutting things back. You can tell he loves the work.</p>
+        <div class="who"><img src="../assets/img/f8.jpg" alt=""><div><b>David R.</b><small>Wayne, PA</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Called about a large oak leaning toward the house. Instead of pushing a removal, Nate gave us an honest risk assessment and a plan to keep it. Rare to find someone this straight.</p>
+        <div class="who"><img src="../assets/img/f12.jpg" alt=""><div><b>Susan L.</b><small>Berwyn, PA</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap area-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--leaf)">Where I work</span>
+      <h2>Rooted on the <em>Main Line.</em></h2>
+      <p>Based in Devon and caring for trees, shrubs, and gardens across the surrounding Main Line communities. If you think I might be able to help you or your property, you are probably right.</p>
+      <div class="towns">
+        <span>Devon</span><span>Wayne</span><span>Berwyn</span><span>Paoli</span><span>Malvern</span><span>Radnor</span><span>Villanova</span><span>Bryn Mawr</span><span>Strafford</span>
+      </div>
+    </div>
+    <div class="area-card reveal">
+      <div class="row">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <div><small>Call or text</small><a href="tel:6109378389">(610) 937-8389</a></div>
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>
+        <div><small>Email</small><a href="mailto:thetreedoctor77@gmail.com">thetreedoctor77@gmail.com</a></div>
+      </div>
+      <div class="row">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><small>Based in</small><b>Devon, Pennsylvania</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap reveal">
+    <span class="eyebrow">The doctor is in</span>
+    <h2>Trees need doctors <em>too.</em></h2>
+    <p>Schedule a check-up for your trees, shrubs, and gardens. Call or text and let's take a look together.</p>
+    <div class="cta-actions">
+      <a class="btn btn-dark" href="tel:6109378389">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        (610) 937-8389
+      </a>
+      <a class="btn btn-primary" href="mailto:thetreedoctor77@gmail.com">Send an email</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>The Tree Doctor LLC</b>
+        <p>ISA Certified Arborist caring for the trees, shrubs, and gardens of Devon and the Main Line, with a view toward long-term, sustainable management.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Care</h4>
+        <a href="#services">Pruning</a>
+        <a href="#services">Plant health &amp; IPM</a>
+        <a href="#services">Risk assessments</a>
+        <a href="#services">Removals</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="tel:6109378389">(610) 937-8389</a>
+        <a href="mailto:thetreedoctor77@gmail.com">thetreedoctor77@gmail.com</a>
+        <p>Devon, Pennsylvania</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> The Tree Doctor LLC</span>
+      <span class="certs">Certified Arborist #PN-7525A, ISA &middot; Certified Commercial Pesticide Applicator #709592, Business #BU13843, PA Department of Agriculture.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
