@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabyl Tech Cleaning | Top-Rated Carpet Cleaning in the Quad Cities</title>
+<meta name="description" content="Sabyl Tech Cleaning. The most thorough carpet cleaning in the Quad Cities, guaranteed. Owner-operated carpet, upholstery, tile, mattress cleaning and flood water removal in Moline, IL and surrounding areas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E7C74'/%3E%3Cpath d='M9 11c4-2 10-2 14 0M9 16c4-2 10-2 14 0M9 21c4-2 10-2 14 0' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0E7C74; --teal-d:#0A5B55; --deep:#093733; --ink:#12302D;
+  --aqua:#26B3A6; --mint:#8FE3D8;
+  --bg:#EFF6F4; --paper:#FFFFFF; --muted:#5C7370;
+  --line:rgba(18,48,45,.13); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--aqua)}
+.eyebrow.light{color:var(--mint)}
+.eyebrow.light::before{background:var(--mint)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-accent{background:var(--aqua);color:#06302C}
+.btn-accent:hover{background:var(--mint);transform:translateY(-2px)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--teal)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.3)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.13)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;max-width:1320px;margin:0 auto}
+nav.scrolled{background:rgba(9,55,51,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--lineD)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand .mk{width:42px;height:42px;flex:none;border-radius:10px;background:var(--aqua);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:24px;height:24px}
+.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1;letter-spacing:.01em}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--aqua);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--aqua);color:#06302C;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--mint);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:840px;display:flex;align-items:center;overflow:hidden;background:var(--deep)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 20s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(9,55,51,.95) 0%,rgba(10,91,85,.82) 42%,rgba(9,55,51,.5) 76%,rgba(9,55,51,.35) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:180px 40px 110px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.4vw,6rem);font-weight:500;letter-spacing:-.02em;line-height:1;max-width:15ch}
+.hero h1 em{color:var(--mint);font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:48ch;margin:26px 0 40px;color:rgba(255,255,255,.85);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:60px;flex-wrap:wrap}
+.hero-mini div{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:var(--deep);color:#CFE6E2}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:32px 24px;border-right:1px solid var(--lineD);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t svg{width:28px;height:28px;stroke:var(--mint);fill:none;stroke-width:1.7;flex:none}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:#fff;line-height:1.15}
+.trust .t small{font-size:.8rem;color:rgba(207,230,226,.65)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--teal)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* RESULTS */
+.results{background:var(--paper)}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.res-img{border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -44px rgba(9,55,51,.5);position:relative}
+.res-img img{width:100%;display:block}
+.res-copy h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:16px 0 22px}
+.res-copy h2 em{color:var(--teal)}
+.res-copy p{color:#37504c;font-size:1.08rem;margin-bottom:20px}
+.res-copy .pill{display:inline-flex;align-items:center;gap:9px;background:var(--bg);border:1px solid var(--line);border-radius:30px;padding:10px 18px;font-weight:600;font-size:.9rem;color:var(--teal);margin-top:6px}
+.res-copy .pill svg{width:18px;height:18px;stroke:var(--aqua);fill:none;stroke-width:2}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:36px 30px;transition:.4s;position:relative;overflow:hidden}
+.scard::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--aqua);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.scard:hover{transform:translateY(-8px);box-shadow:0 36px 60px -40px rgba(9,55,51,.35);border-color:transparent}
+.scard:hover::after{transform:scaleX(1)}
+.scard .ic{width:56px;height:56px;border-radius:14px;background:#E1F1EE;display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:.4s}
+.scard:hover .ic{background:var(--teal)}
+.scard .ic svg{width:27px;height:27px;stroke:var(--teal);fill:none;stroke-width:1.6;transition:.4s}
+.scard:hover .ic svg{stroke:#fff}
+.scard h3{font-size:1.28rem;margin-bottom:10px}
+.scard p{color:var(--muted);font-size:.96rem}
+
+/* FEATURE */
+.feat{position:relative;color:#fff;overflow:hidden;background:var(--deep)}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr}
+.feat-img{position:relative;min-height:500px}
+.feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat-copy{padding:110px 68px;display:flex;flex-direction:column;justify-content:center}
+.feat-copy h2{font-size:clamp(2.1rem,4vw,3.2rem);margin:16px 0 22px}
+.feat-copy h2 em{color:var(--mint)}
+.feat-copy p{color:rgba(255,255,255,.82);font-size:1.1rem;margin-bottom:20px}
+
+/* REVIEWS */
+.rev-sec{background:var(--paper)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:50px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:32px 28px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(9,55,51,.4)}
+.stars{color:#F5A623;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1rem;color:#37504c;margin-bottom:20px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.86rem;flex:none}
+.who b{display:block;font-size:.94rem}
+.who small{color:var(--muted);font-size:.82rem}
+
+/* AREA */
+.area{background:var(--bg)}
+.towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:8px}
+.towns span{background:var(--paper);border:1px solid var(--line);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:var(--ink);transition:.3s}
+.towns span:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+
+/* CONTACT */
+.contact{background:var(--deep);color:#fff;padding:118px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.contact-copy h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin:16px 0 22px}
+.contact-copy h2 em{color:var(--mint)}
+.contact-copy>p{color:rgba(255,255,255,.75);font-size:1.12rem;margin-bottom:34px;max-width:46ch}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:var(--mint);fill:none;stroke-width:1.7;flex:none;margin-top:2px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mint);margin-bottom:4px}
+.crow b,.crow a{font-size:1.08rem;color:#fff;font-weight:600}
+.contact-card{background:rgba(255,255,255,.06);border:1px solid var(--lineD);border-radius:18px;padding:46px 42px;text-align:center}
+.contact-card .ic{width:64px;height:64px;border-radius:50%;background:var(--aqua);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.contact-card .ic svg{width:30px;height:30px;stroke:#06302C;fill:none;stroke-width:1.8}
+.contact-card h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.72);margin-bottom:28px}
+.contact-card .btn{width:100%;justify-content:center;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#A6C6C1;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#5E827D}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .res-grid,.feat-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .feat-img{min-height:330px}
+  .feat-copy{padding:70px 44px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--lineD)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:76px 0}
+  .hero-in{padding:140px 22px 64px}
+  .hero-mini div{padding-right:24px;margin-right:24px}
+  .svc-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M7 11c5-2.5 13-2.5 18 0M7 16c5-2.5 13-2.5 18 0M7 21c5-2.5 13-2.5 18 0" stroke="#06302C" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+      <span><b>Sabyl Tech</b><span>Carpet Cleaning &middot; Quad Cities</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#results">Results</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#area">Service area</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:3097165912"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>309-716-5912</span></a>
+      <a class="nav-cta" href="#contact">Book now</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/st-u2.jpg" alt="Freshly cleaned carpet and rug in a bright living room"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8FE3D8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Top-rated &middot; Quad Cities &middot; Guaranteed
+    </span>
+    <h1>The most thorough clean, <em>no gimmicks.</em></h1>
+    <p>High quality, top-rated carpet, furniture, and tile care for the Quad Cities and surrounding areas. That is our commitment, and our promise to you.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#contact">Book your cleaning</a>
+      <a class="btn btn-ghost" href="#results">See the results</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>Guaranteed</b><span>Most thorough clean</span></div>
+      <div><b>Owner-run</b><span>Nate does the work</span></div>
+      <div><b>Quad Cities</b><span>&amp; surrounding areas</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Satisfaction guaranteed</b><small>The most thorough clean</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM5 21c1-4 3.5-6 7-6s6 2 7 6"/></svg><div><b>Owner-operated</b><small>Honest, fair, thorough</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div><b>Reasonable rates</b><small>Great value, real results</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Moline, IL</b><small>Serving the Quad Cities</small></div></div>
+  </div>
+</section>
+
+<section class="sec results" id="results">
+  <div class="wrap res-grid">
+    <div class="res-img reveal"><img src="../assets/img/st-gimmicks.jpg" alt="Before and after carpet cleaning by Sabyl Tech"></div>
+    <div class="res-copy reveal">
+      <span class="eyebrow">Real results</span>
+      <h2>No gimmicks. Just a <em>genuinely deep clean.</em></h2>
+      <p>We do not cut corners or upsell you on things you do not need. We show up, do thorough work, and let the results speak for themselves, on carpet others would tell you to replace.</p>
+      <p>Knowledgeable, honest, and fair, with a finish that has clients saying they will never call anyone else.</p>
+      <span class="pill"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Guaranteed the most thorough clean in the Quad Cities</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we clean</span>
+      <h2>One trusted pro for every <em>surface in your home.</em></h2>
+      <p>From high-traffic carpet to a favorite couch, Sabyl Tech brings the same thorough, careful clean to it all.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9c5-3 11-3 16 0M4 14c5-3 11-3 16 0M4 19c5-3 11-3 16 0"/></svg></div><h3>Carpet cleaning</h3><p>Deep, thorough carpet cleaning that lifts dirt and stains others leave behind, in homes across the Quad Cities.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11h18v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2ZM5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M6 19v2M18 19v2"/></svg></div><h3>Upholstery &amp; furniture</h3><p>Couches, chairs, and sofas cleaned and refreshed, pet hair and all, so they look brand new again.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div><h3>Tile &amp; grout cleaning</h3><p>Tile and grout care that clears built-up grime and restores a fresh, clean surface.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 18V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9M3 14h18M6 18v2M18 18v2"/></svg></div><h3>Mattress &amp; bed cleaning</h3><p>Sanitize and refresh mattresses for a cleaner, healthier night's sleep.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M9 11h6"/></svg></div><h3>Commercial floor care</h3><p>Common areas, elevators, stairways, and offices kept clean and presentable for your business.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3.5 4 5.5 6.8 5.5 9.6a5.5 5.5 0 0 1-11 0C6.5 9.8 8.5 7 12 3Z"/><path d="M4 21h16"/></svg></div><h3>Flood water removal</h3><p>Fast water extraction and flood damage cleanup when the unexpected happens.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="feat">
+  <div class="feat-grid">
+    <div class="feat-img reveal"><img src="../assets/img/st-u3.jpg" alt="Freshly cleaned upholstered sofa"></div>
+    <div class="feat-copy reveal">
+      <span class="eyebrow light">Upholstery &amp; furniture</span>
+      <h2>Bring your favorite couch <em>back to life.</em></h2>
+      <p>Pets, kids, and everyday life are hard on furniture. Sabyl Tech cleans couches, chairs, and sofas thoroughly and gently, so they look and feel fresh again, at rates that stay reasonable.</p>
+      <a class="btn btn-light" href="#contact" style="align-self:flex-start;">Freshen up your furniture</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Kind words</span>
+        <h2>The Quad Cities <em>trusts Nate.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>I can't say enough great things about Sabyl Tech! Nate is the most knowledgeable carpet cleaner I have ever dealt with. He is extremely honest and very fair. He went above and beyond. I will never use another carpet cleaning service.</p><div class="who"><span class="av">ED</span><div><b>Erin Dowell</b><small>Orion, IL</small></div></div></div>
+      <div class="rcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Very professional and did a wonderful job on our condo's common area carpet, elevator, and stairways. I highly recommend them. Nate was awesome to work with. Thank you Nate and Sabyl Tech!</p><div class="who"><span class="av">CB</span><div><b>Carl Blum</b><small>Moline, IL</small></div></div></div>
+      <div class="rcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>We were very satisfied with the job cleaning our carpet, and the rates are very reasonable! Nate even left us a small bottle of spot cleaner for any spots we may get, as life goes with pets and grandkids. Excellent job Nate!</p><div class="who"><span class="av">SD</span><div><b>Stephanie Dhaenens</b><small>Rock Island, IL</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec area" id="area">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Proudly serving the <em>Quad Cities.</em></h2>
+      <p>Based in Moline and caring for homes and businesses across the Quad Cities and surrounding areas.</p>
+    </div>
+    <div class="towns reveal">
+      <span>Moline</span><span>Rock Island</span><span>East Moline</span><span>Davenport</span><span>Bettendorf</span><span>Orion</span><span>Silvis</span><span>Milan</span><span>Coal Valley</span><span>Geneseo</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy reveal">
+      <span class="eyebrow light">Book now</span>
+      <h2>Ready for a <em>real clean?</em></h2>
+      <p>Call or text Nate to book your carpet, upholstery, tile, or flood cleanup. Honest advice, fair rates, and the most thorough clean in the Quad Cities.</p>
+      <div class="crow">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <div><small>Call or text</small><a href="tel:3097165912">309-716-5912</a></div>
+      </div>
+      <div class="crow">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><small>Based in</small><b>Moline, IL &middot; Serving the Quad Cities</b></div>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9c5-3 11-3 16 0M4 14c5-3 11-3 16 0M4 19c5-3 11-3 16 0"/></svg></div>
+      <h3>Book your cleaning</h3>
+      <p>Carpet, upholstery, tile, mattress, or flood cleanup. Call or text and we will get you scheduled.</p>
+      <a class="btn btn-accent" href="tel:3097165912">Call 309-716-5912</a>
+      <a class="btn btn-light" href="tel:3097165912" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);">Text us instead</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Sabyl Tech Cleaning</b>
+        <p>Top-rated, owner-operated carpet, upholstery, and tile cleaning for the Quad Cities and surrounding areas. No gimmicks, just results.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Carpet cleaning</a>
+        <a href="#services">Upholstery &amp; furniture</a>
+        <a href="#services">Tile &amp; grout</a>
+        <a href="#services">Flood water removal</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:3097165912">309-716-5912</a>
+        <p>Moline, IL</p>
+        <p>Serving the Quad Cities</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Sabyl Tech Cleaning</span>
+      <span>Top-rated carpet cleaning &middot; Quad Cities &middot; Guaranteed</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
