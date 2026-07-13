@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combs Pest Control | Trusted Exterminators in Gainesville, GA</title>
+<meta name="description" content="Combs Pest Control LLC is a family and veteran-owned pest control company in Gainesville, GA, serving North Georgia. Over 20 years of experience in general pest control, mosquito, termite, cockroach, ant, and flea control. Free inspection.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F8F3E'/%3E%3Cpath d='M16 6c1.6 0 2.8 1.1 3 2.6 1.4.4 2.4 1.6 2.4 3.1 0 .5-.1 1-.3 1.4 1 .5 1.7 1.6 1.7 2.8 0 1.4-.9 2.6-2.2 3-.2 1.7-1.7 3.1-3.6 3.1s-3.4-1.4-3.6-3.1c-1.3-.4-2.2-1.6-2.2-3 0-1.2.7-2.3 1.7-2.8-.2-.4-.3-.9-.3-1.4 0-1.5 1-2.7 2.4-3.1.2-1.5 1.4-2.6 3-2.6Z' fill='%23F2C230'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2F8F3E; --green-d:#1E5E2A; --green-dd:#12401E; --green-deep:#0C2D14;
+  --accent:#F2C230; --accent-d:#D9A81E; --accent-soft:#FBF0CB;
+  --mint:#E9F5EA;
+  --bg:#F5FAF1; --paper:#FFFFFF; --ink:#16301C; --muted:#556B57;
+  --line:rgba(20,50,25,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn svg{width:18px;height:18px}
+.btn-accent{background:var(--accent);color:#3a2c00}
+.btn-accent:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--green-d)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(18,64,30,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--green-deep);color:#cfe6cf;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+.topbar .acc{color:var(--accent)}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -8px rgba(18,64,30,.7)}
+.brand .mk svg{width:26px;height:26px}
+.brand b{font-family:var(--serif);font-size:1.28rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--green-d)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#3a2c00;font-weight:700;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--green-deep)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(12,45,20,.95) 0%,rgba(30,94,42,.82) 44%,rgba(18,64,30,.5) 76%,rgba(12,45,20,.32) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;width:640px;height:640px;right:-140px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(242,194,48,.28),transparent 66%);z-index:1;animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-60px,70px)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 116px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.4vw,5.9rem);font-weight:500;letter-spacing:-.02em;line-height:1;max-width:16ch}
+.hero h1 em{color:var(--accent);font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.85);line-height:1.55}
+.hero p b{color:#fff;font-weight:600}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:60px;flex-wrap:wrap}
+.hero-mini div{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:var(--accent);display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(18,64,30,.25);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:48px;height:48px;flex:none;border-radius:12px;background:var(--mint);display:grid;place-items:center}
+.trust .t svg{width:26px;height:26px;stroke:var(--green);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--green)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:44px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 30px;transition:.35s;overflow:hidden}
+.rcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.rcard:hover::before{transform:scaleX(1)}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(18,64,30,.4)}
+.stars{color:var(--accent-d);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#31452f;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{margin-top:26px;font-size:.86rem;color:var(--muted);font-style:italic}
+
+/* SERVICES icon tiles */
+.svc{background:#fff}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.gcard{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:38px 34px;transition:.35s;overflow:hidden}
+.gcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.gcard:hover::before{transform:scaleX(1)}
+.gcard:hover{transform:translateY(-6px);box-shadow:0 30px 56px -34px rgba(18,64,30,.45);border-color:transparent}
+.gcard .ic{width:56px;height:56px;border-radius:15px;background:var(--mint);color:var(--green);display:grid;place-items:center;margin-bottom:22px;transition:.35s}
+.gcard:hover .ic{background:var(--green);color:#fff}
+.gcard .ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.7}
+.gcard h3{font-size:1.42rem;margin-bottom:10px}
+.gcard p{font-size:.98rem;color:var(--muted)}
+.also{margin-top:40px;background:var(--green-deep);border-radius:18px;padding:34px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;color:#fff}
+.also b{font-family:var(--serif);font-size:1.2rem;margin-right:8px}
+.also span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#eaf6ea;border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* DARK GLASS band - proactive */
+.dark{position:relative;color:#fff;overflow:hidden;background:linear-gradient(165deg,#123A1A,#0C2D14)}
+.dark::before{content:"";position:absolute;width:600px;height:600px;left:-160px;bottom:-220px;border-radius:50%;background:radial-gradient(circle,rgba(47,143,62,.4),transparent 68%);z-index:0}
+.dark::after{content:"";position:absolute;width:520px;height:520px;right:-160px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(242,194,48,.14),transparent 68%);z-index:0}
+.dark .wrap{position:relative;z-index:2}
+.dark .sec-head h2{color:#fff}
+.dark .sec-head h2 em{color:var(--accent)}
+.dark .sec-head p{color:rgba(255,255,255,.72)}
+.dark .eyebrow{color:var(--accent)}
+.dark .eyebrow::before{background:var(--accent)}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dcard{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(6px);border-radius:18px;padding:36px 32px;overflow:hidden}
+.dcard .num{position:absolute;right:22px;top:10px;font-family:var(--serif);font-size:3.4rem;color:rgba(255,255,255,.07);font-style:italic}
+.dcard .ic{width:52px;height:52px;border-radius:14px;background:rgba(242,194,48,.16);color:var(--accent);display:grid;place-items:center;margin-bottom:20px}
+.dcard .ic svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+.dcard h3{font-size:1.32rem;color:#fff;margin-bottom:10px}
+.dcard p{font-size:.96rem;color:rgba(255,255,255,.72)}
+
+/* FAMILY brand band */
+.fam{background:var(--bg)}
+.fam-inner{position:relative;border-radius:30px;overflow:hidden;background:linear-gradient(150deg,var(--green),var(--green-d));color:#fff;display:grid;grid-template-columns:1.05fr .95fr;align-items:center}
+.fam-copy{padding:74px 64px}
+.fam-copy .eyebrow{color:var(--accent)}
+.fam-copy .eyebrow::before{background:var(--accent)}
+.fam-copy h2{font-size:clamp(2.1rem,4.2vw,3.2rem);margin:16px 0 20px;color:#fff}
+.fam-copy h2 em{color:var(--accent)}
+.fam-copy p{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:28px;max-width:44ch}
+.fam-chips{display:flex;flex-wrap:wrap;gap:10px}
+.fam-chips span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:9px 17px;font-size:.9rem;font-weight:600}
+.fam-img{position:relative;min-height:440px;height:100%}
+.fam-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ABOUT / founder */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:center}
+.about-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(18,64,30,.55)}
+.about-img img{width:100%;aspect-ratio:5/4.4;object-fit:cover}
+.about-img .badge{position:absolute;left:24px;bottom:24px;background:var(--accent);color:#3a2c00;border-radius:14px;padding:15px 22px}
+.about-img .badge b{font-family:var(--serif);font-size:1.5rem;display:block;line-height:1}
+.about-img .badge small{font-size:.74rem;font-weight:600}
+.about-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 24px}
+.about-copy h2 em{color:var(--green)}
+.about-copy p{color:#33452f;font-size:1.08rem;margin-bottom:20px}
+.about-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.about-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.98rem;color:var(--green-d)}
+.about-list svg{width:22px;height:22px;stroke:var(--accent-d);fill:none;stroke-width:2.4;flex:none}
+
+/* SERVICE AREA */
+.area{background:var(--bg)}
+.area-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.area-img{border-radius:18px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(18,64,30,.5)}
+.area-img img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s}
+.area-img:hover img{transform:scale(1.06)}
+.towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}
+.towns span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:var(--ink);transition:.3s}
+.towns span:hover{background:var(--green);border-color:var(--green);color:#fff}
+
+/* QUOTE */
+.quote{position:relative;overflow:hidden;background:linear-gradient(165deg,#123A1A,#0C2D14);color:#fff;text-align:center}
+.quote::after{content:"";position:absolute;width:560px;height:560px;left:50%;top:-200px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(242,194,48,.16),transparent 66%);z-index:0}
+.quote .wrap{position:relative;z-index:2;max-width:900px}
+.quote .mark{font-family:var(--serif);font-size:6rem;line-height:.6;color:var(--accent);font-style:italic}
+.quote p{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.6rem);font-style:italic;font-weight:400;line-height:1.3;margin:10px 0 26px}
+.quote .att{font-family:var(--sans);font-size:.95rem;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.8)}
+.quote .att b{color:var(--accent);font-weight:700}
+
+/* FAQ */
+.faq{background:#fff}
+.faq-grid{max-width:820px;margin:0;display:grid;gap:14px}
+.faq details{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:0 26px;transition:.3s}
+.faq details[open]{background:#fff;box-shadow:0 22px 44px -30px rgba(18,64,30,.4);border-color:transparent}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:24px 0;font-family:var(--serif);font-size:1.24rem;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .tg{width:34px;height:34px;flex:none;border-radius:10px;background:var(--mint);color:var(--green);display:grid;place-items:center;margin-left:auto;transition:.3s;font-size:1.3rem;line-height:1}
+.faq details[open] .tg{background:var(--green);color:#fff;transform:rotate(45deg)}
+.faq .tg svg{width:18px;height:18px}
+.faq p{padding:0 0 26px;color:var(--muted);font-size:1.02rem;max-width:64ch}
+
+/* CTA */
+.cta{background:var(--bg);padding-top:0}
+.cta-inner{position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(140deg,var(--accent),var(--accent-d));color:#3a2c00;padding:74px 64px;text-align:center}
+.cta-inner::after{content:"";position:absolute;width:520px;height:520px;right:-160px;bottom:-220px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.4),transparent 66%)}
+.cta-inner .wrap2{position:relative;z-index:2}
+.cta-inner h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:16px}
+.cta-inner p{font-size:1.16rem;max-width:52ch;margin:0 auto 34px;color:#4a3a06}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* CONTACT */
+.contact{background:linear-gradient(165deg,#123A1A,#0C2D14);color:#fff;padding:118px 0;position:relative;overflow:hidden}
+.contact::after{content:"";position:absolute;width:560px;height:560px;left:-180px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(47,143,62,.35),transparent 68%);z-index:0}
+.contact .wrap{position:relative;z-index:2}
+.contact-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin:16px 0 18px;max-width:none}
+.contact-head h2 em{color:var(--accent)}
+.contact-head .eyebrow{justify-content:center;color:var(--accent)}
+.contact-head .eyebrow::before{background:var(--accent)}
+.contact-head>p{color:rgba(255,255,255,.75);font-size:1.12rem;margin:0 auto;max-width:50ch}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+.cinfo{background:rgba(255,255,255,.045);border:1px solid var(--lineD);border-radius:20px;padding:46px 42px}
+.cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+.cinfo>p{color:rgba(255,255,255,.7);margin-bottom:12px}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow:first-of-type{border-top:none}
+.crow svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.crow b,.crow a{font-size:1.08rem;color:#fff;font-weight:600}
+.ccard{background:var(--accent);border-radius:20px;padding:46px 42px;text-align:center;color:#3a2c00;display:flex;flex-direction:column;justify-content:center}
+.ccard .ic{width:66px;height:66px;border-radius:50%;background:#3a2c00;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.ccard .ic svg{width:30px;height:30px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.ccard h3{font-size:1.8rem;margin-bottom:12px}
+.ccard p{color:#4a3a06;margin-bottom:28px}
+.ccard .btn{width:100%;justify-content:center;margin-bottom:12px}
+.ccard .btn-dark{background:#123A1A;color:#fff}
+.ccard .btn-dark:hover{transform:translateY(-2px);background:#0C2D14}
+.ccard .btn-out{background:transparent;color:#3a2c00;border:1.5px solid rgba(58,44,0,.35)}
+.ccard .btn-out:hover{background:rgba(58,44,0,.08)}
+
+/* FOOTER */
+footer{background:#081F0E;color:#9FB8A2;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand .fb{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.foot-brand .mk{width:42px;height:42px;border-radius:11px;background:var(--green);display:grid;place-items:center}
+.foot-brand .mk svg{width:24px;height:24px}
+.foot-brand b{font-family:var(--serif);font-size:1.5rem;color:#fff}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B4CCB8;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6C8470}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .about-grid,.contact-grid,.fam-inner,.area-grid{grid-template-columns:1fr;gap:0}
+  .about-grid,.area-grid{gap:48px}
+  .contact-grid{gap:24px}
+  .about-img,.area-img{max-width:520px}
+  .svc-grid,.dgrid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .fam-copy{padding:56px 40px}
+  .fam-img{min-height:340px}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:76px 0}
+  .hero-in{padding:150px 22px 64px}
+  .hero-mini div{padding-right:24px;margin-right:24px}
+  .svc-grid,.dgrid,.about-list{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .fam-copy,.cta-inner,.cinfo,.ccard{padding:44px 26px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Family &amp; Veteran Owned <span class="acc">&middot;</span> Free Inspection <span class="acc">&middot;</span> <b>Call 678-617-6951</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c1.7 0 3 1.2 3.2 2.9 1.5.4 2.6 1.7 2.6 3.3 0 .5-.1 1-.3 1.5 1.1.5 1.9 1.7 1.9 3 0 1.5-1 2.8-2.4 3.2-.2 1.9-1.8 3.3-3.9 3.3s-3.7-1.4-3.9-3.3C11.8 21.6 10.8 20.3 10.8 18.8c0-1.3.8-2.5 1.9-3-.2-.5-.3-1-.3-1.5 0-1.6 1.1-2.9 2.6-3.3C15.1 6.2 16 5 16 5Z" fill="#F2C230"/><path d="M16 11v11M11.5 14l-2-1.5M20.5 14l2-1.5M11 18l-2 .5M21 18l2 .5" stroke="#F2C230" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+      <span><b>Combs Pest Control</b><span>Gainesville, GA</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">Our story</a>
+      <a href="#area">Service area</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:6786176951"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>678-617-6951</span></a>
+      <a class="nav-cta" href="#contact">Free inspection</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/cpc-hero.jpg" alt="A protected North Georgia home on a bright day"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F2C230" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Family &amp; Veteran Owned &middot; Gainesville, GA
+    </span>
+    <h1>We stop what's <em>bugging you.</em></h1>
+    <p>For over 20 years, Combs Pest Control has kept North Georgia homes and businesses pest-free with proactive treatments, honest service, and a <b>free inspection</b> to start.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#contact">Book your free inspection</a>
+      <a class="btn btn-ghost" href="tel:6786176951">Call 678-617-6951</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>20+ yrs</b><span>Of experience</span></div>
+      <div><b>Free</b><span>Inspection</span></div>
+      <div><b>North GA</b><span>Proudly served</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div><b>Family owned</b><small>&amp; operated</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Veteran owned</b><small>Proudly local</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>20+ years</b><small>Of knowledge</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Free inspection</b><small>No obligation</small></div></div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>Trusted by neighbors <em>across North Georgia.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Ron and his team are professional, on time, and thorough. Our mosquito problem is completely gone and the yard is finally usable again all summer. Highly recommend Combs.</p>
+        <div class="who"><span class="av">SM</span><div><b>Sarah M.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Great local, family-run company. They came out for a free inspection, explained everything clearly, and set us up on a regular plan. Honest people who do what they say.</p>
+        <div class="who"><span class="av">DT</span><div><b>David T.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We had ants everywhere and Combs took care of it fast. Friendly, knowledgeable, and fairly priced. It is nice to support a veteran-owned business here in Gainesville.</p>
+        <div class="who"><span class="av">KH</span><div><b>Kayla H.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative.</p>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we treat</span>
+      <h2>Pest control, done <em>the right way.</em></h2>
+      <p>From a single infestation to a year-round protection plan, our experienced team handles the pests that North Georgia homeowners deal with most.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="gcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 11 2 2 4-4"/></svg></div>
+        <h3>General pest control</h3>
+        <p>Comprehensive treatment and prevention for the common pests that find their way into your home and business.</p>
+      </div>
+      <div class="gcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M12 8c-2-2-5-2-7 0M12 8c2-2 5-2 7 0M12 14c-2-2-5-2-7 0M12 14c2-2 5-2 7 0M12 3l-2 2M12 3l2 2"/></svg></div>
+        <h3>Mosquito extermination</h3>
+        <p>Targeted yard treatments that break the breeding cycle so you can enjoy your outdoor space all season long.</p>
+      </div>
+      <div class="gcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6M4 13h16"/></svg></div>
+        <h3>Termite extermination</h3>
+        <p>Inspection and treatment to stop the silent damage termites cause and protect the structure of your property.</p>
+      </div>
+      <div class="gcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="5" ry="7"/><path d="M12 6c0-2 1.5-3.5 3.5-3.5M12 6c0-2-1.5-3.5-3.5-3.5M7 11 3 9M17 11l4-2M7 15l-4 1M17 15l4 1"/></svg></div>
+        <h3>Cockroach extermination</h3>
+        <p>Thorough interior and exterior treatment that clears active infestations and keeps roaches from coming back.</p>
+      </div>
+      <div class="gcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="2.5"/><ellipse cx="12" cy="15" rx="3" ry="4.5"/><path d="M9.5 12 5 10M14.5 12l4.5-2M9 16l-4 1M15 16l4 1M12 5.5V3"/></svg></div>
+        <h3>Ant control</h3>
+        <p>We track ants back to the source and treat the colony, not just the trail, for lasting relief inside and out.</p>
+      </div>
+      <div class="gcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c-3 0-5 2.5-5 6 0 4 5 12 5 12s5-8 5-12c0-3.5-2-6-5-6Z"/><circle cx="12" cy="9" r="1.6"/></svg></div>
+        <h3>Flea &amp; mite control</h3>
+        <p>Treatment plans that break the flea and mite life cycle to protect your family and your pets from irritation.</p>
+      </div>
+    </div>
+    <div class="also reveal">
+      <b>Also handling:</b>
+      <span>Spiders</span><span>Wasps</span><span>Silverfish</span><span>Earwigs</span><span>Rodents</span><span>Commercial pest control</span><span>Seasonal treatments</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why regular treatment</span>
+      <h2>Proactive protection, <em>real peace of mind.</em></h2>
+      <p>Pests do not wait for an invitation. A regular, proactive plan keeps them out before they become a problem, so your home stays comfortable year round.</p>
+    </div>
+    <div class="dgrid stagger">
+      <div class="dcard">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10Z"/></svg></div>
+        <h3>Peace of mind</h3>
+        <p>Scheduled visits mean you never have to think about pests. We stay ahead of them so you do not have to.</p>
+      </div>
+      <div class="dcard">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div>
+        <h3>A healthier home</h3>
+        <p>Fewer pests means fewer bites, allergens, and contaminants around the people and pets you care about.</p>
+      </div>
+      <div class="dcard">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M9 21v-7h6v7"/></svg></div>
+        <h3>Protected property</h3>
+        <p>Catching termites and wood-destroying pests early protects the structure and value of your biggest investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec fam">
+  <div class="wrap">
+    <div class="fam-inner reveal">
+      <div class="fam-copy">
+        <span class="eyebrow">Family first</span>
+        <h2>Keeping your home <em>pest-free and your family safe.</em></h2>
+        <p>We are a family business, and we treat every home like our own. Our goal is simple: a comfortable, protected home where your family can relax without worrying about what is crawling nearby.</p>
+        <div class="fam-chips">
+          <span>Family owned</span><span>Veteran owned</span><span>Pet-conscious</span><span>Local team</span>
+        </div>
+      </div>
+      <div class="fam-img"><img src="../assets/img/cpc-family.jpg" alt="A father and his two children at home behind a white fence"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img src="../assets/img/cpc-team.webp" alt="Ron Combs beside the Combs Pest Control service truck">
+      <div class="badge"><b>Ron Combs</b><small>Owner &amp; founder</small></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">Our story</span>
+      <h2>A local family business North Georgia <em>can count on.</em></h2>
+      <p>Combs Pest Control is a family and veteran-owned company built on more than 20 years of hands-on knowledge and experience. Owner Ron Combs and his team know the pests of North Georgia and how to keep them out for good.</p>
+      <p>Every job starts with a free inspection and honest advice. No pressure, no upsell, just a straightforward plan to solve the problem and keep it from coming back. That is how we have earned our neighbors' trust, one home at a time.</p>
+      <div class="about-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Over 20 years of experience</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Family &amp; veteran owned</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Free, no-pressure inspection</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Residential &amp; commercial</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec area" id="area">
+  <div class="wrap area-grid">
+    <div class="area-img reveal"><img src="../assets/img/cpc-yard.jpg" alt="A healthy, pest-free green lawn"></div>
+    <div class="reveal">
+      <span class="eyebrow">Service area</span>
+      <h2 style="font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 18px">Proudly serving <em>North Georgia.</em></h2>
+      <p style="color:var(--muted);font-size:1.1rem;max-width:52ch">Based in Gainesville and caring for homes and businesses throughout the surrounding North Georgia communities.</p>
+      <div class="towns">
+        <span>Gainesville</span><span>Flowery Branch</span><span>Oakwood</span><span>Braselton</span><span>Buford</span><span>Cumming</span><span>Dawsonville</span><span>Dahlonega</span><span>Clermont</span><span>Lula</span><span>Cleveland</span><span>Hoschton</span><span>Jefferson</span><span>Commerce</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec quote">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="mark">&#8220;</div>
+      <p>We stop what's bugging you.</p>
+      <div class="att">The promise behind every visit &middot; <b>Combs Pest Control</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Answers before <em>we get started.</em></h2>
+    </div>
+    <div class="faq-grid reveal">
+      <details>
+        <summary>Do you really offer a free inspection?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>Yes. We start every relationship with a free, no-obligation inspection. We identify what you are dealing with, explain your options honestly, and only recommend what you actually need.</p>
+      </details>
+      <details>
+        <summary>What pests do you handle?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>General household pests, mosquitoes, termites, cockroaches, ants, fleas and mites, plus spiders, wasps, rodents, and more. If something is bugging you, we can take a look.</p>
+      </details>
+      <details>
+        <summary>How often should I have my home treated?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>For most homes, a regular, proactive plan keeps pests out year round. During your inspection we will recommend a schedule that fits your home, your concerns, and the season.</p>
+      </details>
+      <details>
+        <summary>Are your treatments safe for my family and pets?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>Keeping your family safe is the whole point. We apply treatments carefully and thoughtfully, and we are always happy to walk you through what we use and how to prepare.</p>
+      </details>
+      <details>
+        <summary>What areas do you serve?<span class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>We are based in Gainesville and serve homes and businesses throughout North Georgia. Not sure if you are in our area? Give us a call and we will let you know.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <div class="wrap2">
+        <h2>Ready to be pest-free?</h2>
+        <p>Book your free inspection today and let a local, family-owned team take care of what is bugging you.</p>
+        <div class="cta-actions">
+          <a class="btn btn-green" href="tel:6786176951"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>Call 678-617-6951</a>
+          <a class="btn btn-white" href="#contact">Request an inspection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let's take care of <em>what's bugging you.</em></h2>
+      <p>Call or text for your free inspection and we will get a member of our team out to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>Combs Pest Control LLC</h3>
+        <p>Family &amp; veteran owned &middot; Serving North Georgia</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:6786176951">678-617-6951</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Based in</small><b>Gainesville, GA</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 11 2 2 4-4"/></svg>
+          <div><small>Serving</small><b>North Georgia &middot; Free inspection</b></div>
+        </div>
+      </div>
+      <div class="ccard reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <h3>Book your free inspection</h3>
+        <p>Friendly, local service. Call or text and we will get you scheduled.</p>
+        <a class="btn btn-dark" href="tel:6786176951">Call 678-617-6951</a>
+        <a class="btn btn-out" href="sms:6786176951">Text us instead</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="fb">
+          <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c1.7 0 3 1.2 3.2 2.9 1.5.4 2.6 1.7 2.6 3.3 0 .5-.1 1-.3 1.5 1.1.5 1.9 1.7 1.9 3 0 1.5-1 2.8-2.4 3.2-.2 1.9-1.8 3.3-3.9 3.3s-3.7-1.4-3.9-3.3C11.8 21.6 10.8 20.3 10.8 18.8c0-1.3.8-2.5 1.9-3-.2-.5-.3-1-.3-1.5 0-1.6 1.1-2.9 2.6-3.3C15.1 6.2 16 5 16 5Z" fill="#F2C230"/></svg></span>
+          <b>Combs Pest Control</b>
+        </div>
+        <p>Family and veteran-owned pest control for Gainesville and North Georgia. Over 20 years of knowledge and experience.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">General pest control</a>
+        <a href="#services">Mosquito extermination</a>
+        <a href="#services">Termite extermination</a>
+        <a href="#services">Cockroach, ant &amp; flea control</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:6786176951">678-617-6951</a>
+        <p>Gainesville, GA</p>
+        <p>Serving North Georgia</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Combs Pest Control LLC</span>
+      <span>Family &amp; Veteran Owned &middot; Free Inspection &middot; Gainesville, GA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

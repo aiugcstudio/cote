@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Side by Side Pest Control | Trusted Pest Control in Arvada &amp; Denver, CO</title>
+<meta name="description" content="Side by Side Pest Control LLC is an Arvada, CO pest control company serving the Denver metro. Residential and commercial pest control, wildlife and bird control, and termite control using safe, environmentally friendly methods. Save $50 on your first recurring service.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B2A4A'/%3E%3Cpath d='M16 5c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z' fill='%233FA34D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B2A4A; --navy-d:#101B33; --ink:#16233F;
+  --accent:#3FA34D; --accent-d:#2E7D3A; --accent-soft:#E7F3E9;
+  --gold:#C9A24B;
+  --bg:#F5F8F4; --paper:#FFFFFF; --muted:#5B6B82;
+  --line:rgba(22,35,63,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#9BE0A6}
+.eyebrow.light::before{background:#9BE0A6}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-green{background:var(--accent);color:#fff}
+.btn-green:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(16,27,51,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--navy-d);color:#c6d2e6;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#9BE0A6}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:25px;height:25px}
+.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1.05}
+.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--accent-d)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 20s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(16,27,51,.96) 0%,rgba(27,42,74,.86) 44%,rgba(27,42,74,.5) 76%,rgba(27,42,74,.32) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;z-index:1;width:620px;height:620px;right:-140px;top:-120px;background:radial-gradient(circle,rgba(63,163,77,.4),transparent 62%);filter:blur(20px);animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-70px,60px) scale(1.1)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 112px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.1rem,6.2vw,5.7rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:#9BE0A6;font-style:italic;font-weight:400}
+.hero p{font-size:1.22rem;max-width:50ch;margin:26px 0 26px;color:rgba(255,255,255,.85);line-height:1.55}
+.hero .offer{display:inline-flex;align-items:center;gap:12px;background:rgba(63,163,77,.16);border:1px solid rgba(63,163,77,.5);border-radius:12px;padding:12px 20px;margin-bottom:34px;font-size:.98rem;font-weight:600}
+.hero .offer b{color:#9BE0A6}
+.hero .offer svg{width:22px;height:22px;flex:none;color:#9BE0A6}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:58px;flex-wrap:wrap}
+.hero-mini div{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(16,27,51,.25);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:48px;height:48px;flex:none;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center}
+.trust .t svg{width:25px;height:25px;stroke:var(--accent-d);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* SERVICES icon cards */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:36px 32px;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.scard:hover{transform:translateY(-6px);box-shadow:0 30px 56px -34px rgba(16,27,51,.45)}
+.scard:hover::before{transform:scaleX(1)}
+.scard .ic{width:56px;height:56px;border-radius:15px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;margin-bottom:22px}
+.scard .ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.7}
+.scard h3{font-size:1.42rem;margin-bottom:10px}
+.scard p{font-size:.98rem;color:var(--muted)}
+.also{margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 36px;display:flex;flex-wrap:wrap;align-items:center;gap:13px}
+.also b{font-family:var(--serif);font-size:1.18rem;margin-right:8px}
+.also span{background:var(--accent-soft);color:var(--accent-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* WHY split */
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.why-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(16,27,51,.55)}
+.why-img img{width:100%;aspect-ratio:5/4.6;object-fit:cover;transition:transform .9s}
+.why-img:hover img{transform:scale(1.05)}
+.why-img .badge{position:absolute;left:24px;bottom:24px;background:var(--accent);color:#fff;border-radius:12px;padding:16px 22px}
+.why-img .badge b{font-family:var(--serif);font-size:1.5rem;display:block;line-height:1}
+.why-img .badge small{font-size:.76rem;color:rgba(255,255,255,.85)}
+.why-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 24px}
+.why-copy h2 em{color:var(--accent)}
+.why-copy p{color:#33456a;font-size:1.08rem;margin-bottom:20px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.why-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.98rem;color:var(--navy)}
+.why-list svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none}
+
+/* GREEN / eco dark glass band */
+.eco{position:relative;color:#fff;overflow:hidden;background:linear-gradient(165deg,#12233f,#0c1728)}
+.eco::after{content:"";position:absolute;z-index:0;width:560px;height:560px;left:-160px;bottom:-200px;background:radial-gradient(circle,rgba(63,163,77,.34),transparent 64%);filter:blur(10px)}
+.eco .wrap{position:relative;z-index:2;padding:118px 40px}
+.eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.eco-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 20px}
+.eco-copy h2 em{color:#9BE0A6}
+.eco-copy>p{color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:30px;max-width:52ch}
+.eco-cards{display:grid;gap:16px}
+.eco-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px 24px;display:flex;gap:16px;backdrop-filter:blur(6px);transition:.35s}
+.eco-card:hover{background:rgba(255,255,255,.09);transform:translateX(6px)}
+.eco-card .ic{width:46px;height:46px;flex:none;border-radius:12px;background:rgba(63,163,77,.22);color:#9BE0A6;display:grid;place-items:center}
+.eco-card .ic svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.7}
+.eco-card b{display:block;font-size:1.04rem;margin-bottom:3px}
+.eco-card p{font-size:.92rem;color:rgba(255,255,255,.72)}
+.eco-photo{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.7);min-height:420px}
+.eco-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.eco-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(12,23,40,.55))}
+
+/* PESTS strip */
+.pests{background:var(--bg)}
+.pest-tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.pest-tags span{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:var(--ink);transition:.3s}
+.pest-tags span:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.pest-tags span svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.9}
+.pest-tags span:hover svg{stroke:#9BE0A6}
+
+/* COMMERCIAL band (brand-color/dark photo) */
+.cmt{position:relative;color:#fff;overflow:hidden;background:var(--navy)}
+.cmt-bg{position:absolute;inset:0;z-index:0}
+.cmt-bg img{width:100%;height:100%;object-fit:cover}
+.cmt-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,27,51,.95),rgba(46,125,58,.68))}
+.cmt .wrap{position:relative;z-index:2;padding:100px 40px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cmt .l{max-width:640px}
+.cmt .tag{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;font-weight:700;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:30px;margin-bottom:20px}
+.cmt h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px}
+.cmt p{color:rgba(255,255,255,.85);font-size:1.12rem}
+.cmt .r{text-align:center}
+.cmt .r .ph{font-family:var(--serif);font-size:2.3rem;color:#fff;display:block;margin-bottom:14px}
+
+/* PROCESS */
+.proc{background:#fff}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.pstep{position:relative;padding:34px 26px;border:1px solid var(--line);border-radius:16px;background:var(--bg);transition:.4s}
+.pstep:hover{transform:translateY(-6px);box-shadow:0 26px 50px -34px rgba(16,27,51,.4);background:#fff}
+.pstep .no{font-family:var(--serif);font-size:2.6rem;color:var(--accent);line-height:1;opacity:.4;margin-bottom:14px}
+.pstep .ic{width:48px;height:48px;border-radius:13px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;margin-bottom:18px}
+.pstep .ic svg{width:25px;height:25px;stroke:currentColor;fill:none;stroke-width:1.7}
+.pstep h3{font-size:1.24rem;margin-bottom:8px}
+.pstep p{font-size:.94rem;color:var(--muted)}
+
+/* AREA */
+.area{position:relative;overflow:hidden;color:#fff;background:linear-gradient(150deg,var(--accent),var(--accent-d))}
+.area::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 20%,rgba(255,255,255,.16),transparent 55%)}
+.area .wrap{position:relative;z-index:2;padding:104px 40px}
+.area .sec-head h2{color:#fff}
+.area .sec-head h2 em{color:#eafaec}
+.area .sec-head p{color:rgba(255,255,255,.85)}
+.area .sec-head .eyebrow{color:#eafaec}
+.area .sec-head .eyebrow::before{background:#eafaec}
+.towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:8px}
+.towns span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:#fff;transition:.3s}
+.towns span:hover{background:#fff;color:var(--accent-d)}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:44px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(16,27,51,.4)}
+.stars{color:#E8A93C;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#33456a;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{margin-top:26px;font-size:.82rem;color:var(--muted);font-style:italic}
+
+/* FAQ */
+.faq{background:#fff}
+.faq-wrap{max-width:840px}
+.faq details{border:1px solid var(--line);border-radius:14px;margin-bottom:14px;background:var(--bg);overflow:hidden;transition:.3s}
+.faq details[open]{background:#fff;box-shadow:0 20px 44px -34px rgba(16,27,51,.4)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;transition:.3s;font-size:1.3rem;line-height:1}
+.faq details[open] .tog{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq .ans{padding:0 26px 26px;color:var(--muted);font-size:1.02rem;max-width:64ch}
+
+/* CONTACT */
+.contact{background:var(--navy);color:#fff;padding:118px 0}
+.contact-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.contact-head .eyebrow{justify-content:center}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin-top:16px;max-width:none}
+.contact-head h2 em{color:#9BE0A6}
+.contact-head p{color:rgba(255,255,255,.75);font-size:1.12rem;margin-top:18px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch}
+.cinfo{background:linear-gradient(165deg,#12233f,#0c1728);border:1px solid var(--lineD);border-radius:20px;padding:46px 42px}
+.cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:24px}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow:first-of-type{border-top:none;padding-top:0}
+.crow svg{width:24px;height:24px;stroke:#9BE0A6;fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#9BE0A6;margin-bottom:4px}
+.crow b,.crow a{font-size:1.08rem;color:#fff;font-weight:600}
+.cform{background:#fff;border-radius:20px;padding:44px 42px;color:var(--ink)}
+.cform h3{font-size:1.5rem;margin-bottom:8px}
+.cform>p{color:var(--muted);font-size:.98rem;margin-bottom:24px}
+.cform label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-family:var(--sans);font-size:.98rem;margin-bottom:18px;background:var(--bg);transition:.25s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px var(--accent-soft)}
+.cform textarea{resize:vertical;min-height:110px}
+.cform .btn{width:100%;justify-content:center}
+
+/* FOOTER */
+footer{background:var(--navy-d);color:#9FB0CE;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand .fb{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.foot-brand .mk{width:42px;height:42px;border-radius:11px;background:var(--accent);display:grid;place-items:center;flex:none}
+.foot-brand .mk svg{width:24px;height:24px}
+.foot-brand b{font-family:var(--serif);font-size:1.4rem;color:#fff;display:block;line-height:1.1}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#9BE0A6;margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B4C3DD;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6C7C9C}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.40s}
+
+@media(max-width:1000px){
+  .why-grid,.eco-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .why-img,.eco-photo{max-width:520px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact,.eco .wrap,.cmt .wrap,.area .wrap{padding-left:0;padding-right:0}
+  .sec,.contact{padding:78px 0}
+  .eco .wrap,.area .wrap{padding:78px 22px}
+  .cmt .wrap{padding:70px 22px}
+  .hero-in{padding:150px 22px 66px}
+  .hero-mini div{padding-right:24px;margin-right:24px}
+  .svc-grid,.proc-grid,.why-list{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Serving Arvada &amp; the Denver metro &middot; <b>Save $50 on your first recurring service</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z" fill="#fff"/></svg></span>
+      <span><b>Side by Side</b><span>Pest Control &middot; Arvada, CO</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#approach">Our approach</a>
+      <a href="#process">Process</a>
+      <a href="#area">Service area</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:7205885484"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>(720) 588-5484</span></a>
+      <a class="nav-cta" href="#contact">Get a quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/sbs-hero.jpg" alt="A well-kept home protected by Side by Side Pest Control in the Denver metro"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#9BE0A6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Arvada based &middot; Denver metro &middot; Family, pet &amp; earth friendly
+    </span>
+    <h1>Pest control for your home, <em>done side by side.</em></h1>
+    <p>Side by Side Pest Control keeps homes and businesses across Arvada and the Denver metro pest free, using advanced techniques and environmentally friendly products that are safe for your family and pets.</p>
+    <div class="offer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7ZM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></svg>
+      <span><b>Save $50</b> on your first recurring service</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-green" href="#contact">Get a free quote</a>
+      <a class="btn btn-ghost" href="tel:7205885484">Call (720) 588-5484</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>Residential</b><span>&amp; commercial</span></div>
+      <div><b>Eco friendly</b><span>Safe products</span></div>
+      <div><b>Denver metro</b><span>&amp; surrounding areas</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div><b>Locally owned</b><small>Arvada, Colorado</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Safe for family &amp; pets</b><small>Won't harm your home</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 22c5-4 8-7 8-12a8 8 0 0 0-16 0c0 5 3 8 8 12Z"/><path d="M12 3c0 4 4 6 4 9"/></svg></span><div><b>Environmentally friendly</b><small>Advanced techniques</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span><div><b>Personalized plans</b><small>Built for your home</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Complete pest control, <em>inside and out.</em></h2>
+      <p>From recurring home protection to wildlife, birds, and termites, our team handles the pests that matter across the Denver metro with safe, effective, humane methods.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div>
+        <h3>Residential pest control</h3>
+        <p>Recurring and one time treatments that keep ants, spiders, roaches, rodents and seasonal pests out of your home for good.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V7l7-4v18M14 21V9l7 3v9M3 21h18M7 9v0M7 13v0M7 17v0"/></svg></div>
+        <h3>Commercial pest control</h3>
+        <p>Discreet, reliable protection for offices, retail, and facilities, with treatment plans that fit your schedule and your standards.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12c0-3 2-5 5-5 1 0 2 .5 3 1 1-.5 2-1 3-1 3 0 5 2 5 5 0 4-4 7-8 9-4-2-8-5-8-9Z"/><path d="M9 11v0M15 11v0"/></svg></div>
+        <h3>Animal &amp; wildlife control</h3>
+        <p>Safe, humane removal and exclusion for rodents, snakes and nuisance wildlife, sealing entry points so they stay out.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c0 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4"/><path d="M12 21v-6"/></svg></div>
+        <h3>Bird control</h3>
+        <p>Deterrents and exclusion that keep birds off ledges, signage and structures without harming them or your property.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M11 4v16M15 4v16M3 9h18M3 14h18"/></svg></div>
+        <h3>Termite control</h3>
+        <p>Inspection, targeted treatment and prevention to protect the wood in your home from costly termite damage.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Seasonal &amp; mosquito control</h3>
+        <p>Targeted treatments for mosquitoes, ticks and warm weather pests so your yard stays comfortable all season long.</p>
+      </div>
+    </div>
+    <div class="also reveal">
+      <b>Pests we handle:</b>
+      <span>Ants</span><span>Termites</span><span>Spiders</span><span>Cockroaches</span><span>Earwigs</span><span>Flies</span><span>Rodents</span><span>Snakes</span><span>Birds</span><span>Mosquitos</span><span>Ticks</span><span>Weeds</span><span>Wildlife</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="about">
+  <div class="wrap why-grid">
+    <div class="why-img reveal">
+      <img src="../assets/img/sbs-home.jpg" alt="A Denver metro home kept pest free by Side by Side Pest Control">
+      <div class="badge"><b>Side by Side</b><small>Local, honest, thorough</small></div>
+    </div>
+    <div class="why-copy reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>Your neighbors in <em>pest control.</em></h2>
+      <p>Side by Side Pest Control is a locally owned company based in Arvada, serving homeowners and businesses throughout the Denver metro and surrounding areas. We treat every property like it's our own.</p>
+      <p>We build a personalized quote and treatment plan for your home, then use safe, humane and effective methods that get rid of pests without putting your family or pets at risk. No cookie cutter spraying, just a plan that fits.</p>
+      <div class="why-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Residential &amp; commercial</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Safe for family &amp; pets</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Humane, effective methods</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Personalized treatment plans</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="eco" id="approach">
+  <div class="wrap">
+    <div class="eco-grid">
+      <div class="eco-copy reveal">
+        <span class="eyebrow light">Our approach</span>
+        <h2>Effective pest control that's <em>easy on your home.</em></h2>
+        <p>We pair advanced techniques with environmentally friendly products, so you get real results without harsh chemicals around the people and pets you care about.</p>
+        <div class="eco-cards stagger">
+          <div class="eco-card">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22c5-4 8-7 8-12a8 8 0 0 0-16 0c0 5 3 8 8 12Z"/><path d="M12 3c0 4 4 6 4 9"/></svg></div>
+            <div><b>Environmentally friendly products</b><p>Treatments chosen to be effective on pests and gentle on your surroundings.</p></div>
+          </div>
+          <div class="eco-card">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div>
+            <div><b>Safe for family &amp; pets</b><p>Methods that won't harm the people or animals who live there.</p></div>
+          </div>
+          <div class="eco-card">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 8V6a2 2 0 0 0-2-2h-3M4 8V6a2 2 0 0 1 2-2h3M4 16v2a2 2 0 0 0 2 2h3M20 16v2a2 2 0 0 1-2 2h-3"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <div><b>Humane wildlife handling</b><p>Nuisance animals removed and excluded without cruelty.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="eco-photo reveal">
+        <img src="../assets/img/sbs-eco.jpg" alt="A healthy Colorado tree, reflecting an environmentally friendly approach to pest control">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pests">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Common Colorado pests</span>
+      <h2>Whatever's getting in, <em>we know it.</em></h2>
+      <p>Denver metro homes deal with a specific mix of pests through the year. We identify what you're facing and treat it at the source.</p>
+    </div>
+    <div class="pest-tags reveal">
+      <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"/></svg>Ants</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M4 8l16 8M20 8L4 16"/></svg>Spiders</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M6 12c0-4 3-7 6-7s6 3 6 7-3 7-6 7-6-3-6-7Z"/></svg>Cockroaches</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16"/></svg>Earwigs</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="12" r="5"/><path d="M14 12h6"/></svg>Rodents</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 16c4-2 4-6 8-6s4 4 8 6"/></svg>Snakes</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 4c0 4 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4"/></svg>Termites</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v6M8 6l4 3 4-3"/><circle cx="12" cy="14" r="4"/></svg>Mosquitos</span>
+      <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 6c-2 3-4 5-4 8a4 4 0 0 0 8 0c0-3-2-5-4-8Z"/></svg>Weeds</span>
+    </div>
+  </div>
+</section>
+
+<section class="cmt">
+  <div class="cmt-bg"><img src="../assets/img/sbs-commercial.jpg" alt="A commercial building protected by Side by Side Pest Control"></div>
+  <div class="wrap">
+    <div class="l reveal">
+      <span class="tag">Commercial pest control</span>
+      <h2>Protect your business, quietly and reliably.</h2>
+      <p>Offices, retail spaces and facilities across the Denver metro trust us to keep pests out of sight and out of mind, with treatment plans built around your hours and your reputation.</p>
+    </div>
+    <div class="r reveal">
+      <span class="ph">(720) 588-5484</span>
+      <a class="btn btn-white" href="tel:7205885484">Request a walkthrough</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec proc" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>A simple path to a <em>pest free property.</em></h2>
+      <p>From your first call to lasting protection, we keep the process clear, personalized and easy.</p>
+    </div>
+    <div class="proc-grid stagger">
+      <div class="pstep">
+        <div class="no">01</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <h3>Get in touch</h3>
+        <p>Call or request a quote and tell us what you're seeing around your home or business.</p>
+      </div>
+      <div class="pstep">
+        <div class="no">02</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Inspect &amp; identify</h3>
+        <p>We assess the property, identify the pests and pinpoint how they're getting in.</p>
+      </div>
+      <div class="pstep">
+        <div class="no">03</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V10l6-5 6 5v10M9 20v-5h6v5"/></svg></div>
+        <h3>Personalized plan</h3>
+        <p>You get a custom quote and treatment plan built around your home, using safe products.</p>
+      </div>
+      <div class="pstep">
+        <div class="no">04</div>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Ongoing protection</h3>
+        <p>Recurring service keeps pests out year round, so you never have to think about it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Proudly serving Arvada <em>and the Denver metro.</em></h2>
+      <p>Based in Arvada and caring for homes and businesses across the surrounding communities.</p>
+    </div>
+    <div class="towns reveal">
+      <span>Arvada</span><span>Denver</span><span>Wheat Ridge</span><span>Westminster</span><span>Golden</span><span>Lakewood</span><span>Broomfield</span><span>Thornton</span><span>Northglenn</span><span>Commerce City</span><span>Boulder</span><span>Aurora</span><span>Littleton</span><span>Centennial</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What homeowners <em>are saying.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Had ants taking over the kitchen every spring. Side by Side found where they were coming in and treated it. Haven't seen a single one since, and I never worried about my dogs being around it.</p>
+        <div class="who"><span class="av">SM</span><div><b>Sarah M.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Brian was on time, professional and actually explained the plan instead of just spraying and leaving. Signed up for recurring service and it's been worth every penny.</p>
+        <div class="who"><span class="av">DR</span><div><b>David R.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We had a rodent issue in the garage and they handled it humanely and sealed everything up. Great communication and fair pricing. Highly recommend for anyone in the Arvada area.</p>
+        <div class="who"><span class="av">JL</span><div><b>Jenna L.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note reveal">Reviews shown are illustrative.</p>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details>
+        <summary>Are your treatments safe for my family and pets? <span class="tog">+</span></summary>
+        <div class="ans">Yes. We use environmentally friendly products and safe, effective methods chosen specifically so they won't harm your family or your pets. We're happy to walk you through what we use before we start.</div>
+      </details>
+      <details>
+        <summary>Do you offer recurring service? <span class="tog">+</span></summary>
+        <div class="ans">We do. Recurring service keeps pests out year round and is the best way to stay protected through Colorado's changing seasons. Right now you can save $50 on your first recurring service.</div>
+      </details>
+      <details>
+        <summary>What areas do you serve? <span class="tog">+</span></summary>
+        <div class="ans">We're based in Arvada and serve homes and businesses throughout the Denver metro and surrounding areas, including Wheat Ridge, Westminster, Golden, Lakewood, Broomfield and more.</div>
+      </details>
+      <details>
+        <summary>What kinds of pests do you handle? <span class="tog">+</span></summary>
+        <div class="ans">Ants, termites, spiders, cockroaches, earwigs, flies, rodents, snakes, birds, mosquitos, ticks, weeds and nuisance wildlife. We cover residential and commercial pest control, plus animal, bird and termite control.</div>
+      </details>
+      <details>
+        <summary>How does pricing work? <span class="tog">+</span></summary>
+        <div class="ans">We build a personalized quote and treatment plan for your specific property, so you only pay for what your home actually needs. Reach out for a free quote and we'll take it from there.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Get your <em>free quote.</em></h2>
+      <p>Tell us what you're dealing with and we'll build a personalized plan to get your property pest free. Save $50 on your first recurring service.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>Side by Side Pest Control</h3>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:7205885484">(720) 588-5484</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Based in</small><b>Arvada, Colorado</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><small>Service area</small><b>Denver metro &amp; surrounding areas</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+          <div><small>New customer offer</small><b>Save $50 on your first recurring service</b></div>
+        </div>
+      </div>
+      <form class="cform reveal" onsubmit="return false;">
+        <h3>Request a quote</h3>
+        <p>We'll get back to you with a personalized plan for your property.</p>
+        <label for="n">Name</label>
+        <input id="n" type="text" placeholder="Your name" autocomplete="name">
+        <label for="p">Phone</label>
+        <input id="p" type="tel" placeholder="(720) 000-0000" autocomplete="tel">
+        <label for="m">How can we help?</label>
+        <textarea id="m" placeholder="Tell us what pests you're seeing and where"></textarea>
+        <button class="btn btn-green" type="submit">Get my free quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="fb">
+          <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z" fill="#fff"/></svg></span>
+          <b>Side by Side Pest Control</b>
+        </div>
+        <p>Locally owned pest control for Arvada and the Denver metro. Safe, humane, environmentally friendly protection for your home and business.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Residential pest control</a>
+        <a href="#services">Commercial pest control</a>
+        <a href="#services">Animal &amp; wildlife control</a>
+        <a href="#services">Bird &amp; termite control</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:7205885484">(720) 588-5484</a>
+        <p>Arvada, Colorado</p>
+        <p>Denver metro &amp; surrounding areas</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Side by Side Pest Control LLC</span>
+      <span>Arvada, CO &middot; Denver metro &middot; Family, pet &amp; earth friendly</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

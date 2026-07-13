@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junkalanche Junk Removal | Waterford, MI &amp; Southeast Michigan</title>
+<meta name="description" content="Junkalanche Junk Removal LLC in Waterford, MI. Junk hauling, furniture removal, yard clean-up, residential clean outs, commercial and construction cleanouts, and demolition across Oakland, Genesee, and Livingston Counties. Fast, friendly, and fairly priced.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231A1A1A'/%3E%3Cpath d='M9 13h14l-1.5 12a2 2 0 0 1-2 1.8h-7A2 2 0 0 1 10.5 25L9 13Z' fill='%23EF7C1A'/%3E%3Cpath d='M7 13h18M13 13V9a3 3 0 0 1 6 0v4' stroke='%23EF7C1A' stroke-width='2' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#1A1A1A; --coal:#0E0E0E; --coal2:#161616; --slate:#232323;
+  --accent:#EF7C1A; --accent-d:#CF6408; --accent-soft:#FDEAD6; --amber:#F6A34A;
+  --bg:#FAF6F1; --paper:#FFFFFF; --ink:#1E1A16; --muted:#736A60;
+  --line:rgba(26,26,26,.12); --lineD:rgba(255,255,255,.13);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-d)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:var(--amber)}
+.eyebrow.light::before{background:var(--amber)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-d);transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(239,124,26,.7)}
+.btn-dark{background:var(--char);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--char)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--coal);color:#d8cabb;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:var(--amber)}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:25px;height:25px}
+.brand b{font-family:var(--serif);font-size:1.34rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--accent-d)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:850px;display:flex;align-items:center;overflow:hidden;background:var(--coal)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.09);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,14,14,.95) 0%,rgba(20,20,20,.86) 40%,rgba(26,26,26,.55) 74%,rgba(207,100,8,.28) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;right:-14%;top:8%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(239,124,26,.4),transparent 62%);z-index:1;animation:glow 9s ease-in-out infinite alternate;pointer-events:none}
+@keyframes glow{to{transform:translate(-40px,30px) scale(1.12)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:188px 40px 110px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.1rem,6.4vw,5.9rem);font-weight:500;letter-spacing:-.02em;line-height:1;max-width:16ch}
+.hero h1 em{color:var(--amber);font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:58px;flex-wrap:wrap}
+.hero-mini div{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:var(--char);color:#e8ddd0;position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:48px;height:48px;flex:none;border-radius:12px;background:rgba(239,124,26,.16);display:grid;place-items:center}
+.trust .t svg{width:25px;height:25px;stroke:var(--amber);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:#fff;line-height:1.15}
+.trust .t small{font-size:.82rem;color:rgba(232,221,208,.7)}
+
+/* SECTION base */
+.sec{padding:120px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent-d)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* SERVICES icon cards */
+.svc{background:var(--paper)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:38px 32px;transition:.4s;overflow:hidden}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.scard:hover{transform:translateY(-8px);box-shadow:0 36px 62px -40px rgba(26,26,26,.45);border-color:transparent}
+.scard:hover::before{transform:scaleX(1)}
+.scard .ic{width:56px;height:56px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:.4s}
+.scard:hover .ic{background:var(--accent)}
+.scard .ic svg{width:27px;height:27px;stroke:var(--accent-d);fill:none;stroke-width:1.6;transition:.4s}
+.scard:hover .ic svg{stroke:#fff}
+.scard h3{font-size:1.34rem;margin-bottom:11px}
+.scard p{color:var(--muted);font-size:.98rem}
+
+/* WHY dark glass band */
+.why{position:relative;overflow:hidden;color:#fff;background:radial-gradient(1000px 500px at 82% 12%,rgba(239,124,26,.22),transparent 60%),linear-gradient(165deg,#1c1c1c,#0d0d0d)}
+.why-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+.why-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 50px 90px -50px rgba(0,0,0,.8)}
+.why-img img{width:100%;aspect-ratio:5/4.4;object-fit:cover}
+.why-img .num{position:absolute;right:22px;top:16px;font-family:var(--serif);font-size:5rem;color:rgba(255,255,255,.14);line-height:1;pointer-events:none}
+.why-img .badge{position:absolute;left:22px;bottom:22px;background:var(--accent);color:#fff;border-radius:12px;padding:15px 20px}
+.why-img .badge b{font-family:var(--serif);font-size:1.5rem;display:block;line-height:1}
+.why-img .badge small{font-size:.76rem;color:rgba(255,255,255,.85)}
+.why-copy h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:16px 0 22px;color:#fff}
+.why-copy h2 em{color:var(--amber)}
+.why-copy p{color:rgba(255,255,255,.8);font-size:1.08rem;margin-bottom:18px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.why-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.96rem;color:#fff}
+.why-list .qi{width:34px;height:34px;flex:none;border-radius:9px;background:rgba(239,124,26,.18);display:grid;place-items:center}
+.why-list svg{width:18px;height:18px;stroke:var(--amber);fill:none;stroke-width:2.4}
+
+/* PROCESS */
+.proc{background:var(--bg)}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.step{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:40px 32px 34px;transition:.4s}
+.step:hover{transform:translateY(-6px);box-shadow:0 30px 56px -40px rgba(26,26,26,.4)}
+.step .n{font-family:var(--serif);font-size:1rem;color:#fff;width:44px;height:44px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-weight:600;margin-bottom:22px}
+.step .ic{width:34px;height:34px;margin-bottom:16px}
+.step .ic svg{width:34px;height:34px;stroke:var(--accent-d);fill:none;stroke-width:1.6}
+.step h3{font-size:1.3rem;margin-bottom:10px}
+.step p{color:var(--muted);font-size:.98rem}
+
+/* WORK gallery */
+.work{background:var(--paper)}
+.insp-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.icell{border-radius:14px;overflow:hidden;position:relative}
+.icell img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.icell:hover img{transform:scale(1.08)}
+.icell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,14,14,.5));opacity:0;transition:.4s}
+.icell:hover::after{opacity:1}
+.icell .cap{position:absolute;left:18px;bottom:14px;z-index:2;color:#fff;font-size:.86rem;font-weight:600;opacity:0;transform:translateY(8px);transition:.4s}
+.icell:hover .cap{opacity:1;transform:none}
+.i1{grid-column:span 2;grid-row:span 2}
+.i2{grid-column:span 2}
+.i5{grid-column:span 2}
+
+/* SERVE brand band */
+.serve{position:relative;overflow:hidden}
+.serve .band{background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:30px;color:#fff;padding:74px 66px;position:relative;overflow:hidden}
+.serve .band::after{content:"";position:absolute;right:-90px;bottom:-90px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.1)}
+.serve .band .eyebrow{color:#fff}
+.serve .band .eyebrow::before{background:rgba(255,255,255,.7)}
+.serve .band h2{font-size:clamp(2rem,4vw,3.1rem);margin:16px 0 14px;max-width:20ch;position:relative;z-index:2}
+.serve .band p{color:rgba(255,255,255,.9);font-size:1.1rem;max-width:52ch;position:relative;z-index:2}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;position:relative;z-index:2}
+.chips span{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;backdrop-filter:blur(4px)}
+.chips span svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
+
+/* QUOTE */
+.quote{position:relative;overflow:hidden;color:#fff;background:radial-gradient(800px 420px at 20% 20%,rgba(239,124,26,.25),transparent 60%),linear-gradient(160deg,#1a1a1a,#0b0b0b);text-align:center}
+.quote .wrap{position:relative}
+.quote .mark{font-family:var(--serif);font-size:8rem;line-height:.6;color:rgba(239,124,26,.5);display:block;margin-bottom:6px}
+.quote blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:500;line-height:1.28;max-width:20ch;margin:0 auto;letter-spacing:-.01em}
+.quote blockquote em{color:var(--amber)}
+.quote .by{margin-top:26px;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:48px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(26,26,26,.4)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#4a4038;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--char);color:var(--amber);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none;font-family:var(--serif)}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{text-align:center;margin-top:28px;font-size:.85rem;color:var(--muted)}
+
+/* AREA */
+.area{background:var(--paper)}
+.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.area-img{border-radius:18px;overflow:hidden;position:relative;box-shadow:0 40px 80px -50px rgba(26,26,26,.5)}
+.area-img img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.counties{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 26px}
+.counties div{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px 14px;text-align:center}
+.counties b{display:block;font-family:var(--serif);font-size:1.16rem;color:var(--ink)}
+.counties small{font-size:.76rem;color:var(--muted)}
+.towns{display:flex;flex-wrap:wrap;gap:10px}
+.towns span{background:var(--bg);border:1px solid var(--line);border-radius:30px;padding:9px 17px;font-size:.9rem;font-weight:600;color:var(--ink);transition:.3s}
+.towns span:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq-list{max-width:860px;margin:0;display:flex;flex-direction:column;gap:14px}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:6px 26px;transition:.3s}
+.faq details[open]{box-shadow:0 22px 44px -34px rgba(26,26,26,.4)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;font-family:var(--serif);font-size:1.2rem;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;transition:.3s;position:relative}
+.faq .tog::before,.faq .tog::after{content:"";position:absolute;background:currentColor;border-radius:2px}
+.faq .tog::before{width:14px;height:2px}
+.faq .tog::after{width:2px;height:14px;transition:.3s}
+.faq details[open] .tog{background:var(--accent);color:#fff}
+.faq details[open] .tog::after{transform:rotate(90deg);opacity:0}
+.faq details p{color:var(--muted);font-size:1rem;padding:0 0 24px;max-width:64ch}
+
+/* CTA band */
+.cta{position:relative;color:#fff;overflow:hidden;background:var(--coal)}
+.cta-bg{position:absolute;inset:0;z-index:0}
+.cta-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.cta-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(14,14,14,.94),rgba(26,26,26,.7) 55%,rgba(207,100,8,.4))}
+.cta .wrap{position:relative;z-index:2;padding:100px 40px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta .l{max-width:620px}
+.cta .tag{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:30px;margin-bottom:20px}
+.cta h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:14px}
+.cta h2 em{color:var(--amber)}
+.cta p{color:rgba(255,255,255,.82);font-size:1.12rem}
+.cta .r{text-align:center}
+.cta .r .ph{font-family:var(--serif);font-size:2.3rem;color:#fff;display:block;margin-bottom:14px}
+
+/* CONTACT */
+.contact{background:var(--char);color:#fff;padding:120px 0}
+.contact-head{text-align:center;max-width:660px;margin:0 auto 54px}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin:16px 0 0;max-width:none}
+.contact-head h2 em{color:var(--amber)}
+.contact-head .eyebrow{justify-content:center}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:stretch}
+.cinfo{background:radial-gradient(600px 300px at 20% 0%,rgba(239,124,26,.2),transparent 60%),var(--coal2);border:1px solid var(--lineD);border-radius:20px;padding:44px 40px}
+.cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+.cinfo>p{color:rgba(255,255,255,.7);font-size:1rem;margin-bottom:20px}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:var(--amber);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:4px}
+.crow b,.crow a{font-size:1.06rem;color:#fff;font-weight:600}
+.cform{background:var(--paper);border-radius:20px;padding:44px 40px;color:var(--ink)}
+.cform h3{font-size:1.5rem;margin-bottom:6px}
+.cform p{color:var(--muted);font-size:.96rem;margin-bottom:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-family:var(--sans);font-size:1rem;background:var(--bg);color:var(--ink);transition:.25s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(239,124,26,.14)}
+.field textarea{resize:vertical;min-height:110px}
+.cform .btn{width:100%;justify-content:center;margin-top:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* FOOTER */
+footer{background:var(--coal);color:#a49485;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand b em{color:var(--accent);font-style:normal}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#bcae9f00;color:#c2b3a4;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#7c6d5f}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .why-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .why-img,.area-img{max-width:520px}
+  .svc-grid,.step-grid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .insp-grid{grid-template-columns:1fr 1fr}
+  .i1,.i2,.i5{grid-column:span 1;grid-row:span 1}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid rgba(255,255,255,.08)}
+  .counties{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:78px 0}
+  .hero-in{padding:150px 22px 64px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.step-grid,.insp-grid,.why-list,.two{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .serve .band{padding:54px 30px}
+  .cta .wrap{padding:70px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Serving Oakland, Genesee &amp; Livingston Counties &middot; <b>Call or text (248) 812-6732</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M9 13h14l-1.5 12a2 2 0 0 1-2 1.8h-7A2 2 0 0 1 10.5 25L9 13Z" fill="#fff"/><path d="M7 13h18M13 13V9a3 3 0 0 1 6 0v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <span><b>Junkalanche</b><span>Waterford, Michigan</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#work">Our work</a>
+      <a href="#area">Service area</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:2488126732"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>(248) 812-6732</span></a>
+      <a class="nav-cta" href="#contact">Get a free quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/jka-room.jpg" alt="A clean, clutter-free living room after a junk removal"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F6A34A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Locally owned &middot; Southeast Michigan &middot; Any sized project
+    </span>
+    <h1>Buried in junk? <em>We haul it all away.</em></h1>
+    <p>Junkalanche picks up, loads, and clears the stuff you no longer want, from a single couch to a full property clean out. Fast, friendly, and fairly priced, so you are left with a clean space and a lot less stress.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#contact">Get a free quote</a>
+      <a class="btn btn-ghost" href="tel:2488126732">Call (248) 812-6732</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>10+ yrs</b><span>Serving the area</span></div>
+      <div><b>3 counties</b><span>Southeast Michigan</span></div>
+      <div><b>Any size</b><span>Small to large jobs</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Based in Waterford</b><small>Local, not a franchise</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></span><div><b>Fast &amp; friendly</b><small>Prompt, hassle-free service</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><div><b>Fair, honest pricing</b><small>Affordable and upfront</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/><path d="M3 20h18"/></svg></span><div><b>We complete it all</b><small>Any sized project</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>One call and the junk is <em>gone.</em></h2>
+      <p>From a home, an office, or the yard, our trained specialists pick up, load, and discard whatever you no longer want. Point at it and consider it handled.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 13h11l-1.2 9.4a2 2 0 0 1-2 1.6H8.2a2 2 0 0 1-2-1.6L5 13Z"/><path d="M3 13h18M12 13V8a3 3 0 0 1 6 0"/></svg></div>
+        <h3>Junk hauling &amp; removal</h3>
+        <p>We pick up, load, and haul away unwanted items from your home, office, or yard, and dispose of it all for you.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M3 11h18v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5ZM6 17v3M18 17v3"/></svg></div>
+        <h3>Furniture removal</h3>
+        <p>Old couches, mattresses, dressers, and appliances carried out and cleared, no matter which floor they are on.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v6M8 5l4-3 4 3"/><path d="M4 22c1-5 4-8 8-8s7 3 8 8"/><path d="M9 14c0-3 1.5-5 3-6 1.5 1 3 3 3 6"/></svg></div>
+        <h3>Yard clean-up</h3>
+        <p>Brush, branches, old fencing, and outdoor debris cleared out so your yard is usable and tidy again.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Residential clean outs</h3>
+        <p>Garages, basements, attics, and whole-home clean outs handled top to bottom, with the space swept clean.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V11h5v10M13 21V7h5v14"/><path d="M6 11h5M13 7h5"/></svg></div>
+        <h3>Commercial &amp; construction</h3>
+        <p>Large commercial and construction site cleanouts, cleared efficiently so your crew can keep moving.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="m13 3 8 4-3 3M18 10 8 20l-5 1 1-5L14 6"/><path d="m11 9 4 4"/></svg></div>
+        <h3>Demolition services</h3>
+        <p>Sheds, decks, and interior tear-outs demolished and hauled away in one clean, coordinated visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap why-grid">
+    <div class="why-img reveal">
+      <span class="num">10+</span>
+      <img src="../assets/img/jka-real2.jpg" alt="The Junkalanche crew with a fully loaded trailer at a residential job">
+      <div class="badge"><b>Years</b><small>Serving the community</small></div>
+    </div>
+    <div class="why-copy reveal">
+      <span class="eyebrow light">Why Junkalanche</span>
+      <h2>The junk removal company you can <em>count on.</em></h2>
+      <p>With more than ten years of experience serving Southeast Michigan, Junkalanche has built a name on showing up prompt, working fast, and leaving every space cleaner than we found it.</p>
+      <p>No stress, no runaround, and no surprise pricing. Our trained professional specialists handle the heavy lifting so you can move on with your day.</p>
+      <div class="why-list">
+        <div><span class="qi"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Fast &amp; efficient</div>
+        <div><span class="qi"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Friendly, trained crew</div>
+        <div><span class="qi"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Fair, affordable pricing</div>
+        <div><span class="qi"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Prompt &amp; hassle-free</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec proc">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Clearing your junk is <em>simple.</em></h2>
+      <p>Three easy steps from cluttered to clear. You point, we lift, and the space is yours again.</p>
+    </div>
+    <div class="step-grid stagger">
+      <div class="step">
+        <div class="n">1</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <h3>Call for a quote</h3>
+        <p>Tell us what needs to go. We give you a fair, upfront price with no guesswork and no pressure.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M9 13h11l-1.2 9.4a2 2 0 0 1-2 1.6H8.2a2 2 0 0 1-2-1.6L5 13ZM3 13h18M12 13V8a3 3 0 0 1 6 0"/></svg></div>
+        <h3>We load it all</h3>
+        <p>Our crew arrives on time and does the heavy lifting, from the basement to the back yard.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7"/><path d="M3 20h18"/></svg></div>
+        <h3>Enjoy a clean space</h3>
+        <p>We haul everything off and dispose of it responsibly, leaving you with a clean, open space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec work" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">On the job</span>
+      <h2>Cleared out, <em>hauled off, done.</em></h2>
+      <p>From packed garages to full property clean outs, we handle the mess so you do not have to lift a thing.</p>
+    </div>
+    <div class="insp-grid reveal">
+      <div class="icell i1"><img src="../assets/img/jka-real2.jpg" alt="Junkalanche crew with a loaded trailer"><span class="cap">Loaded and ready to haul</span></div>
+      <div class="icell i2"><img src="../assets/img/jka-garage.jpg" alt="A tidy, cleared yard"><span class="cap">Yard clean-up</span></div>
+      <div class="icell"><img src="../assets/img/jka-furniture.jpg" alt="A cleared, open living space"><span class="cap">Furniture removal</span></div>
+      <div class="icell"><img src="../assets/img/jka-house.jpg" alt="A clean bathroom after a clean out"><span class="cap">Residential clean outs</span></div>
+      <div class="icell i5"><img src="../assets/img/jka-clean.jpg" alt="A clean, open home"><span class="cap">A clean space, less stress</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec serve">
+  <div class="wrap">
+    <div class="band reveal">
+      <span class="eyebrow">Who we help</span>
+      <h2>Any sized project, any kind of space.</h2>
+      <p>Homeowners, businesses, landlords, and contractors across Southeast Michigan call Junkalanche when it is time to clear the clutter and move forward.</p>
+      <div class="chips">
+        <span><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/></svg>Homeowners</span>
+        <span><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V7h12v14"/></svg>Offices &amp; businesses</span>
+        <span><svg viewBox="0 0 24 24"><path d="M2 12h20M12 2v20"/></svg>Landlords &amp; rentals</span>
+        <span><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7Z"/></svg>Realtors &amp; estates</span>
+        <span><svg viewBox="0 0 24 24"><path d="m13 3 8 4-3 3M18 10 8 20l-5 1 1-5L14 6"/></svg>Contractors</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec quote">
+  <div class="wrap reveal">
+    <span class="mark">&#8220;</span>
+    <blockquote>Point at the junk. We do the <em>heavy lifting.</em></blockquote>
+    <div class="by">Junkalanche Junk Removal &middot; Waterford, MI</div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Kind words</span>
+        <h2>What neighbors <em>are saying.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Showed up right on time and cleared out my whole garage in one visit. Friendly, quick, and a fair price. I could not believe how clean they left it.</p>
+        <div class="who"><span class="av">SM</span><div><b>Sarah M.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Needed an old couch and a mattress gone the same day. They handled it with zero hassle and did all the heavy lifting. Highly recommend Junkalanche.</p>
+        <div class="who"><span class="av">DR</span><div><b>Dave R.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We had a full property clean out after a move and they took care of everything. Professional, prompt, and honest about pricing. Will call again.</p>
+        <div class="who"><span class="av">LT</span><div><b>Lisa T.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative. Leave your own on our Google profile.</p>
+  </div>
+</section>
+
+<section class="sec area" id="area">
+  <div class="wrap area-grid">
+    <div class="area-img reveal">
+      <img src="../assets/img/jka-clean.jpg" alt="A clean home in Southeast Michigan at dusk">
+    </div>
+    <div class="area-copy reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Proudly serving <em>Southeast Michigan.</em></h2>
+      <p>Based in Waterford and covering three counties across the region, we are close by and quick to respond.</p>
+      <div class="counties">
+        <div><b>Oakland</b><small>County</small></div>
+        <div><b>Genesee</b><small>County</small></div>
+        <div><b>Livingston</b><small>County</small></div>
+      </div>
+      <div class="towns">
+        <span>Waterford</span><span>Pontiac</span><span>Auburn Hills</span><span>Clarkston</span><span>White Lake</span><span>Commerce</span><span>Flint</span><span>Fenton</span><span>Howell</span><span>Brighton</span><span>Milford</span><span>Novi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>What kind of junk do you take?<span class="tog"></span></summary>
+        <p>Just about anything non-hazardous. Furniture, appliances, mattresses, household clutter, yard and construction debris, and full clean outs. If you are not sure about an item, give us a call and we will let you know.</p>
+      </details>
+      <details>
+        <summary>How much does junk removal cost?<span class="tog"></span></summary>
+        <p>Pricing is fair and based on how much we haul and the type of job. We give you an upfront quote before we start, so there are no surprises. Call or text for a free estimate.</p>
+      </details>
+      <details>
+        <summary>Do I need to move everything outside first?<span class="tog"></span></summary>
+        <p>No. Our trained crew does all the heavy lifting, wherever the items are, from the basement to the attic to the back yard. You point, we carry it out.</p>
+      </details>
+      <details>
+        <summary>How big a job can you handle?<span class="tog"></span></summary>
+        <p>Any size. From a single item pick up to large commercial and construction cleanouts, we complete projects of every scale across the region.</p>
+      </details>
+      <details>
+        <summary>Which areas do you serve?<span class="tog"></span></summary>
+        <p>We are based in Waterford and serve Oakland, Genesee, and Livingston Counties throughout Southeast Michigan.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-bg"><img src="../assets/img/jka-crew.jpg" alt="A clean out in progress"></div>
+  <div class="wrap">
+    <div class="l reveal">
+      <span class="tag">Ready when you are</span>
+      <h2>Buried in junk? <em>We can help.</em></h2>
+      <p>Call or text for a fast, free quote and get your space back. Prompt, friendly, and priced fair, every time.</p>
+    </div>
+    <div class="r reveal">
+      <span class="ph">(248) 812-6732</span>
+      <a class="btn btn-accent" href="tel:2488126732">Call now</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Get your <em>free quote.</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>Junkalanche Junk Removal</h3>
+        <p>Call, text, or send a message and we will get right back to you with a fair, upfront price.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:2488126732">(248) 812-6732</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg>
+          <div><small>Email</small><a href="mailto:junkalanche2021@gmail.com">junkalanche2021@gmail.com</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Based in</small><b>Waterford, MI &middot; Serving Oakland, Genesee &amp; Livingston</b></div>
+        </div>
+      </div>
+      <form class="cform reveal" action="mailto:junkalanche2021@gmail.com" method="post" enctype="text/plain">
+        <h3>Tell us about the job</h3>
+        <p>Send a few details and we will follow up with your free quote.</p>
+        <div class="two">
+          <div class="field"><label for="name">Name</label><input id="name" name="Name" type="text" placeholder="Your name" required></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="Phone" type="tel" placeholder="(248) 000-0000"></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" name="Email" type="email" placeholder="you@email.com" required></div>
+        <div class="field"><label for="message">What needs to go?</label><textarea id="message" name="Message" placeholder="Tell us what you would like removed and where..."></textarea></div>
+        <button class="btn btn-accent" type="submit">Request my free quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Junk<em>alanche</em></b>
+        <p>Locally owned junk removal for Waterford and Southeast Michigan. Fast, friendly, and fairly priced, from a single item to a full property clean out.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Junk hauling &amp; removal</a>
+        <a href="#services">Furniture removal</a>
+        <a href="#services">Yard clean-up</a>
+        <a href="#services">Clean outs &amp; demolition</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:2488126732">(248) 812-6732</a>
+        <a href="mailto:junkalanche2021@gmail.com">junkalanche2021@gmail.com</a>
+        <p>Waterford, MI</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Junkalanche Junk Removal LLC</span>
+      <span>Waterford, MI &middot; Oakland, Genesee &amp; Livingston Counties</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

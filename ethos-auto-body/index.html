@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethos Auto Body | Collision &amp; Cosmetic Repair in Bedford Hills, NY</title>
+<meta name="description" content="Ethos Auto Body LLC in Bedford Hills, NY, serving Westchester County since 2018. I-CAR Gold Class certified collision and cosmetic repair, complete insurance claim handling, free estimates, and a complimentary detail with every repair.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316181D'/%3E%3Cpath d='M10 9h12M10 16h9M10 23h12' stroke='%23E23636' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16181D; --dark:#0E0F13; --dark2:#1B1E25; --graphite:#22262F;
+  --bg:#F4F5F7; --paper:#FFFFFF; --muted:#606673; --faint:#8B909C;
+  --accent:#E23636; --accent-d:#B62A2A; --accent-soft:#FBE7E7;
+  --line:rgba(22,24,29,.12); --lineD:rgba(255,255,255,.13);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#fff}
+.eyebrow.light::before{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-red{background:var(--accent);color:#fff}
+.btn-red:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--dark);color:#b7bcc7;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:24px;height:24px}
+.brand b{font-family:var(--serif);font-size:1.28rem;font-weight:600;line-height:1}
+.brand span span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.72;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 22s ease-out forwards;opacity:.9}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,11,14,.96) 0%,rgba(14,15,19,.85) 40%,rgba(14,15,19,.55) 74%,rgba(14,15,19,.35) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;width:760px;height:760px;right:-160px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(226,54,54,.32),transparent 62%);z-index:1;animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-60px,60px)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:188px 40px 108px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.2vw,5.9rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:var(--accent);font-style:italic;font-weight:400}
+.hero p{font-size:1.22rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.84);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:58px;flex-wrap:wrap}
+.hero-mini div{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;line-height:1.1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:var(--graphite);color:#E7E9ED;position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 26px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:48px;height:48px;flex:none;border-radius:12px;background:rgba(226,54,54,.16);display:grid;place-items:center}
+.trust .t svg{width:25px;height:25px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:#fff;line-height:1.15}
+.trust .t small{font-size:.82rem;color:rgba(231,233,237,.66)}
+
+/* SECTION base */
+.sec{padding:120px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:58ch}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:38px 32px;transition:.4s;overflow:hidden}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.scard:hover::before{transform:scaleX(1)}
+.scard:hover{transform:translateY(-6px);box-shadow:0 34px 60px -40px rgba(22,24,29,.45);border-color:transparent}
+.scard .ic{width:54px;height:54px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:22px;transition:.4s}
+.scard:hover .ic{background:var(--accent)}
+.scard .ic svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.6;transition:.4s}
+.scard:hover .ic svg{stroke:#fff}
+.scard h3{font-size:1.34rem;margin-bottom:11px}
+.scard p{color:var(--muted);font-size:.98rem}
+.also{margin-top:40px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:32px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.also b{font-family:var(--serif);font-size:1.18rem;margin-right:8px}
+.also span{background:var(--accent-soft);color:var(--accent-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* CRAFT split (dark) */
+.craft{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.craft-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:stretch}
+.craft-copy{padding:120px 70px 120px 0}
+.craft-copy h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:18px 0 24px;color:#fff}
+.craft-copy h2 em{color:var(--accent)}
+.craft-copy p{color:rgba(255,255,255,.78);font-size:1.08rem;margin-bottom:20px}
+.craft-list{display:grid;gap:14px;margin-top:30px}
+.craft-list div{display:flex;gap:13px;align-items:flex-start;font-size:1rem;color:rgba(255,255,255,.9)}
+.craft-list .ic{width:34px;height:34px;flex:none;border-radius:9px;background:rgba(226,54,54,.18);display:grid;place-items:center}
+.craft-list svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2.2}
+.craft-img{position:relative;min-height:560px}
+.craft-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.craft-img::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--dark),transparent 26%);z-index:1}
+
+/* CERTS */
+.certs{background:var(--paper)}
+.cert-band{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;margin-bottom:56px}
+.cert-gold{background:linear-gradient(155deg,var(--graphite),var(--dark));border-radius:22px;padding:44px 46px;color:#fff;position:relative;overflow:hidden}
+.cert-gold::after{content:"";position:absolute;width:340px;height:340px;right:-120px;bottom:-140px;border-radius:50%;background:radial-gradient(circle,rgba(226,54,54,.3),transparent 65%)}
+.cert-gold .badge{position:relative;z-index:2;display:inline-flex;align-items:center;gap:11px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:40px;padding:9px 18px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+.cert-gold .badge svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:2}
+.cert-gold h3{position:relative;z-index:2;font-size:1.9rem;color:#fff;margin-bottom:14px}
+.cert-gold p{position:relative;z-index:2;color:rgba(255,255,255,.8);font-size:1.02rem}
+.cert-copy h2{font-size:clamp(2rem,3.8vw,3rem);margin:16px 0 18px}
+.cert-copy h2 em{color:var(--accent)}
+.cert-copy p{color:var(--muted);font-size:1.08rem}
+.brands{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.bcard{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:26px 18px;text-align:center;transition:.35s}
+.bcard:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 22px 40px -30px rgba(22,24,29,.5)}
+.bcard .ic{width:44px;height:44px;margin:0 auto 14px;border-radius:11px;background:var(--accent-soft);display:grid;place-items:center}
+.bcard .ic svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.bcard b{font-family:var(--serif);font-size:1.14rem;display:block;line-height:1.1}
+.bcard small{font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+
+/* CARE band (detailing + insurance) split */
+.care{position:relative;color:#fff;overflow:hidden;background:var(--graphite)}
+.care-grid{display:grid;grid-template-columns:1fr 1fr}
+.care-img{position:relative;min-height:440px}
+.care-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.care-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(22,26,31,.72))}
+.care-copy{padding:104px 68px;display:flex;flex-direction:column;justify-content:center}
+.care-copy h2{font-size:clamp(2rem,3.8vw,3rem);margin:14px 0 18px}
+.care-copy h2 em{color:var(--accent)}
+.care-copy p{color:rgba(255,255,255,.82);font-size:1.08rem;max-width:46ch;margin-bottom:14px}
+.care-pts{display:grid;gap:12px;margin-top:18px}
+.care-pts div{display:flex;gap:12px;align-items:center;font-weight:600;font-size:.98rem}
+.care-pts svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none}
+
+/* RIGHTS band (brand color) */
+.rights{background:var(--bg)}
+.rights-inner{background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:30px;padding:76px 64px;color:#fff;position:relative;overflow:hidden}
+.rights-inner::after{content:"";position:absolute;width:420px;height:420px;left:-140px;bottom:-180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 65%)}
+.rights-inner .eyebrow{color:#fff}
+.rights-inner .eyebrow::before{background:#fff}
+.rights-inner h2{position:relative;z-index:2;font-size:clamp(2rem,4vw,3.1rem);color:#fff;max-width:20ch;margin:16px 0 20px}
+.rights-inner>p{position:relative;z-index:2;color:rgba(255,255,255,.9);font-size:1.12rem;max-width:60ch;margin-bottom:40px}
+.rights-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rcell{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:28px 26px;backdrop-filter:blur(6px)}
+.rcell .ic{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.16);display:grid;place-items:center;margin-bottom:16px}
+.rcell svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.8}
+.rcell b{font-family:var(--serif);font-size:1.24rem;display:block;margin-bottom:8px}
+.rcell p{color:rgba(255,255,255,.88);font-size:.95rem}
+
+/* SHOWCASE gallery */
+.show{background:var(--paper)}
+.show-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:16px}
+.gcell{border-radius:14px;overflow:hidden;position:relative}
+.gcell img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.gcell:hover img{transform:scale(1.08)}
+.gcell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,15,19,.55));opacity:0;transition:.4s}
+.gcell:hover::after{opacity:1}
+.g1{grid-column:span 2;grid-row:span 2}
+.g4{grid-column:span 2}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:44px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(22,24,29,.4)}
+.stars{color:#F5A623;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#3a3f49;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--graphite);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none;font-family:var(--serif)}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{text-align:center;margin-top:30px;font-size:.85rem;color:var(--faint)}
+
+/* QUOTE */
+.quote{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.quote::after{content:"";position:absolute;width:640px;height:640px;left:50%;top:-40%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(226,54,54,.22),transparent 62%)}
+.quote .wrap{position:relative;z-index:2;text-align:center;max-width:940px}
+.quote .mark{font-family:var(--serif);font-size:6rem;line-height:.6;color:var(--accent);display:block;margin-bottom:10px}
+.quote p{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:500;line-height:1.3}
+.quote p em{color:var(--accent)}
+.quote .by{margin-top:26px;font-family:var(--sans);font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq-grid{display:grid;gap:16px;max-width:900px;margin:0}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:0 28px;transition:.3s}
+.faq details[open]{border-color:var(--accent);box-shadow:0 22px 44px -34px rgba(22,24,29,.5)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0;font-family:var(--serif);font-size:1.22rem;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;transition:.3s;font-size:1.3rem;line-height:1}
+.faq details[open] .tog{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq p{color:var(--muted);font-size:1rem;padding:0 0 26px}
+
+/* CONTACT */
+.contact{background:var(--dark);color:#fff;padding:120px 0}
+.contact-head{text-align:center;margin-bottom:56px}
+.contact-head .eyebrow{justify-content:center}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin-top:16px;max-width:none}
+.contact-head h2 em{color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
+.cinfo{background:var(--dark2);border:1px solid var(--lineD);border-radius:20px;padding:46px 44px}
+.cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+.cinfo>p{color:rgba(255,255,255,.7);margin-bottom:12px}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.crow b{font-size:1.06rem;color:#fff;font-weight:600}
+.cform{background:var(--paper);border-radius:20px;padding:44px 42px;color:var(--ink)}
+.cform h3{font-size:1.5rem;margin-bottom:6px}
+.cform>p{color:var(--muted);font-size:.96rem;margin-bottom:24px}
+.cform label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-family:var(--sans);font-size:.98rem;margin-bottom:18px;background:var(--bg);color:var(--ink);transition:.25s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+.cform textarea{resize:vertical;min-height:96px}
+.cform .btn{width:100%;justify-content:center}
+
+/* FOOTER */
+footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:36ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B6BBC6;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6A7080}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.07s}
+.stagger.in>*:nth-child(3){transition-delay:.14s}
+.stagger.in>*:nth-child(4){transition-delay:.21s}
+.stagger.in>*:nth-child(5){transition-delay:.28s}
+.stagger.in>*:nth-child(6){transition-delay:.35s}
+
+@media(max-width:1000px){
+  .craft-grid,.cert-band,.care-grid,.contact-grid{grid-template-columns:1fr}
+  .craft-copy{padding:90px 0}
+  .craft-img{min-height:360px}
+  .craft-img::before{background:linear-gradient(0deg,var(--dark),transparent 26%)}
+  .care-img{min-height:280px}
+  .care-copy{padding:70px 44px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .brands{grid-template-columns:repeat(3,1fr)}
+  .rights-grid,.rev-grid{grid-template-columns:1fr}
+  .show-grid{grid-template-columns:1fr 1fr}
+  .g1,.g4{grid-column:span 1;grid-row:span 1}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid rgba(255,255,255,.08)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .brand span span{display:none}
+  .sec,.contact{padding:80px 0}
+  .hero-in{padding:150px 22px 64px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.brands,.show-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .rights-inner,.care-copy{padding:56px 30px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Bedford Hills, NY &middot; Serving Westchester County &middot; <b>I-CAR Gold Class Certified</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M9 9h14M9 16h11M9 23h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+      <span><b>Ethos Auto Body</b><span>Collision &amp; Cosmetic Repair</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#craft">Our craft</a>
+      <a href="#certs">Certifications</a>
+      <a href="#rights">Your rights</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <a class="nav-cta" href="#contact">Free estimate</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/eab-c1.jpg" alt="Sleek dark vehicle finished to a flawless factory shine"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E23636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Bedford Hills, NY &middot; In business since 2018
+    </span>
+    <h1>Your car, returned to <em>pre-accident condition or better.</em></h1>
+    <p>Ethos Auto Body handles collision and cosmetic repair with certified technicians, factory-grade equipment, and complete insurance claim support, so a bad day on the road ends with your vehicle looking exactly as it should.</p>
+    <div class="hero-actions">
+      <a class="btn btn-red" href="#contact">Request a free estimate</a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>Since 2018</b><span>Trusted local shop</span></div>
+      <div><b>Gold Class</b><span>I-CAR certified</span></div>
+      <div><b>All carriers</b><span>Insurance accepted</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>I-CAR Gold Class</b><small>Highest industry standard</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6"/></svg></span><div><b>Factory authorized</b><small>Leading car brands</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/></svg></span><div><b>All insurance carriers</b><small>Claims handled in-house</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.5L12 20l-5 2.3 1-5.5-4-4 5.6-.8Z"/></svg></span><div><b>Free estimates</b><small>Plus a complimentary detail</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Collision and cosmetic repair, <em>done properly.</em></h2>
+      <p>From a light scuff to full structural work, our shop restores every panel, line, and finish with the equipment and materials the job actually calls for.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 13l2-5a3 3 0 0 1 2.8-2h8.4A3 3 0 0 1 19 8l2 5M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM3 13h18v3a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/></svg></div>
+        <h3>Collision &amp; cosmetic repair</h3>
+        <p>Dents, dings, and full collision damage corrected and refinished so panels line up and paint matches, edge to edge.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/></svg></div>
+        <h3>Insurance claim handling</h3>
+        <p>We accept all insurance carriers and complete inspections right at the shop, so your claim moves without the back and forth.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2M8 18v2M16 18v2"/></svg></div>
+        <h3>Unibody &amp; frame straightening</h3>
+        <p>Hi-tech unibody pulling and aligning bench systems bring the structure back to precise factory dimensions.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l7-7M13 11l4-4 3 3-4 4M15 5l4 4M9 15l-2 5 5-2"/></svg></div>
+        <h3>Specialized MIG welding</h3>
+        <p>Metal inert gas welding by trained hands, for clean, strong repairs that hold up the way the manufacturer intended.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h13l3 4v6H3zM16 11h3M6 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/><path d="M13 3h5M15 3v4"/></svg></div>
+        <h3>Structural repair</h3>
+        <p>Aluminum, steel, and carbon fiber structural work, matched to your vehicle so integrity and safety are never compromised.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M2 12h6m8 0h6M5 5l4 4m6 6 4 4M19 5l-4 4M9 15l-4 4"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Parts &amp; accessories</h3>
+        <p>Sales and installation of aftermarket parts and accessories, fitted and finished to the same standard as every repair.</p>
+      </div>
+    </div>
+    <div class="also reveal">
+      <b>We also handle:</b>
+      <span>Carbon fiber repairs</span><span>Aluminum structural</span><span>Steel structural</span><span>Paint &amp; refinishing</span><span>Panel alignment</span><span>At-shop inspections</span><span>Complimentary detailing</span>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="craft">
+  <div class="wrap craft-grid">
+    <div class="craft-copy reveal">
+      <span class="eyebrow light">Our craft</span>
+      <h2>Certified technicians, <em>factory-grade equipment.</em></h2>
+      <p>Every repair is carried out by certified, trained technicians using the latest technology and top-quality materials. The goal never changes: return your vehicle to pre-accident condition or better.</p>
+      <div class="craft-list">
+        <div><span class="ic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span><div>Hi-tech unibody pulling and aligning bench systems for precise structural repair</div></div>
+        <div><span class="ic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span><div>Specialized MIG (metal inert gas) welding for strong, clean joins</div></div>
+        <div><span class="ic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span><div>Carbon fiber, aluminum, and steel structural repair expertise</div></div>
+        <div><span class="ic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span><div>Top-quality materials on every job, no shortcuts</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="craft-img reveal"><img src="../assets/img/eab-c15.jpg" alt="Certified technician working carefully on a vehicle in the shop"></div>
+</section>
+
+<section class="sec certs" id="certs">
+  <div class="wrap">
+    <div class="cert-band">
+      <div class="cert-gold reveal">
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>Highest industry standard</span>
+        <h3>I-CAR Gold Class certified</h3>
+        <p>Gold Class recognition means our team trains to the highest standard in the collision repair industry, so your vehicle is repaired the right way, with the right knowledge, the first time.</p>
+      </div>
+      <div class="cert-copy reveal">
+        <span class="eyebrow">Certifications &amp; trust</span>
+        <h2>Factory authorized for <em>today's leading brands.</em></h2>
+        <p>We hold factory authorized repair facility certifications for many of the brands on the road today, so your car is repaired to the maker's own specifications and standards.</p>
+      </div>
+    </div>
+    <div class="brands stagger reveal">
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M4 9h16M4 15h16"/></svg></div><b>Hyundai</b><small>Factory authorized</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></div><b>Ford</b><small>Factory authorized</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/><circle cx="12" cy="12" r="9"/></svg></div><b>Infiniti</b><small>Factory authorized</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="m12 3 3 8h-6l3-8Zm0 18-3-8h6l-3 8Z"/></svg></div><b>Kia</b><small>Factory authorized</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v8M8 8l8 8M16 8v8"/></svg></div><b>Nissan</b><small>Factory authorized</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="care">
+  <div class="care-grid">
+    <div class="care-img reveal"><img src="../assets/img/eab-c10.jpg" alt="Vehicle being carefully cleaned and detailed after repair"></div>
+    <div class="care-copy reveal">
+      <span class="eyebrow light">The Ethos difference</span>
+      <h2>Free estimates, and a car <em>that leaves looking new.</em></h2>
+      <p>Estimates are always free. We handle your insurance claim from inspection to completion, and every repair comes with a complimentary detailing of your vehicle.</p>
+      <div class="care-pts">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Free, no-pressure estimates</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Inspections completed at the shop</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Complimentary detail with every repair</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>All insurance carriers accepted</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rights" id="rights">
+  <div class="wrap">
+    <div class="rights-inner reveal">
+      <span class="eyebrow">Know your rights</span>
+      <h2>You choose the shop that repairs your car.</h2>
+      <p>Some insurers may tell you that you have to use a "preferred shop." That is not true, and it is against the law. The choice of who repairs your vehicle is always yours.</p>
+      <div class="rights-grid stagger">
+        <div class="rcell">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <b>Your legal right</b>
+          <p>You have the right to choose your own repair shop, no matter what an adjuster suggests.</p>
+        </div>
+        <div class="rcell">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M12 3l7 4v5c0 5-3 8-7 9-4-1-7-4-7-9V7Z"/></svg></div>
+          <b>No "preferred shop" rule</b>
+          <p>An insurer cannot force you to use a specific shop. That claim is untrue and unlawful.</p>
+        </div>
+        <div class="rcell">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <b>We make it simple</b>
+          <p>Bring us the car and we take it from there, working directly with your carrier on the claim.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec show" id="work">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Finished work</span>
+      <h2>The standard we return every car to.</h2>
+      <p>Clean lines, matched paint, and a finish that looks the way it did the day the car was new.</p>
+    </div>
+    <div class="show-grid reveal">
+      <div class="gcell g1"><img src="../assets/img/eab-c9.jpg" alt="Restored coupe with a flawless silver finish"></div>
+      <div class="gcell"><img src="../assets/img/eab-c2.jpg" alt="Freshly finished blue performance car"></div>
+      <div class="gcell"><img src="../assets/img/eab-c8.jpg" alt="Detailed yellow sports car with a deep gloss"></div>
+      <div class="gcell g4"><img src="../assets/img/eab-c11.jpg" alt="Red sports car finished to a showroom shine"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What drivers <em>say about us.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>They handled the whole insurance claim for me and kept it simple from start to finish. The car came back looking better than before the accident, and detailed too.</p>
+        <div class="who"><span class="av">RM</span><div><b>R. M.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Honest, professional, and clearly know what they are doing. The paint match was perfect and you cannot tell there was ever any damage. Highly recommend.</p>
+        <div class="who"><span class="av">JD</span><div><b>J. D.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Free estimate, no pressure, and the work was done right. They walked me through my options and dealt with my insurance directly. Great local shop.</p>
+        <div class="who"><span class="av">AS</span><div><b>A. S.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative. Leave your own on our Google profile.</p>
+  </div>
+</section>
+
+<section class="sec quote">
+  <div class="wrap">
+    <span class="mark">&#8220;</span>
+    <p>Our commitment is simple: make the repair as easy and convenient as possible, with exceptional work, <em>done on time, at a reasonable price.</em></p>
+    <div class="by">Ethos Auto Body &middot; Bedford Hills, NY</div>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-grid reveal">
+      <details>
+        <summary>Do you work with my insurance company? <span class="tog">+</span></summary>
+        <p>Yes. We accept all insurance carriers and handle the complete claim for you, with inspections completed right here at the shop so the process stays simple.</p>
+      </details>
+      <details>
+        <summary>Do I have to use the shop my insurer recommends? <span class="tog">+</span></summary>
+        <p>No. You have the right to choose your own repair shop. Some insurers may say you must use a "preferred shop," but that is untrue and against the law. The choice is always yours.</p>
+      </details>
+      <details>
+        <summary>Are estimates really free? <span class="tog">+</span></summary>
+        <p>Always. Estimates are free, and every completed repair also includes a complimentary detailing of your vehicle.</p>
+      </details>
+      <details>
+        <summary>What kind of repairs can you handle? <span class="tog">+</span></summary>
+        <p>Collision and cosmetic repair, unibody and frame straightening, specialized MIG welding, and carbon fiber, aluminum, and steel structural repairs, plus sales and installation of aftermarket parts and accessories.</p>
+      </details>
+      <details>
+        <summary>Will my car look the way it did before? <span class="tog">+</span></summary>
+        <p>That is the goal on every job. Our certified technicians and factory-grade equipment are used to return your vehicle to pre-accident condition or better.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Get your <em>free estimate.</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>Ethos Auto Body</h3>
+        <p>Collision and cosmetic repair for Westchester County drivers. Bring us the car and we will take it from there.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Location</small><b>Bedford Hills, NY</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
+          <div><small>Service area</small><b>Westchester County</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><small>Certified</small><b>I-CAR Gold Class</b></div>
+        </div>
+      </div>
+      <form class="cform reveal" onsubmit="return false;">
+        <h3>Request an estimate</h3>
+        <p>Tell us about your vehicle and the damage, and we will get you a free estimate.</p>
+        <label for="nm">Name</label>
+        <input id="nm" type="text" placeholder="Your name">
+        <label for="ph">Phone</label>
+        <input id="ph" type="tel" placeholder="Best number to reach you">
+        <label for="ms">Vehicle &amp; damage</label>
+        <textarea id="ms" placeholder="Year, make, model, and what happened"></textarea>
+        <button class="btn btn-red" type="submit">Request free estimate</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Ethos Auto Body</b>
+        <p>Collision and cosmetic repair in Bedford Hills, NY, serving Westchester County since 2018. I-CAR Gold Class certified and factory authorized.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Collision &amp; cosmetic repair</a>
+        <a href="#services">Insurance claim handling</a>
+        <a href="#services">Unibody &amp; frame straightening</a>
+        <a href="#services">Structural &amp; MIG welding</a>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <p>Bedford Hills, NY</p>
+        <p>Serving Westchester County</p>
+        <a href="#contact">Request a free estimate</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Ethos Auto Body LLC</span>
+      <span>Bedford Hills, NY &middot; I-CAR Gold Class &middot; Factory Authorized</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

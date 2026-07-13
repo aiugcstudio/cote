@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exteriors First | Roofing &amp; Exterior Contractor in Salem, OR</title>
+<meta name="description" content="Exteriors First LLC is a full-service exterior contractor in Salem, OR. Roofing, siding, exterior painting, repairs, windows and doors, decks and patios, coatings, fencing, and consulting packages. Built for Oregon's climate. Free estimates.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23274060'/%3E%3Cpath d='M6 17 16 8l10 9' fill='none' stroke='%23C15B2E' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M9 16v8h14v-8' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#274060; --slate-d:#1A2C42; --navy:#14243A; --ink:#1C2A3E;
+  --accent:#C15B2E; --accent-d:#A64821; --accent-soft:#F6E7DE; --tint:#EAF0F7;
+  --bg:#F5F7FB; --paper:#FFFFFF; --muted:#5C6A7E;
+  --line:rgba(28,42,62,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--slate)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#fff}
+.eyebrow.light::before{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn-slate{background:var(--slate);color:#fff}
+.btn-slate:hover{background:var(--slate-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--slate)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(20,36,58,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--navy);color:#c6d4e6;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.brand b{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--slate)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--slate-d)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,36,58,.95) 0%,rgba(26,44,66,.85) 44%,rgba(20,36,58,.55) 78%,rgba(20,36,58,.35) 100%)}
+.hero::after{content:"";position:absolute;right:-8%;top:-12%;width:60%;height:70%;background:radial-gradient(circle,rgba(193,91,46,.4),transparent 62%);z-index:1;animation:drift 16s ease-in-out infinite alternate}
+@keyframes hz{to{transform:scale(1)}}
+@keyframes drift{to{transform:translate(-40px,40px)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 116px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.2vw,5.9rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:var(--accent);font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:60px;flex-wrap:wrap}
+.hero-mini div{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;line-height:1.1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(20,36,58,.25);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:50px;height:50px;flex:none;border-radius:12px;background:var(--tint);display:grid;place-items:center}
+.trust .t svg{width:26px;height:26px;stroke:var(--slate);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:58ch}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.scard{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px 28px;transition:.4s;overflow:hidden}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.scard:hover::before{transform:scaleX(1)}
+.scard:hover{transform:translateY(-6px);box-shadow:0 30px 54px -38px rgba(20,36,58,.5);border-color:transparent}
+.scard .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;transition:.4s}
+.scard:hover .ic{background:var(--accent);color:#fff}
+.scard .ic svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+.scard h3{font-size:1.24rem;margin-bottom:10px}
+.scard p{color:var(--muted);font-size:.95rem}
+
+/* ROOFING dark band */
+.darksec{position:relative;color:#fff;overflow:hidden;background:radial-gradient(120% 90% at 85% 0%,rgba(193,91,46,.28),transparent 55%),linear-gradient(165deg,var(--slate-d),var(--navy))}
+.dark-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.dark-copy h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:18px 0 22px;color:#fff}
+.dark-copy h2 em{color:var(--accent);font-style:italic}
+.dark-copy>p{color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:30px;max-width:48ch}
+.dcards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dcard{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(6px);border-radius:14px;padding:24px 22px;transition:.35s}
+.dcard:hover{transform:translateY(-5px);background:rgba(255,255,255,.08)}
+.dcard .di{width:44px;height:44px;border-radius:11px;background:rgba(193,91,46,.2);color:var(--accent);display:grid;place-items:center;margin-bottom:14px}
+.dcard .di svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.8}
+.dcard b{display:block;font-family:var(--serif);font-size:1.12rem;color:#fff;margin-bottom:5px;font-weight:500}
+.dcard span{font-size:.86rem;color:rgba(255,255,255,.68)}
+.dark-img{position:relative;border-radius:18px;overflow:hidden;min-height:460px;box-shadow:0 50px 90px -50px rgba(0,0,0,.7)}
+.dark-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dark-img .num{position:absolute;right:24px;bottom:18px;font-family:var(--serif);font-size:5rem;color:rgba(255,255,255,.9);line-height:1;z-index:2;text-shadow:0 6px 30px rgba(0,0,0,.5)}
+
+/* CONSULTING split */
+.consult{background:var(--paper)}
+.con-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.con-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 44px 80px -50px rgba(20,36,58,.6)}
+.con-img img{width:100%;aspect-ratio:5/4.4;object-fit:cover}
+.con-img .tagfloat{position:absolute;left:22px;bottom:22px;background:var(--accent);color:#fff;border-radius:12px;padding:14px 20px}
+.con-img .tagfloat b{font-family:var(--serif);font-size:1.3rem;display:block;line-height:1}
+.con-img .tagfloat small{font-size:.76rem;color:rgba(255,255,255,.85)}
+.con-copy h2{font-size:clamp(2.1rem,4.2vw,3.3rem);margin:16px 0 22px}
+.con-copy h2 em{color:var(--accent)}
+.con-copy>p{color:#33465e;font-size:1.08rem;margin-bottom:20px}
+.con-list{display:grid;gap:12px;margin-top:26px}
+.con-list .cl{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px 20px;transition:.3s}
+.con-list .cl:hover{border-color:var(--accent);transform:translateX(4px)}
+.con-list .cl .ci{width:42px;height:42px;flex:none;border-radius:11px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.con-list .cl .ci svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8}
+.con-list .cl b{font-size:1rem;color:var(--ink);display:block}
+.con-list .cl span{font-size:.9rem;color:var(--muted)}
+
+/* CLIMATE brand band */
+.climate{background:var(--bg);padding:118px 0}
+.climate .band{background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:30px;padding:80px 68px;color:#fff;position:relative;overflow:hidden}
+.climate .band::after{content:"";position:absolute;right:-6%;top:-30%;width:44%;height:160%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 62%)}
+.climate .band .inner{position:relative;z-index:2}
+.climate .eyebrow{color:#fff}
+.climate .eyebrow::before{background:rgba(255,255,255,.7)}
+.climate h2{font-size:clamp(2.1rem,4.2vw,3.2rem);color:#fff;margin:16px 0 18px;max-width:20ch}
+.climate h2 em{font-style:italic}
+.climate .lead{color:rgba(255,255,255,.9);font-size:1.12rem;max-width:60ch;margin-bottom:44px}
+.cl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cl-item{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:28px 26px;backdrop-filter:blur(4px);transition:.35s}
+.cl-item:hover{transform:translateY(-5px);background:rgba(255,255,255,.18)}
+.cl-item svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:1.6;margin-bottom:16px}
+.cl-item b{font-family:var(--serif);font-size:1.3rem;display:block;margin-bottom:8px;font-weight:500}
+.cl-item p{color:rgba(255,255,255,.85);font-size:.95rem}
+
+/* ABOUT split */
+.about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(20,36,58,.55)}
+.about-img img{width:100%;aspect-ratio:5/4.7;object-fit:cover}
+.about-img .badge{position:absolute;left:24px;bottom:24px;background:var(--slate);color:#fff;border-radius:12px;padding:16px 22px}
+.about-img .badge b{font-family:var(--serif);font-size:1.7rem;display:block;line-height:1}
+.about-img .badge small{font-size:.76rem;color:rgba(255,255,255,.8)}
+.about-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 24px}
+.about-copy h2 em{color:var(--accent)}
+.about-copy p{color:#33465e;font-size:1.08rem;margin-bottom:20px}
+.about-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.about-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.98rem;color:var(--slate)}
+.about-list svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none}
+
+/* GALLERY */
+.gal{background:var(--bg)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.gcell{border-radius:14px;overflow:hidden;position:relative}
+.gcell img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gcell:hover img{transform:scale(1.07)}
+.gcell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,36,58,.4));opacity:0;transition:.4s}
+.gcell:hover::after{opacity:1}
+.g1{grid-column:span 2;grid-row:span 2}
+.g2{grid-column:span 2}
+.g5{grid-column:span 2}
+
+/* AREA */
+.area{background:var(--paper)}
+.towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:8px}
+.towns span{background:var(--bg);border:1px solid var(--line);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:var(--ink);transition:.3s;display:inline-flex;align-items:center;gap:8px}
+.towns span svg{width:15px;height:15px;stroke:var(--accent);fill:none;stroke-width:2}
+.towns span:hover{background:var(--slate);border-color:var(--slate);color:#fff}
+.towns span:hover svg{stroke:#fff}
+
+/* QUOTE */
+.quote{position:relative;color:#fff;overflow:hidden;background:radial-gradient(100% 120% at 20% 0%,rgba(193,91,46,.32),transparent 55%),linear-gradient(160deg,var(--slate),var(--navy))}
+.quote .wrap{position:relative;z-index:2;padding:110px 40px;text-align:center;max-width:940px}
+.quote .qm{font-family:var(--serif);font-size:6rem;line-height:.6;color:var(--accent);display:block;margin-bottom:8px}
+.quote p{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.5rem);font-weight:500;line-height:1.32;color:#fff}
+.quote p em{color:var(--accent);font-style:italic}
+.quote .by{margin-top:26px;font-family:var(--sans);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.66);font-weight:600}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:50px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(20,36,58,.4)}
+.stars{color:#E8A33D;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#33465e;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--slate);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{text-align:center;margin-top:30px;font-size:.85rem;color:var(--muted)}
+
+/* FAQ */
+.faq{background:var(--paper)}
+.faq-list{max-width:860px;margin:0;display:grid;gap:14px}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:var(--bg);overflow:hidden;transition:.3s}
+.faq-item[open]{border-color:var(--accent);background:var(--paper);box-shadow:0 24px 46px -34px rgba(20,36,58,.4)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:26px 28px;font-family:var(--serif);font-size:1.2rem;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-left:auto;transition:.3s}
+.faq-item .tog svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;transition:.3s}
+.faq-item[open] .tog{background:var(--accent);color:#fff}
+.faq-item[open] .tog svg{transform:rotate(45deg)}
+.faq-item p{padding:0 28px 26px 80px;color:var(--muted);font-size:1rem;margin:0}
+
+/* CTA band */
+.ctaband{background:var(--bg);padding:0 0 118px}
+.ctaband .band{background:linear-gradient(150deg,var(--slate),var(--navy));border-radius:30px;padding:78px 60px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.ctaband .band::after{content:"";position:absolute;left:-8%;bottom:-40%;width:40%;height:150%;background:radial-gradient(circle,rgba(193,91,46,.3),transparent 60%)}
+.ctaband .inner{position:relative;z-index:2}
+.ctaband h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:16px;max-width:22ch;margin-left:auto;margin-right:auto}
+.ctaband h2 em{color:var(--accent);font-style:italic}
+.ctaband p{color:rgba(255,255,255,.82);font-size:1.12rem;max-width:52ch;margin:0 auto 32px}
+.ctaband .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* CONTACT */
+.contact{background:var(--paper);padding:118px 0}
+.contact-head{text-align:center;margin-bottom:56px}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin-top:18px;max-width:none}
+.contact-head h2 em{color:var(--accent)}
+.contact-head p{color:var(--muted);font-size:1.12rem;margin-top:18px;max-width:52ch;margin-left:auto;margin-right:auto}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -50px rgba(20,36,58,.5);border:1px solid var(--line)}
+.cinfo{background:radial-gradient(120% 90% at 90% 0%,rgba(193,91,46,.25),transparent 55%),linear-gradient(165deg,var(--slate-d),var(--navy));color:#fff;padding:52px 46px}
+.cinfo h3{font-size:1.6rem;color:#fff;margin-bottom:10px}
+.cinfo>p{color:rgba(255,255,255,.76);font-size:1rem;margin-bottom:28px;max-width:34ch}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:23px;height:23px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px}
+.crow b,.crow a{font-size:1.06rem;color:#fff;font-weight:600}
+.cnote{margin-top:26px;background:rgba(193,91,46,.18);border:1px solid rgba(193,91,46,.4);border-radius:12px;padding:16px 18px;font-size:.92rem;color:#fff;display:flex;gap:12px;align-items:flex-start}
+.cnote svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.9;flex:none;margin-top:2px}
+.cform{background:var(--paper);padding:52px 46px}
+.cform label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.cform .fld{margin-bottom:20px}
+.cform input,.cform textarea{width:100%;font-family:var(--sans);font-size:1rem;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);transition:.25s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(193,91,46,.12)}
+.cform textarea{resize:vertical;min-height:120px}
+.cform .btn{width:100%;justify-content:center}
+.cform .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* FOOTER */
+footer{background:var(--navy);color:#9db0c8;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:36ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#b3c3d8;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6f8098}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.07s}
+.stagger.in>*:nth-child(3){transition-delay:.14s}
+.stagger.in>*:nth-child(4){transition-delay:.21s}
+.stagger.in>*:nth-child(5){transition-delay:.28s}
+.stagger.in>*:nth-child(6){transition-delay:.35s}
+.stagger.in>*:nth-child(7){transition-delay:.42s}
+.stagger.in>*:nth-child(8){transition-delay:.49s}
+
+@media(max-width:1000px){
+  .dark-grid,.con-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .dark-img{min-height:340px}
+  .about-img,.con-img{max-width:520px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .cl-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr}
+  .g1,.g2,.g5{grid-column:span 1;grid-row:span 1}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+  .contact-grid{border-radius:18px}
+  .climate .band,.ctaband .band{padding:56px 34px}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact,.climate,.ctaband{padding-top:76px;padding-bottom:76px}
+  .hero-in{padding:150px 22px 64px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.dcards,.about-list,.gal-grid,.cform .two{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .quote .wrap{padding:76px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+  .faq-item p{padding-left:28px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Free estimates, we respond within one business day &middot; <b>Call (503) 979-5379</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32"><path d="M5 17 16 7l11 10"/><path d="M8 15.5V25h16v-9.5"/></svg></span>
+      <span><b>Exteriors First</b><span>Salem, Oregon</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#roofing">Roofing</a>
+      <a href="#consulting">Consulting</a>
+      <a href="#about">About</a>
+      <a href="#area">Service area</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:5039795379"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>(503) 979-5379</span></a>
+      <a class="nav-cta" href="#contact">Free estimate</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/exf-house8.jpg" alt="Home with a well-built roof set among Pacific Northwest evergreens at first light"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#C15B2E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Full-service exterior contractor &middot; Salem, OR
+    </span>
+    <h1>Exteriors built for <em>Oregon's climate.</em></h1>
+    <p>Roofing, siding, painting, and every exterior detail in between, handled with the care and precision your home or property deserves. Transparent service, and each project treated as our own.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#contact">Request a free estimate</a>
+      <a class="btn btn-ghost" href="tel:5039795379">Call (503) 979-5379</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>30+ years</b><span>Exterior experience</span></div>
+      <div><b>Residential</b><span>Multi-family &amp; commercial</span></div>
+      <div><b>1 business day</b><span>Estimate response</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Three decades of work</b><small>Hands-on exterior experience</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></span><div><b>Residential to commercial</b><small>Homes, multi-family, and business</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 2v3M3 21h18M6 21c0-4 2.7-6 6-6s6 2 6 6"/></svg></span><div><b>Built for our weather</b><small>Moisture, storm, wind, and rain</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span><div><b>Free estimates</b><small>We reply within one business day</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>One team for the <em>whole exterior.</em></h2>
+      <p>From the roofline down to the fence line, Exteriors First covers the work that keeps a property sound, dry, and looking its best across Oregon's seasons.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12 12 4l9 8"/><path d="M6 10v10h12V10"/><path d="M10 20v-5h4v5"/></svg></div>
+        <h3>Roofing</h3>
+        <p>Residential roofing plus commercial flat and low-slope systems, from full installation to repairs.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M3 14h18M8 4v16"/></svg></div>
+        <h3>Siding</h3>
+        <p>Siding that seals a home against Willamette Valley moisture while lifting its curb appeal.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 16l7-11 3 2-7 11z"/><path d="M14 5l2-2 3 2-2 2"/></svg></div>
+        <h3>Exterior painting</h3>
+        <p>Clean, durable exterior finishes that protect the surface and refresh the whole look.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 7l3 3M3 21l3-1L18 8a2 2 0 0 0-3-3L3 17l0 4z"/></svg></div>
+        <h3>Exterior repairs</h3>
+        <p>Storm damage, wear, and weak points repaired with care before they turn into bigger problems.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 12h16M12 3v18"/></svg></div>
+        <h3>Windows &amp; doors</h3>
+        <p>Window and door installation that tightens the envelope and finishes the exterior properly.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10h18M3 10l3-4h12l3 4M6 10v8M18 10v8M3 18h18"/></svg></div>
+        <h3>Decks &amp; patios</h3>
+        <p>Outdoor living space built to last, from decks and patios to the details that tie them in.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 20c2-6 12-6 14 0"/><path d="M12 3v8M8 7l4 4 4-4"/></svg></div>
+        <h3>Coatings &amp; sealings</h3>
+        <p>Protective coatings and sealings that add a real layer of defense against the elements.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V7l3-2 3 2 3-2 3 2 3-2 3 2v14"/><path d="M3 13h18M9 5v16M15 5v16"/></svg></div>
+        <h3>Fencing</h3>
+        <p>Fencing that defines a property line and adds privacy, security, and a finished look.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec darksec" id="roofing">
+  <div class="wrap dark-grid">
+    <div class="dark-copy reveal">
+      <span class="eyebrow light">Our roofing work</span>
+      <h2>A roof done <em>right,</em> from tear-off to ridge.</h2>
+      <p>Roofing is where the Oregon climate is least forgiving, so it is where the details matter most. We handle residential roofs and commercial flat and low-slope systems alike, and every installation is built up properly, layer by layer.</p>
+      <div class="dcards">
+        <div class="dcard">
+          <div class="di"><svg viewBox="0 0 24 24"><path d="M3 12 12 4l9 8"/><path d="M6 10v9h12v-9"/></svg></div>
+          <b>Roof installation</b>
+          <span>Tear-off, underlayment, flashing, and ventilation, all done in sequence.</span>
+        </div>
+        <div class="dcard">
+          <div class="di"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+          <b>Roof rejuvenation</b>
+          <span>Extend the life of a sound roof without a full replacement.</span>
+        </div>
+        <div class="dcard">
+          <div class="di"><svg viewBox="0 0 24 24"><path d="M14 7l3 3M3 21l3-1L18 8a2 2 0 0 0-3-3L3 17l0 4z"/></svg></div>
+          <b>Roof repairs</b>
+          <span>Leaks, storm damage, and problem spots addressed quickly.</span>
+        </div>
+        <div class="dcard">
+          <div class="di"><svg viewBox="0 0 24 24"><path d="M3 8h18v8H3z"/><path d="M3 12h18M7 8v8M17 8v8"/></svg></div>
+          <b>Commercial roofing</b>
+          <span>Flat and low-slope systems for multi-family and commercial buildings.</span>
+        </div>
+      </div>
+    </div>
+    <div class="dark-img reveal">
+      <img src="../assets/img/exf-roofers1.jpg" alt="Exterior contractor working on a residential roof tear-off">
+      <span class="num">01</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec consult" id="consulting">
+  <div class="wrap con-grid">
+    <div class="con-img reveal">
+      <img src="../assets/img/exf-constr1.jpg" alt="Reviewing exterior project plans and drawings">
+      <div class="tagfloat"><b>Consulting</b><small>Plan the project before you start</small></div>
+    </div>
+    <div class="con-copy reveal">
+      <span class="eyebrow">Consulting packages</span>
+      <h2>Planning a larger <em>exterior project?</em></h2>
+      <p>For homeowners and property managers thinking about bigger work, our consulting packages help you understand the scope, the priorities, and the cost before a single crew arrives. It is a clear-eyed look at what your property actually needs.</p>
+      <div class="con-list">
+        <div class="cl">
+          <span class="ci"><svg viewBox="0 0 24 24"><path d="M3 12 12 4l9 8"/><path d="M6 10v9h12v-9"/><path d="m9 14 2 2 4-4"/></svg></span>
+          <div><b>Roof inspection</b><span>An honest read on the condition and remaining life of your roof.</span></div>
+        </div>
+        <div class="cl">
+          <span class="ci"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M3 14h18M8 4v16"/></svg></span>
+          <div><b>Siding estimate</b><span>A clear estimate for re-siding or repairs, scoped to your property.</span></div>
+        </div>
+        <div class="cl">
+          <span class="ci"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M14 7l1.5-1.5 2 2L16 9"/></svg></span>
+          <div><b>Full exterior planning</b><span>A big-picture plan when several parts of the exterior need attention.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="climate">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="inner">
+        <span class="eyebrow">Built for our weather</span>
+        <h2>Work that stands up to <em>Oregon.</em></h2>
+        <p class="lead">Rain, wind, and constant moisture put a real test on every exterior in the Willamette Valley. We build and repair with that in mind, so your property is ready for the season ahead and the ones after it.</p>
+        <div class="cl-grid stagger">
+          <div class="cl-item">
+            <svg viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11Z"/></svg>
+            <b>Moisture management</b>
+            <p>Sealing, flashing, and drainage details that keep water where it belongs, on the outside.</p>
+          </div>
+          <div class="cl-item">
+            <svg viewBox="0 0 24 24"><path d="M3 8h13a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h9a2.5 2.5 0 1 1-2.5 2.5"/></svg>
+            <b>Storm &amp; wind durability</b>
+            <p>Systems built to hold through the storms, wind, and heavy rain the region is known for.</p>
+          </div>
+          <div class="cl-item">
+            <svg viewBox="0 0 24 24"><path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/><circle cx="12" cy="12" r="2.5"/></svg>
+            <b>Curb-appeal upgrades</b>
+            <p>Storm repair or a full refresh, finished with the care that lifts how a property looks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img src="../assets/img/exf-house1.jpg" alt="Well-kept modern home exterior at dusk">
+      <div class="badge"><b>30+ years</b><small>Of hands-on exterior work</small></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>Salem's exterior contractor, <em>done differently.</em></h2>
+      <p>Exteriors First is led by owner David Pratt and backed by more than three decades of hands-on exterior work. We treat every project as if it were our own, with the care and precision that shows up in the finished result.</p>
+      <p>That means transparent service from the first estimate, clear communication throughout, and the same standard whether it is a storm repair or a full curb-appeal upgrade. It is how we have earned trust across the Salem area.</p>
+      <div class="about-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Transparent service</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Care and precision</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Owner-led work</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Each project our own</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <span class="qm">&#8220;</span>
+    <p>We treat every project as our own, with the <em>care and precision</em> that shows in the work.</p>
+    <div class="by">Exteriors First LLC &middot; Salem, Oregon</div>
+  </div>
+</section>
+
+<section class="sec gal">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Across the valley</span>
+      <h2>Homes and buildings we're <em>built for.</em></h2>
+      <p>Residential, multi-family, and commercial properties across the Salem area and the surrounding Willamette Valley.</p>
+    </div>
+    <div class="gal-grid reveal">
+      <div class="gcell g1"><img src="../assets/img/exf-house5.jpg" alt="Warmly lit home exterior in the evening"></div>
+      <div class="gcell g2"><img src="../assets/img/exf-shingle2.jpg" alt="Brick homes with well-kept shingle roofs"></div>
+      <div class="gcell"><img src="../assets/img/exf-house2.jpg" alt="Residential home exterior in autumn"></div>
+      <div class="gcell"><img src="../assets/img/exf-gutter1.jpg" alt="Multi-family residential building exterior"></div>
+      <div class="gcell g5"><img src="../assets/img/exf-nailgun.jpg" alt="Street of homes with pitched roofs under clear skies"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec area" id="area">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Serving Salem <em>and the Willamette Valley.</em></h2>
+      <p>Headquartered in Salem and proudly working with homeowners and property managers across the surrounding communities.</p>
+    </div>
+    <div class="towns reveal">
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Salem</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Keizer</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Albany</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>West Linn</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Lake Oswego</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Wilsonville</span>
+      <span><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>Surrounding Willamette Valley</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What clients <em>value most.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>They walked us through the whole roof replacement, kept the site clean, and finished on schedule. The new roof looks great and we finally feel ready for winter.</p>
+        <div class="who"><span class="av">SM</span><div><b>Sample Review</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Honest advice from the first estimate. They handled our siding and exterior painting together and the difference in curb appeal is night and day. Highly recommend.</p>
+        <div class="who"><span class="av">SM</span><div><b>Sample Review</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We used the consulting package before committing to a bigger project and it saved us from guessing. Clear, professional, and they treated our property like their own.</p>
+        <div class="who"><span class="av">SM</span><div><b>Sample Review</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative. Add your own on our Google profile.</p>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>What kind of properties do you work on?<span class="tog"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>We are a full-service exterior contractor for residential, multi-family, and commercial properties. Whether it is a single home, an apartment building, or a commercial site, we can handle the exterior work.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What exterior services do you offer?<span class="tog"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>Roofing, siding, exterior painting, exterior repairs, window and door installation, decks and patios, coatings and sealings, and fencing. We also offer consulting packages for larger projects.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is a consulting package?<span class="tog"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>It is for homeowners and property managers planning a larger exterior project. Depending on what you need, it can include a roof inspection, a siding estimate, or full exterior planning so you know the scope before work begins.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you offer free estimates?<span class="tog"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>Yes. Estimates are free, and we typically respond within one business day. Call, text, or send us a message and we will get back to you to set up a time.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which areas do you serve?<span class="tog"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <p>We are based in Salem and serve Keizer, Albany, West Linn, Lake Oswego, Wilsonville, and the surrounding Willamette Valley.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="ctaband">
+  <div class="wrap">
+    <div class="band reveal">
+      <div class="inner">
+        <span class="eyebrow light" style="justify-content:center;display:flex;margin-bottom:16px">Ready when you are</span>
+        <h2>Let's get your <em>exterior handled.</em></h2>
+        <p>Tell us what your property needs and we will put together a free estimate. We respond within one business day.</p>
+        <div class="btns">
+          <a class="btn btn-accent" href="#contact">Request a free estimate</a>
+          <a class="btn btn-white" href="tel:5039795379">Call (503) 979-5379</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow" style="justify-content:center;display:flex">Get in touch</span>
+      <h2>Request your <em>free estimate.</em></h2>
+      <p>Send a few details about the project and we will get back to you. We typically respond within one business day.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="cinfo">
+        <h3>Exteriors First</h3>
+        <p>Full-service exterior contractor headquartered in Salem, Oregon.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:5039795379">(503) 979-5379</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Headquartered in</small><b>Salem, OR 97317</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+          <div><small>We serve</small><b>Salem, Keizer, Albany &amp; the Willamette Valley</b></div>
+        </div>
+        <div class="cnote">
+          <svg viewBox="0 0 24 24"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+          <span>Request a free estimate and we respond within one business day.</span>
+        </div>
+      </div>
+      <form class="cform" onsubmit="return false;">
+        <div class="fld">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="two">
+          <div class="fld">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@email.com" autocomplete="email">
+          </div>
+          <div class="fld">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="(503) 000-0000" autocomplete="tel">
+          </div>
+        </div>
+        <div class="fld">
+          <label for="msg">How can we help?</label>
+          <textarea id="msg" placeholder="Tell us about your roofing, siding, or exterior project."></textarea>
+        </div>
+        <button class="btn btn-accent" type="submit">Request free estimate</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Exteriors First</b>
+        <p>Full-service exterior contractor for residential, multi-family, and commercial properties across the Salem area, built for Oregon's climate.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Roofing</a>
+        <a href="#services">Siding &amp; painting</a>
+        <a href="#services">Windows, doors &amp; decks</a>
+        <a href="#consulting">Consulting packages</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:5039795379">(503) 979-5379</a>
+        <p>Salem, OR 97317</p>
+        <a href="#contact">Request a free estimate</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Exteriors First LLC</span>
+      <span>Salem, OR &middot; Residential, multi-family &amp; commercial &middot; Free estimates</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

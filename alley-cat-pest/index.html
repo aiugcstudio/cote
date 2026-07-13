@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alley Cat Pest Control | Integrated Pest Management in Apollo Beach, FL</title>
+<meta name="description" content="Alley Cat Pest Control is a local, family owned and operated pest control company in Apollo Beach, FL, serving the Tampa Bay Area with over 30 years of experience. Full-service Integrated Pest Management, no contracts ever.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E8388'/%3E%3Cpath d='M9 13l2-4 2 3h6l2-3 2 4v7a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3z' fill='%23E08A2E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0E8388; --teal-d:#0A5B5F; --navy:#062E31; --navy2:#0A4548; --ink:#0E2A2B;
+  --accent:#E08A2E; --accent-d:#C6741E; --accent-soft:#FBEAD5;
+  --bg:#F3F8F7; --paper:#FFFFFF; --muted:#546564; --tealsoft:#E1F0EE;
+  --line:rgba(14,42,43,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#fff}
+.eyebrow.light::before{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:9px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn svg{width:18px;height:18px}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--teal-d)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(10,91,95,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--navy);color:#bfe0dd;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--teal);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:26px;height:26px}
+.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--teal)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:9px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,46,49,.96) 0%,rgba(10,91,95,.86) 44%,rgba(6,46,49,.55) 78%,rgba(6,46,49,.32) 100%)}
+.hero-glow{position:absolute;z-index:1;width:60%;height:70%;right:-8%;top:8%;background:radial-gradient(circle,rgba(224,138,46,.28),transparent 62%);pointer-events:none;animation:drift 16s ease-in-out infinite alternate}
+@keyframes hz{to{transform:scale(1)}}
+@keyframes drift{to{transform:translate(-40px,30px)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 116px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.4vw,5.7rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:var(--accent);font-style:italic;font-weight:400;font-family:var(--serif)}
+.hero p{font-size:1.24rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:60px;flex-wrap:wrap}
+.hero-mini div{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.68);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(6,46,49,.25);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:50px;height:50px;flex:none;border-radius:13px;background:var(--tealsoft);display:grid;place-items:center}
+.trust .t svg{width:26px;height:26px;stroke:var(--teal);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--teal);font-family:var(--serif)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* SERVICES icon cards */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.icard{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 32px;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.icard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.icard:hover{transform:translateY(-6px);box-shadow:0 30px 56px -34px rgba(6,46,49,.42)}
+.icard:hover::before{transform:scaleX(1)}
+.ic{width:54px;height:54px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px}
+.ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.7}
+.icard h3{font-size:1.32rem;margin-bottom:9px}
+.icard p{font-size:.98rem;color:var(--muted)}
+.also{margin-top:38px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 36px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.also b{font-family:var(--serif);font-size:1.16rem;margin-right:8px}
+.also span{background:var(--tealsoft);color:var(--teal-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* DARK GLASS band - IPM approach */
+.darksec{position:relative;overflow:hidden;padding:120px 0;background:radial-gradient(120% 90% at 82% -10%,rgba(224,138,46,.2),transparent 55%),linear-gradient(165deg,#0A4548 0%,#062E31 62%);color:#fff}
+.darksec::after{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;height:80%;background:radial-gradient(circle,rgba(224,138,46,.14),transparent 60%);pointer-events:none}
+.darksec .wrap{position:relative;z-index:1}
+.darksec-head{max-width:660px;margin-bottom:52px}
+.darksec .eyebrow{color:var(--accent)}
+.darksec h2{font-size:clamp(2.3rem,4.6vw,3.5rem);color:#fff;letter-spacing:-.03em}
+.darksec h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent)}
+.darksec-lead{color:rgba(255,255,255,.66);font-size:1.16rem;margin-top:16px}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dcard{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(6px);border-radius:18px;padding:34px 30px 30px;overflow:hidden}
+.dcard .num{position:absolute;top:12px;right:22px;font-family:var(--serif);font-size:3.2rem;color:rgba(255,255,255,.09);line-height:1}
+.dcard .ic{background:rgba(224,138,46,.16);color:var(--accent);margin-bottom:20px}
+.dcard h3{font-size:1.3rem;color:#fff;margin-bottom:10px}
+.dcard p{font-size:.97rem;color:rgba(255,255,255,.68)}
+
+/* WHY split */
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.why-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(6,46,49,.55)}
+.why-img img{width:100%;aspect-ratio:5/4.7;object-fit:cover;transition:transform .8s}
+.why-img:hover img{transform:scale(1.05)}
+.why-img .badge{position:absolute;left:24px;bottom:24px;background:var(--teal);color:#fff;border-radius:13px;padding:16px 22px}
+.why-img .badge b{font-family:var(--serif);font-size:1.6rem;display:block;line-height:1}
+.why-img .badge small{font-size:.76rem;color:rgba(255,255,255,.85)}
+.why-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 22px}
+.why-copy h2 em{color:var(--teal);font-family:var(--serif)}
+.why-copy p{color:#33484a;font-size:1.06rem;margin-bottom:18px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.why-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.96rem;color:var(--teal-d)}
+.why-list svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none}
+
+/* SERVE brand band - no contract */
+.serve{background:var(--bg);padding-top:120px}
+.serve-band{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--teal) 0%,var(--teal-d) 100%);border-radius:30px;padding:80px 62px;box-shadow:0 34px 80px -30px rgba(10,91,95,.5);color:#fff}
+.serve-band::after{content:"";position:absolute;right:-6%;top:-30%;width:46%;height:90%;background:radial-gradient(circle,rgba(224,138,46,.3),transparent 62%);pointer-events:none}
+.serve-band .inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.serve-band .eyebrow{color:#fff}
+.serve-band .eyebrow::before{background:var(--accent)}
+.serve-band h2{font-size:clamp(2.2rem,4.2vw,3.2rem);margin:14px 0 18px;color:#fff}
+.serve-band h2 em{font-family:var(--serif);font-style:italic;color:#FCE0BE}
+.serve-band p{color:rgba(255,255,255,.9);font-size:1.1rem;margin-bottom:26px}
+.serve-chips{display:flex;flex-wrap:wrap;gap:11px}
+.serve-chips span{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.14);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:30px;padding:11px 18px;font-size:.9rem;font-weight:600}
+.serve-chips svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2.2}
+
+/* PESTS grid */
+.pests{background:#fff}
+.pest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pest{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:26px 24px;text-align:center;transition:.35s}
+.pest:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 24px 46px -30px rgba(6,46,49,.4)}
+.pest .ic{margin:0 auto 16px;background:var(--tealsoft);color:var(--teal)}
+.pest h3{font-size:1.14rem;margin-bottom:6px}
+.pest p{font-size:.86rem;color:var(--muted)}
+
+/* AREA band */
+.area{position:relative;color:#fff;overflow:hidden;background:var(--navy)}
+.area-bg{position:absolute;inset:0;z-index:0}
+.area-bg img{width:100%;height:100%;object-fit:cover}
+.area-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,46,49,.95),rgba(10,91,95,.74))}
+.area .wrap{position:relative;z-index:2;padding:104px 40px}
+.area h2{font-size:clamp(2.2rem,4.4vw,3.3rem);max-width:16ch}
+.area h2 em{font-family:var(--serif);font-style:italic;color:var(--accent)}
+.area p{color:rgba(255,255,255,.82);font-size:1.12rem;margin:18px 0 8px;max-width:52ch}
+.towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+.towns span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:#fff;transition:.3s}
+.towns span:hover{background:var(--accent);border-color:var(--accent)}
+
+/* QUOTE */
+.quotesec{background:var(--bg);padding:120px 0}
+.quote{position:relative;overflow:hidden;background:radial-gradient(110% 80% at 50% -10%,rgba(224,138,46,.2),transparent 55%),var(--navy);color:#fff;border-radius:28px;padding:96px 70px 82px;text-align:center}
+.quote::before{content:"\201C";position:absolute;top:20px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-style:italic;font-size:7rem;line-height:1;color:var(--accent);opacity:.5}
+.quote p{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,3.2vw,2.4rem);line-height:1.34;max-width:900px;margin:0 auto 30px}
+.quote p em{color:var(--accent);font-style:italic}
+.quote .by{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.58)}
+
+/* REVIEWS */
+.rev-sec{background:#fff}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:22px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-note{font-size:.82rem;color:var(--muted);font-style:italic;margin-bottom:34px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(6,46,49,.4)}
+.stars{color:#F5A623;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#33484a;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+
+/* FAQ */
+.faqsec{background:var(--bg)}
+.faq{max-width:880px;margin:0;display:grid;gap:16px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:4px 30px;transition:border-color .25s,box-shadow .25s}
+.faq details:hover{border-color:var(--accent)}
+.faq details[open]{border-color:var(--accent);box-shadow:0 20px 44px -24px rgba(224,138,46,.28)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-family:var(--serif);font-weight:500;font-size:1.18rem;letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .tg{flex:none;width:34px;height:34px;border-radius:9px;background:var(--accent-soft);position:relative;transition:background .25s}
+.faq details[open] summary .tg{background:var(--accent)}
+.faq summary .tg::before,.faq summary .tg::after{content:"";position:absolute;background:var(--accent);top:50%;left:50%;transform:translate(-50%,-50%);transition:transform .3s,background .25s}
+.faq summary .tg::before{width:13px;height:2px}
+.faq summary .tg::after{width:2px;height:13px}
+.faq details[open] summary .tg::before,.faq details[open] summary .tg::after{background:#fff}
+.faq details[open] summary .tg::after{transform:translate(-50%,-50%) scaleY(0)}
+.faq details p{color:var(--muted);font-size:1.02rem;line-height:1.6;padding:0 0 26px;max-width:740px}
+
+/* CONTACT */
+.contact{background:var(--navy);color:#fff;padding:118px 0}
+.contact-head{text-align:center;margin-bottom:56px}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin:16px 0 0;max-width:none}
+.contact-head h2 em{font-family:var(--serif);font-style:italic;color:var(--accent)}
+.contact-head .eyebrow{justify-content:center}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch}
+.cinfo{background:linear-gradient(160deg,#0A4548,#062E31);border:1px solid var(--lineD);border-radius:20px;padding:46px 42px}
+.cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+.cinfo>p{color:rgba(255,255,255,.7);margin-bottom:26px;font-size:1rem}
+.crow{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.crow b,.crow a{font-size:1.06rem;color:#fff;font-weight:600}
+.cform{background:rgba(255,255,255,.06);border:1px solid var(--lineD);border-radius:20px;padding:46px 42px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.cform .ic{width:66px;height:66px;border-radius:50%;background:var(--accent);color:#fff;margin:0 auto 24px}
+.cform .ic svg{width:30px;height:30px;stroke:#fff}
+.cform h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+.cform p{color:rgba(255,255,255,.74);margin-bottom:28px}
+.cform .btn{width:100%;justify-content:center;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:#042224;color:#9FBAB8;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:36ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B4CFCC;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6C8886}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.07s}
+.stagger.in>*:nth-child(3){transition-delay:.14s}
+.stagger.in>*:nth-child(4){transition-delay:.21s}
+.stagger.in>*:nth-child(5){transition-delay:.28s}
+.stagger.in>*:nth-child(6){transition-delay:.35s}
+.stagger.in>*:nth-child(7){transition-delay:.42s}
+.stagger.in>*:nth-child(8){transition-delay:.49s}
+
+@media(max-width:1000px){
+  .why-grid,.serve-band .inner,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .why-img{max-width:520px}
+  .svc-grid,.dgrid{grid-template-columns:1fr 1fr}
+  .pest-grid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact,.darksec,.quotesec,.serve{padding:74px 0}
+  .hero-in{padding:150px 22px 64px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.dgrid,.pest-grid,.why-list{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .serve-band,.quote{padding:52px 30px}
+  .area .wrap{padding:74px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Family owned and operated &middot; No contracts, ever &middot; <b>Call or text 813-671-3838</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M8 13l2.5-5 2.5 3.5h6L21.5 8 24 13v7.5a3.5 3.5 0 0 1-3.5 3.5h-9A3.5 3.5 0 0 1 8 20.5z" fill="#E08A2E"/><circle cx="13" cy="16" r="1.1" fill="#062E31"/><circle cx="19" cy="16" r="1.1" fill="#062E31"/></svg></span>
+      <span><b>Alley Cat Pest Control</b><span>Apollo Beach &middot; Tampa Bay, FL</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#approach">Our approach</a>
+      <a href="#pests">Pests</a>
+      <a href="#area">Service area</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:8136713838"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>813-671-3838</span></a>
+      <a class="nav-cta" href="#contact">Get a free quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/acp-house1.jpg" alt="A warmly lit Florida home in the evening"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Family owned &middot; Over 30 years &middot; Apollo Beach, FL
+    </span>
+    <h1>Your Florida home, protected the <em>smarter way.</em></h1>
+    <p>Alley Cat Pest Control is a local, family owned company serving the Tampa Bay Area with full-service Integrated Pest Management. We keep pests out through prevention and exclusion, not just spray and repeat. And we never lock you into a contract.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#contact">Get your free quote</a>
+      <a class="btn btn-ghost" href="tel:8136713838">Call or text 813-671-3838</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>30+ yrs</b><span>Industry experience</span></div>
+      <div><b>No contracts</b><span>Stay because you want to</span></div>
+      <div><b>IPM</b><span>Prevention first</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div><b>Family owned</b><small>&amp; operated, local</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 8l7-4 7 4M6 21h12"/><circle cx="12" cy="10" r="2"/></svg></span><div><b>30+ years</b><small>Of industry experience</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Integrated Pest Management</b><small>Prevention &amp; exclusion</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.5 4.2a3 3 0 0 1 3-1.7 3 3 0 0 1 3 0 3 3 0 0 1 3 1.7 3 3 0 0 1 2.1 2.1 3 3 0 0 1 0 3 3 3 0 0 1 0 3 3 3 0 0 1-2.1 2.1 3 3 0 0 1-3 1.7 3 3 0 0 1-3 0 3 3 0 0 1-3-1.7A3 3 0 0 1 2.3 15.3a3 3 0 0 1 0-3 3 3 0 0 1 0-3A3 3 0 0 1 4.4 4.2"/></svg></span><div><b>No contracts, ever</b><small>You choose to stay</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Full-service pest control, <em>done properly.</em></h2>
+      <p>From a single problem pest to a year-round prevention plan, we protect homes and businesses across the Tampa Bay Area, residential and commercial alike.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="icard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M9 20v-5h6v5"/></svg></div>
+        <h3>General pest control</h3>
+        <p>Reliable protection for homes and businesses against the common pests that come with living in Florida.</p>
+      </div>
+      <div class="icard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="11" rx="2"/><path d="M4 11h16M8 17v2M16 17v2"/></svg></div>
+        <h3>Bedbug treatment</h3>
+        <p>Targeted, thorough treatment to find and clear bedbugs so you can rest easy again.</p>
+      </div>
+      <div class="icard">
+        <div class="ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="5" ry="7"/><path d="M12 6V3M9 5 7 3M15 5l2-2M7 12H3M21 12h-4M8 18l-2 2M16 18l2 2"/></svg></div>
+        <h3>Cockroach control</h3>
+        <p>We knock down active infestations and seal the entry points and harborage that let them return.</p>
+      </div>
+      <div class="icard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M8 6l4-2 4 2M7 11H4M20 11h-3M8 16l-2 2M16 16l2 2"/><circle cx="12" cy="9" r="2"/></svg></div>
+        <h3>Termite control</h3>
+        <p>Protecting the biggest investment you own from one of Florida's most destructive and costly pests.</p>
+      </div>
+      <div class="icard">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="5"/><path d="M12 9V4M9 6 6 3M15 6l3-3M7 14H2M22 14h-5"/></svg></div>
+        <h3>Ant control</h3>
+        <p>We trace ants back to the colony and treat the source, not just the trail you happen to see.</p>
+      </div>
+      <div class="icard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 15a5 5 0 0 1 5-5h4a5 5 0 0 1 0 10H8a3 3 0 0 1-3-3z"/><circle cx="9" cy="15" r="1"/><path d="M14 10c1-3 4-4 6-3M4 18l-2 1"/></svg></div>
+        <h3>Rodents &amp; mice</h3>
+        <p>Removal plus exclusion, closing the gaps that let mice and rodents get inside in the first place.</p>
+      </div>
+    </div>
+    <div class="also reveal">
+      <b>We also handle:</b>
+      <span>Pest exclusion</span><span>Preventative plans</span><span>Quarterly service</span><span>Commercial pest control</span><span>Free quotes</span>
+    </div>
+  </div>
+</section>
+
+<section class="darksec" id="approach">
+  <div class="wrap">
+    <div class="darksec-head reveal">
+      <span class="eyebrow">Integrated Pest Management</span>
+      <h2>We prevent pests, we don't just <em>chase them.</em></h2>
+      <p class="darksec-lead">As a full-service company specializing in Integrated Pest Management, we prevent unwanted pests through preventative measures and exclusion in addition to standard product application. It is more economical for you, and it protects your health, your property, and the environment.</p>
+    </div>
+    <div class="dgrid stagger">
+      <div class="dcard">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Prevent</h3>
+        <p>We start by finding the conditions that attract pests, then remove them before an infestation ever takes hold.</p>
+      </div>
+      <div class="dcard">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div>
+        <h3>Exclude</h3>
+        <p>Sealing the cracks, gaps, and entry points around your property keeps pests out and cuts down on product use.</p>
+      </div>
+      <div class="dcard">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 4l6 6M9 9l6 6-3 5-8-8 5-3zM3 21l3-1"/></svg></div>
+        <h3>Treat</h3>
+        <p>When treatment is needed, we apply it precisely and responsibly, targeting the problem instead of blanketing your home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="about">
+  <div class="wrap why-grid">
+    <div class="why-img reveal">
+      <img src="../assets/img/acp-house2.jpg" alt="A well-kept Florida home with a wraparound porch">
+      <div class="badge"><b>30+ years</b><small>Serving the Tampa Bay Area</small></div>
+    </div>
+    <div class="why-copy reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>Local, family owned, and here <em>to stay.</em></h2>
+      <p>Alley Cat Pest Control is a local, family owned and operated company based in Apollo Beach, Florida, with over 30 years of industry experience behind everything we do.</p>
+      <p>We are a full-service company specializing in Integrated Pest Management, which means we work to keep pests out through prevention and exclusion, not only product application. It is the approach that best protects your family, your home, and the environment around it.</p>
+      <div class="why-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Family owned &amp; operated</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Residential &amp; commercial</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Prevention-first IPM</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>No contracts required</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="serve">
+  <div class="wrap">
+    <div class="serve-band reveal">
+      <div class="inner">
+        <div>
+          <span class="eyebrow">The no-contract promise</span>
+          <h2>Stay with us because you want to, <em>not because you're locked in.</em></h2>
+          <p>We will never trap you in a contract. We would rather earn your business every single visit than hold you to a signature. If we are doing our job, you will want us back, and that is exactly how we like it.</p>
+        </div>
+        <div class="serve-chips">
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7"/></svg>No long-term contracts</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7"/></svg>Cancel anytime</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7"/></svg>Free, no-pressure quote</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4L19 7"/></svg>Earned, not obligated</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pests" id="pests">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Pests we handle</span>
+      <h2>The pests that come with <em>Florida living.</em></h2>
+      <p>These are the pests our neighbors call us about most. Whatever is bothering you, we will identify it and build the right plan to handle it.</p>
+    </div>
+    <div class="pest-grid stagger">
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="11" rx="2"/><path d="M4 11h16M8 17v2M16 17v2"/></svg></div><h3>Bedbugs</h3><p>Bedrooms and living spaces</p></div>
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="5" ry="7"/><path d="M12 6V3M7 12H3M21 12h-4M8 18l-2 2M16 18l2 2"/></svg></div><h3>Cockroaches</h3><p>Kitchens, drains, voids</p></div>
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M8 6l4-2 4 2M7 11H4M20 11h-3"/><circle cx="12" cy="9" r="2"/></svg></div><h3>Termites</h3><p>Structural wood damage</p></div>
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="5"/><path d="M12 9V4M9 6 6 3M15 6l3-3"/></svg></div><h3>Ants</h3><p>Trails, colonies, mounds</p></div>
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 15a5 5 0 0 1 5-5h4a5 5 0 0 1 0 10H8a3 3 0 0 1-3-3z"/><circle cx="9" cy="15" r="1"/><path d="M14 10c1-3 4-4 6-3"/></svg></div><h3>Mice</h3><p>Attics, walls, garages</p></div>
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4M6 6l3 3M18 6l-3 3M6 18l3-3M18 18l-3-3"/></svg></div><h3>Spiders</h3><p>Corners, eaves, garages</p></div>
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 4 6 4 9a4 4 0 0 1-8 0c0-3 1-5 4-9zM6 20c2-1 4-1 6-1s4 0 6 1"/></svg></div><h3>Mosquitoes</h3><p>Yards and gathering areas</p></div>
+      <div class="pest"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 15a5 5 0 0 1 5-5h4a5 5 0 0 1 0 10H8a3 3 0 0 1-3-3z"/><path d="M14 10c1-3 5-5 8-4-2 2-3 3-3 5"/></svg></div><h3>Rodents</h3><p>Removal and exclusion</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="area-bg"><img src="../assets/img/acp-house3.jpg" alt="A modern Florida home with palm trees and a pool"></div>
+  <div class="wrap reveal">
+    <span class="eyebrow light">Service area</span>
+    <h2>Proudly serving <em>the Tampa Bay Area.</em></h2>
+    <p>Based in Apollo Beach and caring for homes and businesses across the surrounding South Shore and Tampa Bay communities.</p>
+    <div class="towns">
+      <span>Apollo Beach</span><span>Riverview</span><span>Ruskin</span><span>Sun City Center</span><span>Gibsonton</span><span>Wimauma</span><span>Brandon</span><span>Valrico</span><span>Lithia</span><span>Tampa Bay Area</span>
+    </div>
+  </div>
+</section>
+
+<section class="quotesec">
+  <div class="wrap">
+    <div class="quote reveal">
+      <p>We would rather <em>prevent a problem</em> than treat one, and rather earn your trust than hold you to a contract.</p>
+      <div class="by">Alley Cat Pest Control</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What good service <em>sounds like.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative.</p>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>They took the time to explain how they were sealing up the entry points, not just spraying and leaving. Months later and still no issues. A genuinely local, family run team.</p>
+        <div class="who"><span class="av">MR</span><div><b>Placeholder review</b><small>Sample &middot; not a real customer</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>What sold me was no contract. They earn the visit every time. Prompt, respectful of the house, and clearly know Florida pests inside and out.</p>
+        <div class="who"><span class="av">JT</span><div><b>Placeholder review</b><small>Sample &middot; not a real customer</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Called about ants and got a real plan instead of a quick spray. Friendly, fair, and thorough. Would recommend them to anyone in the Tampa Bay area.</p>
+        <div class="who"><span class="av">DK</span><div><b>Placeholder review</b><small>Sample &middot; not a real customer</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faqsec" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions we hear <em>a lot.</em></h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary>Do I have to sign a contract?<span class="tg"></span></summary><p>No. We never lock you into a contract. We would rather you choose to stay with us because you are happy with the work, not because you feel trapped by an agreement.</p></details>
+      <details><summary>What is Integrated Pest Management?<span class="tg"></span></summary><p>Integrated Pest Management, or IPM, is a full-service approach that prevents unwanted pests through preventative measures and exclusion in addition to standard product application. It is more economical, and it protects your health, your property, and the environment.</p></details>
+      <details><summary>Which pests do you treat?<span class="tg"></span></summary><p>We handle general pest control along with the pests our neighbors call about most, including bedbugs, cockroaches, termites, ants, and mice, plus related rodent, spider, and mosquito issues.</p></details>
+      <details><summary>Do you serve businesses as well as homes?<span class="tg"></span></summary><p>Yes. We provide general pest control for both residential and commercial properties across the Tampa Bay Area.</p></details>
+      <details><summary>Where are you located and where do you serve?<span class="tg"></span></summary><p>We are based in Apollo Beach, Florida, and serve homes and businesses throughout the Tampa Bay Area.</p></details>
+      <details><summary>How do I get started?<span class="tg"></span></summary><p>Call or text us at 813-671-3838 for a free quote. We will talk through what you are seeing and put together the right plan for your property.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Get your <em>free quote.</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>Alley Cat Pest Control</h3>
+        <p>Local, family owned, and ready to help. Tell us what you are seeing and we will take it from there.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:8136713838">813-671-3838</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Based in</small><b>Apollo Beach, Florida</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+          <div><small>Serving</small><b>The Tampa Bay Area</b></div>
+        </div>
+      </div>
+      <div class="cform reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <h3>Talk to a real person</h3>
+        <p>Call or text for a free quote. No contracts, no pressure, just a plan that fits your home.</p>
+        <a class="btn btn-accent" href="tel:8136713838">Call 813-671-3838</a>
+        <a class="btn btn-white" href="sms:8136713838" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);">Text us instead</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Alley Cat Pest Control</b>
+        <p>Local, family owned and operated pest control for Apollo Beach and the Tampa Bay Area. Over 30 years of experience, prevention-first Integrated Pest Management, and no contracts.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">General pest control</a>
+        <a href="#services">Bedbugs &amp; cockroaches</a>
+        <a href="#services">Termites &amp; ants</a>
+        <a href="#services">Rodents &amp; exclusion</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:8136713838">813-671-3838</a>
+        <p>Apollo Beach, Florida</p>
+        <p>Serving the Tampa Bay Area</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Alley Cat Pest Control LLC</span>
+      <span>Family owned &middot; Integrated Pest Management &middot; No contracts</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+(function(){
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.querySelectorAll('.reveal,.stagger').forEach(el=>el.classList.add('in'));return;
+  }
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+  document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>
