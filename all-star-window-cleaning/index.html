@@ -54,6 +54,9 @@ nav.scrolled .brand{color:var(--ink)}
 .brand .mk svg{width:26px;height:26px}
 .brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1}
 .brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.78;margin-top:3px}
+.brand-logo{background:#fff;border-radius:12px;padding:7px;display:flex;align-items:center;box-shadow:0 6px 18px -10px rgba(8,44,72,.55)}
+.brand-logo img{height:48px;width:auto}
+@media(max-width:600px){.brand-logo img{height:40px}}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
 nav.scrolled .nav-links a{color:var(--ink)}
@@ -306,9 +309,8 @@ footer{background:#061F33;color:#8FA9BF;padding:76px 0 38px}
 <nav id="nav">
   <div class="topbar">Serving Phoenix's East Valley since 2005 &middot; <b>Free estimates, call or text 480-688-7177</b></div>
   <div class="bar">
-    <a class="brand" href="#top">
-      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L16 24l-5.3-2.8 1-5.8L7.5 11.2l5.9-.9z" fill="#F5C518"/></svg></span>
-      <span><b>All Star Window Cleaning</b><span>Gilbert, Arizona</span></span>
+    <a class="brand" href="#top" aria-label="All Star Window Cleaning">
+      <span class="brand-logo"><img src="../assets/img/asw-logo.jpg" alt="All Star Window Cleaning logo"></span>
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
@@ -622,7 +624,7 @@ footer{background:#061F33;color:#8FA9BF;padding:76px 0 38px}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <b>All Star Window Cleaning</b>
+        <span class="brand-logo" style="width:fit-content;margin-bottom:18px"><img src="../assets/img/asw-logo.jpg" alt="All Star Window Cleaning logo" style="height:58px"></span>
         <p>Quality window cleaning for homes and businesses across Phoenix's East Valley since 2005. Professional staff, affordable rates.</p>
       </div>
       <div class="foot-col">

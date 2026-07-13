@@ -52,6 +52,7 @@ nav.scrolled .brand{color:var(--ink)}
 .brand .mk svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .brand b{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1}
 .brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.brand-logo{height:34px;width:auto;background:#fff;border-radius:12px;padding:7px 12px;box-sizing:content-box}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
 nav.scrolled .nav-links a{color:var(--ink)}
@@ -284,6 +285,7 @@ nav.scrolled .nav-phone{color:var(--slate)}
 footer{background:var(--navy);color:#9db0c8;padding:76px 0 38px}
 .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
 .foot-brand b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;margin-bottom:14px}
+.foot-logo{height:30px;width:auto;background:#fff;border-radius:12px;padding:7px 12px;box-sizing:content-box;margin-bottom:18px}
 .foot-brand p{font-size:.96rem;max-width:36ch}
 .foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
 .foot-col a,.foot-col p{display:block;color:#b3c3d8;font-size:.96rem;margin-bottom:11px}
@@ -343,9 +345,8 @@ footer{background:var(--navy);color:#9db0c8;padding:76px 0 38px}
 <nav id="nav">
   <div class="topbar">Free estimates, we respond within one business day &middot; <b>Call (503) 979-5379</b></div>
   <div class="bar">
-    <a class="brand" href="#top">
-      <span class="mk"><svg viewBox="0 0 32 32"><path d="M5 17 16 7l11 10"/><path d="M8 15.5V25h16v-9.5"/></svg></span>
-      <span><b>Exteriors First</b><span>Salem, Oregon</span></span>
+    <a class="brand" href="#top" aria-label="Exteriors First, Salem Oregon">
+      <img class="brand-logo" src="../assets/img/exf-logo.webp" alt="Exteriors First">
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
@@ -738,7 +739,7 @@ footer{background:var(--navy);color:#9db0c8;padding:76px 0 38px}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <b>Exteriors First</b>
+        <img class="foot-logo" src="../assets/img/exf-logo.webp" alt="Exteriors First">
         <p>Full-service exterior contractor for residential, multi-family, and commercial properties across the Salem area, built for Oregon's climate.</p>
       </div>
       <div class="foot-col">

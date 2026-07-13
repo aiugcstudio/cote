@@ -126,7 +126,7 @@ nav.scrolled .nav-phone{color:var(--ink)}
 .why-list li{display:flex;gap:14px;align-items:flex-start;font-size:1.02rem;color:rgba(255,255,255,.9)}
 .why-list .tk{width:30px;height:30px;border-radius:9px;background:rgba(226,104,60,.2);display:grid;place-items:center;flex:none;margin-top:2px}
 .why-list .tk svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2.4}
-.why-img{position:relative;min-height:560px}
+.why-img{position:absolute;right:0;top:0;bottom:0;width:42%;min-height:560px}
 .why-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .why-img::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy),transparent 22%);z-index:1}
 
@@ -267,7 +267,7 @@ footer{background:var(--deep);color:#9AA3C0;padding:76px 0 38px}
 @media(max-width:1000px){
   .why-grid,.founder-grid,.contact-grid{grid-template-columns:1fr}
   .why-copy{padding:90px 0}
-  .why-img{min-height:360px}
+  .why-img{position:relative;width:100%;min-height:360px}
   .why-img::before{background:linear-gradient(0deg,var(--navy),transparent 24%)}
   .founder-img .badge{right:20px}
   .svc-grid,.mgrid{grid-template-columns:1fr 1fr}
@@ -397,7 +397,7 @@ footer{background:var(--deep);color:#9AA3C0;padding:76px 0 38px}
       </ul>
     </div>
   </div>
-  <div class="why-img reveal" style="position:absolute;right:0;top:0;bottom:0;width:42%;">
+  <div class="why-img reveal">
     <img src="../assets/img/pdp-hero.jpg" alt="Interior living and dining space with fresh paint and warm styling">
   </div>
 </section>

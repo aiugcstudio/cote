@@ -48,11 +48,8 @@ nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
 nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
 nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
 .brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
-nav.scrolled .brand{color:var(--ink)}
-.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center}
-.brand .mk svg{width:25px;height:25px}
-.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1.05}
-.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.logo-tile{background:#fff;border-radius:10px;padding:7px 13px;display:flex;align-items:center;box-shadow:0 6px 18px -10px rgba(16,27,51,.45)}
+.logo-tile img{height:34px;width:auto;display:block}
 .nav-links{display:flex;align-items:center;gap:30px}
 .nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
 nav.scrolled .nav-links a{color:var(--ink)}
@@ -319,8 +316,7 @@ footer{background:var(--navy-d);color:#9FB0CE;padding:76px 0 38px}
   <div class="topbar">Serving Arvada &amp; the Denver metro &middot; <b>Save $50 on your first recurring service</b></div>
   <div class="bar">
     <a class="brand" href="#top">
-      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z" fill="#fff"/></svg></span>
-      <span><b>Side by Side</b><span>Pest Control &middot; Arvada, CO</span></span>
+      <span class="logo-tile"><img src="../assets/img/sbs-logo.svg" alt="Side by Side Pest Control LLC"></span>
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
@@ -662,8 +658,7 @@ footer{background:var(--navy-d);color:#9FB0CE;padding:76px 0 38px}
     <div class="foot-grid">
       <div class="foot-brand">
         <div class="fb">
-          <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z" fill="#fff"/></svg></span>
-          <b>Side by Side Pest Control</b>
+          <span class="logo-tile"><img src="../assets/img/sbs-logo.svg" alt="Side by Side Pest Control LLC"></span>
         </div>
         <p>Locally owned pest control for Arvada and the Denver metro. Safe, humane, environmentally friendly protection for your home and business.</p>
       </div>

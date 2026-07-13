@@ -48,11 +48,14 @@ nav .bar{display:flex;align-items:center;justify-content:space-between;padding:1
 nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
 .brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
 nav.scrolled .brand{color:var(--ink)}
-.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center}
-.brand .mk svg{width:24px;height:24px}
+.brand .mk{width:48px;height:48px;flex:none;object-fit:contain}
 .brand b{font-family:var(--serif);font-size:1.28rem;font-weight:600;line-height:1}
 .brand span span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.72;margin-top:3px}
 .nav-links{display:flex;align-items:center;gap:30px}
+.nav-tel{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.92);transition:color .3s}
+nav.scrolled .nav-tel{color:var(--ink)}
+.nav-tel svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.9}
+@media(max-width:1080px){.nav-tel{display:none}}
 .nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
 nav.scrolled .nav-links a{color:var(--ink)}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
@@ -240,7 +243,14 @@ nav.scrolled .nav-links a{color:var(--ink)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}
 .cinfo{background:var(--dark2);border:1px solid var(--lineD);border-radius:20px;padding:46px 44px}
 .cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
-.cinfo>p{color:rgba(255,255,255,.7);margin-bottom:12px}
+.cinfo>p{color:rgba(255,255,255,.7);margin-bottom:22px}
+.ccall{display:flex;align-items:center;gap:16px;background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:14px;padding:20px 22px;margin-bottom:14px;transition:.25s}
+.ccall:hover{transform:translateY(-2px);box-shadow:0 18px 34px -18px rgba(226,54,54,.7)}
+.ccall svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;flex:none}
+.ccall small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:3px}
+.ccall b{font-size:1.34rem;color:#fff;font-weight:700;font-family:var(--serif)}
+.cinfo a{color:inherit}
+.cinfo a:hover{color:#fff}
 .crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
 .crow svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
 .crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
@@ -314,10 +324,10 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
 <body>
 
 <nav id="nav">
-  <div class="topbar">Bedford Hills, NY &middot; Serving Westchester County &middot; <b>I-CAR Gold Class Certified</b></div>
+  <div class="topbar">785 Bedford Road, Bedford Hills, NY &middot; Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;1pm &middot; <b>I-CAR Gold Class Certified</b></div>
   <div class="bar">
     <a class="brand" href="#top">
-      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M9 9h14M9 16h11M9 23h14" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+      <img class="mk" src="../assets/img/eab-logo.webp" alt="Ethos Auto Body emblem">
       <span><b>Ethos Auto Body</b><span>Collision &amp; Cosmetic Repair</span></span>
     </a>
     <div class="nav-links">
@@ -327,6 +337,7 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
       <a href="#rights">Your rights</a>
       <a href="#reviews">Reviews</a>
     </div>
+    <a class="nav-tel" href="tel:+19142194332"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>(914) 219-4332</a>
     <a class="nav-cta" href="#contact">Free estimate</a>
   </div>
 </nav>
@@ -342,7 +353,7 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
     <p>Ethos Auto Body handles collision and cosmetic repair with certified technicians, factory-grade equipment, and complete insurance claim support, so a bad day on the road ends with your vehicle looking exactly as it should.</p>
     <div class="hero-actions">
       <a class="btn btn-red" href="#contact">Request a free estimate</a>
-      <a class="btn btn-ghost" href="#services">See what we do</a>
+      <a class="btn btn-ghost" href="tel:+19142194332">Call (914) 219-4332</a>
     </div>
     <div class="hero-mini">
       <div><b>Since 2018</b><span>Trusted local shop</span></div>
@@ -588,19 +599,23 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
     </div>
     <div class="contact-grid">
       <div class="cinfo reveal">
-        <h3>Ethos Auto Body</h3>
-        <p>Collision and cosmetic repair for Westchester County drivers. Bring us the car and we will take it from there.</p>
+        <h3>Call or text us</h3>
+        <p>The fastest way to get your free estimate. Reach us directly and we will take it from there.</p>
+        <a class="ccall" href="tel:+19142194332">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <span><small>Call or text</small><b>(914) 219-4332</b></span>
+        </a>
         <div class="crow">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div><small>Location</small><b>Bedford Hills, NY</b></div>
+          <div><small>Address</small><b>785 Bedford Road, Bedford Hills, NY 10507</b></div>
         </div>
         <div class="crow">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18"/></svg>
-          <div><small>Service area</small><b>Westchester County</b></div>
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>
+          <div><small>Email</small><b><a href="mailto:info@ethosautobody.com">info@ethosautobody.com</a></b></div>
         </div>
         <div class="crow">
-          <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <div><small>Certified</small><b>I-CAR Gold Class</b></div>
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><small>Hours</small><b>Mon&ndash;Fri 8am&ndash;6pm &middot; Sat 9am&ndash;1pm &middot; Sun closed</b></div>
         </div>
       </div>
       <form class="cform reveal" onsubmit="return false;">
@@ -622,6 +637,7 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
+        <img src="../assets/img/eab-logo.webp" alt="Ethos Auto Body" style="width:66px;height:66px;object-fit:contain;margin-bottom:16px">
         <b>Ethos Auto Body</b>
         <p>Collision and cosmetic repair in Bedford Hills, NY, serving Westchester County since 2018. I-CAR Gold Class certified and factory authorized.</p>
       </div>
@@ -633,10 +649,11 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
         <a href="#services">Structural &amp; MIG welding</a>
       </div>
       <div class="foot-col">
-        <h4>Visit</h4>
-        <p>Bedford Hills, NY</p>
-        <p>Serving Westchester County</p>
-        <a href="#contact">Request a free estimate</a>
+        <h4>Contact</h4>
+        <a href="tel:+19142194332">(914) 219-4332</a>
+        <a href="mailto:info@ethosautobody.com">info@ethosautobody.com</a>
+        <p>785 Bedford Road<br>Bedford Hills, NY 10507</p>
+        <p>Mon&ndash;Fri 8am&ndash;6pm &middot; Sat 9am&ndash;1pm</p>
       </div>
     </div>
     <div class="foot-bottom">
