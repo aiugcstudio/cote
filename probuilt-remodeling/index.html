@@ -152,13 +152,14 @@ nav.scrolled{background:rgba(20,28,34,.92);backdrop-filter:blur(12px);box-shadow
 
 /* SERVE band (brand color) */
 .serve{background:var(--paper);padding-top:130px}
-.serve-band{background:linear-gradient(150deg,var(--accent),var(--accent-2));border-radius:30px;padding:80px 70px;color:#fff;position:relative;overflow:hidden}
+.serve-band{background:linear-gradient(150deg,var(--accent),var(--accent-2));border-radius:30px;padding:80px 70px;color:#fff;position:relative;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
 .serve-band::after{content:"";position:absolute;width:520px;height:520px;right:-140px;bottom:-200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 68%)}
 .serve-band .eyebrow{color:rgba(255,255,255,.85)}
 .serve-band .eyebrow::before{background:rgba(255,255,255,.85)}
-.serve-band h2{color:#fff;font-size:clamp(2.1rem,4.2vw,3.2rem);margin:16px 0 14px;max-width:20ch;position:relative;z-index:2}
-.serve-band>p{color:rgba(255,255,255,.9);max-width:56ch;position:relative;z-index:2;margin-bottom:40px}
-.chips{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:2}
+.serve-band h2{color:#fff;font-size:clamp(2.1rem,4.2vw,3.2rem);margin:16px 0 14px;max-width:16ch;position:relative;z-index:2}
+.serve-band p{color:rgba(255,255,255,.9);max-width:46ch;position:relative;z-index:2;margin-bottom:0}
+.serve-copy{position:relative;z-index:2}
+.chips{display:flex;flex-direction:column;align-items:flex-start;gap:12px;position:relative;z-index:2}
 .chips span{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:11px 20px;border-radius:40px;font-size:.94rem;font-weight:500;backdrop-filter:blur(3px)}
 .chips span svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2}
 
@@ -274,7 +275,7 @@ footer{background:var(--darker);color:#9BA6B0;padding:76px 0 38px}
   .trust .wrap{grid-template-columns:1fr 1fr}
   .trust .t:nth-child(2){border-right:none}
   .trust .t{border-top:1px solid rgba(255,255,255,.08)}
-  .serve-band{padding:60px 40px}
+  .serve-band{padding:60px 40px;grid-template-columns:1fr;gap:34px}
 }
 @media(max-width:600px){
   .wrap{padding:0 22px}
@@ -463,9 +464,11 @@ footer{background:var(--darker);color:#9BA6B0;padding:76px 0 38px}
 <section class="serve">
   <div class="wrap reveal">
     <div class="serve-band">
-      <span class="eyebrow">Who we help</span>
-      <h2>Homeowners who want it done properly.</h2>
-      <p>If you want a contractor who shows up, communicates, and finishes the job right, you are exactly who we build for. Here is what you can count on with ProBuilt.</p>
+      <div class="serve-copy">
+        <span class="eyebrow">Who we help</span>
+        <h2>Homeowners who want it done properly.</h2>
+        <p>If you want a contractor who shows up, communicates, and finishes the job right, you are exactly who we build for. Here is what you can count on with ProBuilt.</p>
+      </div>
       <div class="chips stagger">
         <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Durable, cost-effective results</span>
         <span><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Clear, regular status updates</span>
