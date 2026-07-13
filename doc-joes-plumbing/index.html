@@ -62,7 +62,9 @@ nav.scrolled{background:rgba(21,20,18,.96);backdrop-filter:blur(14px);padding:10
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--noir)}
-.hero::before{content:"";position:absolute;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(255,210,0,.14),transparent 68%);top:-260px;right:-200px}
+.hero-bg{position:absolute;inset:0;z-index:0;background:url('../assets/img/dj-hero.jpg') center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(18,17,15,.95) 0%,rgba(18,17,15,.82) 48%,rgba(18,17,15,.62) 100%)}
+.hero::before{content:"";position:absolute;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(255,210,0,.14),transparent 68%);top:-260px;right:-200px;z-index:1}
 .hero::after{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,210,0,.08),transparent 70%);bottom:-240px;left:-180px}
 .hero-in{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:150px 40px 80px;width:100%}
 .hero-badge{display:inline-flex;align-items:center;gap:9px;background:var(--yellow);color:var(--noir);padding:8px 16px;border-radius:6px;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}
@@ -109,6 +111,20 @@ nav.scrolled{background:rgba(21,20,18,.96);backdrop-filter:blur(14px);padding:10
 .svc:hover .svc-ico svg{stroke:var(--noir)}
 .svc h3{font-size:1.26rem;font-weight:700;margin-bottom:10px}
 .svc p{color:rgba(255,255,255,.72);font-size:.97rem}
+
+/* FEATURE SPLIT */
+.feat{overflow:hidden;background:var(--white)}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.feat-img{position:relative;min-height:520px}
+.feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat-copy{padding:90px 70px;display:flex;flex-direction:column;justify-content:center}
+.feat-copy h2{font-size:clamp(2.1rem,3.6vw,3rem);margin-bottom:20px}
+.feat-copy h2 em{color:var(--yellow-dk)}
+.feat-copy p{color:var(--muted);margin-bottom:18px}
+.feat-list{list-style:none;margin-top:12px;display:grid;gap:13px}
+.feat-list li{display:flex;gap:12px;align-items:flex-start;font-size:1.02rem;font-weight:500}
+.feat-list li svg{flex:none;width:22px;height:22px;stroke:var(--yellow-dk);margin-top:3px}
+@media(max-width:900px){.feat-grid{grid-template-columns:1fr}.feat-img{min-height:320px}.feat-copy{padding:56px 40px}}
 
 /* EMERGENCY */
 .emg{background:var(--yellow);color:var(--noir);text-align:center}
@@ -188,6 +204,7 @@ footer a{color:var(--yellow)}
 
 <!-- HERO -->
 <header class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-in">
     <div class="hero-badge">The Sewer Doctor · Inland Empire since 1975</div>
     <h1>Your plumbing problem, <em>solved today.</em></h1>
@@ -275,6 +292,23 @@ footer a{color:var(--yellow)}
         <h3>Water Treatment</h3>
         <p>Whole-house filtration, softeners and anti-scale systems for cleaner, better water throughout your home or business.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE SPLIT -->
+<section class="feat">
+  <div class="feat-grid">
+    <div class="feat-img"><img src="../assets/img/dj-work.jpg" alt="Doc Joe's repairing old, corroded plumbing lines in the Inland Empire"></div>
+    <div class="feat-copy">
+      <span class="eyebrow">Done right the first time</span>
+      <h2>The tools and the team to <em>solve it fast.</em></h2>
+      <p>From a stubborn main-line clog to a full repipe, Doc Joe's brings modern equipment, camera inspections and a highly trained crew to every call, backed by the longest warranties in the business.</p>
+      <ul class="feat-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Same-day and 24 hour rooter service</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No extra charge for nights or weekends</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Free estimates and up-front pricing</span></li>
+      </ul>
     </div>
   </div>
 </section>

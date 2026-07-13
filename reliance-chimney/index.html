@@ -61,11 +61,10 @@ nav.scrolled{background:rgba(28,24,21,.96);backdrop-filter:blur(14px);padding:10
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--soot)}
-.hero-bg{position:absolute;inset:0;background:
-   radial-gradient(120% 90% at 82% 108%,rgba(226,98,42,.42) 0%,rgba(226,98,42,0) 52%),
-   radial-gradient(90% 70% at 8% -10%,rgba(138,59,42,.4) 0%,rgba(138,59,42,0) 55%),
-   linear-gradient(160deg,#211B17 0%,#14110E 100%)}
-.hero-bg::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:34px 34px;opacity:.5}
+.hero-bg{position:absolute;inset:0;background:url('../assets/img/rc-hero.jpg') center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+   radial-gradient(120% 90% at 84% 110%,rgba(226,98,42,.4) 0%,rgba(226,98,42,0) 52%),
+   linear-gradient(118deg,rgba(20,17,14,.97) 0%,rgba(20,17,14,.82) 48%,rgba(20,17,14,.5) 100%)}
 .hero-in{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:140px 40px 70px;width:100%}
 .hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(226,98,42,.2);border:1px solid rgba(226,98,42,.55);color:#F2B08C;padding:8px 16px;border-radius:100px;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}
 .hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 4px rgba(226,98,42,.3)}
@@ -102,9 +101,10 @@ nav.scrolled{background:rgba(28,24,21,.96);backdrop-filter:blur(14px);padding:10
 /* OWNER FEATURE */
 .owner{overflow:hidden;background:var(--soot)}
 .owner-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;max-width:1200px;margin:0 auto}
-.owner-visual{position:relative;min-height:540px;background:
-   radial-gradient(120% 90% at 70% 110%,rgba(226,98,42,.5) 0%,rgba(226,98,42,0) 55%),
-   linear-gradient(150deg,#2A211B 0%,#15110E 100%);display:grid;place-items:center;padding:50px}
+.owner-visual{position:relative;min-height:540px;overflow:hidden}
+.owner-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.owner-visual .tag{position:absolute;bottom:22px;left:22px;background:var(--ember);color:#fff;border-radius:12px;padding:13px 20px;font-weight:700;font-size:.9rem;z-index:2;display:flex;align-items:center;gap:9px;box-shadow:0 20px 40px -20px rgba(0,0,0,.7)}
+.owner-visual .tag svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.9}
 .owner-visual .seal{text-align:center;color:#fff}
 .owner-visual .seal .ring{width:200px;height:200px;border-radius:50%;border:2px solid rgba(242,176,140,.4);display:grid;place-items:center;margin:0 auto 26px;position:relative}
 .owner-visual .seal .ring::before{content:"";position:absolute;inset:14px;border-radius:50%;border:1px solid rgba(242,176,140,.25)}
@@ -287,11 +287,8 @@ footer a{color:#F2B08C}
       </div>
     </div>
     <div class="owner-visual">
-      <div class="seal">
-        <div class="ring"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg></div>
-        <b>CSIA Certified</b>
-        <span>Chimney Safety Institute of America</span>
-      </div>
+      <img src="../assets/img/rc-roof.jpg" alt="A brick chimney and rooftop, the kind Reliance sweeps, inspects and rebuilds across Northwest Arkansas">
+      <div class="tag"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg>CSIA Certified Sweep</div>
     </div>
   </div>
 </section>
