@@ -53,8 +53,11 @@ nav.scrolled .nav-phone{color:var(--ink)}
 .nav-cta:hover{background:#fff}
 
 /* HERO split */
-.hero{min-height:840px;display:grid;grid-template-columns:1.05fr .95fr;background:var(--forest)}
-.hero-l{display:flex;flex-direction:column;justify-content:center;padding:132px 68px 56px;color:#fff;position:relative;overflow:hidden}
+.hero{position:relative;min-height:820px;display:flex;align-items:center;overflow:hidden;background:var(--forest)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:hz 18s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,55,38,.96) 0%,rgba(18,55,38,.88) 38%,rgba(18,55,38,.5) 74%,rgba(18,55,38,.28) 100%)}
+.hero-l{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:150px 40px 96px;color:#fff}
 .hero-l::after{content:"";position:absolute;bottom:-120px;left:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(63,178,122,.25),transparent 70%)}
 .hero-l .chip{position:relative;z-index:2;display:inline-flex;align-self:flex-start;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.76rem;font-weight:600;letter-spacing:.03em;margin-bottom:30px}
 .hero-l .chip svg{width:15px;height:15px}
@@ -69,7 +72,7 @@ nav.scrolled .nav-phone{color:var(--ink)}
 .hero-r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:hz 16s ease-out forwards}
 @keyframes hz{to{transform:scale(1)}}
 .hero-r::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(20,101,63,.32),transparent 40%)}
-.hero-badge{position:absolute;left:-46px;bottom:56px;z-index:3;background:#fff;color:var(--ink);padding:22px 26px 22px 62px;border-radius:12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.4)}
+.hero-badge{position:absolute;right:40px;bottom:56px;z-index:3;background:#fff;color:var(--ink);padding:20px 28px;border-radius:14px;box-shadow:0 30px 60px -24px rgba(0,0,0,.45)}
 .hero-badge b{font-family:var(--serif);font-size:1.5rem;display:block;color:var(--forest)}
 .hero-badge small{font-size:.8rem;color:var(--muted)}
 
@@ -200,10 +203,9 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
 .stagger.in>*:nth-child(6){transition-delay:.4s}
 
 @media(max-width:1000px){
-  .hero{grid-template-columns:1fr;min-height:auto}
-  .hero-l{padding:120px 44px 70px}
-  .hero-r{min-height:380px}
-  .hero-badge{left:24px;bottom:24px;padding:18px 22px}
+  .hero{min-height:640px}
+  .hero-l{padding:130px 44px 90px}
+  .hero-badge{right:24px;bottom:24px;padding:18px 22px}
   .intro-grid,.band-grid,.contact-grid{grid-template-columns:1fr}
   .band-img{min-height:300px}
   .band-copy{padding:70px 44px}
@@ -247,6 +249,7 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
 </nav>
 
 <header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/tgc-s2.jpg" alt="Bright, spotless commercial office kept spotless by Timber Green"></div>
   <div class="hero-l">
     <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#7FD3A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>Fully insured &middot; OSHA certified</span>
     <h1>A customized cleaning <em>experience.</em></h1>
@@ -264,11 +267,8 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
       <div><b>KC metro</b><span>Overland Park, KS</span></div>
     </div>
   </div>
-  <div class="hero-r">
-    <img src="../assets/img/tgc-s2.jpg" alt="Bright, spotless modern commercial office">
-    <div class="hero-badge">
-      <b>24/7</b><small>Some messes can't wait</small>
-    </div>
+  <div class="hero-badge">
+    <b>24/7</b><small>Some messes can't wait</small>
   </div>
 </header>
 
