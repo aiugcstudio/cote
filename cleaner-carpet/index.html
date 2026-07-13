@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleaner Carpet &amp; Upholstery · Siskiyou County's most experienced cleaner since 1989</title>
+<meta name="description" content="Carpet cleaning, repairs, upholstery and tile &amp; grout across Siskiyou County. Serving Northern California since 1989. No local cleaning company is more experienced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231C2541'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' fill='%23C67B4A' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1C2541;        /* deep indigo */
+  --ink-2:#141B30;
+  --copper:#C67B4A;     /* copper accent */
+  --copper-dk:#A55E33;
+  --cream:#F6F1E7;      /* warm cream */
+  --paper:#FBF8F1;
+  --muted:#5A6072;
+  --line:#E5DDCC;
+  --white:#fff;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.sec{padding:120px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+em{font-style:italic;color:var(--copper);font-weight:500}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--copper);display:inline-block;margin-bottom:20px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--copper);color:#fff;border:none;padding:17px 34px;border-radius:100px;font-family:var(--sans);font-weight:600;font-size:1rem;cursor:pointer;transition:.35s;letter-spacing:.01em}
+.btn:hover{background:var(--copper-dk);transform:translateY(-2px);box-shadow:0 18px 40px -18px rgba(166,94,51,.7)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:none}
+.sec-head{max-width:720px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{font-size:clamp(2.4rem,4.6vw,3.7rem);margin-bottom:18px}
+.sec-head p{color:var(--muted);font-size:1.12rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 0;transition:.4s}
+nav.scrolled{background:rgba(251,248,241,.92);backdrop-filter:blur(14px);padding:14px 0;box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:#fff;transition:.4s}
+nav.scrolled .brand{color:var(--ink)}
+.brand span{color:var(--copper)}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:.94rem;font-weight:500;color:rgba(255,255,255,.85);transition:.3s}
+nav.scrolled .nav-links a{color:var(--muted)}
+.nav-links a:hover{color:var(--copper)}
+.nav-cta{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);color:#fff;padding:11px 22px;border-radius:100px;font-weight:600;font-size:.9rem;backdrop-filter:blur(6px);transition:.3s}
+nav.scrolled .nav-cta{background:var(--copper);border-color:var(--copper);color:#fff}
+.nav-cta:hover{background:var(--copper)!important;border-color:var(--copper)!important;color:#fff!important}
+@media(max-width:820px){.nav-links a:not(.nav-cta){display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('../assets/img/ccu-2.jpg') center/cover;transform:scale(1.05)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(20,27,48,.95) 0%,rgba(20,27,48,.78) 42%,rgba(20,27,48,.35) 100%)}
+.hero-in{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:130px 40px 70px;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(198,123,74,.16);border:1px solid rgba(198,123,74,.4);padding:9px 18px;border-radius:100px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#E6B48C;margin-bottom:30px}
+.hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 4px rgba(198,123,74,.3)}
+.hero h1{font-size:clamp(3rem,6.6vw,5.6rem);font-weight:600;line-height:1.02;max-width:16ch;margin-bottom:26px}
+.hero h1 em{color:#E6B48C}
+.hero p.lead{font-size:1.28rem;max-width:52ch;color:rgba(255,255,255,.86);margin-bottom:40px;font-weight:400}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:64px}
+.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+.hero-stats{display:flex;gap:52px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.18);padding-top:30px}
+.hero-stat .n{font-family:var(--serif);font-size:2.5rem;line-height:1;color:#fff}
+.hero-stat .n em{color:#E6B48C}
+.hero-stat .l{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.62);margin-top:8px}
+.scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.6);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.scroll-cue .line{width:1px;height:38px;background:rgba(255,255,255,.4);animation:cue 2s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%,100%{transform:scaleY(.4);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* TRUST STRIP */
+.trust{background:var(--ink);color:#fff;padding:44px 0}
+.trust-in{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:14px;flex:1;min-width:210px}
+.trust-item svg{flex:none;width:26px;height:26px;stroke:var(--copper)}
+.trust-item .t{font-size:.98rem;line-height:1.35}
+.trust-item .t b{display:block;font-weight:600}
+.trust-item .t span{color:rgba(255,255,255,.6);font-size:.86rem}
+
+/* MARQUEE */
+.marquee{background:var(--copper);color:#fff;padding:20px 0;overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:40px;animation:scroll-x 34s linear infinite}
+.marquee-track span{font-family:var(--serif);font-style:italic;font-size:1.5rem;opacity:.95}
+.marquee-track span::after{content:"✦";margin-left:40px;font-style:normal;opacity:.55}
+@keyframes scroll-x{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}.scroll-cue .line{animation:none}}
+
+/* INTRO / SINCE 1989 */
+.intro{background:var(--paper)}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.intro-copy .big{font-family:var(--serif);font-size:clamp(1.7rem,2.7vw,2.3rem);line-height:1.32;font-weight:500;margin-bottom:26px}
+.intro-copy .big em{color:var(--copper)}
+.intro-copy p{color:var(--muted);margin-bottom:20px}
+.intro-sign{display:flex;align-items:center;gap:16px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.intro-sign .av{width:54px;height:54px;border-radius:50%;background:var(--ink);color:var(--copper);display:grid;place-items:center;font-family:var(--serif);font-size:1.4rem}
+.intro-sign .who b{display:block;font-weight:600}
+.intro-sign .who span{font-size:.88rem;color:var(--muted)}
+.intro-visual{position:relative}
+.intro-visual img{border-radius:20px;box-shadow:0 40px 80px -40px rgba(20,27,48,.5)}
+.year-badge{position:absolute;bottom:-28px;left:-28px;background:var(--ink);color:#fff;border-radius:18px;padding:24px 30px;box-shadow:0 30px 60px -28px rgba(20,27,48,.7)}
+.year-badge .y{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--copper)}
+.year-badge .c{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72);margin-top:6px}
+
+/* SERVICES */
+.services{background:var(--cream)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:56px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:44px;transition:.4s;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:.45s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 40px 70px -46px rgba(20,27,48,.45);border-color:transparent}
+.svc:hover::before{transform:scaleX(1)}
+.svc-ico{width:60px;height:60px;border-radius:16px;background:var(--cream);display:grid;place-items:center;margin-bottom:26px;transition:.4s}
+.svc:hover .svc-ico{background:var(--ink)}
+.svc-ico svg{width:30px;height:30px;stroke:var(--copper);fill:none;stroke-width:1.6}
+.svc:hover .svc-ico svg{stroke:#E6B48C}
+.svc h3{font-size:1.55rem;margin-bottom:14px}
+.svc p{color:var(--muted);font-size:1rem;margin-bottom:18px}
+.svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.svc ul li{font-size:.82rem;font-weight:500;background:var(--cream);color:var(--ink);padding:6px 13px;border-radius:100px}
+
+/* FEATURE SPLITS */
+.feat{overflow:hidden}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.feat-img{position:relative;min-height:520px}
+.feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat-copy{padding:90px 70px;display:flex;flex-direction:column;justify-content:center}
+.feat-copy h2{font-size:clamp(2.1rem,3.6vw,3rem);margin-bottom:20px}
+.feat-copy p{color:var(--muted);margin-bottom:18px}
+.feat-copy.dark{background:var(--ink);color:#fff}
+.feat-copy.dark p{color:rgba(255,255,255,.76)}
+.feat-copy.dark .eyebrow{color:#E6B48C}
+.feat-list{list-style:none;margin-top:12px;display:grid;gap:14px}
+.feat-list li{display:flex;gap:13px;align-items:flex-start;font-size:1.02rem}
+.feat-list li svg{flex:none;width:22px;height:22px;stroke:var(--copper);margin-top:3px}
+.feat-copy.dark .feat-list li svg{stroke:#E6B48C}
+@media(max-width:900px){.feat-grid{grid-template-columns:1fr}.feat-img{min-height:340px}.feat-copy{padding:60px 40px}.feat-grid.rev .feat-img{order:-1}}
+
+/* PROMISE STRIP */
+.promise{background:var(--ink-2);color:#fff;text-align:center;position:relative;overflow:hidden}
+.promise::before,.promise::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(198,123,74,.22),transparent 70%)}
+.promise::before{top:-160px;left:-120px}
+.promise::after{bottom:-190px;right:-100px}
+.promise .wrap{position:relative;z-index:2}
+.promise .eyebrow{color:#E6B48C}
+.promise h2{font-size:clamp(2.2rem,4.4vw,3.4rem);max-width:20ch;margin:0 auto 22px}
+.promise p{color:rgba(255,255,255,.78);max-width:56ch;margin:0 auto 36px;font-size:1.14rem}
+
+/* PROCESS */
+.process{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:60px}
+.step{position:relative}
+.step .n{width:60px;height:60px;border-radius:16px;background:var(--ink);color:var(--copper);font-family:var(--serif);font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin-bottom:24px;position:relative;z-index:2}
+.step h3{font-size:1.32rem;margin-bottom:10px}
+.step p{color:var(--muted);font-size:.98rem}
+.step::before{content:"";position:absolute;top:30px;left:72px;width:calc(100% - 20px);height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 16px);z-index:1}
+.step:last-child::before{display:none}
+@media(max-width:1000px){.steps{grid-template-columns:1fr 1fr}.step::before{display:none}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* AREA */
+.area{background:var(--cream)}
+.area-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.area-copy h2{font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:20px}
+.area-copy p{color:var(--muted);margin-bottom:26px}
+.area-stat{display:flex;gap:40px;margin-top:30px}
+.area-stat .n{font-family:var(--serif);font-size:2.3rem;color:var(--ink)}
+.area-stat .n em{color:var(--copper)}
+.area-stat .l{font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:4px}
+.towns{display:flex;flex-wrap:wrap;gap:12px}
+.town{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:15px 20px;font-weight:500;font-size:.98rem;display:flex;align-items:center;gap:10px;transition:.3s}
+.town:hover{border-color:var(--copper);transform:translateY(-3px)}
+.town svg{width:16px;height:16px;stroke:var(--copper);flex:none}
+
+/* FAQ */
+.faq{background:var(--paper)}
+.faq-wrap{max-width:840px;margin:56px auto 0}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:16px;margin-bottom:14px;overflow:hidden;transition:box-shadow .3s}
+.faq-item[open]{box-shadow:0 24px 50px -34px rgba(20,27,48,.4)}
+.faq-item summary{list-style:none;cursor:pointer;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--serif);font-size:1.22rem;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .pl{flex:none;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:.35s;font-size:1.3rem;line-height:0}
+.faq-item[open] summary .pl{transform:rotate(45deg);background:var(--copper)}
+.faq-item .a{padding:0 30px 26px;color:var(--muted);font-size:1.02rem;line-height:1.65}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.contact h2{font-size:clamp(2.4rem,4.6vw,3.6rem);margin-bottom:20px}
+.contact h2 em{color:#E6B48C}
+.contact p.sub{color:rgba(255,255,255,.78);font-size:1.14rem;margin-bottom:36px;max-width:46ch}
+.contact-btns{display:flex;gap:14px;flex-wrap:wrap}
+.contact .btn-ghost{color:#fff;border-color:rgba(255,255,255,.34)}
+.contact .btn-ghost:hover{background:#fff;color:var(--ink)}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:44px}
+.cc-row{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.cc-row:last-child{border-bottom:none}
+.cc-row .ic{width:46px;height:46px;border-radius:12px;background:rgba(198,123,74,.18);display:grid;place-items:center;flex:none}
+.cc-row .ic svg{width:22px;height:22px;stroke:#E6B48C}
+.cc-row .lb{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.55)}
+.cc-row .vl{font-size:1.06rem;font-weight:500}
+
+/* FOOTER */
+footer{background:var(--ink-2);color:rgba(255,255,255,.6);padding:50px 0;text-align:center;font-size:.9rem}
+footer .fbrand{font-family:var(--serif);font-size:1.3rem;color:#fff;margin-bottom:10px}
+footer .fbrand span{color:var(--copper)}
+footer a{color:#E6B48C}
+
+/* reveal anim */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.09s}
+.stagger.in>*:nth-child(3){transition-delay:.18s}
+.stagger.in>*:nth-child(4){transition-delay:.27s}
+@media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1;transform:none}}
+@media(max-width:900px){.sec{padding:80px 0}.wrap{padding:0 24px}.intro-grid,.area-grid,.contact-grid{grid-template-columns:1fr;gap:44px}.svc-grid{grid-template-columns:1fr}.year-badge{left:16px;bottom:16px}.hero-in{padding-top:120px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="brand">Cleaner Carpet <span>&amp; Upholstery</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:5305983552" class="nav-cta">(530) 598-3552</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-in">
+    <div class="hero-tag"><span class="dot"></span>Serving Siskiyou County since 1989</div>
+    <h1>The most experienced <em>carpet cleaner</em> in Northern California.</h1>
+    <p class="lead">Carpet, upholstery, tile and grout, brought back to life by hands that have done it right for more than three decades. No local cleaning company is more experienced.</p>
+    <div class="hero-btns">
+      <a href="tel:5305983552" class="btn">Call for a free quote</a>
+      <a href="#services" class="btn btn-ghost">See what we clean</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">1989</div><div class="l">Cleaning since</div></div>
+      <div class="hero-stat"><div class="n">35<em>+</em></div><div class="l">Years experience</div></div>
+      <div class="hero-stat"><div class="n">12<em>+</em></div><div class="l">Towns served</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</header>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap trust-in">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg>
+      <div class="t"><b>People &amp; pet safe</b><span>Cleaners kind to your family</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="t"><b>Up-front pricing</b><span>A fair quote before we start</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+      <div class="t"><b>Since 1989</b><span>Three decades of local trust</span></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 2l2.9 6.3L22 9.2l-5 4.9 1.2 7L12 17.8 5.8 21l1.2-7-5-4.9 7.1-.9L12 2z" stroke-linejoin="round"/></svg>
+      <div class="t"><b>Locally owned</b><span>By James, right here in Siskiyou</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Carpet Cleaning</span><span>Carpet Repairs</span><span>Upholstery</span><span>Tile &amp; Grout</span><span>Pet Safe</span>
+    <span>Carpet Cleaning</span><span>Carpet Repairs</span><span>Upholstery</span><span>Tile &amp; Grout</span><span>Pet Safe</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="sec intro">
+  <div class="wrap intro-grid">
+    <div class="intro-copy reveal">
+      <span class="eyebrow">The cleaner Siskiyou trusts</span>
+      <p class="big">For more than <em>35 years</em>, homes and businesses across Siskiyou County have called one name when carpet, furniture and tile need to look new again.</p>
+      <p>Cleaner Carpet &amp; Upholstery has been serving Northern California since 1989. Experience matters in this work, and no local cleaning company has more of it. Every job is done carefully, with cleaners that are safe for people and pets, and a fair price agreed before the first drop of water goes down.</p>
+      <p>Whether it is a living room rug, an office full of traffic lanes, a treasured sofa or the grout in a tired bathroom, the goal is always the same: bring it back to life and leave it genuinely clean.</p>
+      <div class="intro-sign">
+        <div class="av">J</div>
+        <div class="who"><b>James Beane</b><span>Owner, Cleaner Carpet &amp; Upholstery</span></div>
+      </div>
+    </div>
+    <div class="intro-visual reveal">
+      <img src="../assets/img/ccu-5.jpg" alt="A bright, freshly cleaned living room">
+      <div class="year-badge"><div class="y">1989</div><div class="c">Serving since</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we clean</span>
+      <h2>Four things, done <em>thoroughly.</em></h2>
+      <p>From wall-to-wall carpet to the grout lines most cleaners skip, every surface gets the same careful, experienced hands.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V9l8-5 8 5v12M9 21v-6h6v6"/></svg></div>
+        <h3>Carpet Cleaning</h3>
+        <p>Deep, professional cleaning that lifts out the dirt, traffic lanes and everyday wear, for both homes and businesses.</p>
+        <ul><li>Residential</li><li>Commercial</li><li>Traffic lanes</li><li>Pet safe</li></ul>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 7h16M6 7V5a2 2 0 012-2h8a2 2 0 012 2v2M5 7l1 13h12l1-13M9 11v5M15 11v5"/></svg></div>
+        <h3>Carpet Repairs &amp; Stretching</h3>
+        <p>Bring worn carpet back to life. Pet tears, burn marks and split seams repaired, wrinkles and waves stretched flat.</p>
+        <ul><li>Pet tears</li><li>Burn marks</li><li>Split seams</li><li>Re-stretching</li></ul>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 18v-5a4 4 0 014-4h10a4 4 0 014 4v5M3 18h18M6 9V7a2 2 0 012-2h8a2 2 0 012 2v2M5 18v2M19 18v2"/></svg></div>
+        <h3>Upholstery Cleaning</h3>
+        <p>Sofas, chairs and pillows cleaned with products that are safe for people and pets, so the whole family can relax on them again.</p>
+        <ul><li>Sofas</li><li>Chairs</li><li>Pillows</li><li>People &amp; pet safe</li></ul>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+        <h3>Tile &amp; Grout Cleaning</h3>
+        <p>The detail most cleaners skip. Floors, countertops, walls and showers scrubbed until the grout looks new again.</p>
+        <ul><li>Floors</li><li>Countertops</li><li>Walls</li><li>Showers</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: Upholstery -->
+<section class="feat">
+  <div class="feat-grid">
+    <div class="feat-img"><img src="../assets/img/ccu-sofa.jpg" alt="A freshly cleaned upholstered armchair"></div>
+    <div class="feat-copy">
+      <span class="eyebrow">Upholstery, refreshed</span>
+      <h2>Furniture the whole family can <em>relax on.</em></h2>
+      <p>Your sofa sees everything: movie nights, muddy paws, spilled coffee. We clean upholstery with products that are safe for both people and pets, so the piece you love feels fresh without a single harsh chemical left behind.</p>
+      <ul class="feat-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sofas, chairs and pillows cleaned with care</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>People and pet safe cleaning solutions</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Lifts odours, stains and everyday grime</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE: Tile (dark, reversed) -->
+<section class="feat">
+  <div class="feat-grid rev">
+    <div class="feat-copy dark">
+      <span class="eyebrow">The detail others skip</span>
+      <h2>Grout that looks <em>new again.</em></h2>
+      <p>Tile hides its dirt in the grout lines, and mopping only pushes it deeper. We clean tile and grout properly, on floors, countertops, walls and showers, until the whole surface reads bright and even again.</p>
+      <ul class="feat-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Floors, countertops, walls and showers</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Grout lines scrubbed, not just wiped</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A finish that makes the whole room feel cleaner</span></li>
+      </ul>
+    </div>
+    <div class="feat-img"><img src="../assets/img/ccu-tile.jpg" alt="A clean, bright tiled bathroom"></div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section class="sec promise">
+  <div class="wrap">
+    <span class="eyebrow">Experience you can feel</span>
+    <h2>No local cleaning company is <em>more experienced.</em></h2>
+    <p>Thirty-five years in one community teaches you how to treat every fibre, every stain and every customer. That is the difference you get the moment we walk in the door.</p>
+    <a href="tel:5305983552" class="btn">Call (530) 598-3552</a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Genuinely clean in <em>four simple steps.</em></h2>
+      <p>No runaround and no surprise charges. Just an easy path from your call to a home that feels new again.</p>
+    </div>
+    <div class="steps stagger">
+      <div class="step"><div class="n">1</div><h3>Call or email</h3><p>Tell James what you need cleaned. Honest answers, no pressure.</p></div>
+      <div class="step"><div class="n">2</div><h3>Fair quote</h3><p>We agree a clear, up-front price before any work begins.</p></div>
+      <div class="step"><div class="n">3</div><h3>The deep clean</h3><p>Careful, experienced work on your carpet, upholstery or tile.</p></div>
+      <div class="step"><div class="n">4</div><h3>Enjoy the result</h3><p>Sit back in a space that genuinely looks and feels clean.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="sec area" id="area">
+  <div class="wrap area-grid">
+    <div class="area-copy reveal">
+      <span class="eyebrow">Where we work</span>
+      <h2>Proudly serving <em>Siskiyou County.</em></h2>
+      <p>From Yreka to Mount Shasta and the Scott Valley, we cover the towns and back roads of Siskiyou County across Northern California. If you are nearby, just ask.</p>
+      <div class="area-stat">
+        <div><div class="n">12<em>+</em></div><div class="l">Towns served</div></div>
+        <div><div class="n">35<em>+</em></div><div class="l">Years local</div></div>
+      </div>
+    </div>
+    <div class="towns reveal">
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Yreka</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Montague</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Gazelle</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Lake Shastina</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Weed</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Mount Shasta</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>McCloud</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Dunsmuir</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Scott Valley</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Seiad Valley</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Happy Camp</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Klamath River</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details class="faq-item"><summary>What areas do you serve?<span class="pl">+</span></summary><div class="a">We serve Siskiyou County across Northern California, including Yreka, Montague, Gazelle, Lake Shastina, Weed, Mount Shasta, McCloud, Dunsmuir, Scott Valley, Seiad Valley, Happy Camp and Klamath River. If you are nearby, just ask.</div></details>
+      <details class="faq-item"><summary>What can you clean?<span class="pl">+</span></summary><div class="a">Carpet for homes and businesses, carpet repairs and stretching, upholstery such as sofas, chairs and pillows, and tile and grout on floors, countertops, walls and showers.</div></details>
+      <details class="faq-item"><summary>Are your cleaners safe for pets and kids?<span class="pl">+</span></summary><div class="a">Yes. Our upholstery and carpet cleaning uses products that are safe for both people and pets, so the whole family can enjoy the room right after we finish.</div></details>
+      <details class="faq-item"><summary>Can you fix damaged carpet?<span class="pl">+</span></summary><div class="a">Absolutely. We repair pet tears, burn marks and split seams, and we re-stretch carpet that has developed wrinkles or waves so it lies flat again.</div></details>
+      <details class="faq-item"><summary>How much does it cost?<span class="pl">+</span></summary><div class="a">Every job is quoted up front, so you know the price before we begin and there are no surprises. Call or email for a free quote.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#E6B48C">Get a free quote</span>
+      <h2>Let's make it <em>clean again.</em></h2>
+      <p class="sub">Call or email James for a fair, up-front quote on carpet, upholstery or tile and grout, anywhere in Siskiyou County.</p>
+      <div class="contact-btns">
+        <a href="tel:5305983552" class="btn">Call (530) 598-3552</a>
+        <a href="mailto:james@cleaner-carpet-and-upholstery.com" class="btn btn-ghost">Email us</a>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div>
+        <div><div class="lb">Phone</div><div class="vl">(530) 598-3552</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div>
+        <div><div class="lb">Email</div><div class="vl">james@cleaner-carpet-and-upholstery.com</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div><div class="lb">Based in</div><div class="vl">Fort Jones, Siskiyou County, CA</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></div>
+        <div><div class="lb">Serving</div><div class="vl">Northern California since 1989</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Cleaner Carpet <span>&amp; Upholstery</span></div>
+    <p>Carpet · Upholstery · Tile &amp; Grout · Siskiyou County, CA · Since 1989</p>
+    <p style="margin-top:12px">(530) 598-3552 · <a href="mailto:james@cleaner-carpet-and-upholstery.com">james@cleaner-carpet-and-upholstery.com</a></p>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.16});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
