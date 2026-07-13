@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ethos Auto Body | Collision &amp; Cosmetic Repair in Bedford Hills, NY</title>
-<meta name="description" content="Ethos Auto Body LLC in Bedford Hills, NY, serving Westchester County since 2018. I-CAR Gold Class certified collision and cosmetic repair, complete insurance claim handling, free estimates, and a complimentary detail with every repair.">
+<meta name="description" content="Ethos Auto Body, the most certified and trusted collision repair shop in Bedford Hills and Westchester County. A family shop with 30+ years of experience, I-CAR Gold Class and Mercedes-Benz Elite certified, complete insurance claim handling, free estimates, and a complimentary detail with every repair.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316181D'/%3E%3Cpath d='M10 9h12M10 16h9M10 23h12' stroke='%23E23636' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,6 +157,27 @@ nav.scrolled .nav-links a{color:var(--ink)}
 .bcard b{font-family:var(--serif);font-size:1.14rem;display:block;line-height:1.1}
 .bcard small{font-size:.74rem;color:var(--muted);letter-spacing:.04em}
 
+/* WHY certified */
+.whyc{background:var(--paper)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wcard{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:38px 32px;transition:.4s}
+.wcard:hover{transform:translateY(-6px);box-shadow:0 34px 60px -40px rgba(22,24,29,.45);border-color:transparent}
+.wcard .ic{width:54px;height:54px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:20px}
+.wcard .ic svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.6}
+.wcard h3{font-size:1.3rem;margin-bottom:10px}
+.wcard p{color:var(--muted);font-size:.98rem}
+
+.cert-cred{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+.crcard{background:linear-gradient(155deg,var(--graphite),var(--dark));color:#fff;border-radius:16px;padding:28px 26px;transition:.35s}
+.crcard:hover{transform:translateY(-5px);box-shadow:0 26px 46px -30px rgba(22,24,29,.6)}
+.crcard .ic{width:46px;height:46px;border-radius:12px;background:rgba(226,54,54,.18);display:grid;place-items:center;margin-bottom:16px}
+.crcard .ic svg{width:23px;height:23px;stroke:var(--accent);fill:none;stroke-width:1.8}
+.crcard b{font-family:var(--serif);font-size:1.2rem;display:block;line-height:1.15;margin-bottom:5px}
+.crcard small{font-size:.8rem;color:rgba(255,255,255,.62)}
+.oem-head{text-align:center;margin-bottom:30px}
+.oem-head h3{font-size:1.7rem}
+.oem-head p{color:var(--muted);font-size:1rem;margin-top:8px}
+
 /* CARE band (detailing + insurance) split */
 .care{position:relative;color:#fff;overflow:hidden;background:var(--graphite)}
 .care-grid{display:grid;grid-template-columns:1fr 1fr}
@@ -170,6 +191,21 @@ nav.scrolled .nav-links a{color:var(--ink)}
 .care-pts{display:grid;gap:12px;margin-top:18px}
 .care-pts div{display:flex;gap:12px;align-items:center;font-weight:600;font-size:.98rem}
 .care-pts svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none}
+
+.care.paint{background:var(--dark)}
+.care.paint .care-img::after{background:linear-gradient(270deg,transparent,rgba(14,15,19,.72))}
+
+/* FOUNDER split */
+.founder{background:var(--bg)}
+.founder-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:center}
+.founder-img{position:relative;border-radius:22px;overflow:hidden;min-height:520px;box-shadow:0 40px 70px -46px rgba(22,24,29,.6)}
+.founder-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.founder-img::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(180deg,transparent,rgba(14,15,19,.5))}
+.founder-copy h2{font-size:clamp(2rem,3.8vw,3rem);margin:16px 0 20px}
+.founder-copy h2 em{color:var(--accent)}
+.founder-copy p{color:var(--muted);font-size:1.06rem;margin-bottom:16px}
+.founder-creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.founder-creds span{background:var(--paper);border:1px solid var(--line);color:var(--ink);border-radius:30px;padding:9px 16px;font-size:.84rem;font-weight:600}
 
 /* RIGHTS band (brand color) */
 .rights{background:var(--bg)}
@@ -286,7 +322,9 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
 .stagger.in>*:nth-child(6){transition-delay:.35s}
 
 @media(max-width:1000px){
-  .craft-grid,.cert-band,.care-grid,.contact-grid{grid-template-columns:1fr}
+  .craft-grid,.cert-band,.care-grid,.contact-grid,.founder-grid{grid-template-columns:1fr}
+  .care.paint .care-grid{display:flex;flex-direction:column-reverse}
+  .founder-img{min-height:340px}
   .craft-copy{padding:90px 0}
   .craft-img{min-height:360px}
   .craft-img::before{background:linear-gradient(0deg,var(--dark),transparent 26%)}
@@ -294,7 +332,8 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
   .care-copy{padding:70px 44px}
   .svc-grid{grid-template-columns:1fr 1fr}
   .brands{grid-template-columns:repeat(3,1fr)}
-  .rights-grid,.rev-grid{grid-template-columns:1fr}
+  .cert-cred{grid-template-columns:1fr 1fr}
+  .rights-grid,.rev-grid,.why-grid{grid-template-columns:1fr}
   .show-grid{grid-template-columns:1fr 1fr}
   .g1,.g4{grid-column:span 1;grid-row:span 1}
   .trust .wrap{grid-template-columns:1fr 1fr}
@@ -308,7 +347,7 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
   .sec,.contact{padding:80px 0}
   .hero-in{padding:150px 22px 64px}
   .hero-mini div{padding-right:22px;margin-right:22px}
-  .svc-grid,.brands,.show-grid{grid-template-columns:1fr}
+  .svc-grid,.brands,.show-grid,.cert-cred{grid-template-columns:1fr}
   .trust .wrap{grid-template-columns:1fr}
   .trust .t{border-right:none}
   .rights-inner,.care-copy{padding:56px 30px}
@@ -333,9 +372,9 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#craft">Our craft</a>
+      <a href="#founder">Owner</a>
       <a href="#certs">Certifications</a>
       <a href="#rights">Your rights</a>
-      <a href="#reviews">Reviews</a>
     </div>
     <a class="nav-tel" href="tel:+19142194332"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>(914) 219-4332</a>
     <a class="nav-cta" href="#contact">Free estimate</a>
@@ -343,22 +382,22 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg"><img src="../assets/img/eab-c1.jpg" alt="Sleek dark vehicle finished to a flawless factory shine"></div>
+  <div class="hero-bg"><img src="../assets/img/eab-w2.jpg" alt="Ethos technician welding a panel in a shower of sparks"></div>
   <div class="hero-in">
     <span class="chip">
       <svg viewBox="0 0 24 24" fill="none" stroke="#E23636" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
-      Bedford Hills, NY &middot; In business since 2018
+      Bedford Hills, NY &middot; A family shop, 30+ years
     </span>
-    <h1>Your car, returned to <em>pre-accident condition or better.</em></h1>
-    <p>Ethos Auto Body handles collision and cosmetic repair with certified technicians, factory-grade equipment, and complete insurance claim support, so a bad day on the road ends with your vehicle looking exactly as it should.</p>
+    <h1>The most certified shop in <em>Westchester County.</em></h1>
+    <p>Ethos Auto Body is the most certified and trusted collision repair shop in Bedford Hills and Westchester County. A family shop with more than 30 years of experience, returning every vehicle to pre-accident condition or better.</p>
     <div class="hero-actions">
       <a class="btn btn-red" href="#contact">Request a free estimate</a>
       <a class="btn btn-ghost" href="tel:+19142194332">Call (914) 219-4332</a>
     </div>
     <div class="hero-mini">
-      <div><b>Since 2018</b><span>Trusted local shop</span></div>
+      <div><b>30+ Years</b><span>Of experience</span></div>
       <div><b>Gold Class</b><span>I-CAR certified</span></div>
-      <div><b>All carriers</b><span>Insurance accepted</span></div>
+      <div><b>Mercedes Elite</b><span>Certified facility</span></div>
     </div>
   </div>
 </header>
@@ -366,7 +405,7 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
 <section class="trust">
   <div class="wrap">
     <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>I-CAR Gold Class</b><small>Highest industry standard</small></div></div>
-    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6"/></svg></span><div><b>Factory authorized</b><small>Leading car brands</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12M9 21v-6h6v6"/></svg></span><div><b>OEM certified</b><small>Leading manufacturers</small></div></div>
     <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M10 4H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-5"/></svg></span><div><b>All insurance carriers</b><small>Claims handled in-house</small></div></div>
     <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.8-4 4 1 5.5L12 20l-5 2.3 1-5.5-4-4 5.6-.8Z"/></svg></span><div><b>Free estimates</b><small>Plus a complimentary detail</small></div></div>
   </div>
@@ -423,7 +462,7 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
     <div class="craft-copy reveal">
       <span class="eyebrow light">Our craft</span>
       <h2>Certified technicians, <em>factory-grade equipment.</em></h2>
-      <p>Every repair is carried out by certified, trained technicians using the latest technology and top-quality materials. The goal never changes: return your vehicle to pre-accident condition or better.</p>
+      <p>With more than two decades of certified-technician experience, every repair is carried out by trained hands using the latest technology and top-quality materials. The goal never changes: return your vehicle to pre-accident condition or better.</p>
       <div class="craft-list">
         <div><span class="ic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span><div>Hi-tech unibody pulling and aligning bench systems for precise structural repair</div></div>
         <div><span class="ic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span><div>Specialized MIG (metal inert gas) welding for strong, clean joins</div></div>
@@ -432,29 +471,119 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
       </div>
     </div>
   </div>
-  <div class="craft-img reveal"><img src="../assets/img/eab-c15.jpg" alt="Certified technician working carefully on a vehicle in the shop"></div>
+  <div class="craft-img reveal"><img src="../assets/img/eab-w1.jpg" alt="Ethos technician welding a panel with a Range Rover in the shop behind"></div>
+</section>
+
+<section class="care paint">
+  <div class="care-grid">
+    <div class="care-copy reveal">
+      <span class="eyebrow light">Paint &amp; refinishing</span>
+      <h2>Color matched in a <em>controlled booth.</em></h2>
+      <p>Refinishing is where a repair becomes invisible. We are an AXALTA Refinish Certified facility, spraying in a controlled paint booth so color, texture, and gloss match the panels around them, edge to edge.</p>
+      <div class="care-pts">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>AXALTA Refinish Certified</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Precision color matching to factory finish</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Controlled booth for a clean, even coat</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Cosmetic and full-panel refinishing</div>
+      </div>
+    </div>
+    <div class="care-img reveal"><img src="../assets/img/eab-w6.jpg" alt="Ethos painter in a respirator refinishing a car in the paint booth"></div>
+  </div>
+</section>
+
+<section class="sec founder" id="founder">
+  <div class="wrap">
+    <div class="founder-grid">
+      <div class="founder-img reveal"><img src="../assets/img/eab-w3.jpg" alt="Ethos technician detailing the wheel of a black Porsche 911"></div>
+      <div class="founder-copy reveal">
+        <span class="eyebrow">Meet the owner</span>
+        <h2>Matthew Beobide, <em>owner and manager.</em></h2>
+        <p>A local Katonah resident and a father of two, Matthew grew up in this trade. He started in the auto body industry as a teenager working under his grandfather, then his uncle, and has gained experience in every aspect of the business, from washing cars to running the shop.</p>
+        <p>He holds a Business Associate's degree from Westchester Business Institute and is a New York State licensed auto damage appraiser with hundreds of hours of ASE, I-CAR, and OEM training behind him. He is personally I-CAR Gold Class Certified, Aluminum Certified, Assured Performance Certified, and AXALTA Refinish Certified.</p>
+        <p>Matthew strives to stay ahead of the curve of the industry, so every client gets a seamless process, a quality product, and the best customer service possible.</p>
+        <div class="founder-creds stagger">
+          <span>I-CAR Gold Class</span><span>Aluminum Certified</span><span>Assured Performance</span><span>AXALTA Refinish</span><span>NYS Licensed Appraiser</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="sec certs" id="certs">
   <div class="wrap">
     <div class="cert-band">
       <div class="cert-gold reveal">
-        <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>Highest industry standard</span>
-        <h3>I-CAR Gold Class certified</h3>
-        <p>Gold Class recognition means our team trains to the highest standard in the collision repair industry, so your vehicle is repaired the right way, with the right knowledge, the first time.</p>
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>Top 10% nationwide</span>
+        <h3>I-CAR Gold Class Professionals</h3>
+        <p>Gold Class is a designation earned by only about 10% of repair centers in the country. It means our team trains to the highest standard in collision repair, so your vehicle is fixed the right way, with the right knowledge, the first time.</p>
       </div>
       <div class="cert-copy reveal">
         <span class="eyebrow">Certifications &amp; trust</span>
-        <h2>Factory authorized for <em>today's leading brands.</em></h2>
-        <p>We hold factory authorized repair facility certifications for many of the brands on the road today, so your car is repaired to the maker's own specifications and standards.</p>
+        <h2>The most certified shop <em>in the county.</em></h2>
+        <p>We repair everything from luxury and performance vehicles, Mercedes-Benz, Porsche, and exotics, to daily drivers, using manufacturer-approved procedures, OEM specs, professional-grade welders, and genuine OEM parts. That preserves your vehicle warranty, maintains its safety features, and restores it to pre-accident condition.</p>
       </div>
     </div>
+
+    <div class="cert-cred stagger reveal">
+      <div class="crcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <b>Mercedes-Benz Elite</b><small>Certified Collision Facility</small>
+      </div>
+      <div class="crcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h13l3 4v6H3zM16 11h3M6 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/></svg></div>
+        <b>Aluminum Certified</b><small>Structural repair</small>
+      </div>
+      <div class="crcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <b>Assured Performance</b><small>Certified network</small>
+      </div>
+      <div class="crcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <b>AXALTA Refinish</b><small>Certified painter</small>
+      </div>
+    </div>
+
+    <div class="oem-head reveal">
+      <h3>OEM certified by leading manufacturers</h3>
+      <p>Certified to repair to factory specification for:</p>
+    </div>
     <div class="brands stagger reveal">
-      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M4 9h16M4 15h16"/></svg></div><b>Hyundai</b><small>Factory authorized</small></div>
-      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></div><b>Ford</b><small>Factory authorized</small></div>
-      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/><circle cx="12" cy="12" r="9"/></svg></div><b>Infiniti</b><small>Factory authorized</small></div>
-      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="m12 3 3 8h-6l3-8Zm0 18-3-8h6l-3 8Z"/></svg></div><b>Kia</b><small>Factory authorized</small></div>
-      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v8M8 8l8 8M16 8v8"/></svg></div><b>Nissan</b><small>Factory authorized</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div><b>Mercedes-Benz</b><small>OEM certified</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M4 9h16M4 15h16"/></svg></div><b>FCA / Stellantis</b><small>Chrysler, Jeep, Ram, Dodge</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-4 7 4v12"/></svg></div><b>GM</b><small>General Motors</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></div><b>Ford</b><small>OEM certified</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h16v10H4zM7 12h.01M12 12h.01M17 12h.01"/></svg></div><b>Honda</b><small>OEM certified</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M4 9h16M4 15h16"/></svg></div><b>Hyundai</b><small>OEM certified</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/><circle cx="12" cy="12" r="9"/></svg></div><b>Infiniti</b><small>OEM certified</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="m12 3 3 8h-6l3-8Zm0 18-3-8h6l-3 8Z"/></svg></div><b>Kia</b><small>OEM certified</small></div>
+      <div class="bcard"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 8v8M8 8l8 8M16 8v8"/></svg></div><b>Nissan</b><small>Including Nissan GTR</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec whyc">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Why it matters</span>
+      <h2>Why choose a <em>certified shop.</em></h2>
+      <p>A certified repair is not just about looks. It protects the safety systems, the warranty, and the long-term value of your vehicle.</p>
+    </div>
+    <div class="why-grid stagger reveal">
+      <div class="wcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Genuine OEM parts</h3>
+        <p>Original parts perform better and last longer. We keep them in stock or obtain them quickly, keeping you safe and saving money over the long term.</p>
+      </div>
+      <div class="wcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m8 12 3 3 5-6"/></svg></div>
+        <h3>Honest estimates</h3>
+        <p>Straightforward estimates, superior customer service, and timely communication so you always know where your repair stands.</p>
+      </div>
+      <div class="wcard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Trusted on both sides</h3>
+        <p>Trusted by insurance companies and discerning car owners alike, with manufacturer-approved procedures on every repair.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -511,10 +640,10 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
       <p>Clean lines, matched paint, and a finish that looks the way it did the day the car was new.</p>
     </div>
     <div class="show-grid reveal">
-      <div class="gcell g1"><img src="../assets/img/eab-c9.jpg" alt="Restored coupe with a flawless silver finish"></div>
-      <div class="gcell"><img src="../assets/img/eab-c2.jpg" alt="Freshly finished blue performance car"></div>
-      <div class="gcell"><img src="../assets/img/eab-c8.jpg" alt="Detailed yellow sports car with a deep gloss"></div>
-      <div class="gcell g4"><img src="../assets/img/eab-c11.jpg" alt="Red sports car finished to a showroom shine"></div>
+      <div class="gcell g1"><img src="../assets/img/eab-w3.jpg" alt="Ethos technician detailing the wheel of a black Porsche 911"></div>
+      <div class="gcell"><img src="../assets/img/eab-w5.jpg" alt="Close-up of a black Porsche wheel and brake caliper"></div>
+      <div class="gcell"><img src="../assets/img/eab-shop.jpg" alt="Chrome tailfin and taillights of a classic red Cadillac"></div>
+      <div class="gcell g4"><img src="../assets/img/eab-c11.jpg" alt="Sports car finished to a showroom shine"></div>
     </div>
   </div>
 </section>
@@ -555,8 +684,8 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
 <section class="sec quote">
   <div class="wrap">
     <span class="mark">&#8220;</span>
-    <p>Our commitment is simple: make the repair as easy and convenient as possible, with exceptional work, <em>done on time, at a reasonable price.</em></p>
-    <div class="by">Ethos Auto Body &middot; Bedford Hills, NY</div>
+    <p>You don't build a business, you build people, <em>then people build the business.</em></p>
+    <div class="by">Matthew Beobide &middot; Owner, Ethos Auto Body</div>
   </div>
 </section>
 
@@ -584,8 +713,20 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
         <p>Collision and cosmetic repair, unibody and frame straightening, specialized MIG welding, and carbon fiber, aluminum, and steel structural repairs, plus sales and installation of aftermarket parts and accessories.</p>
       </details>
       <details>
+        <summary>What certifications does the shop hold? <span class="tog">+</span></summary>
+        <p>We are I-CAR Gold Class Professionals, a Mercedes-Benz Certified Collision Facility and Mercedes-Benz Elite, plus Aluminum Certified, Assured Performance Certified, and AXALTA Refinish Certified. We are also OEM certified by FCA / Stellantis, GM, Ford, Mercedes-Benz, Honda, Hyundai, Infiniti, Kia, and Nissan including the Nissan GTR.</p>
+      </details>
+      <details>
+        <summary>Do you work on luxury and performance vehicles? <span class="tog">+</span></summary>
+        <p>Yes. We repair everything from luxury and performance vehicles, including Mercedes-Benz, Porsche, and exotics, to daily drivers, using manufacturer-approved procedures, OEM specs, professional-grade welders, and genuine OEM parts.</p>
+      </details>
+      <details>
+        <summary>Which areas do you serve? <span class="tog">+</span></summary>
+        <p>We are based in Bedford Hills and serve Mount Kisco, Katonah, Armonk, and Chappaqua, along with the surrounding Westchester County area.</p>
+      </details>
+      <details>
         <summary>Will my car look the way it did before? <span class="tog">+</span></summary>
-        <p>That is the goal on every job. Our certified technicians and factory-grade equipment are used to return your vehicle to pre-accident condition or better.</p>
+        <p>That is the goal on every job. Our certified technicians and factory-grade equipment are used to return your vehicle to pre-accident condition or better, preserving its warranty and safety features.</p>
       </details>
     </div>
   </div>
@@ -617,6 +758,10 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
           <div><small>Hours</small><b>Mon&ndash;Fri 8am&ndash;6pm &middot; Sat 9am&ndash;1pm &middot; Sun closed</b></div>
         </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Service area</small><b>Bedford Hills, Mount Kisco, Katonah, Armonk, Chappaqua &amp; Westchester County</b></div>
+        </div>
       </div>
       <form class="cform reveal" onsubmit="return false;">
         <h3>Request an estimate</h3>
@@ -639,7 +784,8 @@ footer{background:#0A0B0E;color:#9AA0AC;padding:76px 0 38px}
       <div class="foot-brand">
         <img src="../assets/img/eab-logo.webp" alt="Ethos Auto Body" style="width:66px;height:66px;object-fit:contain;margin-bottom:16px">
         <b>Ethos Auto Body</b>
-        <p>Collision and cosmetic repair in Bedford Hills, NY, serving Westchester County since 2018. I-CAR Gold Class certified and factory authorized.</p>
+        <p>The most certified and trusted collision repair shop in Bedford Hills and Westchester County. A family shop with more than 30 years of experience, I-CAR Gold Class and Mercedes-Benz Elite certified.</p>
+        <p style="margin-top:14px;font-size:.9rem;color:#8A90A0">Serving Bedford Hills, Mount Kisco, Katonah, Armonk, Chappaqua and surrounding Westchester County.</p>
       </div>
       <div class="foot-col">
         <h4>Services</h4>
