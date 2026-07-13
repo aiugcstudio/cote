@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reliance Chimney · Northwest Arkansas chimney sweeping, inspection &amp; masonry repair</title>
+<meta name="description" content="CSIA certified chimney sweeping, inspection, masonry repair and fireplace installation across Northwest Arkansas. Owner-operated, 5-star rated. Call (479) 333-2394.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231A1614'/%3E%3Cpath d='M50 74c-9 0-16-6-16-15 0-8 6-12 8-20 4 5 3 9 6 9 3 0 3-6 2-12 7 4 16 12 16 23 0 9-7 15-16 15z' fill='%23E2622A'/%3E%3C/svg%3E">
+<style>
+:root{
+  --soot:#1C1815;
+  --soot-2:#12100E;
+  --ember:#E2622A;
+  --ember-dk:#C24C18;
+  --brick:#8A3B2A;
+  --cream:#F2ECE3;
+  --paper:#FBF7F1;
+  --white:#fff;
+  --ink:#211C18;
+  --muted:#6C6155;
+  --line:#E6DCCE;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.sec{padding:118px 0}
+h1,h2,h3{line-height:1.06;letter-spacing:-.01em}
+h1,h2{font-family:var(--serif);font-weight:600}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ember-dk);display:inline-block;margin-bottom:20px}
+em{font-style:italic;color:var(--ember-dk);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ember);color:#fff;border:none;padding:17px 34px;border-radius:100px;font-family:var(--sans);font-weight:700;font-size:1rem;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--ember-dk);transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(226,98,42,.7)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{background:var(--soot);color:#fff;border-color:var(--soot);box-shadow:none}
+.sec-head{max-width:730px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{font-size:clamp(2.4rem,4.6vw,3.7rem);margin-bottom:18px}
+.sec-head p{color:var(--muted);font-size:1.12rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:.4s}
+nav.scrolled{background:rgba(28,24,21,.96);backdrop-filter:blur(14px);padding:10px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:600;font-size:1.18rem;color:#fff}
+.brand .mk{width:42px;height:42px;border-radius:11px;background:var(--ember);display:grid;place-items:center;flex:none}
+.brand .mk svg{width:24px;height:24px;fill:#fff}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:600;color:rgba(255,255,255,.85);transition:.3s}
+.nav-links a:hover{color:var(--ember)}
+.nav-cta{background:var(--ember);color:#fff!important;padding:11px 22px;border-radius:100px;font-weight:700;font-size:.9rem}
+.nav-cta:hover{background:var(--ember-dk)}
+@media(max-width:860px){.nav-links a:not(.nav-cta){display:none}nav{background:rgba(28,24,21,.96)}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--soot)}
+.hero-bg{position:absolute;inset:0;background:
+   radial-gradient(120% 90% at 82% 108%,rgba(226,98,42,.42) 0%,rgba(226,98,42,0) 52%),
+   radial-gradient(90% 70% at 8% -10%,rgba(138,59,42,.4) 0%,rgba(138,59,42,0) 55%),
+   linear-gradient(160deg,#211B17 0%,#14110E 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:34px 34px;opacity:.5}
+.hero-in{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:140px 40px 70px;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(226,98,42,.2);border:1px solid rgba(226,98,42,.55);color:#F2B08C;padding:8px 16px;border-radius:100px;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--ember);box-shadow:0 0 0 4px rgba(226,98,42,.3)}
+.hero h1{font-size:clamp(3rem,6.6vw,5.7rem);font-weight:600;line-height:1.02;max-width:15ch;margin-bottom:24px}
+.hero h1 em{color:#F2B08C}
+.hero p.lead{font-size:1.28rem;max-width:56ch;color:rgba(255,255,255,.87);margin-bottom:38px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.36)}
+.hero .btn-ghost:hover{background:#fff;color:var(--soot)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:56px;border-top:1px solid rgba(255,255,255,.16);padding-top:32px}
+.hero-stat .n{font-family:var(--serif);font-size:2.6rem;line-height:1;color:#fff}
+.hero-stat .n em{color:#F2B08C}
+.hero-stat .l{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.62);margin-top:8px}
+@media(max-width:640px){.hero-stats{grid-template-columns:1fr 1fr;gap:26px}}
+
+/* TRUST */
+.trust{background:var(--soot-2);color:#fff;padding:40px 0}
+.trust-in{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;align-items:center}
+.trust-in .ti{display:flex;align-items:center;gap:11px;font-size:.96rem;font-weight:500}
+.trust-in .ti svg{width:22px;height:22px;stroke:var(--ember);flex:none}
+
+/* SERVICES */
+.services{background:var(--paper)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:38px;transition:.35s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 34px 60px -42px rgba(28,24,21,.45);border-color:var(--ember)}
+.svc-ico{width:58px;height:58px;border-radius:14px;background:var(--cream);display:grid;place-items:center;margin-bottom:22px;transition:.35s}
+.svc:hover .svc-ico{background:var(--ember)}
+.svc-ico svg{width:29px;height:29px;stroke:var(--ember-dk);fill:none;stroke-width:1.6}
+.svc:hover .svc-ico svg{stroke:#fff}
+.svc h3{font-family:var(--sans);font-size:1.3rem;font-weight:700;margin-bottom:11px}
+.svc p{color:var(--muted);font-size:.99rem}
+
+/* OWNER FEATURE */
+.owner{overflow:hidden;background:var(--soot)}
+.owner-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;max-width:1200px;margin:0 auto}
+.owner-visual{position:relative;min-height:540px;background:
+   radial-gradient(120% 90% at 70% 110%,rgba(226,98,42,.5) 0%,rgba(226,98,42,0) 55%),
+   linear-gradient(150deg,#2A211B 0%,#15110E 100%);display:grid;place-items:center;padding:50px}
+.owner-visual .seal{text-align:center;color:#fff}
+.owner-visual .seal .ring{width:200px;height:200px;border-radius:50%;border:2px solid rgba(242,176,140,.4);display:grid;place-items:center;margin:0 auto 26px;position:relative}
+.owner-visual .seal .ring::before{content:"";position:absolute;inset:14px;border-radius:50%;border:1px solid rgba(242,176,140,.25)}
+.owner-visual .seal .ring svg{width:82px;height:82px;fill:#F2B08C}
+.owner-visual .seal b{font-family:var(--serif);font-size:1.5rem;display:block;margin-bottom:4px}
+.owner-visual .seal span{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.owner-copy{padding:90px 70px;display:flex;flex-direction:column;justify-content:center;color:#fff}
+.owner-copy .eyebrow{color:#F2B08C}
+.owner-copy h2{font-size:clamp(2.1rem,3.6vw,3rem);margin-bottom:20px}
+.owner-copy h2 em{color:#F2B08C}
+.owner-copy p{color:rgba(255,255,255,.82);margin-bottom:18px}
+.owner-sign{display:flex;align-items:center;gap:14px;margin-top:22px}
+.owner-sign .av{width:56px;height:56px;border-radius:50%;background:var(--ember);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:1.2rem;flex:none}
+.owner-sign b{display:block;font-weight:700}.owner-sign span{font-size:.86rem;color:rgba(255,255,255,.65)}
+@media(max-width:900px){.owner-grid{grid-template-columns:1fr}.owner-visual{min-height:340px;order:-1}.owner-copy{padding:56px 40px}}
+
+/* WHY */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.why-c{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:40px 34px;text-align:center}
+.why-c .ic{width:56px;height:56px;border-radius:14px;background:var(--cream);display:grid;place-items:center;margin:0 auto 20px}
+.why-c .ic svg{width:28px;height:28px;stroke:var(--ember-dk);fill:none;stroke-width:1.7}
+.why-c h3{font-family:var(--sans);font-size:1.22rem;font-weight:700;margin-bottom:10px}
+.why-c p{color:var(--muted);font-size:.98rem}
+@media(max-width:820px){.why-grid{grid-template-columns:1fr}}
+
+/* AREA */
+.area{background:var(--soot);color:#fff}
+.area .sec-head h2{color:#fff}.area .sec-head p{color:rgba(255,255,255,.72)}
+.area-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.area h2{font-size:clamp(2.1rem,4vw,3rem);margin-bottom:18px}.area h2 em{color:#F2B08C}
+.area p{color:rgba(255,255,255,.8);margin-bottom:24px}
+.towns{display:flex;flex-wrap:wrap;gap:12px}
+.town{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px 20px;font-weight:600;font-size:.98rem;display:flex;align-items:center;gap:9px;transition:.3s}
+.town:hover{background:var(--ember);border-color:var(--ember)}
+.town svg{width:16px;height:16px;stroke:var(--ember);flex:none}.town:hover svg{stroke:#fff}
+
+/* FAQ */
+.faq{background:var(--paper)}
+.faq-wrap{max-width:840px;margin:52px auto 0}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:15px;margin-bottom:13px;overflow:hidden;transition:box-shadow .3s}
+.faq-item[open]{box-shadow:0 22px 46px -34px rgba(28,24,21,.4)}
+.faq-item summary{list-style:none;cursor:pointer;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--serif);font-size:1.2rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .pl{flex:none;width:30px;height:30px;border-radius:50%;background:var(--soot);color:#fff;display:grid;place-items:center;transition:.3s;font-size:1.3rem;line-height:0}
+.faq-item[open] summary .pl{transform:rotate(45deg);background:var(--ember)}
+.faq-item .a{padding:0 30px 25px;color:var(--muted);font-size:1.02rem;line-height:1.65}
+
+/* CONTACT */
+.contact{background:var(--soot-2);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.contact h2{font-size:clamp(2.4rem,4.6vw,3.6rem);margin-bottom:20px}.contact h2 em{color:#F2B08C}
+.contact p.sub{color:rgba(255,255,255,.78);font-size:1.14rem;margin-bottom:34px;max-width:46ch}
+.contact-btns{display:flex;gap:14px;flex-wrap:wrap}
+.contact .btn-ghost{color:#fff;border-color:rgba(255,255,255,.32)}
+.contact .btn-ghost:hover{background:#fff;color:var(--soot)}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:42px}
+.cc-row{display:flex;align-items:center;gap:16px;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.cc-row:last-child{border-bottom:none}
+.cc-row .ic{width:46px;height:46px;border-radius:11px;background:rgba(226,98,42,.18);display:grid;place-items:center;flex:none}
+.cc-row .ic svg{width:22px;height:22px;stroke:#F2B08C}
+.cc-row .lb{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.55)}
+.cc-row .vl{font-size:1.02rem;font-weight:600}
+
+/* FOOTER */
+footer{background:var(--soot-2);border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.6);padding:48px 0;text-align:center;font-size:.9rem}
+footer .fbrand{font-family:var(--serif);font-size:1.35rem;color:#fff;margin-bottom:10px}
+footer .fbrand span{color:var(--ember)}
+footer a{color:#F2B08C}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}.stagger.in>*:nth-child(5){transition-delay:.32s}.stagger.in>*:nth-child(6){transition-delay:.4s}
+@media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1;transform:none}}
+@media(max-width:900px){.sec{padding:80px 0}.wrap{padding:0 24px}.area-grid,.contact-grid{grid-template-columns:1fr;gap:44px}.svc-grid,.why-grid{grid-template-columns:1fr}.hero-in{padding-top:130px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="brand"><span class="mk"><svg viewBox="0 0 100 100"><path d="M50 78c-11 0-19-7-19-18 0-9 7-14 9-23 5 6 4 11 7 11 4 0 4-7 2-14 9 5 19 14 19 27 0 10-8 17-18 17z"/></svg></span>Reliance Chimney</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#owner">Our Story</a>
+      <a href="#area">Service Area</a>
+      <a href="tel:4793332394" class="nav-cta">(479) 333-2394</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-in">
+    <div class="hero-badge"><span class="dot"></span>Northwest Arkansas · CSIA Certified</div>
+    <h1>Keep the fire where <em>it belongs.</em></h1>
+    <p class="lead">CSIA certified chimney sweeping, inspection, masonry repair and fireplace installation across Northwest Arkansas, from an owner who built this company on doing it right.</p>
+    <div class="hero-btns">
+      <a href="tel:4793332394" class="btn">Book an inspection</a>
+      <a href="#services" class="btn btn-ghost">See our services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">CSIA</div><div class="l">Certified sweep</div></div>
+      <div class="hero-stat"><div class="n">5.0<em>★</em></div><div class="l">Customer rated</div></div>
+      <div class="hero-stat"><div class="n">Lifetime</div><div class="l">Workmanship warranty</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap trust-in">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg>CSIA Certified sweep</div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>BBB A+ rated</div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z"/></svg>Owner-operated</div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 8v4l3 2M12 22a10 10 0 100-20 10 10 0 000 20z"/></svg>Lifetime warranty</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Everything your chimney needs, <em>under one roof.</em></h2>
+      <p>From an annual sweep to a full rebuild, we keep your fireplace safe, clean and running the way it should, all backed by CSIA certification.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M6 21v-6M9 21v-6M6 15h3M7.5 3v12M4 3h7l-1 4H5L4 3z"/></svg></div>
+        <h3>Sweeping &amp; Inspection</h3>
+        <p>Annual maintenance that removes hazardous creosote and soot and catches any problem early, so your fireplace stays safe and efficient.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8h14v13M5 8l7-5 7 5M9 12h2M13 12h2M9 16h2M13 16h2"/></svg></div>
+        <h3>Chimney &amp; Masonry Repair</h3>
+        <p>From cracked mortar and crowns to full structural rebuilds, we restore the integrity of your chimney and protect your home from leaks and deterioration.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 21h16M6 21v-9h12v9M8 12V8a4 4 0 018 0v4M11 17h2"/></svg></div>
+        <h3>Sales &amp; Installation</h3>
+        <p>Upgrade your home with top-quality fireplaces, stoves and inserts from our selection, paired with expert installation.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 3v6M9 6l3-3 3 3M5 21v-8h14v8M8 13v8M16 13v8"/></svg></div>
+        <h3>Relining &amp; Waterproofing</h3>
+        <p>New liners, crowns, caps and waterproofing that seal your chimney against water damage and keep it drawing safely for years.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 8h13a3 3 0 010 6H4M4 4h16M4 12h9M6 18h12"/></svg></div>
+        <h3>Dryer Vent Cleaning</h3>
+        <p>Lint-clogged dryer vents are a real fire risk. We clear them out so your dryer runs faster, cooler and safer.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9h14v12M5 9l7-6 7 6M10 21v-6h4v6"/></svg></div>
+        <h3>Tuckpointing &amp; Rebuilds</h3>
+        <p>Firebox repairs, tuckpointing and complete chimney rebuilds, done clean, quick and efficient with a lasting result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section class="owner" id="owner">
+  <div class="owner-grid">
+    <div class="owner-copy">
+      <span class="eyebrow">Our story</span>
+      <h2>From K-9 handler to <em>chimney expert.</em></h2>
+      <p>After six years as a full-time officer and deputy, four of them as a K-9 handler, Logan Roddy wanted a career that gave him more time with his wife Teresa and their five children.</p>
+      <p>He and Teresa saw a need in Northwest Arkansas for a chimney company built around a genuinely high level of customer service. In July 2021 they started Reliance Chimney, and Logan earned his CSIA certification to back it up.</p>
+      <p>That same discipline runs through every job today: show up on time, do what you say, and leave the home cleaner than you found it.</p>
+      <div class="owner-sign">
+        <div class="av">LR</div>
+        <div><b>Logan Roddy</b><span>Owner &amp; CSIA Certified Sweep, Reliance Chimney</span></div>
+      </div>
+    </div>
+    <div class="owner-visual">
+      <div class="seal">
+        <div class="ring"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg></div>
+        <b>CSIA Certified</b>
+        <span>Chimney Safety Institute of America</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Why homeowners choose us</span>
+      <h2>Reliable, by name and <em>by habit.</em></h2>
+    </div>
+    <div class="why-grid stagger">
+      <div class="why-c">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Quality Service</h3>
+        <p>CSIA certified, careful work on every visit, with the home protected and left spotless.</p>
+      </div>
+      <div class="why-c">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg></div>
+        <h3>Lifetime Warranty</h3>
+        <p>We stand behind our workmanship for the life of the work, not just the invoice.</p>
+      </div>
+      <div class="why-c">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 2M12 22a10 10 0 100-20 10 10 0 000 20z"/></svg></div>
+        <h3>Reliability</h3>
+        <p>On time, straight answers, and a 5-star reputation built one Northwest Arkansas home at a time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="sec area" id="area">
+  <div class="wrap area-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#F2B08C">Where we work</span>
+      <h2>Serving <em>Northwest Arkansas.</em></h2>
+      <p>Proud to serve these communities and the towns around them, across Northwest Arkansas and the River Valley.</p>
+      <a href="tel:4793332394" class="btn">Book an inspection</a>
+    </div>
+    <div class="towns reveal">
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Bella Vista</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Bentonville</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Rogers</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Springdale</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Fayetteville</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Siloam Springs</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Huntsville</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Eureka Springs</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details class="faq-item"><summary>How often should I have my chimney swept?<span class="pl">+</span></summary><div class="a">For most homes that burn regularly, once a year. An annual sweep and inspection removes hazardous creosote buildup and catches small issues before they become expensive or dangerous.</div></details>
+      <details class="faq-item"><summary>Are you certified?<span class="pl">+</span></summary><div class="a">Yes. Reliance Chimney is a CSIA Certified Chimney Sweep through the Chimney Safety Institute of America, and we carry an A+ rating with the BBB.</div></details>
+      <details class="faq-item"><summary>Do you repair masonry and rebuild chimneys?<span class="pl">+</span></summary><div class="a">We do. From cracked mortar, crowns and caps to tuckpointing, firebox repair and full rebuilds, we restore the structure and seal it against water damage.</div></details>
+      <details class="faq-item"><summary>Do you install fireplaces and stoves?<span class="pl">+</span></summary><div class="a">Yes. We sell and install quality fireplaces, stoves and inserts, and we clean dryer vents too.</div></details>
+      <details class="faq-item"><summary>How do I book?<span class="pl">+</span></summary><div class="a">Call or text us at (479) 333-2394 and we will get you scheduled across Northwest Arkansas and the River Valley.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#F2B08C">Get in touch</span>
+      <h2>Ready for a <em>safer fireplace?</em></h2>
+      <p class="sub">Call or text Reliance Chimney to book a sweep, inspection or repair across Northwest Arkansas. CSIA certified, 5-star rated.</p>
+      <div class="contact-btns">
+        <a href="tel:4793332394" class="btn">Call (479) 333-2394</a>
+        <a href="#services" class="btn btn-ghost">See services</a>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div>
+        <div><div class="lb">Phone / text</div><div class="vl">(479) 333-2394</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div><div class="lb">Based in</div><div class="vl">Fayetteville, AR</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg></div>
+        <div><div class="lb">Certification</div><div class="vl">CSIA Certified · BBB A+</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></div>
+        <div><div class="lb">Hours</div><div class="vl">Mon to Fri, 8am to 5pm</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">Reliance <span>Chimney</span></div>
+    <p>Sweeping · Inspection · Masonry Repair · Relining · Installation · Northwest Arkansas</p>
+    <p style="margin-top:12px">(479) 333-2394 · Fayetteville, AR · CSIA Certified · BBB A+</p>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
