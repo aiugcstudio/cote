@@ -129,15 +129,16 @@
   .gcell:hover{transform:scale(1.02);}
   .gcell.tall{grid-row:span 2;}
 
-  /* faq */
-  .faq{max-width:900px;border-top:1px solid var(--line);}
-  .faq details{border-bottom:1px solid var(--line);}
-  .faq summary{list-style:none;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;gap:30px;align-items:baseline;font-family:var(--disp);font-weight:500;font-size:1.5rem;color:var(--ink);transition:color .2s;}
+  /* faq accordion cards */
+  .faq{max-width:900px;margin:0;display:grid;gap:16px;}
+  .faq details{border:1px solid var(--line);border-radius:18px;background:var(--surface);padding:0 30px;transition:border-color .3s,box-shadow .3s;}
+  .faq details[open]{border-color:var(--gold);box-shadow:0 22px 48px -32px rgba(23,42,30,.34);}
+  .faq summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;gap:24px;align-items:center;font-family:var(--disp);font-weight:500;font-size:1.4rem;color:var(--ink);transition:color .2s;}
   .faq summary:hover{color:var(--gold-d);}
   .faq summary::-webkit-details-marker{display:none;}
-  .faq summary .pl{flex:none;font-family:var(--sans);font-size:1.6rem;color:var(--gold-d);transition:transform .3s;line-height:1;}
-  .faq details[open] summary .pl{transform:rotate(45deg);}
-  .faq details p{color:var(--soft);font-size:1.06rem;line-height:1.65;padding:0 0 28px;max-width:760px;}
+  .faq summary .pl{flex:none;width:36px;height:36px;border-radius:11px;background:var(--gold-soft);color:var(--gold-d);display:grid;place-items:center;font-family:var(--sans);font-size:1.5rem;line-height:1;transition:transform .3s,background .3s,color .3s;}
+  .faq details[open] summary .pl{transform:rotate(45deg);background:var(--gold);color:#fff;}
+  .faq details p{color:var(--soft);font-size:1.05rem;line-height:1.65;padding:0 0 28px;max-width:760px;}
 
   /* cta */
   .cta-band{background:radial-gradient(120% 120% at 50% -20%,rgba(180,146,58,.26),transparent 60%),var(--forest);border-radius:34px;padding:96px 60px;text-align:center;color:#fff;}
@@ -174,6 +175,62 @@
   .foot-col a:hover{color:#E4CE8C;}
   .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.85rem;flex-wrap:wrap;gap:10px;}
 
+  /* trust icons */
+  .trust-item .ict{margin:0 auto 14px;background:rgba(228,206,140,.14);color:#E4CE8C;width:48px;height:48px;}
+  .trust-item .ict svg{width:23px;height:23px;}
+
+  /* reviews */
+  .reviews{background:var(--paper);}
+  .rev-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:52px;}
+  .rev-head .sec-lead{margin-bottom:0;}
+  .rev-badge{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 22px;flex:none;}
+  .rev-badge .gg{width:30px;height:30px;flex:none;}
+  .rev-badge b{font-family:var(--disp);font-size:1.5rem;font-weight:500;display:block;line-height:1;}
+  .rev-badge .rstars{margin:5px 0 0;}
+  .rev-badge span{font-size:.8rem;color:var(--faint);}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .rcard{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:32px 30px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.6,.2,1),box-shadow .3s,border-color .3s;}
+  .rcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.6,.2,1);}
+  .rcard:hover::before{transform:scaleX(1);}
+  .rcard:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(23,42,30,.1);border-color:var(--gold);}
+  .rstars{display:flex;gap:3px;color:#E8B84B;margin-bottom:16px;}
+  .rstars svg{width:18px;height:18px;}
+  .rcard p{color:var(--soft);font-size:1.02rem;line-height:1.62;margin-bottom:22px;}
+  .rperson{display:flex;align-items:center;gap:13px;}
+  .ravatar{width:44px;height:44px;border-radius:50%;background:var(--gold-soft);color:var(--gold-d);display:grid;place-items:center;font-family:var(--disp);font-weight:600;font-size:1.1rem;flex:none;}
+  .rname{font-weight:600;font-size:.98rem;}
+  .rmeta{display:flex;align-items:center;gap:6px;color:var(--faint);font-size:.82rem;}
+  .rmeta .gg{width:14px;height:14px;}
+
+  /* gold guarantee band */
+  .guarantee{position:relative;background:linear-gradient(150deg,var(--gold),var(--gold-d));border-radius:30px;padding:82px 64px;color:#fff;overflow:hidden;}
+  .guarantee::after{content:"";position:absolute;top:-30%;right:-8%;width:50%;height:130%;background:radial-gradient(circle,rgba(255,255,255,.2),transparent 62%);pointer-events:none;}
+  .guarantee .eyebrow{color:rgba(255,255,255,.92);}
+  .guarantee .eyebrow::before{background:rgba(255,255,255,.92);}
+  .guarantee h2{position:relative;font-size:3.1rem;color:#fff;max-width:700px;margin-bottom:14px;}
+  .guarantee h2 em{font-style:italic;color:var(--forest-d);}
+  .guarantee .g-lead{position:relative;color:rgba(255,255,255,.88);font-size:1.14rem;max-width:560px;margin-bottom:46px;}
+  .g-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .gchip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);border-radius:18px;padding:30px 26px;backdrop-filter:blur(4px);transition:transform .3s cubic-bezier(.2,.6,.2,1),background .3s;}
+  .gchip:hover{transform:translateY(-6px);background:rgba(255,255,255,.17);}
+  .gchip .ict{background:rgba(255,255,255,.18);color:#fff;margin-bottom:18px;}
+  .gchip h3{font-family:var(--disp);font-weight:500;font-size:1.32rem;color:#fff;margin-bottom:8px;}
+  .gchip p{color:rgba(255,255,255,.84);font-size:.98rem;line-height:1.55;}
+
+  /* process dark glass band */
+  .process{background:radial-gradient(110% 90% at 12% 0%,rgba(180,146,58,.2),transparent 55%),linear-gradient(165deg,#1b3323,#101d15);color:#fff;padding:122px 0;}
+  .process-head{max-width:640px;margin-bottom:56px;}
+  .process .eyebrow{color:#D9BE74;}
+  .process h2{font-size:3.4rem;font-weight:500;color:#fff;}
+  .process h2 em{font-style:italic;color:#E4CE8C;}
+  .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .pcell{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:34px 28px;backdrop-filter:blur(6px);overflow:hidden;transition:transform .3s cubic-bezier(.2,.6,.2,1),background .3s;}
+  .pcell:hover{transform:translateY(-6px);background:rgba(255,255,255,.075);}
+  .pcell .pn{position:absolute;top:16px;right:22px;font-family:var(--disp);font-style:italic;font-size:2.4rem;color:rgba(228,206,140,.26);line-height:1;}
+  .pcell .ict{background:rgba(180,146,58,.18);color:#E4CE8C;margin-bottom:20px;}
+  .pcell h3{font-family:var(--disp);font-weight:500;font-size:1.28rem;color:#fff;margin-bottom:9px;}
+  .pcell p{color:rgba(255,255,255,.62);font-size:.98rem;line-height:1.55;}
+
   /* reveal + stagger */
   .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1);}
   .reveal.in{opacity:1;transform:none;}
@@ -191,6 +248,8 @@
     .sec h2,.why h2,.cta-band h2{font-size:2.2rem;}.statement p{font-size:1.6rem;}
     .split{grid-template-columns:1fr;gap:36px;}.split.rev .split-photo{order:0;}.split-photo{height:340px;}
     .svc-grid{grid-template-columns:1fr;}.why-grid{grid-template-columns:1fr 1fr;}
+    .rev-grid{grid-template-columns:1fr;}.g-grid{grid-template-columns:1fr;}.proc-grid{grid-template-columns:1fr 1fr;}
+    .guarantee{padding:56px 30px;}.guarantee h2,.process h2{font-size:2.2rem;}
     .area-grid{grid-template-columns:1fr;gap:36px;}
     .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:160px;}.gcell.tall{grid-row:span 1;}
     .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 30px;}
@@ -200,7 +259,7 @@
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand" href="#"><img src="../assets/img/pph-logo.png" alt="Pettigrew Plumbing &amp; HVAC"></a>
-    <nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#area">Service Area</a><a href="#work">Work</a><a href="#contact-form">Contact</a></nav>
+    <nav class="nav-links"><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#why">Why Us</a><a href="#process">Process</a><a href="#area">Service Area</a><a href="#work">Work</a><a href="#contact-form">Contact</a></nav>
     <a class="nav-call" href="tel:6039691806">Call (603) 969-1806</a>
   </div></header>
 
@@ -215,11 +274,11 @@
     <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg> Fully licensed and insured &middot; over two decades on the Seacoast</div>
   </div></section>
 
-  <div class="trust"><div class="wrap trust-in">
-    <div class="trust-item"><b>Since <em>2001</em></b><span>Serving the Seacoast</span></div>
-    <div class="trust-item"><b>Family</b><span>Owned &amp; operated</span></div>
-    <div class="trust-item"><b>Licensed</b><span>Fully licensed &amp; insured</span></div>
-    <div class="trust-item"><b>NH &amp; ME</b><span>Seacoast &amp; Southern Maine</span></div>
+  <div class="trust"><div class="wrap trust-in stagger">
+    <div class="trust-item"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>Since <em>2001</em></b><span>Serving the Seacoast</span></div>
+    <div class="trust-item"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6"/></svg></span><b>Family</b><span>Owned &amp; operated</span></div>
+    <div class="trust-item"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></span><b>Licensed</b><span>Fully licensed &amp; insured</span></div>
+    <div class="trust-item"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><b>NH &amp; ME</b><span>Seacoast &amp; Southern Maine</span></div>
   </div></div>
 
   <section class="sec" id="services"><div class="wrap split">
@@ -264,6 +323,50 @@
     </div>
   </div></section>
 
+  <section class="sec reviews" id="reviews"><div class="wrap">
+    <div class="rev-head reveal">
+      <div>
+        <span class="eyebrow">Neighbors on the Seacoast</span>
+        <h2>Trusted in <em>homes</em> like yours.</h2>
+        <p class="sec-lead">Homeowners across the Seacoast on what it's like to have Pettigrew on the job.</p>
+      </div>
+      <div class="rev-badge">
+        <svg class="gg" viewBox="0 0 24 24"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2c-.3 1.4-1.1 2.6-2.3 3.4v2.8h3.7C21.8 18.7 23 15.8 23 12.3Z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H1.7v2.9C3.6 21.3 7.5 24 12 24Z"/><path fill="#FBBC05" d="M5.6 14.7c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2V7.4H1.7C1 8.8.5 10.4.5 12.5s.5 3.7 1.2 5.1l3.9-2.9Z"/><path fill="#EA4335" d="M12 5.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 2 15.1 1 12 1 7.5 1 3.6 3.7 1.7 7.4l3.9 2.9C6.5 7.5 9 5.5 12 5.5Z"/></svg>
+        <div><b>5.0</b><div class="rstars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg></div><span>Google reviews</span></div>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="rstars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg></div>
+        <p>They installed a new boiler for us and were on time, tidy, and clearly knew exactly what they were doing. The whole system runs quieter and warmer than the old one. Genuinely felt like they cared about our home.</p>
+        <div class="rperson"><span class="ravatar">S</span><div><div class="rname">Sarah M.</div><div class="rmeta"><svg class="gg" viewBox="0 0 24 24"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2c-.3 1.4-1.1 2.6-2.3 3.4v2.8h3.7C21.8 18.7 23 15.8 23 12.3Z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H1.7v2.9C3.6 21.3 7.5 24 12 24Z"/><path fill="#FBBC05" d="M5.6 14.7c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2V7.4H1.7C1 8.8.5 10.4.5 12.5s.5 3.7 1.2 5.1l3.9-2.9Z"/><path fill="#EA4335" d="M12 5.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 2 15.1 1 12 1 7.5 1 3.6 3.7 1.7 7.4l3.9 2.9C6.5 7.5 9 5.5 12 5.5Z"/></svg>Portsmouth, NH</div></div></div>
+      </div>
+      <div class="rcard">
+        <div class="rstars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg></div>
+        <p>We had our master bath fully remodeled and the finish work is beautiful. They kept us updated the whole way and left the space spotless every evening. We already have them booked for the kitchen next.</p>
+        <div class="rperson"><span class="ravatar">D</span><div><div class="rname">David R.</div><div class="rmeta"><svg class="gg" viewBox="0 0 24 24"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2c-.3 1.4-1.1 2.6-2.3 3.4v2.8h3.7C21.8 18.7 23 15.8 23 12.3Z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H1.7v2.9C3.6 21.3 7.5 24 12 24Z"/><path fill="#FBBC05" d="M5.6 14.7c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2V7.4H1.7C1 8.8.5 10.4.5 12.5s.5 3.7 1.2 5.1l3.9-2.9Z"/><path fill="#EA4335" d="M12 5.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 2 15.1 1 12 1 7.5 1 3.6 3.7 1.7 7.4l3.9 2.9C6.5 7.5 9 5.5 12 5.5Z"/></svg>Dover, NH</div></div></div>
+      </div>
+      <div class="rcard">
+        <div class="rstars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .8-5.2 4.8 1.5 7L12 17.8 5.7 21l1.5-7L2 9.3l7-.8Z"/></svg></div>
+        <p>Called them about no hot water and they had someone out fast. The technician explained the problem clearly, fixed it right there, and the price was fair. This is the kind of local company you want to keep on speed dial.</p>
+        <div class="rperson"><span class="ravatar">K</span><div><div class="rname">Kathryn P.</div><div class="rmeta"><svg class="gg" viewBox="0 0 24 24"><path fill="#4285F4" d="M23 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.2c-.3 1.4-1.1 2.6-2.3 3.4v2.8h3.7C21.8 18.7 23 15.8 23 12.3Z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1 7.6-2.8l-3.7-2.8c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.8H1.7v2.9C3.6 21.3 7.5 24 12 24Z"/><path fill="#FBBC05" d="M5.6 14.7c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2V7.4H1.7C1 8.8.5 10.4.5 12.5s.5 3.7 1.2 5.1l3.9-2.9Z"/><path fill="#EA4335" d="M12 5.5c1.7 0 3.2.6 4.4 1.7l3.3-3.3C17.7 2 15.1 1 12 1 7.5 1 3.6 3.7 1.7 7.4l3.9 2.9C6.5 7.5 9 5.5 12 5.5Z"/></svg>Kittery, ME</div></div></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="guarantee reveal">
+      <span class="eyebrow">The Pettigrew promise</span>
+      <h2>Done right, and done like it's <em>our own home</em>.</h2>
+      <p class="g-lead">The standards we hold ourselves to on every job across the Seacoast, from a quick repair to a full remodel.</p>
+      <div class="g-grid stagger">
+        <div class="gchip"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Fully satisfied, always</h3><p>We won't consider a job finished until you are completely satisfied with the work.</p></div>
+        <div class="gchip"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="11" rx="2"/><path d="M16 9h4l3 3v5h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><h3>Trucks stocked to finish</h3><p>We arrive prepared with the tools and supplies to fix most issues on the very first visit.</p></div>
+        <div class="gchip"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><h3>Licensed and insured</h3><p>A family owned business, fully licensed and insured, serving the Seacoast since 2001.</p></div>
+      </div>
+    </div>
+  </div></section>
+
   <section class="why" id="why"><div class="wrap">
     <div class="why-head reveal">
       <span class="eyebrow">Why Pettigrew</span>
@@ -295,7 +398,20 @@
     </div>
   </div></section>
 
-  <section class="sec" style="padding-top:0;" id="work"><div class="wrap">
+  <section class="process" id="process"><div class="wrap">
+    <div class="process-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>A simple path from <em>call to comfort</em>.</h2>
+    </div>
+    <div class="proc-grid stagger">
+      <div class="pcell"><span class="pn">01</span><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 18l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg></span><h3>Reach out</h3><p>Call or send a message with your town and what you need. Scheduling is quick and efficient.</p></div>
+      <div class="pcell"><span class="pn">02</span><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/><path d="m20 20-4-4"/></svg></span><h3>Diagnose</h3><p>The right plumber for the job arrives, looks it over, and explains exactly what's going on.</p></div>
+      <div class="pcell"><span class="pn">03</span><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1-5 5L4 17v3h3l5.7-5.7a4 4 0 0 0 5-5Z"/></svg></span><h3>Fix it right</h3><p>With a fully stocked truck, most issues are handled on the spot, to the highest standard.</p></div>
+      <div class="pcell"><span class="pn">04</span><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Leave you satisfied</h3><p>We tidy up and don't leave until the work is done and you're completely happy with it.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:112px;" id="work"><div class="wrap">
     <span class="eyebrow">Recent work</span>
     <h2>Craftsmanship, up <em>close</em>.</h2>
     <p class="sec-lead">A look at recent heating, plumbing, and remodeling projects across the Seacoast.</p>

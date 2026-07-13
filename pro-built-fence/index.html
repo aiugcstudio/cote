@@ -173,6 +173,55 @@
   .foot-col a:hover{color:#EFB2AA;}
   .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.85rem;flex-wrap:wrap;gap:10px;}
 
+  /* process band (brand red) */
+  .process-wrap{padding-top:0;}
+  .process{position:relative;background:linear-gradient(150deg,var(--red),var(--red-d));color:#fff;border-radius:34px;padding:94px 62px;overflow:hidden;box-shadow:0 44px 100px -50px rgba(158,44,32,.6);}
+  .process::after{content:"";position:absolute;top:-24%;right:-10%;width:52%;height:86%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 62%);pointer-events:none;}
+  .process .eyebrow{color:#fff;}
+  .process .eyebrow::before{background:rgba(255,255,255,.75);}
+  .process h2{font-size:3.2rem;font-weight:500;color:#fff;max-width:640px;margin:14px 0 14px;position:relative;}
+  .process h2 em{font-style:italic;color:#fff;opacity:.82;}
+  .process .p-lead{color:rgba(255,255,255,.85);max-width:560px;margin-bottom:52px;font-size:1.12rem;position:relative;}
+  .p-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;}
+  .pstep{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:30px 26px;backdrop-filter:blur(4px);transition:transform .3s cubic-bezier(.2,.6,.2,1),background .3s;}
+  .pstep:hover{transform:translateY(-6px);background:rgba(255,255,255,.16);}
+  .pstep .pnum{font-family:var(--disp);font-size:.9rem;font-weight:600;color:rgba(255,255,255,.62);letter-spacing:.14em;}
+  .pstep .pic{width:48px;height:48px;border-radius:13px;background:rgba(255,255,255,.18);color:#fff;display:grid;place-items:center;margin:14px 0 16px;}
+  .pstep .pic svg{width:24px;height:24px;}
+  .pstep h3{font-family:var(--disp);font-size:1.3rem;font-weight:500;color:#fff;margin-bottom:8px;}
+  .pstep p{color:rgba(255,255,255,.74);font-size:.95rem;line-height:1.5;}
+
+  /* glass why cards */
+  .wcell{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);border-radius:18px;padding:32px 28px;transition:transform .3s cubic-bezier(.2,.6,.2,1),border-color .3s,background .3s;}
+  .wcell:hover{transform:translateY(-6px);border-color:rgba(239,178,170,.45);background:rgba(255,255,255,.08);}
+
+  /* quote band */
+  .quote-band{padding:120px 0;}
+  .quote{position:relative;background:radial-gradient(120% 130% at 12% -15%,rgba(192,57,43,.32),transparent 55%),linear-gradient(165deg,var(--navy),var(--navy-d));border-radius:30px;padding:88px 74px;color:#fff;overflow:hidden;}
+  .quote::before{content:"\201C";position:absolute;top:2px;left:40px;font-family:var(--disp);font-size:12rem;line-height:1;color:rgba(239,178,170,.2);pointer-events:none;}
+  .quote blockquote{position:relative;font-family:var(--disp);font-weight:500;font-style:italic;font-size:2.15rem;line-height:1.34;max-width:920px;}
+  .quote blockquote em{color:#EFB2AA;font-style:italic;}
+  .quote .qwho{position:relative;margin-top:28px;font-family:var(--sans);font-size:1rem;color:#EFB2AA;font-weight:600;letter-spacing:.02em;}
+  .quote .qwho span{color:rgba(255,255,255,.55);font-weight:400;}
+
+  /* google review cards */
+  .rev .rtop{display:flex;align-items:center;gap:13px;margin-bottom:15px;}
+  .rev .ravatar{width:46px;height:46px;border-radius:50%;background:var(--red-soft);color:var(--red-d);display:grid;place-items:center;font-family:var(--disp);font-weight:600;font-size:1.15rem;flex:none;}
+  .rev .rmeta{flex:1;min-width:0;}
+  .rev .rmeta .who{margin:0;}
+  .rev .rmeta .who span{display:block;font-size:.86rem;margin-top:1px;}
+  .rev .gicon{width:22px;height:22px;flex:none;}
+
+  /* faq accordion */
+  .faq{max-width:880px;margin:0;display:grid;gap:14px;}
+  .faq details{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .3s,box-shadow .3s;}
+  .faq details[open]{border-color:var(--red);box-shadow:0 22px 48px -32px rgba(22,35,63,.42);}
+  .faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:25px 28px;font-family:var(--disp);font-size:1.24rem;font-weight:500;color:var(--ink);}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq .fq-t{margin-left:auto;width:36px;height:36px;border-radius:10px;background:var(--red-soft);color:var(--red);display:grid;place-items:center;flex:none;transition:transform .3s,background .3s,color .3s;font-size:1.5rem;line-height:.9;}
+  .faq details[open] .fq-t{background:var(--red);color:#fff;transform:rotate(45deg);}
+  .faq .fq-a{padding:0 28px 25px;color:var(--soft);font-size:1.04rem;line-height:1.62;max-width:740px;}
+
   /* reveal + stagger */
   .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1);}
   .reveal.in{opacity:1;transform:none;}
@@ -193,12 +242,15 @@
     .comm-grid{grid-template-columns:1fr;gap:36px;}.comm-list{grid-template-columns:1fr;}
     .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:160px;}.gcell.tall{grid-row:span 1;}
     .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 30px;}.cta-band{padding:64px 28px;}
+    .process{padding:56px 26px;}.p-steps{grid-template-columns:1fr 1fr;}.process h2{font-size:2.2rem;}
+    .quote{padding:56px 28px;}.quote blockquote{font-size:1.5rem;}.quote::before{font-size:8rem;left:20px;}
+    .faq summary{font-size:1.08rem;padding:20px 22px;}.faq .fq-a{padding:0 22px 20px;}
   }
 </style></head>
 <body>
   <header class="nav"><div class="wrap nav-in">
     <a class="brand" href="#"><img src="../assets/img/pbf-logo.jpg" alt="Pro-Built Fence"></a>
-    <nav class="nav-links"><a href="#types">Fencing</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a><a href="#work">Work</a><a href="#contact-form">Contact</a></nav>
+    <nav class="nav-links"><a href="#types">Fencing</a><a href="#process">Process</a><a href="#why">Why Us</a><a href="#reviews">Reviews</a><a href="#work">Work</a><a href="#faq">FAQ</a><a href="#contact-form">Contact</a></nav>
     <a class="nav-call" href="tel:8479751540">Call (847) 975-1540</a>
   </div></header>
 
@@ -263,12 +315,26 @@
     </div>
   </div></section>
 
+  <section class="sec process-wrap" id="process"><div class="wrap">
+    <div class="process reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>From first call to <em>finished fence</em>.</h2>
+      <p class="p-lead">A clear, straightforward process handled by one experienced local crew, so you always know what happens next.</p>
+      <div class="p-steps stagger">
+        <div class="pstep"><div class="pnum">STEP 01</div><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><h3>Free estimate</h3><p>Call us and we'll come out to measure, talk through options, and give you a no-obligation quote.</p></div>
+        <div class="pstep"><div class="pnum">STEP 02</div><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span><h3>Choose your fence</h3><p>Pick the material, style, and height that fit your property, with expert guidance on the right solution.</p></div>
+        <div class="pstep"><div class="pnum">STEP 03</div><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></svg></span><h3>Professional install</h3><p>Sold, furnished, and installed in-house by our own crew, with quality materials and clean finish work.</p></div>
+        <div class="pstep"><div class="pnum">STEP 04</div><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Backed for 18 months</h3><p>Every install stands behind our exclusive 18-month guarantee, so you can enjoy it with confidence.</p></div>
+      </div>
+    </div>
+  </div></section>
+
   <section class="why" id="why"><div class="wrap">
     <div class="why-head reveal">
       <span class="eyebrow">Why Pro-Built</span>
       <h2>Reputation is <em>everything</em> in this trade.</h2>
     </div>
-    <div class="why-grid reveal">
+    <div class="why-grid stagger">
       <div class="wcell"><span class="icg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>18-month guarantee</h3><p>Our exclusive 18-month guarantee stands behind every fence we install.</p></div>
       <div class="wcell"><span class="icg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 8l7-5 7 5M5 8v8l7 5 7-5V8"/></svg></span><h3>30+ years of experience</h3><p>Decades selling, furnishing, and installing fences across Chicagoland since 1998.</p></div>
       <div class="wcell"><span class="icg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span><h3>Our own crew</h3><p>Experienced installers, union or non-union, never a rotating cast of subs.</p></div>
@@ -280,9 +346,28 @@
     <span class="eyebrow">What clients say</span>
     <h2 style="margin-bottom:52px;">Homeowners across <em>Chicagoland</em>.</h2>
     <div class="revs stagger">
-      <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>From start to finish it was a perfect experience. Eric was out quickly to give an estimate, gave recommendations, and was super helpful the whole way. It's a well built fence and looks great too. Highly recommend.</p><div class="who">Iman J. <span>&middot; Chicago</span></div></div>
-      <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>I had an excellent experience with Eric and my chain link fence installation. Good price, quality work, great communication. I would use them again.</p><div class="who">Kate Q. <span>&middot; Palatine</span></div></div>
-      <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Response was fast, communication was good, workmanship was first rate, and pricing was competitive. Good job Eric, thanks.</p><div class="who">Mark W. <span>&middot; Des Plaines</span></div></div>
+      <div class="rev">
+        <div class="rtop"><span class="ravatar">I</span><div class="rmeta"><div class="who">Iman J.<span>&middot; Chicago</span></div></div><svg class="gicon" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>From start to finish it was a perfect experience. Eric was out quickly to give an estimate, gave recommendations, and was super helpful the whole way. It's a well built fence and looks great too. Highly recommend.</p>
+      </div>
+      <div class="rev">
+        <div class="rtop"><span class="ravatar">K</span><div class="rmeta"><div class="who">Kate Q.<span>&middot; Palatine</span></div></div><svg class="gicon" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>I had an excellent experience with Eric and my chain link fence installation. Good price, quality work, great communication. I would use them again.</p>
+      </div>
+      <div class="rev">
+        <div class="rtop"><span class="ravatar">M</span><div class="rmeta"><div class="who">Mark W.<span>&middot; Des Plaines</span></div></div><svg class="gicon" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1c.9-2.9 3.6-4.9 6.7-4.9z"/></svg></div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Response was fast, communication was good, workmanship was first rate, and pricing was competitive. Good job Eric, thanks.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="quote-band"><div class="wrap">
+    <div class="quote reveal">
+      <blockquote>We are committed to a professional installation with quality products and materials at an affordable price, so you can enjoy your fence <em>for years to come</em>.</blockquote>
+      <div class="qwho">The Pro-Built Fence promise <span>&middot; Serving Chicagoland since 1998</span></div>
     </div>
   </div></section>
 
@@ -320,6 +405,18 @@
     <p class="sec-lead" style="margin-bottom:34px;">Based in Park Ridge, we install fences for homes and businesses across the Chicago area and surrounding suburbs.</p>
     <div class="towns reveal">
       <span class="st">Park Ridge</span><span>Chicago</span><span>Des Plaines</span><span>Palatine</span><span>Skokie</span><span>Niles</span><span>Morton Grove</span><span>Glenview</span><span>Norridge</span><span>Rosemont</span><span>Mount Prospect</span><span>Arlington Heights</span><span>Evanston</span><span>Lincolnwood</span><span>&amp; surrounding suburbs</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
+    <span class="eyebrow">Good to know</span>
+    <h2 style="margin-bottom:44px;">Questions, <em>answered</em>.</h2>
+    <div class="faq reveal">
+      <details open><summary>What types of fence do you install?<span class="fq-t">+</span></summary><div class="fq-a">Custom wood, chain link, aluminum, vinyl / PVC, and ornamental wrought iron, plus custom gates, arbors, and hardware. Whether you want privacy, security, or curb appeal, we help you choose the right fit for your property.</div></details>
+      <details><summary>Do you serve my area?<span class="fq-t">+</span></summary><div class="fq-a">We are based in Park Ridge and install fences for homes and businesses across Chicago and the surrounding suburbs, including Des Plaines, Palatine, Skokie, Niles, Glenview, Mount Prospect, Arlington Heights, and beyond.</div></details>
+      <details><summary>Are estimates really free?<span class="fq-t">+</span></summary><div class="fq-a">Yes. Estimates are always free and come with no obligation. Give us a call and we'll come out to measure, walk through your options, and quote the project.</div></details>
+      <details><summary>Are you insured, and is the work guaranteed?<span class="fq-t">+</span></summary><div class="fq-a">We are fully insured, and every fence we install is backed by our exclusive 18-month guarantee. We've built our reputation across Chicagoland since 1998.</div></details>
+      <details><summary>Do you handle commercial and industrial projects?<span class="fq-t">+</span></summary><div class="fq-a">We do. Alongside commercial and industrial fencing we handle guardrails, trash enclosures, steel bollards, gate operators, and radio or monitored gates, with union and non-union labor. Send us your specifications, blueprints, or sketches and we'll help you spec the right solution.</div></details>
     </div>
   </div></section>
 

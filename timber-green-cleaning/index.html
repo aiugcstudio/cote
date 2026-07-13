@@ -27,9 +27,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-hei
 em{font-style:italic}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--forest)}
 .eyebrow::before{content:"";width:24px;height:1.5px;background:var(--mint)}
+.eyebrow.light{color:var(--leaf)}
+.eyebrow.light::before{background:var(--leaf)}
 .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
 .btn-primary{background:var(--forest);color:#fff}
-.btn-primary:hover{background:var(--forest-d);transform:translateY(-2px)}
+.btn-primary:hover{background:var(--forest-d);transform:translateY(-2px);box-shadow:0 16px 30px -14px rgba(10,58,36,.6)}
 .btn-light{background:#fff;color:var(--forest)}
 .btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.3)}
 .btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
@@ -41,48 +43,51 @@ nav .bar{display:flex;align-items:center;justify-content:space-between;padding:2
 nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
 .brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
 nav.scrolled .brand{color:var(--ink)}
-.brand .mk{width:38px;height:38px;flex:none;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center}
-.brand .mk svg{width:24px;height:24px}
-.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1}
+.brand .mk{width:42px;height:42px;flex:none;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}
+.brand .mk svg{width:26px;height:26px}
+.brand b{font-family:var(--serif);font-size:1.28rem;font-weight:600;line-height:1}
 .brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.72;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:1.5px;background:var(--mint);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
 .nav-actions{display:flex;align-items:center;gap:18px}
 .nav-phone{font-weight:600;font-size:.95rem;color:#fff;transition:.3s;display:flex;align-items:center;gap:8px}
 nav.scrolled .nav-phone{color:var(--ink)}
 .nav-phone svg{width:15px;height:15px}
 .nav-cta{background:var(--mint);color:var(--pine);font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
-.nav-cta:hover{background:#fff}
+.nav-cta:hover{background:#fff;transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
 
-/* HERO split */
-.hero{position:relative;min-height:820px;display:flex;align-items:center;overflow:hidden;background:var(--forest)}
+/* HERO full-bleed */
+.hero{position:relative;min-height:840px;display:flex;align-items:center;overflow:hidden;background:var(--forest)}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:hz 18s ease-out forwards}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,55,38,.96) 0%,rgba(18,55,38,.88) 38%,rgba(18,55,38,.5) 74%,rgba(18,55,38,.28) 100%)}
-.hero-l{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:150px 40px 96px;color:#fff}
-.hero-l::after{content:"";position:absolute;bottom:-120px;left:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(63,178,122,.25),transparent 70%)}
-.hero-l .chip{position:relative;z-index:2;display:inline-flex;align-self:flex-start;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.76rem;font-weight:600;letter-spacing:.03em;margin-bottom:30px}
-.hero-l .chip svg{width:15px;height:15px}
-.hero-l h1{position:relative;z-index:2;font-size:clamp(3.2rem,5.2vw,5.4rem);font-weight:500;letter-spacing:-.02em;max-width:13ch}
-.hero-l h1 em{color:var(--leaf)}
-.hero-l p{position:relative;z-index:2;font-size:1.22rem;max-width:44ch;margin:26px 0 38px;color:rgba(255,255,255,.85);line-height:1.55}
-.hero-actions{position:relative;z-index:2;display:flex;gap:14px;flex-wrap:wrap}
-.hero-mini{position:relative;z-index:2;display:flex;gap:40px;margin-top:56px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16)}
-.hero-mini div b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
-.hero-mini div span{font-size:.82rem;color:rgba(255,255,255,.7);letter-spacing:.02em}
-.hero-r{position:relative;overflow:hidden}
-.hero-r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:hz 16s ease-out forwards}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 20s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,58,36,.96) 0%,rgba(14,74,46,.9) 40%,rgba(18,55,38,.55) 76%,rgba(18,55,38,.32) 100%)}
 @keyframes hz{to{transform:scale(1)}}
-.hero-r::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(20,101,63,.32),transparent 40%)}
-.hero-badge{position:absolute;right:40px;bottom:56px;z-index:3;background:#fff;color:var(--ink);padding:20px 28px;border-radius:14px;box-shadow:0 30px 60px -24px rgba(0,0,0,.45)}
-.hero-badge b{font-family:var(--serif);font-size:1.5rem;display:block;color:var(--forest)}
-.hero-badge small{font-size:.8rem;color:var(--muted)}
+.hero-l{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:170px 40px 110px;color:#fff}
+.hero-l::after{content:"";position:absolute;bottom:-120px;left:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(63,178,122,.3),transparent 70%);animation:drift 14s ease-in-out infinite alternate;z-index:1}
+@keyframes drift{to{transform:translate(60px,-40px)}}
+.hero-in{position:relative;z-index:2}
+.hero-l .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.76rem;font-weight:600;letter-spacing:.03em;margin-bottom:30px;backdrop-filter:blur(4px)}
+.hero-l .chip svg{width:15px;height:15px}
+.hero-l h1{font-size:clamp(3.2rem,5.4vw,5.6rem);font-weight:500;letter-spacing:-.02em;max-width:14ch}
+.hero-l h1 em{color:var(--leaf);font-family:var(--serif);font-style:italic;font-weight:400}
+.hero-l p{font-size:1.22rem;max-width:46ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:44px;margin-top:60px;padding-top:34px;border-top:1px solid rgba(255,255,255,.16);flex-wrap:wrap}
+.hero-mini div b{font-family:var(--serif);font-size:1.8rem;color:#fff;display:block;line-height:1}
+.hero-mini div span{font-size:.82rem;color:rgba(255,255,255,.7);letter-spacing:.02em}
 
 /* TRUST strip */
 .trust{background:var(--pine);color:#DCEBE2}
 .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-.trust .t{padding:30px 24px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:15px}
+.trust .t{padding:34px 24px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:15px}
 .trust .t:last-child{border-right:none}
-.trust .t svg{width:30px;height:30px;stroke:var(--leaf);fill:none;stroke-width:1.6;flex:none}
-.trust .t b{display:block;font-family:var(--serif);font-size:1.2rem;color:#fff;line-height:1.1}
+.trust .t .ic{width:46px;height:46px;flex:none;border-radius:11px;background:rgba(127,211,165,.14);display:grid;place-items:center}
+.trust .t svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:1.6}
+.trust .t b{display:block;font-family:var(--serif);font-size:1.18rem;color:#fff;line-height:1.1}
 .trust .t small{font-size:.82rem;color:rgba(220,235,226,.7)}
 
 /* SECTION base */
@@ -91,87 +96,162 @@ nav.scrolled .nav-phone{color:var(--ink)}
 .sec-head.center{margin:0 auto 62px;text-align:center}
 .sec-head.center .eyebrow{justify-content:center}
 .sec-head h2{font-size:clamp(2.4rem,4.6vw,3.7rem);margin-top:18px}
-.sec-head h2 em{color:var(--forest)}
+.sec-head h2 em{color:var(--forest);font-family:var(--serif);font-style:italic;font-weight:400}
 .sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px}
 
 /* INTRO split */
 .intro{background:var(--wash)}
 .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.intro-img{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(10,58,36,.5)}
-.intro-img img{width:100%;aspect-ratio:5/4.4;object-fit:cover}
-.intro-img .stat{position:absolute;right:24px;top:24px;background:var(--forest);color:#fff;border-radius:12px;padding:18px 22px;text-align:center}
+.intro-img{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(10,58,36,.5)}
+.intro-img img{width:100%;aspect-ratio:5/4.4;object-fit:cover;transition:transform .9s ease}
+.intro-img:hover img{transform:scale(1.05)}
+.intro-img .stat{position:absolute;right:24px;top:24px;background:var(--forest);color:#fff;border-radius:14px;padding:18px 22px;text-align:center;box-shadow:0 20px 40px -18px rgba(10,58,36,.7)}
 .intro-img .stat b{font-family:var(--serif);font-size:1.9rem;display:block;line-height:1}
 .intro-img .stat small{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
 .intro-copy h2{font-size:clamp(2.1rem,4vw,3.2rem);margin:16px 0 24px}
-.intro-copy h2 em{color:var(--forest)}
+.intro-copy h2 em{color:var(--forest);font-family:var(--serif);font-style:italic;font-weight:400}
 .intro-copy p{color:#3c4a41;font-size:1.08rem;margin-bottom:20px}
 .checks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
 .checks div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.98rem;color:var(--forest-d)}
-.checks svg{width:22px;height:22px;stroke:var(--mint);fill:none;stroke-width:2;flex:none}
+.checks .ck{width:26px;height:26px;flex:none;border-radius:7px;background:var(--forest);display:grid;place-items:center}
+.checks svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.4}
 
 /* SERVICES */
 .svc{background:var(--bg)}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.scard{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:38px 32px;transition:.4s;position:relative;overflow:hidden}
-.scard::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--mint);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.scard{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:38px 32px;transition:.4s;position:relative;overflow:hidden}
+.scard::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--mint);transform:scaleX(0);transform-origin:left;transition:transform .45s}
 .scard:hover{transform:translateY(-8px);box-shadow:0 40px 70px -40px rgba(10,58,36,.35);border-color:transparent}
-.scard:hover::after{transform:scaleX(1)}
-.scard .ic{width:58px;height:58px;border-radius:12px;background:var(--wash);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:.4s}
-.scard:hover .ic{background:var(--forest)}
+.scard:hover::before{transform:scaleX(1)}
+.scard .ic{width:58px;height:58px;border-radius:14px;background:var(--wash);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:.4s}
+.scard:hover .ic{background:var(--forest);transform:rotate(-4deg)}
 .scard .ic svg{width:28px;height:28px;stroke:var(--forest);fill:none;stroke-width:1.6;transition:.4s}
 .scard:hover .ic svg{stroke:#fff}
 .scard h3{font-size:1.4rem;margin-bottom:12px}
 .scard p{color:var(--muted);font-size:.98rem}
 
+/* PROCESS dark glass band */
+.darksec{position:relative;overflow:hidden;color:#fff;padding:130px 0;background:radial-gradient(1000px 500px at 82% 8%,rgba(63,178,122,.28),transparent 60%),linear-gradient(165deg,#0E4A2E,#08301F)}
+.darksec .sec-head h2 em{color:var(--leaf)}
+.darksec .sec-head p{color:rgba(255,255,255,.72)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.pcard{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:36px 28px;backdrop-filter:blur(6px);transition:.4s;overflow:hidden}
+.pcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.08);border-color:rgba(127,211,165,.4)}
+.pcard .num{font-family:var(--serif);font-size:1.1rem;color:var(--leaf);letter-spacing:.1em}
+.pcard .ic{width:52px;height:52px;border-radius:13px;background:rgba(127,211,165,.16);display:grid;place-items:center;margin:20px 0 20px}
+.pcard .ic svg{width:26px;height:26px;stroke:var(--leaf);fill:none;stroke-width:1.6}
+.pcard h3{font-size:1.28rem;margin-bottom:10px}
+.pcard p{font-size:.95rem;color:rgba(255,255,255,.74)}
+.pcard .big{position:absolute;right:16px;bottom:-14px;font-family:var(--serif);font-size:5.6rem;line-height:1;color:rgba(255,255,255,.05);font-weight:500}
+
 /* 24/7 BAND */
 .band{position:relative;color:#fff;padding:0;overflow:hidden;background:var(--forest-d)}
 .band-grid{display:grid;grid-template-columns:1fr 1fr}
-.band-img{position:relative;min-height:440px}
-.band-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.band-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(14,74,46,.6))}
+.band-img{position:relative;min-height:460px;overflow:hidden}
+.band-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.band:hover .band-img img{transform:scale(1.06)}
+.band-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(14,74,46,.65))}
 .band-copy{padding:100px 68px;display:flex;flex-direction:column;justify-content:center}
 .band-copy .big{font-family:var(--serif);font-size:clamp(3.4rem,6vw,5.4rem);font-weight:500;line-height:1;color:var(--leaf)}
 .band-copy h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:12px 0 20px}
+.band-copy h2 em{font-family:var(--serif);font-style:italic;font-weight:400}
 .band-copy p{color:rgba(255,255,255,.82);font-size:1.12rem;max-width:44ch;margin-bottom:30px}
+.band-copy .bfeat{display:flex;gap:26px;margin-bottom:32px;flex-wrap:wrap}
+.band-copy .bfeat span{display:flex;align-items:center;gap:9px;font-size:.92rem;color:rgba(255,255,255,.9)}
+.band-copy .bfeat svg{width:18px;height:18px;stroke:var(--leaf);fill:none;stroke-width:2}
 
-/* SPACES strip */
-.spaces{background:var(--wash);padding:96px 0}
-.spaces-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:14px}
-.space{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:.35s}
-.space:hover{transform:translateY(-6px);border-color:var(--mint);box-shadow:0 24px 44px -28px rgba(10,58,36,.3)}
-.space svg{display:block;width:32px;height:32px;stroke:var(--forest);fill:none;stroke-width:1.5}
-.space b{font-size:.94rem;font-weight:600;color:var(--ink)}
+/* SPACES / industries */
+.spaces{background:var(--wash);padding:120px 0}
+.spaces-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.space{background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:.35s}
+.space:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 24px 44px -28px rgba(10,58,36,.4)}
+.space .ic{width:52px;height:52px;border-radius:13px;background:var(--wash);display:grid;place-items:center;transition:.35s}
+.space:hover .ic{background:var(--forest)}
+.space svg{display:block;width:26px;height:26px;stroke:var(--forest);fill:none;stroke-width:1.5;transition:.35s}
+.space:hover svg{stroke:#fff}
+.space b{font-size:.96rem;font-weight:600;color:var(--ink)}
 
-/* TESTIMONIAL */
-.quote-sec{background:var(--forest);color:#fff;padding:120px 0}
-.quote-sec .wrap{max-width:940px;text-align:center}
-.quote-sec .qm{font-family:var(--serif);font-size:4.5rem;color:var(--leaf);line-height:.4;height:40px;display:block}
-.quote-sec blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.7rem);font-style:italic;font-weight:400;line-height:1.32;letter-spacing:-.01em}
-.quote-sec cite{display:block;margin-top:32px;font-style:normal;font-weight:600;font-size:1rem;letter-spacing:.04em;color:var(--leaf)}
-.quote-sec .who{font-size:.9rem;color:rgba(255,255,255,.65);font-weight:400;margin-top:4px}
+/* GALLERY */
+.gallery{background:var(--bg)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -46px rgba(10,58,36,.5)}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;transition:transform .9s ease}
+.gal:hover img{transform:scale(1.07)}
+.gal::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,58,36,.6),transparent 45%)}
+.gal b{position:absolute;left:24px;bottom:22px;z-index:2;color:#fff;font-family:var(--serif);font-size:1.35rem;font-weight:500}
+
+/* GREEN why-choose band */
+.serve{background:var(--bg);padding:0 0 120px}
+.serve-band{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--forest),var(--pine));border-radius:30px;color:#fff;padding:82px 70px;box-shadow:0 60px 120px -70px rgba(10,58,36,.9)}
+.serve-band::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(127,211,165,.24),transparent 70%)}
+.serve-head{position:relative;z-index:2;max-width:640px;margin-bottom:52px}
+.serve-head h2{font-size:clamp(2.2rem,4vw,3.3rem)}
+.serve-head h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--leaf)}
+.serve-head p{color:rgba(255,255,255,.82);margin-top:16px;font-size:1.1rem}
+.serve-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:30px 26px;transition:.35s}
+.wcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.11)}
+.wcard .ic{width:50px;height:50px;border-radius:12px;background:rgba(127,211,165,.18);display:grid;place-items:center;margin-bottom:18px}
+.wcard .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:1.7}
+.wcard h3{font-size:1.22rem;margin-bottom:8px}
+.wcard p{font-size:.94rem;color:rgba(255,255,255,.78)}
 
 /* REVIEWS */
-.rev-sec{background:var(--bg)}
-.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
-.rcard{background:var(--wash);border:1px solid var(--line);border-radius:14px;padding:34px 30px}
-.stars{color:#E3A93B;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
-.rcard p{font-size:1.05rem;color:#37453d;margin-bottom:20px}
+.rev-sec{background:var(--wash)}
+.rev-top{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:44px}
+.rev-top .g{width:40px;height:40px}
+.rev-top b{font-family:var(--serif);font-size:1.5rem}
+.rev-top .rstars{color:#E3A93B;letter-spacing:2px}
+.rev-top small{display:block;color:var(--muted);font-size:.82rem}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 30px;transition:.4s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 40px 70px -44px rgba(10,58,36,.4)}
+.rcard .rhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.stars{color:#E3A93B;letter-spacing:3px;font-size:1rem}
+.rcard .gm{width:22px;height:22px}
+.rcard p{font-size:1.02rem;color:#37453d;margin-bottom:22px}
 .who2{display:flex;align-items:center;gap:13px}
 .who2 img{width:46px;height:46px;border-radius:50%;object-fit:cover}
 .who2 b{display:block;font-size:.96rem}
 .who2 small{color:var(--muted);font-size:.82rem}
-.rev-note{text-align:center;margin-top:26px;font-size:.85rem;color:var(--muted)}
+.rev-note{text-align:center;margin-top:30px;font-size:.85rem;color:var(--muted)}
+
+/* QUOTE */
+.quote-sec{position:relative;overflow:hidden;background:radial-gradient(900px 460px at 20% 12%,rgba(63,178,122,.24),transparent 60%),linear-gradient(160deg,var(--forest),var(--pine));color:#fff;padding:130px 0}
+.quote-sec .wrap{max-width:960px;text-align:center;position:relative;z-index:2}
+.quote-sec .qm{font-family:var(--serif);font-size:5rem;color:var(--leaf);line-height:.5;height:44px;display:block}
+.quote-sec blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.4vw,2.7rem);font-style:italic;font-weight:400;line-height:1.32;letter-spacing:-.01em}
+.quote-sec cite{display:block;margin-top:34px;font-style:normal;font-weight:600;font-size:1rem;letter-spacing:.04em;color:var(--leaf)}
+.quote-sec .who{font-size:.9rem;color:rgba(255,255,255,.65);font-weight:400;margin-top:4px}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq-grid{max-width:820px;margin:0}
+.faq details{background:var(--wash);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:14px;overflow:hidden;transition:.3s}
+.faq details[open]{border-color:rgba(63,178,122,.4);box-shadow:0 30px 60px -46px rgba(10,58,36,.4)}
+.faq summary{list-style:none;cursor:pointer;padding:26px 28px;display:flex;align-items:center;gap:18px;font-family:var(--serif);font-size:1.24rem;font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .tg{width:34px;height:34px;flex:none;border-radius:9px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
+.faq summary .tg svg{width:16px;height:16px;stroke:var(--forest);fill:none;stroke-width:2.2;transition:.3s}
+.faq details[open] summary .tg{background:var(--forest);border-color:var(--forest)}
+.faq details[open] summary .tg svg{stroke:#fff;transform:rotate(45deg)}
+.faq .ans{padding:0 28px 26px 80px;color:var(--muted);font-size:1.02rem}
 
 /* CONTACT */
 .contact{background:var(--wash);padding:120px 0}
+.contact-head{text-align:center;margin-bottom:52px}
+.contact-head h2{font-size:clamp(2.2rem,4vw,3.2rem);max-width:none;margin-top:16px}
+.contact-head h2 em{color:var(--forest);font-family:var(--serif);font-style:italic;font-weight:400}
+.contact-head .eyebrow{justify-content:center}
 .contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 50px 100px -60px rgba(10,58,36,.4)}
-.cinfo{background:var(--forest);color:#fff;padding:60px 50px}
-.cinfo h2{font-size:2.4rem;margin-bottom:14px}
-.cinfo>p{color:rgba(255,255,255,.8);margin-bottom:36px}
+.cinfo{position:relative;overflow:hidden;background:radial-gradient(600px 300px at 10% 0%,rgba(63,178,122,.3),transparent 60%),linear-gradient(160deg,var(--forest),var(--pine));color:#fff;padding:60px 50px}
+.cinfo h2{font-size:2.2rem;margin-bottom:14px}
+.cinfo>p{color:rgba(255,255,255,.8);margin-bottom:32px}
 .crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid rgba(255,255,255,.14)}
-.crow svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:1.6;flex:none;margin-top:2px}
+.crow .ic{width:42px;height:42px;flex:none;border-radius:11px;background:rgba(127,211,165,.16);display:grid;place-items:center}
+.crow svg{width:22px;height:22px;stroke:var(--leaf);fill:none;stroke-width:1.6}
 .crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);margin-bottom:4px}
-.crow b,.crow a{font-size:1.08rem;color:#fff;font-weight:600}
+.crow b,.crow a{font-size:1.04rem;color:#fff;font-weight:600}
 .cform{padding:60px 50px}
 .cform .fld{margin-bottom:22px}
 .cform label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
@@ -184,8 +264,11 @@ nav.scrolled .nav-phone{color:var(--ink)}
 /* FOOTER */
 footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
-.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
-.foot-brand p{font-size:.96rem;max-width:36ch}
+.foot-brand .fb{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.foot-brand .mk{width:44px;height:44px;border-radius:11px;background:#fff;display:grid;place-items:center;flex:none}
+.foot-brand .mk svg{width:28px;height:28px}
+.foot-brand b{font-family:var(--serif);font-size:1.4rem;color:#fff;display:block;line-height:1.1}
+.foot-brand p{font-size:.96rem;max-width:36ch;margin-top:6px}
 .foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);margin-bottom:18px;font-weight:600}
 .foot-col a,.foot-col p{display:block;color:#C0D4C8;font-size:.96rem;margin-bottom:11px}
 .foot-col a:hover{color:#fff}
@@ -203,15 +286,15 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
 .stagger.in>*:nth-child(6){transition-delay:.4s}
 
 @media(max-width:1000px){
-  .hero{min-height:640px}
-  .hero-l{padding:130px 44px 90px}
-  .hero-badge{right:24px;bottom:24px;padding:18px 22px}
+  .hero{min-height:660px}
+  .hero-l{padding:140px 44px 90px}
   .intro-grid,.band-grid,.contact-grid{grid-template-columns:1fr}
-  .band-img{min-height:300px}
+  .band-img{min-height:320px}
   .band-copy{padding:70px 44px}
   .cinfo,.cform{padding:48px 40px}
-  .svc-grid{grid-template-columns:1fr 1fr}
+  .svc-grid,.proc-grid,.serve-grid,.rev-grid,.gal-grid{grid-template-columns:1fr 1fr}
   .spaces-grid{grid-template-columns:repeat(3,1fr)}
+  .serve-band{padding:60px 40px}
   .trust .wrap{grid-template-columns:1fr 1fr}
   .trust .t:nth-child(2){border-right:none}
   .trust .t{border-top:1px solid rgba(255,255,255,.08)}
@@ -220,16 +303,18 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
   .wrap{padding:0 22px}
   nav .bar{padding:16px 22px}
   .nav-phone span,.brand span{display:none}
-  .sec,.spaces,.contact,.quote-sec{padding:76px 0}
-  .hero-l{padding:110px 26px 60px}
-  .svc-grid,.spaces-grid,.checks,.rev-grid{grid-template-columns:1fr}
+  .sec,.spaces,.contact,.quote-sec,.darksec{padding:76px 0}
+  .hero-l{padding:120px 26px 60px}
+  .svc-grid,.proc-grid,.serve-grid,.spaces-grid,.checks,.rev-grid,.gal-grid{grid-template-columns:1fr}
   .trust .wrap{grid-template-columns:1fr}
   .trust .t{border-right:none}
   .foot-grid{grid-template-columns:1fr;gap:34px}
+  .faq .ans{padding-left:28px}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
 }
 </style>
 </head>
@@ -241,6 +326,13 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
       <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4c1.4 2.4 3.6 3.4 3.6 6.6a3.6 3.6 0 0 1-7.2 0C12.4 7.4 14.6 6.4 16 4Z" fill="#14653F"/><path d="M12 12c1.6 1.2 4.4 1.2 6 0M11 16.5c2.2 1.6 7.8 1.6 10 0M16 9v18" stroke="#14653F" stroke-width="1.7" stroke-linecap="round"/></svg></span>
       <span><b>Timber Green</b><span>Commercial Cleaning</span></span>
     </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">How we work</a>
+      <a href="#industries">Industries</a>
+      <a href="#reviews">Reviews</a>
+    </div>
     <div class="nav-actions">
       <a class="nav-phone" href="tel:9132764750"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>913-276-4750</span></a>
       <a class="nav-cta" href="#contact">Get in touch</a>
@@ -249,32 +341,34 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg"><img src="../assets/img/tgc-s2.jpg" alt="Bright, spotless commercial office kept spotless by Timber Green"></div>
+  <div class="hero-bg"><img src="../assets/img/tgc-s2.jpg" alt="Bright, spotless commercial office kept immaculate by Timber Green"></div>
   <div class="hero-l">
-    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#7FD3A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>Fully insured &middot; OSHA certified</span>
-    <h1>A customized cleaning <em>experience.</em></h1>
-    <p>A clean work environment promotes greater productivity and happier employees. We combine customized commercial cleaning with outstanding, in-person customer service across the KC metro.</p>
-    <div class="hero-actions">
-      <a class="btn btn-light" href="tel:9132764750">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
-        Call or text us
-      </a>
-      <a class="btn btn-ghost" href="#services">Our services</a>
-    </div>
-    <div class="hero-mini">
-      <div><b>OSHA</b><span>Certified crews</span></div>
-      <div><b>24/7</b><span>Availability</span></div>
-      <div><b>KC metro</b><span>Overland Park, KS</span></div>
+    <div class="hero-in">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#7FD3A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>Fully insured &middot; OSHA certified</span>
+      <h1>A customized cleaning <em>experience.</em></h1>
+      <p>A clean work environment promotes greater productivity and happier employees. We combine customized commercial cleaning with outstanding, in-person customer service across the Kansas City metro.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="tel:9132764750">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call or text us
+        </a>
+        <a class="btn btn-ghost" href="#services">Our services</a>
+      </div>
+      <div class="hero-mini">
+        <div><b>OSHA</b><span>Certified crews</span></div>
+        <div><b>24/7</b><span>Availability</span></div>
+        <div><b>KC metro</b><span>Overland Park, KS</span></div>
+      </div>
     </div>
   </div>
 </header>
 
 <section class="trust">
   <div class="wrap">
-    <div class="t"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>OSHA certified</b><small>Trained, compliant crews</small></div></div>
-    <div class="t"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v4"/></svg><div><b>Fully insured</b><small>Every job, every site</small></div></div>
-    <div class="t"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Available 24/7</b><small>Day, night, weekends</small></div></div>
-    <div class="t"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Overland Park, KS</b><small>Serving the KC metro</small></div></div>
+    <div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div><div><b>OSHA certified</b><small>Trained, compliant crews</small></div></div>
+    <div class="t"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v4"/></svg></div><div><b>Fully insured</b><small>Every job, every site</small></div></div>
+    <div class="t"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Available 24/7</b><small>Day, night, weekends</small></div></div>
+    <div class="t"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Overland Park, KS</b><small>Serving the KC metro</small></div></div>
   </div>
 </section>
 
@@ -287,13 +381,13 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
     <div class="intro-copy reveal">
       <span class="eyebrow">Who we are</span>
       <h2>Every company has <em>unique needs.</em></h2>
-      <p>At Timber Green Commercial Cleaning, we are committed to exceeding your expectations. We offer an unparalleled in-person customer service experience, and our goal is to combine customized cleaning services with the kind of communication you can actually count on.</p>
-      <p>No company is too big or small. Our team of expert service professionals is here to make sure the job gets done efficiently, so you never have to worry about your space.</p>
+      <p>At Timber Green Commercial Cleaning, we are committed to exceeding your expectations. We offer an unparalleled in-person customer service experience, pairing customized cleaning services with the kind of communication you can actually count on.</p>
+      <p>No company is too big or too small. Our team of expert service professionals makes sure the job gets done efficiently, so you never have to think twice about the state of your space.</p>
       <div class="checks">
-        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Customized scopes</div>
-        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>In-person service</div>
-        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Fully insured crews</div>
-        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Reliable communication</div>
+        <div><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Customized scopes</div>
+        <div><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>In-person service</div>
+        <div><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Fully insured crews</div>
+        <div><span class="ck"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Reliable communication</div>
       </div>
     </div>
   </div>
@@ -341,40 +435,134 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
   </div>
 </section>
 
+<section class="darksec" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow light">How we work</span>
+      <h2>A plan built <em>around you.</em></h2>
+      <p>No two facilities are the same. We start by understanding yours, then build a cleaning program that fits your space, your hours, and your standards.</p>
+    </div>
+    <div class="proc-grid stagger">
+      <div class="pcard">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></div>
+        <h3>We listen</h3>
+        <p>A conversation about your space, your priorities, and the standard you want to hold.</p>
+        <span class="big">01</span>
+      </div>
+      <div class="pcard">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11H3v10h6ZM15 3H9v18h6ZM21 7h-6v14h6Z"/></svg></div>
+        <h3>We tailor a scope</h3>
+        <p>A customized plan and schedule matched to your building, traffic, and budget.</p>
+        <span class="big">02</span>
+      </div>
+      <div class="pcard">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>We get to work</h3>
+        <p>OSHA-certified, fully insured crews arrive on schedule and clean to the plan.</p>
+        <span class="big">03</span>
+      </div>
+      <div class="pcard">
+        <span class="num">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9M3 12l3-3M3 12l3 3"/></svg></div>
+        <h3>We stay in touch</h3>
+        <p>In-person check-ins and open communication, so the scope keeps pace as you grow.</p>
+        <span class="big">04</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="band">
   <div class="band-grid">
     <div class="band-img reveal"><img src="../assets/img/tgc-u2.jpg" alt="Janitorial cart and equipment ready for an after-hours clean"></div>
     <div class="band-copy reveal">
       <span class="big">24/7</span>
       <h2>Some messes just <em>can't wait.</em></h2>
-      <p>Spills, events, unexpected turnarounds. Call or text us to put our cleaning crews to work 24 hours a day, seven days a week.</p>
+      <p>Spills, events, unexpected turnarounds. Call or text to put our cleaning crews to work 24 hours a day, seven days a week.</p>
+      <div class="bfeat">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Day, night &amp; weekends</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg>Fast, responsive crews</span>
+      </div>
       <a class="btn btn-light" href="tel:9132764750" style="align-self:flex-start;">Call 913-276-4750</a>
     </div>
   </div>
 </section>
 
-<section class="spaces">
+<section class="spaces" id="industries">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Where we work</span>
+      <span class="eyebrow">Industries we serve</span>
       <h2>Spaces we keep <em>spotless.</em></h2>
     </div>
     <div class="spaces-grid stagger">
-      <div class="space"><svg viewBox="0 0 24 24"><path d="M3 21V7l7-4 7 4v14M17 21V11l4-2v12M7 9h2M7 13h2M7 17h2"/></svg><b>Offices</b></div>
-      <div class="space"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 8h18M6 3h12M8 8v4a4 4 0 0 0 8 0V8"/></svg><b>Medical</b></div>
-      <div class="space"><svg viewBox="0 0 24 24"><path d="M4 9h16l-1 11H5L4 9ZM8 9V6a4 4 0 0 1 8 0v3"/></svg><b>Retail</b></div>
-      <div class="space"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l6-4 6 4v13M9 12h4M9 16h4"/></svg><b>Hospitality</b></div>
-      <div class="space"><svg viewBox="0 0 24 24"><path d="M3 21V9l6-3v3l6-3v3l6-3v12M8 21v-4h3v4"/></svg><b>Industrial</b></div>
-      <div class="space"><svg viewBox="0 0 24 24"><path d="M12 4 2 9l10 5 10-5-10-5ZM6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg><b>Education</b></div>
+      <div class="space"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V7l7-4 7 4v14M17 21V11l4-2v12M7 9h2M7 13h2M7 17h2"/></svg></div><b>Offices</b></div>
+      <div class="space"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 8h18M6 3h12M8 8v4a4 4 0 0 0 8 0V8"/></svg></div><b>Medical</b></div>
+      <div class="space"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 9h16l-1 11H5L4 9ZM8 9V6a4 4 0 0 1 8 0v3"/></svg></div><b>Retail</b></div>
+      <div class="space"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l6-4 6 4v13M9 12h4M9 16h4"/></svg></div><b>Hospitality</b></div>
+      <div class="space"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l6-3v3l6-3v3l6-3v12M8 21v-4h3v4"/></svg></div><b>Industrial</b></div>
+      <div class="space"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 4 2 9l10 5 10-5-10-5ZM6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div><b>Education</b></div>
     </div>
   </div>
 </section>
 
-<section class="quote-sec">
-  <div class="wrap reveal">
-    <span class="qm">&ldquo;</span>
-    <blockquote>Justin the owner was wonderful and solved all of our problems. He communicated throughout every step of the way. I highly recommend any client needing cleaning assistance to reach out to them yesterday.</blockquote>
-    <cite>Michael G.<span class="who">Commercial client</span></cite>
+<section class="sec gallery">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Our work</span>
+      <h2>Cleaner spaces, <em>every day.</em></h2>
+    </div>
+    <div class="gal-grid stagger">
+      <div class="gal"><img src="../assets/img/tgc-u1.jpg" alt="Bright modern conference room with floor-to-ceiling windows"><b>Meeting spaces</b></div>
+      <div class="gal"><img src="../assets/img/tgc-u3.jpg" alt="Detailed carpet cleaning lifting debris from the pile"><b>Floors &amp; carpets</b></div>
+      <div class="gal"><img src="../assets/img/tgc-u6.jpg" alt="Immaculately made bed in a spotless hospitality room"><b>Hospitality turnovers</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="serve">
+  <div class="wrap">
+    <div class="serve-band reveal">
+      <div class="serve-head">
+        <span class="eyebrow light">Why Timber Green</span>
+        <h2>The details others <em>walk past.</em></h2>
+        <p>Certified, insured, and genuinely responsive. The kind of cleaning partner you can hand the keys to and forget about.</p>
+      </div>
+      <div class="serve-grid stagger">
+        <div class="wcard">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>OSHA certified</h3>
+          <p>Crews trained to recognized safety and compliance standards on every site.</p>
+        </div>
+        <div class="wcard">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v4"/></svg></div>
+          <h3>Fully insured</h3>
+          <p>Complete coverage on every job, so your facility is protected from day one.</p>
+        </div>
+        <div class="wcard">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Available 24/7</h3>
+          <p>Day, night, or weekend, our crews work around your operations, not the other way around.</p>
+        </div>
+        <div class="wcard">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4ZM4 21a8 8 0 0 1 16 0"/></svg></div>
+          <h3>In-person service</h3>
+          <p>A real person you can reach and meet, not a ticket queue or an answering service.</p>
+        </div>
+        <div class="wcard">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9M3 20l1.5-4.5L15 5a2.1 2.1 0 0 1 3 3L7.5 18.5 3 20Z"/></svg></div>
+          <h3>Customized scopes</h3>
+          <p>Every plan is built around your building, your hours, and your standards.</p>
+        </div>
+        <div class="wcard">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Local to the metro</h3>
+          <p>Based in Overland Park and serving businesses across the greater Kansas City area.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -384,46 +572,111 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
       <span class="eyebrow">Kind words</span>
       <h2>Trusted by KC metro <em>businesses.</em></h2>
     </div>
+    <div class="rev-top reveal">
+      <svg class="g" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.1Z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46Z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2v-5.7H4.5A22 22 0 0 0 2 24c0 3.6.9 6.9 2.5 9.9l7.3-5.7Z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9.1 12.2-9.1Z"/></svg>
+      <div><b>Rated by local businesses</b><span class="rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <small>Reviews on Google</small></div>
+    </div>
     <div class="rev-grid stagger">
       <div class="rcard">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rhead">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <svg class="gm" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.1Z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46Z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2v-5.7H4.5A22 22 0 0 0 2 24c0 3.6.9 6.9 2.5 9.9l7.3-5.7Z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9.1 12.2-9.1Z"/></svg>
+        </div>
         <p>Our offices have never looked better. The crew is professional, thorough, and easy to reach when we need something adjusted. Exactly the kind of partner a growing business wants.</p>
         <div class="who2"><img src="../assets/img/f7.jpg" alt=""><div><b>Brandon R.</b><small>Overland Park, KS</small></div></div>
       </div>
       <div class="rcard">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rhead">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <svg class="gm" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.1Z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46Z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2v-5.7H4.5A22 22 0 0 0 2 24c0 3.6.9 6.9 2.5 9.9l7.3-5.7Z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9.1 12.2-9.1Z"/></svg>
+        </div>
         <p>They tailored a cleaning plan around our hours and never missed a beat. Reliable, insured, and genuinely responsive. We recommend Timber Green to anyone in the metro.</p>
         <div class="who2"><img src="../assets/img/f4.jpg" alt=""><div><b>Danielle P.</b><small>Lenexa, KS</small></div></div>
       </div>
+      <div class="rcard">
+        <div class="rhead">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <svg class="gm" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.4 6.6v5.5h7.1c4.1-3.8 6.6-9.4 6.6-16.1Z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9H4.5v5.7C8.1 41.1 15.4 46 24 46Z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2v-5.7H4.5A22 22 0 0 0 2 24c0 3.6.9 6.9 2.5 9.9l7.3-5.7Z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.1 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.2 6.5-9.1 12.2-9.1Z"/></svg>
+        </div>
+        <p>Justin walked our building, understood exactly what we needed, and had a crew in that week. Communication is excellent and the results speak for themselves.</p>
+        <div class="who2"><img src="../assets/img/f11.jpg" alt=""><div><b>Marcus T.</b><small>Kansas City, MO</small></div></div>
+      </div>
     </div>
-    <p class="rev-note">Reviews shown are illustrative. Leave your own on our Google profile.</p>
+    <p class="rev-note">Reviews shown are illustrative placeholders while we gather Timber Green's live Google reviews.</p>
+  </div>
+</section>
+
+<section class="quote-sec">
+  <div class="wrap reveal">
+    <span class="qm">&ldquo;</span>
+    <blockquote>Justin the owner was wonderful and solved all of our problems. He communicated throughout every step of the way. I highly recommend any client needing cleaning assistance to reach out to them.</blockquote>
+    <cite>Michael G.<span class="who">Commercial client</span></cite>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-grid stagger" style="margin:0 auto;">
+      <details>
+        <summary><span class="tg"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>What kinds of businesses do you clean?</summary>
+        <div class="ans">Offices, medical and retail spaces, hospitality, industrial facilities, and educational buildings across the Kansas City metro. No company is too big or too small.</div>
+      </details>
+      <details>
+        <summary><span class="tg"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>Are you insured and certified?</summary>
+        <div class="ans">Yes. Timber Green is fully insured and our crews are OSHA certified, so every site is covered and cleaned to recognized safety standards.</div>
+      </details>
+      <details>
+        <summary><span class="tg"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>Can you clean outside of business hours?</summary>
+        <div class="ans">Absolutely. We are available 24/7 and build your schedule around your operations, including nights and weekends, so cleaning never interrupts your workday.</div>
+      </details>
+      <details>
+        <summary><span class="tg"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>How do you build a cleaning plan?</summary>
+        <div class="ans">We start with a conversation and a walk-through of your space, then tailor a scope and schedule to your building, traffic, and budget. Your plan can flex as your needs change.</div>
+      </details>
+      <details>
+        <summary><span class="tg"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>How do I get started?</summary>
+        <div class="ans">Call or text 913-276-4750, or send us a note through the form below. We will get back to you quickly and set up a time to see your space.</div>
+      </details>
+    </div>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let's build a plan for <em>your space.</em></h2>
+    </div>
     <div class="contact-grid reveal">
       <div class="cinfo">
         <h2>Get in touch.</h2>
         <p>Tell us about your space and we'll build a cleaning plan around it.</p>
         <div class="crow">
-          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
           <div><small>Call or text</small><a href="tel:9132764750">913-276-4750</a></div>
         </div>
         <div class="crow">
-          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
           <div><small>Email</small><a href="mailto:c.service@timbergreenclean.com">c.service@timbergreenclean.com</a></div>
         </div>
         <div class="crow">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div><small>Office</small><b>10650 Roe Ave #201, Overland Park, KS 66067</b></div>
+        </div>
+        <div class="crow">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><small>Availability</small><b>Open 24/7, including weekends</b></div>
         </div>
       </div>
       <form class="cform" onsubmit="return false;">
         <div class="fld"><label>Name</label><input type="text" placeholder="Your name"></div>
-        <div class="fld"><label>Company</label><input type="text" placeholder="Your business"></div>
-        <div class="fld"><label>Phone or email</label><input type="text" placeholder="How can we reach you"></div>
-        <div class="fld"><label>How can we help</label><textarea placeholder="Tell us about your space and cleaning needs"></textarea></div>
+        <div class="fld"><label>Email</label><input type="email" placeholder="you@company.com"></div>
+        <div class="fld"><label>Phone</label><input type="tel" placeholder="Best number to reach you"></div>
+        <div class="fld"><label>Message</label><textarea placeholder="Tell us about your space and cleaning needs"></textarea></div>
         <button class="btn btn-primary">Request a quote</button>
         <p class="note">Or call/text 913-276-4750 for same-day response.</p>
       </form>
@@ -435,7 +688,10 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <b>Timber Green Commercial Cleaning LLC</b>
+        <div class="fb">
+          <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4c1.4 2.4 3.6 3.4 3.6 6.6a3.6 3.6 0 0 1-7.2 0C12.4 7.4 14.6 6.4 16 4Z" fill="#14653F"/><path d="M12 12c1.6 1.2 4.4 1.2 6 0M11 16.5c2.2 1.6 7.8 1.6 10 0M16 9v18" stroke="#14653F" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <b>Timber Green</b>
+        </div>
         <p>Fully-insured, OSHA-certified commercial cleaning for businesses across Overland Park and the greater Kansas City metro.</p>
       </div>
       <div class="foot-col">
@@ -463,8 +719,15 @@ footer{background:var(--pine);color:#AFC6B8;padding:76px 0 38px}
 document.getElementById('year').textContent=new Date().getFullYear();
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
-const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
-document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+(function(){
+  var mq=window.matchMedia('(prefers-reduced-motion:reduce)');
+  if(mq.matches){
+    document.querySelectorAll('.reveal,.stagger').forEach(function(el){el.classList.add('in')});
+    return;
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal,.stagger').forEach(function(el){io.observe(el)});
+})();
 </script>
 </body>
 </html>

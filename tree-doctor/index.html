@@ -14,6 +14,7 @@
   --deep:#1E3B2C; --ink:#17251C; --pine:#14271D;
   --bg:#F4F1E8; --paper:#FBFAF4;
   --accent:#3E7C4F; --leaf:#7FB077; --sage:#9DB08E; --brass:#B0863A;
+  --accent-soft:rgba(62,124,79,.12);
   --line:rgba(23,37,28,.12); --muted:#5B6B5E;
   --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
 }
@@ -53,6 +54,8 @@ nav.scrolled .nav-cta{color:var(--deep);border-color:var(--deep)}
 .hero-bg{position:absolute;inset:0;background:url('../assets/img/td-b.jpg') center 32%/cover;transform:scale(1.08);animation:heroZoom 18s ease-out forwards}
 @keyframes heroZoom{to{transform:scale(1)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,39,29,.55) 0%,rgba(20,39,29,.15) 40%,rgba(20,39,29,.78) 100%)}
+.hero-glow{position:absolute;z-index:1;width:640px;height:640px;left:6%;bottom:-180px;background:radial-gradient(circle,rgba(127,176,119,.30),transparent 62%);border-radius:50%;pointer-events:none;animation:drift 17s ease-in-out infinite}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(70px,-46px)}}
 .hero-inner{position:relative;z-index:2;width:100%;padding-bottom:78px}
 .hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(6px);padding:9px 18px;border-radius:40px;font-size:.78rem;font-weight:600;letter-spacing:.04em;margin-bottom:26px}
 .hero .chip svg{width:15px;height:15px}
@@ -88,6 +91,7 @@ nav.scrolled .nav-cta{color:var(--deep);border-color:var(--deep)}
 .about-photo .badge{position:absolute;bottom:-26px;right:-22px;background:var(--deep);color:#fff;border-radius:50%;width:132px;height:132px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 20px 40px -18px rgba(20,39,29,.7);border:1px solid rgba(255,255,255,.1)}
 .about-photo .badge b{font-family:var(--serif);font-size:2.1rem;line-height:1}
 .about-photo .badge small{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;opacity:.8;margin-top:5px}
+.about-photo .isa{position:absolute;top:-24px;left:-22px;width:88px;border-radius:10px;box-shadow:0 20px 38px -16px rgba(20,39,29,.65);border:3px solid #fff;z-index:3}
 .about-copy h2{font-size:clamp(2.2rem,4.3vw,3.4rem);margin:18px 0 26px}
 .about-copy h2 em{color:var(--accent)}
 .about-copy p{color:#42513F;margin-bottom:20px;font-size:1.08rem}
@@ -133,8 +137,9 @@ nav.scrolled .nav-cta{color:var(--deep);border-color:var(--deep)}
 .g1{grid-column:span 4;grid-row:span 2}
 .g2{grid-column:span 2;grid-row:span 1}
 .g3{grid-column:span 2;grid-row:span 1}
-.g4{grid-column:span 3;grid-row:span 1}
-.g5{grid-column:span 3;grid-row:span 1}
+.g4{grid-column:span 2;grid-row:span 1}
+.g5{grid-column:span 2;grid-row:span 1}
+.g6{grid-column:span 2;grid-row:span 1}
 
 /* REVIEWS */
 .rev-sec{background:var(--bg)}
@@ -188,6 +193,58 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
 .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:30px;font-size:.85rem;color:#7F9079}
 .foot-bottom .certs{max-width:60ch}
 
+/* PROCESS - diagnose / treat / care (dark glass band) */
+.proc{position:relative;color:#fff;overflow:hidden;padding:120px 0;
+  background:radial-gradient(1200px 520px at 12% -5%,rgba(127,176,119,.18),transparent 60%),linear-gradient(165deg,#183024,#0e1c15)}
+.proc::after{content:"";position:absolute;bottom:-120px;right:-80px;width:460px;height:460px;background:radial-gradient(circle,rgba(127,176,119,.16),transparent 65%);border-radius:50%;pointer-events:none}
+.proc .wrap{position:relative;z-index:2}
+.proc .sec-head h2{color:#fff}
+.proc .sec-head h2 em{color:var(--leaf)}
+.proc .sec-head p{color:rgba(233,240,230,.72)}
+.proc .eyebrow{color:var(--leaf)}
+.proc .eyebrow::before{background:var(--leaf)}
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcard{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);border-radius:18px;padding:40px 34px 36px;overflow:hidden;transition:.4s}
+.pcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--leaf);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.pcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.075)}
+.pcard:hover::before{transform:scaleX(1)}
+.pcard .step{position:absolute;top:26px;right:30px;font-family:var(--serif);font-style:italic;font-size:3.2rem;color:rgba(127,176,119,.22);line-height:1}
+.pcard .ic{width:56px;height:56px;border-radius:14px;background:rgba(127,176,119,.16);display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.pcard .ic svg{width:28px;height:28px;stroke:var(--leaf);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pcard h3{font-size:1.5rem;color:#fff;margin-bottom:12px}
+.pcard p{color:rgba(233,240,230,.74);font-size:1rem}
+
+/* CONSULTING - brand-color band */
+.consult{padding:120px 0}
+.consult-band{position:relative;overflow:hidden;border-radius:30px;padding:64px;color:#fff;
+  background:linear-gradient(150deg,var(--accent),#295433)}
+.consult-band::after{content:"";position:absolute;top:-45%;right:-8%;width:540px;height:540px;background:radial-gradient(circle,rgba(255,255,255,.13),transparent 65%);border-radius:50%;pointer-events:none}
+.consult-inner{position:relative;z-index:2;display:grid;grid-template-columns:.82fr 1.18fr;gap:56px;align-items:center}
+.consult-photo{border-radius:18px;overflow:hidden;box-shadow:0 40px 70px -34px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.2)}
+.consult-photo img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.consult .eyebrow{color:#DDEED5}
+.consult .eyebrow::before{background:#DDEED5}
+.consult h2{font-size:clamp(2.1rem,4vw,3.2rem);color:#fff;margin:16px 0 0}
+.consult h2 em{font-style:italic;color:#DDEED5}
+.consult .lead{color:rgba(255,255,255,.86);margin:20px 0 28px;font-size:1.08rem;max-width:46ch}
+.consult-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.consult-list div{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:17px 18px;transition:.3s}
+.consult-list div:hover{background:rgba(255,255,255,.16)}
+.consult-list svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-top:2px}
+.consult-list b{display:block;font-size:.98rem;color:#fff;font-weight:600;margin-bottom:2px}
+.consult-list small{color:rgba(255,255,255,.76);font-size:.86rem;line-height:1.4}
+
+/* FAQ accordion */
+.faq{background:var(--paper)}
+.faq-wrap{max-width:840px;margin:0}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:15px;overflow:hidden;transition:box-shadow .3s}
+.faq details[open]{box-shadow:0 26px 54px -36px rgba(20,39,29,.45)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:25px 28px;font-family:var(--serif);font-size:1.22rem;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .tog{margin-left:auto;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none;font-size:1.35rem;line-height:1;transition:.3s}
+.faq details[open] summary .tog{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq .ans{padding:0 28px 27px;color:var(--muted);font-size:1.04rem}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -196,15 +253,21 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
 .stagger.in>*:nth-child(2){transition-delay:.1s}
 .stagger.in>*:nth-child(3){transition-delay:.2s}
 .stagger.in>*:nth-child(4){transition-delay:.3s}
+.stagger.in>*:nth-child(5){transition-delay:.4s}
+.stagger.in>*:nth-child(6){transition-delay:.5s}
 
 @media(max-width:960px){
   .about-grid,.area-grid{grid-template-columns:1fr;gap:48px}
   .about-photo{max-width:400px}
-  .rx-grid,.rev-grid{grid-template-columns:1fr}
+  .rx-grid,.rev-grid,.proc-grid{grid-template-columns:1fr}
+  .consult-band{padding:48px 36px}
+  .consult-inner{grid-template-columns:1fr;gap:40px}
+  .consult-photo{max-width:420px}
+  .consult-list{grid-template-columns:1fr}
   .svc-more{grid-template-columns:1fr 1fr}
   .svc-more div:nth-child(2){border-right:none}
   .gal-grid{grid-template-columns:repeat(2,1fr)}
-  .g1,.g2,.g3,.g4,.g5{grid-column:span 2;grid-row:span 1}
+  .g1,.g2,.g3,.g4,.g5,.g6{grid-column:span 2;grid-row:span 1}
   .g1{grid-row:span 2}
   .foot-grid{grid-template-columns:1fr;gap:36px}
   .qband{background-attachment:scroll}
@@ -264,6 +327,7 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
 
 <header class="hero" id="top">
   <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="wrap">
       <span class="chip">
@@ -302,6 +366,7 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
 <section class="sec about" id="about">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
+      <img class="isa" src="../assets/img/ttd-isa.jpg" alt="ISA Certified Arborist badge">
       <div class="ph"><img src="../assets/img/td-nate.jpg" alt="Nate, certified arborist and owner of The Tree Doctor"></div>
       <div class="badge"><b>2012</b><small>Certified<br>Arborist</small></div>
     </div>
@@ -316,6 +381,36 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
         <span><i></i>Business #BU13843</span>
       </div>
       <p class="sig">&ndash; Nate</p>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="approach">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The approach</span>
+      <h2>Diagnose, treat, and <em>care.</em></h2>
+      <p>Every tree gets the same considered method a good doctor brings to a patient. Look closely first, treat only what needs treating, then keep watching over the years.</p>
+    </div>
+    <div class="proc-grid stagger">
+      <div class="pcard">
+        <span class="step">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <h3>Diagnose</h3>
+        <p>A close look at the whole plant, its roots, and its site. Years of hands-on experience reading what insects, fungus, soil, and stress are actually doing, before anything is prescribed.</p>
+      </div>
+      <div class="pcard">
+        <span class="step">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M12 7c2.5-3 6-2 7 1M12 7C9.5 4 6 5 5 8M12 13c2.5-3 6-2 7 1M12 13c-2.5-3-6-2-7 1"/></svg></div>
+        <h3>Treat</h3>
+        <p>Targeted pruning, plant-health care, and pest management with the lightest touch that works. No dousing everything in chemicals, only what the tree genuinely needs to recover.</p>
+      </div>
+      <div class="pcard">
+        <span class="step">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 0 0-9.3-3.4l-.5.5-.5-.5A5.5 5.5 0 1 0 3 9.4c1.8 3.5 6.5 6.9 8.5 8.6 2-1.7 6.7-5.1 8.5-8.6.5-.9.8-1.9.8-2.8Z"/></svg></div>
+        <h3>Care</h3>
+        <p>Regular communication and long-term relationships with the people, and the trees, worth looking after. Check-backs weeks and seasons later to see how a treatment is holding.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -364,6 +459,39 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
   </div>
 </section>
 
+<section class="consult" id="consulting">
+  <div class="wrap">
+    <div class="consult-band reveal">
+      <div class="consult-inner">
+        <div class="consult-photo"><img src="../assets/img/ttd-2.jpg" alt="Tree health assessment worksheet and arborist measuring tools"></div>
+        <div>
+          <span class="eyebrow">For arborists &amp; managers</span>
+          <h2>Consulting and <em>second opinions.</em></h2>
+          <p class="lead">Beyond hands-on work, I advise property owners, land managers, and fellow arborists who need an impartial read on the trees in their care.</p>
+          <div class="consult-list stagger">
+            <div>
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+              <div><b>Health &amp; safety assessments</b><small>Clear, impartial evaluations of tree condition and risk.</small></div>
+            </div>
+            <div>
+              <svg viewBox="0 0 24 24"><path d="M4 5h12M4 12h16M4 19h10"/><circle cx="19" cy="5" r="2"/><circle cx="17" cy="19" r="2"/></svg>
+              <div><b>Tree inventories &amp; management plans</b><small>Cataloguing and long-term care planning for a property.</small></div>
+            </div>
+            <div>
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v12H4z"/><path d="M8 20h8M12 16v4"/><path d="m8 10 2 2 4-4"/></svg>
+              <div><b>Remote consulting</b><small>Diagnosis and guidance by photo and detail, wherever you are.</small></div>
+            </div>
+            <div>
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2ZM9 22h6"/></svg>
+              <div><b>Remote training</b><small>Practical instruction for crews and property teams.</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sec gal" id="work">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -377,6 +505,7 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
       <div class="gcell g3"><img src="../assets/img/td-e.jpg" alt="Close inspection of foliage for pests"><span class="tag">Pest diagnosis</span></div>
       <div class="gcell g4"><img src="../assets/img/td-c.jpg" alt="Healthy flowering rose shrub in full bloom"><span class="tag">Shrub health &amp; bloom</span></div>
       <div class="gcell g5"><img src="../assets/img/td-d.jpg" alt="Drainage and root work along a garden bed"><span class="tag">Drainage &amp; site work</span></div>
+      <div class="gcell g6"><img src="../assets/img/ttd-1.jpg" alt="Mature tree canopy viewed from below"><span class="tag">Mature canopy &middot; risk assessment</span></div>
     </div>
   </div>
 </section>
@@ -436,6 +565,38 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
         <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         <div><small>Based in</small><b>Devon, Pennsylvania</b></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Before you call</span>
+      <h2>Questions, <em>answered.</em></h2>
+      <p>A few things homeowners often ask before the first visit.</p>
+    </div>
+    <div class="faq-wrap reveal">
+      <details open>
+        <summary>Do you charge for an initial look?<span class="tog">+</span></summary>
+        <div class="ans">Reach out with a little about your trees and we'll arrange a visit. I'd rather see the plant in person, understand what you're hoping for, and give you honest advice than guess from a distance.</div>
+      </details>
+      <details>
+        <summary>Will you push a removal?<span class="tog">+</span></summary>
+        <div class="ans">No. I love trees, not so much money, and I'm committed to preserving the canopy whenever it's safe to do so. If a tree can be pruned, treated, or cabled instead of removed, that's the plan I'll recommend.</div>
+      </details>
+      <details>
+        <summary>Are you licensed to apply treatments?<span class="tog">+</span></summary>
+        <div class="ans">Yes. I'm licensed by the Pennsylvania Department of Agriculture as a landscape pesticide applicator, and I use the lightest effective approach rather than dousing everything in chemicals.</div>
+      </details>
+      <details>
+        <summary>Who actually does the work?<span class="tog">+</span></summary>
+        <div class="ans">The Tree Doctor is a small, fully owner-operated business. I'm usually on site to supervise and perform the work myself, and I make regular communication with clients a centerpiece of how I work.</div>
+      </details>
+      <details>
+        <summary>Which areas do you serve?<span class="tog">+</span></summary>
+        <div class="ans">I'm based in Devon and care for trees, shrubs, and gardens across the surrounding Main Line, including Wayne, Berwyn, Paoli, Malvern, Radnor, Villanova, Bryn Mawr, and Strafford.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -525,8 +686,14 @@ footer{background:var(--pine);color:#B9C7B6;padding:80px 0 40px}
 document.getElementById('year').textContent=new Date().getFullYear();
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
-const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduce){document.querySelectorAll('.reveal,.stagger').forEach(function(el){el.classList.add('in')});return;}
+  var revIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');revIO.unobserve(e.target)}})},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){revIO.observe(el)});
+  var stagIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');stagIO.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.stagger').forEach(function(el){stagIO.observe(el)});
+})();
 </script>
 </body>
 </html>
