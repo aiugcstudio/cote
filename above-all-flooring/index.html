@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Above All Flooring | Prior Lake, MN Flooring Showroom</title>
+<meta name="description" content="Above All Flooring in Prior Lake, MN. Hardwood, luxury vinyl, carpet, tile, laminate, and waterproof flooring, plus expert installation and refinishing. Free in-home estimates and financing available.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B211A'/%3E%3Cpath d='M6 11h20M6 16h20M6 21h20' stroke='%23C08A3E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --espresso:#2B211A; --walnut:#3B2C21; --deep:#1E1712;
+  --oak:#B47C3B; --amber:#C08A3E; --tan:#D8B888; --sand:#E8D8BF;
+  --cream:#F7F1E8; --paper:#FCF9F2; --ink:#251D16; --muted:#7C6C5C;
+  --line:rgba(43,33,26,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--oak)}
+.eyebrow::before{content:"";width:24px;height:1.5px;background:var(--amber)}
+.eyebrow.light{color:var(--tan)}
+.eyebrow.light::before{background:var(--tan)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:6px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-primary{background:var(--oak);color:#fff}
+.btn-primary:hover{background:var(--walnut);transform:translateY(-2px)}
+.btn-dark{background:var(--espresso);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--espresso)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.35)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;max-width:1320px;margin:0 auto}
+nav.scrolled{background:rgba(247,241,232,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:42px;height:42px;flex:none;border-radius:10px;background:var(--oak);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:24px;height:24px}
+.brand b{font-family:var(--serif);font-size:1.26rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.72;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:1.5px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:600;font-size:.95rem;color:#fff;transition:.3s;display:flex;align-items:center;gap:8px}
+nav.scrolled .nav-phone{color:var(--ink)}
+.nav-phone svg{width:15px;height:15px}
+.nav-cta{background:var(--amber);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:6px;transition:.3s}
+.nav-cta:hover{background:var(--walnut);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--espresso)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 20s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(20,15,11,.9) 0%,rgba(30,23,18,.78) 42%,rgba(30,23,18,.4) 74%,rgba(30,23,18,.2) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:172px 40px 108px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.76rem;font-weight:600;letter-spacing:.03em;margin-bottom:30px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6vw,6rem);font-weight:500;letter-spacing:-.02em;max-width:15ch}
+.hero h1 em{color:var(--tan);font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:44ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:44px;margin-top:60px;padding-top:34px;border-top:1px solid rgba(255,255,255,.18);flex-wrap:wrap}
+.hero-mini div b{font-family:var(--serif);font-size:1.5rem;color:#fff;display:block;line-height:1.1}
+.hero-mini div span{font-size:.82rem;color:rgba(255,255,255,.72)}
+
+/* TRUST */
+.trust{background:var(--walnut);color:#EADFD0}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:32px 24px;border-right:1px solid rgba(255,255,255,.1);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t svg{width:30px;height:30px;stroke:var(--tan);fill:none;stroke-width:1.5;flex:none}
+.trust .t b{display:block;font-family:var(--serif);font-size:1.16rem;color:#fff;line-height:1.1}
+.trust .t small{font-size:.82rem;color:rgba(234,223,208,.72)}
+
+/* SECTION base */
+.sec{padding:120px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 60px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.8rem);margin-top:18px}
+.sec-head h2 em{color:var(--oak)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* PRODUCTS */
+.products{background:var(--paper)}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1/0.82;display:block;box-shadow:0 20px 40px -30px rgba(43,33,26,.5)}
+.prod img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.prod:hover img{transform:scale(1.08)}
+.prod::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,23,18,0) 40%,rgba(30,23,18,.82));transition:.4s}
+.prod .lbl{position:absolute;left:26px;bottom:24px;z-index:2;color:#fff}
+.prod .lbl b{font-family:var(--serif);font-size:1.6rem;font-weight:500;display:block}
+.prod .lbl span{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;color:var(--tan);opacity:0;transform:translateY(8px);transition:.4s}
+.prod:hover .lbl span{opacity:1;transform:none}
+.prod .lbl span svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* INTRO band */
+.intro{background:var(--espresso);color:#fff;position:relative;overflow:hidden}
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch}
+.intro-copy{padding:120px 70px 120px 0}
+.intro-copy h2{font-size:clamp(2.2rem,4.4vw,3.5rem);margin:18px 0 26px;color:#fff}
+.intro-copy h2 em{color:var(--tan)}
+.intro-copy p{color:rgba(255,255,255,.78);font-size:1.1rem;margin-bottom:20px}
+.intro-copy .stats{display:flex;gap:48px;margin-top:36px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16)}
+.intro-copy .stats b{font-family:var(--serif);font-size:2.4rem;color:var(--tan);display:block;line-height:1}
+.intro-copy .stats span{font-size:.86rem;color:rgba(255,255,255,.7)}
+.intro-img{position:relative;min-height:520px}
+.intro-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.intro-img::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--espresso),transparent 22%);z-index:1}
+
+/* SERVICES */
+.svc{background:var(--cream)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.scard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:36px 28px;transition:.4s}
+.scard:hover{transform:translateY(-8px);box-shadow:0 36px 60px -40px rgba(43,33,26,.4);border-color:transparent}
+.scard .ic{width:56px;height:56px;border-radius:12px;background:var(--sand);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:.4s}
+.scard:hover .ic{background:var(--oak)}
+.scard .ic svg{width:27px;height:27px;stroke:var(--walnut);fill:none;stroke-width:1.6;transition:.4s}
+.scard:hover .ic svg{stroke:#fff}
+.scard h3{font-size:1.28rem;margin-bottom:11px}
+.scard p{color:var(--muted);font-size:.96rem}
+
+/* INSPIRE gallery */
+.inspire{background:var(--paper)}
+.insp-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.icell{border-radius:12px;overflow:hidden;position:relative}
+.icell img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.icell:hover img{transform:scale(1.07)}
+.i1{grid-column:span 2;grid-row:span 2}
+.i2{grid-column:span 2}
+.i5{grid-column:span 2}
+
+/* FINANCING band */
+.fin{position:relative;color:#fff;overflow:hidden;background:var(--walnut)}
+.fin-grid{display:grid;grid-template-columns:1fr 1fr}
+.fin-img{position:relative;min-height:400px}
+.fin-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fin-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(59,44,33,.7))}
+.fin-copy{padding:100px 68px;display:flex;flex-direction:column;justify-content:center}
+.fin-copy h2{font-size:clamp(2rem,3.8vw,3rem);margin:14px 0 18px}
+.fin-copy h2 em{color:var(--tan)}
+.fin-copy p{color:rgba(255,255,255,.82);font-size:1.1rem;max-width:44ch;margin-bottom:28px}
+.cards{display:flex;gap:12px;align-items:center;margin-top:26px}
+.cards span{font-size:.8rem;color:rgba(255,255,255,.6);margin-right:4px}
+.cards .cc{background:#fff;border-radius:6px;padding:7px 12px;font-weight:700;font-size:.78rem;color:var(--walnut);letter-spacing:.02em}
+
+/* REVIEWS */
+.rev-sec{background:var(--cream)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(43,33,26,.4)}
+.stars{color:var(--amber);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.04rem;color:#4a3d31;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{text-align:center;margin-top:26px;font-size:.85rem;color:var(--muted)}
+
+/* CONTACT */
+.contact{background:var(--espresso);color:#fff;padding:120px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.contact-copy h2{font-size:clamp(2.3rem,4.4vw,3.5rem);margin:16px 0 22px}
+.contact-copy h2 em{color:var(--tan)}
+.contact-copy>p{color:rgba(255,255,255,.78);font-size:1.12rem;margin-bottom:36px;max-width:46ch}
+.crow{display:flex;gap:16px;padding:22px 0;border-top:1px solid rgba(255,255,255,.14)}
+.crow svg{width:24px;height:24px;stroke:var(--tan);fill:none;stroke-width:1.6;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tan);margin-bottom:4px}
+.crow b,.crow a{font-size:1.1rem;color:#fff;font-weight:600}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:46px 42px;text-align:center}
+.contact-card .ic{width:64px;height:64px;border-radius:50%;background:var(--oak);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.contact-card .ic svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.6}
+.contact-card h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.75);margin-bottom:28px}
+.contact-card .btn{width:100%;justify-content:center;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:var(--deep);color:#B7A794;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tan);margin-bottom:18px;font-weight:600}
+.foot-col a,.foot-col p{display:block;color:#C6B7A4;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#82715F}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .intro-grid,.fin-grid,.contact-grid{grid-template-columns:1fr}
+  .intro-copy{padding:90px 0}
+  .intro-img{min-height:340px}
+  .intro-img::before{background:linear-gradient(0deg,var(--espresso),transparent 24%)}
+  .fin-img{min-height:280px}
+  .fin-copy{padding:70px 44px}
+  .prod-grid,.svc-grid{grid-template-columns:1fr 1fr}
+  .insp-grid{grid-template-columns:1fr 1fr}
+  .i1,.i2,.i5{grid-column:span 1;grid-row:span 1}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid rgba(255,255,255,.08)}
+  .rev-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:78px 0}
+  .hero-in{padding:130px 22px 64px}
+  .prod-grid,.svc-grid,.insp-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M6 10h20M6 16h20M6 22h20" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+      <span><b>Above All Flooring</b><span>Prior Lake, MN</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#products">Flooring</a>
+      <a href="#services">Services</a>
+      <a href="#inspire">Get inspired</a>
+      <a href="#contact">Showroom</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:9524409663"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>(952) 440-9663</span></a>
+      <a class="nav-cta" href="#contact">Free estimate</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/aaf-u1.jpg" alt="Warm living room with beautiful hardwood flooring"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#D8B888" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18M3 14h18M3 4h18v16H3z"/></svg>
+      Family-owned flooring showroom &middot; Prior Lake, MN
+    </span>
+    <h1>Your home deserves a <em>foundation of excellence.</em></h1>
+    <p>Hardwood, luxury vinyl, carpet, tile, and more, chosen with you and installed with real craft. The Prior Lake area trusts Above All Flooring for all of their flooring needs.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#contact">Request a free estimate</a>
+      <a class="btn btn-ghost" href="#products">Browse flooring</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>In-home</b><span>Free estimates</span></div>
+      <div><b>Financing</b><span>Pay over time</span></div>
+      <div><b>Showroom</b><span>Visit us in Prior Lake</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><div><b>Free in-home estimates</b><small>Accurate and professional</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><div><b>Financing available</b><small>Get floors now, pay over time</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M14 3 8 9M4 20l4.5-1L20 7.5a2.1 2.1 0 0 0-3-3L5.5 16 4 20ZM12 6l6 6"/></svg><div><b>Installation &amp; refinishing</b><small>Done by our own crew</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Prior Lake showroom</b><small>See and feel every option</small></div></div>
+  </div>
+</section>
+
+<section class="sec products" id="products">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Explore our flooring</span>
+      <h2>Every surface, one <em>trusted showroom.</em></h2>
+      <p>Browse our galleries to find the right style for your space, then let us help you choose with confidence.</p>
+    </div>
+    <div class="prod-grid stagger">
+      <a class="prod" href="#contact"><img src="../assets/img/aaf-u8.jpg" alt="Hardwood herringbone flooring"><span class="lbl"><b>Hardwood</b><span>Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+      <a class="prod" href="#contact"><img src="../assets/img/aaf-u5.jpg" alt="Luxury vinyl plank flooring in a modern living room"><span class="lbl"><b>Luxury vinyl</b><span>Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+      <a class="prod" href="#contact"><img src="../assets/img/aaf-u4.jpg" alt="Plush carpet in a bright living room"><span class="lbl"><b>Carpet</b><span>Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+      <a class="prod" href="#contact"><img src="../assets/img/aaf-u7.jpg" alt="Tile flooring in a modern bathroom"><span class="lbl"><b>Tile</b><span>Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+      <a class="prod" href="#contact"><img src="../assets/img/aaf-u6.jpg" alt="Laminate wood flooring in a cozy room"><span class="lbl"><b>Laminate</b><span>Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+      <a class="prod" href="#contact"><img src="../assets/img/aaf-u12.jpg" alt="Waterproof flooring in a modern bathroom"><span class="lbl"><b>Waterproof</b><span>Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div class="intro-copy reveal">
+      <span class="eyebrow light">Why Above All</span>
+      <h2>Beautiful flooring, chosen and installed <em>the right way.</em></h2>
+      <p>At Above All Flooring, we believe your home deserves a foundation of excellence. We help you choose the right flooring style for your home, then handle the details, from custom medallions and borders to full installation and refinishing.</p>
+      <p>The Prior Lake area trusts Above All Flooring for all of their flooring needs, and we would love to earn yours too.</p>
+      <div class="stats">
+        <div><b>6+</b><span>Flooring categories</span></div>
+        <div><b>In-home</b><span>Free estimates</span></div>
+        <div><b>Local</b><span>Prior Lake showroom</span></div>
+      </div>
+    </div>
+    <div class="intro-img reveal">
+      <img src="../assets/img/aaf-u8.jpg" alt="Herringbone hardwood floor detail">
+    </div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>More than a showroom, a full <em>flooring partner.</em></h2>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 3 8 9M4 20l4.5-1L20 7.5a2.1 2.1 0 0 0-3-3L5.5 16 4 20ZM12 6l6 6"/></svg></div>
+        <h3>Installation</h3>
+        <p>Professional flooring installation handled start to finish by an experienced local crew.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l8-6 8 6v11"/><path d="M9 21v-7h6v7"/></svg></div>
+        <h3>Refinishing</h3>
+        <p>Bring tired hardwood back to life with expert sanding and refinishing that restores its shine.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3>Medallions &amp; borders</h3>
+        <p>Custom medallions and inlaid borders that turn a floor into a genuine centerpiece.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 3v18M15 9v12"/></svg></div>
+        <h3>Tile &amp; stone</h3>
+        <p>Tile and natural stone installation for kitchens, baths, entryways, and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec inspire" id="inspire">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Get inspired</span>
+      <h2>Rooms that started at <em>Above All.</em></h2>
+      <p>Let us help you picture the possibilities. Browse a few beautiful spaces to get started.</p>
+    </div>
+    <div class="insp-grid reveal">
+      <div class="icell i1"><img src="../assets/img/aaf-u5.jpg" alt="Modern living room with luxury vinyl plank floor"></div>
+      <div class="icell i2"><img src="../assets/img/aaf-u4.jpg" alt="Bright carpeted living room"></div>
+      <div class="icell"><img src="../assets/img/aaf-u6.jpg" alt="Cozy room with warm laminate flooring"></div>
+      <div class="icell"><img src="../assets/img/aaf-u7.jpg" alt="Bathroom with tile flooring"></div>
+      <div class="icell i5"><img src="../assets/img/aaf-u1.jpg" alt="Warm living room with hardwood floor"></div>
+    </div>
+  </div>
+</section>
+
+<section class="fin">
+  <div class="fin-grid">
+    <div class="fin-img reveal"><img src="../assets/img/aaf-u6.jpg" alt="Beautifully finished room"></div>
+    <div class="fin-copy reveal">
+      <span class="eyebrow light">Financing</span>
+      <h2>Get your dream floors now, <em>pay over time.</em></h2>
+      <p>Convenient financing options make it easy to get the floors you want today. Ask us about the details when you visit the showroom or request your estimate.</p>
+      <a class="btn btn-light" href="#contact" style="align-self:flex-start;">Ask about financing</a>
+      <div class="cards"><span>We accept</span><span class="cc">VISA</span><span class="cc">Mastercard</span><span class="cc">Discover</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Kind words</span>
+      <h2>Prior Lake homeowners <em>love their floors.</em></h2>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>From the showroom to install, the whole process was easy. They helped us pick the perfect hardwood and the crew was meticulous. Our floors look incredible.</p>
+        <div class="who"><img src="../assets/img/f4.jpg" alt=""><div><b>Jennifer S.</b><small>Prior Lake, MN</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Great selection and honest advice. They refinished our old floors and they look brand new. Financing made it easy to do the whole main level at once.</p>
+        <div class="who"><img src="../assets/img/f1.jpg" alt=""><div><b>Mark T.</b><small>Savage, MN</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We had luxury vinyl put in the whole basement. Fair pricing, clean work, and they finished on schedule. Would absolutely recommend Above All.</p>
+        <div class="who"><img src="../assets/img/f2.jpg" alt=""><div><b>Rachel B.</b><small>Shakopee, MN</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative. Leave your own on our Google profile.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy reveal">
+      <span class="eyebrow light">Visit our showroom</span>
+      <h2>Let's find your <em>perfect floor.</em></h2>
+      <p>Stop by the showroom to see and feel every option, or request an accurate, professional in-home estimate. We would love to help.</p>
+      <div class="crow">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <div><small>Call or text</small><a href="tel:9524409663">(952) 440-9663</a></div>
+      </div>
+      <div class="crow">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><small>Showroom</small><b>16861 Welcome Ave SE, Prior Lake, MN 55372</b></div>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></div>
+      <h3>Request a free estimate</h3>
+      <p>Accurate, professional, and in your home. Call or text to book a time that works for you.</p>
+      <a class="btn btn-primary" href="tel:9524409663">Call (952) 440-9663</a>
+      <a class="btn btn-light" href="tel:9524409663" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);">Text us instead</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Above All Flooring</b>
+        <p>A foundation of excellence for the Prior Lake area. Hardwood, luxury vinyl, carpet, tile, laminate, installation, and refinishing.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Flooring</h4>
+        <a href="#products">Hardwood</a>
+        <a href="#products">Luxury vinyl</a>
+        <a href="#products">Carpet &amp; tile</a>
+        <a href="#products">Laminate &amp; waterproof</a>
+      </div>
+      <div class="foot-col">
+        <h4>Showroom</h4>
+        <a href="tel:9524409663">(952) 440-9663</a>
+        <p>16861 Welcome Ave SE<br>Prior Lake, MN 55372</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Above All Flooring</span>
+      <span>Prior Lake, MN &middot; Financing available &middot; Free in-home estimates</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
