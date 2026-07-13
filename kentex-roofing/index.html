@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KENTEX Roofing Systems | Commercial Roofing in Austin, TX</title>
+<meta name="description" content="KENTEX Roofing Systems LLC is a commercial roofing company in Austin, TX. Solar, green roofs, standing seam sheet metal, preventative maintenance, leak repair, and re-roofing for property managers and building owners. Owner Kenny Woods. Call 512.491.9000.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23171C21'/%3E%3Cpath d='M6 18 16 9l10 9v1H6Z' fill='%23E68A2E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#232A31; --dark:#171C21; --dark2:#20272E; --graphite:#2C343C;
+  --accent:#E68A2E; --accent-d:#C56E1C; --accent-soft:#FBEBD6;
+  --bg:#F5F3F0; --paper:#FFFFFF; --muted:#5C646C;
+  --line:rgba(35,42,49,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-d)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#F5C88A}
+.eyebrow.light::before{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-amber{background:var(--accent);color:#231602}
+.btn-amber:hover{background:var(--accent-d);color:#fff;transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--dark);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--dark);color:#c9cfd6;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+.topbar .am{color:var(--accent)}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(230,138,46,.7)}
+.brand .mk svg{width:26px;height:26px}
+.brand b{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1;letter-spacing:.02em}
+.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;opacity:.75;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--accent-d)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#231602;font-weight:700;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);color:#fff;transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(19,23,28,.95) 0%,rgba(23,28,33,.88) 40%,rgba(23,28,33,.55) 74%,rgba(23,28,33,.35) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;right:-8%;top:8%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(230,138,46,.34),transparent 66%);z-index:1;filter:blur(8px);animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-50px,40px) scale(1.12)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 116px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.1rem,6.3vw,5.7rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{font-family:var(--serif);color:var(--accent);font-style:italic;font-weight:400}
+.hero p{font-size:1.22rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.84);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:62px;flex-wrap:wrap}
+.hero-mini div{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.75rem;color:#fff;display:block;line-height:1}
+.hero-mini b em{color:var(--accent);font-style:normal}
+.hero-mini span{font-size:.78rem;color:rgba(255,255,255,.62);text-transform:uppercase;letter-spacing:.06em;margin-top:4px;display:block}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(0,0,0,.25);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:0 40px}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:50px;height:50px;flex:none;border-radius:13px;background:var(--accent-soft);display:grid;place-items:center}
+.trust .t svg{width:26px;height:26px;stroke:var(--accent-d);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:120px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent-d)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:58ch}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 32px;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.scard:hover{transform:translateY(-6px);box-shadow:0 30px 56px -34px rgba(0,0,0,.4)}
+.scard:hover::before{transform:scaleX(1)}
+.ic{width:54px;height:54px;border-radius:14px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;margin-bottom:22px}
+.ic svg{width:27px;height:27px;stroke:currentColor;fill:none;stroke-width:1.7}
+.scard h3{font-size:1.35rem;margin-bottom:10px;color:var(--ink)}
+.scard p{font-size:.96rem;color:var(--muted);line-height:1.6}
+.also{margin-top:40px;background:var(--ink);color:#fff;border-radius:16px;padding:34px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.also b{font-family:var(--serif);font-size:1.2rem;margin-right:8px}
+.also span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* SOLAR feature split */
+.feat{background:#fff}
+.feat-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.feat-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 44px 90px -50px rgba(0,0,0,.6)}
+.feat-img img{width:100%;aspect-ratio:5/4.4;object-fit:cover;transition:transform .8s}
+.feat-img:hover img{transform:scale(1.05)}
+.feat-img .badge{position:absolute;left:24px;bottom:24px;background:var(--accent);color:#231602;border-radius:13px;padding:16px 22px}
+.feat-img .badge b{font-family:var(--serif);font-size:1.5rem;display:block;line-height:1}
+.feat-img .badge small{font-size:.78rem;font-weight:600;opacity:.82}
+.feat-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 22px}
+.feat-copy h2 em{color:var(--accent-d)}
+.feat-copy p{color:#3a424b;font-size:1.08rem;margin-bottom:20px}
+.feat-list{display:grid;gap:13px;margin-top:26px}
+.feat-list div{display:flex;align-items:center;gap:12px;font-weight:600;font-size:1rem;color:var(--ink)}
+.feat-list svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none}
+
+/* DARK glass band */
+.darksec{position:relative;overflow:hidden;color:#fff;background:radial-gradient(1100px 500px at 82% -10%,rgba(230,138,46,.22),transparent 60%),linear-gradient(165deg,#20272E,#12161A)}
+.darksec .sec-head h2{color:#fff}
+.darksec .sec-head h2 em{color:var(--accent)}
+.darksec .sec-head p{color:rgba(255,255,255,.72)}
+.dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.dcard{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:32px 26px;backdrop-filter:blur(6px);overflow:hidden;transition:transform .4s,background .4s}
+.dcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.075)}
+.dcard .num{position:absolute;right:16px;top:6px;font-family:var(--serif);font-size:3.4rem;color:rgba(230,138,46,.16);line-height:1}
+.dcard .ic{background:rgba(230,138,46,.16);color:var(--accent)}
+.dcard h3{font-size:1.2rem;color:#fff;margin-bottom:9px}
+.dcard p{font-size:.92rem;color:rgba(255,255,255,.72);line-height:1.6}
+
+/* WORK band photo */
+.work{background:var(--bg)}
+.work-band{position:relative;border-radius:22px;overflow:hidden;min-height:460px;display:flex;align-items:flex-end}
+.work-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.work-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,23,28,.15) 20%,rgba(19,23,28,.92));z-index:1}
+.work-band .inner{position:relative;z-index:2;padding:52px 54px;color:#fff;max-width:660px}
+.work-band .inner .eyebrow{color:#F5C88A}
+.work-band .inner .eyebrow::before{background:var(--accent)}
+.work-band h2{font-size:clamp(2rem,3.8vw,2.9rem);margin:16px 0 14px}
+.work-band h2 em{color:var(--accent);font-style:italic}
+.work-band p{color:rgba(255,255,255,.85);font-size:1.08rem}
+
+/* SERVE brand band */
+.serve{background:var(--bg);padding-top:0}
+.serve-band{background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:30px;padding:76px 66px;color:#231602;position:relative;overflow:hidden}
+.serve-band::after{content:"";position:absolute;right:-80px;bottom:-90px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.14)}
+.serve-band .eyebrow{color:#3a2405}
+.serve-band .eyebrow::before{background:#231602}
+.serve-band h2{font-size:clamp(2.1rem,4.2vw,3.2rem);margin:16px 0 20px;color:#231602;max-width:20ch;position:relative;z-index:2}
+.serve-band>.wrap-in{position:relative;z-index:2}
+.serve-band p{font-size:1.12rem;color:#3a2405;max-width:60ch;margin-bottom:34px}
+.serve-chips{display:flex;flex-wrap:wrap;gap:12px;position:relative;z-index:2}
+.serve-chips span{background:rgba(255,255,255,.28);border:1px solid rgba(35,22,2,.18);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:#231602}
+
+/* ABOUT founder split */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:center}
+.about-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 44px 90px -52px rgba(0,0,0,.6)}
+.about-img img{width:100%;aspect-ratio:4/4.3;object-fit:cover}
+.about-img .tag{position:absolute;left:24px;bottom:24px;background:var(--ink);color:#fff;border-radius:13px;padding:15px 22px}
+.about-img .tag b{font-family:var(--serif);font-size:1.15rem;display:block;line-height:1.1}
+.about-img .tag small{font-size:.76rem;color:var(--accent);font-weight:600;letter-spacing:.04em}
+.about-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 22px}
+.about-copy h2 em{color:var(--accent-d)}
+.about-copy p{color:#3a424b;font-size:1.08rem;margin-bottom:20px}
+
+/* QUOTE */
+.quote{position:relative;overflow:hidden;color:#fff;background:radial-gradient(900px 460px at 15% 0%,rgba(230,138,46,.24),transparent 62%),linear-gradient(160deg,#232A31,#12161A);text-align:center}
+.quote .wrap{position:relative}
+.quote .mark{font-family:var(--serif);font-size:8rem;line-height:.6;color:var(--accent);opacity:.5;display:block;height:60px}
+.quote blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.32;max-width:20ch;margin:0 auto;letter-spacing:-.01em}
+.quote cite{display:block;margin-top:30px;font-family:var(--sans);font-style:normal;font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:44px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(0,0,0,.25)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#3a424b;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--graphite);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{margin-top:26px;font-size:.82rem;color:var(--muted);font-style:italic}
+
+/* FAQ */
+.faq-sec{background:#fff}
+.faq{max-width:820px;margin:0}
+.faq details{border:1px solid var(--line);border-radius:14px;padding:6px 26px;margin-bottom:14px;background:var(--bg);transition:.3s}
+.faq details[open]{background:#fff;box-shadow:0 24px 46px -34px rgba(0,0,0,.3);border-color:rgba(230,138,46,.4)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;font-family:var(--serif);font-size:1.22rem;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;transition:.3s;font-size:1.2rem;line-height:1}
+.faq details[open] .tog{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq .ans{padding:0 0 22px;color:var(--muted);font-size:1.02rem;line-height:1.65}
+
+/* CONTACT */
+.contact{background:var(--dark);color:#fff;padding:120px 0}
+.contact-head{text-align:center;margin-bottom:56px}
+.contact-head .eyebrow{justify-content:center}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin-top:16px;max-width:none}
+.contact-head h2 em{color:var(--accent)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch}
+.cinfo{background:radial-gradient(700px 380px at 100% 0%,rgba(230,138,46,.16),transparent 60%),var(--dark2);border:1px solid var(--lineD);border-radius:18px;padding:46px 42px}
+.cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+.cinfo>p{color:rgba(255,255,255,.72);margin-bottom:14px}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.crow b,.crow a{font-size:1.06rem;color:#fff;font-weight:600}
+.contact-card{background:rgba(255,255,255,.06);border:1px solid var(--lineD);border-radius:18px;padding:46px 42px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.contact-card .cic{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.contact-card .cic svg{width:30px;height:30px;stroke:#231602;fill:none;stroke-width:1.8}
+.contact-card h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.72);margin-bottom:28px}
+.contact-card .btn{width:100%;justify-content:center;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:#0F1316;color:#9AA3AC;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand .fb{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.foot-brand .mk{width:40px;height:40px;border-radius:10px;background:var(--accent);display:grid;place-items:center}
+.foot-brand .mk svg{width:24px;height:24px}
+.foot-brand b{font-family:var(--serif);font-size:1.5rem;color:#fff;letter-spacing:.02em}
+.foot-brand p{font-size:.96rem;max-width:36ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B4BCC5;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6C747D}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.07s}
+.stagger.in>*:nth-child(3){transition-delay:.14s}
+.stagger.in>*:nth-child(4){transition-delay:.21s}
+.stagger.in>*:nth-child(5){transition-delay:.28s}
+.stagger.in>*:nth-child(6){transition-delay:.35s}
+.stagger.in>*:nth-child(7){transition-delay:.42s}
+.stagger.in>*:nth-child(8){transition-delay:.49s}
+.stagger.in>*:nth-child(9){transition-delay:.56s}
+
+@media(max-width:1000px){
+  .feat-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .feat-img,.about-img{max-width:520px}
+  .svc-grid,.dgrid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:78px 0}
+  .hero-in{padding:154px 22px 66px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.dgrid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr;padding:0 22px}
+  .trust .t{border-right:none}
+  .serve-band{padding:52px 30px}
+  .work-band .inner{padding:38px 28px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Commercial roofing for Austin property managers and building owners &middot; <b>Call <span class="am">512.491.9000</span></b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M4 19 16 8l12 11v1H4Z" fill="#231602"/><path d="M9 20v-4h4v4" stroke="#231602" stroke-width="1.4" fill="none"/></svg></span>
+      <span><b>KENTEX</b><span>Roofing Systems</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#solar">Solar</a>
+      <a href="#standard">Our standard</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:5124919000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>512.491.9000</span></a>
+      <a class="nav-cta" href="#contact">Request a quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/ktx-warehouse.jpg" alt="Commercial low-slope roof with solar array at sunset"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F5C88A" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg>
+      Commercial roofing &middot; Austin, TX
+    </span>
+    <h1>The roof over your building, <em>handled properly.</em></h1>
+    <p>KENTEX Roofing Systems is a commercial roofing company built for Austin property managers and building owners. Solar, sheet metal, maintenance, and re-roofing, delivered with honest quotes and constant communication.</p>
+    <div class="hero-actions">
+      <a class="btn btn-amber" href="#contact">Request a quote</a>
+      <a class="btn btn-ghost" href="tel:5124919000">Call 512.491.9000</a>
+    </div>
+    <div class="hero-mini">
+      <div><b><em>7</em> vans</b><span>On the road daily</span></div>
+      <div><b>3-man</b><span>Crew per van</span></div>
+      <div><b>Commercial</b><span>Focus, start to finish</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Based in Austin</b><small>Texas commercial roofer</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></span><div><b>Commercial focus</b><small>Managers &amp; owners</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="9" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg></span><div><b>Seven service vans</b><small>Three-man crew each</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><div><b>Honest, fair quotes</b><small>Clear from the start</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Full-scope commercial roofing, <em>under one roof.</em></h2>
+      <p>From annual roof reports to full re-roofing, KENTEX handles the assessment, materials, and workmanship for every kind of commercial roof.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
+        <h3>Incorporating Solar</h3>
+        <p>Adding solar panels to your commercial roof for long-term energy savings, planned and installed as one system.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 20c-4-1-6-5-6-9 3 0 6 2 6 5"/><path d="M12 20c4-1 6-5 6-9-3 0-6 2-6 5"/><path d="M12 14v6"/></svg></span>
+        <h3>Green Roof Systems</h3>
+        <p>Living green roof systems that cut heat load, manage runoff, and extend the life of the structure below.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4-9-4Z"/><path d="M3 13l9 4 9-4M3 18l9 4 9-4"/></svg></span>
+        <h3>Sheet Metal</h3>
+        <p>Standing seam metal roofs in architectural and structural profiles, with 1", 1.5", and 2" seam heights.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>Preventative Maintenance</h3>
+        <p>Scheduled inspection plans that catch small issues early and keep costly emergency repairs off the books.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M8 2h8l3 4v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6Z"/><path d="M9 12h6M9 16h6M9 8h3"/></svg></span>
+        <h3>Roof Reports</h3>
+        <p>Annual roof reports that document condition, wear, and priorities so you can budget with confidence.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6M9 11h.01M15 11h.01"/></svg></span>
+        <h3>Tenant Finish Out</h3>
+        <p>Roofing scope for tenant finish-out projects, coordinated to keep buildouts on schedule.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9Z"/></svg></span>
+        <h3>Leak Repair</h3>
+        <p>Source-and-seal leak repair that finds the real entry point, not just the stain on the ceiling.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-1.7-1.7Z"/></svg></span>
+        <h3>Roof Repair</h3>
+        <p>Targeted repairs across membrane, metal, and flashing to restore performance without a full replacement.</p>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 12 12 4l9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></span>
+        <h3>Re-roofing</h3>
+        <p>Full re-roofing when a roof has reached the end of its life, specified and installed to last.</p>
+      </div>
+    </div>
+    <div class="also reveal">
+      <b>Also handled:</b>
+      <span>Membrane systems</span><span>Flashing &amp; details</span><span>Roof coatings</span><span>Drainage</span><span>Penetrations</span><span>Emergency response</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec feat" id="solar">
+  <div class="wrap feat-grid">
+    <div class="feat-img reveal">
+      <img src="../assets/img/ktx-slide3.jpg" alt="Technician installing rooftop solar panel rails">
+      <div class="badge"><b>Solar</b><small>Built into the roof</small></div>
+    </div>
+    <div class="feat-copy reveal">
+      <span class="eyebrow">Incorporating Solar</span>
+      <h2>Turn your roof into <em>long-term savings.</em></h2>
+      <p>A commercial roof is a large, flat, sun-facing asset. KENTEX incorporates solar directly into the roofing scope, so the panels and the roof are planned together instead of fighting each other later.</p>
+      <p>The result is a roof that keeps water out and cuts your energy bill down, engineered as a single system from the deck up.</p>
+      <div class="feat-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Solar planned with the roof, not bolted on after</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Long-term energy savings for building owners</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Pairs with green roof and metal systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec darksec" id="standard">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">The KENTEX standard</span>
+      <h2>Best in class, from <em>assessment to warranty.</em></h2>
+      <p>Customer service comes first. We take time to know you and your building, then back it with the best assessment, materials, and workmanship in the market.</p>
+    </div>
+    <div class="dgrid stagger">
+      <div class="dcard"><span class="num">01</span><span class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><h3>Best-in-class assessment</h3><p>We inspect the whole roof and understand your building before we quote a single line.</p></div>
+      <div class="dcard"><span class="num">02</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4-9-4Z"/><path d="M3 13l9 4 9-4"/></svg></span><h3>Best-in-class materials</h3><p>Systems and profiles chosen to fit your roof and your budget, specified to perform for years.</p></div>
+      <div class="dcard"><span class="num">03</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-1.7-1.7Z"/></svg></span><h3>Best-in-class workmanship</h3><p>Crews who treat the smallest project as their most important, because there is no such thing as a small roofing issue.</p></div>
+      <div class="dcard"><span class="num">04</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span><h3>Constant communication</h3><p>You are never left guessing. We keep you informed from first assessment to final walkthrough.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec work">
+  <div class="wrap">
+    <div class="work-band reveal">
+      <img src="../assets/img/ktx-building2.jpg" alt="KENTEX-style crew walking a large commercial roof deck">
+      <div class="inner">
+        <span class="eyebrow">Capacity to show up</span>
+        <h2>Seven vans. Three-man crews. <em>On the road daily.</em></h2>
+        <p>KENTEX runs seven service vans, each staffed with a three-man crew, so when your building needs a roofer, we have the people and the trucks to get there and get it done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="serve">
+  <div class="wrap">
+    <div class="serve-band reveal">
+      <div class="wrap-in">
+        <span class="eyebrow">Who we serve</span>
+        <h2>Built for the people who run the building.</h2>
+        <p>KENTEX works with commercial property managers and building owners across Austin. Whether it is one leak or a full re-roof, we approach every project as our most important, because a small issue left alone rarely stays small.</p>
+        <div class="serve-chips">
+          <span>Property managers</span><span>Building owners</span><span>Retail &amp; office</span><span>Industrial &amp; warehouse</span><span>Multi-tenant</span><span>Facilities teams</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img src="../assets/img/ktx-slide1.jpg" alt="Commercial roofer applying a low-slope roof membrane">
+      <div class="tag"><b>Kenny Woods</b><small>Owner, KENTEX Roofing</small></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">About KENTEX</span>
+      <h2>A roofer that gets to know <em>you and your building.</em></h2>
+      <p>KENTEX Roofing Systems was built on a simple idea: there is no such thing as a small roofing issue. Owner Kenny Woods approaches even the smallest project as the most important one on the schedule.</p>
+      <p>That starts with customer service. We take the time to know you and your building, then give you an honest and fair quote with no games. From there it is best-in-class assessment, materials, and workmanship, and constant communication the whole way through.</p>
+      <p>It is a straightforward way to run a roofing company, and it is why Austin owners and managers keep KENTEX on speed dial.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec quote">
+  <div class="wrap reveal">
+    <span class="mark">&#8220;</span>
+    <blockquote>There is no such thing as a small roofing issue.</blockquote>
+    <cite>The KENTEX approach</cite>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What building owners <em>are saying.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>KENTEX assessed our whole roof, found the actual source of a leak two other companies missed, and fixed it fast. Honest quote, no surprises. We put them on an annual plan the same week.</p>
+        <div class="who"><span class="av">DR</span><div><b>Dana R.</b><small>Property manager</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We re-roofed a multi-tenant building with KENTEX and added solar at the same time. Kenny and the crew kept us informed every single day. The whole thing felt handled.</p>
+        <div class="who"><span class="av">MT</span><div><b>Marcus T.</b><small>Building owner</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Their standing seam metal work is clean and their communication is even better. They treated a small repair like it was the biggest job on their board. That is rare.</p>
+        <div class="who"><span class="av">LG</span><div><b>Leah G.</b><small>Facilities lead</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note reveal">Reviews shown are illustrative.</p>
+  </div>
+</section>
+
+<section class="sec faq-sec">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Commercial roofing <em>questions, answered.</em></h2>
+    </div>
+    <div class="faq reveal" style="margin:0 auto">
+      <details open>
+        <summary>Do you only work on commercial roofs?<span class="tog">+</span></summary>
+        <div class="ans">Yes. KENTEX Roofing Systems is focused on commercial roofing for property managers and building owners in the Austin area, from single-tenant buildings to multi-tenant properties.</div>
+      </details>
+      <details>
+        <summary>Can you add solar to our existing roof?<span class="tog">+</span></summary>
+        <div class="ans">We incorporate solar as part of the roofing scope so the panels and the roof are planned together. That protects the roof, simplifies the install, and sets your building up for long-term energy savings.</div>
+      </details>
+      <details>
+        <summary>What kind of metal roofs do you install?<span class="tog">+</span></summary>
+        <div class="ans">We install standing seam metal roofs in both architectural and structural profiles, with 1", 1.5", and 2" seam heights, specified to fit your building and its span.</div>
+      </details>
+      <details>
+        <summary>Do you offer maintenance plans?<span class="tog">+</span></summary>
+        <div class="ans">Yes. Our preventative maintenance plans put your roof on a scheduled inspection cycle, and our annual roof reports document condition and priorities so you can plan and budget ahead of a problem.</div>
+      </details>
+      <details>
+        <summary>How do you handle quotes?<span class="tog">+</span></summary>
+        <div class="ans">We start by getting to know you and your building and assessing the roof properly, then give you an honest and fair quote. You will always know what is happening and why, from first look to final walkthrough.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Request a quote or a <em>roof assessment.</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>KENTEX Roofing Systems</h3>
+        <p>Commercial roofing for Austin, TX. Tell us about your building and we will get you an honest, fair quote.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:5124919000">512.491.9000</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Service area</small><b>Austin, Texas &amp; surrounding</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+          <div><small>Focus</small><b>Commercial roofing only</b></div>
+        </div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="cic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <h3>Talk to KENTEX</h3>
+        <p>Submit a service request or ask for a quote. Call or text and we will take it from there.</p>
+        <a class="btn btn-amber" href="tel:5124919000">Call 512.491.9000</a>
+        <a class="btn btn-white" href="sms:5124919000" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);">Text us instead</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="fb"><span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M4 19 16 8l12 11v1H4Z" fill="#231602"/></svg></span><b>KENTEX Roofing</b></div>
+        <p>Commercial roofing systems for Austin property managers and building owners. Solar, sheet metal, maintenance, and re-roofing, done right.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#solar">Incorporating Solar</a>
+        <a href="#services">Sheet Metal</a>
+        <a href="#services">Preventative Maintenance</a>
+        <a href="#services">Re-roofing</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:5124919000">512.491.9000</a>
+        <p>Austin, Texas</p>
+        <p>Commercial roofing only</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> KENTEX Roofing Systems LLC</span>
+      <span>Commercial Roofing &middot; Austin, TX &middot; Owner Kenny Woods</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

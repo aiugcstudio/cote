@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Straight Up Fence Co | Fencing on the Central Coast, San Luis Obispo</title>
+<meta name="description" content="A Straight Up Fence Co LLC builds straight, solid, quality fences across San Luis Obispo and the Central Coast. Wood and redwood, vinyl, chain link, ornamental iron, ranch and horse fencing, gates, and repairs. Residential and commercial. Free estimates.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%239C4A2E'/%3E%3Cg stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M9 8v18M16 8v18M23 8v18M6 14h20M6 20h20'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --clay:#9C4A2E; --clay-d:#6E3320; --terra:#B65C38;
+  --sage:#7C9070; --sage-d:#5F7357;
+  --espresso:#2A1B12; --espresso2:#3E2415;
+  --ink:#2C221C; --muted:#6E5F53;
+  --bg:#FAF5EE; --paper:#FFFFFF; --sand:#F1E7D8; --sand2:#EADCC7;
+  --line:rgba(44,34,28,.13); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--clay)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--sage)}
+.eyebrow.light{color:#F3D9C6}
+.eyebrow.light::before{background:var(--sage)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-clay{background:var(--clay);color:#fff}
+.btn-clay:hover{background:var(--clay-d);transform:translateY(-2px)}
+.btn-sage{background:var(--sage);color:#fff}
+.btn-sage:hover{background:var(--sage-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--clay)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(110,51,32,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--espresso);color:#E6D3C4;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(250,245,238,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--clay);display:grid;place-items:center}
+.brand .mk svg{width:24px;height:24px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round}
+.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.19em;text-transform:uppercase;opacity:.75;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--sage);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--clay);color:#fff;font-weight:600;font-size:.92rem;padding:12px 24px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--clay-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:850px;display:flex;align-items:center;overflow:hidden;background:var(--espresso)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 60%;transform:scale(1.09);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(42,27,18,.94) 0%,rgba(110,51,32,.78) 44%,rgba(42,27,18,.5) 74%,rgba(42,27,18,.28) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;width:620px;height:620px;right:-120px;top:-100px;border-radius:50%;background:radial-gradient(circle,rgba(182,92,56,.5),transparent 66%);z-index:1;animation:drift 15s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-60px,70px) scale(1.12)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 116px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.1rem,6.3vw,5.7rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:#E9C9A0;font-style:italic;font-weight:400}
+.hero p{font-size:1.22rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:60px;flex-wrap:wrap}
+.hero-mini div{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.22)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.55rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.78rem;color:rgba(255,255,255,.68);text-transform:uppercase;letter-spacing:.06em;margin-top:4px;display:block}
+
+/* TRUST */
+.trust{background:var(--paper);box-shadow:0 20px 50px -30px rgba(110,51,32,.28);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:48px;height:48px;flex:none;border-radius:12px;background:var(--sand);display:grid;place-items:center}
+.trust .t svg{width:25px;height:25px;stroke:var(--clay);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:120px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.6rem);margin-top:18px}
+.sec-head h2 em{color:var(--clay)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:58ch}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.scard{position:relative;border-radius:16px;overflow:hidden;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;color:#fff;box-shadow:0 24px 44px -30px rgba(110,51,32,.55)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s;z-index:0}
+.scard:hover img{transform:scale(1.09)}
+.scard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,27,18,.12) 30%,rgba(42,27,18,.92));z-index:1}
+.scard .c{position:relative;z-index:2}
+.scard .n{font-family:var(--serif);font-style:italic;font-size:.95rem;color:#E9C9A0;margin-bottom:8px}
+.scard h3{font-size:1.42rem;margin-bottom:8px}
+.scard p{font-size:.9rem;color:rgba(255,255,255,.8)}
+.also{margin-top:40px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:13px}
+.also b{font-family:var(--serif);font-size:1.18rem;margin-right:8px}
+.also span{background:var(--sand);color:var(--clay-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* WHY split */
+.why{background:var(--paper)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.why-img{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(110,51,32,.6)}
+.why-img img{width:100%;aspect-ratio:5/4.7;object-fit:cover}
+.why-img .badge{position:absolute;left:24px;bottom:24px;background:var(--clay);color:#fff;border-radius:12px;padding:16px 22px}
+.why-img .badge b{font-family:var(--serif);font-size:1.5rem;display:block;line-height:1}
+.why-img .badge small{font-size:.76rem;color:rgba(255,255,255,.82)}
+.why-copy h2{font-size:clamp(2.2rem,4.4vw,3.2rem);margin:16px 0 24px}
+.why-copy h2 em{color:var(--clay)}
+.why-copy p{color:#4a3c33;font-size:1.08rem;margin-bottom:20px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.why-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.97rem;color:var(--clay-d)}
+.why-list svg{width:22px;height:22px;stroke:var(--sage);fill:none;stroke-width:2.4;flex:none}
+
+/* PROCESS dark glass band */
+.proc{position:relative;color:#fff;overflow:hidden;background:radial-gradient(1000px 500px at 82% -8%,rgba(182,92,56,.42),transparent 60%),linear-gradient(165deg,var(--espresso),var(--espresso2))}
+.proc .sec-head h2 em{color:#E9C9A0}
+.proc .sec-head p{color:rgba(255,255,255,.72)}
+.proc .sec-head .eyebrow{color:#E9C9A0}
+.proc .sec-head .eyebrow::before{background:var(--sage)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.pcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);border-radius:16px;padding:32px 28px;position:relative;overflow:hidden;transition:.35s}
+.pcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.08)}
+.pcard .num{position:absolute;right:16px;top:6px;font-family:var(--serif);font-size:3.6rem;color:rgba(233,201,160,.16);line-height:1}
+.pcard .ic{width:52px;height:52px;border-radius:14px;background:rgba(182,92,56,.28);color:#E9C9A0;display:grid;place-items:center;margin-bottom:20px}
+.pcard .ic svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+.pcard h3{font-size:1.25rem;margin-bottom:9px;color:#fff}
+.pcard p{font-size:.93rem;color:rgba(255,255,255,.72)}
+
+/* MATERIALS grid (light) */
+.mat{background:var(--bg)}
+.mat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px 32px;position:relative;overflow:hidden;transition:.35s}
+.mcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.mcard:hover::before{transform:scaleX(1)}
+.mcard:hover{transform:translateY(-6px);box-shadow:0 30px 60px -38px rgba(110,51,32,.4)}
+.mcard .ic{width:52px;height:52px;border-radius:14px;background:var(--sand);color:var(--clay);display:grid;place-items:center;margin-bottom:20px}
+.mcard .ic svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+.mcard h3{font-size:1.3rem;margin-bottom:10px}
+.mcard p{font-size:.96rem;color:var(--muted)}
+
+/* COAST brand band */
+.coast{position:relative;overflow:hidden;background:var(--bg)}
+.coast .inner{position:relative;border-radius:30px;overflow:hidden;color:#fff;padding:0}
+.coast .cbg{position:absolute;inset:0;z-index:0}
+.coast .cbg img{width:100%;height:100%;object-fit:cover}
+.coast .cbg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(110,51,32,.94),rgba(182,92,56,.72) 60%,rgba(95,115,87,.6))}
+.coast .cc{position:relative;z-index:2;padding:80px 64px;display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.coast h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:16px}
+.coast h2 em{font-style:italic;color:#F3D9C6}
+.coast p{color:rgba(255,255,255,.9);font-size:1.08rem;max-width:44ch}
+.coast .chips{display:flex;flex-wrap:wrap;gap:10px}
+.coast .chips span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:30px;padding:10px 18px;font-size:.9rem;font-weight:600}
+
+/* QUOTE */
+.quote-sec{background:var(--paper)}
+.quote-card{position:relative;background:radial-gradient(700px 380px at 88% 0%,rgba(182,92,56,.5),transparent 62%),linear-gradient(160deg,var(--espresso),var(--espresso2));color:#fff;border-radius:28px;padding:80px 72px;overflow:hidden;text-align:center}
+.quote-card::before{content:"\201C";position:absolute;left:38px;top:0;font-family:var(--serif);font-size:11rem;color:rgba(233,201,160,.2);line-height:1}
+.quote-card p{font-family:var(--serif);font-size:clamp(1.6rem,3.2vw,2.5rem);font-style:italic;font-weight:500;line-height:1.32;max-width:20ch;margin:0 auto;position:relative}
+.quote-card .by{margin-top:26px;font-family:var(--sans);font-size:.92rem;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:#E9C9A0}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:20px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.rcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(110,51,32,.4)}
+.stars{color:#D99A3C;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1rem;color:#4a3c33;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.95rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{margin-top:22px;font-size:.82rem;color:var(--muted);font-style:italic}
+
+/* FAQ */
+.faq{background:var(--paper)}
+.faq-wrap{max-width:820px;margin:0}
+.fitem{border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;background:var(--bg);transition:.3s}
+.fitem[open]{background:var(--paper);box-shadow:0 20px 44px -30px rgba(110,51,32,.35)}
+.fitem summary{list-style:none;cursor:pointer;padding:24px 26px;display:flex;align-items:center;gap:18px;font-family:var(--serif);font-size:1.16rem;font-weight:500}
+.fitem summary::-webkit-details-marker{display:none}
+.fitem .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--sand);color:var(--clay);display:grid;place-items:center;transition:.3s;font-size:1.3rem;line-height:1}
+.fitem[open] .tog{background:var(--clay);color:#fff;transform:rotate(45deg)}
+.fitem .body{padding:0 26px 26px 78px;color:var(--muted);font-size:1rem}
+
+/* CONTACT */
+.contact{background:var(--bg);padding:120px 0}
+.contact-head{text-align:center;max-width:680px;margin:0 auto 54px}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin-top:18px;max-width:none}
+.contact-head h2 em{color:var(--clay)}
+.contact-head .eyebrow{justify-content:center}
+.contact-head p{color:var(--muted);font-size:1.12rem;margin-top:18px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;max-width:1060px;margin:0 auto;align-items:stretch}
+.cinfo{background:radial-gradient(600px 340px at 0% 0%,rgba(182,92,56,.4),transparent 60%),linear-gradient(165deg,var(--espresso),var(--espresso2));color:#fff;border-radius:22px;padding:46px 42px}
+.cinfo h3{font-size:1.7rem;margin-bottom:10px}
+.cinfo>p{color:rgba(255,255,255,.76);margin-bottom:30px;font-size:1rem}
+.crow{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:#E9C9A0;fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#E9C9A0;margin-bottom:4px}
+.crow b{font-size:1.04rem;color:#fff;font-weight:600}
+.cform{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:46px 42px}
+.cform label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:20px}
+.cform input,.cform select,.cform textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:10px;font-family:var(--sans);font-size:1rem;background:var(--bg);color:var(--ink);transition:.25s}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--clay);background:#fff;box-shadow:0 0 0 3px rgba(156,74,46,.12)}
+.cform textarea{resize:vertical;min-height:110px}
+.cform .btn{width:100%;justify-content:center;margin-top:6px}
+.cform .fine{font-size:.8rem;color:var(--muted);text-align:center;margin-top:14px}
+
+/* FOOTER */
+footer{background:#221610;color:#C7B4A6;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.55rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.95rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#E9C9A0;margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#D8C7BA;font-size:.95rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#93816F}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .why-grid,.coast .cc{grid-template-columns:1fr;gap:44px}
+  .why-img{max-width:500px}
+  .svc-grid,.pgrid{grid-template-columns:1fr 1fr}
+  .mat-grid,.rev-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+  .coast .cc{padding:56px 40px}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .brand span{display:none}
+  .sec,.contact{padding:78px 0}
+  .hero-in{padding:154px 22px 66px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.pgrid,.why-list,.frow{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .quote-card,.cinfo,.cform{padding:44px 26px}
+  .coast .cc{padding:44px 24px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Straight, level, built to last &middot; <b>Serving San Luis Obispo &amp; the Central Coast</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32"><path d="M9 8v18M16 8v18M23 8v18M6 14h20M6 20h20"/></svg></span>
+      <span><b>A Straight Up Fence Co</b><span>San Luis Obispo, CA</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#craft">Craftsmanship</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-cta" href="#contact">Request a quote</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/suf-hero.jpg" alt="A tall, straight redwood board fence under a clear Central Coast sky"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E9C9A0" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Owner-operated &middot; San Luis Obispo &middot; Free estimates
+    </span>
+    <h1>Straight, solid fences, <em>built to last</em> on the Central Coast.</h1>
+    <p>A Straight Up Fence Co builds the fence right the first time. Level lines, square corners, and quality materials, for homes and businesses across San Luis Obispo and the surrounding coast.</p>
+    <div class="hero-actions">
+      <a class="btn btn-clay" href="#contact">Request a free estimate</a>
+      <a class="btn btn-ghost" href="#services">See what we build</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>Free</b><span>On-site estimates</span></div>
+      <div><b>Residential</b><span>&amp; commercial</span></div>
+      <div><b>Central Coast</b><span>SLO &amp; nearby</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span><div><b>Owner-operated</b><small>Built by Brian Baumgardner</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Central Coast</b><small>San Luis Obispo &amp; area</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Quality craftsmanship</b><small>Straight, level, solid</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><b>Free estimates</b><small>Residential &amp; commercial</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we build</span>
+      <h2>Fencing done <em>straight up.</em></h2>
+      <p>From a backyard privacy fence to a full ranch line, we build in the materials that suit your property, your budget, and the way the Central Coast weathers.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard"><img src="../assets/img/suf-redwood.jpg" alt="A warm redwood board privacy fence"><div class="c"><div class="n">01</div><h3>Wood &amp; redwood</h3><p>Classic board and privacy fences in redwood and cedar, built square and stained to last.</p></div></div>
+      <div class="scard"><img src="../assets/img/suf-backyard.jpg" alt="A clean picket-style yard fence with garden beds"><div class="c"><div class="n">02</div><h3>Vinyl &amp; ornamental</h3><p>Low-maintenance vinyl and ornamental iron or aluminum for a clean, lasting look.</p></div></div>
+      <div class="scard"><img src="../assets/img/suf-ranch2.jpg" alt="A three-rail ranch fence running across a green field"><div class="c"><div class="n">03</div><h3>Ranch &amp; horse</h3><p>Rail, ranch, and horse fencing that holds the line across acreage and open ground.</p></div></div>
+      <div class="scard"><img src="../assets/img/suf-gate.jpg" alt="A wood fence with a matching gate and lattice top"><div class="c"><div class="n">04</div><h3>Gates &amp; entries</h3><p>Walk gates, driveway gates, and automatic gates built to match the fence line.</p></div></div>
+    </div>
+    <div class="also reveal">
+      <b>We also handle:</b>
+      <span>Chain link</span><span>Privacy fences</span><span>Aluminum</span><span>Automatic gates</span><span>Fence repairs</span><span>Post replacement</span><span>Commercial fencing</span><span>Property lines</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="craft">
+  <div class="wrap why-grid">
+    <div class="why-img reveal">
+      <img src="../assets/img/suf-privacy.jpg" alt="A richly stained wood privacy fence and matching gate along a home">
+      <div class="badge"><b>Straight up</b><small>The name says how we build</small></div>
+    </div>
+    <div class="why-copy reveal">
+      <span class="eyebrow">Our craftsmanship</span>
+      <h2>The name is a <em>promise.</em></h2>
+      <p>A Straight Up Fence Co was built on doing things right. Straight posts, level rails, square corners, and materials chosen to stand up to the coast. No shortcuts, no crooked lines, no callbacks.</p>
+      <p>Brian and the crew treat every fence like it borders their own yard. We measure carefully, set posts solid, and leave the site clean, so the fence looks as good in ten years as it does the day it goes up.</p>
+      <div class="why-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Posts set solid</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Straight, level lines</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Quality materials</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Clean job sites</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec proc" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>A straightforward <em>build.</em></h2>
+      <p>From the first walk of the property to the last board, we keep it simple, clear, and on schedule.</p>
+    </div>
+    <div class="pgrid stagger">
+      <div class="pcard"><span class="num">1</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Free estimate</h3><p>We walk the property, talk through your goals, and give a clear, honest quote.</p></div>
+      <div class="pcard"><span class="num">2</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h.01M12 9h.01M15 9h.01"/></svg></div><h3>Materials &amp; design</h3><p>We help you choose the right style and materials for your property and budget.</p></div>
+      <div class="pcard"><span class="num">3</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 6l-4.5 9M6 20l4-2 2-4M18 4l2 2"/><path d="M2 22l3-1 9-9-2-2-9 9-1 3Z"/></svg></div><h3>Straight build</h3><p>Posts set solid, lines run level, corners squared. Built right the first time.</p></div>
+      <div class="pcard"><span class="num">4</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>Walk &amp; clean up</h3><p>We walk the finished fence with you and leave the site clean and clear.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec mat">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Built for the coast</span>
+      <h2>Materials that <em>hold up here.</em></h2>
+      <p>Coastal sun, wind, and salt air are hard on a fence. We build in materials chosen to weather the Central Coast and keep their line for years.</p>
+    </div>
+    <div class="mat-grid stagger">
+      <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 4v16M12 4v16M16 4v16"/></svg></div><h3>Redwood &amp; cedar</h3><p>Naturally weather-resistant wood for privacy and board fences with warmth and character.</p></div>
+      <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16M15 4v16"/></svg></div><h3>Vinyl</h3><p>Clean, low-maintenance panels that resist fading and never need staining or painting.</p></div>
+      <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3v18M18 3v18M6 8h12M6 14h12"/><path d="M9 3v18M15 3v18"/></svg></div><h3>Ornamental iron &amp; aluminum</h3><p>Strong, elegant metal fencing and railings for pools, entries, and property lines.</p></div>
+      <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 3l6 6M9 3l6 6M15 3l6 6M3 9l6 6M9 9l6 6M15 9l6 6"/></svg></div><h3>Chain link</h3><p>Durable, budget-friendly fencing for yards, pets, and commercial sites.</p></div>
+      <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V8M19 20V8M4 8h16l-2-4H6L4 8Z"/></svg></div><h3>Ranch &amp; rail</h3><p>Post-and-rail and ranch fencing that runs clean across fields and acreage.</p></div>
+      <div class="mcard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 6l-4.5 9M2 22l3-1 9-9-2-2-9 9-1 3Z"/><path d="M18 4l2 2"/></svg></div><h3>Repairs &amp; gates</h3><p>Post resets, section repairs, and new gates, including automatic gate installs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec coast">
+  <div class="wrap reveal">
+    <div class="inner">
+      <div class="cbg"><img src="../assets/img/suf-coast.jpg" alt="A Central Coast home at golden hour framed by palm trees"></div>
+      <div class="cc">
+        <div>
+          <span class="eyebrow light">Where we work</span>
+          <h2 style="margin-top:16px">Proudly fencing <em>the Central Coast.</em></h2>
+          <p>Based in San Luis Obispo and building for homeowners, ranches, and businesses across the surrounding coast and valley.</p>
+        </div>
+        <div class="chips">
+          <span>San Luis Obispo</span><span>Los Osos</span><span>Morro Bay</span><span>Pismo Beach</span><span>Arroyo Grande</span><span>Atascadero</span><span>Paso Robles</span><span>Nipomo</span><span>Templeton</span><span>Avila Beach</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec quote-sec">
+  <div class="wrap reveal">
+    <div class="quote-card">
+      <p>A fence should stand straight, sit level, and last. That is the whole idea behind the name.</p>
+      <div class="by">A Straight Up Fence Co</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What customers <em>are saying.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Our new redwood fence looks fantastic and the lines are perfectly straight. Brian was easy to work with, showed up when he said he would, and left the yard spotless.</p>
+        <div class="who"><span class="av">MT</span><div><b>Mark T.</b><small>San Luis Obispo</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Replaced our old fence and added a gate. Solid posts, clean work, and a fair price. It is clear these guys take pride in doing it right.</p>
+        <div class="who"><span class="av">JR</span><div><b>Jenna R.</b><small>Arroyo Grande</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Great communication from the estimate through the build. The ranch fencing they put in is straight as an arrow. Would absolutely hire again.</p>
+        <div class="who"><span class="av">DC</span><div><b>Dave C.</b><small>Templeton</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note reveal">Reviews shown are illustrative.</p>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Frequently asked <em>questions.</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details class="fitem"><summary><span class="tog">+</span>Do you offer free estimates?</summary><div class="body">Yes. We come out to your property, walk the line, talk through your options, and give a clear, honest quote at no cost.</div></details>
+      <details class="fitem"><summary><span class="tog">+</span>What types of fences do you build?</summary><div class="body">Wood and redwood, vinyl, chain link, ornamental iron and aluminum, ranch and horse fencing, privacy fences, and gates including automatic gates. We also handle repairs and post replacement.</div></details>
+      <details class="fitem"><summary><span class="tog">+</span>Do you work with both homes and businesses?</summary><div class="body">We do. A Straight Up Fence Co handles residential and commercial fencing across San Luis Obispo and the Central Coast.</div></details>
+      <details class="fitem"><summary><span class="tog">+</span>What areas do you serve?</summary><div class="body">We are based in San Luis Obispo and serve the surrounding Central Coast, including Los Osos, Morro Bay, Pismo Beach, Arroyo Grande, Atascadero, Paso Robles, and nearby communities.</div></details>
+      <details class="fitem"><summary><span class="tog">+</span>Can you repair an existing fence?</summary><div class="body">Yes. Whether it is a few leaning posts, a damaged section, or a gate that no longer swings true, we can repair it or replace what needs replacing.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Request your <em>free estimate.</em></h2>
+      <p>Tell us about your project and we will get back to you to set up an on-site estimate.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>A Straight Up Fence Co</h3>
+        <p>Straight, solid, quality fences for the Central Coast.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Based in</small><b>San Luis Obispo, CA</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><small>Hours</small><b>Mon to Fri, 8am to 5pm</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          <div><small>Estimates</small><b>Free, on-site, no obligation</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
+          <div><small>We serve</small><b>Residential &amp; commercial</b></div>
+        </div>
+      </div>
+      <form class="cform reveal" onsubmit="return false;">
+        <div class="frow">
+          <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div class="field"><label>Phone</label><input type="tel" placeholder="Best number to reach you"></div>
+        </div>
+        <div class="field"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+        <div class="field"><label>Project type</label>
+          <select>
+            <option>Wood or redwood fence</option>
+            <option>Vinyl fence</option>
+            <option>Chain link</option>
+            <option>Ornamental iron or aluminum</option>
+            <option>Ranch or horse fencing</option>
+            <option>Gate or automatic gate</option>
+            <option>Fence repair</option>
+            <option>Commercial fencing</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label>Tell us about your project</label><textarea placeholder="Where the fence goes, rough length, and what you have in mind."></textarea></div>
+        <button class="btn btn-clay" type="submit">Request my free estimate</button>
+        <p class="fine">We will follow up to schedule your on-site estimate.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>A Straight Up Fence Co</b>
+        <p>Straight, solid, quality fences for San Luis Obispo and the Central Coast. Residential and commercial. Free estimates.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Wood &amp; redwood</a>
+        <a href="#services">Vinyl &amp; ornamental</a>
+        <a href="#services">Ranch &amp; horse</a>
+        <a href="#services">Gates &amp; repairs</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#craft">Craftsmanship</a>
+        <a href="#process">Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Request a quote</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> A Straight Up Fence Co LLC</span>
+      <span>San Luis Obispo, CA &middot; Central Coast fencing &middot; Free estimates</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

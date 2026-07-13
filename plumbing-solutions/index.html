@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumbing Solutions LLC | Master Plumber in Lexington, SC</title>
+<meta name="description" content="Plumbing Solutions LLC is led by Jeff Pindak, a licensed master plumber serving Lexington and the Midlands of South Carolina. Honest, reliable plumbing with fast emergency response. Call 803-324-6966.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312324A'/%3E%3Cpath d='M16 6c3.5 4 5.5 6.8 5.5 9.6a5.5 5.5 0 0 1-11 0C10.5 12.8 12.5 10 16 6Z' fill='%231FB6A6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#12324A; --navy-d:#0C2436; --ink:#132A3B; --deep:#0A1D2B;
+  --accent:#1FB6A6; --accent-d:#159487; --accent-soft:#E1F6F3; --mist:#EDF5F5;
+  --bg:#F5F9F9; --paper:#FFFFFF; --muted:#5A7080;
+  --line:rgba(19,42,59,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-d)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#8FE3D9}
+.eyebrow.light::before{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:9px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-acc{background:var(--accent);color:#08312c}
+.btn-acc:hover{background:var(--accent-d);color:#fff;transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(10,29,43,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--deep);color:#a9c6cf;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:12px;background:linear-gradient(150deg,var(--accent),var(--accent-d));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px -6px rgba(31,182,166,.7)}
+.brand .mk svg{width:24px;height:24px}
+.brand b{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--accent-d)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#08312c;font-weight:700;font-size:.92rem;padding:11px 22px;border-radius:9px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);color:#fff;transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:850px;display:flex;align-items:center;overflow:hidden;background:var(--navy-d)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.09);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,29,43,.95) 0%,rgba(18,50,74,.86) 44%,rgba(18,50,74,.5) 78%,rgba(12,36,54,.32) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;width:620px;height:620px;right:-140px;top:-120px;background:radial-gradient(circle,rgba(31,182,166,.32),transparent 66%);z-index:1;animation:drift 16s ease-in-out infinite alternate;pointer-events:none}
+@keyframes drift{to{transform:translate(-60px,70px)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 116px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.4vw,5.9rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{font-family:var(--serif);color:#5FD8CB;font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:62px;flex-wrap:wrap}
+.hero-mini div{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(10,29,43,.28);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:50px;height:50px;flex:none;border-radius:13px;background:var(--accent-soft);display:grid;place-items:center}
+.trust .t svg{width:26px;height:26px;stroke:var(--accent-d);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:120px 0}
+.sec-head{max-width:700px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 60px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent-d)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:58ch}
+
+/* SERVICES - icon category cards */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.scard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:38px 34px;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.scard:hover{transform:translateY(-6px);box-shadow:0 30px 56px -34px rgba(10,29,43,.5)}
+.scard:hover::before{transform:scaleX(1)}
+.scard .ic{width:56px;height:56px;border-radius:15px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;margin-bottom:22px}
+.scard .ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.7}
+.scard h3{font-size:1.42rem;margin-bottom:10px}
+.scard>p{font-size:.98rem;color:var(--muted);margin-bottom:16px}
+.scard ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.scard li{font-size:.82rem;font-weight:600;color:var(--navy);background:var(--mist);border-radius:30px;padding:6px 13px}
+.also{margin-top:36px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:13px}
+.also b{font-family:var(--serif);font-size:1.2rem;margin-right:8px}
+.also span{background:var(--accent-soft);color:var(--accent-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* FOUNDER split */
+.founder{background:#fff}
+.founder-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:center}
+.founder-img{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 44px 84px -48px rgba(10,29,43,.6)}
+.founder-img img{width:100%;aspect-ratio:5/5.4;object-fit:cover;object-position:center 30%}
+.founder-img .badge{position:absolute;left:24px;bottom:24px;background:var(--navy);color:#fff;border-radius:14px;padding:16px 22px;backdrop-filter:blur(4px)}
+.founder-img .badge b{font-family:var(--serif);font-size:1.5rem;display:block;line-height:1;color:#5FD8CB}
+.founder-img .badge small{font-size:.76rem;color:rgba(255,255,255,.82)}
+.founder-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 24px}
+.founder-copy h2 em{color:var(--accent-d)}
+.founder-copy p{color:#33506a;font-size:1.08rem;margin-bottom:20px}
+.founder-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.founder-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.98rem;color:var(--navy)}
+.founder-list svg{width:22px;height:22px;stroke:var(--accent-d);fill:none;stroke-width:2.2;flex:none}
+
+/* DARK GLASS band */
+.darksec{position:relative;color:#fff;overflow:hidden;background:linear-gradient(165deg,#12324A,#0A1D2B)}
+.darksec::before{content:"";position:absolute;width:560px;height:560px;left:-160px;top:-120px;background:radial-gradient(circle,rgba(31,182,166,.26),transparent 68%);pointer-events:none}
+.darksec .sec-head h2{color:#fff}
+.darksec .sec-head h2 em{color:#5FD8CB}
+.darksec .sec-head p{color:rgba(255,255,255,.72)}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.dcard{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:34px 30px;backdrop-filter:blur(6px);overflow:hidden;transition:.4s}
+.dcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.07)}
+.dcard .num{position:absolute;right:22px;top:8px;font-family:var(--serif);font-size:3.4rem;color:rgba(95,216,203,.16);font-style:italic}
+.dcard .ic{width:52px;height:52px;border-radius:14px;background:rgba(31,182,166,.16);color:#5FD8CB;display:grid;place-items:center;margin-bottom:20px}
+.dcard .ic svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.7}
+.dcard h3{font-size:1.28rem;margin-bottom:9px}
+.dcard p{font-size:.95rem;color:rgba(255,255,255,.72)}
+
+/* AQUA emergency band */
+.serve-band{background:var(--bg);padding-top:120px}
+.serve-inner{background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:30px;color:#fff;padding:64px 60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;position:relative;overflow:hidden;box-shadow:0 40px 80px -44px rgba(21,148,135,.7)}
+.serve-inner::after{content:"";position:absolute;width:380px;height:380px;right:-80px;bottom:-140px;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 68%);pointer-events:none}
+.serve-inner .l{max-width:640px;position:relative;z-index:2}
+.serve-inner .tag{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.2);color:#fff;font-weight:700;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:30px;margin-bottom:18px}
+.serve-inner h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px;color:#fff}
+.serve-inner p{color:rgba(255,255,255,.9);font-size:1.12rem}
+.serve-inner .r{text-align:center;position:relative;z-index:2}
+.serve-inner .r .ph{font-family:var(--serif);font-size:2.3rem;color:#fff;display:block;margin-bottom:14px}
+
+/* GALLERY */
+.gallery{background:#fff}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.gal-grid figure{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 44px -30px rgba(10,29,43,.45)}
+.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gal-grid figure:hover img{transform:scale(1.07)}
+.gal-grid figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,29,43,.5))}
+.gal-grid figcaption{position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;font-size:.86rem;font-weight:600}
+.gal-grid .big{grid-column:span 2;grid-row:span 2}
+.gal-grid .tall{grid-row:span 2}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:44px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(10,29,43,.4)}
+.stars{color:#F5A623;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard>p{font-size:1.02rem;color:#33506a;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(150deg,var(--accent),var(--accent-d));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{margin-top:26px;font-size:.82rem;color:var(--muted);font-style:italic}
+
+/* FAQ */
+.faq{background:#fff}
+.faq-grid{max-width:840px;margin:0}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:15px;margin-bottom:14px;overflow:hidden;transition:.3s}
+.faq details[open]{box-shadow:0 22px 44px -32px rgba(10,29,43,.4);border-color:rgba(31,182,166,.4)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;align-items:center;gap:18px;font-family:var(--serif);font-size:1.24rem;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .tog{margin-left:auto;width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;font-size:1.4rem;font-weight:600;transition:.3s;line-height:1}
+.faq details[open] .tog{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq .qic{width:22px;height:22px;flex:none;stroke:var(--accent-d);fill:none;stroke-width:1.9}
+.faq p{padding:0 28px 26px 68px;color:var(--muted);font-size:1.02rem;margin:0}
+
+/* CONTACT */
+.contact{background:linear-gradient(165deg,#12324A,#0A1D2B);color:#fff;padding:120px 0;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;width:520px;height:520px;right:-140px;top:-100px;background:radial-gradient(circle,rgba(31,182,166,.22),transparent 68%);pointer-events:none}
+.contact-head{text-align:center;max-width:640px;margin:0 auto 56px;position:relative;z-index:2}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.4rem);margin:16px 0}
+.contact-head h2 em{color:#5FD8CB}
+.contact-head .eyebrow{justify-content:center}
+.contact-head p{color:rgba(255,255,255,.75);font-size:1.12rem;margin-top:8px}
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:stretch;position:relative;z-index:2}
+.cinfo{background:rgba(255,255,255,.05);border:1px solid var(--lineD);border-radius:20px;padding:44px 40px}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow:first-child{border-top:none;padding-top:0}
+.crow svg{width:24px;height:24px;stroke:#5FD8CB;fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#8FE3D9;margin-bottom:4px}
+.crow b,.crow a{font-size:1.08rem;color:#fff;font-weight:600}
+.cform{background:rgba(255,255,255,.06);border:1px solid var(--lineD);border-radius:20px;padding:46px 42px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.cform .ic{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.cform .ic svg{width:30px;height:30px;stroke:#08312c;fill:none;stroke-width:1.8}
+.cform h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+.cform p{color:rgba(255,255,255,.72);margin-bottom:28px}
+.cform .btn{width:100%;justify-content:center;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:#08161F;color:#9FB4BE;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#8FE3D9;margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B4C6CE;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6C8290}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .founder-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .founder-img{max-width:480px}
+  .svc-grid,.dgrid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+  .gal-grid .big{grid-column:span 2}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:78px 0}
+  .serve-band{padding-top:78px}
+  .hero-in{padding:150px 22px 64px}
+  .hero-mini div{padding-right:24px;margin-right:24px}
+  .svc-grid,.dgrid,.founder-list{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .serve-inner{padding:48px 30px}
+  .gal-grid{grid-template-columns:1fr;grid-auto-rows:220px}
+  .gal-grid .big{grid-column:span 1;grid-row:span 1}
+  .faq p{padding-left:28px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Fast response for plumbing emergencies &middot; <b>Call 803-324-6966</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c3.6 4.2 5.6 7 5.6 9.9a5.6 5.6 0 0 1-11.2 0C10.4 12 12.4 9.2 16 5Z" fill="#fff"/></svg></span>
+      <span><b>Plumbing Solutions</b><span>Lexington, SC</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About Jeff</a>
+      <a href="#work">Our work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:8033246966"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>803-324-6966</span></a>
+      <a class="nav-cta" href="#contact">Book a plumber</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/psl-1.jpeg" alt="The Plumbing Solutions team and service vans in Lexington, SC"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#5FD8CB" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Master plumber &middot; Licensed in three states &middot; Lexington, SC
+    </span>
+    <h1>Honest plumbing for the <em>Midlands of South Carolina.</em></h1>
+    <p>Plumbing Solutions is led by master plumber Jeff Pindak. Straight answers, reliable workmanship, and fast response when a plumbing emergency can't wait until morning.</p>
+    <div class="hero-actions">
+      <a class="btn btn-acc" href="#contact">Book a plumber</a>
+      <a class="btn btn-ghost" href="tel:8033246966">Call 803-324-6966</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>Master</b><span>Licensed plumber</span></div>
+      <div><b>3 states</b><span>Licensed across</span></div>
+      <div><b>Sun&ndash;Fri</b><span>Here when you need us</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Master plumber</b><small>Led by Jeff Pindak</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><div><b>Licensed in 3 states</b><small>Fully credentialed</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Lexington &amp; the Midlands</b><small>Local, dependable service</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Fast emergency response</b><small>Even at 2am</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Full-service plumbing, <em>done right.</em></h2>
+      <p>From a dripping faucet to a full re-pipe or sewer line, Jeff and the team handle repairs, replacements, and installations across your whole home.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+        <h3>Emergency Plumbing</h3>
+        <p>Burst pipes, no water, or a flooding fixture. Call any hour and we get moving.</p>
+        <ul><li>Fast response</li><li>Leaks &amp; bursts</li><li>Shut-off help</li></ul>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 0 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.3-2.3z"/></svg></span>
+        <h3>Repair &amp; Maintenance</h3>
+        <p>Everyday fixes and upkeep that keep your plumbing running quietly in the background.</p>
+        <ul><li>Repairs</li><li>Maintenance</li><li>Inspections</li></ul>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4v6a8 8 0 0 0 8 8v3"/><path d="M20 4v6a8 8 0 0 1-8 8"/></svg></span>
+        <h3>Leaks &amp; Re-pipes</h3>
+        <p>Pipe repair, full pipe replacement, and slab leak work handled cleanly and correctly.</p>
+        <ul><li>Pipe repair</li><li>Pipe replacement</li><li>Slab leaks</li></ul>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M6 3v6a6 6 0 0 0 12 0V3"/><path d="M12 15v6"/><path d="M8 21h8"/></svg></span>
+        <h3>Bathroom Plumbing</h3>
+        <p>Tubs, showers, sinks, toilets, and faucets installed, repaired, and replaced.</p>
+        <ul><li>Tub &amp; shower</li><li>Toilets</li><li>Sinks &amp; faucets</li></ul>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h4"/><path d="M8 11h4"/></svg></span>
+        <h3>Kitchen Plumbing</h3>
+        <p>Appliance install, repair, and replacement, plus garbage disposals that quit on you.</p>
+        <ul><li>Appliance hookups</li><li>Garbage disposal</li><li>Sink lines</li></ul>
+      </div>
+      <div class="scard">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span>
+        <h3>Sewer &amp; Drains</h3>
+        <p>Drain cleaning, sewer line repair and replacement, backups, hydro jetting, and tree roots.</p>
+        <ul><li>Drain cleaning</li><li>Sewer repair</li><li>Hydro jetting</li></ul>
+      </div>
+    </div>
+    <div class="also reveal">
+      <b>Also on the truck:</b>
+      <span>Water line repair &amp; replacement</span><span>Backflow preventers</span><span>Sump &amp; ejector pumps</span><span>Hose bibs</span><span>Cleanouts</span><span>Meter leaks</span><span>Tree root solutions</span><span>Plumbing inspections</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec founder" id="about">
+  <div class="wrap founder-grid">
+    <div class="founder-img reveal">
+      <img src="../assets/img/psl-2.jpeg" alt="A Plumbing Solutions technician at work">
+      <div class="badge"><b>Jeff Pindak</b><small>Licensed master plumber</small></div>
+    </div>
+    <div class="founder-copy reveal">
+      <span class="eyebrow">Who you're calling</span>
+      <h2>A master plumber who <em>tells it straight.</em></h2>
+      <p>Plumbing Solutions is led by Jeff Pindak, a licensed master plumber holding licenses across three states. That level of credential means the work is done to code, done once, and done the way it should be.</p>
+      <p>The promise is simple: honest advice, reliable workmanship, and a fair answer whether the job is a quick repair or a full re-pipe. When something goes wrong at 2am, you have a team you can actually reach.</p>
+      <div class="founder-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Licensed master plumber</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Licensed in three states</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Honest, upfront answers</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Fast emergency response</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec darksec">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow light">Why homeowners call us</span>
+      <h2>Reliable work you don't have to <em>think twice about.</em></h2>
+      <p>Plumbing you can trust starts with a plumber you can trust. Here is what the Midlands counts on us for.</p>
+    </div>
+    <div class="dgrid stagger">
+      <div class="dcard"><span class="num">01</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Licensed &amp; qualified</h3><p>A master plumber on the job means the work meets code and holds up over time.</p></div>
+      <div class="dcard"><span class="num">02</span><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Fast when it counts</h3><p>Plumbing emergencies don't keep business hours. We move quickly, day or night.</p></div>
+      <div class="dcard"><span class="num">03</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><h3>Honest every time</h3><p>Straight answers and fair pricing, so you always know what you're paying for and why.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="serve-band">
+  <div class="wrap">
+    <div class="serve-inner reveal">
+      <div class="l">
+        <span class="tag"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>Emergency service</span>
+        <h2>A 2am plumbing emergency won't wait. Neither do we.</h2>
+        <p>Flooding, a burst line, or no water at all. Call the moment it happens and we'll get a plumber headed your way.</p>
+      </div>
+      <div class="r">
+        <span class="ph">803-324-6966</span>
+        <a class="btn btn-white" href="tel:8033246966">Call now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gallery" id="work">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">On the job</span>
+      <h2>Real work across <em>the Midlands.</em></h2>
+      <p>From water heaters to sewer cameras and fresh pipe in the ground, here's the team out doing the work.</p>
+    </div>
+    <div class="gal-grid stagger">
+      <figure class="big"><img src="../assets/img/psl-3.jpeg" alt="Technician servicing a toilet during a bathroom plumbing job"><figcaption>Bathroom fixtures</figcaption></figure>
+      <figure><img src="../assets/img/psl-2.jpeg" alt="Technician servicing a water heater"><figcaption>Water heater service</figcaption></figure>
+      <figure class="tall"><img src="../assets/img/psl-5.webp" alt="Fresh PVC water line joined in a trench"><figcaption>Water lines &amp; re-pipes</figcaption></figure>
+      <figure><img src="../assets/img/psl-4.jpeg" alt="Technician running a sewer camera on a cleanout"><figcaption>Sewer camera inspection</figcaption></figure>
+      <figure><img src="../assets/img/psl-1.jpeg" alt="The Plumbing Solutions team and service vans"><figcaption>The team</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What neighbors <em>are saying.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Called late at night with water coming up in the bathroom and Jeff's team had someone out fast. Fixed it right and explained everything. Honest and reliable, exactly what you want in a plumber.</p>
+        <div class="who"><span class="av">DM</span><div><b>Danielle M.</b><small>Lexington, SC</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Had a slab leak and a section of pipe that needed replacing. They walked me through the options, gave me a straight price, and did clean work. Would not call anyone else in the Midlands.</p>
+        <div class="who"><span class="av">RT</span><div><b>Robert T.</b><small>Irmo, SC</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Professional from the first phone call. They cleared a stubborn sewer clog, ran a camera to show me the cause, and had it solved quickly. Fair, friendly, and knew exactly what they were doing.</p>
+        <div class="who"><span class="av">KS</span><div><b>Kayla S.</b><small>West Columbia, SC</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative.</p>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-grid reveal">
+      <details open>
+        <summary><svg class="qic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v.5M11 12h1v4h1"/></svg>Do you handle after-hours emergencies?</summary>
+        <p>Yes. Plumbing emergencies rarely happen at a convenient time. If you have a burst pipe, no water, or a flooding fixture, call 803-324-6966 and we'll get a plumber moving, even at 2am.</p>
+      </details>
+      <details>
+        <summary><svg class="qic" viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>What areas do you serve?</summary>
+        <p>We're based in Lexington, SC and serve homeowners and businesses across the Midlands of South Carolina.</p>
+      </details>
+      <details>
+        <summary><svg class="qic" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/></svg>Are you licensed?</summary>
+        <p>Plumbing Solutions is led by Jeff Pindak, a licensed master plumber who holds licenses across three states. Every job is done to code.</p>
+      </details>
+      <details>
+        <summary><svg class="qic" viewBox="0 0 24 24"><path d="M4 4v6a8 8 0 0 0 8 8"/><path d="M20 4v6a8 8 0 0 1-8 8"/></svg>What kinds of plumbing do you take on?</summary>
+        <p>Everything from repairs and maintenance to leaks, re-pipes, slab leaks, bathroom and kitchen plumbing, water lines, backflow preventers, sump and ejector pumps, drain cleaning, and full sewer line work including hydro jetting and tree root solutions.</p>
+      </details>
+      <details>
+        <summary><svg class="qic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>What are your hours?</summary>
+        <p>We're available Sunday through Friday, with fast response for emergencies. The quickest way to reach us is a call or text to 803-324-6966.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Let's get it <em>solved.</em></h2>
+      <p>Tell us what's going on and we'll get a licensed plumber out to you. Call, text, or book, we'll take care of the rest.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:8033246966">803-324-6966</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Service area</small><b>Lexington &amp; the Midlands of South Carolina</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><small>Hours</small><b>Sunday through Friday &middot; Emergencies day or night</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <div><small>Licensed</small><b>Master plumber, licensed in three states</b></div>
+        </div>
+      </div>
+      <div class="cform reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <h3>Book a plumber</h3>
+        <p>Same-day and emergency service available. Call or text and we'll get you scheduled fast.</p>
+        <a class="btn btn-acc" href="tel:8033246966">Call 803-324-6966</a>
+        <a class="btn btn-white" href="sms:8033246966" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);">Text us instead</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Plumbing Solutions</b>
+        <p>Honest, reliable plumbing for Lexington and the Midlands of South Carolina. Led by master plumber Jeff Pindak.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Emergency plumbing</a>
+        <a href="#services">Leaks &amp; re-pipes</a>
+        <a href="#services">Bathroom &amp; kitchen</a>
+        <a href="#services">Sewer &amp; drains</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:8033246966">803-324-6966</a>
+        <p>Lexington, SC<br>Serving the Midlands</p>
+        <p>Sunday through Friday</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Plumbing Solutions LLC</span>
+      <span>Master plumber &middot; Licensed in three states &middot; Lexington, SC</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

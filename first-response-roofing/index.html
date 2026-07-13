@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Response Roofing | Commercial Roofing in Indianapolis, IN</title>
+<meta name="description" content="First Response Roofing LLC is a commercial roofing company in Indianapolis, IN, serving Indianapolis, Fishers, and Bloomington. Commercial roof repair, coatings and restoration, replacement, inspections, and rapid storm and emergency response for building owners and property managers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E0F10'/%3E%3Cpath d='M16 5l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V8Z' fill='%23D93A2B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#D93A2B; --accent-d:#B42C1F; --accent-soft:#FBE7E3;
+  --ink:#161719; --dark:#0E0F10; --dark2:#1C1D1F;
+  --bg:#F6F4F1; --paper:#FFFFFF; --muted:#6B6C6E;
+  --line:rgba(22,23,25,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-red{background:var(--accent);color:#fff}
+.btn-red:hover{background:var(--accent-d);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(217,58,43,.6)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--accent);color:#fff;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:600;letter-spacing:.03em;transition:.35s}
+.topbar b{font-weight:800}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(14,15,16,.9);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:11px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:24px;height:24px}
+.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.85);position:relative;transition:.3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:12px 24px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(96deg,rgba(14,15,16,.95) 0%,rgba(14,15,16,.82) 40%,rgba(28,29,31,.45) 74%,rgba(217,58,43,.28) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;right:-10%;top:-15%;width:60%;height:70%;background:radial-gradient(circle,rgba(217,58,43,.4),transparent 62%);z-index:1;filter:blur(30px);animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-40px,50px)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:200px 40px 120px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.1rem,6.3vw,5.7rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:var(--accent);font-style:italic;font-weight:500}
+.hero p{font-size:1.22rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.82);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:58px;flex-wrap:wrap}
+.hero-mini div{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.5rem;color:#fff;display:block;line-height:1.1}
+.hero-mini span{font-size:.78rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(0,0,0,.3);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:48px;height:48px;flex:none;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center}
+.trust .t svg{width:25px;height:25px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:700px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:58ch}
+
+/* SERVICES icon cards */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:36px 32px;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -38px rgba(0,0,0,.4)}
+.card:hover::before{transform:scaleX(1)}
+.ic{width:54px;height:54px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px}
+.ic svg{width:27px;height:27px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.card h3{font-size:1.42rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.98rem}
+
+/* SPLIT */
+.split{background:#fff}
+.split.alt{background:var(--bg)}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.split.rev .split-grid{direction:rtl}
+.split.rev .split-grid>*{direction:ltr}
+.split-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 44px 88px -50px rgba(0,0,0,.6)}
+.split-img img{width:100%;aspect-ratio:5/4.5;object-fit:cover;transition:transform .9s}
+.split-img:hover img{transform:scale(1.06)}
+.split-img .badge{position:absolute;left:22px;bottom:22px;background:var(--accent);color:#fff;border-radius:12px;padding:15px 22px}
+.split-img .badge b{font-family:var(--serif);font-size:1.5rem;display:block;line-height:1}
+.split-img .badge small{font-size:.74rem;color:rgba(255,255,255,.85)}
+.split-copy h2{font-size:clamp(2.1rem,4.3vw,3.2rem);margin:16px 0 22px}
+.split-copy h2 em{color:var(--accent)}
+.split-copy p{color:#3a3b3d;font-size:1.06rem;margin-bottom:18px}
+.slist{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:24px}
+.slist div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.96rem;color:var(--ink)}
+.slist svg{width:21px;height:21px;stroke:var(--accent);fill:none;stroke-width:2.2;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chips span{background:var(--accent-soft);color:var(--accent-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* DARK PROCESS BAND */
+.darksec{position:relative;color:#fff;overflow:hidden;background:radial-gradient(circle at 82% 15%,rgba(217,58,43,.32),transparent 55%),linear-gradient(165deg,#161719,#0E0F10)}
+.darksec .sec-head h2 em{color:var(--accent)}
+.darksec .sec-head p{color:rgba(255,255,255,.7)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.pcard{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(6px);border-radius:16px;padding:34px 28px;overflow:hidden;transition:transform .35s}
+.pcard:hover{transform:translateY(-6px)}
+.pcard .num{position:absolute;right:16px;top:6px;font-family:var(--serif);font-size:3.6rem;color:rgba(217,58,43,.28);line-height:1}
+.pcard .ic{background:rgba(217,58,43,.18)}
+.pcard h3{font-size:1.28rem;margin-bottom:9px;color:#fff}
+.pcard p{color:rgba(255,255,255,.68);font-size:.94rem}
+
+/* BRAND BAND (who we serve) */
+.serve{padding:118px 0}
+.serve-band{background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:30px;padding:70px 64px;color:#fff;position:relative;overflow:hidden}
+.serve-band::after{content:"";position:absolute;right:-60px;bottom:-80px;width:320px;height:320px;border:2px solid rgba(255,255,255,.18);border-radius:50%}
+.serve-band .eyebrow{color:#fff}
+.serve-band .eyebrow::before{background:#fff}
+.serve-band h2{font-size:clamp(2.1rem,4.2vw,3.1rem);margin:16px 0 18px;max-width:20ch;position:relative;z-index:2}
+.serve-band>p{max-width:56ch;color:rgba(255,255,255,.88);font-size:1.08rem;position:relative;z-index:2}
+.serve-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;position:relative;z-index:2}
+.serve-chips span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:30px;padding:10px 20px;font-size:.92rem;font-weight:600}
+
+/* STORM band with image */
+.storm{position:relative;color:#fff;overflow:hidden;background:var(--dark)}
+.storm-bg{position:absolute;inset:0;z-index:0}
+.storm-bg img{width:100%;height:100%;object-fit:cover}
+.storm-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(92deg,rgba(14,15,16,.95),rgba(14,15,16,.7) 55%,rgba(217,58,43,.35))}
+.storm .wrap{position:relative;z-index:2;padding:100px 40px;display:flex;align-items:center;justify-content:space-between;gap:44px;flex-wrap:wrap}
+.storm .l{max-width:640px}
+.storm .tag{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;font-weight:700;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:30px;margin-bottom:20px}
+.storm h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px}
+.storm p{color:rgba(255,255,255,.82);font-size:1.1rem}
+
+/* AREA */
+.area{background:var(--bg)}
+.towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:8px}
+.towns span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:var(--ink);transition:.3s}
+.towns span:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* REVIEWS */
+.rev-sec{background:#fff}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:22px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-note{font-size:.82rem;color:var(--muted);margin-bottom:40px;font-style:italic}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(0,0,0,.3)}
+.stars{color:#F5A623;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#3a3b3d;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq-list{display:grid;gap:16px;max-width:860px;margin:0}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq-item summary{list-style:none;cursor:pointer;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-weight:600;font-size:1.1rem;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;transition:.3s;font-size:1.3rem;line-height:1}
+.faq-item[open] .tog{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq-item .ans{padding:0 28px 26px;color:var(--muted);font-size:1.02rem}
+
+/* CONTACT */
+.contact{background:radial-gradient(circle at 15% 20%,rgba(217,58,43,.22),transparent 50%),linear-gradient(160deg,#1C1D1F,#0E0F10);color:#fff;padding:118px 0}
+.contact-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.contact-head h2{font-size:clamp(2.3rem,4.6vw,3.4rem);margin:16px 0 18px;max-width:none}
+.contact-head h2 em{color:var(--accent)}
+.contact-head p{color:rgba(255,255,255,.72);font-size:1.1rem}
+.contact-head .eyebrow{justify-content:center}
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:34px;align-items:stretch}
+.cinfo{background:rgba(255,255,255,.05);border:1px solid var(--lineD);border-radius:18px;padding:44px 40px}
+.cinfo h3{font-size:1.5rem;color:#fff;margin-bottom:22px}
+.crow{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--lineD)}
+.crow:first-of-type{border-top:none}
+.crow svg{width:23px;height:23px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.crow b{font-size:1.04rem;color:#fff;font-weight:600}
+.cform{background:#fff;border-radius:18px;padding:44px 40px}
+.cform label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 7px}
+.cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-family:var(--sans);font-size:1rem;color:var(--ink);margin-bottom:18px;background:var(--bg);transition:.25s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+.cform textarea{resize:vertical;min-height:110px}
+.cform .btn{width:100%;justify-content:center}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.frow>div{min-width:0}
+
+/* FOOTER */
+footer{background:#08090A;color:#9a9b9d;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:36ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#c2c3c5;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6a6b6d}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .split-grid,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .split.rev .split-grid{direction:ltr}
+  .split-img{max-width:520px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .brand span{display:none}
+  .sec,.contact,.serve{padding:76px 0}
+  .hero-in{padding:150px 22px 70px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.proc-grid,.slist,.frow{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .storm .wrap{padding:70px 22px}
+  .serve-band{padding:48px 30px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Rapid first response for Indianapolis commercial buildings &middot; <b>Request a quote today</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V8Z" fill="#fff"/><path d="m12 15 3 3 5-6" stroke="#D93A2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span><b>First Response Roofing</b><span>Commercial &middot; Indianapolis, IN</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#systems">Roof systems</a>
+      <a href="#process">Process</a>
+      <a href="#area">Service area</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <a class="nav-cta" href="#contact">Request a quote</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/frr-c1.jpg" alt="Commercial building flat roof with rooftop mechanical units in a downtown district"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#D93A2B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Commercial roofing &middot; Indianapolis, IN
+    </span>
+    <h1>Commercial roofing, built for <em>rapid response.</em></h1>
+    <p>First Response Roofing keeps Indianapolis buildings dry and protected. From a fast repair to a full replacement, we help owners and property managers act before a small problem becomes a big one.</p>
+    <div class="hero-actions">
+      <a class="btn btn-red" href="#contact">Request a quote</a>
+      <a class="btn btn-ghost" href="#services">See what we do</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>Commercial</b><span>Roofing specialists</span></div>
+      <div><b>Repair &middot; Coat &middot; Replace</b><span>Full service</span></div>
+      <div><b>Indy &middot; Fishers &middot; Bloomington</b><span>Service area</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></span><div><b>Commercial focus</b><small>Buildings, not homes</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div><b>Owner-operated</b><small>First-generation business</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg></span><div><b>Rapid response</b><small>First on the scene</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Serving Central Indiana</b><small>Indy, Fishers, Bloomington</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Commercial roofing, <em>start to finish.</em></h2>
+      <p>Repair, restore, or replace. First Response Roofing handles the full life of a commercial roof, matched to your building and your budget.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 7l3 3M5 21l1-4 9-9 3 3-9 9-4 1ZM13 6l5 5"/></svg></div>
+        <h3>Commercial roof repair</h3>
+        <p>Leaks, punctures, flashing, and seam failures found and fixed fast, before water reaches what is inside.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 17s1.5-2 4-2 4 2 4 2 1.5-2 4-2 4 2 4 2M4 12s1.5-2 4-2 4 2 4 2 1.5-2 4-2 4 2 4 2M4 7s1.5-2 4-2 4 2 4 2 1.5-2 4-2 4 2 4 2"/></svg></div>
+        <h3>Roof coatings &amp; restoration</h3>
+        <p>Reflective coating systems that seal, extend service life, and can add years to a roof you already have.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7M5 10v10h14V10M9 20v-6h6v6"/></svg></div>
+        <h3>Roof replacement</h3>
+        <p>When a roof is past its life, a clean tear-off and new system installed to spec, with minimal disruption to your operation.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14ZM21 21l-5-5"/></svg></div>
+        <h3>Roof inspections</h3>
+        <p>A clear, documented look at the whole roof so you know its true condition and what it needs next.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M6 6l2 2m8 8 2 2M6 18l2-2m8-8 2-2"/><circle cx="12" cy="12" r="3.4"/></svg></div>
+        <h3>Preventative maintenance</h3>
+        <p>Scheduled checkups and small fixes that stop leaks early and protect the investment in your building.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg></div>
+        <h3>Storm &amp; emergency response</h3>
+        <p>Wind, hail, and storm damage handled quickly, from temporary protection to full repair and insurance support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec split" id="systems">
+  <div class="wrap split-grid">
+    <div class="split-img reveal">
+      <img src="../assets/img/frr-c2.jpg" alt="Aerial view of large commercial buildings with flat and low-slope roofs">
+      <div class="badge"><b>Flat &amp; low-slope</b><small>Built for commercial</small></div>
+    </div>
+    <div class="split-copy reveal">
+      <span class="eyebrow">Roof systems</span>
+      <h2>Flat and low-slope, <em>done properly.</em></h2>
+      <p>Commercial roofs are a different job from residential. Wide flat spans, rooftop equipment, drains, and years of foot traffic all put a system to the test. We work across the systems that keep Indianapolis buildings sealed.</p>
+      <p>From single-ply membranes to metal and coatings, we match the system to the building, the exposure, and the way the space is used.</p>
+      <div class="chips">
+        <span>TPO</span><span>EPDM</span><span>Modified bitumen</span><span>Built-up</span><span>Metal</span><span>Coating systems</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec darksec" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>A simple, <em>straight process.</em></h2>
+      <p>No guesswork and no runaround. Here is how a First Response project moves from first call to a roof you can stop worrying about.</p>
+    </div>
+    <div class="proc-grid stagger">
+      <div class="pcard">
+        <span class="num">1</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14ZM21 21l-5-5"/></svg></div>
+        <h3>Assess</h3>
+        <p>We get on the roof, find the real problem, and look at the whole system, not just the leak.</p>
+      </div>
+      <div class="pcard">
+        <span class="num">2</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6ZM15 2v5h5M9 13h6M9 17h6"/></svg></div>
+        <h3>Report</h3>
+        <p>A clear write-up and honest quote, with the options laid out so you can decide with confidence.</p>
+      </div>
+      <div class="pcard">
+        <span class="num">3</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 7l3 3M5 21l1-4 9-9 3 3-9 9-4 1Z"/></svg></div>
+        <h3>Restore</h3>
+        <p>Repair, coat, or replace, done cleanly and on schedule with as little disruption to your building as possible.</p>
+      </div>
+      <div class="pcard">
+        <span class="num">4</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Protect</h3>
+        <p>A maintenance plan and a team you can call, so the roof keeps doing its job long after we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="serve">
+  <div class="wrap">
+    <div class="serve-band reveal">
+      <span class="eyebrow">Who we serve</span>
+      <h2>Built for owners and property managers.</h2>
+      <p>Every day a roof leaks is a day of risk to the building, the tenants, and the business inside. We work with the people responsible for keeping commercial property protected, and we make the roof one less thing to worry about.</p>
+      <div class="serve-chips">
+        <span>Office buildings</span><span>Retail &amp; strip centers</span><span>Warehouses</span><span>Industrial</span><span>Multi-tenant property</span><span>Facility managers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec split alt rev">
+  <div class="wrap split-grid">
+    <div class="split-img reveal">
+      <img src="../assets/img/frr-c3.jpg" alt="Modern commercial building roofline and parapet against a clear sky">
+      <div class="badge"><b>Restore first</b><small>Coat before you replace</small></div>
+    </div>
+    <div class="split-copy reveal">
+      <span class="eyebrow">Coatings &amp; restoration</span>
+      <h2>Add years, <em>not tear-off.</em></h2>
+      <p>Replacement is not always the answer. When a roof still has good bones, a restoration coating can seal seams, stop leaks, and reflect heat, often at a fraction of the cost of a full replacement.</p>
+      <p>We assess honestly and tell you when a coating makes sense and when it does not, so you spend on what your building actually needs.</p>
+      <div class="slist">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Seals seams &amp; leaks</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Reflective &amp; energy-smart</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Extends roof life</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Less disruption</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="storm">
+  <div class="storm-bg"><img src="../assets/img/frr-c5.jpg" alt="Urban commercial rooftops after weather exposure"></div>
+  <div class="wrap">
+    <div class="l reveal">
+      <span class="tag">Storm &amp; emergency response</span>
+      <h2>When the weather hits, we move first.</h2>
+      <p>Indiana storms do not wait for business hours. When wind or hail opens up a roof, a fast first response limits the damage inside. Reach out and we will get on it and help you protect the building.</p>
+    </div>
+    <div class="r reveal">
+      <a class="btn btn-white" href="#contact">Request a quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec split" id="about">
+  <div class="wrap split-grid">
+    <div class="split-img reveal">
+      <img src="../assets/img/frr-c4.jpg" alt="Clean commercial rooftop and parapet detail">
+      <div class="badge"><b>Isiah Conn</b><small>Owner, First Response Roofing</small></div>
+    </div>
+    <div class="split-copy reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>Local, hands-on, <em>and accountable.</em></h2>
+      <p>First Response Roofing is led by owner Isiah Conn, a first-generation business owner who built this company on doing right by the buildings and people who count on him.</p>
+      <p>Based in Indianapolis and serving Indianapolis, Fishers, and Bloomington, we bring an owner's attention to every commercial roof we touch. You get straight answers, clean work, and someone who stands behind it.</p>
+      <div class="slist">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Owner-led</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Commercial-focused</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Local to Indianapolis</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Straight, honest quotes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec area" id="area">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Serving Indianapolis <em>and Central Indiana.</em></h2>
+      <p>Based in Indianapolis and working with commercial property across the metro and beyond.</p>
+    </div>
+    <div class="towns reveal">
+      <span>Indianapolis</span><span>Fishers</span><span>Bloomington</span><span>Carmel</span><span>Noblesville</span><span>Greenwood</span><span>Westfield</span><span>Zionsville</span><span>Avon</span><span>Plainfield</span><span>Central Indiana</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What building owners <em>value.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <p class="rev-note reveal">Reviews shown are illustrative.</p>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>We had a leak over the office and they were out fast, found the real problem, and fixed it right. Easy to work with and no runaround.</p>
+        <div class="who"><span class="av">DM</span><div><b>D. Morris</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>They walked our whole roof, gave us honest options, and recommended a coating instead of a full replacement. Saved us real money.</p>
+        <div class="who"><span class="av">RT</span><div><b>R. Thompson</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Professional from the quote to the cleanup. Clear communication and the work held up through a rough storm season.</p>
+        <div class="who"><span class="av">KP</span><div><b>K. Patel</b><small>Google review</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Commercial roofing <em>questions.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item"><summary>Do you only work on commercial buildings?<span class="tog">+</span></summary><div class="ans">Yes. Commercial roofing is our focus, from office and retail to warehouse and industrial property. It is a different job from residential, and it is the work we are built for.</div></details>
+      <details class="faq-item"><summary>Can a coating really save my roof from replacement?<span class="tog">+</span></summary><div class="ans">Often, yes. If the roof still has good structure and is not too far gone, a restoration coating can seal leaks and add years of life at a fraction of a full replacement. We assess honestly and only recommend it when it makes sense.</div></details>
+      <details class="faq-item"><summary>How fast can you respond to a leak or storm damage?<span class="tog">+</span></summary><div class="ans">Rapid first response is the whole idea. Reach out and we will get on the roof quickly to limit the damage and lay out a plan, including temporary protection when it is needed.</div></details>
+      <details class="faq-item"><summary>What roof systems do you work with?<span class="tog">+</span></summary><div class="ans">Flat and low-slope commercial systems including TPO, EPDM, modified bitumen, built-up, and metal, plus coating and restoration systems. We match the system to your building and how it is used.</div></details>
+      <details class="faq-item"><summary>What areas do you serve?<span class="tog">+</span></summary><div class="ans">We are based in Indianapolis and serve Indianapolis, Fishers, and Bloomington, along with the surrounding Central Indiana communities.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Request your <em>roof quote.</em></h2>
+      <p>Tell us about your building and what is going on. We will take a look and get back to you with clear options and an honest quote.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>First Response Roofing</h3>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Based in</small><b>Indianapolis, Indiana</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13"/></svg>
+          <div><small>Service area</small><b>Indianapolis &middot; Fishers &middot; Bloomington</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M4 17s1.5-2 4-2 4 2 4 2 1.5-2 4-2 4 2 4 2"/><path d="M12 3v9M8 8l4 4 4-4"/></svg>
+          <div><small>Work</small><b>Commercial repair, coatings &amp; replacement</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg>
+          <div><small>Response</small><b>Rapid first response, storm &amp; emergency</b></div>
+        </div>
+      </div>
+      <form class="cform reveal" onsubmit="return false;">
+        <div class="frow">
+          <div><label>Name</label><input type="text" name="name" placeholder="Your name"></div>
+          <div><label>Company</label><input type="text" name="company" placeholder="Building or company"></div>
+        </div>
+        <div class="frow">
+          <div><label>Email</label><input type="email" name="email" placeholder="you@company.com"></div>
+          <div><label>Phone</label><input type="tel" name="phone" placeholder="(317) 000-0000"></div>
+        </div>
+        <label>How can we help?</label>
+        <textarea name="message" placeholder="Tell us about your roof, the building, and what is going on."></textarea>
+        <button class="btn btn-red" type="submit">Request a quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>First Response Roofing</b>
+        <p>Commercial roofing for Indianapolis, Fishers, and Bloomington. Owner-operated, commercial-focused, and built for rapid first response.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Commercial roof repair</a>
+        <a href="#services">Coatings &amp; restoration</a>
+        <a href="#services">Roof replacement</a>
+        <a href="#services">Inspections &amp; maintenance</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#systems">Roof systems</a>
+        <a href="#area">Service area</a>
+        <a href="#contact">Request a quote</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> First Response Roofing LLC</span>
+      <span>Commercial Roofing &middot; Indianapolis, IN</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

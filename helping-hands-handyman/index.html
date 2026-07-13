@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helping Hands Handyman | Trusted Home Repair in Rockville, MD</title>
+<meta name="description" content="Helping Hands Handyman LLC, owned by Martin Mikus, is your trusted partner for reliable home repair and maintenance in Rockville, Maryland. Fixture installs, bathroom remodels, flooring, drywall, exterior repair, and caring services for seniors. Free consultation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231D6FB8'/%3E%3Cpath d='M9 16.5c-1.4-1.4-1.4-3.6 0-5l3-3 1.8 1.8-2 2 5.9 5.9 2-2L23.5 14l-3 3c-1.4 1.4-3.6 1.4-5 0Z' fill='%23F2884B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1D6FB8; --blue-d:#14497A; --navy:#0E2E4C; --ink:#132B41;
+  --accent:#F2884B; --accent-d:#DC6F31; --accent-soft:#FCE7D6;
+  --sky:#E7F1FA; --bg:#F5F9FD; --paper:#FFFFFF; --muted:#5B6E82;
+  --line:rgba(19,43,65,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#fff}
+.eyebrow.light::before{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:9px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-d);transform:translateY(-2px)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--blue)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(15,58,148,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--navy);color:#cfe0f1;font-size:.82rem;text-align:center;padding:9px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:12px;background:linear-gradient(150deg,var(--blue),var(--blue-d));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px -8px rgba(29,111,184,.7)}
+.brand .mk svg{width:25px;height:25px}
+.brand b{font-family:var(--serif);font-size:1.24rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;opacity:.78;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--blue)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:9px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:850px;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(14,46,76,.95) 0%,rgba(20,73,122,.85) 44%,rgba(14,46,76,.5) 78%,rgba(14,46,76,.28) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;z-index:1;width:640px;height:640px;right:-120px;top:-80px;background:radial-gradient(circle,rgba(242,136,75,.5),transparent 62%);filter:blur(20px);animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-60px,50px) scale(1.12)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:196px 40px 112px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.1rem,6.2vw,5.7rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:var(--accent);font-style:italic;font-weight:400}
+.hero p{font-size:1.22rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.86);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:58px;flex-wrap:wrap}
+.hero-mini div{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.55rem;color:#fff;display:block;line-height:1.1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.66);text-transform:uppercase;letter-spacing:.05em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(14,46,76,.28);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:50px;height:50px;flex:none;border-radius:13px;background:var(--sky);display:grid;place-items:center}
+.trust .t svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--blue)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.scard{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:34px 28px;transition:.4s;overflow:hidden}
+.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.scard:hover::before{transform:scaleX(1)}
+.scard:hover{transform:translateY(-6px);box-shadow:0 34px 58px -40px rgba(14,46,76,.45);border-color:transparent}
+.scard .ic{width:54px;height:54px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:22px;transition:.4s}
+.scard:hover .ic{background:var(--accent)}
+.scard .ic svg{width:26px;height:26px;stroke:var(--accent-d);fill:none;stroke-width:1.7;transition:.4s}
+.scard:hover .ic svg{stroke:#fff}
+.scard h3{font-size:1.22rem;margin-bottom:10px}
+.scard p{color:var(--muted);font-size:.95rem}
+.also{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.also b{font-family:var(--serif);font-size:1.16rem;margin-right:8px}
+.also span{background:var(--sky);color:var(--blue-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* SENIORS split */
+.seniors{background:linear-gradient(180deg,#fff,var(--sky))}
+.sen-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:70px;align-items:center}
+.sen-img{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 44px 80px -48px rgba(14,46,76,.5)}
+.sen-img img{width:100%;aspect-ratio:5/5;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.sen-img:hover img{transform:scale(1.06)}
+.sen-img .tag{position:absolute;left:22px;bottom:22px;background:var(--accent);color:#fff;border-radius:14px;padding:15px 22px;display:flex;align-items:center;gap:12px;box-shadow:0 16px 30px -14px rgba(220,111,49,.7)}
+.sen-img .tag svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.7}
+.sen-img .tag b{font-family:var(--serif);font-size:1.1rem;display:block;line-height:1.1}
+.sen-img .tag small{font-size:.76rem;opacity:.9}
+.sen-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 22px}
+.sen-copy h2 em{color:var(--accent-d)}
+.sen-copy p{color:#33475e;font-size:1.08rem;margin-bottom:20px}
+.sen-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.sen-list div{display:flex;align-items:center;gap:12px;font-weight:600;font-size:.98rem;color:var(--blue-d)}
+.sen-list .cic{width:34px;height:34px;flex:none;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center}
+.sen-list svg{width:18px;height:18px;stroke:var(--accent-d);fill:none;stroke-width:2.4}
+
+/* DARK glass band */
+.darksec{position:relative;color:#fff;overflow:hidden;background:radial-gradient(1100px 520px at 82% -12%,rgba(242,136,75,.3),transparent 60%),linear-gradient(165deg,#123a5e,#0b2036)}
+.dark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:14px}
+.dcard{position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:36px 32px;backdrop-filter:blur(6px);overflow:hidden;transition:.4s}
+.dcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.08)}
+.dcard .num{position:absolute;right:22px;top:12px;font-family:var(--serif);font-size:3.2rem;color:rgba(242,136,75,.32);line-height:1}
+.dcard .ic{width:52px;height:52px;border-radius:14px;background:rgba(242,136,75,.18);display:grid;place-items:center;margin-bottom:20px}
+.dcard .ic svg{width:25px;height:25px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.dcard h3{font-size:1.3rem;margin-bottom:10px}
+.dcard p{color:rgba(255,255,255,.76);font-size:.96rem}
+
+/* GALLERY */
+.gal{background:var(--paper)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gcell{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 22px 44px -34px rgba(14,46,76,.5)}
+.gcell img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gcell:hover img{transform:scale(1.06)}
+.gcell .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 22px 18px;background:linear-gradient(180deg,transparent,rgba(11,32,54,.88));color:#fff;font-weight:600;font-size:.98rem}
+.gcell.tall{grid-row:span 2}
+
+/* ABOUT split */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 44px 80px -48px rgba(14,46,76,.55)}
+.about-img img{width:100%;aspect-ratio:5/4.7;object-fit:cover}
+.about-img .badge{position:absolute;left:24px;bottom:24px;background:var(--blue);color:#fff;border-radius:14px;padding:16px 22px}
+.about-img .badge b{font-family:var(--serif);font-size:1.3rem;display:block;line-height:1.1}
+.about-img .badge small{font-size:.78rem;color:rgba(255,255,255,.82)}
+.about-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 22px}
+.about-copy h2 em{color:var(--blue)}
+.about-copy p{color:#33475e;font-size:1.08rem;margin-bottom:20px}
+.about-sign{display:flex;align-items:center;gap:16px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.about-sign .av{width:56px;height:56px;flex:none;border-radius:50%;background:linear-gradient(150deg,var(--blue),var(--blue-d));color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:1.2rem}
+.about-sign b{display:block;font-size:1.02rem;color:var(--ink)}
+.about-sign small{color:var(--muted);font-size:.86rem}
+
+/* SERVE band (brand color) */
+.serve{position:relative;overflow:hidden}
+.serve .band{background:linear-gradient(150deg,var(--accent),var(--accent-d));border-radius:30px;color:#fff;padding:70px 60px;display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center;box-shadow:0 40px 80px -46px rgba(220,111,49,.7)}
+.serve h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.serve p{color:rgba(255,255,255,.9);font-size:1.1rem;max-width:44ch}
+.serve .towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:8px}
+.serve .towns span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:30px;padding:10px 18px;font-size:.9rem;font-weight:600;backdrop-filter:blur(4px)}
+.serve .act{display:flex;flex-direction:column;gap:14px}
+.serve .act .btn{justify-content:center}
+
+/* QUOTE */
+.quote{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.quote::before{content:"";position:absolute;width:520px;height:520px;left:-100px;bottom:-160px;background:radial-gradient(circle,rgba(242,136,75,.34),transparent 62%);filter:blur(14px)}
+.quote .wrap{position:relative;z-index:2;max-width:920px;text-align:center;padding:110px 40px}
+.quote .qm{font-family:var(--serif);font-size:5rem;color:var(--accent);line-height:.6;display:block;margin-bottom:10px}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:400;line-height:1.35}
+.quote span{display:block;margin-top:26px;font-family:var(--sans);font-style:normal;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.66)}
+
+/* REVIEWS */
+.rev-sec{background:var(--paper)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:46px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(14,46,76,.4)}
+.stars{color:#F5A623;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#33475e;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(150deg,var(--blue),var(--blue-d));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{text-align:center;margin-top:28px;font-size:.85rem;color:var(--muted)}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq-list{max-width:820px;margin:0;display:flex;flex-direction:column;gap:14px}
+.faq-list details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 26px;transition:.3s}
+.faq-list details[open]{box-shadow:0 24px 44px -34px rgba(14,46,76,.4)}
+.faq-list summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:var(--serif);font-size:1.16rem;font-weight:500;color:var(--ink)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list .tog{width:34px;height:34px;flex:none;border-radius:10px;background:var(--accent-soft);color:var(--accent-d);display:grid;place-items:center;font-size:1.3rem;transition:.3s}
+.faq-list details[open] .tog{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq-list p{color:var(--muted);font-size:1rem;padding:0 0 26px;max-width:64ch}
+
+/* CONTACT */
+.contact{background:var(--navy);color:#fff;padding:118px 0}
+.contact-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.contact-head h2{max-width:none;font-size:clamp(2.3rem,4.6vw,3.5rem);margin-top:16px}
+.contact-head h2 em{color:var(--accent)}
+.contact-head p{color:rgba(255,255,255,.75);font-size:1.12rem;margin-top:18px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:stretch}
+.cinfo{background:rgba(255,255,255,.05);border:1px solid var(--lineD);border-radius:20px;padding:44px 40px}
+.crow{display:flex;gap:16px;padding:22px 0;border-top:1px solid var(--lineD)}
+.crow:first-of-type{border-top:none;padding-top:6px}
+.crow svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.crow b,.crow a{font-size:1.06rem;color:#fff;font-weight:600}
+.contact-card{background:linear-gradient(160deg,rgba(29,111,184,.28),rgba(255,255,255,.05));border:1px solid var(--lineD);border-radius:20px;padding:46px 42px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.contact-card .ic{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.contact-card .ic svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.7}
+.contact-card h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.75);margin-bottom:28px}
+.contact-card .btn{width:100%;justify-content:center;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:#0A2238;color:#9FB6CE;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.55rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B4C7DD;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6C82A0}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+.stagger.in>*:nth-child(7){transition-delay:.48s}
+.stagger.in>*:nth-child(8){transition-delay:.56s}
+
+@media(max-width:1000px){
+  .sen-grid,.about-grid,.contact-grid,.serve .band{grid-template-columns:1fr;gap:48px}
+  .serve .band{padding:56px 40px}
+  .sen-img,.about-img{max-width:520px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .dark-grid,.rev-grid,.gal-grid{grid-template-columns:1fr 1fr}
+  .gcell.tall{grid-row:span 1}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:76px 0}
+  .hero-in{padding:152px 22px 64px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.dark-grid,.rev-grid,.gal-grid,.sen-list{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .serve .band{padding:44px 26px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+  .hero-bg img{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Reliable home repair &amp; maintenance in Rockville, MD &middot; <b>Free consultation &middot; (240) 449-4713</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M9 16.5c-1.4-1.4-1.4-3.6 0-5l3-3 1.8 1.8-2 2 5.9 5.9 2-2L23.5 14l-3 3c-1.4 1.4-3.6 1.4-5 0Z" fill="#fff"/></svg></span>
+      <span><b>Helping Hands Handyman</b><span>Rockville, Maryland</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#seniors">For seniors</a>
+      <a href="#work">Our work</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:2404494713"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>(240) 449-4713</span></a>
+      <a class="nav-cta" href="#contact">Free consultation</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/hhh-stock-home.jpg" alt="Bright, well-kept home interior in Rockville, Maryland"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F2884B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+      Family-run &middot; Skilled team &middot; Rockville, MD
+    </span>
+    <h1>Your trusted partner for every <em>home repair.</em></h1>
+    <p>Helping Hands Handyman brings a skilled team and years of experience to reliable home repair and maintenance across Rockville and Montgomery County. Every project completed efficiently, effectively, and with real care.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#contact">Book a free consultation</a>
+      <a class="btn btn-ghost" href="tel:2404494713">Call (240) 449-4713</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>Years</b><span>Of hands-on experience</span></div>
+      <div><b>Interior &amp; exterior</b><span>One trusted team</span></div>
+      <div><b>Free</b><span>Consultation</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Reliable &amp; trusted</b><small>Your partner for home care</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M14 3 8 9M4 20l4.5-1L20 7.5a2.1 2.1 0 0 0-3-3L5.5 16 4 20Z"/></svg></span><div><b>Skilled team</b><small>Years of experience</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div><b>Caring service</b><small>Neighbors, not numbers</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Rockville, MD</b><small>Serving Montgomery County</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>One call for the whole <em>to-do list.</em></h2>
+      <p>From mounting a TV to remodeling a bathroom, our skilled team handles interior and exterior repairs cleanly and correctly the first time.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Fixture installation</h3>
+        <p>Mounting TVs, lights, pictures, and artwork, hung level and secured to last.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M6 12V6a2 2 0 0 1 2-2h3v8M9 20v-4M15 20v-4"/><path d="M4 16h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/></svg></div>
+        <h3>Bathroom remodels</h3>
+        <p>Plumbing, electrical, tiling, and fixtures brought together into one finished space.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3.5 4 5.5 6.8 5.5 9.5a5.5 5.5 0 0 1-11 0C6.5 9.8 8.5 7 12 3Z"/></svg></div>
+        <h3>Faucet repair</h3>
+        <p>Leaking or clogged faucets diagnosed and fixed so the drips and backups stop for good.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg></div>
+        <h3>Drywall repair</h3>
+        <p>Holes, cracks, and water-stained panels patched, sanded, and blended into the wall.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 7h2"/></svg></div>
+        <h3>Dryer vent cleanout</h3>
+        <p>Vents brushed and blown clear to improve airflow and lower the risk of a lint fire.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4Z"/><path d="M6 12V7a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2M19 19l1 2M5 19l-1 2"/></svg></div>
+        <h3>Bathtub repair</h3>
+        <p>Chips, worn finishes, and metal tubs restored and touched up to look and work like new.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V9l6-4 6 4v11"/><path d="M6 12h12M6 16h12"/></svg></div>
+        <h3>Flooring installation</h3>
+        <p>Hardwood, tile, laminate, and carpet installed and repaired with a clean, level finish.</p>
+      </div>
+      <div class="scard">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V8h16v13M4 8l8-5 8 5M4 12h16M8 8v13M16 8v13"/></svg></div>
+        <h3>Brick &amp; exterior</h3>
+        <p>Brick water-damage repair, efflorescence removal, and general exterior fixes handled with care.</p>
+      </div>
+    </div>
+    <div class="also reveal">
+      <b>Also on the list:</b>
+      <span>Leak repairs</span><span>Clog clearing</span><span>Tile work</span><span>Light fixtures</span><span>Wall repair</span><span>General maintenance</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec seniors" id="seniors">
+  <div class="wrap sen-grid">
+    <div class="sen-img reveal">
+      <img src="../assets/img/hhh-stock-handyman.jpg" alt="Clean, accessible bathroom set up for safe aging in place">
+      <div class="tag">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.3-7-10a7 7 0 0 1 14 0c0 5.7-7 10-7 10Z"/><path d="m9 11 2 2 4-4"/></svg>
+        <div><b>Services for Seniors</b><small>Helping neighbors stay home</small></div>
+      </div>
+    </div>
+    <div class="sen-copy reveal">
+      <span class="eyebrow">The heart of what we do</span>
+      <h2>Helping older neighbors <em>stay safe at home.</em></h2>
+      <p>Aging in place should feel comfortable and secure. We help seniors and their families make small, thoughtful changes around the home so daily life stays independent, and every visit is handled patiently, respectfully, and with genuine care.</p>
+      <p>From a single grab bar to a fuller bathroom safety upgrade, we take the time to understand what each home needs and get it done right.</p>
+      <div class="sen-list">
+        <div><span class="cic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Grab bar installation</div>
+        <div><span class="cic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Bathroom safety</div>
+        <div><span class="cic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Accessibility upgrades</div>
+        <div><span class="cic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Aging-in-place changes</div>
+        <div><span class="cic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Trip-hazard fixes</div>
+        <div><span class="cic"><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg></span>Trusted, caring visits</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec darksec">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="max-width:720px">
+      <span class="eyebrow light">One trusted team</span>
+      <h2 style="color:#fff">Interior and exterior, <em style="color:var(--accent)">handled with care.</em></h2>
+      <p style="color:rgba(255,255,255,.78)">Whatever the space, you get the same skilled hands and the same attention to detail from start to finish.</p>
+    </div>
+    <div class="dark-grid stagger">
+      <div class="dcard">
+        <span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Interior repairs</h3>
+        <p>Fixtures, drywall, faucets, and everyday fixes that keep the inside of your home running smoothly.</p>
+      </div>
+      <div class="dcard">
+        <span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M6 12V6a2 2 0 0 1 2-2h3v8M9 20v-4M15 20v-4"/></svg></div>
+        <h3>Baths, kitchens &amp; floors</h3>
+        <p>Full bathroom remodels plus hardwood, tile, laminate, and carpet installed to a clean finish.</p>
+      </div>
+      <div class="dcard">
+        <span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-5 8 5v12M4 12h16M8 8v12M16 8v12"/></svg></div>
+        <h3>Exterior &amp; masonry</h3>
+        <p>Brick water-damage repair, efflorescence removal, and general exterior work to protect your home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gal" id="work">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Recent work</span>
+      <h2>Real jobs, done <em>right.</em></h2>
+      <p>A look at recent repairs and improvements around local homes, straight from the job site.</p>
+    </div>
+    <div class="gal-grid stagger">
+      <div class="gcell tall"><img src="../assets/img/hhh-4.png" alt="Hardwood floor installation and repair with a fresh finish"><div class="cap">Hardwood floor installation &amp; repair</div></div>
+      <div class="gcell"><img src="../assets/img/hhh-3.png" alt="Completed bathroom remodel with new vanity and tile"><div class="cap">Bathroom remodels</div></div>
+      <div class="gcell"><img src="../assets/img/hhh-2.png" alt="Wall-mounted TV with recessed, hidden wiring"><div class="cap">TV mounting with recessed wiring</div></div>
+      <div class="gcell"><img src="../assets/img/hhh-1.png" alt="Leaking sink drain repaired and reassembled"><div class="cap">Leaking drain repair</div></div>
+      <div class="gcell"><img src="../assets/img/hhh-6.png" alt="Dryer vent brushed and blown clear of lint"><div class="cap">Dryer vent cleanout</div></div>
+      <div class="gcell"><img src="../assets/img/hhh-5.png" alt="Metal bathtub drain restored and touched up"><div class="cap">Metal tub restoration &amp; touch-up</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img src="../assets/img/hhh-stock-room.jpg" alt="Well-maintained home exterior in the Rockville area">
+      <div class="badge"><b>Rockville, MD</b><small>Locally owned &amp; operated</small></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">About Helping Hands</span>
+      <h2>A skilled team you can <em>count on.</em></h2>
+      <p>Helping Hands Handyman is a locally owned company built on reliable home repair, honest work, and treating every home like our own. Our skilled team brings years of experience to projects large and small, and completes them efficiently and effectively.</p>
+      <p>Whether it is a quick fix or a full remodel, we show up ready, do the job well, and leave your home better than we found it.</p>
+      <div class="about-sign">
+        <span class="av">MM</span>
+        <div>
+          <b>Martin Mikus</b>
+          <small>Owner, Helping Hands Handyman LLC</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec serve">
+  <div class="wrap">
+    <div class="band reveal">
+      <div>
+        <span class="eyebrow light">Where we work</span>
+        <h2>Proudly serving Rockville <em>and beyond.</em></h2>
+        <p>Based in Rockville and caring for homes across Montgomery County, Maryland. If you are nearby, we would love to help.</p>
+        <div class="towns">
+          <span>Rockville</span><span>North Bethesda</span><span>Gaithersburg</span><span>Potomac</span><span>Bethesda</span><span>Silver Spring</span><span>Kensington</span><span>Derwood</span>
+        </div>
+      </div>
+      <div class="act">
+        <a class="btn btn-white" href="tel:2404494713">Call (240) 449-4713</a>
+        <a class="btn btn-ghost" href="#contact">Request a free consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <span class="qm">&#8220;</span>
+    <p>Reliable home repair, done with the care you would want for your own family.</p>
+    <span>Our promise to every Rockville home</span>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Kind words</span>
+        <h2>What neighbors <em>are saying.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Martin and his team mounted our TV, hid the wiring, and patched the drywall like nothing had ever been there. Professional, tidy, and fairly priced. We will call them for everything now.</p>
+        <div class="who"><span class="av">RC</span><div><b>Rebecca C.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>They installed grab bars and made a few bathroom safety changes for my mother so she can stay in her own home. So patient and kind with her. It meant the world to our family.</p>
+        <div class="who"><span class="av">DP</span><div><b>David P.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Fixed a leaking faucet, cleaned out our dryer vent, and touched up the tub, all in one visit. Reliable, easy to work with, and the whole house feels cared for. Highly recommend.</p>
+        <div class="who"><span class="av">AS</span><div><b>Anna S.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative. Leave your own on our Google profile.</p>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <details open>
+        <summary>What kind of jobs do you take on? <span class="tog">+</span></summary>
+        <p>Just about anything around the home. Fixture and TV mounting, bathroom remodels, faucet and leak repair, drywall patching, dryer vent cleanout, bathtub repair, flooring, and exterior work like brick water-damage repair. If you are not sure, just ask.</p>
+      </details>
+      <details>
+        <summary>Do you help seniors stay in their homes? <span class="tog">+</span></summary>
+        <p>Yes, and it is close to our heart. We install grab bars, improve bathroom safety, and make accessibility and aging-in-place changes so older neighbors can stay safe and independent at home. Every visit is handled patiently and respectfully.</p>
+      </details>
+      <details>
+        <summary>What areas do you serve? <span class="tog">+</span></summary>
+        <p>We are based in Rockville, Maryland and serve homes across Montgomery County, including North Bethesda, Gaithersburg, Potomac, Bethesda, Silver Spring, and nearby communities.</p>
+      </details>
+      <details>
+        <summary>How do I get started? <span class="tog">+</span></summary>
+        <p>Call or text (240) 449-4713 for a free consultation. Tell us what is going on and we will talk through the best way to get it handled, then schedule a time that works for you.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow light" style="justify-content:center;display:inline-flex">Get in touch</span>
+      <h2>Let's get it <em>handled.</em></h2>
+      <p>Tell us what your home needs. Call or text for a free consultation and we will take care of the rest.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <div><small>Call or text</small><a href="tel:2404494713">(240) 449-4713</a></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Service area</small><b>Rockville, MD &amp; Montgomery County</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div><small>Consultation</small><b>Free &middot; No obligation</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+          <div><small>What we do</small><b>Interior &amp; exterior home repair</b></div>
+        </div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+        <h3>Ready when you are</h3>
+        <p>Call or text and we will schedule your free consultation, then get your project done efficiently and effectively.</p>
+        <a class="btn btn-accent" href="tel:2404494713">Call (240) 449-4713</a>
+        <a class="btn btn-white" href="sms:2404494713" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);">Text us instead</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Helping Hands Handyman</b>
+        <p>Your trusted partner for reliable home repair and maintenance in Rockville, Maryland, with caring services for seniors.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Fixture installation</a>
+        <a href="#services">Bathroom remodels</a>
+        <a href="#services">Flooring &amp; drywall</a>
+        <a href="#seniors">Services for seniors</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:2404494713">(240) 449-4713</a>
+        <p>Rockville, Maryland</p>
+        <p>Free consultation</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Helping Hands Handyman LLC</span>
+      <span>Rockville, MD &middot; Interior &amp; exterior &middot; Services for seniors</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harrington Development LLC | Site Contractor in Canton, GA</title>
+<meta name="description" content="Harrington Development LLC is a north Georgia site contractor based in Canton, GA. Land clearing, grading, excavation, site preparation, erosion control, drainage, and driveways for builders, developers, and property owners.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314171A'/%3E%3Cpath d='M8 20h16M8 20l3-9h10l3 9M13 11v9M19 11v9' stroke='%23E4922E' stroke-width='2' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#14171A; --graphite:#22262B; --graphite2:#2E343B;
+  --ink:#1D2126; --muted:#5E6670; --faint:#8A9099;
+  --bg:#F4F1EC; --paper:#FFFFFF; --sand:#EFE8DD;
+  --accent:#E4922E; --accent-d:#C6771B; --accent-soft:#FaEBD6;
+  --line:rgba(20,23,26,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.08}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:11px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-d)}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+.eyebrow.light{color:#E9BF88}
+.eyebrow.light::before{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:6px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-am{background:var(--accent);color:#231402}
+.btn-am:hover{background:var(--accent-d);color:#fff;transform:translateY(-2px)}
+.btn-dark{background:var(--char);color:#fff}
+.btn-dark:hover{background:var(--graphite2);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--char);color:#c9cdd3;font-size:.8rem;text-align:center;padding:9px 20px;font-weight:500;letter-spacing:.05em;transition:.35s}
+.topbar b{color:#fff}
+.topbar .dot{color:var(--accent)}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.97);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:13px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:44px;height:44px;flex:none;border-radius:9px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:26px;height:26px}
+.brand b{font-family:var(--serif);font-size:1.3rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.72;margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--accent);color:#231402;font-weight:600;font-size:.92rem;padding:12px 24px;border-radius:6px;transition:.3s}
+.nav-cta:hover{background:var(--accent-d);color:#fff;transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:850px;display:flex;align-items:center;overflow:hidden;background:var(--char)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.09);animation:hz 22s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,23,26,.94) 0%,rgba(20,23,26,.82) 40%,rgba(20,23,26,.5) 74%,rgba(20,23,26,.28) 100%)}
+.hero::after{content:"";position:absolute;right:-14%;top:8%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(228,146,46,.34),transparent 66%);z-index:1;animation:drift 16s ease-in-out infinite alternate;pointer-events:none}
+@keyframes hz{to{transform:scale(1)}}
+@keyframes drift{to{transform:translate(-40px,34px)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:210px 40px 120px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:9px 18px;border-radius:40px;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:30px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.1rem,6.4vw,5.8rem);font-weight:500;letter-spacing:-.02em;line-height:1.02;max-width:16ch}
+.hero h1 em{color:var(--accent);font-style:italic;font-weight:400}
+.hero p{font-size:1.22rem;max-width:50ch;margin:26px 0 40px;color:rgba(255,255,255,.84);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:64px;flex-wrap:wrap}
+.hero-mini div{padding-right:42px;margin-right:42px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.75rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.78rem;color:rgba(255,255,255,.66);text-transform:uppercase;letter-spacing:.07em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(0,0,0,.3);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:36px 26px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:50px;height:50px;flex:none;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center}
+.trust .t svg{width:25px;height:25px;stroke:var(--accent-d);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:120px 0}
+.sec-head{max-width:700px;margin-bottom:58px}
+.sec-head.center{margin:0 auto 60px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent-d)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:58ch}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.scard{position:relative;border-radius:14px;overflow:hidden;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;color:#fff;box-shadow:0 24px 44px -30px rgba(0,0,0,.55)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s;z-index:0}
+.scard:hover img{transform:scale(1.08)}
+.scard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,23,26,.08) 24%,rgba(20,23,26,.92));z-index:1}
+.scard .c{position:relative;z-index:2}
+.scard .sic{width:46px;height:46px;border-radius:11px;background:rgba(228,146,46,.92);display:grid;place-items:center;margin-bottom:16px}
+.scard .sic svg{width:24px;height:24px;stroke:#231402;fill:none;stroke-width:1.8}
+.scard h3{font-size:1.42rem;margin-bottom:8px}
+.scard p{font-size:.92rem;color:rgba(255,255,255,.8)}
+.also{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:13px}
+.also b{font-family:var(--serif);font-size:1.18rem;margin-right:8px}
+.also span{background:var(--sand);color:var(--ink);border-radius:30px;padding:8px 17px;font-size:.86rem;font-weight:600}
+
+/* PROCESS dark glass band */
+.proc{position:relative;color:#fff;overflow:hidden;background:linear-gradient(165deg,#1B1F24,#0F1214)}
+.proc-bg{position:absolute;inset:0;z-index:0;opacity:.16}
+.proc-bg img{width:100%;height:100%;object-fit:cover}
+.proc::before{content:"";position:absolute;left:-8%;bottom:-20%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(228,146,46,.28),transparent 68%);z-index:1}
+.proc .wrap{position:relative;z-index:2}
+.proc .sec-head h2 em{color:var(--accent)}
+.proc .sec-head p{color:rgba(255,255,255,.72)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:12px}
+.pcard{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(6px);border-radius:14px;padding:32px 26px;position:relative;overflow:hidden;transition:.35s}
+.pcard::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.pcard:hover::before{transform:scaleX(1)}
+.pcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.07)}
+.pcard .num{font-family:var(--serif);font-size:2.5rem;color:rgba(228,146,46,.85);line-height:1;margin-bottom:16px}
+.pcard .pic{width:44px;height:44px;border-radius:11px;background:rgba(228,146,46,.16);display:grid;place-items:center;margin-bottom:16px}
+.pcard .pic svg{width:23px;height:23px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.pcard h3{font-size:1.24rem;margin-bottom:9px}
+.pcard p{font-size:.92rem;color:rgba(255,255,255,.72)}
+
+/* ABOUT split */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center}
+.about-img{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(0,0,0,.5)}
+.about-img img{width:100%;aspect-ratio:5/4.7;object-fit:cover}
+.about-img .badge{position:absolute;left:24px;bottom:24px;background:var(--char);color:#fff;border-radius:12px;padding:16px 22px}
+.about-img .badge b{font-family:var(--serif);font-size:1.55rem;display:block;line-height:1;color:var(--accent)}
+.about-img .badge small{font-size:.76rem;color:rgba(255,255,255,.82)}
+.about-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 24px}
+.about-copy h2 em{color:var(--accent-d)}
+.about-copy p{color:#3A424E;font-size:1.08rem;margin-bottom:20px}
+.about-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.about-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.98rem;color:var(--ink)}
+.about-list svg{width:22px;height:22px;stroke:var(--accent-d);fill:none;stroke-width:2.2;flex:none}
+
+/* SERVE brand band */
+.serve{background:var(--bg);padding-top:120px}
+.serve-band{background:linear-gradient(150deg,var(--accent),#B96712);border-radius:28px;padding:74px 60px;color:#2A1802;position:relative;overflow:hidden}
+.serve-band::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.14)}
+.serve-band .eyebrow{color:#3A2404}
+.serve-band .eyebrow::before{background:#3A2404}
+.serve-band h2{font-size:clamp(2.1rem,4.2vw,3.2rem);margin:16px 0 18px;color:#231402;position:relative}
+.serve-band>p{max-width:60ch;color:#3A2404;font-size:1.1rem;position:relative}
+.serve-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;position:relative}
+.svb{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);border-radius:14px;padding:28px 26px;backdrop-filter:blur(3px)}
+.svb .vic{width:46px;height:46px;border-radius:11px;background:#231402;display:grid;place-items:center;margin-bottom:15px}
+.svb .vic svg{width:23px;height:23px;stroke:var(--accent);fill:none;stroke-width:1.7}
+.svb h3{font-size:1.24rem;margin-bottom:8px;color:#231402}
+.svb p{font-size:.93rem;color:#3A2404}
+
+/* QUOTE */
+.quote{position:relative;overflow:hidden;background:var(--char);color:#fff;padding:118px 0}
+.quote::after{content:"";position:absolute;left:50%;top:-10%;transform:translateX(-50%);width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(228,146,46,.2),transparent 66%);z-index:0}
+.quote .wrap{position:relative;z-index:2;max-width:960px;text-align:center}
+.quote .qm{font-family:var(--serif);font-size:5rem;line-height:.6;color:var(--accent);display:block;margin-bottom:10px}
+.quote p{font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.5rem);font-weight:400;line-height:1.3;letter-spacing:-.01em}
+.quote p em{color:var(--accent);font-style:italic}
+.quote .by{margin-top:30px;font-family:var(--sans);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+
+/* FAQ */
+.faq{background:#fff}
+.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+.faq-list{display:flex;flex-direction:column;gap:14px;margin:0}
+.faq-list details{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px 26px;transition:.3s}
+.faq-list details[open]{background:#fff;border-color:rgba(228,146,46,.5);box-shadow:0 20px 46px -32px rgba(0,0,0,.35)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;font-weight:600;font-size:1.06rem;color:var(--ink)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list .tog{width:34px;height:34px;flex:none;border-radius:9px;background:var(--sand);display:grid;place-items:center;transition:.3s;position:relative}
+.faq-list .tog::before,.faq-list .tog::after{content:"";position:absolute;background:var(--accent-d);border-radius:2px}
+.faq-list .tog::before{width:14px;height:2px}
+.faq-list .tog::after{width:2px;height:14px;transition:.3s}
+.faq-list details[open] .tog{background:var(--accent)}
+.faq-list details[open] .tog::before,.faq-list details[open] .tog::after{background:#231402}
+.faq-list details[open] .tog::after{transform:rotate(90deg);opacity:0}
+.faq-list details p{padding:0 0 24px;color:var(--muted);font-size:1rem;line-height:1.6}
+
+/* REVIEWS */
+.rev-sec{background:var(--bg)}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:46px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s;position:relative;overflow:hidden}
+.rcard::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.rcard:hover::before{transform:scaleX(1)}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(0,0,0,.3)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard>p{font-size:1.02rem;color:#3A424E;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--graphite);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+.rev-note{margin-top:26px;font-size:.82rem;color:var(--faint);font-style:italic}
+
+/* CONTACT */
+.contact{background:var(--bg);padding:120px 0}
+.contact-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.contact-head .eyebrow{justify-content:center}
+.contact-head h2{max-width:none;font-size:clamp(2.3rem,4.6vw,3.5rem);margin-top:18px}
+.contact-head h2 em{color:var(--accent-d)}
+.contact-head p{color:var(--muted);font-size:1.12rem;margin-top:18px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}
+.cinfo{background:linear-gradient(165deg,#1B1F24,#0F1214);color:#fff;border-radius:18px;padding:48px 44px;position:relative;overflow:hidden}
+.cinfo::after{content:"";position:absolute;right:-70px;bottom:-70px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(228,146,46,.24),transparent 66%)}
+.cinfo h3{font-size:1.7rem;margin-bottom:12px;position:relative}
+.cinfo>p{color:rgba(255,255,255,.74);position:relative;margin-bottom:30px;max-width:38ch}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD);position:relative}
+.crow svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#E9BF88;margin-bottom:4px}
+.crow b{font-size:1.06rem;color:#fff;font-weight:600}
+.cform{background:#fff;border:1px solid var(--line);border-radius:18px;padding:46px 42px;box-shadow:0 30px 60px -44px rgba(0,0,0,.3)}
+.cform h3{font-size:1.5rem;margin-bottom:6px}
+.cform>p{color:var(--muted);font-size:.98rem;margin-bottom:26px}
+.frow{margin-bottom:16px}
+.frow.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cform label{display:block;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.cform input,.cform textarea{width:100%;font-family:var(--sans);font-size:1rem;padding:13px 16px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);transition:.25s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(228,146,46,.16)}
+.cform textarea{resize:vertical;min-height:110px}
+.cform .btn{width:100%;justify-content:center;margin-top:6px}
+
+/* FOOTER */
+footer{background:var(--char);color:#9299A2;padding:78px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand .fb{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.foot-brand .fb .mk{width:42px;height:42px;border-radius:9px;background:var(--accent);display:grid;place-items:center}
+.foot-brand .fb .mk svg{width:25px;height:25px}
+.foot-brand .fb b{font-family:var(--serif);font-size:1.5rem;color:#fff}
+.foot-brand p{font-size:.96rem;max-width:36ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#E9BF88;margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#AEB5BE;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6B727B}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}
+.stagger.in>*:nth-child(6){transition-delay:.4s}
+
+@media(max-width:1000px){
+  .about-grid,.contact-grid,.faq-grid{grid-template-columns:1fr;gap:48px}
+  .about-img{max-width:500px}
+  .svc-grid,.proc-grid,.serve-cards,.rev-grid{grid-template-columns:1fr 1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .brand span{display:none}
+  .sec,.contact,.quote{padding:78px 0}
+  .serve{padding-top:78px}
+  .hero-in{padding:158px 22px 66px}
+  .hero-mini div{padding-right:22px;margin-right:22px}
+  .svc-grid,.proc-grid,.serve-cards,.rev-grid,.about-list,.frow.two{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .serve-band{padding:52px 30px}
+  .cinfo,.cform{padding:38px 28px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">Site development across north Georgia <span class="dot">&bull;</span> <b>Based in Canton, GA</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M7 21h18M8 21l3-9h10l3 9M13 12v9M19 12v9" stroke="#231402" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+      <span><b>Harrington Development</b><span>Site Contractor &middot; Canton, GA</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">How we work</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-cta" href="#contact">Request a quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/hdv-hero.jpg" alt="Dozer grading a site on a north Georgia development"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20l2.5-7h7L18 20M10 13V9M14 13V9"/></svg>
+      Owner-led &middot; North Georgia &middot; Builders, developers &amp; property owners
+    </span>
+    <h1>Site work done <em>right,</em> from raw ground up.</h1>
+    <p>Harrington Development is a north Georgia site contractor built on doing the groundwork properly. Clearing, grading, and excavation that gives builders and developers a site they can build on with confidence.</p>
+    <div class="hero-actions">
+      <a class="btn btn-am" href="#contact">Request a quote</a>
+      <a class="btn btn-ghost" href="#services">View our services</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>8+ yrs</b><span>In business</span></div>
+      <div><b>North GA</b><span>Service area</span></div>
+      <div><b>Owner-led</b><span>Every project</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Years of experience</b><small>Proven in the field</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div><b>Owner-led</b><small>Dillon Harrington on site</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>North Georgia</b><small>Based in Canton, GA</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20l2.5-7h7L18 20M10 13V9M14 13V9"/></svg></span><div><b>Full site scope</b><small>Clearing to finish grade</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Site development, handled <em>start to finish.</em></h2>
+      <p>From the first pass of the dozer to final grade, we take care of the dirt work so the rest of the build lands on solid ground. One crew, accountable for the whole site package.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard"><img src="../assets/img/hdv-clearing.jpg" alt="Land clearing on a wooded lot"><div class="c"><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="#231402" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 8 7 5M12 8l5-3M12 14l-6-3M12 14l6-3"/></svg></div><h3>Land clearing</h3><p>Trees, brush, and stumps removed to open up raw land and get a lot ready to work.</p></div></div>
+      <div class="scard"><img src="../assets/img/hdv-grading.jpg" alt="Dozer grading a building pad"><div class="c"><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="#231402" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M3 17 9 8l4 4 8-9"/></svg></div><h3>Grading &amp; dirt work</h3><p>Rough and finish grading to shape the ground to plan, with clean, consistent slopes.</p></div></div>
+      <div class="scard"><img src="../assets/img/hdv-excavation.jpg" alt="Excavator digging on a site"><div class="c"><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="#231402" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21v-6l6-2 3 4M14 13l4-8 3 1-3 8"/></svg></div><h3>Excavation</h3><p>Digging, cut and fill, and earth moving for foundations, ponds, and site features.</p></div></div>
+      <div class="scard"><img src="../assets/img/hdv-siteprep.jpg" alt="Dozer preparing a site pad"><div class="c"><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="#231402" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg></div><h3>Site preparation</h3><p>Building pads shaped, compacted, and ready for footings, slabs, and utilities.</p></div></div>
+      <div class="scard"><img src="../assets/img/hdv-hauling.jpg" alt="Articulated hauler moving material on site"><div class="c"><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="#231402" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17h11V8H2zM13 12h4l3 3v2h-7M6.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM17.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg></div><h3>Gravel &amp; driveways</h3><p>Gravel drives and access roads graded, hauled, and set to hold up to the weather.</p></div></div>
+      <div class="scard"><img src="../assets/img/hdv-compaction.jpg" alt="Compaction roller on graded ground"><div class="c"><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="#231402" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a6 6 0 0 0 12 0 6 6 0 0 0-12 0ZM15 12h3l3 2v4h-6M3 21h18"/></svg></div><h3>Erosion &amp; drainage</h3><p>Erosion control and drainage that keep water and soil where they belong.</p></div></div>
+    </div>
+    <div class="also reveal">
+      <b>We also handle:</b>
+      <span>Utility trenching</span><span>Retaining walls</span><span>Demolition</span><span>Cut &amp; fill</span><span>Silt fencing</span><span>Culverts</span><span>Lot access</span><span>Final grade</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec proc" id="process">
+  <div class="proc-bg"><img src="../assets/img/hdv-excavation.jpg" alt="Earthwork underway on a site"></div>
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow light">How we work</span>
+      <h2>A straightforward way to <em>get ground ready.</em></h2>
+      <p>No guesswork and no surprises. We walk the site, price it honestly, and run the dirt work in a way that keeps your project moving.</p>
+    </div>
+    <div class="proc-grid stagger">
+      <div class="pcard"><div class="num">01</div><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Walk the site</h3><p>We come out, look at the ground and the plan, and figure out exactly what the site needs.</p></div>
+      <div class="pcard"><div class="num">02</div><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-4M9 11V5a3 3 0 0 1 6 0v6M9 11h6"/></svg></div><h3>Plan &amp; quote</h3><p>You get a clear scope and an honest number, so you know what you are paying for up front.</p></div>
+      <div class="pcard"><div class="num">03</div><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M3 17 9 8l4 4 8-9"/></svg></div><h3>Clear &amp; grade</h3><p>We bring the equipment and the crew, clear the lot, and shape the ground to plan.</p></div>
+      <div class="pcard"><div class="num">04</div><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></div><h3>Finish &amp; hand off</h3><p>Site left clean, graded, and ready for the next trade to start on solid ground.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal">
+      <img src="../assets/img/hdv-clearing.jpg" alt="Site work on cleared north Georgia land">
+      <div class="badge"><b>North GA</b><small>Rooted in Canton, working across the region</small></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">About the company</span>
+      <h2>A north Georgia crew that <em>shows up and does it right.</em></h2>
+      <p>Harrington Development is a site contractor based in Canton, Georgia, led by owner Dillon Harrington. For years we have handled the groundwork behind homes, developments, and property projects across north Georgia.</p>
+      <p>Site work sets the tone for everything built on top of it. We keep the scope clear, the communication straight, and the ground done properly, so builders, developers, and property owners can count on the site being right the first time.</p>
+      <div class="about-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Owner on every job</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Builders &amp; developers</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Residential &amp; commercial</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Honest, upfront quotes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="serve">
+  <div class="wrap">
+    <div class="serve-band reveal">
+      <span class="eyebrow">Who we work with</span>
+      <h2>Ground work for the people building north Georgia.</h2>
+      <p>Whether it is a single lot or a full development, we handle the dirt work so the people we work with can build on a site that is ready.</p>
+      <div class="serve-cards stagger">
+        <div class="svb"><div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5M9 11h.01M15 11h.01"/></svg></div><h3>Builders</h3><p>Cleared, graded pads that let crews get to footings and slabs without waiting on the site.</p></div>
+        <div class="svb"><div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M6 21V9l6-4 6 4v12M10 21v-4h4v4M9 12h.01M15 12h.01"/></svg></div><h3>Developers</h3><p>Multi-lot clearing, mass grading, and access work to move a development forward.</p></div>
+        <div class="svb"><div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="#E4922E" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 3l9 9M5 10v10h14V10M9 20v-6h6v6"/></svg></div><h3>Property owners</h3><p>Driveways, drainage, land clearing, and dirt work for your own land and projects.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap reveal">
+    <span class="qm">&#8220;</span>
+    <p>Get the ground right and everything built on it goes easier. That is the whole job, and it is <em>the part we take seriously.</em></p>
+    <div class="by">Harrington Development LLC &middot; Canton, GA</div>
+  </div>
+</section>
+
+<section class="sec faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal" style="margin-bottom:0">
+      <span class="eyebrow">Common questions</span>
+      <h2>Good to <em>know.</em></h2>
+      <p>A few of the questions we hear most from builders, developers, and property owners across north Georgia.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details open><summary>What does a site contractor actually do?<span class="tog"></span></summary><p>We handle the groundwork that comes before anything gets built: clearing the land, grading it to plan, digging and moving earth, and preparing pads, drives, and drainage so the site is ready for construction.</p></details>
+      <details><summary>Do you work with builders and developers?<span class="tog"></span></summary><p>Yes. A lot of our work is for builders and developers who need a reliable crew to clear and grade lots and move a project forward. We also work directly with property owners on their own land.</p></details>
+      <details><summary>What areas do you serve?<span class="tog"></span></summary><p>We are based in Canton, Georgia and work on site projects across north Georgia. If you are not sure whether your project is in range, reach out and we will let you know.</p></details>
+      <details><summary>Can you handle clearing and grading for a new build?<span class="tog"></span></summary><p>Yes. Clearing raw land, rough and finish grading, and shaping building pads is core to what we do. We can take a lot from wooded and untouched to graded and ready.</p></details>
+      <details><summary>Do you do erosion control and drainage?<span class="tog"></span></summary><p>Yes. Erosion control, silt fencing, and drainage are part of doing site work properly, keeping water and soil managed so the site holds up over time.</p></details>
+      <details><summary>How do I get a quote?<span class="tog"></span></summary><p>Send us a few details about your project through the form below. We will follow up, and when it makes sense we will come walk the site so the quote is based on real ground, not a guess.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What people <em>say about the work.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Dillon and his crew cleared and graded our lot exactly the way we needed. Showed up when they said, kept us in the loop, and left the site clean and ready to build on.</p>
+        <div class="who"><span class="av">JM</span><div><b>Jordan M.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Hired Harrington Development for driveway and drainage work on our property. Honest quote, solid work, and the drive has held up great through the rain. Would use them again.</p>
+        <div class="who"><span class="av">TP</span><div><b>Taylor P.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>As a builder I need site work done right and on time. These guys handle the dirt work so I do not have to think about it. Reliable crew, easy to deal with.</p>
+        <div class="who"><span class="av">RC</span><div><b>Ryan C.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+    <p class="rev-note">Reviews shown are illustrative.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Tell us about <em>your site.</em></h2>
+      <p>Send a few details about the land or project and we will get back to you about scope, timing, and a quote.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>Harrington Development</h3>
+        <p>Site development for builders, developers, and property owners across north Georgia.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Based in</small><b>Canton, GA</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M3 20h18M6 20l2.5-7h7L18 20M10 13V9M14 13V9"/></svg>
+          <div><small>Service area</small><b>North Georgia</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
+          <div><small>Owner</small><b>Dillon Harrington</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>
+          <div><small>Scope</small><b>Clearing &middot; Grading &middot; Excavation</b></div>
+        </div>
+      </div>
+      <form class="cform reveal" onsubmit="return false;">
+        <h3>Request a quote</h3>
+        <p>We usually follow up within a business day.</p>
+        <div class="frow two">
+          <div><label>Name</label><input type="text" name="name" placeholder="Your name"></div>
+          <div><label>Phone</label><input type="tel" name="phone" placeholder="Best number"></div>
+        </div>
+        <div class="frow"><label>Email</label><input type="email" name="email" placeholder="you@email.com"></div>
+        <div class="frow"><label>Project location</label><input type="text" name="location" placeholder="City or county in north Georgia"></div>
+        <div class="frow"><label>Project details</label><textarea name="details" placeholder="Tell us about the site: clearing, grading, excavation, driveway, drainage, and rough timing."></textarea></div>
+        <button class="btn btn-am" type="submit">Request a quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="fb"><span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M7 21h18M8 21l3-9h10l3 9M13 12v9M19 12v9" stroke="#231402" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg></span><b>Harrington Development</b></div>
+        <p>A north Georgia site contractor based in Canton, GA. Land clearing, grading, excavation, and site preparation for builders, developers, and property owners.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Land clearing</a>
+        <a href="#services">Grading &amp; dirt work</a>
+        <a href="#services">Excavation</a>
+        <a href="#services">Site preparation</a>
+        <a href="#services">Gravel &amp; driveways</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#process">How we work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Request a quote</a>
+        <p>Canton, GA &middot; North Georgia</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Harrington Development LLC</span>
+      <span>Site Contractor &middot; Canton, GA &middot; Serving north Georgia</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
