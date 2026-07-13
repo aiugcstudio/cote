@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pettigrew Plumbing &amp; HVAC, Plumbing, Heating &amp; Cooling in Portsmouth, NH</title>
+<meta name="description" content="Pettigrew Plumbing & HVAC: family owned plumbing, heating, cooling, water filtration, and well systems in Portsmouth, NH. Serving Seacoast NH and Southern Maine since 2001. Fully licensed and insured. Call (603) 969-1806.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2323412E'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-weight='700' font-size='17' fill='%23C6A24A' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --cream:#F7F5EF; --paper:#FCFBF6; --ink:#1E2A22; --soft:#57655B; --faint:#93A093; --line:#E6E2D7; --surface:#FFFFFF;
+    --forest:#23412E; --forest-d:#172A1E; --gold:#B4923A; --gold-d:#937629; --gold-soft:#F1E9D3;
+    --disp:"Fraunces",Georgia,serif; --sans:"Inter",-apple-system,sans-serif;
+  }
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 44px;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:var(--disp);font-weight:500;letter-spacing:-0.01em;line-height:1.06;}
+  .eyebrow{font-family:var(--sans);font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--gold);display:inline-block;}
+  .ict{width:54px;height:54px;border-radius:14px;background:var(--gold-soft);color:var(--gold-d);display:grid;place-items:center;flex:none;}
+  .ict svg{width:26px;height:26px;}
+
+  /* nav */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:20;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:22px 0;}
+  .brand img{height:58px;width:auto;display:block;}
+  .nav-links{display:flex;gap:32px;font-size:.95rem;font-weight:500;color:rgba(255,255,255,.86);}
+  .nav-links a{position:relative;}
+  .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1.5px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.6,.2,1);}
+  .nav-links a:hover::after{transform:scaleX(1);}
+  .nav-call{background:var(--gold);color:var(--forest-d);padding:13px 24px;border-radius:100px;font-weight:700;font-size:.9rem;transition:.25s;}
+  .nav-call:hover{background:#c9a751;transform:translateY(-2px);}
+
+  /* hero */
+  .hero{position:relative;min-height:820px;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--forest-d);}
+  .hero::before{content:"";position:absolute;inset:-4%;background:linear-gradient(100deg,rgba(18,32,22,.94) 0%,rgba(20,38,26,.8) 44%,rgba(23,42,30,.5) 100%),url('../assets/img/pph-hero.jpg') center/cover;animation:heroZoom 26s ease-in-out infinite alternate;}
+  @keyframes heroZoom{from{transform:scale(1);}to{transform:scale(1.07);}}
+  .hero::after{content:"";position:absolute;top:-16%;right:-8%;width:52%;height:80%;background:radial-gradient(circle,rgba(180,146,58,.26),transparent 62%);pointer-events:none;z-index:0;animation:heroGlow 10s ease-in-out infinite alternate;}
+  @keyframes heroGlow{from{opacity:.45;transform:translate(0,0);}to{opacity:.9;transform:translate(-4%,4%);}}
+  @media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none;}}
+  .hero-in{position:relative;z-index:2;padding:150px 0 96px;max-width:840px;}
+  .hero .eyebrow{color:#D9BE74;}
+  .hero h1{font-size:5.3rem;font-weight:500;line-height:1.0;letter-spacing:-0.015em;margin:24px 0 26px;color:#fff;}
+  .hero h1 em{font-style:italic;color:#E4CE8C;font-weight:500;}
+  .hero .lead{font-size:1.26rem;color:rgba(255,255,255,.85);max-width:580px;margin-bottom:38px;font-weight:300;}
+  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn-p{background:var(--gold);color:var(--forest-d);padding:17px 34px;border-radius:100px;font-weight:700;font-size:1.02rem;transition:.25s;box-shadow:0 14px 36px rgba(180,146,58,.34);}
+  .btn-p:hover{background:#c9a751;transform:translateY(-2px);}
+  .btn-t{color:#fff;font-weight:600;font-size:1.02rem;padding:16px 28px;display:inline-flex;align-items:center;gap:9px;transition:.25s;border:1.5px solid rgba(255,255,255,.32);border-radius:100px;}
+  .btn-t:hover{gap:14px;background:rgba(255,255,255,.08);}
+  .hero-note{display:flex;align-items:center;gap:12px;margin-top:34px;color:rgba(255,255,255,.82);font-size:.98rem;}
+  .hero-note svg{width:19px;height:19px;color:var(--gold);}
+  .hero-in > *{opacity:0;transform:translateY(24px);animation:rise .8s cubic-bezier(.2,.6,.2,1) forwards;}
+  .hero-in > *:nth-child(1){animation-delay:.1s;}.hero-in > *:nth-child(2){animation-delay:.22s;}
+  .hero-in > *:nth-child(3){animation-delay:.34s;}.hero-in > *:nth-child(4){animation-delay:.46s;}.hero-in > *:nth-child(5){animation-delay:.58s;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+  @media(prefers-reduced-motion:reduce){.hero-in > *{opacity:1!important;transform:none!important;animation:none!important;}}
+
+  /* trust bar */
+  .trust{background:var(--forest);border-top:1px solid rgba(255,255,255,.09);}
+  .trust-in{display:grid;grid-template-columns:repeat(4,1fr);}
+  .trust-item{padding:36px 26px;text-align:center;color:#fff;border-left:1px solid rgba(255,255,255,.1);}
+  .trust-item:first-child{border-left:0;}
+  .trust-item b{font-family:var(--disp);font-size:1.9rem;font-weight:500;display:block;letter-spacing:-0.01em;}
+  .trust-item b em{font-style:italic;color:#E4CE8C;}
+  .trust-item span{color:rgba(255,255,255,.55);font-size:.86rem;margin-top:4px;display:block;}
+
+  /* sections */
+  .sec{padding:120px 0;}
+  .sec h2{font-size:3.4rem;font-weight:500;margin-bottom:16px;max-width:660px;}
+  .sec h2 em{font-style:italic;color:var(--gold-d);}
+  .sec-lead{color:var(--soft);font-size:1.18rem;max-width:620px;margin-bottom:58px;}
+
+  /* split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+  .split.rev .split-photo{order:2;}
+  .split-photo{height:540px;border-radius:22px;background-size:cover;background-position:center;box-shadow:0 34px 74px -34px rgba(23,42,30,.36);}
+  .split h2{font-size:2.9rem;margin-bottom:18px;}
+  .split .role{font-family:var(--disp);font-style:italic;color:var(--gold-d);font-size:1.15rem;margin-bottom:16px;display:block;}
+  .split p{color:var(--soft);font-size:1.08rem;margin-bottom:18px;}
+  .flist{list-style:none;margin-top:24px;display:grid;gap:13px;}
+  .flist li{display:flex;gap:12px;align-items:flex-start;font-weight:500;color:var(--ink);}
+  .flist li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--gold-soft);flex:none;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23937629' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:13px;}
+
+  /* services grid */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .svc{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:38px 32px;overflow:hidden;transition:transform .3s cubic-bezier(.2,.6,.2,1),box-shadow .3s,border-color .3s;}
+  .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.6,.2,1);}
+  .svc:hover::before{transform:scaleX(1);}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(23,42,30,.1);border-color:var(--gold);}
+  .svc .ict{margin-bottom:22px;}
+  .svc h3{font-size:1.4rem;margin-bottom:10px;}
+  .svc p{color:var(--soft);font-size:1rem;line-height:1.55;}
+
+  /* why band */
+  .why{background:radial-gradient(120% 100% at 85% -10%,rgba(180,146,58,.18),transparent 55%),var(--forest);color:#fff;padding:120px 0;}
+  .why-head{max-width:640px;margin-bottom:54px;}
+  .why .eyebrow{color:#D9BE74;}
+  .why h2{font-size:3.4rem;font-weight:500;color:#fff;}
+  .why h2 em{font-style:italic;color:#E4CE8C;}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+  .wcell .wn{font-family:var(--disp);font-style:italic;font-size:2.6rem;color:var(--gold);display:block;margin-bottom:14px;line-height:1;}
+  .wcell h3{font-family:var(--disp);font-size:1.4rem;font-weight:500;color:#fff;margin-bottom:9px;}
+  .wcell p{color:rgba(255,255,255,.6);font-size:1rem;}
+
+  /* statement (faucet band) */
+  .statement{position:relative;min-height:460px;display:flex;align-items:center;color:#fff;overflow:hidden;}
+  .statement::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(18,30,22,.68),rgba(18,30,22,.74)),url('../assets/img/pph-faucet.jpg') center/cover;}
+  .statement .wrap{position:relative;z-index:1;text-align:center;max-width:920px;}
+  .statement .qmark{font-family:var(--disp);font-style:italic;font-size:5rem;line-height:.6;color:var(--gold);display:block;margin-bottom:20px;}
+  .statement p{font-family:var(--disp);font-weight:400;font-size:2.4rem;line-height:1.36;margin:0 auto 24px;}
+  .statement p em{font-style:italic;color:#E4CE8C;}
+  .statement .by{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+
+  /* service area */
+  .area-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:center;}
+  .area h2{font-size:3rem;margin-bottom:18px;}
+  .area h2 em{font-style:italic;color:var(--gold-d);}
+  .area p{color:var(--soft);font-size:1.08rem;margin-bottom:16px;}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;}
+  .towns span{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:9px 18px;font-size:.92rem;font-weight:500;transition:.2s;}
+  .towns span:hover{border-color:var(--gold);color:var(--gold-d);}
+  .towns .st{background:var(--gold-soft);border-color:transparent;color:var(--gold-d);font-weight:600;}
+
+  /* gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:18px;margin-top:56px;}
+  .gcell{border-radius:18px;background-size:cover;background-position:center;box-shadow:0 20px 44px -24px rgba(23,42,30,.3);transition:transform .5s cubic-bezier(.2,.6,.2,1);}
+  .gcell:hover{transform:scale(1.02);}
+  .gcell.tall{grid-row:span 2;}
+
+  /* faq */
+  .faq{max-width:900px;border-top:1px solid var(--line);}
+  .faq details{border-bottom:1px solid var(--line);}
+  .faq summary{list-style:none;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;gap:30px;align-items:baseline;font-family:var(--disp);font-weight:500;font-size:1.5rem;color:var(--ink);transition:color .2s;}
+  .faq summary:hover{color:var(--gold-d);}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .pl{flex:none;font-family:var(--sans);font-size:1.6rem;color:var(--gold-d);transition:transform .3s;line-height:1;}
+  .faq details[open] summary .pl{transform:rotate(45deg);}
+  .faq details p{color:var(--soft);font-size:1.06rem;line-height:1.65;padding:0 0 28px;max-width:760px;}
+
+  /* cta */
+  .cta-band{background:radial-gradient(120% 120% at 50% -20%,rgba(180,146,58,.26),transparent 60%),var(--forest);border-radius:34px;padding:96px 60px;text-align:center;color:#fff;}
+  .cta-band .eyebrow{color:#D9BE74;}
+  .cta-band h2{font-size:3.4rem;font-weight:500;max-width:760px;margin:14px auto 18px;}
+  .cta-band h2 em{font-style:italic;color:#E4CE8C;}
+  .cta-band p{color:rgba(255,255,255,.72);font-size:1.14rem;max-width:560px;margin:0 auto 34px;}
+  .cta-band .btn-w{background:var(--gold);color:var(--forest-d);padding:18px 38px;border-radius:100px;font-weight:700;font-size:1.05rem;display:inline-block;transition:.25s;}
+  .cta-band .btn-w:hover{transform:translateY(-2px);background:#c9a751;}
+
+  /* contact */
+  .contact-head{text-align:center;margin-bottom:52px;}
+  .contact-head h2{font-size:3.2rem;font-weight:500;margin-top:14px;}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px -50px rgba(23,42,30,.3);}
+  .cinfo{background:var(--forest);color:#fff;padding:56px 48px;}
+  .cinfo h4{font-family:var(--sans);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;}
+  .cinfo p{color:rgba(255,255,255,.82);margin-bottom:11px;line-height:1.5;}
+  .cinfo a{color:#fff;}.cinfo a:hover{color:#E4CE8C;}
+  .cinfo .big{font-family:var(--disp);font-size:1.9rem;color:#fff;margin:2px 0 8px;}
+  .cform{padding:52px 50px;display:flex;flex-direction:column;}
+  .cform label{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin:0 0 8px;}
+  .cform input,.cform textarea,.cform select{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--cream);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
+  .cform input:focus,.cform textarea:focus,.cform select:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 4px var(--gold-soft);}
+  .cform textarea{resize:vertical;min-height:110px;}
+  .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;}
+
+  /* footer */
+  footer{background:var(--forest-d);color:rgba(255,255,255,.6);padding:74px 0 44px;}
+  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-top .brand img{height:54px;margin-bottom:18px;}
+  .foot-top p{max-width:320px;}
+  .foot-col h4{color:#fff;font-family:var(--disp);font-weight:500;font-size:1.1rem;margin-bottom:14px;}
+  .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
+  .foot-col a:hover{color:#E4CE8C;}
+  .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.85rem;flex-wrap:wrap;gap:10px;}
+
+  /* reveal + stagger */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .stagger > *{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1);}
+  .stagger.in > *{opacity:1;transform:none;}
+  .stagger.in > *:nth-child(2){transition-delay:.08s;}.stagger.in > *:nth-child(3){transition-delay:.16s;}
+  .stagger.in > *:nth-child(4){transition-delay:.24s;}.stagger.in > *:nth-child(5){transition-delay:.32s;}.stagger.in > *:nth-child(6){transition-delay:.4s;}
+  @media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1!important;transform:none!important;transition:none!important;}}
+
+  @media(max-width:940px){
+    .wrap{padding:0 26px;}
+    .nav-links{display:none;}
+    .hero{min-height:0;}.hero-in{padding:130px 0 90px;}.hero h1{font-size:3.3rem;}
+    .trust-in{grid-template-columns:1fr 1fr;}.trust-item:nth-child(3){border-left:0;}
+    .sec h2,.why h2,.cta-band h2{font-size:2.2rem;}.statement p{font-size:1.6rem;}
+    .split{grid-template-columns:1fr;gap:36px;}.split.rev .split-photo{order:0;}.split-photo{height:340px;}
+    .svc-grid{grid-template-columns:1fr;}.why-grid{grid-template-columns:1fr 1fr;}
+    .area-grid{grid-template-columns:1fr;gap:36px;}
+    .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:160px;}.gcell.tall{grid-row:span 1;}
+    .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 30px;}
+    .cta-band{padding:64px 28px;}
+  }
+</style></head>
+<body>
+  <header class="nav"><div class="wrap nav-in">
+    <a class="brand" href="#"><img src="../assets/img/pph-logo.png" alt="Pettigrew Plumbing &amp; HVAC"></a>
+    <nav class="nav-links"><a href="#services">Services</a><a href="#why">Why Us</a><a href="#area">Service Area</a><a href="#work">Work</a><a href="#contact-form">Contact</a></nav>
+    <a class="nav-call" href="tel:6039691806">Call (603) 969-1806</a>
+  </div></header>
+
+  <section class="hero"><div class="wrap hero-in">
+    <span class="eyebrow">Portsmouth, NH &middot; Family owned since 2001</span>
+    <h1>Your favorite plumbing, heating &amp; <em>cooling</em> company.</h1>
+    <p class="lead">Plumbing, heating, cooling, water filtration, and well systems for Seacoast New Hampshire and Southern Maine, done right the first time and treated like it's our own home.</p>
+    <div class="hero-cta">
+      <a class="btn-p" href="tel:6039691806">Schedule service</a>
+      <a class="btn-t" href="#services">Our services &rarr;</a>
+    </div>
+    <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg> Fully licensed and insured &middot; over two decades on the Seacoast</div>
+  </div></section>
+
+  <div class="trust"><div class="wrap trust-in">
+    <div class="trust-item"><b>Since <em>2001</em></b><span>Serving the Seacoast</span></div>
+    <div class="trust-item"><b>Family</b><span>Owned &amp; operated</span></div>
+    <div class="trust-item"><b>Licensed</b><span>Fully licensed &amp; insured</span></div>
+    <div class="trust-item"><b>NH &amp; ME</b><span>Seacoast &amp; Southern Maine</span></div>
+  </div></div>
+
+  <section class="sec" id="services"><div class="wrap split">
+    <div class="split-photo" style="background-image:url('../assets/img/pph-boiler.jpg')"></div>
+    <div>
+      <span class="eyebrow">Heating &amp; cooling</span>
+      <h2>Comfort you can <em>count on</em>, year round.</h2>
+      <p>From high-efficiency boiler and heating installs to keeping your home cool through a Seacoast summer, our team handles the full comfort side of your home. We come prepared with a fully stocked truck, so no matter the issue, we have the tools and supplies to fix it right away.</p>
+      <ul class="flist">
+        <li>Heating system installation, service &amp; repair</li>
+        <li>Air conditioning &amp; cooling systems</li>
+        <li>Ventilation and whole-home comfort</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap split rev">
+    <div class="split-photo" style="background-image:url('../assets/img/pph-vanity.jpg')"></div>
+    <div>
+      <span class="eyebrow">Plumbing &amp; remodeling</span>
+      <h2>Every type of plumber, <em>on staff</em>.</h2>
+      <p>Some plumbers spend a whole career on just one corner of the trade. Pettigrew keeps every type of plumber on staff and on call, ready for repairs, new construction, and full bathroom and kitchen remodels alike. We won't leave a job until you're completely satisfied.</p>
+      <ul class="flist">
+        <li>Repairs, fixtures &amp; new installations</li>
+        <li>Bathroom &amp; kitchen remodeling</li>
+        <li>Water filtration, treatment &amp; well systems</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <span class="eyebrow">What we do</span>
+    <h2>Everything under one <em>roof</em>.</h2>
+    <p class="sec-lead">Anything related to the plumbing, heating, or cooling systems in your home, plus ventilation, water treatment, and well systems, all from one trusted local team.</p>
+    <div class="svc-grid stagger">
+      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s5 5 5 9a5 5 0 0 1-10 0c0-4 5-9 5-9Z"/><path d="M9 14a3 3 0 0 0 6 0"/></svg></span><h3>Heating</h3><p>Boiler and heating system installs, service, and repair to keep the cold out all winter.</p></div>
+      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></span><h3>Cooling</h3><p>Air conditioning and cooling systems sized and installed for comfortable Seacoast summers.</p></div>
+      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a6 6 0 0 0 6-6c0-4-6-11-6-11S6 12 6 16a6 6 0 0 0 6 6Z"/></svg></span><h3>Plumbing</h3><p>Repairs, fixtures, and new installations from a full team of specialized plumbers.</p></div>
+      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M6 5v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5M9 9h6M9 13h6"/></svg></span><h3>Water Filtration</h3><p>Water treatment and filtration for cleaner, better water throughout your home.</p></div>
+      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M8 4l8 0M5 22h14l-2-8H7z"/><path d="M9 14l1.5 4M15 14l-1.5 4"/></svg></span><h3>Well Systems</h3><p>Well pump and system installation, service, and repair for homes off municipal water.</p></div>
+      <div class="svc"><span class="ict"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg></span><h3>Remodeling</h3><p>Full bathroom and kitchen remodels, finished with the same craftsmanship as our repairs.</p></div>
+    </div>
+  </div></section>
+
+  <section class="why" id="why"><div class="wrap">
+    <div class="why-head reveal">
+      <span class="eyebrow">Why Pettigrew</span>
+      <h2>Get the job done right, the <em>first time</em>.</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="wcell"><span class="wn">01</span><h3>Every specialty on staff</h3><p>Residential, commercial, and new construction plumbers, all under one roof for your project.</p></div>
+      <div class="wcell"><span class="wn">02</span><h3>Fully stocked trucks</h3><p>We arrive prepared with the tools and supplies to fix most issues on the spot.</p></div>
+      <div class="wcell"><span class="wn">03</span><h3>Treated like family</h3><p>We treat every customer like part of ours, and we won't leave until you're fully satisfied.</p></div>
+      <div class="wcell"><span class="wn">04</span><h3>Personal, since 2001</h3><p>Efficient scheduling, competitive pricing, and the highest quality standards, every visit.</p></div>
+    </div>
+  </div></section>
+
+  <section class="statement"><div class="wrap">
+    <span class="qmark">&#8220;</span>
+    <p>We pride ourselves on our workmanship, and we won't leave a job until <em>you are fully satisfied</em>.</p>
+    <span class="by">Pettigrew Plumbing &amp; HVAC, Portsmouth NH</span>
+  </div></section>
+
+  <section class="sec" id="area"><div class="wrap area-grid">
+    <div class="reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Proudly serving the <em>Seacoast</em>.</h2>
+      <p>Based in Portsmouth, we cover Seacoast New Hampshire and Southern Maine. If your town is nearby and not listed, reach out, chances are we're already in your neighborhood.</p>
+      <a class="btn-p" href="tel:6039691806" style="margin-top:8px;display:inline-block;">Check your town</a>
+    </div>
+    <div class="towns reveal">
+      <span class="st">Portsmouth NH</span><span>Barrington</span><span>Dover</span><span>Durham</span><span>Epping</span><span>Exeter</span><span>Fremont</span><span>Hampton</span><span>Lee</span><span>Madbury</span><span>Newfields</span><span>Newington</span><span>Newmarket</span><span>North Hampton</span><span>Nottingham</span><span>Raymond</span><span>Rochester</span><span>Rye</span><span>Seabrook</span><span>Stratham</span><span class="st">Berwick ME</span><span>Eliot ME</span><span>Kittery ME</span>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="work"><div class="wrap">
+    <span class="eyebrow">Recent work</span>
+    <h2>Craftsmanship, up <em>close</em>.</h2>
+    <p class="sec-lead">A look at recent heating, plumbing, and remodeling projects across the Seacoast.</p>
+    <div class="gal-grid reveal">
+      <div class="gcell tall" style="background-image:url('../assets/img/pph-boiler.jpg')"></div>
+      <div class="gcell" style="background-image:url('../assets/img/pph-vanity.jpg')"></div>
+      <div class="gcell tall" style="background-image:url('../assets/img/pph-shower.jpg')"></div>
+      <div class="gcell" style="background-image:url('../assets/img/pph-faucet.jpg')"></div>
+      <div class="gcell" style="background-image:url('../assets/img/pph-toilet.jpg')"></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
+    <span class="eyebrow">Good to know</span>
+    <h2 style="margin-bottom:44px;">Questions, <em>answered</em>.</h2>
+    <div class="faq reveal">
+      <details open><summary>What services do you offer?<span class="pl">+</span></summary><p>Anything related to the plumbing, heating, or cooling systems in your home, plus ventilation, water treatment, water filtration, well systems, and full bathroom and kitchen remodeling. If it involves water or comfort in your home, we can help.</p></details>
+      <details><summary>What areas do you serve?<span class="pl">+</span></summary><p>We're based in Portsmouth, NH and serve Seacoast New Hampshire and Southern Maine, including Dover, Durham, Exeter, Hampton, Rochester, Rye, Stratham, Kittery, Eliot, Berwick, and the surrounding towns.</p></details>
+      <details><summary>Are you licensed and insured?<span class="pl">+</span></summary><p>Yes. Pettigrew Plumbing &amp; HVAC is a family owned business that has been fully licensed and insured and serving the Seacoast since 2001.</p></details>
+      <details><summary>Do you handle both repairs and full remodels?<span class="pl">+</span></summary><p>We do. Because we keep every type of plumber on staff, we handle everything from a single repair to new construction and complete bathroom or kitchen remodels, all with the same standard of workmanship.</p></details>
+      <details><summary>How do I schedule service?<span class="pl">+</span></summary><p>Give us a call at (603) 969-1806 or send a message through the form below with your town and the service you need. Our scheduling is efficient, so you can get the service you need when you need it.</p></details>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="cta-band reveal">
+      <span class="eyebrow" style="justify-content:center;">Let's get started</span>
+      <h2>Need plumbing, heating, or cooling <em>help</em>?</h2>
+      <p>Reach out to schedule service or ask a question. We'll take the time to figure out the right approach for your home.</p>
+      <a class="btn-w" href="tel:6039691806">Call (603) 969-1806</a>
+    </div>
+  </div></section>
+
+  <section class="sec" style="padding-top:0;" id="contact-form"><div class="wrap">
+    <div class="contact-head reveal"><span class="eyebrow" style="justify-content:center;">Get in touch</span>
+      <h2>Schedule your service.</h2></div>
+    <div class="contact-grid reveal">
+      <div class="cinfo">
+        <h4>Call us</h4>
+        <div class="big"><a href="tel:6039691806">(603) 969-1806</a></div>
+        <h4 style="margin-top:32px;">Service area</h4>
+        <p>Portsmouth, NH<br>Seacoast New Hampshire &amp; Southern Maine</p>
+        <h4 style="margin-top:32px;">The Pettigrew promise</h4>
+        <p>Family owned since 2001. Fully licensed and insured. We treat every customer like part of our family.</p>
+      </div>
+      <form class="cform" onsubmit="return false;">
+        <label>Name</label><input type="text" name="name" autocomplete="name">
+        <label>Phone</label><input type="tel" name="phone" autocomplete="tel">
+        <label>Town / Zip</label><input type="text" name="town">
+        <label>Service needed</label>
+        <select name="service"><option>Heating</option><option>Cooling</option><option>Plumbing</option><option>Water filtration / well</option><option>Remodeling</option><option>Other</option></select>
+        <label>How can we help?</label><textarea name="message" rows="3"></textarea>
+        <button type="submit" class="btn-p">Request service</button>
+      </form>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div class="foot-top">
+      <div><a class="brand"><img src="../assets/img/pph-logo.png" alt="Pettigrew Plumbing &amp; HVAC"></a>
+        <p>Family owned plumbing, heating, cooling, water filtration, and well systems. Serving Seacoast NH and Southern Maine since 2001.</p></div>
+      <div class="foot-col"><h4>Services</h4><a href="#services">Heating</a><a href="#services">Cooling</a><a href="#services">Plumbing</a><a href="#services">Remodeling</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="tel:6039691806">(603) 969-1806</a><span>Portsmouth, NH</span><span>Seacoast NH &amp; Southern Maine</span><span>Licensed &amp; insured</span></div>
+    </div>
+    <div class="foot-bot"><span>&copy; 2026 Pettigrew Plumbing &amp; HVAC</span><span>Family owned &amp; operated since 2001</span></div>
+  </div></footer>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});[].forEach.call(document.querySelectorAll('.reveal,.stagger'),function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.9){el.classList.add('in');}else{io.observe(el);}});})();</script>
+</body></html>
