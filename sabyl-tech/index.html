@@ -212,7 +212,42 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
 .foot-col a:hover{color:#fff}
 .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#5E827D}
 
+/* PROCESS */
+.process{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.step{position:relative}
+.step .n{width:58px;height:58px;border-radius:16px;background:var(--teal);color:#fff;font-family:var(--serif);font-size:1.6rem;display:flex;align-items:center;justify-content:center;margin-bottom:22px;position:relative;z-index:2}
+.step h3{font-size:1.3rem;margin-bottom:10px}
+.step p{color:var(--muted);font-size:.98rem}
+.step::before{content:"";position:absolute;top:29px;left:70px;width:calc(100% - 12px);height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 16px);z-index:1}
+.step:last-child::before{display:none}
+@media(max-width:1000px){.steps{grid-template-columns:1fr 1fr}.step::before{display:none}}
+@media(max-width:600px){.steps{grid-template-columns:1fr}}
+
+/* CTA band */
+.ctaband{position:relative;background:var(--teal);color:#fff;text-align:center;overflow:hidden}
+.ctaband::before{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(143,227,216,.24),transparent 70%);top:-150px;left:-90px}
+.ctaband::after{content:"";position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(143,227,216,.18),transparent 70%);bottom:-170px;right:-70px}
+.ctaband .wrap{position:relative;z-index:2;padding:100px 40px}
+.ctaband .kicker{font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--mint);display:block;margin-bottom:18px}
+.ctaband h2{font-size:clamp(2.4rem,5vw,4rem);color:#fff;margin-bottom:16px}
+.ctaband h2 em{color:var(--mint)}
+.ctaband p{color:rgba(255,255,255,.85);font-size:1.16rem;max-width:46ch;margin:0 auto 34px}
+.ctaband .btn-white{color:var(--teal)}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq-wrap{max-width:820px;margin:0 auto}
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden;transition:box-shadow .3s}
+.faq-item[open]{box-shadow:0 22px 46px -30px rgba(9,55,51,.4)}
+.faq-item summary{list-style:none;cursor:pointer;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--serif);font-size:1.2rem;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .pl{flex:none;width:30px;height:30px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;transition:.3s;font-size:1.2rem;line-height:0}
+.faq-item[open] summary .pl{transform:rotate(45deg);background:var(--aqua);color:#06302C}
+.faq-item .a{padding:0 30px 26px;color:var(--muted);font-size:1.02rem;line-height:1.6}
+
 /* reveal */
+
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
 .stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
@@ -349,7 +384,24 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
   </div>
 </section>
 
+<section class="sec process" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>A real clean in <em>four simple steps.</em></h2>
+      <p>No runaround, no upsells. Just an easy path from your call to a genuinely cleaner home.</p>
+    </div>
+    <div class="steps stagger">
+      <div class="step"><div class="n">1</div><h3>Call or text</h3><p>Reach out to Nate with what you need cleaned. Honest answers, no pressure.</p></div>
+      <div class="step"><div class="n">2</div><h3>We take a look</h3><p>We assess the job and give you a fair, up-front price with no surprises.</p></div>
+      <div class="step"><div class="n">3</div><h3>The deep clean</h3><p>Thorough, careful work on your carpet, upholstery, tile, or mattress.</p></div>
+      <div class="step"><div class="n">4</div><h3>Enjoy the results</h3><p>Sit back and enjoy a genuinely clean home, backed by our guarantee.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="sec rev-sec" id="reviews">
+
   <div class="wrap">
     <div class="rev-top reveal">
       <div class="sec-head" style="margin-bottom:0">
@@ -369,7 +421,17 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
   </div>
 </section>
 
+<section class="ctaband">
+  <div class="wrap reveal">
+    <span class="kicker">Ready when you are</span>
+    <h2>Your cleanest carpet, <em>guaranteed.</em></h2>
+    <p>Book with the Quad Cities' most thorough carpet cleaner and see the difference for yourself.</p>
+    <a class="btn btn-white" href="tel:3097165912">Call or text 309-716-5912</a>
+  </div>
+</section>
+
 <section class="sec area" id="area">
+
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Service area</span>
@@ -380,7 +442,24 @@ footer{background:#06302C;color:#93B5B0;padding:76px 0 38px}
   </div>
 </section>
 
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details class="faq-item"><summary>What areas do you serve?<span class="pl">+</span></summary><div class="a">We proudly serve Moline and the greater Quad Cities, along with the surrounding communities. If you are nearby, just ask.</div></details>
+      <details class="faq-item"><summary>Do you clean more than carpet?<span class="pl">+</span></summary><div class="a">Yes. Along with carpet, we clean upholstery and furniture, tile and grout, and mattresses, and we handle commercial floor care and flood water removal.</div></details>
+      <details class="faq-item"><summary>Can you help with pet stains and hair?<span class="pl">+</span></summary><div class="a">Absolutely. Pets are part of the family, and refreshing carpet and furniture after them is some of our most requested work.</div></details>
+      <details class="faq-item"><summary>How much does it cost?<span class="pl">+</span></summary><div class="a">Our rates are fair and reasonable, and we give you an up-front price before we start, so there are no surprises. Call or text for a quote.</div></details>
+      <details class="faq-item"><summary>Do you guarantee your work?<span class="pl">+</span></summary><div class="a">We do. We stand behind the most thorough clean in the Quad Cities, and we are not happy until you are.</div></details>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
+
   <div class="wrap contact-grid">
     <div class="contact-copy reveal">
       <span class="eyebrow light">Book now</span>
