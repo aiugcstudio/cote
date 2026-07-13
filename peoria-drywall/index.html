@@ -189,8 +189,14 @@ nav.scrolled{background:rgba(14,16,18,.92);backdrop-filter:blur(14px);padding:14
 .cc-row .lb{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.55)}
 .cc-row .vl{font-size:1.04rem;font-weight:600}
 
+.about-sign{display:flex;align-items:center;gap:14px;margin-top:26px}
+.about-sign img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--green)}
+.about-sign b{display:block;font-weight:700}
+.about-sign span{font-size:.88rem;color:var(--muted)}
+
 /* FOOTER */
 footer{background:var(--noir-2);color:rgba(255,255,255,.6);padding:48px 0;text-align:center;font-size:.9rem}
+footer .flogo{height:60px;width:auto;margin:0 auto 16px;display:block;border-radius:8px}
 footer .fbrand{font-weight:800;font-size:1.2rem;color:#fff;text-transform:uppercase;margin-bottom:10px}
 footer .fbrand span{color:var(--green)}
 footer a{color:var(--green)}
@@ -355,10 +361,14 @@ footer a{color:var(--green)}
   <div class="about-grid">
     <div class="about-img"><img src="../assets/img/pdp-1.jpg" alt="Peoria Drywall & Painting building"></div>
     <div class="about-copy">
-      <span class="eyebrow">Locally owned, Peoria proud</span>
-      <h2>Built on being <em>easy to work with.</em></h2>
-      <p>Peoria Drywall &amp; Painting was built on a simple idea: be the company that is easy to find, easy to talk to and easy to work with. Fifteen years later, that reputation is why builders and homeowners keep calling back.</p>
-      <p>Led by Scott Pfleeger and based on N. University Street in Peoria, the crew brings the same care to a small patch as to a full custom floor.</p>
+      <span class="eyebrow">Meet the owner</span>
+      <h2>Scott Pfleeger, <em>born and raised here.</em></h2>
+      <p>Born in Peoria and raised in Morton, Scott has spent more than 20 years working drywall, paint and epoxy across Central Illinois, work that has added up to over 6,000 satisfied customers.</p>
+      <p>His approach is simple: always do the right thing. "If I haven't already, I look forward to building your trust and helping you with your next project." Chances are, if you live here or run a business here, you have already heard of us, hired us, or know someone who has.</p>
+      <div class="about-sign">
+        <img src="../assets/img/pdp-scott.jpg" alt="Scott Pfleeger">
+        <div><b>Scott Pfleeger</b><span>Owner, Peoria Drywall &amp; Painting</span></div>
+      </div>
       <div style="margin-top:24px"><a href="tel:3096815500" class="btn btn-dark">Call (309) 681-5500</a></div>
     </div>
   </div>
@@ -458,7 +468,11 @@ footer a{color:var(--green)}
       </div>
       <div class="cc-row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></div>
-        <div><div class="lb">Serving</div><div class="vl">Central Illinois for 15 years</div></div>
+        <div><div class="lb">Hours</div><div class="vl">Mon to Fri 8am to 6pm · Sat 8am to 12pm</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div><div class="lb">Financing</div><div class="vl">Payments as low as $30/month</div></div>
       </div>
     </div>
   </div>
@@ -466,6 +480,7 @@ footer a{color:var(--green)}
 
 <footer>
   <div class="wrap">
+    <img class="flogo" src="../assets/img/pdp-logo.png" alt="Peoria Drywall & Painting">
     <div class="fbrand">Peoria <span>Drywall &amp; Painting</span></div>
     <p>Drywall · Painting · Epoxy · Central Illinois · 15 years</p>
     <p style="margin-top:12px">(309) 681-5500 · 8101 N. University St., Peoria, IL 61615</p>

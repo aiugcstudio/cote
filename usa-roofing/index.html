@@ -195,8 +195,22 @@ nav.scrolled{background:rgba(26,42,58,.94);backdrop-filter:blur(14px);padding:14
 .cc-row .lb{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.55)}
 .cc-row .vl{font-size:1.02rem;font-weight:600}
 
+/* FOUNDER */
+.founder{background:var(--paper)}
+.founder-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.founder-photo{position:relative}
+.founder-photo img{border-radius:18px;box-shadow:0 40px 80px -44px rgba(24,42,58,.6);width:100%}
+.founder-photo .tag{position:absolute;bottom:-20px;left:-20px;background:var(--red);color:#fff;border-radius:14px;padding:16px 22px;font-weight:700;font-size:.95rem;box-shadow:0 24px 46px -22px rgba(192,57,43,.7)}
+.founder-copy h2{font-size:clamp(2.1rem,4vw,3.1rem);margin-bottom:8px}
+.founder-copy .role{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:22px;display:block}
+.founder-copy p{color:var(--muted);margin-bottom:18px;font-size:1.06rem}
+.founder-copy .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.founder-copy .creds span{background:var(--white);border:1px solid var(--line);border-radius:100px;padding:9px 18px;font-size:.88rem;font-weight:600}
+@media(max-width:820px){.founder-grid{grid-template-columns:1fr;gap:44px}.founder-photo .tag{left:16px}}
+
 /* FOOTER */
 footer{background:var(--slate-2);border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.6);padding:48px 0;text-align:center;font-size:.9rem}
+footer .flogo{height:46px;width:auto;margin:0 auto 18px;display:block;background:#fff;padding:10px 16px;border-radius:10px}
 footer .fbrand{font-weight:800;font-size:1.2rem;color:#fff;margin-bottom:10px}
 footer .fbrand span{color:var(--red)}
 footer a{color:#F0A79E}
@@ -264,8 +278,8 @@ footer a{color:#F0A79E}
 <!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-track">
-    <span>Cleveland Zoo</span><span>Akron Zoo Wild Asia</span><span>Springvale Golf Course</span><span>Summit County Humane Society</span><span>Cleveland Powerhouse</span>
-    <span>Cleveland Zoo</span><span>Akron Zoo Wild Asia</span><span>Springvale Golf Course</span><span>Summit County Humane Society</span><span>Cleveland Powerhouse</span>
+    <span>Cleveland Zoo</span><span>Akron Zoo Wild Asia</span><span>Springvale Golf Course</span><span>Summit County Humane Society</span><span>Cleveland Powerhouse</span><span>Vitamix of Cleveland</span><span>Brandywine Falls</span>
+    <span>Cleveland Zoo</span><span>Akron Zoo Wild Asia</span><span>Springvale Golf Course</span><span>Summit County Humane Society</span><span>Cleveland Powerhouse</span><span>Vitamix of Cleveland</span><span>Brandywine Falls</span>
   </div>
 </div>
 
@@ -297,17 +311,17 @@ footer a{color:#F0A79E}
       <div class="svc">
         <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8M5 10v10h14V10M9 20v-6h6v6"/></svg></div>
         <h3>Roof Installation</h3>
-        <p>New roofs in shingle, slate, tile, metal and EPDM, installed to the highest standard on homes and commercial buildings alike.</p>
+        <p>Expert installation of new roofing systems tailored to your building, from flat and sloped roofs to specialised commercial systems, in shingle, slate, tile, metal and EPDM. We use materials that reduce heat absorption and can lower cooling costs.</p>
       </div>
       <div class="svc">
         <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M11 3a8 8 0 105.3 14l4.7 4.7 1.4-1.4-4.7-4.7A8 8 0 0011 3zM8 11h6M11 8v6"/></svg></div>
         <h3>Inspection &amp; Replacement</h3>
-        <p>Honest assessments of what your roof really needs, and full replacements when it is time, with no pressure and no surprises.</p>
+        <p>We inspect and evaluate the condition of your roof, identify issues and recommend the right action. When repairs are no longer enough, a full replacement can greatly improve energy efficiency and cut heating and cooling costs.</p>
       </div>
       <div class="svc">
         <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
         <h3>Project Management</h3>
-        <p>For larger and complex builds, we manage the whole roofing scope, coordinating trades, timelines and quality from start to finish.</p>
+        <p>Meticulous planning, coordination and execution keep large projects on time and on standard. Our highly-trained union installers bring quality, confidence and service to every job, with minimal disruption to your operations.</p>
       </div>
     </div>
   </div>
@@ -347,6 +361,28 @@ footer a{color:#F0A79E}
       </ul>
     </div>
     <div class="show-img"><img src="../assets/img/usa-about.jpg" alt="Metal cupola roof with weathervane installed by USA Roofing"></div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="sec founder">
+  <div class="wrap founder-grid">
+    <div class="founder-photo reveal">
+      <img src="../assets/img/usa-jack.jpg" alt="Jack Petsche, founder of USA Roofing">
+      <div class="tag">Founder since 1995</div>
+    </div>
+    <div class="founder-copy reveal">
+      <span class="role">Meet the founder</span>
+      <h2>Jack Petsche</h2>
+      <p>Jack started USA Roofing in 1995 with his wife Rose and has managed large-scale projects across Northeast Ohio ever since. He brings a background in Construction Law, having graduated Cleveland Marshall Law School in 1988, and is the former President of The Ohio Roofing Contractors Association.</p>
+      <p>A board member of the Construction Employers Association, Jack prides himself on running a safe and rewarding environment for his crew, many of whom have worked alongside him for decades. That continuity is exactly why the work holds up.</p>
+      <div class="creds">
+        <span>Owner &amp; Founder</span>
+        <span>Construction Law, 1988</span>
+        <span>Former President, Ohio Roofing Contractors Association</span>
+        <span>Board Member, CEA</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -438,6 +474,7 @@ footer a{color:#F0A79E}
 
 <footer>
   <div class="wrap">
+    <img class="flogo" src="../assets/img/usa-logo.png" alt="USA Roofing, Inc.">
     <div class="fbrand">USA <span>Roofing, Inc.</span></div>
     <p>Shingle · Slate · Tile · Metal · EPDM · Siding · Northeast Ohio · Since 1995</p>
     <p style="margin-top:12px">330.425.2478 · 2305 E Aurora Rd #9, Twinsburg, OH 44087 · <a href="mailto:info@usaroofinginc.com">info@usaroofinginc.com</a></p>
