@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morris Cleaning Services · Bothell &amp; Greater Seattle exterior cleaning, 20+ years</title>
+<meta name="description" content="Window cleaning, gutter cleaning, moss treatment, pressure washing, solar and screen cleaning across Bothell and Greater Seattle. Owner-operated for over 20 years. Licensed, bonded and insured.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2312314A'/%3E%3Ccircle cx='66' cy='34' r='12' fill='%232E9AD6'/%3E%3Cpath d='M20 68 L38 50 L52 60 L72 44 L80 52 V72 H20 Z' fill='%232E9AD6'/%3E%3C/svg%3E">
+<style>
+:root{
+  --navy:#12314A;
+  --navy-2:#0C2436;
+  --sky:#2E9AD6;
+  --sky-dk:#1E76A8;
+  --cream:#EEF4F8;
+  --paper:#FBFDFE;
+  --white:#fff;
+  --ink:#152838;
+  --muted:#556577;
+  --line:#DCE7EE;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.sec{padding:118px 0}
+h1,h2,h3{line-height:1.06;letter-spacing:-.01em}
+h1,h2{font-family:var(--serif);font-weight:600}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--sky-dk);display:inline-block;margin-bottom:20px}
+em{font-style:italic;color:var(--sky-dk);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--sky);color:#fff;border:none;padding:17px 34px;border-radius:100px;font-family:var(--sans);font-weight:700;font-size:1rem;cursor:pointer;transition:.3s}
+.btn:hover{background:var(--sky-dk);transform:translateY(-2px);box-shadow:0 16px 34px -16px rgba(46,154,214,.7)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:none}
+.sec-head{max-width:730px}
+.sec-head.center{margin:0 auto;text-align:center}
+.sec-head h2{font-size:clamp(2.4rem,4.6vw,3.7rem);margin-bottom:18px}
+.sec-head p{color:var(--muted);font-size:1.12rem}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:.4s}
+nav.scrolled{background:rgba(18,49,74,.95);backdrop-filter:blur(14px);padding:10px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:600;font-size:1.2rem;color:#fff}
+.brand img{height:40px;width:auto;background:#fff;border-radius:8px;padding:4px 7px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:600;color:rgba(255,255,255,.85);transition:.3s}
+.nav-links a:hover{color:var(--sky)}
+.nav-cta{background:var(--sky);color:#fff!important;padding:11px 22px;border-radius:100px;font-weight:700;font-size:.9rem}
+.nav-cta:hover{background:var(--sky-dk)}
+@media(max-width:860px){.nav-links a:not(.nav-cta){display:none}nav{background:rgba(18,49,74,.95)}}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;background:url('../assets/img/mo-home.jpg') center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(12,36,54,.95) 0%,rgba(12,36,54,.78) 46%,rgba(12,36,54,.4) 100%)}
+.hero-in{position:relative;z-index:3;max-width:1200px;margin:0 auto;padding:140px 40px 70px;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(46,154,214,.2);border:1px solid rgba(46,154,214,.55);color:#9FD3EE;padding:8px 16px;border-radius:100px;font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 4px rgba(46,154,214,.3)}
+.hero h1{font-size:clamp(3rem,6.6vw,5.7rem);font-weight:600;line-height:1.02;max-width:16ch;margin-bottom:24px}
+.hero h1 em{color:#9FD3EE}
+.hero p.lead{font-size:1.28rem;max-width:56ch;color:rgba(255,255,255,.86);margin-bottom:38px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.36)}
+.hero .btn-ghost:hover{background:#fff;color:var(--navy)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);gap:56px;border-top:1px solid rgba(255,255,255,.16);padding-top:32px}
+.hero-stat .n{font-family:var(--serif);font-size:2.6rem;line-height:1;color:#fff}
+.hero-stat .n em{color:#9FD3EE}
+.hero-stat .l{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.62);margin-top:8px}
+@media(max-width:640px){.hero-stats{grid-template-columns:1fr 1fr;gap:26px}}
+
+/* TRUST */
+.trust{background:var(--navy-2);color:#fff;padding:40px 0}
+.trust-in{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;align-items:center}
+.trust-in .ti{display:flex;align-items:center;gap:11px;font-size:.96rem;font-weight:500}
+.trust-in .ti svg{width:22px;height:22px;stroke:var(--sky);flex:none}
+
+/* SERVICES */
+.services{background:var(--paper)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:38px;transition:.35s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 34px 60px -42px rgba(18,49,74,.4);border-color:var(--sky)}
+.svc-ico{width:58px;height:58px;border-radius:14px;background:var(--cream);display:grid;place-items:center;margin-bottom:22px;transition:.35s}
+.svc:hover .svc-ico{background:var(--sky)}
+.svc-ico svg{width:29px;height:29px;stroke:var(--sky-dk);fill:none;stroke-width:1.6}
+.svc:hover .svc-ico svg{stroke:#fff}
+.svc h3{font-family:var(--sans);font-size:1.3rem;font-weight:700;margin-bottom:11px}
+.svc p{color:var(--muted);font-size:.99rem}
+
+/* OWNER FEATURE */
+.owner{overflow:hidden}
+.owner-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.owner-img{position:relative;min-height:520px}
+.owner-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.owner-copy{padding:90px 70px;display:flex;flex-direction:column;justify-content:center;background:var(--navy);color:#fff}
+.owner-copy .eyebrow{color:#9FD3EE}
+.owner-copy h2{font-size:clamp(2.1rem,3.6vw,3rem);margin-bottom:20px}
+.owner-copy h2 em{color:#9FD3EE}
+.owner-copy p{color:rgba(255,255,255,.8);margin-bottom:18px}
+.owner-sign{display:flex;align-items:center;gap:14px;margin-top:22px}
+.owner-sign .av{width:52px;height:52px;border-radius:50%;background:var(--sky);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem}
+.owner-sign b{display:block;font-weight:700}.owner-sign span{font-size:.86rem;color:rgba(255,255,255,.65)}
+@media(max-width:900px){.owner-grid{grid-template-columns:1fr}.owner-img{min-height:340px;order:-1}.owner-copy{padding:56px 40px}}
+
+/* PROOF */
+.proof{background:var(--cream)}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.proof-img img{border-radius:18px;box-shadow:0 34px 64px -40px rgba(18,49,74,.5)}
+.proof-copy h2{font-size:clamp(2.1rem,4vw,3rem);margin-bottom:18px}.proof-copy h2 em{color:var(--sky-dk)}
+.proof-copy p{color:var(--muted);margin-bottom:18px}
+.proof-copy .cap{font-size:.86rem;color:var(--muted);margin-top:14px;font-style:italic}
+@media(max-width:820px){.proof-grid{grid-template-columns:1fr;gap:36px}}
+
+/* AREA */
+.area{background:var(--navy);color:#fff}
+.area .sec-head h2{color:#fff}.area .sec-head p{color:rgba(255,255,255,.72)}
+.area-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.area h2{font-size:clamp(2.1rem,4vw,3rem);margin-bottom:18px}.area h2 em{color:#9FD3EE}
+.area p{color:rgba(255,255,255,.78);margin-bottom:24px}
+.towns{display:flex;flex-wrap:wrap;gap:12px}
+.town{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px 20px;font-weight:600;font-size:.98rem;display:flex;align-items:center;gap:9px;transition:.3s}
+.town:hover{background:var(--sky);border-color:var(--sky)}
+.town svg{width:16px;height:16px;stroke:var(--sky);flex:none}.town:hover svg{stroke:#fff}
+
+/* FAQ */
+.faq{background:var(--paper)}
+.faq-wrap{max-width:840px;margin:52px auto 0}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:15px;margin-bottom:13px;overflow:hidden;transition:box-shadow .3s}
+.faq-item[open]{box-shadow:0 22px 46px -34px rgba(18,49,74,.4)}
+.faq-item summary{list-style:none;cursor:pointer;padding:25px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--serif);font-size:1.2rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .pl{flex:none;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;transition:.3s;font-size:1.3rem;line-height:0}
+.faq-item[open] summary .pl{transform:rotate(45deg);background:var(--sky)}
+.faq-item .a{padding:0 30px 25px;color:var(--muted);font-size:1.02rem;line-height:1.65}
+
+/* CONTACT */
+.contact{background:var(--navy-2);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.contact h2{font-size:clamp(2.4rem,4.6vw,3.6rem);margin-bottom:20px}.contact h2 em{color:#9FD3EE}
+.contact p.sub{color:rgba(255,255,255,.78);font-size:1.14rem;margin-bottom:34px;max-width:46ch}
+.contact-btns{display:flex;gap:14px;flex-wrap:wrap}
+.contact .btn-ghost{color:#fff;border-color:rgba(255,255,255,.32)}
+.contact .btn-ghost:hover{background:#fff;color:var(--navy)}
+.contact-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:42px}
+.cc-row{display:flex;align-items:center;gap:16px;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.cc-row:last-child{border-bottom:none}
+.cc-row .ic{width:46px;height:46px;border-radius:11px;background:rgba(46,154,214,.18);display:grid;place-items:center;flex:none}
+.cc-row .ic svg{width:22px;height:22px;stroke:#9FD3EE}
+.cc-row .lb{font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.55)}
+.cc-row .vl{font-size:1.02rem;font-weight:600}
+
+/* FOOTER */
+footer{background:var(--navy-2);border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.6);padding:48px 0;text-align:center;font-size:.9rem}
+footer .flogo{height:64px;width:auto;margin:0 auto 18px;display:block;background:#fff;padding:8px 14px;border-radius:12px}
+footer .fbrand{font-family:var(--serif);font-size:1.3rem;color:#fff;margin-bottom:10px}
+footer .fbrand span{color:var(--sky)}
+footer a{color:#9FD3EE}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}.stagger.in>*:nth-child(5){transition-delay:.32s}.stagger.in>*:nth-child(6){transition-delay:.4s}
+@media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1;transform:none}}
+@media(max-width:900px){.sec{padding:80px 0}.wrap{padding:0 24px}.area-grid,.contact-grid{grid-template-columns:1fr;gap:44px}.svc-grid{grid-template-columns:1fr}.hero-in{padding-top:130px}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="brand"><img src="../assets/img/mo-logo.png" alt="Morris Cleaning Services">Morris Cleaning</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#owner">Why Us</a>
+      <a href="#area">Service Area</a>
+      <a href="tel:4253286541" class="nav-cta">425-328-6541</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-in">
+    <div class="hero-badge"><span class="dot"></span>Bothell &amp; Greater Seattle · 20+ years</div>
+    <h1>Let the light back <em>into your home.</em></h1>
+    <p class="lead">Windows, gutters, moss, pressure washing and more, done by an owner-operator who is on every single job. Over twenty years keeping Greater Seattle homes clean and bright.</p>
+    <div class="hero-btns">
+      <a href="tel:4253286541" class="btn">Get a free quote</a>
+      <a href="#services" class="btn btn-ghost">See our services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">20<em>+</em></div><div class="l">Years in business</div></div>
+      <div class="hero-stat"><div class="n">Owner</div><div class="l">On every job</div></div>
+      <div class="hero-stat"><div class="n">5.0<em>★</em></div><div class="l">Rated by clients</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap trust-in">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg>Licensed, bonded &amp; insured</div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z"/></svg>Owner-operated, small crew</div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6"/></svg>Residential &amp; commercial</div>
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Done right, on time, on budget</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we clean</span>
+      <h2>The whole outside of your home, <em>handled.</em></h2>
+      <p>From spotless glass to clear gutters and moss-free roofs, we keep the outside of your home looking its best all year round.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg></div>
+        <h3>Window Cleaning</h3>
+        <p>Streak-free glass inside and out, letting the Northwest light back into your home.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 6h16v3H4zM4 9v9M20 9v9M4 18h16M8 6V4h8v2"/></svg></div>
+        <h3>Screen Cleaning</h3>
+        <p>Screens removed, washed and reset so your windows and airflow stay clear.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8M5 10v10h14V10M9 3v6M15 3v6"/></svg></div>
+        <h3>Solar Panel Cleaning</h3>
+        <p>Dust, pollen and grime cut into your output. We keep panels clean so they earn their keep.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 7h18M5 7v4a7 7 0 007 7 7 7 0 007-7V7M9 18v3M15 18v3"/></svg></div>
+        <h3>Gutter Cleaning</h3>
+        <p>Needles, leaves and debris cleared out so water flows where it should, not into your home.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 01-12 0c0-4 3-7 6-11z"/></svg></div>
+        <h3>Moss Treatment</h3>
+        <p>Roof and surface moss treated and removed, protecting your roof from long-term damage.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M7 3v6M5 9h4M4 12h6v9H4zM14 4c2 0 3 1 3 3s-1 3-3 3M17 7h3"/></svg></div>
+        <h3>Pressure Washing</h3>
+        <p>Driveways, siding and walkways washed clean of the grime the Northwest weather leaves behind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section class="owner" id="owner">
+  <div class="owner-grid">
+    <div class="owner-copy">
+      <span class="eyebrow">Why Morris</span>
+      <h2>The owner is <em>always on the job.</em></h2>
+      <p>"Hi, my name is Jeff, the proud owner of Morris Cleaning Services. I have been working in the cleaning business for over 20 years."</p>
+      <p>We are a small, owner-run crew, so you get the highest quality work, because the person with all the experience is the one doing it. Larger companies with inexperienced workers simply do not have the same quality of workmanship. Since day one we have believed in getting the job done right, on time and on budget.</p>
+      <div class="owner-sign">
+        <div class="av">J</div>
+        <div><b>Jeff Morris</b><span>Owner, Morris Cleaning Services</span></div>
+      </div>
+    </div>
+    <div class="owner-img"><img src="../assets/img/mo-window.jpg" alt="Careful, detailed window cleaning by Morris"></div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec proof">
+  <div class="wrap proof-grid">
+    <div class="proof-img reveal"><img src="../assets/img/mo-1.jpg" alt="A Morris gutter cleaning, before and after"></div>
+    <div class="proof-copy reveal">
+      <span class="eyebrow">Real results</span>
+      <h2>Gutters that actually <em>do their job.</em></h2>
+      <p>In the Northwest, a season of pine needles and leaves can pack a gutter solid. Left alone, that water backs up under your roof and down your siding.</p>
+      <p>We clear every run by hand, flush the downspouts, and leave your gutters ready for the next rainy season, which around here is never far off.</p>
+      <p class="cap">Before and after, a real Morris gutter clean in Greater Seattle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="sec area" id="area">
+  <div class="wrap area-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#9FD3EE">Where we work</span>
+      <h2>Bothell &amp; <em>Greater Seattle.</em></h2>
+      <p>Based in Bothell and serving homes and businesses across the greater Seattle area. If you are nearby, we would love to help.</p>
+      <a href="tel:4253286541" class="btn">Get a free quote</a>
+    </div>
+    <div class="towns reveal">
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Bothell</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Greater Seattle</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Residential</span>
+      <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Commercial</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions, <em>answered.</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details class="faq-item"><summary>What do you clean?<span class="pl">+</span></summary><div class="a">Windows, screens, solar panels, gutters, roof and surface moss, and pressure washing for driveways, siding and walkways. Essentially the whole outside of your home.</div></details>
+      <details class="faq-item"><summary>Who actually does the work?<span class="pl">+</span></summary><div class="a">The owner, Jeff, is on every job. We are a small owner-run crew, so you get the quality that comes from experienced hands, not a rotating cast of new workers.</div></details>
+      <details class="faq-item"><summary>Are you licensed and insured?<span class="pl">+</span></summary><div class="a">Yes. Morris Cleaning Services is licensed, bonded and insured, so your home is protected on every job.</div></details>
+      <details class="faq-item"><summary>Do you serve businesses too?<span class="pl">+</span></summary><div class="a">We do. We provide our exterior cleaning services to both residential and commercial properties across Greater Seattle.</div></details>
+      <details class="faq-item"><summary>How do I get a quote?<span class="pl">+</span></summary><div class="a">Just call or text us at 425-328-6541, or email morris.cleaning.services.llc@gmail.com, and we will get you a quote.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#9FD3EE">Get in touch</span>
+      <h2>Ready for a <em>cleaner home?</em></h2>
+      <p class="sub">Call, text or email Morris Cleaning Services for a free quote on windows, gutters, moss, pressure washing and more across Greater Seattle.</p>
+      <div class="contact-btns">
+        <a href="tel:4253286541" class="btn">Call 425-328-6541</a>
+        <a href="mailto:morris.cleaning.services.llc@gmail.com" class="btn btn-ghost">Email us</a>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></div>
+        <div><div class="lb">Phone / text</div><div class="vl">425-328-6541</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg></div>
+        <div><div class="lb">Email</div><div class="vl">morris.cleaning.services.llc@gmail.com</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div><div class="lb">Based in</div><div class="vl">Bothell, WA 98011</div></div>
+      </div>
+      <div class="cc-row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></div>
+        <div><div class="lb">Hours</div><div class="vl">Mon to Sat, 9am to 5pm</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="flogo" src="../assets/img/mo-logo.png" alt="Morris Cleaning Services">
+    <div class="fbrand">Morris <span>Cleaning Services</span></div>
+    <p>Windows · Screens · Solar · Gutters · Moss · Pressure Washing · Greater Seattle · 20+ years</p>
+    <p style="margin-top:12px">425-328-6541 · Bothell, WA · Licensed, bonded &amp; insured</p>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
