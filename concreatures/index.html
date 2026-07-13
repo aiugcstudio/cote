@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concreatures LLC | Custom Concrete in Ellis County, TX</title>
+<meta name="description" content="Concreatures LLC. Family-owned custom concrete craftsmanship in Waxahachie and Ellis County, TX, with over 30 years of experience. Stamped and decorative concrete, polished concrete, epoxy, countertops, slabs, and more. Free estimates.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232B2A28'/%3E%3Cpath d='M6 20l6-10 6 10M14 20l4-7 4 7' stroke='%23C06A2B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graphite:#2B2A28; --char:#1E1D1B; --slate:#3A3835;
+  --concrete:#8E877C; --putty:#C4B9A9; --sand:#E4DACB; --cream:#F1EBE1;
+  --accent:#C06A2B; --accent-l:#D98A4E;
+  --bg:#EFE9DF; --paper:#FAF6EF; --ink:#26241F; --muted:#756C5E;
+  --line:rgba(38,36,31,.14); --lineD:rgba(255,255,255,.13);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--accent)}
+.eyebrow.light{color:var(--accent-l)}
+.eyebrow.light::before{background:var(--accent-l)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:6px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:#a6591f;transform:translateY(-2px)}
+.btn-dark{background:var(--graphite);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--graphite)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(0,0,0,.35)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.13)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;max-width:1320px;margin:0 auto}
+nav.scrolled{background:rgba(43,42,40,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--lineD)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand .mk{width:42px;height:42px;flex:none;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:24px;height:24px}
+.brand b{font-family:var(--serif);font-size:1.26rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--putty);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.88);position:relative;transition:.3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:.92rem;padding:12px 24px;border-radius:6px;transition:.3s}
+.nav-cta:hover{background:#a6591f;transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:860px;display:flex;align-items:center;overflow:hidden;background:var(--char)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 20s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(24,23,21,.94) 0%,rgba(30,29,27,.82) 42%,rgba(30,29,27,.5) 76%,rgba(30,29,27,.3) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:180px 40px 110px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.6vw,6.2rem);font-weight:500;letter-spacing:-.02em;line-height:.99;max-width:15ch}
+.hero h1 em{color:var(--accent-l);font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:48ch;margin:26px 0 40px;color:rgba(255,255,255,.85);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:60px;flex-wrap:wrap}
+.hero-mini div{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:var(--graphite);color:#D9D1C4}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:32px 24px;border-right:1px solid var(--lineD);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t svg{width:28px;height:28px;stroke:var(--accent-l);fill:none;stroke-width:1.7;flex:none}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:#fff;line-height:1.15}
+.trust .t small{font-size:.8rem;color:rgba(217,209,196,.65)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--accent)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* SERVICES */
+.svc{background:var(--paper)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.scard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.4s;position:relative;overflow:hidden}
+.scard::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.scard:hover{transform:translateY(-8px);box-shadow:0 36px 60px -40px rgba(38,36,31,.4);border-color:transparent}
+.scard:hover::after{transform:scaleX(1)}
+.scard .ic{width:54px;height:54px;border-radius:12px;background:var(--sand);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:.4s}
+.scard:hover .ic{background:var(--graphite)}
+.scard .ic svg{width:26px;height:26px;stroke:var(--graphite);fill:none;stroke-width:1.6;transition:.4s}
+.scard:hover .ic svg{stroke:#fff}
+.scard h3{font-size:1.28rem;margin-bottom:9px}
+.scard p{color:var(--muted);font-size:.95rem}
+
+/* FEATURE band */
+.feat{position:relative;color:#fff;overflow:hidden;background:var(--char)}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr}
+.feat-img{position:relative;min-height:520px}
+.feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat-copy{padding:110px 68px;display:flex;flex-direction:column;justify-content:center}
+.feat-copy h2{font-size:clamp(2.1rem,4vw,3.2rem);margin:16px 0 22px}
+.feat-copy h2 em{color:var(--accent-l)}
+.feat-copy p{color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:20px}
+
+/* COLORS strip */
+.colors{background:var(--bg)}
+.swatches{display:flex;flex-wrap:wrap;gap:16px;margin-top:10px}
+.sw{width:118px;text-align:center}
+.sw .c{height:88px;border-radius:12px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);margin-bottom:10px}
+.sw b{font-size:.86rem;font-weight:600;color:var(--ink)}
+.colors .note{margin-top:26px;color:var(--muted);font-size:1rem;max-width:60ch}
+
+/* SHOWCASE */
+.show{background:var(--paper)}
+.show-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;grid-auto-rows:300px}
+.gcell{border-radius:14px;overflow:hidden;position:relative}
+.gcell img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gcell:hover img{transform:scale(1.07)}
+.gcell .cap{position:absolute;left:20px;bottom:16px;color:#fff;font-weight:600;font-size:.9rem;text-shadow:0 1px 10px rgba(0,0,0,.6);z-index:2}
+.gcell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(24,23,21,.6));opacity:.9}
+.gtall{grid-row:span 2}
+
+/* WHY */
+.why{background:var(--graphite);color:#fff;padding:118px 0}
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.why h2{font-size:clamp(2.2rem,4.4vw,3.4rem);color:#fff}
+.why h2 em{color:var(--accent-l)}
+.why p{color:rgba(255,255,255,.78);font-size:1.1rem;margin:22px 0}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.why-list div{display:flex;align-items:center;gap:12px;font-weight:600;color:#fff;font-size:1rem}
+.why-list svg{width:22px;height:22px;stroke:var(--accent-l);fill:none;stroke-width:2.2;flex:none}
+.why-stat{background:var(--slate);border:1px solid var(--lineD);border-radius:18px;padding:44px;text-align:center}
+.why-stat b{font-family:var(--serif);font-size:4.5rem;color:var(--accent-l);display:block;line-height:1}
+.why-stat span{font-size:1rem;color:rgba(255,255,255,.75)}
+.why-stat hr{border:none;border-top:1px solid var(--lineD);margin:28px 0}
+.why-stat .sub{font-size:.98rem;color:rgba(255,255,255,.7)}
+
+/* CONTACT */
+.contact{background:var(--sand);padding:118px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 50px 100px -60px rgba(38,36,31,.4)}
+.cinfo{background:var(--graphite);color:#fff;padding:60px 52px}
+.cinfo h2{font-size:2.4rem;margin-bottom:14px}
+.cinfo h2 em{color:var(--accent-l)}
+.cinfo>p{color:rgba(255,255,255,.78);margin-bottom:34px}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:var(--accent-l);fill:none;stroke-width:1.6;flex:none;margin-top:2px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-l);margin-bottom:4px}
+.crow b{font-size:1.08rem;color:#fff;font-weight:600}
+.cform{padding:56px 50px}
+.cform h3{font-size:1.5rem;margin-bottom:8px}
+.cform .lead{color:var(--muted);font-size:.98rem;margin-bottom:26px}
+.cform .fld{margin-bottom:18px}
+.cform .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cform label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:7px}
+.cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:13px 15px;font-family:var(--sans);font-size:1rem;background:var(--paper);color:var(--ink);transition:.25s}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+.cform textarea{resize:vertical;min-height:100px}
+.cform .btn-accent{width:100%;justify-content:center}
+.cform .note{font-size:.78rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* FOOTER */
+footer{background:var(--char);color:#A79C8C;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-l);margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B9AE9D;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#7C7263}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.06s}
+.stagger.in>*:nth-child(3){transition-delay:.12s}
+.stagger.in>*:nth-child(4){transition-delay:.18s}
+.stagger.in>*:nth-child(5){transition-delay:.24s}
+.stagger.in>*:nth-child(6){transition-delay:.3s}
+.stagger.in>*:nth-child(7){transition-delay:.36s}
+.stagger.in>*:nth-child(8){transition-delay:.42s}
+.stagger.in>*:nth-child(9){transition-delay:.48s}
+
+@media(max-width:1000px){
+  .feat-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .feat-img{min-height:340px}
+  .feat-copy{padding:70px 44px}
+  .cinfo,.cform{padding:48px 40px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .show-grid{grid-template-columns:1fr 1fr}
+  .gtall{grid-row:span 1}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--lineD)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .brand span{display:none}
+  .sec,.why,.contact{padding:76px 0}
+  .hero-in{padding:140px 22px 64px}
+  .hero-mini div{padding-right:24px;margin-right:24px}
+  .svc-grid,.show-grid,.why-list,.cform .two{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M5 22l7-12 7 12M15 22l4-7 5 7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span><b>Concreatures</b><span>Waxahachie, TX</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our work</a>
+      <a href="#colors">Colors</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Free estimate</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/cc-real2.jpg" alt="Custom stamped concrete walkway by Concreatures"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#D98A4E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l7-13 7 13M14 20l4-7 5 7"/></svg>
+      Family-owned &middot; 30+ years &middot; Ellis County, TX
+    </span>
+    <h1>Concrete, poured with <em>real craft.</em></h1>
+    <p>With over 30 years of experience in concrete craftsmanship, Concreatures brings quality and precision to every pour. From stamped patios to polished floors, we bring your project to life with expertise you can trust.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#contact">Get a free estimate</a>
+      <a class="btn btn-ghost" href="#work">See our work</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>30+ yrs</b><span>Craftsmanship</span></div>
+      <div><b>Family</b><span>Owned &amp; operated</span></div>
+      <div><b>Free</b><span>Estimates</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg><div><b>30+ years experience</b><small>Concrete craftsmanship</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg><div><b>Family-owned</b><small>&amp; operated</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Ellis County, TX</b><small>&amp; all surrounding areas</small></div></div>
+    <div class="t"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg><div><b>Free estimates</b><small>Quality &amp; precision</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Custom concrete, <em>start to finish.</em></h2>
+      <p>We specialize in a wide range of custom concrete services for homes and businesses across Ellis County.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M9 4v16"/></svg></div><h3>Stamped &amp; decorative</h3><p>Stamped patterns and decorative finishes that turn a plain slab into a standout feature.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20V9l7-4 7 4v11"/><path d="M8 20v-6h8v6"/></svg></div><h3>Polished concrete</h3><p>Smooth, durable polished concrete floors with a clean, high-end finish.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4-8-4ZM4 7v10l8 4 8-4V7"/></svg></div><h3>Epoxy coating</h3><p>Tough, attractive epoxy coatings for garages, shops, and commercial floors.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="4" rx="1"/><path d="M6 11v8M18 11v8M6 19h12"/></svg></div><h3>Custom countertops</h3><p>One-of-a-kind concrete countertops shaped and finished to fit your space.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="10"/><path d="M3 10l3-5h12l3 5"/></svg></div><h3>Foundation slabs</h3><p>Level, long-lasting foundation slabs poured to hold up for the long run.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V8h4v12M10 20V5h4v15M16 20v-9h4v9M2 20h20"/></svg></div><h3>Retaining walls</h3><p>Structural retaining walls that manage grade and protect your property.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 14c3-2 6-2 9 0s6 2 9 0M3 18c3-2 6-2 9 0s6 2 9 0M3 10c3-2 6-2 9 0s6 2 9 0"/></svg></div><h3>Pool decks</h3><p>Slip-resistant, great-looking pool decks built for Texas summers.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg></div><h3>Sidewalks &amp; piers</h3><p>Walkways, sidewalks, and piers poured cleanly and built to last.</p></div>
+      <div class="scard"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V7l6-3v17M9 21V9l6-3v15M15 21V11l6-2v12M2 21h20"/></svg></div><h3>Commercial work</h3><p>Reliable concrete work for commercial properties of every size.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="feat">
+  <div class="feat-grid">
+    <div class="feat-img reveal"><img src="../assets/img/cc-real1.jpg" alt="Stamped concrete patio by Concreatures"></div>
+    <div class="feat-copy reveal">
+      <span class="eyebrow light">Stamped patios</span>
+      <h2>Make your patio the <em>centerpiece.</em></h2>
+      <p>Transform your outdoor space with a beautifully designed patio that combines elegance and durability. Choose from a variety of stamped concrete patterns and an extensive selection of colors to create a unique look that complements your home.</p>
+      <a class="btn btn-light" href="#contact" style="align-self:flex-start;">Start your patio</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec colors" id="colors">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Colors &amp; finishes</span>
+      <h2>An extensive selection of <em>colors and patterns.</em></h2>
+      <p>Acid stain, integral color, epoxy, color chip, polyurethane, and stamp options, so your concrete matches exactly what you have in mind.</p>
+    </div>
+    <div class="swatches reveal">
+      <div class="sw"><div class="c" style="background:#3A3835"></div><b>Charcoal</b></div>
+      <div class="sw"><div class="c" style="background:#7A6A57"></div><b>Walnut</b></div>
+      <div class="sw"><div class="c" style="background:#A98A5E"></div><b>Sandstone</b></div>
+      <div class="sw"><div class="c" style="background:#C06A2B"></div><b>Terracotta</b></div>
+      <div class="sw"><div class="c" style="background:#9A9186"></div><b>Slate gray</b></div>
+      <div class="sw"><div class="c" style="background:#CDBfA6"></div><b>Buff</b></div>
+      <div class="sw"><div class="c" style="background:#5B4632"></div><b>Espresso</b></div>
+    </div>
+    <p class="note">Ask us about acid stain, integral color, epoxy, color chip, polyurethane, and stamp charts when you request your estimate.</p>
+  </div>
+</section>
+
+<section class="sec show" id="work">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Our work</span>
+      <h2>Craftsmanship you can <em>stand on.</em></h2>
+    </div>
+    <div class="show-grid reveal">
+      <div class="gcell gtall"><img src="../assets/img/cc-real2.jpg" alt="Charcoal stamped concrete walkway"><span class="cap">Stamped walkway</span></div>
+      <div class="gcell gtall"><img src="../assets/img/cc-real1.jpg" alt="Stamped stone-pattern patio"><span class="cap">Stamped patio</span></div>
+      <div class="gcell"><img src="../assets/img/cc-u1.jpg" alt="Custom concrete countertop in a modern kitchen"><span class="cap">Custom countertops</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div class="why-stat reveal">
+      <b>30+</b>
+      <span>Years of concrete craftsmanship</span>
+      <hr>
+      <p class="sub">A family-owned business committed to quality and precision on every project we pour.</p>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow light">Why Concreatures</span>
+      <h2>Expertise you can <em>trust.</em></h2>
+      <p>Concrete work is only as good as the crew behind it. For over three decades, we have brought precision, durability, and a genuine eye for detail to homes and businesses across Ellis County and the surrounding areas.</p>
+      <div class="why-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Residential &amp; commercial</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Custom colors &amp; patterns</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Quality &amp; precision</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Free estimates</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid reveal">
+      <div class="cinfo">
+        <span class="eyebrow light">Get in touch</span>
+        <h2>Bring your project <em>to life.</em></h2>
+        <p>Tell us what you have in mind and we will get you a free estimate. From patios to foundations, we would love to help.</p>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><small>Serving</small><b>Waxahachie &amp; all of Ellis County, TX</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 8 8 5 8-5"/></svg>
+          <div><small>Estimates</small><b>Free, with quality you can trust</b></div>
+        </div>
+        <div class="crow">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6Z"/></svg>
+          <div><small>Concreatures LLC</small><b>Family-owned since day one</b></div>
+        </div>
+      </div>
+      <form class="cform" onsubmit="return false;">
+        <h3>Request your free estimate</h3>
+        <p class="lead">Send a few details and we will be in touch.</p>
+        <div class="two">
+          <div class="fld"><label>First name</label><input type="text" placeholder="First name"></div>
+          <div class="fld"><label>Last name</label><input type="text" placeholder="Last name"></div>
+        </div>
+        <div class="fld"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+        <div class="fld"><label>Phone</label><input type="tel" placeholder="Phone number"></div>
+        <div class="fld"><label>Your project</label><textarea placeholder="Patio, driveway, countertops, foundation, and any details"></textarea></div>
+        <button class="btn btn-accent">Book now</button>
+        <p class="note">We will bring your project to life with expertise you can trust.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Concreatures LLC</b>
+        <p>Family-owned custom concrete craftsmanship serving Waxahachie and all of Ellis County, TX, with over 30 years of experience.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Stamped &amp; decorative</a>
+        <a href="#services">Polished concrete</a>
+        <a href="#services">Countertops &amp; epoxy</a>
+        <a href="#services">Slabs &amp; retaining walls</a>
+      </div>
+      <div class="foot-col">
+        <h4>Concreatures</h4>
+        <p>Waxahachie, TX</p>
+        <p>Ellis County &amp; surrounding areas</p>
+        <a href="#contact">Request a free estimate</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Concreatures LLC</span>
+      <span>Family-owned &middot; 30+ years &middot; Ellis County, TX</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
