@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumbing Pros | Trusted Plumber in Downers Grove, IL</title>
+<meta name="description" content="Plumbing Pros is a family-owned, licensed and insured plumbing company in Downers Grove, IL. Over 20 years of experience in plumbing repair, repiping, water heaters, and tankless water heaters. 24-hour emergency service.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231B54C6'/%3E%3Cpath d='M16 6c3.5 4 5.5 6.8 5.5 9.6a5.5 5.5 0 0 1-11 0C10.5 12.8 12.5 10 16 6Z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1B54C6; --blue-d:#0F3A94; --navy:#0E2450; --ink:#122544;
+  --red:#E23A3A; --red-d:#C22E2E; --sky:#E9F1FF;
+  --bg:#F4F8FE; --paper:#FFFFFF; --muted:#5A6B86;
+  --line:rgba(18,37,68,.12); --lineD:rgba(255,255,255,.14);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1220px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.07}
+em{font-style:italic}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--red)}
+.eyebrow.light{color:#fff}
+.eyebrow.light::before{background:var(--red)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.98rem;padding:16px 30px;border-radius:8px;transition:.25s;cursor:pointer;border:none;font-family:var(--sans)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-d);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--blue)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(15,58,148,.5)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s}
+.topbar{background:var(--navy);color:#cddafc;font-size:.82rem;text-align:center;padding:8px 20px;font-weight:500;letter-spacing:.02em;transition:.35s}
+.topbar b{color:#fff}
+nav.scrolled .topbar{height:0;padding:0;overflow:hidden;opacity:0}
+nav .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;max-width:1320px;margin:0 auto;transition:.35s}
+nav.scrolled .bar{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .35s}
+nav.scrolled .brand{color:var(--ink)}
+.brand .mk{width:42px;height:42px;flex:none;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center}
+.brand .mk svg{width:26px;height:26px}
+.brand b{font-family:var(--serif);font-size:1.28rem;font-weight:600;line-height:1}
+.brand span{display:block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.9);position:relative;transition:.3s}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:100%;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav-phone{font-weight:700;font-size:1rem;color:#fff;display:flex;align-items:center;gap:8px;transition:.3s}
+nav.scrolled .nav-phone{color:var(--blue)}
+.nav-phone svg{width:16px;height:16px}
+.nav-cta{background:var(--red);color:#fff;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:8px;transition:.3s}
+.nav-cta:hover{background:var(--red-d);transform:translateY(-2px)}
+@media(max-width:1080px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:840px;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:hz 20s ease-out forwards}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(14,36,80,.95) 0%,rgba(15,58,148,.85) 42%,rgba(14,36,80,.55) 76%,rgba(14,36,80,.35) 100%)}
+@keyframes hz{to{transform:scale(1)}}
+.hero-in{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:190px 40px 110px;color:#fff}
+.hero .chip{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);padding:9px 18px;border-radius:40px;font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(4px)}
+.hero .chip svg{width:15px;height:15px}
+.hero h1{font-size:clamp(3.2rem,6.4vw,5.9rem);font-weight:500;letter-spacing:-.02em;line-height:1;max-width:15ch}
+.hero h1 em{color:#8FB4FF;font-style:italic;font-weight:400}
+.hero p{font-size:1.24rem;max-width:48ch;margin:26px 0 40px;color:rgba(255,255,255,.85);line-height:1.55}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-mini{display:flex;gap:0;margin-top:60px;flex-wrap:wrap}
+.hero-mini div{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,.2)}
+.hero-mini div:last-child{border-right:none;margin-right:0}
+.hero-mini b{font-family:var(--serif);font-size:1.7rem;color:#fff;display:block;line-height:1}
+.hero-mini span{font-size:.8rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.06em}
+
+/* TRUST */
+.trust{background:#fff;box-shadow:0 20px 50px -30px rgba(14,36,80,.25);position:relative;z-index:5}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.trust .t{padding:34px 24px;border-right:1px solid var(--line);display:flex;align-items:center;gap:15px}
+.trust .t:last-child{border-right:none}
+.trust .t .ic{width:48px;height:48px;flex:none;border-radius:12px;background:var(--sky);display:grid;place-items:center}
+.trust .t svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:1.7}
+.trust .t b{display:block;font-family:var(--sans);font-weight:700;font-size:1rem;color:var(--ink);line-height:1.15}
+.trust .t small{font-size:.82rem;color:var(--muted)}
+
+/* SECTION base */
+.sec{padding:118px 0}
+.sec-head{max-width:680px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 58px;text-align:center}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head.center p{margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(2.4rem,4.8vw,3.7rem);margin-top:18px}
+.sec-head h2 em{color:var(--blue)}
+.sec-head p{color:var(--muted);font-size:1.14rem;margin-top:20px;max-width:56ch}
+
+/* SERVICES */
+.svc{background:var(--bg)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.scard{position:relative;border-radius:16px;overflow:hidden;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;color:#fff;box-shadow:0 24px 44px -30px rgba(14,36,80,.5)}
+.scard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s;z-index:0}
+.scard:hover img{transform:scale(1.08)}
+.scard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,36,80,.15) 30%,rgba(14,36,80,.9));z-index:1}
+.scard .c{position:relative;z-index:2}
+.scard .n{font-family:var(--serif);font-style:italic;font-size:.95rem;color:#8FB4FF;margin-bottom:8px}
+.scard h3{font-size:1.5rem;margin-bottom:8px}
+.scard p{font-size:.92rem;color:rgba(255,255,255,.78)}
+.also{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px 38px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.also b{font-family:var(--serif);font-size:1.2rem;margin-right:8px}
+.also span{background:var(--sky);color:var(--blue-d);border-radius:30px;padding:8px 16px;font-size:.86rem;font-weight:600}
+
+/* WHY split */
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.why-img{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(14,36,80,.55)}
+.why-img img{width:100%;aspect-ratio:5/4.6;object-fit:cover}
+.why-img .badge{position:absolute;left:24px;bottom:24px;background:var(--blue);color:#fff;border-radius:12px;padding:16px 22px}
+.why-img .badge b{font-family:var(--serif);font-size:1.6rem;display:block;line-height:1}
+.why-img .badge small{font-size:.76rem;color:rgba(255,255,255,.8)}
+.why-copy h2{font-size:clamp(2.2rem,4.4vw,3.3rem);margin:16px 0 24px}
+.why-copy h2 em{color:var(--blue)}
+.why-copy p{color:#33456a;font-size:1.08rem;margin-bottom:20px}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.why-list div{display:flex;align-items:center;gap:11px;font-weight:600;font-size:.98rem;color:var(--blue-d)}
+.why-list svg{width:22px;height:22px;stroke:var(--red);fill:none;stroke-width:2.2;flex:none}
+
+/* EMERGENCY band */
+.emg{position:relative;color:#fff;overflow:hidden;background:var(--navy)}
+.emg-bg{position:absolute;inset:0;z-index:0}
+.emg-bg img{width:100%;height:100%;object-fit:cover}
+.emg-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,36,80,.95),rgba(15,58,148,.7))}
+.emg .wrap{position:relative;z-index:2;padding:96px 40px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.emg .l{max-width:620px}
+.emg .tag{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:30px;margin-bottom:20px}
+.emg h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:14px}
+.emg p{color:rgba(255,255,255,.8);font-size:1.12rem}
+.emg .r{text-align:center}
+.emg .r .ph{font-family:var(--serif);font-size:2.4rem;color:#fff;display:block;margin-bottom:14px}
+
+/* AREA */
+.area{background:var(--bg)}
+.towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:8px}
+.towns span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:11px 20px;font-size:.94rem;font-weight:600;color:var(--ink);transition:.3s}
+.towns span:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* REVIEWS */
+.rev-sec{background:#fff}
+.rev-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:50px}
+.gwrap{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--muted);font-size:.95rem}
+.gwrap svg{width:26px;height:26px}
+.gwrap b{color:var(--ink)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:34px 30px;transition:.35s}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -32px rgba(14,36,80,.4)}
+.stars{color:#F5A623;letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+.rcard p{font-size:1.02rem;color:#33456a;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:13px}
+.who .av{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{display:block;font-size:.96rem}
+.who small{color:var(--muted);font-size:.82rem}
+
+/* CONTACT */
+.contact{background:var(--navy);color:#fff;padding:118px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.contact-copy h2{font-size:clamp(2.3rem,4.6vw,3.5rem);margin:16px 0 22px}
+.contact-copy h2 em{color:#8FB4FF}
+.contact-copy>p{color:rgba(255,255,255,.75);font-size:1.12rem;margin-bottom:34px;max-width:46ch}
+.crow{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--lineD)}
+.crow svg{width:24px;height:24px;stroke:#8FB4FF;fill:none;stroke-width:1.7;flex:none;margin-top:3px}
+.crow small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#8FB4FF;margin-bottom:4px}
+.crow b,.crow a{font-size:1.08rem;color:#fff;font-weight:600}
+.contact-card{background:rgba(255,255,255,.06);border:1px solid var(--lineD);border-radius:18px;padding:46px 42px;text-align:center}
+.contact-card .ic{width:64px;height:64px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.contact-card .ic svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.7}
+.contact-card h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.72);margin-bottom:28px}
+.contact-card .btn{width:100%;justify-content:center;margin-bottom:12px}
+
+/* FOOTER */
+footer{background:#0A1B3D;color:#9FB0CE;padding:76px 0 38px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:48px;border-bottom:1px solid var(--lineD)}
+.foot-brand b{font-family:var(--serif);font-size:1.6rem;color:#fff;display:block;margin-bottom:14px}
+.foot-brand p{font-size:.96rem;max-width:34ch}
+.foot-col h4{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#8FB4FF;margin-bottom:18px;font-weight:700}
+.foot-col a,.foot-col p{display:block;color:#B4C3DD;font-size:.96rem;margin-bottom:11px}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.85rem;color:#6C7C9C}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}
+.stagger.in>*:nth-child(3){transition-delay:.16s}
+.stagger.in>*:nth-child(4){transition-delay:.24s}
+
+@media(max-width:1000px){
+  .why-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .why-img{max-width:480px}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust .t:nth-child(2){border-right:none}
+  .trust .t{border-top:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .wrap{padding:0 22px}
+  nav .bar{padding:16px 22px}
+  .nav-phone span,.brand span{display:none}
+  .sec,.contact{padding:76px 0}
+  .hero-in{padding:150px 22px 64px}
+  .hero-mini div{padding-right:24px;margin-right:24px}
+  .svc-grid,.why-list{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:1fr}
+  .trust .t{border-right:none}
+  .emg .wrap{padding:70px 22px}
+  .foot-grid{grid-template-columns:1fr;gap:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.stagger>*{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="topbar">24 Hr. Emergency Service Available &middot; <b>Call 331-575-4186</b></div>
+  <div class="bar">
+    <a class="brand" href="#top">
+      <span class="mk"><svg viewBox="0 0 32 32" fill="none"><path d="M16 5c3.6 4.2 5.6 7 5.6 9.9a5.6 5.6 0 0 1-11.2 0C10.4 12 12.4 9.2 16 5Z" fill="#1B54C6"/></svg></span>
+      <span><b>Plumbing Pros</b><span>Downers Grove, IL</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#area">Service area</a>
+      <a href="#reviews">Reviews</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-phone" href="tel:3315754186"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>331-575-4186</span></a>
+      <a class="nav-cta" href="#contact">Schedule service</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><img src="../assets/img/pp-hero.jpg" alt="Plumbing Pros branded service van in Downers Grove"></div>
+  <div class="hero-in">
+    <span class="chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8FB4FF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7Z"/><path d="m9 12 2 2 4-4"/></svg>
+      Family-owned &middot; Licensed &amp; Insured &middot; Downers Grove, IL
+    </span>
+    <h1>Downers Grove's trusted <em>plumbing pros.</em></h1>
+    <p>Over 20 years of industry-leading plumbing, with the attention to detail, friendly service, and upfront pricing homeowners and businesses count on. No matter the issue, we fix it right.</p>
+    <div class="hero-actions">
+      <a class="btn btn-red" href="#contact">Schedule a service call</a>
+      <a class="btn btn-ghost" href="tel:3315754186">Call 331-575-4186</a>
+    </div>
+    <div class="hero-mini">
+      <div><b>20+ yrs</b><span>Experience</span></div>
+      <div><b>24/7</b><span>Emergency service</span></div>
+      <div><b>$0 down</b><span>Financing available</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><div><b>Upfront pricing</b><small>Competitive and clear</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 2 3 4 3 4s3-2 3-4a3 3 0 0 0-3-3ZM4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><div><b>Family-owned</b><small>&amp; operated</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><b>Licensed &amp; insured</b><small>Lic. #058-196024</small></div></div>
+    <div class="t"><span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span><div><b>No money down</b><small>Financing available</small></div></div>
+  </div>
+</section>
+
+<section class="sec svc" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Plumbing services, done <em>right the first time.</em></h2>
+      <p>From a leaky pipe to a full repipe, our licensed plumbers handle repairs, replacements, and installations across every make and model.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="scard"><img src="../assets/img/pp-repair.png" alt="Plumber repairing a faucet"><div class="c"><div class="n">01</div><h3>Plumbing repair</h3><p>Fast, reliable repairs for leaks, clogs, sinks, and fixtures throughout your home or business.</p></div></div>
+      <div class="scard"><img src="../assets/img/pp-repipe.png" alt="Repiping work in a basement"><div class="c"><div class="n">02</div><h3>Repiping</h3><p>Pipe repairs, replacements, and full repipes handled cleanly by experienced pros.</p></div></div>
+      <div class="scard"><img src="../assets/img/pp-heater.png" alt="Plumber servicing a water heater"><div class="c"><div class="n">03</div><h3>Water heaters</h3><p>Repair, replacement, and installation to keep the hot water running when you need it.</p></div></div>
+      <div class="scard"><img src="../assets/img/pp-tankless.png" alt="Plumber servicing a tankless water heater"><div class="c"><div class="n">04</div><h3>Tankless water heaters</h3><p>Efficient, space-saving tankless systems installed and serviced by our team.</p></div></div>
+    </div>
+    <div class="also reveal">
+      <b>We also handle:</b>
+      <span>Sinks</span><span>Sump pumps</span><span>Gas utilities</span><span>Dishwashers</span><span>Washers</span><span>Clogs</span><span>Leaks</span><span>Commercial plumbing</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap why-grid">
+    <div class="why-img reveal">
+      <img src="../assets/img/pp-heater.png" alt="A Plumbing Pros technician at work">
+      <div class="badge"><b>20+ years</b><small>Trusted plumbing experts</small></div>
+    </div>
+    <div class="why-copy reveal">
+      <span class="eyebrow">Why Plumbing Pros</span>
+      <h2>The plumber Downers Grove <em>actually recommends.</em></h2>
+      <p>Plumbing Pros has over 20 years of experience providing industry-leading plumbing assistance and customer care. No other Downers Grove contractors offer the same attention to detail, friendly service, and efficiency.</p>
+      <p>We are a licensed and insured emergency plumber, and many of our services are backed by a one-year service warranty. When a single day without running water is a big disruption, you have a team you can always call.</p>
+      <div class="why-list">
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>All makes &amp; models</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>1-year service warranty</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Residential &amp; commercial</div>
+        <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Upfront, honest pricing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="emg">
+  <div class="emg-bg"><img src="../assets/img/pp-van.jpg" alt="Plumbing Pros service van"></div>
+  <div class="wrap">
+    <div class="l reveal">
+      <span class="tag">24 Hr Emergency Service</span>
+      <h2>A burst pipe won't wait. Neither do we.</h2>
+      <p>Plumbing emergencies happen at the worst times. Call any hour and we will get a licensed plumber on the way to your door.</p>
+    </div>
+    <div class="r reveal">
+      <span class="ph">331-575-4186</span>
+      <a class="btn btn-white" href="tel:3315754186">Call now</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec area" id="area">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Serving Downers Grove <em>and the western suburbs.</em></h2>
+      <p>Based in Downers Grove and proudly serving homeowners and businesses across the surrounding communities.</p>
+    </div>
+    <div class="towns reveal">
+      <span>Downers Grove</span><span>Burr Ridge</span><span>Glen Ellyn</span><span>Hinsdale</span><span>Clarendon Hills</span><span>Oak Brook</span><span>Elmhurst</span><span>Wheaton</span><span>Berwyn</span><span>LaGrange</span><span>Naperville</span><span>Woodridge</span><span>Lombard</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Reviews</span>
+        <h2>What our customers <em>are saying.</em></h2>
+      </div>
+      <div class="gwrap">
+        <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.6 12.2c0-.8-.1-1.6-.2-2.3H12v4.5h6c-.3 1.4-1 2.6-2.2 3.4v2.8h3.6c2.1-2 3.3-4.9 3.3-8.4Z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.8c-1 .7-2.3 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 0 1 0-4.2V7.1H2.1a11 11 0 0 0 0 9.8l3.7-2.8Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.7l3.1-3.1A11 11 0 0 0 12 1 11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4Z"/></svg>
+        <span><b>Reviews</b> from Google</span>
+      </div>
+    </div>
+    <div class="rev-grid stagger">
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Plumbing Pros did an amazing job. Our water heater went out late on Christmas Eve. They were able to have a new one furnished and installed quickly and at a very reasonable price. I would recommend them to everyone.</p>
+        <div class="who"><span class="av">JB</span><div><b>Joe B.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Needed to address a leak under one of our bathrooms. They quickly diagnosed the problem and were able to schedule and fix it before the Thanksgiving holidays. Will definitely work with Plumbing Pros going forward.</p>
+        <div class="who"><span class="av">AH</span><div><b>Ahmed H.</b><small>Google review</small></div></div>
+      </div>
+      <div class="rcard">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>By far the BEST plumber we've ever worked with. Called on them twice now and they've been quick and efficient every time. Highly recommend Plumbing Pros.</p>
+        <div class="who"><span class="av">GH</span><div><b>Garth H.</b><small>Google review</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy reveal">
+      <span class="eyebrow light">Get in touch</span>
+      <h2>Schedule your <em>service call.</em></h2>
+      <p>Tell us what is going on and we will get a licensed plumber out to you. Call, text, or book, and we will take care of the rest.</p>
+      <div class="crow">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        <div><small>Call or text</small><a href="tel:3315754186">331-575-4186</a></div>
+      </div>
+      <div class="crow">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><small>Office</small><b>718 Ogden Ave. #109, Downers Grove, IL 60515</b></div>
+      </div>
+      <div class="crow">
+        <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/></svg>
+        <div><small>License</small><b>#058-196024</b></div>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+      <h3>Book a plumber</h3>
+      <p>Same-day and emergency service available. Call or text and we will get you scheduled fast.</p>
+      <a class="btn btn-red" href="tel:3315754186">Call 331-575-4186</a>
+      <a class="btn btn-white" href="tel:3315754186" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);">Text us instead</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>Plumbing Pros</b>
+        <p>Family-owned, licensed, and insured plumbing for Downers Grove and the western suburbs. Over 20 years of trusted service.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Plumbing repair</a>
+        <a href="#services">Repiping</a>
+        <a href="#services">Water heaters</a>
+        <a href="#services">Tankless water heaters</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:3315754186">331-575-4186</a>
+        <p>718 Ogden Ave. #109<br>Downers Grove, IL 60515</p>
+        <p>Lic. #058-196024</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Plumbing Pros</span>
+      <span>Licensed &amp; Insured &middot; 24 Hr Emergency Service &middot; Downers Grove, IL</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
