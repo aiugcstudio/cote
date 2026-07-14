@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marcelo Salup, Top Fractional CMO, Powered by Iffective</title>
+<meta name="description" content="Fortune-500-caliber Fractional CMO. 40+ years in branding, digital and direct across three continents and more than 100 brands. Strategic marketing leadership for startups, small and medium businesses, and professional associations.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..750;1,14..32,400..600&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C2417'/%3E%3Ctext x='16' y='23' font-family='Playfair Display,serif' font-style='italic' font-weight='600' font-size='20' fill='%23A9C6A0' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --bg:#F6F4EC; --ink:#151A15; --soft:#525A50; --faint:#8B948485; --line:#E4E1D4; --surface:#FFFFFF;
+    --navy:#0C2417; --charcoal:#14140F;
+    --green:#1F5A34; --green-dark:#123A22; --green-deepest:#0C2417;
+    --accent:#1F5A34; --accent-soft:#E4EDE3; --gold:#B08D57; --gold-soft:#F0E7D6;
+    --leaf:#A9C6A0;
+    --head:"Playfair Display",Georgia,serif; --sans:"Inter",-apple-system,sans-serif; --serif:"Playfair Display",Georgia,serif;
+  }
+  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;font-size:18px;font-weight:400;overflow-x:hidden;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+  a{text-decoration:none;color:inherit;}
+  h1,h2,h3{font-family:var(--head);font-weight:600;letter-spacing:-0.01em;line-height:1.05;}
+  em{font-style:italic;}
+
+  /* nav */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:10;}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:24px 0;}
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand .logotile{background:#fff;border-radius:12px;padding:8px 12px;display:flex;box-shadow:0 6px 18px rgba(0,0,0,.14);}
+  .brand .logotile img{height:34px;width:auto;display:block;}
+  .brand .wm{color:#fff;font-family:var(--serif);font-size:1.18rem;font-weight:600;letter-spacing:-0.01em;line-height:1.05;}
+  .brand .wm small{display:block;font-family:var(--sans);font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);opacity:.85;margin-top:2px;}
+  .nav-links{display:flex;gap:30px;font-size:.92rem;font-weight:500;color:rgba(255,255,255,.8);}
+  .nav-links a:hover{color:#fff;}
+  .nav-call{background:var(--leaf);color:var(--green-deepest);padding:12px 22px;border-radius:100px;font-weight:600;font-size:.9rem;}
+
+  /* hero */
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;min-height:760px;}
+  .hero-copy{position:relative;z-index:2;padding:172px 60px 96px 0;display:flex;flex-direction:column;justify-content:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 12% 0%,rgba(31,90,52,.55),transparent 58%),radial-gradient(90% 90% at 85% 110%,rgba(31,90,52,.4),transparent 60%),linear-gradient(160deg,#0C2417 0%,#0A1E13 60%,#081A10 100%);z-index:0;}
+  .hero::after{content:"";position:absolute;top:-15%;left:-8%;width:52%;height:70%;background:radial-gradient(circle,rgba(169,198,160,.16),transparent 62%);pointer-events:none;z-index:0;animation:glow 10s ease-in-out infinite alternate;}
+  @keyframes glow{from{opacity:.5;transform:translate(0,0);}to{opacity:1;transform:translate(4%,3%);}}
+  @media(prefers-reduced-motion:reduce){.hero::after{animation:none;}}
+  .hero-photo{position:relative;overflow:hidden;background:#EDEAE0;}
+  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 12%;transform:scale(1.05);animation:heroZoom 20s ease-out forwards;}
+  @keyframes heroZoom{from{transform:scale(1.12);}to{transform:scale(1.0);}}
+  @media(prefers-reduced-motion:reduce){.hero-photo img{animation:none;transform:none;}}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,36,23,.55) 0%,rgba(12,36,23,0) 26%);}
+  .hero-in > *{opacity:0;transform:translateY(26px);animation:heroRise .85s cubic-bezier(.2,.6,.2,1) forwards;}
+  .hero-in > *:nth-child(1){animation-delay:.1s;}.hero-in > *:nth-child(2){animation-delay:.22s;}
+  .hero-in > *:nth-child(3){animation-delay:.34s;}.hero-in > *:nth-child(4){animation-delay:.46s;}
+  .hero-in > *:nth-child(5){animation-delay:.58s;}
+  @keyframes heroRise{to{opacity:1;transform:none;}}
+  @media(prefers-reduced-motion:reduce){.hero-in > *{opacity:1!important;transform:none!important;animation:none!important;}}
+  .pill{display:inline-flex;align-items:center;gap:9px;background:rgba(169,198,160,.12);border:1px solid rgba(169,198,160,.34);padding:9px 18px;border-radius:100px;font-size:.82rem;font-weight:500;margin-bottom:30px;color:var(--leaf);letter-spacing:.02em;}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--leaf);}
+  h1{font-size:4.5rem;margin-bottom:26px;font-weight:600;letter-spacing:-0.015em;line-height:1.02;}
+  h1 em{font-style:italic;font-weight:500;color:var(--leaf);}
+  .hero p{font-size:1.24rem;font-weight:300;color:rgba(255,255,255,.82);max-width:560px;margin-bottom:36px;}
+  .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .btn-p{background:var(--leaf);color:var(--green-deepest);padding:17px 34px;border-radius:100px;font-weight:600;font-size:1.02rem;box-shadow:0 14px 34px rgba(0,0,0,.3);}
+  .btn-g{color:#fff;padding:16px 28px;border-radius:100px;font-weight:600;font-size:1.02rem;border:1.5px solid rgba(255,255,255,.26);}
+  .hero-sign{margin-top:40px;font-family:var(--serif);font-style:italic;color:rgba(255,255,255,.6);font-size:1.05rem;}
+
+  /* stats bar */
+  .stats{background:var(--green-dark);border-top:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;}
+  .stats::after{content:"";position:absolute;top:-40%;right:-6%;width:44%;height:150%;background:radial-gradient(circle,rgba(169,198,160,.1),transparent 62%);}
+  .stats-in{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,1fr);}
+  .stat{padding:46px 26px;color:#fff;border-left:1px solid rgba(255,255,255,.09);}
+  .stat:first-child{border-left:0;}
+  .stat .n{font-family:var(--serif);font-size:2.5rem;font-weight:600;line-height:1;color:var(--leaf);letter-spacing:-0.01em;}
+  .stat .l{color:rgba(255,255,255,.66);font-size:.92rem;margin-top:12px;line-height:1.4;}
+
+  /* sections */
+  .sec{padding:120px 0;}
+  .eyebrow{color:var(--gold);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;display:inline-block;}
+  .sec h2{font-size:3.15rem;margin-bottom:18px;max-width:720px;font-weight:600;}
+  .sec h2 em{font-style:italic;font-weight:500;color:var(--green);}
+  .sec-lead{color:var(--soft);font-size:1.18rem;max-width:620px;margin-bottom:60px;}
+
+  /* brand wall */
+  .brands{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .brands .sec-lead{margin-bottom:44px;}
+  .logowall{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+  .logotile-b{background:var(--surface);border:1px solid var(--line);border-radius:16px;height:112px;display:grid;place-items:center;padding:22px;transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s,border-color .35s;}
+  .logotile-b img{max-width:100%;max-height:60px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.62;transition:filter .4s,opacity .4s,transform .4s;}
+  .logotile-b:hover{transform:translateY(-4px);box-shadow:0 20px 40px -22px rgba(12,36,23,.35);border-color:var(--accent);}
+  .logotile-b:hover img{filter:grayscale(0);opacity:1;transform:scale(1.04);}
+
+  /* pillar cards */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:38px 32px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s,border-color .35s;}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.6,.2,1);}
+  .card:hover::before{transform:scaleX(1);}
+  .card:hover{transform:translateY(-6px);box-shadow:0 28px 56px -28px rgba(12,36,23,.3);border-color:var(--accent);}
+  .ic{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;}
+  .ic svg{width:25px;height:25px;}
+  .card .no{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--gold);display:block;margin-bottom:16px;}
+  .card h3{font-size:1.34rem;margin-bottom:12px;letter-spacing:-0.01em;}
+  .card p{color:var(--soft);font-size:1.01rem;line-height:1.56;}
+
+  /* dark glass band */
+  .darksec{position:relative;overflow:hidden;padding:118px 0;background:radial-gradient(120% 90% at 82% -12%,rgba(31,90,52,.4),transparent 55%),linear-gradient(165deg,#0E2A1A 0%,#0A2013 62%);color:#fff;}
+  .darksec::after{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;height:80%;background:radial-gradient(circle,rgba(169,198,160,.1),transparent 60%);pointer-events:none;}
+  .darksec .wrap{position:relative;z-index:1;}
+  .darksec-head{max-width:680px;margin-bottom:56px;}
+  .darksec .eyebrow{color:var(--gold);}
+  .darksec h2{font-size:3.15rem;color:#fff;}
+  .darksec h2 em{font-style:italic;font-weight:500;color:var(--leaf);}
+  .darksec-lead{color:rgba(255,255,255,.66);font-size:1.16rem;margin-top:16px;}
+  .glass{position:relative;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(6px);border-radius:20px;padding:38px 32px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.6,.2,1),border-color .35s,background .35s;}
+  .glass:hover{transform:translateY(-6px);border-color:rgba(169,198,160,.5);background:rgba(255,255,255,.06);}
+  .glass .fnum{position:absolute;top:24px;right:30px;font-family:var(--serif);font-style:italic;font-size:1.7rem;color:rgba(255,255,255,.16);}
+  .glass .ic{background:rgba(169,198,160,.18);color:var(--leaf);}
+  .glass h3{color:#fff;font-size:1.28rem;margin-bottom:10px;}
+  .glass p{color:rgba(255,255,255,.62);font-size:1.01rem;line-height:1.56;}
+
+  /* signs list */
+  .signs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 60px;margin-top:8px;}
+  .sign{display:flex;gap:18px;align-items:flex-start;padding:26px 0;border-top:1px solid var(--line);}
+  .sign .sno{flex:none;width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.1rem;}
+  .sign h3{font-size:1.16rem;margin-bottom:6px;letter-spacing:-0.01em;}
+  .sign p{color:var(--soft);font-size:1rem;line-height:1.5;}
+
+  /* advantage chips */
+  .adv-note{margin-top:52px;padding-top:40px;border-top:1px solid var(--line);}
+  .adv-note .sec-label{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem;display:block;margin-bottom:20px;}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:12px 24px;font-weight:500;font-size:1rem;color:var(--ink);}
+
+  /* process continuum */
+  .proc{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 30px 70px -40px rgba(12,36,23,.3);margin-top:8px;}
+  .pstep{background:var(--surface);padding:40px 30px;transition:background .3s;}
+  .pstep:hover{background:var(--accent-soft);}
+  .pstep .pic{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:22px;transition:background .3s,color .3s;}
+  .pstep:hover .pic{background:var(--accent);color:#fff;}
+  .pstep .pic svg{width:23px;height:23px;}
+  .pstep .pn{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.05rem;margin-bottom:9px;display:block;}
+  .pstep h3{font-size:1.16rem;margin-bottom:9px;letter-spacing:-0.01em;}
+  .pstep p{color:var(--soft);font-size:.95rem;line-height:1.5;}
+  .methods{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px;}
+  .method{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:34px 34px;}
+  .method .mtag{font-family:var(--serif);font-style:italic;color:var(--green);font-size:1.05rem;margin-bottom:10px;display:block;}
+  .method h3{font-size:1.3rem;margin-bottom:12px;}
+  .method p{color:var(--soft);font-size:1.01rem;line-height:1.56;}
+
+  /* launches band */
+  .launch-band{background:linear-gradient(150deg,#1F5A34 0%,#123A22 100%);border-radius:30px;padding:80px 64px;box-shadow:0 34px 80px rgba(18,58,34,.3);color:#fff;position:relative;overflow:hidden;}
+  .launch-band::after{content:"";position:absolute;top:-30%;right:-8%;width:44%;height:150%;background:radial-gradient(circle,rgba(169,198,160,.16),transparent 62%);}
+  .launch-band .lb-in{position:relative;z-index:1;}
+  .launch-band .eyebrow{color:var(--leaf);}
+  .launch-band h2{color:#fff;font-size:2.8rem;max-width:720px;margin-bottom:18px;}
+  .launch-band h2 em{font-style:italic;font-weight:500;color:var(--leaf);}
+  .launch-band .lb-lead{color:rgba(255,255,255,.82);font-size:1.16rem;max-width:640px;margin-bottom:38px;}
+  .launch-chips{display:flex;flex-wrap:wrap;gap:12px;}
+  .launch-chips .chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;}
+  .lb-stat{margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16);display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .lb-stat b{font-family:var(--serif);font-size:2.4rem;color:var(--leaf);font-weight:600;}
+  .lb-stat span{color:rgba(255,255,255,.8);font-size:1.08rem;}
+
+  /* split about */
+  .split{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center;}
+  .split-photo{position:relative;height:620px;border-radius:24px;overflow:hidden;background:#EDEAE0;box-shadow:0 34px 80px -30px rgba(12,36,23,.4);}
+  .split-photo img{width:100%;height:100%;object-fit:cover;object-position:center 14%;}
+  .split-photo::after{content:"";position:absolute;inset:0;border:1px solid rgba(0,0,0,.06);border-radius:24px;}
+  .split .role{font-family:var(--serif);font-style:italic;color:var(--green);font-size:1.08rem;margin-bottom:18px;}
+  .split h2{font-size:2.9rem;margin-bottom:20px;}
+  .split h2 em{font-style:italic;font-weight:500;color:var(--green);}
+  .split p{color:var(--soft);font-size:1.06rem;margin-bottom:16px;}
+  .creds{margin-top:28px;display:grid;gap:0;border-top:1px solid var(--line);}
+  .cred{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:15px 0;border-bottom:1px solid var(--line);}
+  .cred .cl{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.98rem;white-space:nowrap;}
+  .cred b{font-family:var(--sans);font-weight:600;font-size:1rem;text-align:right;letter-spacing:-0.01em;}
+
+  /* ad agencies dark */
+  .ag-list{display:grid;gap:0;margin-top:8px;}
+  .ag-item{display:flex;gap:18px;align-items:flex-start;padding:22px 0;border-top:1px solid rgba(255,255,255,.12);}
+  .ag-item:last-child{border-bottom:1px solid rgba(255,255,255,.12);}
+  .ag-item .agi{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(169,198,160,.18);color:var(--leaf);display:grid;place-items:center;}
+  .ag-item .agi svg{width:21px;height:21px;}
+  .ag-item h3{color:#fff;font-size:1.14rem;margin-bottom:5px;}
+  .ag-item p{color:rgba(255,255,255,.62);font-size:1rem;line-height:1.5;}
+
+  /* pricing cards */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start;}
+  .pcard{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:40px 34px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s,border-color .35s;}
+  .pcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s;}
+  .pcard:hover::before{transform:scaleX(1);}
+  .pcard:hover{transform:translateY(-6px);box-shadow:0 28px 56px -28px rgba(12,36,23,.3);border-color:var(--accent);}
+  .pcard .pkicker{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1rem;margin-bottom:12px;display:block;}
+  .pcard h3{font-size:1.5rem;margin-bottom:8px;}
+  .pcard .amt{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:var(--green);margin-bottom:8px;letter-spacing:-0.01em;}
+  .pcard .pdesc{color:var(--soft);font-size:1rem;line-height:1.5;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line);}
+  .pcard ul{list-style:none;display:grid;gap:12px;}
+  .pcard li{display:flex;gap:11px;align-items:flex-start;color:var(--ink);font-size:.96rem;line-height:1.45;}
+  .pcard li svg{flex:none;width:18px;height:18px;color:var(--green);margin-top:3px;}
+  .pcard .note{margin-top:20px;font-size:.86rem;color:var(--faint);color:#8B9484;font-style:italic;}
+
+  /* team */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .tcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:36px 32px;transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s,border-color .35s;}
+  .tcard:hover{transform:translateY(-6px);box-shadow:0 28px 56px -28px rgba(12,36,23,.3);border-color:var(--accent);}
+  .tcard .mono{width:56px;height:56px;border-radius:50%;background:var(--accent-soft);color:var(--green);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:1.35rem;margin-bottom:20px;}
+  .tcard h3{font-size:1.28rem;margin-bottom:4px;}
+  .tcard .trole{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:.98rem;margin-bottom:14px;}
+  .tcard p{color:var(--soft);font-size:.98rem;line-height:1.55;}
+
+  /* quote */
+  .quote{position:relative;overflow:hidden;background:radial-gradient(110% 80% at 50% -10%,rgba(31,90,52,.4),transparent 55%),var(--navy);color:#fff;border-radius:28px;padding:96px 70px 84px;text-align:center;}
+  .quote::before{content:"\201C";position:absolute;top:22px;left:50%;transform:translateX(-50%);font-family:var(--serif);font-style:italic;font-size:7rem;line-height:1;color:var(--leaf);opacity:.45;}
+  .quote p{font-family:var(--serif);font-weight:400;font-size:2.3rem;line-height:1.34;max-width:900px;margin:0 auto 30px;}
+  .quote p em{color:var(--leaf);font-style:italic;}
+  .quote .by{font-size:.84rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+
+  /* faq */
+  .faq{max-width:880px;margin:0;display:grid;gap:16px;}
+  .faq details{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:4px 30px;transition:border-color .25s,box-shadow .25s;}
+  .faq details:hover{border-color:var(--accent);}
+  .faq details[open]{border-color:var(--accent);box-shadow:0 20px 44px -24px rgba(31,90,52,.28);}
+  .faq summary{list-style:none;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-family:var(--head);font-weight:600;font-size:1.2rem;letter-spacing:-0.01em;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary .qic{flex:none;width:34px;height:34px;border-radius:9px;background:var(--accent-soft);position:relative;transition:background .25s;}
+  .faq details[open] summary .qic{background:var(--accent);}
+  .faq summary .qic::before,.faq summary .qic::after{content:"";position:absolute;background:var(--green);top:50%;left:50%;transform:translate(-50%,-50%);transition:transform .3s,background .25s;}
+  .faq summary .qic::before{width:13px;height:2px;}
+  .faq summary .qic::after{width:2px;height:13px;}
+  .faq details[open] summary .qic::before,.faq details[open] summary .qic::after{background:#fff;}
+  .faq details[open] summary .qic::after{transform:translate(-50%,-50%) scaleY(0);}
+  .faq details p{color:var(--soft);font-size:1.03rem;line-height:1.6;padding:0 0 26px;max-width:760px;}
+
+  /* cta band */
+  .cta-band{background:var(--green);color:#fff;border-radius:28px;padding:70px 60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;position:relative;overflow:hidden;}
+  .cta-band::after{content:"";position:absolute;top:-40%;right:-6%;width:40%;height:180%;background:radial-gradient(circle,rgba(169,198,160,.2),transparent 62%);}
+  .cta-band .cta-t{position:relative;z-index:1;}
+  .cta-band h2{font-size:2.7rem;max-width:640px;color:#fff;}
+  .cta-band h2 em{font-style:italic;font-weight:500;color:var(--leaf);}
+  .cta-band .sub{font-size:1.05rem;opacity:.85;margin-top:10px;}
+  .cta-band .btn-w{position:relative;z-index:1;background:var(--leaf);color:var(--green-deepest);padding:17px 34px;border-radius:100px;font-weight:600;white-space:nowrap;font-size:1.02rem;}
+
+  /* contact */
+  .contact-head{text-align:center;margin-bottom:52px;}
+  .contact-head .eyebrow{display:inline-block;margin-bottom:14px;}
+  .contact-head h2{font-size:3rem;max-width:none;}
+  .contact-head h2 em{font-style:italic;color:var(--green);font-weight:500;}
+  .contact-head p{color:var(--soft);font-size:1.14rem;max-width:560px;margin:14px auto 0;}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 44px 100px -50px rgba(12,36,23,.4);}
+  .cinfo{background:var(--navy);color:#fff;padding:56px 48px;position:relative;overflow:hidden;}
+  .cinfo::after{content:"";position:absolute;bottom:-30%;left:-10%;width:70%;height:70%;background:radial-gradient(circle,rgba(169,198,160,.12),transparent 62%);}
+  .cinfo .ci-in{position:relative;z-index:1;}
+  .cinfo h4{font-family:var(--sans);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:18px;}
+  .cinfo .hours>div{display:flex;justify-content:space-between;gap:24px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .cinfo .hours>div:first-child{padding-top:0;}
+  .cinfo .hours span{color:rgba(255,255,255,.55);}
+  .cinfo .hours b{font-weight:600;color:#fff;}
+  .cinfo p{color:rgba(255,255,255,.8);margin-bottom:11px;line-height:1.5;}
+  .cinfo .lede{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--leaf);margin-bottom:26px;line-height:1.35;}
+  .cform{background:var(--surface);padding:52px 50px;display:flex;flex-direction:column;}
+  .cform label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8B9484;margin:0 0 8px;}
+  .cform input,.cform textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:14px 15px;font:inherit;color:var(--ink);margin-bottom:20px;outline:none;transition:.2s;}
+  .cform input:focus,.cform textarea:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 4px var(--accent-soft);}
+  .cform textarea{resize:vertical;min-height:120px;}
+  .cform button{border:0;cursor:pointer;width:100%;margin-top:6px;padding:16px;font-size:1.02rem;background:var(--green);color:#fff;border-radius:100px;font-weight:600;}
+
+  /* footer */
+  footer{background:var(--green-deepest);color:rgba(255,255,255,.6);padding:74px 0 44px;}
+  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .foot-brand .logotile{background:#fff;border-radius:12px;padding:10px 14px;display:inline-flex;margin-bottom:18px;}
+  .foot-brand .logotile img{height:44px;width:auto;}
+  .foot-brand p{max-width:340px;font-size:.98rem;}
+  .foot-col h4{color:#fff;font-family:var(--sans);font-weight:600;font-size:.95rem;margin-bottom:14px;}
+  .foot-col a,.foot-col span{display:block;margin-bottom:9px;font-size:.95rem;}
+  .foot-col a:hover{color:var(--leaf);}
+  .foot-bot{padding-top:28px;display:flex;justify-content:space-between;font-size:.85rem;flex-wrap:wrap;gap:10px;}
+
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;min-height:0;}
+    .hero-copy{padding:140px 0 70px;}
+    .hero-photo{height:440px;}
+    .hero-photo img{position:relative;object-position:center 8%;}
+    .stats-in{grid-template-columns:1fr 1fr;}.stat{border-left:0;border-top:1px solid rgba(255,255,255,.09);}.stat:first-child{border-top:0;}
+    .logowall{grid-template-columns:repeat(3,1fr);}
+    .grid3,.grid4,.grid2,.price-grid,.team-grid{grid-template-columns:1fr;}
+    .signs{grid-template-columns:1fr;}
+    .proc{grid-template-columns:1fr;}.methods{grid-template-columns:1fr;}
+    .split{grid-template-columns:1fr;gap:40px;}.split-photo{height:440px;}
+    .launch-band,.quote,.cta-band{padding:56px 32px;}.quote p{font-size:1.6rem;}
+    .cta-band{flex-direction:column;align-items:flex-start;}
+    .contact-grid{grid-template-columns:1fr;}.cinfo,.cform{padding:44px 34px;}
+    .foot-top{grid-template-columns:1fr;}
+    h1{font-size:3.1rem;}.sec h2,.darksec h2{font-size:2.4rem;}
+    .nav-links{display:none;}
+  }
+  @media(max-width:560px){.logowall{grid-template-columns:repeat(2,1fr);}.wrap{padding:0 24px;}}
+</style></head>
+<body>
+
+  <header class="nav"><div class="wrap nav-in">
+    <a class="brand" href="#"><span class="logotile"><img src="../assets/img/tfl-logo.png" alt="Top Fractional CMO, Powered by Iffective"></span>
+      <span class="wm">Top Fractional CMO<small>Powered by Iffective</small></span></a>
+    <nav class="nav-links"><a href="#pillars">Approach</a><a href="#services">Services</a><a href="#process">Process</a><a href="#launches">Launches</a><a href="#about">About</a><a href="#pricing">Engagements</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <a class="nav-call" href="#contact">Schedule a free Zoom</a>
+  </div></header>
+
+  <!-- HERO -->
+  <section class="hero"><div class="wrap"><div class="hero-grid">
+    <div class="hero-copy hero-in">
+      <span class="pill"><span class="dot"></span>Fractional CMO &middot; Branding, Digital &amp; Direct</span>
+      <h1>Let's cut through <em>the noise</em>.</h1>
+      <p>For B2C and B2B2C businesses that need to grow sales profitably. I have helped dozens of brands like Colgate, McDonald's, General Motors, Samsung and DIRECTV increase their sales, and I will put the same skills in branding, digital and direct to work for you.</p>
+      <div class="hero-cta">
+        <a class="btn-p" href="#contact">Schedule a free, no-time-limit Zoom</a>
+        <a class="btn-g" href="#services">What I do</a>
+      </div>
+      <div class="hero-sign">Marcelo Salup, Founder of Iffective</div>
+    </div>
+    <div class="hero-photo"><img src="../assets/img/tfl-marcelo.jpg" alt="Marcelo Salup, Top Fractional CMO"></div>
+  </div></div></section>
+
+  <!-- STATS -->
+  <div class="stats"><div class="wrap"><div class="stats-in stagger">
+    <div class="stat"><div class="n">40+</div><div class="l">Years in branding, digital and direct</div></div>
+    <div class="stat"><div class="n">100+</div><div class="l">Products and brands worked on</div></div>
+    <div class="stat"><div class="n">$400M+</div><div class="l">New business won in agency pitches</div></div>
+    <div class="stat"><div class="n">$150mm</div><div class="l">Yearly revenue generated for DIRECTV</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">Continents of tested experience</div></div>
+  </div></div></div>
+
+  <!-- BRAND WALL -->
+  <section class="sec brands" id="brands"><div class="wrap">
+    <span class="eyebrow">Brands I have worked with</span>
+    <h2>Four decades in the room with the <em>world's biggest brands</em>.</h2>
+    <p class="sec-lead">Top leadership positions at some of the largest advertising agencies in the world: DMB&amp;B, McCann-Erickson, and Foote Cone &amp; Belding. The same skills now work for you.</p>
+    <div class="logowall stagger">
+      <div class="logotile-b"><img src="../assets/img/tfl-b-coca-cola.jpg" alt="Coca-Cola"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-colgate-palmolive.png" alt="Colgate-Palmolive"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-general-motors.png" alt="General Motors"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-samsung.png" alt="Samsung"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-directv.png" alt="DIRECTV"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-mastercard.png" alt="Mastercard"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-visa.png" alt="Visa"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-porsche.png" alt="Porsche"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-loreal.jpg" alt="L'Oreal"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-nestle.png" alt="Nestle"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-unilever-color.png" alt="Unilever"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-citi.png" alt="Citi"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-dhl.png" alt="DHL"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-goodyear.jpg" alt="Goodyear"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-nabisco.png" alt="Nabisco"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-sc-johnson.png" alt="SC Johnson"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-bimbo.jpg" alt="Bimbo"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-cambells.png" alt="Campbell's"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-renault.png" alt="Renault"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-embraer.png" alt="Embraer"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-kingston-tech.png" alt="Kingston Technology"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-iberia.png" alt="Iberia"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-camino-real-hotels.png" alt="Camino Real Hotels"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-sauza.jpg" alt="Sauza"></div>
+      <div class="logotile-b"><img src="../assets/img/tfl-b-city-of-miami.png" alt="City of Miami"></div>
+    </div>
+  </div></section>
+
+  <!-- PILLARS -->
+  <section class="sec" id="pillars"><div class="wrap">
+    <span class="eyebrow">The approach</span>
+    <h2>Senior marketing leadership, <em>without the full-time cost</em>.</h2>
+    <p class="sec-lead">Expert Fractional CMO services tailored for startups, small and medium businesses, and professional associations. We work quickly and go straight to the chase.</p>
+    <div class="grid4 stagger">
+      <div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8 8 10 4.6-2 8-5 8-10V6Z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Brand Strategy Development</h3><p>Not about logos. It is about creating a solid, dependable premium brand your customers want to recommend and buy from again.</p></div>
+      <div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Target Segmentation</h3><p>Scientific segmentation drives relevant, high-conversion messages that lower your cost of acquisition, built on first and third party data.</p></div>
+      <div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span><h3>Proven Growth Tools</h3><p>Over 40+ years with major brands I built powerful planning tools and prediction models. You now profit from the fruit of their labors.</p></div>
+      <div class="card"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.9H21l-5.3 4 2 7-5.7-4.2L6.3 20l2-7L3 8.9h6.6Z"/></svg></span><h3>40+ Years of Success</h3><p>Go-to-market strategy, brand relaunch, or sales revitalization, I have worked on some of the most iconic launches and relaunches.</p></div>
+    </div>
+  </div></section>
+
+  <!-- SERVICES / BENEFITS dark band -->
+  <section class="darksec" id="services"><div class="wrap">
+    <div class="darksec-head">
+      <span class="eyebrow">What a Fractional CMO does</span>
+      <h2>Branding is the only thing that stands between your product and <em>commodity pricing</em>.</h2>
+      <p class="darksec-lead">Iffective brings strategic marketing leadership and customized plans, tested across decades, on three continents and across more than 100 products and brands, on a part-time basis.</p>
+    </div>
+    <div class="grid4 stagger">
+      <div class="glass"><span class="fnum">01</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8 8 10 4.6-2 8-5 8-10V6Z"/></svg></span><h3>Improved Branding</h3><p>Build a strong brand identity, refine your messaging, enhance reputation, and keep communication consistent across every channel.</p></div>
+      <div class="glass"><span class="fnum">02</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><h3>Increased Sales</h3><p>Understand the customer journey, optimize campaigns, leverage emerging tech, and make data-driven decisions for maximum ROI.</p></div>
+      <div class="glass"><span class="fnum">03</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17 3.5a3.5 3.5 0 0 1 0 7"/></svg></span><h3>Build for Your Future</h3><p>Experience hiring the right people and training them, so your company has a great team in place when the assignment ends.</p></div>
+      <div class="glass"><span class="fnum">04</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM4 10h16M9 5v14"/></svg></span><h3>Bring a Great Team</h3><p>The business analytics, customer insights, and databases your business needs to keep growing, brought in on demand.</p></div>
+    </div>
+  </div></section>
+
+  <!-- SIGNS -->
+  <section class="sec" id="signs"><div class="wrap">
+    <span class="eyebrow">Signs you need a Fractional CMO</span>
+    <h2>You may already be feeling <em>the gap</em>.</h2>
+    <p class="sec-lead">Five signals that senior marketing leadership would change your trajectory.</p>
+    <div class="signs stagger">
+      <div class="sign"><span class="sno">1</span><div><h3>No clear marketing strategy</h3><p>Activity without a plan burns budget. A defined strategy points every dollar at growth.</p></div></div>
+      <div class="sign"><span class="sno">2</span><div><h3>Growth has plateaued</h3><p>The tactics that got you here have stopped moving the needle, and you need a new gear.</p></div></div>
+      <div class="sign"><span class="sno">3</span><div><h3>Limited expertise on the team</h3><p>Your people are capable, but the senior marketing depth simply is not there yet.</p></div></div>
+      <div class="sign"><span class="sno">4</span><div><h3>Budget constraints</h3><p>A full-time CMO is costly. Fractional gives you the same seniority without the salary.</p></div></div>
+      <div class="sign"><span class="sno">5</span><div><h3>The CEO is deciding alone</h3><p>Marketing calls made without the time or bandwidth to research the tools or analyze the data.</p></div></div>
+    </div>
+    <div class="adv-note">
+      <span class="sec-label">The advantage over a full-time CMO</span>
+      <div class="chips">
+        <span class="chip">Cost-effective senior expertise</span>
+        <span class="chip">No full-time salary</span>
+        <span class="chip">Flexibility</span>
+        <span class="chip">Decades of experience, on demand</span>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- PROCESS -->
+  <section class="sec" style="padding-top:0;" id="process"><div class="wrap">
+    <span class="eyebrow">The process</span>
+    <h2>A process, <em>not a straitjacket</em>.</h2>
+    <p class="sec-lead">No one gets to the top of one of the largest ad agencies in the world without a process. But mine is an integrated continuum, not a bunch of neat little circular arrows most clients never use. Tested in dozens of countries and brands, and 100% customized to your needs.</p>
+    <div class="proc stagger">
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V5Z"/></svg></span><span class="pn">01</span><h3>Mission</h3><p>We ground the mission on your objectives, so everything that follows serves them.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><span class="pn">02</span><h3>Research</h3><p>First-party data, desk research, and a customer survey if needed, to see clearly.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 2a7 7 0 0 0-4 12c.6.6 1 1.3 1 2h6c0-.7.4-1.4 1-2a7 7 0 0 0-4-12Z"/></svg></span><span class="pn">03</span><h3>Understand</h3><p>The research builds a marketing plan grounded in real customer understanding.</p></div>
+      <div class="pstep"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-3-8-8-3Z"/></svg></span><span class="pn">04</span><h3>Reach &amp; Persuade</h3><p>Reach and persuade go hand in hand, the front end of a single continuum.</p></div>
+    </div>
+    <div class="methods stagger">
+      <div class="method"><span class="mtag">Media Yield Management (MYM)</span><h3>Built at Foote Cone &amp; Belding</h3><p>An active role in strategizing, planning, negotiating, buying, and post-analyzing media. One of two strategic planning methodologies I developed at FCB, and the root of everything that came after.</p></div>
+      <div class="method"><span class="mtag">TOE, Theory of Everything</span><h3>A homage to physics</h3><p>Grown out of MYM, TOE is comprehensive by design. In a nutshell: it is a continuum, tested in dozens of countries and brands, a process rather than a straitjacket, and 100% customized to your needs.</p></div>
+    </div>
+  </div></section>
+
+  <!-- LAUNCHES band -->
+  <section class="sec" style="padding-top:0;" id="launches"><div class="wrap">
+    <div class="launch-band"><div class="lb-in">
+      <span class="eyebrow">Product launches</span>
+      <h2>I have helped launch over a dozen <em>iconic products and brands</em>.</h2>
+      <p class="lb-lead">Some of the most iconic launches and relaunches of the last four decades, across categories and continents.</p>
+      <div class="launch-chips stagger">
+        <span class="chip">McDonald's in Mexico</span>
+        <span class="chip">Diet Coke</span>
+        <span class="chip">L'Oreal</span>
+        <span class="chip">Dunkin Donuts</span>
+        <span class="chip">General Motors Argentina</span>
+        <span class="chip">DIRECTV</span>
+      </div>
+      <div class="lb-stat"><b>$150mm</b><span>in yearly revenues generated by the media team I led for DIRECTV.</span></div>
+    </div></div>
+  </div></section>
+
+  <!-- ABOUT split -->
+  <section class="sec" style="padding-top:0;" id="about"><div class="wrap split">
+    <div class="split-photo"><img src="../assets/img/tfl-marcelo.jpg" alt="Marcelo Salup, Founder of Iffective"></div>
+    <div>
+      <span class="eyebrow">Meet Marcelo</span>
+      <p class="role">Marcelo Salup, Founder of Iffective, "Left-Brain"</p>
+      <h2>40+ years of international marketing, put to work for <em>you</em>.</h2>
+      <p>Top management at DMB&amp;B, McCann-Erickson, and Foote Cone &amp; Belding, with specialties in strategic planning, consumer insight, and media across Branding, Digital, and Direct. I have led media teams that launched dozens of Fortune 500 companies worldwide.</p>
+      <p>The industries I know deeply: CPG and Retail, Restaurants, Food &amp; Beverage, Financial, Automotive, and Direct Response. Whatever your objective, I bring a process tested on three continents and more than 100 brands.</p>
+      <div class="creds">
+        <div class="cred"><span class="cl">Experience</span><b>40+ years, branding, digital &amp; direct</b></div>
+        <div class="cred"><span class="cl">Leadership</span><b>DMB&amp;B &middot; McCann-Erickson &middot; FCB</b></div>
+        <div class="cred"><span class="cl">Reach</span><b>3 continents, 100+ products &amp; brands</b></div>
+        <div class="cred"><span class="cl">Based</span><b>United States, clients worldwide</b></div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- FOR AD AGENCIES dark -->
+  <section class="darksec" id="agencies"><div class="wrap">
+    <div class="darksec-head">
+      <span class="eyebrow">For ad agencies</span>
+      <h2>World-class tactical help for your agency, <em>on demand</em>.</h2>
+      <p class="darksec-lead">Big pitch coming up? I have led hundreds of new-business pitches around the world, resulting in over $400 million won in new business for FCB and McCann-Erickson.</p>
+    </div>
+    <div class="grid2" style="align-items:start;">
+      <div class="ag-list stagger">
+        <div class="ag-item"><span class="agi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><div><h3>Research that tells your story</h3><p>The evidence and insight that makes your pitch impossible to ignore.</p></div></div>
+        <div class="ag-item"><span class="agi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H4zM4 20h16"/></svg></span><div><h3>A presentation template</h3><p>A structure the whole team can build the winning story into.</p></div></div>
+        <div class="ag-item"><span class="agi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/></svg></span><div><h3>Working with your team</h3><p>Shaping the winning story alongside your people, not over them.</p></div></div>
+        <div class="ag-item"><span class="agi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span><div><h3>Writing the entire deck</h3><p>The full deck plus revisions, and practice sessions before you walk in.</p></div></div>
+      </div>
+      <div class="glass" style="padding:44px 40px;">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.9H21l-5.3 4 2 7-5.7-4.2L6.3 20l2-7L3 8.9h6.6Z"/></svg></span>
+        <h3 style="font-size:1.5rem;margin-bottom:14px;">Interim CMO help, too</h3>
+        <p style="margin-bottom:16px;">Need to shore up a large client until your new hire comes in? I can step in with a customized package drawing on top-level experience at McCann-Erickson, Foote Cone &amp; Belding, and DMB&amp;B.</p>
+        <p style="font-family:var(--serif);font-style:italic;color:var(--leaf);font-size:1.2rem;">Over $400 million won in new business.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- PRICING -->
+  <section class="sec" id="pricing"><div class="wrap">
+    <span class="eyebrow">Not ready for a full engagement?</span>
+    <h2>Three ways to put <em>decades of experience</em> to work.</h2>
+    <p class="sec-lead">Productized offerings for teams that want senior marketing thinking without a full retainer.</p>
+    <div class="price-grid stagger">
+
+      <div class="pcard">
+        <span class="pkicker">6-Hour Workshop / Seminar</span>
+        <h3>Workshop</h3>
+        <div class="amt">US$5,500</div>
+        <p class="pdesc">A one-day workshop that will change the way you do marketing.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Creating winning strategies</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Research, consumer insights, targeting</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Evaluating customer segments</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Media and channel platforms</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Crafting compelling messages</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Setting up meaningful metrics and KPIs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reviewing all documentation given to partners (RFPs, media and creative briefs)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Traditional, digital, branding, and direct response</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>For up to 5 people</li>
+        </ul>
+        <p class="note">Special rates for professionals attending on their own.</p>
+      </div>
+
+      <div class="pcard">
+        <span class="pkicker">Expert Marketing Plan</span>
+        <h3>Marketing Plan</h3>
+        <div class="amt">US$6,000</div>
+        <p class="pdesc">A complete marketing plan built on your objectives, budget, and KPIs.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Goals, objectives, KPIs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Target segments and evaluation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Product distribution</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Media channel strategy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Messaging strategy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Timelines, benchmark, flowchart</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ready to be implemented by your agency, in-house team, or Iffective (implementation not included)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Delivered 4 weeks after final information is received</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <span class="pkicker">Expert Strategic Audit</span>
+        <h3>Strategic Audit</h3>
+        <div class="amt">US$2,750</div>
+        <p class="pdesc">An expert second opinion on your marketing plans to save money, time, and effort.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Strategic assumptions</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Consumer insights</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Market and category research you may have</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Our own market and category research</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Channel and media strategy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Messaging strategy</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Other distribution channels</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Any other documentation used in your strategy</li>
+        </ul>
+      </div>
+
+    </div>
+  </div></section>
+
+  <!-- TEAM -->
+  <section class="sec" style="padding-top:0;" id="team"><div class="wrap">
+    <span class="eyebrow">The Iffective team</span>
+    <h2>Senior operators, <em>at your side</em>.</h2>
+    <p class="sec-lead">The analytics, insight, and strategy bench that makes the work move.</p>
+    <div class="team-grid stagger">
+      <div class="tcard"><div class="mono">MS</div><h3>Marcelo Salup</h3><div class="trole">Founder, "Left-Brain"</div><p>40+ years of international marketing and advertising. Top management at DMB&amp;B, McCann-Erickson, and Foote Cone &amp; Belding. Led media teams that launched dozens of Fortune 500 companies worldwide across CPG, Retail, Restaurants, Food &amp; Beverage, Financial, Automotive, and Direct Response.</p></div>
+      <div class="tcard"><div class="mono">AA</div><h3>Adi Asavaid</h3><div class="trole">Head of Research &amp; Analytics</div><p>Founder and CEO of CEO Analytics LLC, with 35+ years in Business Intelligence. Former Head of BI Solutions at IRI and Symphony Health, built BI solutions for Pepsi, Food Lion, and Novartis, and led teams at Opera Solutions whose recommendation engines drove a 4% revenue increase in one year, featured in the WSJ.</p></div>
+      <div class="tcard"><div class="mono">AL</div><h3>Areeya Lila</h3><div class="trole">Advisor</div><p>Founder and CEO of ViewN, an expert in business strategy and growth in high tech and enterprise software.</p></div>
+    </div>
+  </div></section>
+
+  <!-- QUOTE -->
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="quote">
+      <p>Branding is the only thing that stands between your product and <em>commodity pricing</em>.</p>
+      <span class="by">Marcelo Salup, Top Fractional CMO</span>
+    </div>
+  </div></section>
+
+  <!-- FAQ -->
+  <section class="sec" style="padding-top:0;" id="faq"><div class="wrap">
+    <span class="eyebrow">Questions</span>
+    <h2 style="margin-bottom:44px;">Answers before we <em>talk</em>.</h2>
+    <div class="faq">
+      <details open><summary>What is a Fractional CMO?<span class="qic"></span></summary><p>Strategic marketing leadership on a part-time basis. You get a seasoned Chief Marketing Officer, with customized plans tested across decades, three continents, and more than 100 brands, without the cost of a full-time hire.</p></details>
+      <details><summary>What size companies do you work with?<span class="qic"></span></summary><p>Startups, small and medium businesses, and professional associations, primarily B2C and B2B2C businesses that need to grow sales profitably.</p></details>
+      <details><summary>How do we start?<span class="qic"></span></summary><p>With a free, no-time-limit Zoom. Take all the time you want. We talk through your objectives and where senior marketing leadership would move the needle fastest.</p></details>
+      <details><summary>Do you help ad agencies?<span class="qic"></span></summary><p>Yes. I provide pitch support, from research and deck writing to practice sessions, and interim CMO help to shore up a large client until your new hire comes in.</p></details>
+      <details><summary>What if I am not ready for a full engagement?<span class="qic"></span></summary><p>Three productized options: a 6-hour Workshop at US$5,500, an Expert Marketing Plan at US$6,000, or an Expert Strategic Audit at US$2,750.</p></details>
+    </div>
+  </div></section>
+
+  <!-- CTA -->
+  <section class="sec" style="padding-top:0;"><div class="wrap">
+    <div class="cta-band">
+      <div class="cta-t"><h2>Let's cut through <em>the noise</em>.</h2><div class="sub">Schedule a free, no-time-limit Zoom. Take all the time you want.</div></div>
+      <a class="btn-w" href="#contact">Schedule a free Zoom</a>
+    </div>
+  </div></section>
+
+  <!-- CONTACT -->
+  <section class="sec" style="padding-top:0;" id="contact"><div class="wrap">
+    <div class="contact-head"><span class="eyebrow">Get in touch</span>
+      <h2>Book your free <em>strategy Zoom</em>.</h2>
+      <p>Tell me about your business and your goals. There is no clock on the call, and no obligation.</p></div>
+    <div class="contact-grid">
+      <div class="cinfo"><div class="ci-in">
+        <p class="lede">"I will put the same skills in branding, digital and direct to work for you."</p>
+        <h4>The call</h4>
+        <div class="hours"><div><span>Format</span><b>Free Zoom, no time limit</b></div><div><span>Cost</span><b>No charge, no obligation</b></div></div>
+        <h4 style="margin-top:34px;">Based</h4>
+        <p>United States, working with clients across three continents.</p>
+        <h4 style="margin-top:26px;">Firm</h4>
+        <p>Iffective LLC &middot; Top Fractional CMO</p>
+      </div></div>
+      <form class="cform" onsubmit="return false;">
+        <label>Name</label><input type="text" name="name" autocomplete="name">
+        <label>Email</label><input type="email" name="email" autocomplete="email">
+        <label>Company</label><input type="text" name="company" autocomplete="organization">
+        <label>Message</label><textarea name="message" rows="4"></textarea>
+        <button type="submit">Schedule my free Zoom</button>
+      </form>
+    </div>
+  </div></section>
+
+  <!-- FOOTER -->
+  <footer><div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="logotile"><img src="../assets/img/tfl-logo.png" alt="Top Fractional CMO, Powered by Iffective"></span>
+        <p>Fortune-500-caliber marketing leadership on a fractional basis. 40+ years in branding, digital, and direct, across three continents and more than 100 brands.</p>
+      </div>
+      <div class="foot-col"><h4>Explore</h4><a href="#services">Services</a><a href="#process">Process</a><a href="#launches">Launches</a><a href="#pricing">Engagements</a></div>
+      <div class="foot-col"><h4>Get started</h4><a href="#about">About Marcelo</a><a href="#team">The team</a><a href="#faq">FAQ</a><a href="#contact">Schedule a free Zoom</a></div>
+    </div>
+    <div class="foot-bot"><span>&copy; 2026 Iffective LLC. All rights reserved.</span><span>Top Fractional CMO, Powered by Iffective</span></div>
+  </div></footer>
+
+<style>/*cote-reveal*/.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);will-change:opacity,transform;}.reveal.in{opacity:1;transform:none;}@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;}}
+.stagger > *{opacity:0;transform:translateY(22px);transition:opacity .6s cubic-bezier(.2,.6,.2,1),transform .6s cubic-bezier(.2,.6,.2,1);}
+.stagger.in > *{opacity:1;transform:none;}
+.stagger.in > *:nth-child(2){transition-delay:.06s;}.stagger.in > *:nth-child(3){transition-delay:.12s;}.stagger.in > *:nth-child(4){transition-delay:.18s;}.stagger.in > *:nth-child(5){transition-delay:.24s;}.stagger.in > *:nth-child(6){transition-delay:.3s;}.stagger.in > *:nth-child(7){transition-delay:.36s;}.stagger.in > *:nth-child(8){transition-delay:.42s;}
+@media(prefers-reduced-motion:reduce){.stagger > *{opacity:1!important;transform:none!important;transition:none!important;}}</style>
+<script>(function(){if(!('IntersectionObserver'in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -60px 0px'});[].forEach.call(document.querySelectorAll('.sec,.darksec,.stats'),function(el){var r=el.getBoundingClientRect();el.classList.add('reveal');if(r.top<window.innerHeight*0.92){el.classList.add('in');}else{io.observe(el);}});var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');so.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});[].forEach.call(document.querySelectorAll('.stagger'),function(el){so.observe(el);});})();</script>
+<style>/*cote-polish*/
+.nav-links a{position:relative;}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.6,.2,1);opacity:.55;}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-call,.hero-cta a,.btn-p,.btn-g,.cta-band a,.btn-w,button[type=submit]{transition:transform .3s cubic-bezier(.2,.6,.2,1),box-shadow .3s cubic-bezier(.2,.6,.2,1);}
+.nav-call:hover,.hero-cta a:hover,.cta-band a:hover,.btn-w:hover,button[type=submit]:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(12,36,23,.5);}
+@media(prefers-reduced-motion:reduce){.nav-call,.hero-cta a,.btn-p,.btn-g,.cta-band a,.btn-w,button[type=submit]{transition:none!important;}}
+</style>
+</body></html>
