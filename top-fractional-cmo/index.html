@@ -43,7 +43,7 @@
   @keyframes glow{from{opacity:.5;transform:translate(0,0);}to{opacity:1;transform:translate(4%,3%);}}
   @media(prefers-reduced-motion:reduce){.hero::after{animation:none;}}
   .hero-photo{position:relative;overflow:hidden;background:#EDEAE0;}
-  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 12%;transform:scale(1.05);animation:heroZoom 20s ease-out forwards;}
+  .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transform:scale(1.05);animation:heroZoom 20s ease-out forwards;}
   @keyframes heroZoom{from{transform:scale(1.12);}to{transform:scale(1.0);}}
   @media(prefers-reduced-motion:reduce){.hero-photo img{animation:none;transform:none;}}
   .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,36,23,.55) 0%,rgba(12,36,23,0) 26%);}
