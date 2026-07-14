@@ -170,6 +170,89 @@ nav.scrolled .bar{padding:15px 40px;background:rgba(12,14,12,.86);backdrop-filte
 .price-note{margin-top:30px;text-align:center;background:var(--card);border:1px solid var(--line-d);border-radius:16px;padding:22px 30px;font-size:1rem;color:rgba(255,255,255,.86)}
 .price-note b{color:var(--accent);font-weight:600}
 
+/* service tier meta (timeline + deliverable) */
+.tier .tmeta{display:grid;gap:10px;margin:0 0 22px;padding:18px 0;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+.tier .tmeta div{display:flex;gap:11px;align-items:flex-start}
+.tier .tmeta svg{width:17px;height:17px;flex:none;stroke:var(--accent);fill:none;stroke-width:1.9;margin-top:3px}
+.tier .tmeta small{display:block;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.tier .tmeta span{font-size:.9rem;color:rgba(255,255,255,.86);line-height:1.35}
+.tier .price-n b.plus{font-size:2.7rem}
+/* cream variant tiers (advisory) */
+.tier.cream-tier{background:#fff;border-color:var(--line-l);color:var(--ink-l)}
+.tier.cream-tier .tlabel{color:var(--ink-l)}
+.tier.cream-tier .tname{color:#7CA000}
+.tier.cream-tier .price-n b{color:var(--ink-l)}
+.tier.cream-tier .price-n .from,.tier.cream-tier .price-n .per,.tier.cream-tier .tdesc{color:var(--mute-l)}
+.tier.cream-tier .tdesc{border-bottom-color:var(--line-l)}
+.tier.cream-tier li{color:var(--ink-l)}
+.tier.cream-tier li svg{stroke:#7CA000}
+.tier.cream-tier li em{color:var(--mute-l)}
+.tier.cream-tier .tmeta{border-color:var(--line-l)}
+.tier.cream-tier .tmeta small{color:#7CA000}
+.tier.cream-tier .tmeta svg{stroke:#7CA000}
+.tier.cream-tier .tmeta span{color:var(--ink-l)}
+.tier.cream-tier.feat{background:linear-gradient(180deg,#FBFCF4,#fff);border-color:var(--accent-d)}
+.tier.cream-tier:hover{border-color:var(--accent-d)}
+.tier.cream-tier .flag{color:var(--ink)}
+
+/* highlight strip */
+.hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+.hl{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.045);border:1px solid var(--line-d);border-radius:16px;padding:24px 26px;transition:.3s}
+.hl:hover{transform:translateY(-4px);border-color:rgba(198,245,63,.32)}
+.hl .ic{width:40px;height:40px;flex:none;border-radius:11px;background:var(--accent-soft);display:grid;place-items:center}
+.hl svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.9}
+.hl p{font-size:.96rem;color:rgba(255,255,255,.84);line-height:1.5}
+.whatget-note{margin-top:44px;background:rgba(255,255,255,.045);border:1px solid var(--line-d);border-left:3px solid var(--accent);border-radius:16px;padding:30px 34px;max-width:none}
+.whatget-note h3{font-size:1.5rem;color:#fff;margin-bottom:12px}
+.whatget-note p{color:rgba(255,255,255,.82);font-size:1.06rem;line-height:1.62;max-width:70ch}
+
+/* one-time project cards */
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.proj{background:#fff;border:1px solid var(--line-l);border-radius:18px;padding:32px 32px;transition:.3s;position:relative;overflow:hidden}
+.proj::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform .4s}
+.proj:hover{transform:translateY(-5px);box-shadow:0 24px 46px -28px rgba(12,14,12,.28)}
+.proj:hover::before{transform:scaleY(1)}
+.proj .ic{width:46px;height:46px;border-radius:12px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:18px}
+.proj .ic svg{width:23px;height:23px;stroke:#7CA000;fill:none;stroke-width:1.8}
+.proj b{font-family:var(--serif);font-size:1.4rem;color:var(--ink-l);display:block}
+.proj .pr{font-family:var(--serif);font-size:1.5rem;color:#7CA000;margin:4px 0 12px}
+.proj p{color:var(--mute-l);font-size:.98rem;line-height:1.55}
+.proj .tt{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7CA000;background:var(--accent-soft);padding:6px 14px;border-radius:30px}
+
+/* before / after */
+.ba{background:var(--panel)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.ba-col{border-radius:22px;padding:40px 36px;border:1px solid var(--line-d)}
+.ba-before{background:rgba(255,255,255,.03)}
+.ba-after{background:linear-gradient(180deg,#1E2419,#171C13);border-color:rgba(198,245,63,.34)}
+.ba-col .bh{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line-d)}
+.ba-col .bh .ic{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center}
+.ba-before .bh .ic{background:rgba(255,255,255,.07)}
+.ba-after .bh .ic{background:var(--accent-soft)}
+.ba-before .bh svg{width:22px;height:22px;stroke:var(--mute-d);fill:none;stroke-width:1.9}
+.ba-after .bh svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2}
+.ba-col .bh b{font-family:var(--serif);font-size:1.5rem;color:#fff}
+.ba-before .bh b{color:rgba(255,255,255,.82)}
+.ba-list{display:grid;gap:14px}
+.ba-list div{display:flex;gap:13px;align-items:flex-start;font-size:1rem;line-height:1.45}
+.ba-list svg{width:19px;height:19px;flex:none;margin-top:3px;fill:none;stroke-width:2.2}
+.ba-before .ba-list div{color:var(--mute-d)}
+.ba-before .ba-list svg{stroke:rgba(255,255,255,.4)}
+.ba-after .ba-list div{color:rgba(255,255,255,.92)}
+.ba-after .ba-list svg{stroke:var(--accent)}
+
+/* process steps */
+.proc{background:var(--ink)}
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;counter-reset:step}
+.step{position:relative;background:var(--card);border:1px solid var(--line-d);border-radius:18px;padding:32px 26px;transition:.35s;overflow:hidden}
+.step::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.step:hover{transform:translateY(-6px);border-color:rgba(198,245,63,.3)}
+.step:hover::before{transform:scaleX(1)}
+.step .sn{font-family:var(--serif);font-size:2.6rem;color:var(--accent);line-height:1;letter-spacing:-.02em;margin-bottom:16px;display:block}
+.step h3{font-size:1.18rem;color:#fff;margin-bottom:8px}
+.step .sm{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 11px;border-radius:30px;margin-bottom:12px}
+.step p{color:var(--mute-d);font-size:.94rem;line-height:1.5}
+
 /* DEAL support split (cream) */
 .deal-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:66px;align-items:center}
 .deal-img{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 44px 90px -48px rgba(12,14,12,.5)}
@@ -308,6 +391,8 @@ footer{background:#080A08;color:rgba(255,255,255,.62);padding:78px 0 38px}
 @media(max-width:1000px){
   .prob-grid,.brief-grid,.deal-grid,.founder-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
   .res-grid,.phil-grid,.price-grid{grid-template-columns:1fr}
+  .hl-grid,.proj-grid,.ba-grid{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
   .serve-grid{grid-template-columns:1fr 1fr}
   .trust .wrap{grid-template-columns:1fr 1fr}
   .trust .t:nth-child(2){border-right:none}
@@ -319,7 +404,7 @@ footer{background:#080A08;color:rgba(255,255,255,.62);padding:78px 0 38px}
   nav .bar{padding:16px 22px}
   .sec,.contact{padding:78px 0}
   .hero-in{padding:150px 22px 70px}
-  .serve-grid,.trust .wrap{grid-template-columns:1fr}
+  .serve-grid,.trust .wrap,.proc-grid{grid-template-columns:1fr}
   .trust .t{border-right:none}
   .cform .frow{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr;gap:34px}
@@ -338,9 +423,9 @@ footer{background:#080A08;color:rgba(255,255,255,.62);padding:78px 0 38px}
   <div class="bar">
     <a class="brand" href="#top"><b>KLYVNT</b><span>Advisors</span></a>
     <div class="nav-links">
-      <a href="#what">What you get</a>
-      <a href="#pricing">Rate card</a>
-      <a href="#deals">Deal support</a>
+      <a href="#diligence">Due diligence</a>
+      <a href="#advisory">Advisory</a>
+      <a href="#process">Process</a>
       <a href="#founder">Founder</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -356,7 +441,7 @@ footer{background:#080A08;color:rgba(255,255,255,.62);padding:78px 0 38px}
     <p>KLYVNT Advisors runs the finance function for founder-led businesses doing $1M to $5M. Clean books every month, controller-level interpretation, and CFO judgment when the decisions get heavy. You run the business. The numbers keep up.</p>
     <div class="hero-actions">
       <a class="btn btn-lime" href="#contact">Get a free books assessment</a>
-      <a class="btn btn-ghost" href="#pricing">See the rate card</a>
+      <a class="btn btn-ghost" href="#advisory">See our services</a>
     </div>
     <div class="hero-chips">
       <span><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg>CPA-Led</span>
@@ -429,75 +514,248 @@ footer{background:#080A08;color:rgba(255,255,255,.62);padding:78px 0 38px}
   </div>
 </section>
 
-<section class="sec price" id="pricing">
+<section class="sec price" id="diligence">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Public rate card</span>
-      <h2>Priced in the open, <em>on purpose.</em></h2>
-      <p>Most firms hide their pricing. We publish ours. Start where you are and move up as the decisions get heavier.</p>
+      <span class="eyebrow">Service line 01 &middot; Buy-side due diligence</span>
+      <h2>Before you sign, know <em>what you're buying.</em></h2>
+      <p>CPA-led Quality of Earnings for first-time buyers acquiring $2M to $10M service businesses. Reports built to close deals, not slow them down.</p>
     </div>
     <div class="price-grid stagger">
       <div class="tier">
-        <div class="tname">Bookkeeping</div>
-        <div class="tlabel">The Foundation</div>
-        <div class="price-n"><span class="from">from</span><b>$699</b><span class="per">/mo</span></div>
-        <div class="tdesc">Clean, current books you can finally trust.</div>
+        <div class="tname">Deals under $500K</div>
+        <div class="tlabel">Desktop Review</div>
+        <div class="price-n"><span class="from">from</span><b>$3,000</b></div>
+        <div class="tdesc">A focused risk read before you go further.</div>
+        <div class="tmeta">
+          <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><small>Timeline</small>5 business days</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg><span><small>Deliverable</small>3 to 5 page risk memo</span></div>
+        </div>
         <ul>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Clean, current books</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Monthly close and bank reconciliation</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>P&amp;L and balance sheet every month</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Deposits and prepayments handled right</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>A year-end package your tax accountant will love</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Financial statement analysis</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Revenue reasonableness check</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Red flag identification</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Owner add-back assessment</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Key risk summary</li>
         </ul>
         <a class="btn btn-ghost" href="#contact">Get started</a>
       </div>
       <div class="tier feat">
-        <div class="flag">Most clients land here</div>
-        <div class="tname">Controller</div>
-        <div class="tlabel">Interpretation</div>
-        <div class="price-n"><span class="from">from</span><b>$3,500</b><span class="per">/mo</span></div>
-        <div class="tdesc">Everything in Bookkeeping, now interpreted.</div>
+        <div class="flag">Most Popular</div>
+        <div class="tname">Deals $500K to $3M</div>
+        <div class="tlabel">Standard QoE</div>
+        <div class="price-n"><span class="from">from</span><b>$5,000</b></div>
+        <div class="tdesc">The full quality of earnings picture, sourced to returns.</div>
+        <div class="tmeta">
+          <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><small>Timeline</small>10 to 14 business days</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg><span><small>Deliverable</small>15 to 25 page quality of earnings report</span></div>
+        </div>
         <ul>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Everything in <em>Bookkeeping</em></span></li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Monthly review call with a written summary</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Margin by job, client, and service line</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Cash flow tracking and lender reporting</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>A KPI dashboard built for your business</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Everything in <em>Desktop Review</em></span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Multi-year financial reconstruction from tax returns</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Normalized EBITDA with documented add-back schedule</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Revenue trend analysis (monthly, 2 to 3 years)</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Working capital analysis and seasonal patterns</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>EBITDA bridge with risk summary on page one</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Client review call</li>
         </ul>
         <a class="btn btn-lime" href="#contact">Book a call</a>
       </div>
       <div class="tier">
-        <div class="tname">Fractional CFO</div>
-        <div class="tlabel">Judgment</div>
-        <div class="price-n"><span class="from">from</span><b>$6,500</b><span class="per">/mo</span></div>
-        <div class="tdesc">A finance leader on call for the big decisions.</div>
+        <div class="tname">Deals $3M+</div>
+        <div class="tlabel">Comprehensive DD</div>
+        <div class="price-n"><span class="from">from</span><b class="plus">$11,000+</b></div>
+        <div class="tdesc">Full transaction-grade diligence with a DataBook.</div>
+        <div class="tmeta">
+          <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><small>Timeline</small>14 to 21 business days</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg><span><small>Deliverable</small>25 to 40 page report + DataBook</span></div>
+        </div>
         <ul>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Everything in <em>Controller</em></span></li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>A 13-week cash flow forecast</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Budget vs. actual and scenario modeling</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Pricing and margin strategy</li>
-          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>On call for the decisions that matter</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg><span>Everything in <em>Standard QoE</em></span></li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Revenue quality by customer, service line, job type</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Customer concentration and retention metrics</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Transaction testing (sample)</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Pricing consistency analysis</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Operational risk assessment</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Earn-out structuring input</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>DataBook with supporting schedules</li>
         </ul>
         <a class="btn btn-ghost" href="#contact">Book a call</a>
       </div>
     </div>
-    <div class="price-note reveal">Books a mess? <b>One-time cleanup from $2,500</b>, fixed price quoted before we start.</div>
+    <div class="price-note reveal">Payment: <b>50% on engagement, 50% on draft delivery.</b> No contingency fees.</div>
+
+    <div class="whatget-note reveal">
+      <h3>What you get</h3>
+      <p>Our reports aren't adapted from audit templates. They're engineered for the acquisition moment: EBITDA bridge and risk summary on page one, sourced to tax returns, built so your lender, attorney, and advisors can review without generating a single follow-up question.</p>
+    </div>
+    <div class="hl-grid stagger">
+      <div class="hl"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></span><p>Tax-return-anchored financial reconstruction</p></div>
+      <div class="hl"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-7"/></svg></span><p>Normalized EBITDA with documented add-back schedule</p></div>
+      <div class="hl"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="M12 8v4M12 15h.01"/></svg></span><p>Risk-scored executive summary with deal implications</p></div>
+    </div>
   </div>
 </section>
 
-<section class="sec cream" id="deals">
-  <div class="wrap deal-grid">
-    <div class="deal-img reveal">
-      <img src="../assets/img/klv-lasolas.jpg" alt="Las Olas waterfront at sunset, Fort Lauderdale">
-      <div class="badge"><b>Sub-$5M</b><small>Deal support</small></div>
+<section class="sec cream" id="advisory">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow dark">Service line 02 &middot; Advisory &amp; controller services</span>
+      <h2>A finance team on <em>day one.</em></h2>
+      <p>Fractional CFO, outsourced controller, and financial infrastructure for owners who need senior finance leadership without the $200K salary.</p>
     </div>
-    <div class="deal-copy reveal">
-      <span class="eyebrow dark">Deal support &amp; due diligence</span>
-      <h2>Buying a business? Know exactly <em>what you're buying.</em></h2>
-      <p>Buy-side financial due diligence and Quality of Earnings assessments for sub-$5M deals, with rapid turnarounds. Evidence, tie-outs, and findings in plain English, so you negotiate from facts.</p>
-      <p>Then post-close fractional controller operations keep the financial hygiene data-driven from LOI negotiation through closing and into day one. The same discipline as the monthly work, aimed at the deal.</p>
-      <div class="deal-tags">
-        <span>Quality of Earnings</span><span>Buy-side diligence</span><span>Rapid turnaround</span><span>Post-close controllership</span>
+    <div class="price-grid stagger">
+      <div class="tier cream-tier">
+        <div class="flag">Start Here</div>
+        <div class="tname">Financial Health Check</div>
+        <div class="tlabel">Clarity First</div>
+        <div class="price-n"><span class="from">from</span><b>$2,500</b></div>
+        <div class="tdesc">The best starting point if you're not sure what you need.</div>
+        <div class="tmeta">
+          <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><small>Timeline</small>2 weeks</span></div>
+          <div><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/></svg><span><small>Deliverable</small>Prioritized action plan</span></div>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>A 2-week deep-dive into your current books, processes, and financial risks</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>A prioritized action plan with specific recommendations</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>No commitment to ongoing services, just clarity on where you stand and what to fix first</li>
+        </ul>
+        <a class="btn btn-dark" href="#contact">Start here</a>
+      </div>
+      <div class="tier cream-tier feat">
+        <div class="flag">Most clients land here</div>
+        <div class="tname">Businesses $1M to $5M revenue</div>
+        <div class="tlabel">Outsourced Controller</div>
+        <div class="price-n"><span class="from">from</span><b>$3,500</b><span class="per">/mo</span></div>
+        <div class="tdesc">The financial backbone your business needs.</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Monthly bookkeeping and reconciliation</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Monthly financial statements (P&amp;L, Balance Sheet, Cash Flow)</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Cash flow forecasting (weekly cash position)</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>AP oversight and payment scheduling</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>AR management and collections support</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Budget vs. actual variance reporting</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Quarterly business review (60-minute deep-dive)</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Chart of accounts optimization</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Payroll processing and compliance</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Year-end tax package for your CPA</li>
+        </ul>
+        <a class="btn btn-lime" href="#contact">Book a call</a>
+      </div>
+      <div class="tier cream-tier">
+        <div class="tname">Businesses $3M+ revenue</div>
+        <div class="tlabel">Fractional CFO</div>
+        <div class="price-n"><span class="from">from</span><b>$5,500</b><span class="per">/mo</span></div>
+        <div class="tdesc">A real financial leader in your corner. Everything in Controller, plus:</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Financial strategy and annual planning</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>KPI dashboard (custom to your business)</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Bank and lender relationship management</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>M&amp;A preparation (if you're planning to sell or acquire)</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Tax planning coordination with your CPA</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Board/partner reporting packages</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Hiring and growth financial modeling</li>
+          <li><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Monthly 60-minute strategy session</li>
+        </ul>
+        <a class="btn btn-dark" href="#contact">Book a call</a>
+      </div>
+    </div>
+
+    <div class="sec-head center reveal" style="margin-top:70px">
+      <span class="eyebrow dark">One-time projects</span>
+      <h2>Fixed-scope <em>fixes.</em></h2>
+    </div>
+    <div class="proj-grid stagger">
+      <div class="proj">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-2.1-.6-.6-2.1z"/></svg></div>
+        <b>System Cleanup</b>
+        <div class="pr">$3,000 to $8,000</div>
+        <p>Fix historical reconciliation issues, rebuild the chart of accounts, establish a monthly close process.</p>
+        <span class="tt">3 to 6 weeks</span>
+      </div>
+      <div class="proj">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <b>Accounting Setup</b>
+        <div class="pr">$2,500 to $5,000</div>
+        <p>Configure QuickBooks or your accounting system correctly, chart of accounts, classes, automations, reporting templates.</p>
+        <span class="tt">2 to 4 weeks</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec ba">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">The difference</span>
+      <h2>Before KLYVNT <em>vs</em> with KLYVNT.</h2>
+    </div>
+    <div class="ba-grid stagger">
+      <div class="ba-col ba-before">
+        <div class="bh"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg></span><b>Before KLYVNT</b></div>
+        <div class="ba-list">
+          <div><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>No monthly close process</div>
+          <div><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Cash flow is a mystery</div>
+          <div><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>AR aging is fiction</div>
+          <div><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Lender asks questions you can't answer</div>
+          <div><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Decisions based on gut feel</div>
+          <div><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Bookkeeper records but doesn't advise</div>
+          <div><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>Year-end is a fire drill</div>
+        </div>
+      </div>
+      <div class="ba-col ba-after">
+        <div class="bh"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V5Z"/><path d="m9 12 2 2 4-4"/></svg></span><b>With KLYVNT</b></div>
+        <div class="ba-list">
+          <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Clean monthly close by the 15th</div>
+          <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Weekly cash position and forecast</div>
+          <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>AR managed, followed up, reconciled</div>
+          <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Lender gets professional reporting</div>
+          <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>KPI dashboard drives decisions</div>
+          <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>CPA-led financial leadership</div>
+          <div><svg viewBox="0 0 24 24"><path d="m5 13 4 4L19 7"/></svg>Year-end tax package ready on time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec proc" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>From discovery to <em>delivery.</em></h2>
+      <p>A straight path from first call to monthly financials you can act on.</p>
+    </div>
+    <div class="proc-grid stagger">
+      <div class="step">
+        <span class="sn">01</span>
+        <span class="sm">30 min, free</span>
+        <h3>Discovery Call</h3>
+        <p>Learn your business, pain points, and goals.</p>
+      </div>
+      <div class="step">
+        <span class="sn">02</span>
+        <span class="sm">Optional, $2,500</span>
+        <h3>Financial Health Check</h3>
+        <p>Deep assessment with prioritized action plan.</p>
+      </div>
+      <div class="step">
+        <span class="sn">03</span>
+        <span class="sm">Tailored</span>
+        <h3>Proposal</h3>
+        <p>Recommended tier customized to your situation.</p>
+      </div>
+      <div class="step">
+        <span class="sn">04</span>
+        <span class="sm">First 30 days</span>
+        <h3>Onboarding</h3>
+        <p>Collect docs, set up systems, establish processes.</p>
+      </div>
+      <div class="step">
+        <span class="sn">05</span>
+        <span class="sm">Ongoing</span>
+        <h3>Ongoing Delivery</h3>
+        <p>Monthly financials, regular check-ins, proactive advice.</p>
       </div>
     </div>
   </div>
@@ -670,14 +928,15 @@ footer{background:#080A08;color:rgba(255,255,255,.62);padding:78px 0 38px}
       </div>
       <div class="foot-col">
         <h4>Services</h4>
-        <a href="#pricing">Bookkeeping</a>
-        <a href="#pricing">Controller</a>
-        <a href="#pricing">Fractional CFO</a>
-        <a href="#deals">Deal support &amp; QoE</a>
+        <a href="#diligence">Buy-side due diligence</a>
+        <a href="#advisory">Outsourced Controller</a>
+        <a href="#advisory">Fractional CFO</a>
+        <a href="#advisory">One-time projects</a>
       </div>
       <div class="foot-col">
         <h4>Firm</h4>
         <a href="#what">What you get</a>
+        <a href="#process">Process</a>
         <a href="#founder">Founder</a>
         <a href="#faq">FAQ</a>
         <p>Fort Lauderdale, FL</p>
